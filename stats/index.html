@@ -59,12 +59,13 @@
                     <li><a href="/index.ros.org/packages/page/1/time/">Package List</a></li>
                     <li><a href="/index.ros.org/repos/page/1/time/">Repository List</a></li>
 
-                    <li class="divider"></li>
+                    <li class="hidden" class="divider"></li>
 
-                    <li class="disabled"><a href="/srvs/">Nodes</a></li>
-                    <li class="disabled"><a href="/msgs/">Messages</a></li>
-                    <li class="disabled"><a href="/srvs/">Services</a></li>
-                    <li class="disabled"><a href="/srvs/">Plugins</a></li>
+
+                    <li class="hidden"><a href="/srvs/">Nodes</a></li>
+                    <li class="hidden"><a href="/msgs/">Messages</a></li>
+                    <li class="hidden"><a href="/srvs/">Services</a></li>
+                    <li class="hidden"><a href="/srvs/">Plugins</a></li>
 
                     <li class="divider"></li>
 
@@ -77,10 +78,18 @@
                     Doc <span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                    <li class="disabled"><a href="/index.ros.org/categories/">Categories</a></li>
-                    <li class="disabled"><a href="/index.ros.org/tutorials">Tutorials</a></li>
-                    <li class="disabled"><a href="/index.ros.org/readmes">Readmes</a></li>
-                    <li class="disabled"><a href="/index.ros.org/apis">APIs</a></li>
+                    
+                    <li>
+                      <a href="/index.ros.org/doc/ros2_overview">
+                        ROS2 Overview
+                      </a>
+                    </li>
+                    
+                    <li class="hidden" class="divider"></li>
+
+                    <li class="hidden"><a href="/index.ros.org/doc/tutorials">Tutorials</a></li>
+                    <li class="hidden"><a href="/index.ros.org/doc/readmes">Readmes</a></li>
+                    <li class="hidden"><a href="/index.ros.org/doc/apis">APIs</a></li>
                   </ul>
                 </li>
 
@@ -150,8 +159,8 @@
         <div class="panel-body" style="overflow-x:auto;">
           <ul>
             <li><strong>Repositories:</strong> 86</li>
-            <li><strong>Packages:</strong> 224</li>
-            <li><strong>Errors:</strong> <a href="/index.ros.org/stats/errors">8</a></li>
+            <li><strong>Packages:</strong> 116</li>
+            <li><strong>Errors:</strong> <a href="/index.ros.org/stats/errors">66</a></li>
           </ul>
         </div>
       </div>
@@ -180,12 +189,12 @@
 
         
           
-          <h3>bouncy <small>73 repos</small></h3>
+          <h3>bouncy <small>16 repos</small></h3>
           <br><br>
           <div id="activity_hist_bouncy" class="text-center"></div>
         
           
-          <h3>ardent <small>65 repos</small></h3>
+          <h3>ardent <small>16 repos</small></h3>
           <br><br>
           <div id="activity_hist_ardent" class="text-center"></div>
         
@@ -214,7 +223,7 @@
 }
 </style>
 
-<script src="http://d3js.org/d3.v2.min.js"></script>
+<script src="https://d3js.org/d3.v2.min.js"></script>
 <script src="/index.ros.org/js/venn.js/venn.js"></script>
 <script src="/index.ros.org/js/mds.js"></script>
 <script src="/index.ros.org/js/numeric-1.2.6.js"></script>
@@ -222,14 +231,14 @@
 // define sets and set set intersections
 var sets = [
     
-      {label: "bouncy", size: 212}, 
+      {label: "bouncy", size: 91}, 
     
-      {label: "ardent", size: 191}, 
+      {label: "ardent", size: 91}, 
     
   ],
   overlaps = [
     
-      {sets: [0, 1], size: 186},
+      {sets: [0, 1], size: 88},
     
   ];
 
@@ -424,148 +433,42 @@ function makeHist(selector, values) {
 
   
   var values_bouncy = [
-      56.31728016199086,
-      85.31728016199085,
-      85.31728016199085,
-      75.31728016199085,
-      54.31728016199086,
-      76.31728016199085,
-      88.31728016199085,
-      75.31728016199085,
-      86.31728016199085,
-      20.317280161990855,
-      225.31728016199085,
-      75.31728016199085,
-      75.31728016199085,
-      78.31728016199085,
-      76.31728016199085,
-      15.317280161990857,
-      7.3172801619908565,
-      76.31728016199085,
-      237.31728016199085,
-      77.31728016199085,
-      77.31728016199085,
-      20.317280161990855,
-      75.31728016199085,
-      75.31728016199085,
-      64.31728016199085,
-      276.3172801619909,
-      55.31728016199086,
-      81.31728016199085,
-      56.31728016199086,
-      79.31728016199085,
-      75.31728016199085,
-      20.317280161990855,
-      75.31728016199085,
-      76.31728016199085,
-      82.31728016199085,
-      80.31728016199085,
-      75.31728016199085,
-      56.31728016199086,
-      74.31728016199085,
-      76.31728016199085,
-      20.317280161990855,
-      20.317280161990855,
-      74.31728016199085,
-      22.317280161990855,
-      85.31728016199085,
-      75.31728016199085,
-      80.31728016199085,
-      79.31728016199085,
-      22.317280161990855,
-      75.31728016199085,
-      77.31728016199085,
-      77.31728016199085,
-      276.3172801619909,
-      86.31728016199085,
-      77.31728016199085,
-      53.31728016199086,
-      75.31728016199085,
-      78.31728016199085,
-      75.31728016199085,
-      55.31728016199086,
-      75.31728016199085,
-      1.3172801619908565,
-      75.31728016199085,
-      78.31728016199085,
-      75.31728016199085,
-      63.31728016199086,
-      75.31728016199085,
-      79.31728016199085,
-      56.31728016199086,
-      75.31728016199085,
-      80.31728016199085,
-      202.31728016199085,
-      20.317280161990855,];
+      63.83954664406329,
+      92.83954664406329,
+      92.83954664406329,
+      82.83954664406329,
+      61.83954664406329,
+      83.83954664406329,
+      95.83954664406329,
+      82.83954664406329,
+      93.83954664406329,
+      27.839546644063287,
+      232.8395466440633,
+      82.83954664406329,
+      82.83954664406329,
+      85.83954664406329,
+      83.83954664406329,
+      82.83954664406329,];
   makeHist('#activity_hist_bouncy', values_bouncy);
 
   
   var values_ardent = [
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      277.3172801619909,
-      276.3172801619909,
-      225.31728016199085,
-      276.3172801619909,
-      276.3172801619909,
-      182.31728016199085,
-      276.3172801619909,
-      276.3172801619909,
-      15.317280161990857,
-      7.3172801619908565,
-      276.3172801619909,
-      399.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      64.31728016199085,
-      276.3172801619909,
-      215.31728016199085,
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      215.31728016199085,
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      167.31728016199085,
-      276.3172801619909,
-      228.31728016199085,
-      276.3172801619909,
-      216.31728016199085,
-      276.3172801619909,
-      276.3172801619909,
-      215.31728016199085,
-      188.31728016199085,
-      276.3172801619909,
-      276.3172801619909,
-      276.3172801619909,
-      530.3172801619909,
-      276.3172801619909,
-      52.31728016199086,
-      347.3172801619909,
-      276.3172801619909,
-      68.31728016199085,
-      546.3172801619909,
-      53.31728016199086,
-      160.31728016199085,
-      301.3172801619909,
-      276.3172801619909,];
+      283.83954664406326,
+      283.83954664406326,
+      283.83954664406326,
+      283.83954664406326,
+      283.83954664406326,
+      283.83954664406326,
+      283.83954664406326,
+      283.83954664406326,
+      284.83954664406326,
+      283.83954664406326,
+      232.8395466440633,
+      283.83954664406326,
+      283.83954664406326,
+      189.8395466440633,
+      283.83954664406326,
+      283.83954664406326,];
   makeHist('#activity_hist_ardent', values_ardent);
 
 
@@ -590,7 +493,7 @@ function makeHist(selector, values) {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-11</em>
+          <em>generated on 2018-09-18</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

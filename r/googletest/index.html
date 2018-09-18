@@ -157,21 +157,21 @@
 
 <div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
   
-    <label id="bouncy-option" class="distro-button btn btn-xs btn-default" href="#bouncy" data="bouncy">
+    <label id="bouncy-option" class="distro-button btn btn-xs btn-primary" href="#bouncy" data="bouncy">
       <input type="radio" name="options" id="bouncy-radio" autocomplete="off"> bouncy
     </label>
   
 
   <!-- Older distros -->
   <div class="btn-group dropdown">
-    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-primary" data-toggle="dropdown" id="older-distro-button">
         <input type="radio" name="options" autocomplete="off">
       <span id="older-label">Older</span>
       <span class="caret"></span>
     </label>
     <ul class="dropdown-menu" role="menu">
       
-        <li data="ardent" id="ardent-option" class="disabled older-distro-option"  href="#ardent">
+        <li data="ardent" id="ardent-option" class=" older-distro-option"  href="#ardent">
           <a href="#ardent" data="ardent" id="ardent-button">ardent</a>
         </li>
       
@@ -251,7 +251,251 @@
   <div class="distro distro-bouncy">
     <div class="container-fluid">
       
-        <div class="alert alert-warning" role="alert">No version for distro <strong>bouncy</strong>. Known supported distros are highlighted in the buttons above.</div>
+        
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+
+  <table class="table table-condensed">
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/ament/googletest.git">https://github.com/ament/googletest.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">ros2</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-01-17
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/index.ros.org/p/gmock_vendor/github-ament-googletest">gmock_vendor</a></td>
+                    <td>1.8.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/index.ros.org/p/gtest_vendor/github-ament-googletest">gtest_vendor</a></td>
+                    <td>1.8.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="rendered-markdown">
+<h1 id="google-test">Google Test</h1>
+
+<p><a href="https://travis-ci.org/google/googletest"><img src="https://travis-ci.org/google/googletest.svg?branch=master" alt="Build Status"></a>
+<a href="https://ci.appveyor.com/project/GoogleTestAppVeyor/googletest/branch/master"><img src="https://ci.appveyor.com/api/projects/status/4o38plt0xbo1ubc8/branch/master?svg=true" alt="Build status"></a></p>
+
+<p>Welcome to <strong>Google Test</strong>, Google's C++ test framework!</p>
+
+<p>This repository is a merger of the formerly separate GoogleTest and
+GoogleMock projects. These were so closely related that it makes sense to
+maintain and release them together.</p>
+
+<p>Please see the project page above for more information as well as the
+mailing list for questions, discussions, and development.  There is
+also an IRC channel on <a href="https://webchat.oftc.net/">OFTC</a> (irc.oftc.net) #gtest available.  Please
+join us!</p>
+
+<p>Getting started information for <strong>Google Test</strong> is available in the 
+<a href="googletest/docs/Primer.md">Google Test Primer</a> documentation.</p>
+
+<p><strong>Google Mock</strong> is an extension to Google Test for writing and using C++ mock
+classes.  See the separate <a href="googlemock/README.md">Google Mock documentation</a>.</p>
+
+<p>More detailed documentation for googletest (including build instructions) are
+in its interior <a href="googletest/README.md">googletest/README.md</a> file.</p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+<li>An <a href="https://en.wikipedia.org/wiki/XUnit">xUnit</a> test framework.</li>
+<li>Test discovery.</li>
+<li>A rich set of assertions.</li>
+<li>User-defined assertions.</li>
+<li>Death tests.</li>
+<li>Fatal and non-fatal failures.</li>
+<li>Value-parameterized tests.</li>
+<li>Type-parameterized tests.</li>
+<li>Various options for running the tests.</li>
+<li>XML test report generation.</li>
+</ul>
+
+<h2 id="platforms">Platforms</h2>
+
+<p>Google test has been used on a variety of platforms:</p>
+
+<ul>
+<li>Linux</li>
+<li>Mac OS X</li>
+<li>Windows</li>
+<li>Cygwin</li>
+<li>MinGW</li>
+<li>Windows Mobile</li>
+<li>Symbian</li>
+</ul>
+
+<h2 id="who-is-using-google-test">Who Is Using Google Test?</h2>
+
+<p>In addition to many internal projects at Google, Google Test is also used by
+the following notable projects:</p>
+
+<ul>
+<li>The <a href="http://www.chromium.org/">Chromium projects</a> (behind the Chrome
+browser and Chrome OS).</li>
+<li>The <a href="http://llvm.org/">LLVM</a> compiler.</li>
+<li>
+<a href="https://github.com/google/protobuf">Protocol Buffers</a>, Google's data
+interchange format.</li>
+<li>The <a href="http://opencv.org/">OpenCV</a> computer vision library.</li>
+<li>
+<a href="https://github.com/tiny-dnn/tiny-dnn">tiny-dnn</a>: header only, dependency-free deep learning framework in C++11.</li>
+</ul>
+
+<h2 id="related-open-source-projects">Related Open Source Projects</h2>
+
+<p><a href="https://github.com/nholthaus/gtest-runner">GTest Runner</a> is a Qt5 based automated test-runner and Graphical User Interface with powerful features for Windows and Linux platforms.</p>
+
+<p><a href="https://github.com/ospector/gtest-gbar">Google Test UI</a> is test runner that runs
+your test binary, allows you to track its progress via a progress bar, and
+displays a list of test failures. Clicking on one shows failure text. Google
+Test UI is written in C#.</p>
+
+<p><a href="https://github.com/kinow/gtest-tap-listener">GTest TAP Listener</a> is an event
+listener for Google Test that implements the
+<a href="https://en.wikipedia.org/wiki/Test_Anything_Protocol">TAP protocol</a> for test
+result output. If your test runner understands TAP, you may find it useful.</p>
+
+<p><a href="https://github.com/google/gtest-parallel">gtest-parallel</a> is a test runner that
+runs tests from your binary in parallel to provide significant speed-up.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>Google Test is designed to have fairly minimal requirements to build
+and use with your projects, but there are some.  Currently, we support
+Linux, Windows, Mac OS X, and Cygwin.  We will also make our best
+effort to support other platforms (e.g. Solaris, AIX, and z/OS).
+However, since core members of the Google Test project have no access
+to these platforms, Google Test may have outstanding issues there.  If
+you notice any problems on your platform, please notify
+<a href="https://groups.google.com/forum/#!forum/googletestframework">googletestframework@googlegroups.com</a>. Patches for fixing them are
+even more welcome!</p>
+
+<h3 id="linux-requirements">Linux Requirements</h3>
+
+<p>These are the base requirements to build and use Google Test from a source
+package (as described below):</p>
+
+<ul>
+<li>GNU-compatible Make or gmake</li>
+<li>POSIX-standard shell</li>
+<li>POSIX(-2) Regular Expressions (regex.h)</li>
+<li>A C++98-standard-compliant compiler</li>
+</ul>
+
+<h3 id="windows-requirements">Windows Requirements</h3>
+
+<ul>
+<li>Microsoft Visual C++ 2010 or newer</li>
+</ul>
+
+<h3 id="cygwin-requirements">Cygwin Requirements</h3>
+
+<ul>
+<li>Cygwin v1.5.25-14 or newer</li>
+</ul>
+
+<h3 id="mac-os-x-requirements">Mac OS X Requirements</h3>
+
+<ul>
+<li>Mac OS X v10.4 Tiger or newer</li>
+<li>Xcode Developer Tools</li>
+</ul>
+
+<h2 id="contributing-change">Contributing change</h2>
+
+<p>Please read the <a href="CONTRIBUTING.md"><code>CONTRIBUTING.md</code></a> for details on
+how to contribute to this project.</p>
+
+<p>Happy testing!</p>
+</div></body></html>
+
+            
+          </div>
+        </div>
+
+        
+        
+          <div class="panel panel-danger">
+            <div class="panel-heading"><h3 class="panel-title">Indexing Errors</h3></div>
+            <div class="panel-body">
+              <ul>
+                
+                  <li><em>github-ament-googletest: Could not find any valid version.</em></li>
+                
+                  <li><em>github-ament-googletest: Could not find any valid version.</em></li>
+                
+              </ul>
+            </div>
+          </div>
+        
       
     </div>
   </div>
@@ -259,7 +503,274 @@
   <div class="distro distro-ardent">
     <div class="container-fluid">
       
-        <div class="alert alert-warning" role="alert">No version for distro <strong>ardent</strong>. Known supported distros are highlighted in the buttons above.</div>
+        
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+
+  <table class="table table-condensed">
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/ament/googletest.git">https://github.com/ament/googletest.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">ardent</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-08-08
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/index.ros.org/p/gmock_vendor/github-ament-googletest">gmock_vendor</a></td>
+                    <td>1.8.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/index.ros.org/p/gtest_vendor/github-ament-googletest">gtest_vendor</a></td>
+                    <td>1.8.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="rendered-markdown">
+<h1 id="google-test">Google Test</h1>
+
+<p><a href="https://travis-ci.org/google/googletest"><img src="https://travis-ci.org/google/googletest.svg?branch=master" alt="Build Status"></a>
+<a href="https://ci.appveyor.com/project/BillyDonahue/googletest/branch/master"><img src="https://ci.appveyor.com/api/projects/status/4o38plt0xbo1ubc8/branch/master?svg=true" alt="Build status"></a></p>
+
+<p>Welcome to <strong>Google Test</strong>, Google's C++ test framework!</p>
+
+<p>This repository is a merger of the formerly separate GoogleTest and
+GoogleMock projects. These were so closely related that it makes sense to
+maintain and release them together.</p>
+
+<p>Please see the project page above for more information as well as the
+mailing list for questions, discussions, and development.  There is
+also an IRC channel on OFTC (irc.oftc.net) #gtest available.  Please
+join us!</p>
+
+<p>Getting started information for <strong>Google Test</strong> is available in the 
+<a href="googletest/docs/Primer.md">Google Test Primer</a> documentation.</p>
+
+<p><strong>Google Mock</strong> is an extension to Google Test for writing and using C++ mock
+classes.  See the separate <a href="googlemock/README.md">Google Mock documentation</a>.</p>
+
+<p>More detailed documentation for googletest (including build instructions) are
+in its interior <a href="googletest/README.md">googletest/README.md</a> file.</p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+<li>An <a href="https://en.wikipedia.org/wiki/XUnit">XUnit</a> test framework.</li>
+<li>Test discovery.</li>
+<li>A rich set of assertions.</li>
+<li>User-defined assertions.</li>
+<li>Death tests.</li>
+<li>Fatal and non-fatal failures.</li>
+<li>Value-parameterized tests.</li>
+<li>Type-parameterized tests.</li>
+<li>Various options for running the tests.</li>
+<li>XML test report generation.</li>
+</ul>
+
+<h2 id="platforms">Platforms</h2>
+
+<p>Google test has been used on a variety of platforms:</p>
+
+<ul>
+<li>Linux</li>
+<li>Mac OS X</li>
+<li>Windows</li>
+<li>Cygwin</li>
+<li>MinGW</li>
+<li>Windows Mobile</li>
+<li>Symbian</li>
+</ul>
+
+<h2 id="who-is-using-google-test">Who Is Using Google Test?</h2>
+
+<p>In addition to many internal projects at Google, Google Test is also used by
+the following notable projects:</p>
+
+<ul>
+<li>The <a href="http://www.chromium.org/">Chromium projects</a> (behind the Chrome
+browser and Chrome OS).</li>
+<li>The <a href="http://llvm.org/">LLVM</a> compiler.</li>
+<li>
+<a href="https://github.com/google/protobuf">Protocol Buffers</a>, Google's data
+interchange format.</li>
+<li>The <a href="http://opencv.org/">OpenCV</a> computer vision library.</li>
+</ul>
+
+<h2 id="related-open-source-projects">Related Open Source Projects</h2>
+
+<p><a href="https://github.com/ospector/gtest-gbar">Google Test UI</a> is test runner that runs
+your test binary, allows you to track its progress via a progress bar, and
+displays a list of test failures. Clicking on one shows failure text. Google
+Test UI is written in C#.</p>
+
+<p><a href="https://github.com/kinow/gtest-tap-listener">GTest TAP Listener</a> is an event
+listener for Google Test that implements the
+<a href="https://en.wikipedia.org/wiki/Test_Anything_Protocol">TAP protocol</a> for test
+result output. If your test runner understands TAP, you may find it useful.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>Google Test is designed to have fairly minimal requirements to build
+and use with your projects, but there are some.  Currently, we support
+Linux, Windows, Mac OS X, and Cygwin.  We will also make our best
+effort to support other platforms (e.g. Solaris, AIX, and z/OS).
+However, since core members of the Google Test project have no access
+to these platforms, Google Test may have outstanding issues there.  If
+you notice any problems on your platform, please notify
+<a href="mailto:googletestframework@googlegroups.com">googletestframework@googlegroups.com</a>. Patches for fixing them are
+even more welcome!</p>
+
+<h3 id="linux-requirements">Linux Requirements</h3>
+
+<p>These are the base requirements to build and use Google Test from a source
+package (as described below):</p>
+
+<ul>
+<li>GNU-compatible Make or gmake</li>
+<li>POSIX-standard shell</li>
+<li>POSIX(-2) Regular Expressions (regex.h)</li>
+<li>A C++98-standard-compliant compiler</li>
+</ul>
+
+<h3 id="windows-requirements">Windows Requirements</h3>
+
+<ul>
+<li>Microsoft Visual C++ v7.1 or newer</li>
+</ul>
+
+<h3 id="cygwin-requirements">Cygwin Requirements</h3>
+
+<ul>
+<li>Cygwin v1.5.25-14 or newer</li>
+</ul>
+
+<h3 id="mac-os-x-requirements">Mac OS X Requirements</h3>
+
+<ul>
+<li>Mac OS X v10.4 Tiger or newer</li>
+<li>Xcode Developer Tools</li>
+</ul>
+
+<h3 id="requirements-for-contributors">Requirements for Contributors</h3>
+
+<p>We welcome patches.  If you plan to contribute a patch, you need to
+build Google Test and its own tests from a git checkout (described
+below), which has further requirements:</p>
+
+<ul>
+<li>
+<a href="https://www.python.org/">Python</a> v2.3 or newer (for running some of
+the tests and re-generating certain source files from templates)</li>
+<li>
+<a href="https://cmake.org/">CMake</a> v2.6.4 or newer</li>
+</ul>
+
+<h2 id="regenerating-source-files">Regenerating Source Files</h2>
+
+<p>Some of Google Test's source files are generated from templates (not
+in the C++ sense) using a script.
+For example, the
+file include/gtest/internal/gtest-type-util.h.pump is used to generate
+gtest-type-util.h in the same directory.</p>
+
+<p>You don't need to worry about regenerating the source files
+unless you need to modify them.  You would then modify the
+corresponding <code>.pump</code> files and run the '<a href="googletest/scripts/pump.py">pump.py</a>'
+generator script.  See the <a href="googletest/docs/PumpManual.md">Pump Manual</a>.</p>
+
+<h3 id="contributing-code">Contributing Code</h3>
+
+<p>We welcome patches.  Please read the
+<a href="googletest/docs/DevGuide.md">Developer's Guide</a>
+for how you can contribute. In particular, make sure you have signed
+the Contributor License Agreement, or we won't be able to accept the
+patch.</p>
+
+<p>Happy testing!</p>
+</div></body></html>
+
+            
+          </div>
+        </div>
+
+        
+        
+          <div class="panel panel-danger">
+            <div class="panel-heading"><h3 class="panel-title">Indexing Errors</h3></div>
+            <div class="panel-body">
+              <ul>
+                
+                  <li><em>github-ament-googletest: Could not find any valid version.</em></li>
+                
+                  <li><em>github-ament-googletest: Could not find any valid version.</em></li>
+                
+              </ul>
+            </div>
+          </div>
+        
       
     </div>
   </div>

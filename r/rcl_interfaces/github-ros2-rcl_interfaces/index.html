@@ -157,21 +157,21 @@
 
 <div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
   
-    <label id="bouncy-option" class="distro-button btn btn-xs btn-default" href="#bouncy" data="bouncy">
+    <label id="bouncy-option" class="distro-button btn btn-xs btn-primary" href="#bouncy" data="bouncy">
       <input type="radio" name="options" id="bouncy-radio" autocomplete="off"> bouncy
     </label>
   
 
   <!-- Older distros -->
   <div class="btn-group dropdown">
-    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-primary" data-toggle="dropdown" id="older-distro-button">
         <input type="radio" name="options" autocomplete="off">
       <span id="older-label">Older</span>
       <span class="caret"></span>
     </label>
     <ul class="dropdown-menu" role="menu">
       
-        <li data="ardent" id="ardent-option" class="disabled older-distro-option"  href="#ardent">
+        <li data="ardent" id="ardent-option" class=" older-distro-option"  href="#ardent">
           <a href="#ardent" data="ardent" id="ardent-button">ardent</a>
         </li>
       
@@ -251,7 +251,132 @@
   <div class="distro distro-bouncy">
     <div class="container-fluid">
       
-        <div class="alert alert-warning" role="alert">No version for distro <strong>bouncy</strong>. Known supported distros are highlighted in the buttons above.</div>
+        
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+
+  <table class="table table-condensed">
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/ros2/rcl_interfaces.git">https://github.com/ros2/rcl_interfaces.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">bouncy</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-06-24
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-primary">
+          
+          MAINTAINED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/index.ros.org/p/builtin_interfaces/github-ros2-rcl_interfaces">builtin_interfaces</a></td>
+                    <td>0.5.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/index.ros.org/p/lifecycle_msgs/github-ros2-rcl_interfaces">lifecycle_msgs</a></td>
+                    <td>0.5.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/index.ros.org/p/rcl_interfaces/github-ros2-rcl_interfaces">rcl_interfaces</a></td>
+                    <td>0.5.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/index.ros.org/p/rosgraph_msgs/github-ros2-rcl_interfaces">rosgraph_msgs</a></td>
+                    <td>0.5.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/index.ros.org/p/test_msgs/github-ros2-rcl_interfaces">test_msgs</a></td>
+                    <td>0.5.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="rendered-markdown">
+<h1 id="rcl_interfaces-repository">rcl_interfaces repository</h1>
+
+<p>This repository contains a set of packages that primarily contain interface files (.msg and .srv) which are used both to implement client library concepts and for testing.</p>
+</div></body></html>
+
+            
+          </div>
+        </div>
+
+        
+        
+          <div class="panel panel-danger">
+            <div class="panel-heading"><h3 class="panel-title">Indexing Errors</h3></div>
+            <div class="panel-body">
+              <ul>
+                
+                  <li><em>github-ros2-rcl_interfaces: Could not find any valid version.</em></li>
+                
+                  <li><em>github-ros2-rcl_interfaces: Could not find any valid version.</em></li>
+                
+              </ul>
+            </div>
+          </div>
+        
       
     </div>
   </div>
@@ -259,7 +384,127 @@
   <div class="distro distro-ardent">
     <div class="container-fluid">
       
-        <div class="alert alert-warning" role="alert">No version for distro <strong>ardent</strong>. Known supported distros are highlighted in the buttons above.</div>
+        
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+
+  <table class="table table-condensed">
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/ros2/rcl_interfaces.git">https://github.com/ros2/rcl_interfaces.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">ardent</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-12-09
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-primary">
+          
+          MAINTAINED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/index.ros.org/p/builtin_interfaces/github-ros2-rcl_interfaces">builtin_interfaces</a></td>
+                    <td>0.4.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/index.ros.org/p/lifecycle_msgs/github-ros2-rcl_interfaces">lifecycle_msgs</a></td>
+                    <td>0.4.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/index.ros.org/p/rcl_interfaces/github-ros2-rcl_interfaces">rcl_interfaces</a></td>
+                    <td>0.4.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/index.ros.org/p/test_msgs/github-ros2-rcl_interfaces">test_msgs</a></td>
+                    <td>0.4.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="rendered-markdown">
+<h1 id="rcl_interfaces-repository">rcl_interfaces repository</h1>
+
+<p>This repository contains a set of packages that primarily contain interface files (.msg and .srv) which are used both to implement client library concepts and for testing.</p>
+</div></body></html>
+
+            
+          </div>
+        </div>
+
+        
+        
+          <div class="panel panel-danger">
+            <div class="panel-heading"><h3 class="panel-title">Indexing Errors</h3></div>
+            <div class="panel-body">
+              <ul>
+                
+                  <li><em>github-ros2-rcl_interfaces: Could not find any valid version.</em></li>
+                
+                  <li><em>github-ros2-rcl_interfaces: Could not find any valid version.</em></li>
+                
+              </ul>
+            </div>
+          </div>
+        
       
     </div>
   </div>

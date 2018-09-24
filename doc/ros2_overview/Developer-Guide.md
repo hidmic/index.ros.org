@@ -117,7 +117,7 @@ For other things like package layout or documentation layout we will need to com
 Additionally, where ever possible, developers should use integrated tools to allow them to check that these guidelines are followed in their editors.
 For example, everyone should have a PEP8 checker built into their editor to cut down on review iterations related to style.
 
-Also where possible, packages should check style as part of their unit tests to help with the automated detection of style issues (see ).
+Also where possible, packages should check style as part of their unit tests to help with the automated detection of style issues (see [ament_lint_auto](https://github.com/ament/ament_lint/blob/master/ament_lint_auto/doc/index.rst)).
 
 ### C
 
@@ -333,14 +333,14 @@ MyClass::MyClass(int var)
 Most of these styles and restrictions can be checked with a combination of Google's [cpplint.py](http://google-styleguide.googlecode.com/svn/trunk/cpplint/) and [uncrustify](https://github.com/uncrustify/uncrustify), though we may need to modify them slightly for our above changes.
 
 We provide command line tools with custom configurations:
-- 
-- : [configuration](https://github.com/ament/ament_lint/blob/master/ament_uncrustify/ament_uncrustify/configuration/ament_code_style.cfg)
+- [`ament_cpplint`](https://github.com/ament/ament_lint/blob/master/ament_cpplint/doc/index.rst)
+- [`ament_uncrustify`](https://github.com/ament/ament_lint/blob/master/ament_uncrustify/doc/index.rst): [configuration](https://github.com/ament/ament_lint/blob/master/ament_uncrustify/ament_uncrustify/configuration/ament_code_style.cfg)
 
 We also run other tools to detect and eliminate as many warnings as possible.
 Here's a non-exhaustive list of additional things we try to do on all of our packages:
 
 - use compiler flags like `-Wall -Wextra -Wpedantic`
-- run static code analysis like `cppcheck`, which we have integrated in 
+- run static code analysis like `cppcheck`, which we have integrated in [`ament_cppcheck`](https://github.com/ament/ament_lint/blob/master/ament_cppcheck/doc/index.rst)
 
 
 ### Python

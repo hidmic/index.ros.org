@@ -79,11 +79,19 @@
                   </button>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                     
-                    <li>
-                      <a href="/index.ros.org/doc/ros2_overview">
-                        ROS2 Overview
-                      </a>
-                    </li>
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><a href="/index.ros.org/doc/ros2_overview">ROS2 Overview</a></li>
+                        
+                      
                     
                     <li class="hidden" class="divider"></li>
 
@@ -305,7 +313,7 @@ Note that if you&#39;re installing to a system directory use <code>sudo</code> a
 <div class="highlight"><pre><code class="language-" data-lang="">cd ~/ros2_ws/
 colcon build --symlink-install
 </code></pre></div>
-<p>Note: if you are having trouble compiling all examples and this is preventing you from completing a successful build, you can use <code>AMENT_IGNORE</code> in the same manner as  to ignore the subtree or remove the folder from the workspace.
+<p>Note: if you are having trouble compiling all examples and this is preventing you from completing a successful build, you can use <code>AMENT_IGNORE</code> in the same manner as <a href="https://github.com/ros-infrastructure/rep/blob/master/rep-0128.rst"><code>CATKIN_IGNORE</code></a> to ignore the subtree or remove the folder from the workspace.
 Take for instance: you would like to avoid installing the large OpenCV library.
 Well then simply <code>$ touch AMENT_IGNORE</code> in the <code>cam2image</code> demo directory to leave it out of the build process.</p>
 
@@ -399,7 +407,7 @@ $(document).ready(
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-22</em>
+          <em>generated on 2018-09-24</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

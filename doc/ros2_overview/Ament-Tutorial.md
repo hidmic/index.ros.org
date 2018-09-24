@@ -201,7 +201,7 @@ The equivalent of `catkin_create_package` will be ported to ament but is not ava
 Ament supports multiple build types.
 The recommended build types are `ament_cmake` and `ament_python`.
 Also supported are pure `cmake` packages.
-It's expected to add support for more .
+It's expected to add support for more [build types](https://github.com/ament/ament_tools/blob/master/doc/development/build_types.rst).
 
 An example of an `ament_python` build is the [`ament_tools` package](https://github.com/ament/ament_tools), where the setup.py is the primary entry point for building.
 

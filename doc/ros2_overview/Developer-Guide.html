@@ -79,11 +79,19 @@
                   </button>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                     
-                    <li>
-                      <a href="/index.ros.org/doc/ros2_overview">
-                        ROS2 Overview
-                      </a>
-                    </li>
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><a href="/index.ros.org/doc/ros2_overview">ROS2 Overview</a></li>
+                        
+                      
                     
                     <li class="hidden" class="divider"></li>
 
@@ -296,7 +304,7 @@ For other things like package layout or documentation layout we will need to com
 <p>Additionally, where ever possible, developers should use integrated tools to allow them to check that these guidelines are followed in their editors.
 For example, everyone should have a PEP8 checker built into their editor to cut down on review iterations related to style.</p>
 
-<p>Also where possible, packages should check style as part of their unit tests to help with the automated detection of style issues (see ).</p>
+<p>Also where possible, packages should check style as part of their unit tests to help with the automated detection of style issues (see <a href="https://github.com/ament/ament_lint/blob/master/ament_lint_auto/doc/index.rst">ament_lint_auto</a>).</p>
 
 <h3 id="c">C</h3>
 
@@ -568,18 +576,16 @@ For example, everyone should have a PEP8 checker built into their editor to cut 
 
 <p>Most of these styles and restrictions can be checked with a combination of Google&#39;s <a href="http://google-styleguide.googlecode.com/svn/trunk/cpplint/">cpplint.py</a> and <a href="https://github.com/uncrustify/uncrustify">uncrustify</a>, though we may need to modify them slightly for our above changes.</p>
 
-<h2 id="we-provide-command-line-tools-with-custom-configurations">We provide command line tools with custom configurations:</h2>
-
-<ul>
-<li>: <a href="https://github.com/ament/ament_lint/blob/master/ament_uncrustify/ament_uncrustify/configuration/ament_code_style.cfg">configuration</a></li>
-</ul>
+<p>We provide command line tools with custom configurations:
+- <a href="https://github.com/ament/ament_lint/blob/master/ament_cpplint/doc/index.rst"><code>ament_cpplint</code></a>
+- <a href="https://github.com/ament/ament_lint/blob/master/ament_uncrustify/doc/index.rst"><code>ament_uncrustify</code></a>: <a href="https://github.com/ament/ament_lint/blob/master/ament_uncrustify/ament_uncrustify/configuration/ament_code_style.cfg">configuration</a></p>
 
 <p>We also run other tools to detect and eliminate as many warnings as possible.
 Here&#39;s a non-exhaustive list of additional things we try to do on all of our packages:</p>
 
 <ul>
 <li>use compiler flags like <code>-Wall -Wextra -Wpedantic</code></li>
-<li>run static code analysis like <code>cppcheck</code>, which we have integrated in </li>
+<li>run static code analysis like <code>cppcheck</code>, which we have integrated in <a href="https://github.com/ament/ament_lint/blob/master/ament_cppcheck/doc/index.rst"><code>ament_cppcheck</code></a></li>
 </ul>
 
 <h3 id="python">Python</h3>
@@ -906,7 +912,7 @@ $(document).ready(
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-22</em>
+          <em>generated on 2018-09-24</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

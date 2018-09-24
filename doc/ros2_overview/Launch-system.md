@@ -28,7 +28,7 @@ ros2 launch demo_nodes_cpp add_two_ints.launch.py
 
 ## Documentation
 
- provides more details on concepts that are also used in `launch_ros`.
+[The `launch` documentation](https://github.com/ros2/launch/blob/master/launch/doc/source/architecture.rst) provides more details on concepts that are also used in `launch_ros`.
 
 Additional documentation/examples of capabilities are forthcoming.
 See [the source code](https://github.com/ros2/launch) in the meantime.

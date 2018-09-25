@@ -89,6 +89,8 @@
                         
                       
                         
+                      
+                        
                           <li><a href="/index.ros.org/doc/ros2_overview">ROS2 Overview</a></li>
                         
                       
@@ -171,6 +173,22 @@
       <input type="radio" name="options" id="bouncy-radio" autocomplete="off"> bouncy
     </label>
   
+    <label id="melodic-option" class="distro-button btn btn-xs btn-default" href="#melodic" data="melodic">
+      <input type="radio" name="options" id="melodic-radio" autocomplete="off"> melodic
+    </label>
+  
+    <label id="lunar-option" class="distro-button btn btn-xs btn-default" href="#lunar" data="lunar">
+      <input type="radio" name="options" id="lunar-radio" autocomplete="off"> lunar
+    </label>
+  
+    <label id="kinetic-option" class="distro-button btn btn-xs btn-default" href="#kinetic" data="kinetic">
+      <input type="radio" name="options" id="kinetic-radio" autocomplete="off"> kinetic
+    </label>
+  
+    <label id="indigo-option" class="distro-button btn btn-xs btn-default" href="#indigo" data="indigo">
+      <input type="radio" name="options" id="indigo-radio" autocomplete="off"> indigo
+    </label>
+  
 
   <!-- Older distros -->
   <div class="btn-group dropdown">
@@ -183,6 +201,14 @@
       
         <li data="ardent" id="ardent-option" class=" older-distro-option"  href="#ardent">
           <a href="#ardent" data="ardent" id="ardent-button">ardent</a>
+        </li>
+      
+        <li data="jade" id="jade-option" class="disabled older-distro-option"  href="#jade">
+          <a href="#jade" data="jade" id="jade-button">jade</a>
+        </li>
+      
+        <li data="hydro" id="hydro-option" class="disabled older-distro-option"  href="#hydro">
+          <a href="#hydro" data="hydro" id="hydro-button">hydro</a>
         </li>
       
     </ul>
@@ -257,6 +283,20 @@ urdf
                   <a id="github-ros2-urdf" role="menuitem" tabindex="-1" href="/index.ros.org/p/urdf/github-ros2-urdf" data="github-ros2-urdf">
                     <span class="glyphicon glyphicon-none"></span>
                     github-ros2-urdf
+                  </a>
+                </li>
+              
+                <li role="presentation">
+                  <a id="github-ros-urdf" role="menuitem" tabindex="-1" href="/index.ros.org/p/urdf/github-ros-urdf" data="github-ros-urdf">
+                    <span class="glyphicon glyphicon-none"></span>
+                    github-ros-urdf
+                  </a>
+                </li>
+              
+                <li role="presentation">
+                  <a id="github-ros-robot_model" role="menuitem" tabindex="-1" href="/index.ros.org/p/urdf/github-ros-robot_model" data="github-ros-robot_model">
+                    <span class="glyphicon glyphicon-none"></span>
+                    github-ros-robot_model
                   </a>
                 </li>
               
@@ -721,11 +761,20 @@ headers, and added TinyXML because it is.</li>
                     
                     
                       <tr>
-                        <td class="text-center"></td>
                         <td class="text-center">
-                          <span class="label label-danger">0</span>
+                          
+                          
+                          
+                          <a href="/index.ros.org/p/console_bridge#bouncy-deps" class="inactive">
+                            <span class="glyphicon glyphicon-arrow-left"></span>
+                          </a>
                         </td>
-                        <td>console_bridge</td>
+                        <td class="text-center">
+                          <a href="/index.ros.org/packages/console_bridge" class="label label-default">
+                            1
+                          </a>
+                        </td>
+                        <td><a href="/index.ros.org/p/console_bridge#bouncy">console_bridge</a></td>
                       </tr>
                     
                   
@@ -761,8 +810,8 @@ headers, and added TinyXML because it is.</li>
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/index.ros.org/packages/urdfdom" class="label label-default">
-                            1
+                          <a href="/index.ros.org/packages/urdfdom" class="label label-primary">
+                            2
                           </a>
                         </td>
                         <td><a href="/index.ros.org/p/urdfdom#bouncy">urdfdom</a></td>
@@ -772,11 +821,20 @@ headers, and added TinyXML because it is.</li>
                     
                     
                       <tr>
-                        <td class="text-center"></td>
                         <td class="text-center">
-                          <span class="label label-danger">0</span>
+                          
+                          
+                          
+                          <a href="/index.ros.org/p/urdfdom_headers#bouncy-deps" class="inactive">
+                            <span class="glyphicon glyphicon-arrow-left"></span>
+                          </a>
                         </td>
-                        <td>urdfdom_headers</td>
+                        <td class="text-center">
+                          <a href="/index.ros.org/packages/urdfdom_headers" class="label label-default">
+                            1
+                          </a>
+                        </td>
+                        <td><a href="/index.ros.org/p/urdfdom_headers#bouncy">urdfdom_headers</a></td>
                       </tr>
                     
                   
@@ -1068,6 +1126,38 @@ jQuery(function() {
     </div>
   </div>
 
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+        <div class="alert alert-warning" role="alert">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-lunar">
+    <div class="container-fluid">
+      
+        <div class="alert alert-warning" role="alert">No version for distro <strong>lunar</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kinetic">
+    <div class="container-fluid">
+      
+        <div class="alert alert-warning" role="alert">No version for distro <strong>kinetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-indigo">
+    <div class="container-fluid">
+      
+        <div class="alert alert-warning" role="alert">No version for distro <strong>indigo</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
   <div class="distro distro-ardent">
     <div class="container-fluid">
       
@@ -1128,6 +1218,20 @@ urdf
                   <a id="github-ros2-urdf" role="menuitem" tabindex="-1" href="/index.ros.org/p/urdf/github-ros2-urdf" data="github-ros2-urdf">
                     <span class="glyphicon glyphicon-none"></span>
                     github-ros2-urdf
+                  </a>
+                </li>
+              
+                <li role="presentation">
+                  <a id="github-ros-urdf" role="menuitem" tabindex="-1" href="/index.ros.org/p/urdf/github-ros-urdf" data="github-ros-urdf">
+                    <span class="glyphicon glyphicon-none"></span>
+                    github-ros-urdf
+                  </a>
+                </li>
+              
+                <li role="presentation">
+                  <a id="github-ros-robot_model" role="menuitem" tabindex="-1" href="/index.ros.org/p/urdf/github-ros-robot_model" data="github-ros-robot_model">
+                    <span class="glyphicon glyphicon-none"></span>
+                    github-ros-robot_model
                   </a>
                 </li>
               
@@ -1594,11 +1698,20 @@ headers, and added TinyXML because it is.</li>
                     
                     
                       <tr>
-                        <td class="text-center"></td>
                         <td class="text-center">
-                          <span class="label label-danger">0</span>
+                          
+                          
+                          
+                          <a href="/index.ros.org/p/console_bridge#ardent-deps" class="inactive">
+                            <span class="glyphicon glyphicon-arrow-left"></span>
+                          </a>
                         </td>
-                        <td>console_bridge</td>
+                        <td class="text-center">
+                          <a href="/index.ros.org/packages/console_bridge" class="label label-default">
+                            1
+                          </a>
+                        </td>
+                        <td><a href="/index.ros.org/p/console_bridge#ardent">console_bridge</a></td>
                       </tr>
                     
                   
@@ -1634,8 +1747,8 @@ headers, and added TinyXML because it is.</li>
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/index.ros.org/packages/urdfdom" class="label label-default">
-                            1
+                          <a href="/index.ros.org/packages/urdfdom" class="label label-primary">
+                            2
                           </a>
                         </td>
                         <td><a href="/index.ros.org/p/urdfdom#ardent">urdfdom</a></td>
@@ -1645,11 +1758,20 @@ headers, and added TinyXML because it is.</li>
                     
                     
                       <tr>
-                        <td class="text-center"></td>
                         <td class="text-center">
-                          <span class="label label-danger">0</span>
+                          
+                          
+                          
+                          <a href="/index.ros.org/p/urdfdom_headers#ardent-deps" class="inactive">
+                            <span class="glyphicon glyphicon-arrow-left"></span>
+                          </a>
                         </td>
-                        <td>urdfdom_headers</td>
+                        <td class="text-center">
+                          <a href="/index.ros.org/packages/urdfdom_headers" class="label label-default">
+                            1
+                          </a>
+                        </td>
+                        <td><a href="/index.ros.org/p/urdfdom_headers#ardent">urdfdom_headers</a></td>
                       </tr>
                     
                   
@@ -1913,6 +2035,22 @@ jQuery(function() {
     </div>
   </div>
 
+  <div class="distro distro-jade">
+    <div class="container-fluid">
+      
+        <div class="alert alert-warning" role="alert">No version for distro <strong>jade</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-hydro">
+    <div class="container-fluid">
+      
+        <div class="alert alert-warning" role="alert">No version for distro <strong>hydro</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
 
 
       </div>
@@ -1934,7 +2072,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-24</em>
+          <em>generated on 2018-09-25</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

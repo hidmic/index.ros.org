@@ -373,7 +373,7 @@ rc_genicam_api
               </tr>
               <tr>
                 <td class="text-right"><strong>Version</strong></td>
-                <td>1.3.12</td>
+                <td>1.3.14</td>
               </tr>
               <tr>
                 <td class="text-right"><strong>License</strong></td>
@@ -421,7 +421,7 @@ rc_genicam_api
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-07-18
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-26
         </span>
       </td>
     </tr>
@@ -576,6 +576,10 @@ The 'bin' directory contains the tools, DLLs and the default transport layer
 including configuration. The 'include' and 'lib' sub-directories contain the
 headers and libraries for using the API in own programs.</p>
 
+<p>NOTE: For using the libraries in own projects, define the symbol
+<code>GENICAM_NO_AUTO_IMPLIB</code> in your project file to avoid linker problems with the
+GenICam libraries.</p>
+
 <h2 id="tools">Tools</h2>
 
 <p>The tools do not offer a graphical user interface. They are meant to be called
@@ -639,15 +643,8 @@ then read the section 'Transport Layer' below.</p>
 <p>There are multiple ways of specifying an ID to identify a device.</p>
 
 <ol>
-<li>In the most basic version, the device ID is actually defined by the GenTL
-producer (see Transport Layer section below). The GenTL producer included
-in rc_genicam_api uses the lower case MAC address with the colons <code>:</code>
-replaced by underscores <code>_</code>.</li>
-</ol>
-
-<p>Example: <code>00_14_2d_2c_6e_bb</code></p>
-
-<ol>
+<li><p>The serial number of the device serves as ID.
+Example: <code>02911931</code></p></li>
 <li>
 <p>The given ID can also be a user defined name. The user defined name is set
 to <code>rc_visard</code> by default and can be changed with:</p>
@@ -663,10 +660,13 @@ to <code>rc_visard</code> by default and can be changed with:</p>
    a colon (e.g. <code>:my:name</code>) or an interface ID (see below).</p>
 
 <ol>
-<li>The serial number of the device can also be used as ID.
-Example: <code>02911931</code>
-</li>
+<li>The device ID of the GenTL producer (see <code>Transport Layer</code> section below)
+may also be used. This ID is unique, but not persistent as it depends on the
+implementation of the GenTL producer. Thus, it can change after software
+updates. It often encodes the MAC address of the sensor in some way.</li>
 </ol>
+
+<p>Example: <code>00_14_2d_2c_6e_bb</code></p>
 
 <p>All three options can be seen in the output of <code>gc_config -l</code>.</p>
 
@@ -781,6 +781,28 @@ sudo sysctl -w net.core.netdev_budget=600
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
+<h1 id="1-3-14-2018-09-26">1.3.14 (2018-09-26)</h1>
+
+<ul>
+<li>  Added possibility to interrupt streaming with gc_stream by pressing
+'Enter' key.</li>
+<li>  Undefined min/max macros in gc_pointcloud.cc on Windows to avoid
+compile errors</li>
+</ul>
+
+<h1 id="1-3-13-2018-08-23">1.3.13 (2018-08-23)</h1>
+
+<ul>
+<li>  Changed output of gc_config -l to emphasize using interface and
+serial number as unique identifier</li>
+<li>  Added possibility to call a GenICam command from the command line
+with gc_info, gc_config and gc_stream</li>
+<li>  Additionally printing the internal name and display name of the
+GenTL producer in the gc_info tool</li>
+<li>  Update GEV GenTL provider from Baumer</li>
+<li>  Revision of readme</li>
+</ul>
+
 <h1 id="1-3-12-2018-07-18">1.3.12 (2018-07-18)</h1>
 
 <ul>
@@ -1401,7 +1423,7 @@ rc_genicam_api
               </tr>
               <tr>
                 <td class="text-right"><strong>Version</strong></td>
-                <td>1.3.12</td>
+                <td>1.3.14</td>
               </tr>
               <tr>
                 <td class="text-right"><strong>License</strong></td>
@@ -1449,7 +1471,7 @@ rc_genicam_api
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-07-18
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-26
         </span>
       </td>
     </tr>
@@ -1604,6 +1626,10 @@ The 'bin' directory contains the tools, DLLs and the default transport layer
 including configuration. The 'include' and 'lib' sub-directories contain the
 headers and libraries for using the API in own programs.</p>
 
+<p>NOTE: For using the libraries in own projects, define the symbol
+<code>GENICAM_NO_AUTO_IMPLIB</code> in your project file to avoid linker problems with the
+GenICam libraries.</p>
+
 <h2 id="tools">Tools</h2>
 
 <p>The tools do not offer a graphical user interface. They are meant to be called
@@ -1667,15 +1693,8 @@ then read the section 'Transport Layer' below.</p>
 <p>There are multiple ways of specifying an ID to identify a device.</p>
 
 <ol>
-<li>In the most basic version, the device ID is actually defined by the GenTL
-producer (see Transport Layer section below). The GenTL producer included
-in rc_genicam_api uses the lower case MAC address with the colons <code>:</code>
-replaced by underscores <code>_</code>.</li>
-</ol>
-
-<p>Example: <code>00_14_2d_2c_6e_bb</code></p>
-
-<ol>
+<li><p>The serial number of the device serves as ID.
+Example: <code>02911931</code></p></li>
 <li>
 <p>The given ID can also be a user defined name. The user defined name is set
 to <code>rc_visard</code> by default and can be changed with:</p>
@@ -1691,10 +1710,13 @@ to <code>rc_visard</code> by default and can be changed with:</p>
    a colon (e.g. <code>:my:name</code>) or an interface ID (see below).</p>
 
 <ol>
-<li>The serial number of the device can also be used as ID.
-Example: <code>02911931</code>
-</li>
+<li>The device ID of the GenTL producer (see <code>Transport Layer</code> section below)
+may also be used. This ID is unique, but not persistent as it depends on the
+implementation of the GenTL producer. Thus, it can change after software
+updates. It often encodes the MAC address of the sensor in some way.</li>
 </ol>
+
+<p>Example: <code>00_14_2d_2c_6e_bb</code></p>
 
 <p>All three options can be seen in the output of <code>gc_config -l</code>.</p>
 
@@ -1809,6 +1831,28 @@ sudo sysctl -w net.core.netdev_budget=600
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
+<h1 id="1-3-14-2018-09-26">1.3.14 (2018-09-26)</h1>
+
+<ul>
+<li>  Added possibility to interrupt streaming with gc_stream by pressing
+'Enter' key.</li>
+<li>  Undefined min/max macros in gc_pointcloud.cc on Windows to avoid
+compile errors</li>
+</ul>
+
+<h1 id="1-3-13-2018-08-23">1.3.13 (2018-08-23)</h1>
+
+<ul>
+<li>  Changed output of gc_config -l to emphasize using interface and
+serial number as unique identifier</li>
+<li>  Added possibility to call a GenICam command from the command line
+with gc_info, gc_config and gc_stream</li>
+<li>  Additionally printing the internal name and display name of the
+GenTL producer in the gc_info tool</li>
+<li>  Update GEV GenTL provider from Baumer</li>
+<li>  Revision of readme</li>
+</ul>
+
 <h1 id="1-3-12-2018-07-18">1.3.12 (2018-07-18)</h1>
 
 <ul>
@@ -2429,7 +2473,7 @@ rc_genicam_api
               </tr>
               <tr>
                 <td class="text-right"><strong>Version</strong></td>
-                <td>1.3.12</td>
+                <td>1.3.14</td>
               </tr>
               <tr>
                 <td class="text-right"><strong>License</strong></td>
@@ -2477,7 +2521,7 @@ rc_genicam_api
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-07-18
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-26
         </span>
       </td>
     </tr>
@@ -2632,6 +2676,10 @@ The 'bin' directory contains the tools, DLLs and the default transport layer
 including configuration. The 'include' and 'lib' sub-directories contain the
 headers and libraries for using the API in own programs.</p>
 
+<p>NOTE: For using the libraries in own projects, define the symbol
+<code>GENICAM_NO_AUTO_IMPLIB</code> in your project file to avoid linker problems with the
+GenICam libraries.</p>
+
 <h2 id="tools">Tools</h2>
 
 <p>The tools do not offer a graphical user interface. They are meant to be called
@@ -2695,15 +2743,8 @@ then read the section 'Transport Layer' below.</p>
 <p>There are multiple ways of specifying an ID to identify a device.</p>
 
 <ol>
-<li>In the most basic version, the device ID is actually defined by the GenTL
-producer (see Transport Layer section below). The GenTL producer included
-in rc_genicam_api uses the lower case MAC address with the colons <code>:</code>
-replaced by underscores <code>_</code>.</li>
-</ol>
-
-<p>Example: <code>00_14_2d_2c_6e_bb</code></p>
-
-<ol>
+<li><p>The serial number of the device serves as ID.
+Example: <code>02911931</code></p></li>
 <li>
 <p>The given ID can also be a user defined name. The user defined name is set
 to <code>rc_visard</code> by default and can be changed with:</p>
@@ -2719,10 +2760,13 @@ to <code>rc_visard</code> by default and can be changed with:</p>
    a colon (e.g. <code>:my:name</code>) or an interface ID (see below).</p>
 
 <ol>
-<li>The serial number of the device can also be used as ID.
-Example: <code>02911931</code>
-</li>
+<li>The device ID of the GenTL producer (see <code>Transport Layer</code> section below)
+may also be used. This ID is unique, but not persistent as it depends on the
+implementation of the GenTL producer. Thus, it can change after software
+updates. It often encodes the MAC address of the sensor in some way.</li>
 </ol>
+
+<p>Example: <code>00_14_2d_2c_6e_bb</code></p>
 
 <p>All three options can be seen in the output of <code>gc_config -l</code>.</p>
 
@@ -2837,6 +2881,28 @@ sudo sysctl -w net.core.netdev_budget=600
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
+<h1 id="1-3-14-2018-09-26">1.3.14 (2018-09-26)</h1>
+
+<ul>
+<li>  Added possibility to interrupt streaming with gc_stream by pressing
+'Enter' key.</li>
+<li>  Undefined min/max macros in gc_pointcloud.cc on Windows to avoid
+compile errors</li>
+</ul>
+
+<h1 id="1-3-13-2018-08-23">1.3.13 (2018-08-23)</h1>
+
+<ul>
+<li>  Changed output of gc_config -l to emphasize using interface and
+serial number as unique identifier</li>
+<li>  Added possibility to call a GenICam command from the command line
+with gc_info, gc_config and gc_stream</li>
+<li>  Additionally printing the internal name and display name of the
+GenTL producer in the gc_info tool</li>
+<li>  Update GEV GenTL provider from Baumer</li>
+<li>  Revision of readme</li>
+</ul>
+
 <h1 id="1-3-12-2018-07-18">1.3.12 (2018-07-18)</h1>
 
 <ul>
@@ -3457,7 +3523,7 @@ rc_genicam_api
               </tr>
               <tr>
                 <td class="text-right"><strong>Version</strong></td>
-                <td>1.3.12</td>
+                <td>1.3.14</td>
               </tr>
               <tr>
                 <td class="text-right"><strong>License</strong></td>
@@ -3505,7 +3571,7 @@ rc_genicam_api
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-07-18
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-26
         </span>
       </td>
     </tr>
@@ -3660,6 +3726,10 @@ The 'bin' directory contains the tools, DLLs and the default transport layer
 including configuration. The 'include' and 'lib' sub-directories contain the
 headers and libraries for using the API in own programs.</p>
 
+<p>NOTE: For using the libraries in own projects, define the symbol
+<code>GENICAM_NO_AUTO_IMPLIB</code> in your project file to avoid linker problems with the
+GenICam libraries.</p>
+
 <h2 id="tools">Tools</h2>
 
 <p>The tools do not offer a graphical user interface. They are meant to be called
@@ -3723,15 +3793,8 @@ then read the section 'Transport Layer' below.</p>
 <p>There are multiple ways of specifying an ID to identify a device.</p>
 
 <ol>
-<li>In the most basic version, the device ID is actually defined by the GenTL
-producer (see Transport Layer section below). The GenTL producer included
-in rc_genicam_api uses the lower case MAC address with the colons <code>:</code>
-replaced by underscores <code>_</code>.</li>
-</ol>
-
-<p>Example: <code>00_14_2d_2c_6e_bb</code></p>
-
-<ol>
+<li><p>The serial number of the device serves as ID.
+Example: <code>02911931</code></p></li>
 <li>
 <p>The given ID can also be a user defined name. The user defined name is set
 to <code>rc_visard</code> by default and can be changed with:</p>
@@ -3747,10 +3810,13 @@ to <code>rc_visard</code> by default and can be changed with:</p>
    a colon (e.g. <code>:my:name</code>) or an interface ID (see below).</p>
 
 <ol>
-<li>The serial number of the device can also be used as ID.
-Example: <code>02911931</code>
-</li>
+<li>The device ID of the GenTL producer (see <code>Transport Layer</code> section below)
+may also be used. This ID is unique, but not persistent as it depends on the
+implementation of the GenTL producer. Thus, it can change after software
+updates. It often encodes the MAC address of the sensor in some way.</li>
 </ol>
+
+<p>Example: <code>00_14_2d_2c_6e_bb</code></p>
 
 <p>All three options can be seen in the output of <code>gc_config -l</code>.</p>
 
@@ -3865,6 +3931,28 @@ sudo sysctl -w net.core.netdev_budget=600
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
+<h1 id="1-3-14-2018-09-26">1.3.14 (2018-09-26)</h1>
+
+<ul>
+<li>  Added possibility to interrupt streaming with gc_stream by pressing
+'Enter' key.</li>
+<li>  Undefined min/max macros in gc_pointcloud.cc on Windows to avoid
+compile errors</li>
+</ul>
+
+<h1 id="1-3-13-2018-08-23">1.3.13 (2018-08-23)</h1>
+
+<ul>
+<li>  Changed output of gc_config -l to emphasize using interface and
+serial number as unique identifier</li>
+<li>  Added possibility to call a GenICam command from the command line
+with gc_info, gc_config and gc_stream</li>
+<li>  Additionally printing the internal name and display name of the
+GenTL producer in the gc_info tool</li>
+<li>  Update GEV GenTL provider from Baumer</li>
+<li>  Revision of readme</li>
+</ul>
+
 <h1 id="1-3-12-2018-07-18">1.3.12 (2018-07-18)</h1>
 
 <ul>

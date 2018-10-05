@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -474,7 +470,7 @@ tuw_voronoi_graph
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-25
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-10-03
         </span>
       </td>
     </tr>
@@ -701,7 +697,7 @@ tuw_voronoi_graph
         
           <ul>
             
-              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/master/tuw_multi_robot_demo/launch/path_synchronizer.launch" target="_blank">launch/path_synchronizer.launch</a>
+              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/master/tuw_multi_robot_demo/launch/multi_robot_route_planner.launch" target="_blank">launch/multi_robot_route_planner.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -713,12 +709,53 @@ tuw_voronoi_graph
                           <li><strong>cfg</strong> <em>&#91;default: default&#93; </em></li>
                         
                       
+                        
+                          <li><strong>use_gdb</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>priority_rescheduling</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>speed_rescheduling</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>collision_resolver</strong> <em>&#91;default: 2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>publish_routing_table</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
                     </ul>
                   </li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/master/tuw_multi_robot_demo/launch/stage.launch" target="_blank">launch/stage.launch</a>
+              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/master/tuw_multi_robot_demo/launch/utils/voronoi_map_generator.launch" target="_blank">launch/utils/voronoi_map_generator.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>robot_name</strong> <em>&#91;default: p3dx&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>cfg</strong> <em>&#91;default: default&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/master/tuw_multi_robot_demo/launch/map_server.launch" target="_blank">launch/map_server.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -728,6 +765,35 @@ tuw_voronoi_graph
                       
                         
                           <li><strong>room</strong> <em>&#91;default: cave&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/master/tuw_multi_robot_demo/launch/goals_server.launch" target="_blank">launch/goals_server.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>room</strong> <em>&#91;default: cave&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>file</strong> <em>&#91;default: goals000.txt&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>run_once</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>loop_rate</strong> <em>&#91;default: 1.0&#93; </em></li>
                         
                       
                     </ul>
@@ -768,17 +834,13 @@ tuw_voronoi_graph
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/master/tuw_multi_robot_demo/launch/utils/voronoi_map_generator.launch" target="_blank">launch/utils/voronoi_map_generator.launch</a>
+              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/master/tuw_multi_robot_demo/launch/rviz.launch" target="_blank">launch/rviz.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
-                      
-                        
-                          <li><strong>robot_name</strong> <em>&#91;default: p3dx&#93; </em></li>
-                        
                       
                         
                           <li><strong>cfg</strong> <em>&#91;default: default&#93; </em></li>
@@ -789,36 +851,7 @@ tuw_voronoi_graph
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/master/tuw_multi_robot_demo/launch/local_controller_recursive.launch" target="_blank">launch/local_controller_recursive.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>nr_of_robots</strong> <em>&#91;default: 1&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>robot_name_prefix</strong> <em>&#91;default: robot_&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/master/tuw_multi_robot_demo/launch/goals_server.launch" target="_blank">launch/goals_server.launch</a>
+              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/master/tuw_multi_robot_demo/launch/stage.launch" target="_blank">launch/stage.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -828,18 +861,6 @@ tuw_voronoi_graph
                       
                         
                           <li><strong>room</strong> <em>&#91;default: cave&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>file</strong> <em>&#91;default: goals000.txt&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>run_once</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>loop_rate</strong> <em>&#91;default: 1.0&#93; </em></li>
                         
                       
                     </ul>
@@ -866,7 +887,7 @@ tuw_voronoi_graph
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/master/tuw_multi_robot_demo/launch/rviz.launch" target="_blank">launch/rviz.launch</a>
+              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/master/tuw_multi_robot_demo/launch/path_synchronizer.launch" target="_blank">launch/path_synchronizer.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1007,7 +1028,7 @@ tuw_voronoi_graph
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/master/tuw_multi_robot_demo/launch/multi_robot_route_planner.launch" target="_blank">launch/multi_robot_route_planner.launch</a>
+              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/master/tuw_multi_robot_demo/launch/local_controller_recursive.launch" target="_blank">launch/local_controller_recursive.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1016,44 +1037,19 @@ tuw_voronoi_graph
                     <ul>
                       
                         
-                          <li><strong>cfg</strong> <em>&#91;default: default&#93; </em></li>
+                          <li><strong>nr_of_robots</strong> <em>&#91;default: 1&#93; </em></li>
                         
                       
                         
-                          <li><strong>use_gdb</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>robot_name_prefix</strong> <em>&#91;default: robot_&#93; </em></li>
                         
                       
                         
-                          <li><strong>priority_rescheduling</strong> <em>&#91;default: true&#93; </em></li>
+                      
                         
                       
                         
-                          <li><strong>speed_rescheduling</strong> <em>&#91;default: true&#93; </em></li>
-                        
                       
-                        
-                          <li><strong>collision_resolver</strong> <em>&#91;default: 2&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>publish_routing_table</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/master/tuw_multi_robot_demo/launch/map_server.launch" target="_blank">launch/map_server.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>room</strong> <em>&#91;default: cave&#93; </em></li>
                         
                       
                     </ul>
@@ -1707,7 +1703,7 @@ tuw_voronoi_graph
         
           <ul>
             
-              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/kinetic/tuw_multi_robot_demo/launch/path_synchronizer.launch" target="_blank">launch/path_synchronizer.launch</a>
+              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/kinetic/tuw_multi_robot_demo/launch/multi_robot_route_planner.launch" target="_blank">launch/multi_robot_route_planner.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1719,12 +1715,53 @@ tuw_voronoi_graph
                           <li><strong>cfg</strong> <em>&#91;default: default&#93; </em></li>
                         
                       
+                        
+                          <li><strong>use_gdb</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>priority_rescheduling</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>speed_rescheduling</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>collision_resolver</strong> <em>&#91;default: 2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>publish_routing_table</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
                     </ul>
                   </li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/kinetic/tuw_multi_robot_demo/launch/stage.launch" target="_blank">launch/stage.launch</a>
+              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/kinetic/tuw_multi_robot_demo/launch/utils/voronoi_map_generator.launch" target="_blank">launch/utils/voronoi_map_generator.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>robot_name</strong> <em>&#91;default: p3dx&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>cfg</strong> <em>&#91;default: default&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/kinetic/tuw_multi_robot_demo/launch/map_server.launch" target="_blank">launch/map_server.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1774,7 +1811,7 @@ tuw_voronoi_graph
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/kinetic/tuw_multi_robot_demo/launch/utils/voronoi_map_generator.launch" target="_blank">launch/utils/voronoi_map_generator.launch</a>
+              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/kinetic/tuw_multi_robot_demo/launch/operation_mode_1.launch" target="_blank">launch/operation_mode_1.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1783,8 +1820,73 @@ tuw_voronoi_graph
                     <ul>
                       
                         
-                          <li><strong>robot_name</strong> <em>&#91;default: p3dx&#93; </em></li>
+                          <li><strong>room</strong> <em>&#91;default: cave&#93; </em></li>
                         
+                      
+                        
+                          <li><strong>launch_rviz</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>launch_stage</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>launch_map_server</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>launch_planner</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>launch_graph_generator</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>launch_controller</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>cfg</strong> <em>&#91;default: robot_3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>load_segments</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>map_name</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/kinetic/tuw_multi_robot_demo/launch/rviz.launch" target="_blank">launch/rviz.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
                       
                         
                           <li><strong>cfg</strong> <em>&#91;default: default&#93; </em></li>
@@ -1795,7 +1897,7 @@ tuw_voronoi_graph
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/kinetic/tuw_multi_robot_demo/launch/local_controller_recursive.launch" target="_blank">launch/local_controller_recursive.launch</a>
+              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/kinetic/tuw_multi_robot_demo/launch/stage.launch" target="_blank">launch/stage.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1804,19 +1906,7 @@ tuw_voronoi_graph
                     <ul>
                       
                         
-                          <li><strong>nr_of_robots</strong> <em>&#91;default: 1&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>robot_name_prefix</strong> <em>&#91;default: robot_&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
+                          <li><strong>room</strong> <em>&#91;default: cave&#93; </em></li>
                         
                       
                     </ul>
@@ -1841,7 +1931,7 @@ tuw_voronoi_graph
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/kinetic/tuw_multi_robot_demo/launch/rviz.launch" target="_blank">launch/rviz.launch</a>
+              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/kinetic/tuw_multi_robot_demo/launch/path_synchronizer.launch" target="_blank">launch/path_synchronizer.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1966,7 +2056,7 @@ tuw_voronoi_graph
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/kinetic/tuw_multi_robot_demo/launch/multi_robot_route_planner.launch" target="_blank">launch/multi_robot_route_planner.launch</a>
+              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/kinetic/tuw_multi_robot_demo/launch/local_controller_recursive.launch" target="_blank">launch/local_controller_recursive.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1975,80 +2065,11 @@ tuw_voronoi_graph
                     <ul>
                       
                         
-                          <li><strong>cfg</strong> <em>&#91;default: default&#93; </em></li>
+                          <li><strong>nr_of_robots</strong> <em>&#91;default: 1&#93; </em></li>
                         
                       
                         
-                          <li><strong>use_gdb</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>priority_rescheduling</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>speed_rescheduling</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>collision_resolver</strong> <em>&#91;default: 2&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>publish_routing_table</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/kinetic/tuw_multi_robot_demo/launch/operation_mode_1.launch" target="_blank">launch/operation_mode_1.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>room</strong> <em>&#91;default: cave&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>launch_rviz</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>launch_stage</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>launch_map_server</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>launch_planner</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>launch_graph_generator</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>launch_controller</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>cfg</strong> <em>&#91;default: robot_3&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>load_segments</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>map_name</strong> <em>&#91;default: &#93; </em></li>
+                          <li><strong>robot_name_prefix</strong> <em>&#91;default: robot_&#93; </em></li>
                         
                       
                         
@@ -2057,31 +2078,6 @@ tuw_voronoi_graph
                       
                         
                       
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/tuw-robotics/tuw_multi_robot/blob/kinetic/tuw_multi_robot_demo/launch/map_server.launch" target="_blank">launch/map_server.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>room</strong> <em>&#91;default: cave&#93; </em></li>
                         
                       
                     </ul>
@@ -2308,7 +2304,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

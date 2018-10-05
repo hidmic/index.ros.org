@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -619,24 +615,7 @@ sr_ur_arm_config
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-sr_ethercat_hand_config">Changelog for package sr_ethercat_hand_config</h1>
-
-<h2 id="1-4-0-2015-04-07">1.4.0 (2015-04-07)</h2>
-
-<ul>
-<li>  Fix J0 names for effort controllers</li>
-<li>  Fix diagnostics prefix</li>
-<li>  Add bimanual diagnostic analyzer</li>
-<li>  Add pwm_control argument</li>
-<li>  Adapt config files to bimanual single loop</li>
-<li>  adding tactile controller config for easier customer customisation</li>
-</ul>
-
-<h2 id="1-3-0-2014-02-14">1.3.0 (2014-02-14)</h2>
-
-<ul>
-<li>  first hydro release</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -779,7 +758,7 @@ sr_ur_arm_config
         
           <ul>
             
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/sr_system.launch" target="_blank">launch/sr_system.launch</a>
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/controls/sr_edc_default_controllers.launch" target="_blank">controls/sr_edc_default_controllers.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -788,33 +767,11 @@ sr_ur_arm_config
                     <ul>
                       
                         
-                      
-                        
-                          <li><strong>sim</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>hand_id</strong> <em>&#91;default: &#93; </em></li>
                         
                       
                         
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>scene</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
+                          <li><strong>pwm_control</strong> <em>&#91;default: $(optenv PWM_CONTROL 0)&#93; </em></li>
                         
                       
                     </ul>
@@ -822,7 +779,7 @@ sr_ur_arm_config
                 </ul>
               </li>
             
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/demos/all_hands_demo.launch" target="_blank">launch/demos/all_hands_demo.launch</a>
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/sensors/optoforce_hand.launch" target="_blank">launch/sensors/optoforce_hand.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -830,83 +787,15 @@ sr_ur_arm_config
                   <li>
                     <ul>
                       
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/demos/lhand_demo.launch" target="_blank">launch/demos/lhand_demo.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
+                        
+                          <li><strong>rviz</strong> <em>&#91;default: true&#93; </em></li>
+                        
                       
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/demos/lhand_store.launch" target="_blank">launch/demos/lhand_store.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
+                        
+                          <li><strong>port</strong> <em>&#91;default: /dev/ttyACM0&#93; </em></li>
+                        
                       
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/demos/rhand_demo.launch" target="_blank">launch/demos/rhand_demo.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/demos/all_hands_store.launch" target="_blank">launch/demos/all_hands_store.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/demos/rhand_store.launch" target="_blank">launch/demos/rhand_store.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/demos/rhand_demo_card.launch" target="_blank">launch/demos/rhand_demo_card.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
+                        
                       
                     </ul>
                   </li>
@@ -914,6 +803,35 @@ sr_ur_arm_config
               </li>
             
               <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/sr_lhand.launch" target="_blank">launch/sr_lhand.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/sr_bimanual.launch" target="_blank">launch/sr_bimanual.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -973,7 +891,98 @@ sr_ur_arm_config
                 </ul>
               </li>
             
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/sensors/optoforce_hand.launch" target="_blank">launch/sensors/optoforce_hand.launch</a>
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/demos/all_hands_demo.launch" target="_blank">launch/demos/all_hands_demo.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/demos/rhand_demo.launch" target="_blank">launch/demos/rhand_demo.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/demos/lhand_demo.launch" target="_blank">launch/demos/lhand_demo.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/demos/rhand_store.launch" target="_blank">launch/demos/rhand_store.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/demos/all_hands_store.launch" target="_blank">launch/demos/all_hands_store.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/demos/lhand_store.launch" target="_blank">launch/demos/lhand_store.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/demos/rhand_demo_card.launch" target="_blank">launch/demos/rhand_demo_card.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/sr_system.launch" target="_blank">launch/sr_system.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -982,11 +991,31 @@ sr_ur_arm_config
                     <ul>
                       
                         
-                          <li><strong>rviz</strong> <em>&#91;default: true&#93; </em></li>
+                      
+                        
+                          <li><strong>sim</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
-                          <li><strong>port</strong> <em>&#91;default: /dev/ttyACM0&#93; </em></li>
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>scene</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
                         
                       
                         
@@ -996,7 +1025,20 @@ sr_ur_arm_config
                 </ul>
               </li>
             
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/tools/rhand_robot_monitor.launch" target="_blank">launch/tools/rhand_robot_monitor.launch</a>
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/tools/lhand_gui.launch" target="_blank">launch/tools/lhand_gui.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/tools/rhand_gui.launch" target="_blank">launch/tools/rhand_gui.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1032,7 +1074,7 @@ sr_ur_arm_config
                 </ul>
               </li>
             
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/tools/lhand_tactile_gui.launch" target="_blank">launch/tools/lhand_tactile_gui.launch</a>
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/tools/rhand_robot_monitor.launch" target="_blank">launch/tools/rhand_robot_monitor.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1058,32 +1100,6 @@ sr_ur_arm_config
                 </ul>
               </li>
             
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/tools/lhand_gui.launch" target="_blank">launch/tools/lhand_gui.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/tools/rhand_gui.launch" target="_blank">launch/tools/rhand_gui.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/tools/lhand_robot_monitor.launch" target="_blank">launch/tools/lhand_robot_monitor.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1097,50 +1113,13 @@ sr_ur_arm_config
                 </ul>
               </li>
             
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/sr_bimanual.launch" target="_blank">launch/sr_bimanual.launch</a>
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/launch/tools/lhand_tactile_gui.launch" target="_blank">launch/tools/lhand_tactile_gui.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/demohand_E_v1_kinetic/sr_ethercat_hand_config/controls/sr_edc_default_controllers.launch" target="_blank">controls/sr_edc_default_controllers.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>hand_id</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>pwm_control</strong> <em>&#91;default: $(optenv PWM_CONTROL 0)&#93; </em></li>
-                        
                       
                     </ul>
                   </li>
@@ -1655,24 +1634,7 @@ sr_ethercat_hand_config
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-sr_ethercat_hand_config">Changelog for package sr_ethercat_hand_config</h1>
-
-<h2 id="1-4-0-2015-04-07">1.4.0 (2015-04-07)</h2>
-
-<ul>
-<li>  Fix J0 names for effort controllers</li>
-<li>  Fix diagnostics prefix</li>
-<li>  Add bimanual diagnostic analyzer</li>
-<li>  Add pwm_control argument</li>
-<li>  Adapt config files to bimanual single loop</li>
-<li>  adding tactile controller config for easier customer customisation</li>
-</ul>
-
-<h2 id="1-3-0-2014-02-14">1.3.0 (2014-02-14)</h2>
-
-<ul>
-<li>  first hydro release</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1815,7 +1777,7 @@ sr_ethercat_hand_config
         
           <ul>
             
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/demos/all_hands_demo.launch" target="_blank">launch/demos/all_hands_demo.launch</a>
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/controls/sr_edc_default_controllers.launch" target="_blank">controls/sr_edc_default_controllers.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1823,12 +1785,20 @@ sr_ethercat_hand_config
                   <li>
                     <ul>
                       
+                        
+                          <li><strong>hand_id</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>pwm_control</strong> <em>&#91;default: $(optenv PWM_CONTROL 0)&#93; </em></li>
+                        
+                      
                     </ul>
                   </li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/demos/lhand_demo.launch" target="_blank">launch/demos/lhand_demo.launch</a>
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/sensors/optoforce_hand.launch" target="_blank">launch/sensors/optoforce_hand.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1836,70 +1806,15 @@ sr_ethercat_hand_config
                   <li>
                     <ul>
                       
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/demos/lhand_store.launch" target="_blank">launch/demos/lhand_store.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
+                        
+                          <li><strong>rviz</strong> <em>&#91;default: true&#93; </em></li>
+                        
                       
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/demos/rhand_demo.launch" target="_blank">launch/demos/rhand_demo.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
+                        
+                          <li><strong>port</strong> <em>&#91;default: /dev/ttyACM0&#93; </em></li>
+                        
                       
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/demos/all_hands_store.launch" target="_blank">launch/demos/all_hands_store.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/demos/rhand_store.launch" target="_blank">launch/demos/rhand_store.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/demos/rhand_demo_card.launch" target="_blank">launch/demos/rhand_demo_card.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
+                        
                       
                     </ul>
                   </li>
@@ -1913,6 +1828,35 @@ sr_ethercat_hand_config
                   
                   <li>
                     <ul>
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/sr_bimanual.launch" target="_blank">launch/sr_bimanual.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
                       
                         
                       
@@ -1960,30 +1904,7 @@ sr_ethercat_hand_config
                 </ul>
               </li>
             
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/sensors/optoforce_hand.launch" target="_blank">launch/sensors/optoforce_hand.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>rviz</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>port</strong> <em>&#91;default: /dev/ttyACM0&#93; </em></li>
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/tools/rhand_robot_monitor.launch" target="_blank">launch/tools/rhand_robot_monitor.launch</a>
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/demos/all_hands_demo.launch" target="_blank">launch/demos/all_hands_demo.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1996,7 +1917,7 @@ sr_ethercat_hand_config
                 </ul>
               </li>
             
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/tools/lhand_tactile_gui.launch" target="_blank">launch/tools/lhand_tactile_gui.launch</a>
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/demos/rhand_demo.launch" target="_blank">launch/demos/rhand_demo.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2009,7 +1930,59 @@ sr_ethercat_hand_config
                 </ul>
               </li>
             
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/tools/rhand_tactile_gui.launch" target="_blank">launch/tools/rhand_tactile_gui.launch</a>
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/demos/lhand_demo.launch" target="_blank">launch/demos/lhand_demo.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/demos/rhand_store.launch" target="_blank">launch/demos/rhand_store.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/demos/all_hands_store.launch" target="_blank">launch/demos/all_hands_store.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/demos/lhand_store.launch" target="_blank">launch/demos/lhand_store.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/demos/rhand_demo_card.launch" target="_blank">launch/demos/rhand_demo_card.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2048,6 +2021,32 @@ sr_ethercat_hand_config
                 </ul>
               </li>
             
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/tools/rhand_robot_monitor.launch" target="_blank">launch/tools/rhand_robot_monitor.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/tools/rhand_tactile_gui.launch" target="_blank">launch/tools/rhand_tactile_gui.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/tools/lhand_robot_monitor.launch" target="_blank">launch/tools/lhand_robot_monitor.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2061,50 +2060,13 @@ sr_ethercat_hand_config
                 </ul>
               </li>
             
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/sr_bimanual.launch" target="_blank">launch/sr_bimanual.launch</a>
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/launch/tools/lhand_tactile_gui.launch" target="_blank">launch/tools/lhand_tactile_gui.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/indigo-devel/sr_ethercat_hand_config/controls/sr_edc_default_controllers.launch" target="_blank">controls/sr_edc_default_controllers.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>hand_id</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>pwm_control</strong> <em>&#91;default: $(optenv PWM_CONTROL 0)&#93; </em></li>
-                        
                       
                     </ul>
                   </li>
@@ -2578,13 +2540,7 @@ sr_ethercat_hand_config
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-sr_ethercat_hand_config">Changelog for package sr_ethercat_hand_config</h1>
-
-<h2 id="1-3-0-2014-02-14">1.3.0 (2014-02-14)</h2>
-
-<ul>
-<li>  first hydro release</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2727,7 +2683,7 @@ sr_ethercat_hand_config
         
           <ul>
             
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/sr_system.launch" target="_blank">launch/sr_system.launch</a>
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/controls/sr_edc_default_controllers.launch" target="_blank">controls/sr_edc_default_controllers.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2735,96 +2691,17 @@ sr_ethercat_hand_config
                   <li>
                     <ul>
                       
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/demos/all_hands_demo.launch" target="_blank">launch/demos/all_hands_demo.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
+                        
+                          <li><strong>config_dir</strong> <em>&#91;default: &#93; </em></li>
+                        
                       
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/demos/lhand_demo.launch" target="_blank">launch/demos/lhand_demo.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
+                        
+                          <li><strong>set_namespace</strong> <em>&#91;default: 0&#93; </em></li>
+                        
                       
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/demos/lhand_store.launch" target="_blank">launch/demos/lhand_store.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/demos/rhand_demo.launch" target="_blank">launch/demos/rhand_demo.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/demos/all_hands_store.launch" target="_blank">launch/demos/all_hands_store.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/demos/rhand_store.launch" target="_blank">launch/demos/rhand_store.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/demos/rhand_demo_card.launch" target="_blank">launch/demos/rhand_demo_card.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
+                        
+                          <li><strong>namespace</strong> <em>&#91;default: &#93; </em></li>
+                        
                       
                     </ul>
                   </li>
@@ -2875,7 +2752,7 @@ sr_ethercat_hand_config
                 </ul>
               </li>
             
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/tools/rhand_robot_monitor.launch" target="_blank">launch/tools/rhand_robot_monitor.launch</a>
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/demos/all_hands_demo.launch" target="_blank">launch/demos/all_hands_demo.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2888,7 +2765,7 @@ sr_ethercat_hand_config
                 </ul>
               </li>
             
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/tools/lhand_tactile_gui.launch" target="_blank">launch/tools/lhand_tactile_gui.launch</a>
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/demos/rhand_demo.launch" target="_blank">launch/demos/rhand_demo.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2901,7 +2778,72 @@ sr_ethercat_hand_config
                 </ul>
               </li>
             
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/tools/rhand_tactile_gui.launch" target="_blank">launch/tools/rhand_tactile_gui.launch</a>
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/demos/lhand_demo.launch" target="_blank">launch/demos/lhand_demo.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/demos/rhand_store.launch" target="_blank">launch/demos/rhand_store.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/demos/all_hands_store.launch" target="_blank">launch/demos/all_hands_store.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/demos/lhand_store.launch" target="_blank">launch/demos/lhand_store.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/demos/rhand_demo_card.launch" target="_blank">launch/demos/rhand_demo_card.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/sr_system.launch" target="_blank">launch/sr_system.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2940,6 +2882,32 @@ sr_ethercat_hand_config
                 </ul>
               </li>
             
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/tools/rhand_robot_monitor.launch" target="_blank">launch/tools/rhand_robot_monitor.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/tools/rhand_tactile_gui.launch" target="_blank">launch/tools/rhand_tactile_gui.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/tools/lhand_robot_monitor.launch" target="_blank">launch/tools/lhand_robot_monitor.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2953,25 +2921,13 @@ sr_ethercat_hand_config
                 </ul>
               </li>
             
-              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/controls/sr_edc_default_controllers.launch" target="_blank">controls/sr_edc_default_controllers.launch</a>
+              <li><a href="https://github.com/shadow-robot/sr-config/blob/hydro-devel/sr_ethercat_hand_config/launch/tools/lhand_tactile_gui.launch" target="_blank">launch/tools/lhand_tactile_gui.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
-                      
-                        
-                          <li><strong>config_dir</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>set_namespace</strong> <em>&#91;default: 0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>namespace</strong> <em>&#91;default: &#93; </em></li>
-                        
                       
                     </ul>
                   </li>
@@ -3143,7 +3099,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

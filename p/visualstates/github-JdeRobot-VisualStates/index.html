@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -358,7 +354,7 @@ visualstates
     
     
     
-    <a href="#kinetic-deps" data-toggle="tab"><span class="label label-primary">5</span> Dependencies</a>
+    <a href="#kinetic-deps" data-toggle="tab"><span class="label label-primary">6</span> Dependencies</a>
   </li>
   <li class="better-tabs">
     
@@ -389,7 +385,7 @@ visualstates
               </tr>
               <tr>
                 <td class="text-right"><strong>Version</strong></td>
-                <td>0.1.1</td>
+                <td>0.2.1</td>
               </tr>
               <tr>
                 <td class="text-right"><strong>License</strong></td>
@@ -437,7 +433,7 @@ visualstates
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-08-26
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-27
         </span>
       </td>
     </tr>
@@ -513,22 +509,25 @@ visualstates
 <h2 id="installation">Installation</h2>
 
 <h3 id="install-dependencies">Install Dependencies</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">sudo apt install git
-sudo apt install cmake
+<div class="highlight"><pre><code class="language-" data-lang="">sudo apt install ros-kinetic-desktop
 sudo apt install python-pyqt5
 sudo apt install python-pyqt5.qsci
-sudo apt install python-yaml
-sudo apt install python-sysv-ipc
 
 </code></pre></div>
-<h3 id="build-and-install-the-tool">Build and Install the Tool</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">mkdir build
-cd build
-cmake ..
-make
-sudo make install
+<h3 id="install-visualstates-in-catkin_ws">Install VisualStates in catkin_ws</h3>
+
+<p>The VisualStates tool is distributed as a ROS package. You can directly clone this repository in an active catkin workspace. After copying the repository as ROS package. You can run visualstates following these steps.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">catkin_make
+rosrun visualstates main.py
 
 </code></pre></div>
+<h3 id="to-run-an-example-please-check-the-examples">To run an example please check the examples</h3>
+
+<ul>
+<li><a href="https://github.com/JdeRobot/VisualStates/blob/master/examples/bump_and_go_python/README.md">bump_and_go_python</a></li>
+<li><a href="https://github.com/JdeRobot/VisualStates/blob/master/examples/obstacle_avoidance_cpp/README.md">obstacle_avoidance_cpp</a></li>
+<li><a href="https://github.com/JdeRobot/VisualStates/blob/master/examples/obstacle_avoidance_python/README.md">obstacle_avoidance_python</a></li>
+</ul>
 </div></body></html>
 
               </div>
@@ -545,121 +544,7 @@ sudo make install
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-visualstates">Changelog for package visualstates</h1>
-
-<h2 id="0-1-1-2018-07-11">0.1.1 (2018-07-11)</h2>
-
-<ul>
-<li>  set the version of the ros package as 0.1.0</li>
-<li>  Merge pull request
-<a href="https://github.com/JdeRobot/VisualStates/issues/55">#55</a> from
-JdeRobot/ros-package Generated ROS package dependencies are fixed.
-fixes <a href="https://github.com/JdeRobot/VisualStates/issues/37">#37</a>
-</li>
-<li>  cpp ros package can use python run time</li>
-<li>  The generated code does not have runtime but depends on the
-visualstates package itself</li>
-<li>  config dialog supports only ROS communication interface</li>
-<li>  Merge pull request
-<a href="https://github.com/JdeRobot/VisualStates/issues/40">#40</a> from
-JdeRobot/none-config-fix if config is none create it as
-jderobotconfig and fixes
-<a href="https://github.com/JdeRobot/VisualStates/issues/39">#39</a>
-</li>
-<li>  if config is none create it as jderobotconfig</li>
-<li>  Merge pull request
-<a href="https://github.com/JdeRobot/VisualStates/issues/36">#36</a> from
-JdeRobot/ros-package VisualState tool is redesigned as a ROS package</li>
-<li>  ros package of visualstates merging with the final code structure
-and improvements from master</li>
-<li>  fixed remaining empty merge characters in the source code</li>
-<li>  merge from codegen-bug pull request of pushkal</li>
-<li>  merge from pushkal's external ros package pull request</li>
-<li>  restructure the project for ros</li>
-<li>  format commands as source code</li>
-<li>  change project directory to have everything under src directory</li>
-<li>  Merge pull request
-<a href="https://github.com/JdeRobot/VisualStates/issues/21">#21</a> from
-pushkalkatara/patch-1 have quotation around path to handle path with
-with space</li>
-<li>  Permissions to script in folders with space
-<a href="https://github.com/TheRoboticsClub/colab-gsoc2018-PushkalKatara/issues/8">https://github.com/TheRoboticsClub/colab-gsoc2018-PushkalKatara/issues/8</a>
-Solves <a href="https://github.com/JdeRobot/VisualStates/issues/8">#8</a>
-</li>
-<li>  Merge pull request
-<a href="https://github.com/JdeRobot/VisualStates/issues/19">#19</a> from
-JdeRobot/subautomata-remove-fix Fixing subautomata removal bug</li>
-<li>  get the parent node from treemodel</li>
-<li>  ignore precompiled python files pyc</li>
-<li>  Merge pull request
-<a href="https://github.com/JdeRobot/VisualStates/issues/13">#13</a> from
-JdeRobot/generated_code_dependencies Correcting installation path
-for standalone installation</li>
-<li>  add installation directives to README file</li>
-<li>  check ROS message directory</li>
-<li>  fix the cmake installation path</li>
-<li>  Merge pull request
-<a href="https://github.com/JdeRobot/VisualStates/issues/9">#9</a> from
-JdeRobot/standalone_visualstates Fixing cmake paths</li>
-<li>  fixing cmake paths</li>
-<li>  Merge pull request
-<a href="https://github.com/JdeRobot/VisualStates/issues/8">#8</a> from
-JdeRobot/standalone_visualstates Migration of VisualStates tool to
-its own repository</li>
-<li>  added examples and updated installation cmake to copy examples under
-share folder</li>
-<li>  ignore .idea directory</li>
-<li>  apply small changes for having standalone visualstates</li>
-<li>  Merge branch 'master' of github.com:JdeRobot/VisualStates</li>
-<li>  first commit</li>
-<li>  Solved minor bug in visualStates installation</li>
-<li>  remove the sample folder inside visualStates, old examples will
-reside in src/examples/visualStates</li>
-<li>  visualStates_py renamed to visualStates</li>
-<li>  remove old visualstates</li>
-<li>  <a href="https://github.com/JdeRobot/VisualStates/issues/993">#993</a>
-refactored JderobotConfig.cmake included cmake wrappers</li>
-<li>  Merge branch 'global/build/792-fix-warnings' of
-<a href="https://github.com/lr-morales/JdeRobot">https://github.com/lr-morales/JdeRobot</a> into
-lr-morales-global/build/792-fix-warnings</li>
-<li>  class name change is fixed</li>
-<li>  merge from master</li>
-<li>  to be able to access cmakevar.hpp add build directory to include
-directories</li>
-<li>  remove the generated file to prevent misunderstanding</li>
-<li>  install glade file to general glade path, get cmake variables
-through a c++ class, fix broken library path after moving install
-prefix to /opt/jderobot</li>
-<li>  merge from jderobot_comm</li>
-<li>  [Issue
-<a href="https://github.com/JdeRobot/VisualStates/issues/792">#792</a>]
-Removes compilation warnings from tool visualStates</li>
-<li>  [issue
-<a href="https://github.com/JdeRobot/VisualStates/issues/890">#890</a>]
-Solved installation bug in visualStates</li>
-<li>  [issue
-<a href="https://github.com/JdeRobot/VisualStates/issues/879">#879</a>]
-solved bug in a visualStates file install</li>
-<li>  [issue
-<a href="https://github.com/JdeRobot/VisualStates/issues/879">#879</a>]
-Solved bug in some libraries installation</li>
-<li>  [issue
-<a href="https://github.com/JdeRobot/VisualStates/issues/879">#879</a>]
-Updated visualStates.cpp bug with getinterfaces.sh location</li>
-<li>  [issue
-<a href="https://github.com/JdeRobot/VisualStates/issues/879">#879</a>]
-updated visualStates.cpp for installation in /opt/jderobot</li>
-<li>  [issue
-<a href="https://github.com/JdeRobot/VisualStates/issues/879">#879</a>] moved
-all installation of libs to /opt/jderobot/libs instead of
-/opt/jderobot/libs/jderobot/</li>
-<li>  [issue
-<a href="https://github.com/JdeRobot/VisualStates/issues/879">#879</a>] moved
-all installations to /opt/jderobot</li>
-<li>  change name visualHFSM in variable and class names to visualStates</li>
-<li>  visualHFSM name is changed to visualStates name in the source code</li>
-<li>  Contributors: AAAAAAAAA, Aitor Martinez, Aitor Mart</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -699,7 +584,76 @@ all installations to /opt/jderobot</li>
           </div>
           <div class="panel-body">
             
-              <em>No dependencies on ROS packages.</em>
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th class="text-center"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          
+                          
+                          <a href="/p/roscpp#kinetic-deps" >
+                            <span class="glyphicon glyphicon-arrow-left"></span>
+                          </a>
+                        </td>
+                        <td class="text-center">
+                          <a href="/packages/roscpp" class="label label-primary">
+                            2
+                          </a>
+                        </td>
+                        <td><a href="/p/roscpp#kinetic">roscpp</a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          
+                          
+                          <a href="/p/rospy#kinetic-deps" >
+                            <span class="glyphicon glyphicon-arrow-left"></span>
+                          </a>
+                        </td>
+                        <td class="text-center">
+                          <a href="/packages/rospy" class="label label-primary">
+                            2
+                          </a>
+                        </td>
+                        <td><a href="/p/rospy#kinetic">rospy</a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          
+                          
+                          <a href="/p/std_msgs#kinetic-deps" >
+                            <span class="glyphicon glyphicon-arrow-left"></span>
+                          </a>
+                        </td>
+                        <td class="text-center">
+                          <a href="/packages/std_msgs" class="label label-primary">
+                            2
+                          </a>
+                        </td>
+                        <td><a href="/p/std_msgs#kinetic">std_msgs</a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
             
           </div>
           <div class="panel-heading">
@@ -728,18 +682,6 @@ all installations to /opt/jderobot</li>
                     
                       <tr>
                         <td><a href="/d/python-qt5-bindings-qsci">python-qt5-bindings-qsci</a></td>
-                      </tr>
-                    
-                  
-                    
-                      <tr>
-                        <td><a href="/d/python-sysv-ipc">python-sysv-ipc</a></td>
-                      </tr>
-                    
-                  
-                    
-                      <tr>
-                        <td><a href="/d/python-yaml">python-yaml</a></td>
                       </tr>
                     
                   
@@ -969,7 +911,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

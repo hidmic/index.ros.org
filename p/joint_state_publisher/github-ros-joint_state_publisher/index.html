@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -530,50 +526,7 @@ joint_state_publisher
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-joint_state_publisher">Changelog for package joint_state_publisher</h1>
-
-<h2 id="1-12-13-2018-03-19">1.12.13 (2018-03-19)</h2>
-
-<ul>
-<li>  add bugtracker link now that this is not hosted on robot_model
-anymore</li>
-<li>  Added a scrollarea around the gridlayout to support large number of
-joints</li>
-<li>  pass robot objects into init_collada() and init_urdf()</li>
-<li>  add test for collada supports</li>
-<li>  add support for collada model : moved from
-<a href="https://github.com/ros/robot_model/pull/97">https://github.com/ros/robot_model/pull/97</a>
-</li>
-<li>  Contributors: Guillaume Walck, Kei Okada, Mikael Arguedas</li>
-</ul>
-
-<h2 id="1-12-12-2017-09-15">1.12.12 (2017-09-15)</h2>
-
-<ul>
-<li>  Don't publish joint states if there are no joints
-(<a href="https://github.com/ros/robot_model/issues/212">#212</a>)</li>
-<li>  Contributors: Chris Lalancette</li>
-</ul>
-
-<h2 id="1-12-11-2017-06-27">1.12.11 (2017-06-27)</h2>
-
-<h2 id="1-12-10-2017-06-24">1.12.10 (2017-06-24)</h2>
-
-<h2 id="1-12-9-2017-04-26">1.12.9 (2017-04-26)</h2>
-
-<h2 id="1-12-8-2017-03-27">1.12.8 (2017-03-27)</h2>
-
-<ul>
-<li>  [joint_state_publisher] Handle time moving backwards Without
-this patch, joint_state_publisher dies whenever the ROS time moves
-backwards (e.g., when running rosbag play --clock --loop).</li>
-<li>  Switch a couple more packages over to Chris and Shane.</li>
-<li>  Fix rostest dependency.</li>
-<li>  Add recursive mimic joint
-(<a href="https://github.com/ros/robot_model/issues/177">#177</a>)
-* Add recursive mimic joint</li>
-<li>  Contributors: Alessandro Tondo, Chris Lalancette, Martin G</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -716,20 +669,7 @@ backwards (e.g., when running rosbag play --clock --loop).</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_multi_joints_collada.launch" target="_blank">test/test_multi_joints_collada.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_mimic_cycle.launch" target="_blank">test/test_mimic_cycle.launch</a>
+              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_multi_joints_urdf.launch" target="_blank">test/test_multi_joints_urdf.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -755,7 +695,7 @@ backwards (e.g., when running rosbag play --clock --loop).</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_multi_joints_urdf.launch" target="_blank">test/test_multi_joints_urdf.launch</a>
+              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_zero_joints.launch" target="_blank">test/test_zero_joints.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -768,7 +708,20 @@ backwards (e.g., when running rosbag play --clock --loop).</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_zero_joints.launch" target="_blank">test/test_zero_joints.launch</a>
+              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_mimic_cycle.launch" target="_blank">test/test_mimic_cycle.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_multi_joints_collada.launch" target="_blank">test/test_multi_joints_collada.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1224,50 +1177,7 @@ joint_state_publisher
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-joint_state_publisher">Changelog for package joint_state_publisher</h1>
-
-<h2 id="1-12-13-2018-03-19">1.12.13 (2018-03-19)</h2>
-
-<ul>
-<li>  add bugtracker link now that this is not hosted on robot_model
-anymore</li>
-<li>  Added a scrollarea around the gridlayout to support large number of
-joints</li>
-<li>  pass robot objects into init_collada() and init_urdf()</li>
-<li>  add test for collada supports</li>
-<li>  add support for collada model : moved from
-<a href="https://github.com/ros/robot_model/pull/97">https://github.com/ros/robot_model/pull/97</a>
-</li>
-<li>  Contributors: Guillaume Walck, Kei Okada, Mikael Arguedas</li>
-</ul>
-
-<h2 id="1-12-12-2017-09-15">1.12.12 (2017-09-15)</h2>
-
-<ul>
-<li>  Don't publish joint states if there are no joints
-(<a href="https://github.com/ros/robot_model/issues/212">#212</a>)</li>
-<li>  Contributors: Chris Lalancette</li>
-</ul>
-
-<h2 id="1-12-11-2017-06-27">1.12.11 (2017-06-27)</h2>
-
-<h2 id="1-12-10-2017-06-24">1.12.10 (2017-06-24)</h2>
-
-<h2 id="1-12-9-2017-04-26">1.12.9 (2017-04-26)</h2>
-
-<h2 id="1-12-8-2017-03-27">1.12.8 (2017-03-27)</h2>
-
-<ul>
-<li>  [joint_state_publisher] Handle time moving backwards Without
-this patch, joint_state_publisher dies whenever the ROS time moves
-backwards (e.g., when running rosbag play --clock --loop).</li>
-<li>  Switch a couple more packages over to Chris and Shane.</li>
-<li>  Fix rostest dependency.</li>
-<li>  Add recursive mimic joint
-(<a href="https://github.com/ros/robot_model/issues/177">#177</a>)
-* Add recursive mimic joint</li>
-<li>  Contributors: Alessandro Tondo, Chris Lalancette, Martin G</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1396,20 +1306,7 @@ backwards (e.g., when running rosbag play --clock --loop).</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_multi_joints_collada.launch" target="_blank">test/test_multi_joints_collada.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_mimic_cycle.launch" target="_blank">test/test_mimic_cycle.launch</a>
+              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_multi_joints_urdf.launch" target="_blank">test/test_multi_joints_urdf.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1435,7 +1332,7 @@ backwards (e.g., when running rosbag play --clock --loop).</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_multi_joints_urdf.launch" target="_blank">test/test_multi_joints_urdf.launch</a>
+              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_zero_joints.launch" target="_blank">test/test_zero_joints.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1448,7 +1345,20 @@ backwards (e.g., when running rosbag play --clock --loop).</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_zero_joints.launch" target="_blank">test/test_zero_joints.launch</a>
+              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_mimic_cycle.launch" target="_blank">test/test_mimic_cycle.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_multi_joints_collada.launch" target="_blank">test/test_multi_joints_collada.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1904,50 +1814,7 @@ joint_state_publisher
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-joint_state_publisher">Changelog for package joint_state_publisher</h1>
-
-<h2 id="1-12-13-2018-03-19">1.12.13 (2018-03-19)</h2>
-
-<ul>
-<li>  add bugtracker link now that this is not hosted on robot_model
-anymore</li>
-<li>  Added a scrollarea around the gridlayout to support large number of
-joints</li>
-<li>  pass robot objects into init_collada() and init_urdf()</li>
-<li>  add test for collada supports</li>
-<li>  add support for collada model : moved from
-<a href="https://github.com/ros/robot_model/pull/97">https://github.com/ros/robot_model/pull/97</a>
-</li>
-<li>  Contributors: Guillaume Walck, Kei Okada, Mikael Arguedas</li>
-</ul>
-
-<h2 id="1-12-12-2017-09-15">1.12.12 (2017-09-15)</h2>
-
-<ul>
-<li>  Don't publish joint states if there are no joints
-(<a href="https://github.com/ros/robot_model/issues/212">#212</a>)</li>
-<li>  Contributors: Chris Lalancette</li>
-</ul>
-
-<h2 id="1-12-11-2017-06-27">1.12.11 (2017-06-27)</h2>
-
-<h2 id="1-12-10-2017-06-24">1.12.10 (2017-06-24)</h2>
-
-<h2 id="1-12-9-2017-04-26">1.12.9 (2017-04-26)</h2>
-
-<h2 id="1-12-8-2017-03-27">1.12.8 (2017-03-27)</h2>
-
-<ul>
-<li>  [joint_state_publisher] Handle time moving backwards Without
-this patch, joint_state_publisher dies whenever the ROS time moves
-backwards (e.g., when running rosbag play --clock --loop).</li>
-<li>  Switch a couple more packages over to Chris and Shane.</li>
-<li>  Fix rostest dependency.</li>
-<li>  Add recursive mimic joint
-(<a href="https://github.com/ros/robot_model/issues/177">#177</a>)
-* Add recursive mimic joint</li>
-<li>  Contributors: Alessandro Tondo, Chris Lalancette, Martin G</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2818,20 +2685,7 @@ backwards (e.g., when running rosbag play --clock --loop).</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_multi_joints_collada.launch" target="_blank">test/test_multi_joints_collada.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_mimic_cycle.launch" target="_blank">test/test_mimic_cycle.launch</a>
+              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_multi_joints_urdf.launch" target="_blank">test/test_multi_joints_urdf.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2857,7 +2711,7 @@ backwards (e.g., when running rosbag play --clock --loop).</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_multi_joints_urdf.launch" target="_blank">test/test_multi_joints_urdf.launch</a>
+              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_zero_joints.launch" target="_blank">test/test_zero_joints.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2870,7 +2724,20 @@ backwards (e.g., when running rosbag play --clock --loop).</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_zero_joints.launch" target="_blank">test/test_zero_joints.launch</a>
+              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_mimic_cycle.launch" target="_blank">test/test_mimic_cycle.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros/joint_state_publisher/blob/kinetic-devel/joint_state_publisher/test/test_multi_joints_collada.launch" target="_blank">test/test_multi_joints_collada.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3326,17 +3193,7 @@ joint_state_publisher
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-joint_state_publisher">Changelog for package joint_state_publisher</h1>
-
-<h2 id="1-11-15-2017-09-15">1.11.15 (2017-09-15)</h2>
-
-<ul>
-<li>  Added forward declaration for recent versions of urdfdom
-(<a href="https://github.com/ros/robot_model/pull/217">#217</a>)</li>
-<li>  pcrecpp is no longer a dependency
-(<a href="https://github.com/ros/robot_model/pull/216">#216</a>)</li>
-<li>  Contributors: Chris Lalancette, Michael G</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -4884,7 +4741,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

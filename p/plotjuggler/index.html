@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -418,7 +414,7 @@ plotjuggler
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-22
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-30
         </span>
       </td>
     </tr>
@@ -579,128 +575,7 @@ intuitive tool to visualize data and time series.</p>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-plotjuggler">Changelog for package plotjuggler</h1>
-
-<h2 id="1-8-4-2018-09-17">1.8.4 (2018-09-17)</h2>
-
-<ul>
-<li>  add tooltip</li>
-<li>  fix issue #109</li>
-<li>  CMakeLists.txt add mac homebrew qt5 install directory (#111)</li>
-<li>  Merge pull request #107 from v-lopez/master</li>
-<li>  Fix dragging/deletion of hidden items</li>
-<li>  Contributors: Andrew Hundt, Davide Faconti, Victor Lopez</li>
-</ul>
-
-<h2 id="1-8-3-2018-08-24">1.8.3 (2018-08-24)</h2>
-
-<ul>
-<li>  bug fix (crash when detaching a _point_marker)</li>
-<li>  more informative error messages</li>
-<li>  cleanups</li>
-<li>  more compact view and larger dummyData</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-8-2-2018-08-19">1.8.2 (2018-08-19)</h2>
-
-<ul>
-<li>  bug fix (crash from zombie PlotMatrix)</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-8-1-2018-08-18">1.8.1 (2018-08-18)</h2>
-
-<ul>
-<li>  message moved back to the ROS plugin</li>
-<li>  More informative dialog (issue #100)</li>
-<li>  many improvements related to FilteredTableListWidget, issue #103</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-8-0-2018-08-17">1.8.0 (2018-08-17)</h2>
-
-<ul>
-<li>  fixing splash time</li>
-<li>  minor update</li>
-<li>  fix issue #49</li>
-<li>  README and splashscreen updates</li>
-<li>  Update ISSUE_TEMPLATE.md</li>
-<li>  F10 enhancement</li>
-<li>  preparing release 1.8.0</li>
-<li>  (speedup) skip _completer-&gt;addToCompletionTree altogether unless
-Prefix mode is active</li>
-<li>  avoid data copying when loading a datafile</li>
-<li>  fix issue #103</li>
-<li>  workaround for issue #100</li>
-<li>  trying to fix problem with time offset durinh streaming</li>
-<li>  removed enableStreaming from StreamingPlugins</li>
-<li>  several useless replot() calls removed</li>
-<li>  more conservative implementation of setTimeOffset</li>
-<li>  optimization</li>
-<li>  reduced a lot the amount of computation related to addCurve()</li>
-<li>  bug fix</li>
-<li>  Update .appveyor.yml</li>
-<li>  bug fix (_main_tabbed_widget is already included
-in TabbedPlotWidget::instances())</li>
-<li>  remove bug (crash at deleteDataOfSingleCurve)</li>
-<li>  make PlotData non-copyable</li>
-<li>  change in sthe state publisher API</li>
-<li>  shared_ptr removed. To be tested</li>
-<li>  WIP: changed the way data is shared</li>
-<li>  added suggestion from issue #105</li>
-<li>  skip empty dataMaps in importPlotDataMap() . Issue #105</li>
-<li>  fix issue #102 (grey background)</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-7-3-2018-08-12">1.7.3 (2018-08-12)</h2>
-
-<ul>
-<li>  enhancement discussed in #104 Can clear buffer while streaming is
-active</li>
-<li>  adding enhancements 4 and 5 from issue #105</li>
-<li>  fixed bug reported in #105</li>
-<li>  fix critical error</li>
-<li>  fix issue #101</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-7-2-2018-08-10">1.7.2 (2018-08-10)</h2>
-
-<ul>
-<li>  Update .travis.yml</li>
-<li>  fixed potential thread safety problem</li>
-<li>  trying to apply changes discussed in issue #96</li>
-<li>  add transport hint</li>
-<li>  make hyperlinks clickable by allowing to open external links (#95)</li>
-<li>  Contributors: Davide Faconti, Romain Reignier</li>
-<li>  Update .travis.yml</li>
-<li>  fixed potential thread safety problem</li>
-<li>  trying to apply changes discussed in issue #96</li>
-<li>  add transport hint</li>
-<li>  make hyperlinks clickable by allowing to open external links (#95)</li>
-<li>  Contributors: Davide Faconti, Romain Reignier</li>
-</ul>
-
-<h2 id="1-7-1-2018-07-22">1.7.1 (2018-07-22)</h2>
-
-<ul>
-<li>  catch exceptions</li>
-<li>  fix resize of PlotData size. Reported in issue #94</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-7-0-2018-07-19">1.7.0 (2018-07-19)</h2>
-
-<ul>
-<li>  fixing issue #93 (thread safety in XYPlot and streaming)</li>
-<li>  fix issue #92</li>
-<li>  bug fix</li>
-<li>  Issue #88 (#90)</li>
-<li>  Reorder header files to fix conflicts with boost and QT (#86)</li>
-<li>  Contributors: Davide Faconti, Enrique Fern</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1299,7 +1174,7 @@ plotjuggler
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-22
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-30
         </span>
       </td>
     </tr>
@@ -1460,128 +1335,7 @@ intuitive tool to visualize data and time series.</p>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-plotjuggler">Changelog for package plotjuggler</h1>
-
-<h2 id="1-8-4-2018-09-17">1.8.4 (2018-09-17)</h2>
-
-<ul>
-<li>  add tooltip</li>
-<li>  fix issue #109</li>
-<li>  CMakeLists.txt add mac homebrew qt5 install directory (#111)</li>
-<li>  Merge pull request #107 from v-lopez/master</li>
-<li>  Fix dragging/deletion of hidden items</li>
-<li>  Contributors: Andrew Hundt, Davide Faconti, Victor Lopez</li>
-</ul>
-
-<h2 id="1-8-3-2018-08-24">1.8.3 (2018-08-24)</h2>
-
-<ul>
-<li>  bug fix (crash when detaching a _point_marker)</li>
-<li>  more informative error messages</li>
-<li>  cleanups</li>
-<li>  more compact view and larger dummyData</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-8-2-2018-08-19">1.8.2 (2018-08-19)</h2>
-
-<ul>
-<li>  bug fix (crash from zombie PlotMatrix)</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-8-1-2018-08-18">1.8.1 (2018-08-18)</h2>
-
-<ul>
-<li>  message moved back to the ROS plugin</li>
-<li>  More informative dialog (issue #100)</li>
-<li>  many improvements related to FilteredTableListWidget, issue #103</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-8-0-2018-08-17">1.8.0 (2018-08-17)</h2>
-
-<ul>
-<li>  fixing splash time</li>
-<li>  minor update</li>
-<li>  fix issue #49</li>
-<li>  README and splashscreen updates</li>
-<li>  Update ISSUE_TEMPLATE.md</li>
-<li>  F10 enhancement</li>
-<li>  preparing release 1.8.0</li>
-<li>  (speedup) skip _completer-&gt;addToCompletionTree altogether unless
-Prefix mode is active</li>
-<li>  avoid data copying when loading a datafile</li>
-<li>  fix issue #103</li>
-<li>  workaround for issue #100</li>
-<li>  trying to fix problem with time offset durinh streaming</li>
-<li>  removed enableStreaming from StreamingPlugins</li>
-<li>  several useless replot() calls removed</li>
-<li>  more conservative implementation of setTimeOffset</li>
-<li>  optimization</li>
-<li>  reduced a lot the amount of computation related to addCurve()</li>
-<li>  bug fix</li>
-<li>  Update .appveyor.yml</li>
-<li>  bug fix (_main_tabbed_widget is already included
-in TabbedPlotWidget::instances())</li>
-<li>  remove bug (crash at deleteDataOfSingleCurve)</li>
-<li>  make PlotData non-copyable</li>
-<li>  change in sthe state publisher API</li>
-<li>  shared_ptr removed. To be tested</li>
-<li>  WIP: changed the way data is shared</li>
-<li>  added suggestion from issue #105</li>
-<li>  skip empty dataMaps in importPlotDataMap() . Issue #105</li>
-<li>  fix issue #102 (grey background)</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-7-3-2018-08-12">1.7.3 (2018-08-12)</h2>
-
-<ul>
-<li>  enhancement discussed in #104 Can clear buffer while streaming is
-active</li>
-<li>  adding enhancements 4 and 5 from issue #105</li>
-<li>  fixed bug reported in #105</li>
-<li>  fix critical error</li>
-<li>  fix issue #101</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-7-2-2018-08-10">1.7.2 (2018-08-10)</h2>
-
-<ul>
-<li>  Update .travis.yml</li>
-<li>  fixed potential thread safety problem</li>
-<li>  trying to apply changes discussed in issue #96</li>
-<li>  add transport hint</li>
-<li>  make hyperlinks clickable by allowing to open external links (#95)</li>
-<li>  Contributors: Davide Faconti, Romain Reignier</li>
-<li>  Update .travis.yml</li>
-<li>  fixed potential thread safety problem</li>
-<li>  trying to apply changes discussed in issue #96</li>
-<li>  add transport hint</li>
-<li>  make hyperlinks clickable by allowing to open external links (#95)</li>
-<li>  Contributors: Davide Faconti, Romain Reignier</li>
-</ul>
-
-<h2 id="1-7-1-2018-07-22">1.7.1 (2018-07-22)</h2>
-
-<ul>
-<li>  catch exceptions</li>
-<li>  fix resize of PlotData size. Reported in issue #94</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-7-0-2018-07-19">1.7.0 (2018-07-19)</h2>
-
-<ul>
-<li>  fixing issue #93 (thread safety in XYPlot and streaming)</li>
-<li>  fix issue #92</li>
-<li>  bug fix</li>
-<li>  Issue #88 (#90)</li>
-<li>  Reorder header files to fix conflicts with boost and QT (#86)</li>
-<li>  Contributors: Davide Faconti, Enrique Fern</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2180,7 +1934,7 @@ plotjuggler
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-22
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-30
         </span>
       </td>
     </tr>
@@ -2341,128 +2095,7 @@ intuitive tool to visualize data and time series.</p>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-plotjuggler">Changelog for package plotjuggler</h1>
-
-<h2 id="1-8-4-2018-09-17">1.8.4 (2018-09-17)</h2>
-
-<ul>
-<li>  add tooltip</li>
-<li>  fix issue #109</li>
-<li>  CMakeLists.txt add mac homebrew qt5 install directory (#111)</li>
-<li>  Merge pull request #107 from v-lopez/master</li>
-<li>  Fix dragging/deletion of hidden items</li>
-<li>  Contributors: Andrew Hundt, Davide Faconti, Victor Lopez</li>
-</ul>
-
-<h2 id="1-8-3-2018-08-24">1.8.3 (2018-08-24)</h2>
-
-<ul>
-<li>  bug fix (crash when detaching a _point_marker)</li>
-<li>  more informative error messages</li>
-<li>  cleanups</li>
-<li>  more compact view and larger dummyData</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-8-2-2018-08-19">1.8.2 (2018-08-19)</h2>
-
-<ul>
-<li>  bug fix (crash from zombie PlotMatrix)</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-8-1-2018-08-18">1.8.1 (2018-08-18)</h2>
-
-<ul>
-<li>  message moved back to the ROS plugin</li>
-<li>  More informative dialog (issue #100)</li>
-<li>  many improvements related to FilteredTableListWidget, issue #103</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-8-0-2018-08-17">1.8.0 (2018-08-17)</h2>
-
-<ul>
-<li>  fixing splash time</li>
-<li>  minor update</li>
-<li>  fix issue #49</li>
-<li>  README and splashscreen updates</li>
-<li>  Update ISSUE_TEMPLATE.md</li>
-<li>  F10 enhancement</li>
-<li>  preparing release 1.8.0</li>
-<li>  (speedup) skip _completer-&gt;addToCompletionTree altogether unless
-Prefix mode is active</li>
-<li>  avoid data copying when loading a datafile</li>
-<li>  fix issue #103</li>
-<li>  workaround for issue #100</li>
-<li>  trying to fix problem with time offset durinh streaming</li>
-<li>  removed enableStreaming from StreamingPlugins</li>
-<li>  several useless replot() calls removed</li>
-<li>  more conservative implementation of setTimeOffset</li>
-<li>  optimization</li>
-<li>  reduced a lot the amount of computation related to addCurve()</li>
-<li>  bug fix</li>
-<li>  Update .appveyor.yml</li>
-<li>  bug fix (_main_tabbed_widget is already included
-in TabbedPlotWidget::instances())</li>
-<li>  remove bug (crash at deleteDataOfSingleCurve)</li>
-<li>  make PlotData non-copyable</li>
-<li>  change in sthe state publisher API</li>
-<li>  shared_ptr removed. To be tested</li>
-<li>  WIP: changed the way data is shared</li>
-<li>  added suggestion from issue #105</li>
-<li>  skip empty dataMaps in importPlotDataMap() . Issue #105</li>
-<li>  fix issue #102 (grey background)</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-7-3-2018-08-12">1.7.3 (2018-08-12)</h2>
-
-<ul>
-<li>  enhancement discussed in #104 Can clear buffer while streaming is
-active</li>
-<li>  adding enhancements 4 and 5 from issue #105</li>
-<li>  fixed bug reported in #105</li>
-<li>  fix critical error</li>
-<li>  fix issue #101</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-7-2-2018-08-10">1.7.2 (2018-08-10)</h2>
-
-<ul>
-<li>  Update .travis.yml</li>
-<li>  fixed potential thread safety problem</li>
-<li>  trying to apply changes discussed in issue #96</li>
-<li>  add transport hint</li>
-<li>  make hyperlinks clickable by allowing to open external links (#95)</li>
-<li>  Contributors: Davide Faconti, Romain Reignier</li>
-<li>  Update .travis.yml</li>
-<li>  fixed potential thread safety problem</li>
-<li>  trying to apply changes discussed in issue #96</li>
-<li>  add transport hint</li>
-<li>  make hyperlinks clickable by allowing to open external links (#95)</li>
-<li>  Contributors: Davide Faconti, Romain Reignier</li>
-</ul>
-
-<h2 id="1-7-1-2018-07-22">1.7.1 (2018-07-22)</h2>
-
-<ul>
-<li>  catch exceptions</li>
-<li>  fix resize of PlotData size. Reported in issue #94</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-7-0-2018-07-19">1.7.0 (2018-07-19)</h2>
-
-<ul>
-<li>  fixing issue #93 (thread safety in XYPlot and streaming)</li>
-<li>  fix issue #92</li>
-<li>  bug fix</li>
-<li>  Issue #88 (#90)</li>
-<li>  Reorder header files to fix conflicts with boost and QT (#86)</li>
-<li>  Contributors: Davide Faconti, Enrique Fern</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3061,7 +2694,7 @@ plotjuggler
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-22
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-30
         </span>
       </td>
     </tr>
@@ -3222,128 +2855,7 @@ intuitive tool to visualize data and time series.</p>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-plotjuggler">Changelog for package plotjuggler</h1>
-
-<h2 id="1-8-4-2018-09-17">1.8.4 (2018-09-17)</h2>
-
-<ul>
-<li>  add tooltip</li>
-<li>  fix issue #109</li>
-<li>  CMakeLists.txt add mac homebrew qt5 install directory (#111)</li>
-<li>  Merge pull request #107 from v-lopez/master</li>
-<li>  Fix dragging/deletion of hidden items</li>
-<li>  Contributors: Andrew Hundt, Davide Faconti, Victor Lopez</li>
-</ul>
-
-<h2 id="1-8-3-2018-08-24">1.8.3 (2018-08-24)</h2>
-
-<ul>
-<li>  bug fix (crash when detaching a _point_marker)</li>
-<li>  more informative error messages</li>
-<li>  cleanups</li>
-<li>  more compact view and larger dummyData</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-8-2-2018-08-19">1.8.2 (2018-08-19)</h2>
-
-<ul>
-<li>  bug fix (crash from zombie PlotMatrix)</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-8-1-2018-08-18">1.8.1 (2018-08-18)</h2>
-
-<ul>
-<li>  message moved back to the ROS plugin</li>
-<li>  More informative dialog (issue #100)</li>
-<li>  many improvements related to FilteredTableListWidget, issue #103</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-8-0-2018-08-17">1.8.0 (2018-08-17)</h2>
-
-<ul>
-<li>  fixing splash time</li>
-<li>  minor update</li>
-<li>  fix issue #49</li>
-<li>  README and splashscreen updates</li>
-<li>  Update ISSUE_TEMPLATE.md</li>
-<li>  F10 enhancement</li>
-<li>  preparing release 1.8.0</li>
-<li>  (speedup) skip _completer-&gt;addToCompletionTree altogether unless
-Prefix mode is active</li>
-<li>  avoid data copying when loading a datafile</li>
-<li>  fix issue #103</li>
-<li>  workaround for issue #100</li>
-<li>  trying to fix problem with time offset durinh streaming</li>
-<li>  removed enableStreaming from StreamingPlugins</li>
-<li>  several useless replot() calls removed</li>
-<li>  more conservative implementation of setTimeOffset</li>
-<li>  optimization</li>
-<li>  reduced a lot the amount of computation related to addCurve()</li>
-<li>  bug fix</li>
-<li>  Update .appveyor.yml</li>
-<li>  bug fix (_main_tabbed_widget is already included
-in TabbedPlotWidget::instances())</li>
-<li>  remove bug (crash at deleteDataOfSingleCurve)</li>
-<li>  make PlotData non-copyable</li>
-<li>  change in sthe state publisher API</li>
-<li>  shared_ptr removed. To be tested</li>
-<li>  WIP: changed the way data is shared</li>
-<li>  added suggestion from issue #105</li>
-<li>  skip empty dataMaps in importPlotDataMap() . Issue #105</li>
-<li>  fix issue #102 (grey background)</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-7-3-2018-08-12">1.7.3 (2018-08-12)</h2>
-
-<ul>
-<li>  enhancement discussed in #104 Can clear buffer while streaming is
-active</li>
-<li>  adding enhancements 4 and 5 from issue #105</li>
-<li>  fixed bug reported in #105</li>
-<li>  fix critical error</li>
-<li>  fix issue #101</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-7-2-2018-08-10">1.7.2 (2018-08-10)</h2>
-
-<ul>
-<li>  Update .travis.yml</li>
-<li>  fixed potential thread safety problem</li>
-<li>  trying to apply changes discussed in issue #96</li>
-<li>  add transport hint</li>
-<li>  make hyperlinks clickable by allowing to open external links (#95)</li>
-<li>  Contributors: Davide Faconti, Romain Reignier</li>
-<li>  Update .travis.yml</li>
-<li>  fixed potential thread safety problem</li>
-<li>  trying to apply changes discussed in issue #96</li>
-<li>  add transport hint</li>
-<li>  make hyperlinks clickable by allowing to open external links (#95)</li>
-<li>  Contributors: Davide Faconti, Romain Reignier</li>
-</ul>
-
-<h2 id="1-7-1-2018-07-22">1.7.1 (2018-07-22)</h2>
-
-<ul>
-<li>  catch exceptions</li>
-<li>  fix resize of PlotData size. Reported in issue #94</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-7-0-2018-07-19">1.7.0 (2018-07-19)</h2>
-
-<ul>
-<li>  fixing issue #93 (thread safety in XYPlot and streaming)</li>
-<li>  fix issue #92</li>
-<li>  bug fix</li>
-<li>  Issue #88 (#90)</li>
-<li>  Reorder header files to fix conflicts with boost and QT (#86)</li>
-<li>  Contributors: Davide Faconti, Enrique Fern</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3950,7 +3462,7 @@ plotjuggler
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-22
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-30
         </span>
       </td>
     </tr>
@@ -4111,128 +3623,7 @@ intuitive tool to visualize data and time series.</p>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-plotjuggler">Changelog for package plotjuggler</h1>
-
-<h2 id="1-8-4-2018-09-17">1.8.4 (2018-09-17)</h2>
-
-<ul>
-<li>  add tooltip</li>
-<li>  fix issue #109</li>
-<li>  CMakeLists.txt add mac homebrew qt5 install directory (#111)</li>
-<li>  Merge pull request #107 from v-lopez/master</li>
-<li>  Fix dragging/deletion of hidden items</li>
-<li>  Contributors: Andrew Hundt, Davide Faconti, Victor Lopez</li>
-</ul>
-
-<h2 id="1-8-3-2018-08-24">1.8.3 (2018-08-24)</h2>
-
-<ul>
-<li>  bug fix (crash when detaching a _point_marker)</li>
-<li>  more informative error messages</li>
-<li>  cleanups</li>
-<li>  more compact view and larger dummyData</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-8-2-2018-08-19">1.8.2 (2018-08-19)</h2>
-
-<ul>
-<li>  bug fix (crash from zombie PlotMatrix)</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-8-1-2018-08-18">1.8.1 (2018-08-18)</h2>
-
-<ul>
-<li>  message moved back to the ROS plugin</li>
-<li>  More informative dialog (issue #100)</li>
-<li>  many improvements related to FilteredTableListWidget, issue #103</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-8-0-2018-08-17">1.8.0 (2018-08-17)</h2>
-
-<ul>
-<li>  fixing splash time</li>
-<li>  minor update</li>
-<li>  fix issue #49</li>
-<li>  README and splashscreen updates</li>
-<li>  Update ISSUE_TEMPLATE.md</li>
-<li>  F10 enhancement</li>
-<li>  preparing release 1.8.0</li>
-<li>  (speedup) skip _completer-&gt;addToCompletionTree altogether unless
-Prefix mode is active</li>
-<li>  avoid data copying when loading a datafile</li>
-<li>  fix issue #103</li>
-<li>  workaround for issue #100</li>
-<li>  trying to fix problem with time offset durinh streaming</li>
-<li>  removed enableStreaming from StreamingPlugins</li>
-<li>  several useless replot() calls removed</li>
-<li>  more conservative implementation of setTimeOffset</li>
-<li>  optimization</li>
-<li>  reduced a lot the amount of computation related to addCurve()</li>
-<li>  bug fix</li>
-<li>  Update .appveyor.yml</li>
-<li>  bug fix (_main_tabbed_widget is already included
-in TabbedPlotWidget::instances())</li>
-<li>  remove bug (crash at deleteDataOfSingleCurve)</li>
-<li>  make PlotData non-copyable</li>
-<li>  change in sthe state publisher API</li>
-<li>  shared_ptr removed. To be tested</li>
-<li>  WIP: changed the way data is shared</li>
-<li>  added suggestion from issue #105</li>
-<li>  skip empty dataMaps in importPlotDataMap() . Issue #105</li>
-<li>  fix issue #102 (grey background)</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-7-3-2018-08-12">1.7.3 (2018-08-12)</h2>
-
-<ul>
-<li>  enhancement discussed in #104 Can clear buffer while streaming is
-active</li>
-<li>  adding enhancements 4 and 5 from issue #105</li>
-<li>  fixed bug reported in #105</li>
-<li>  fix critical error</li>
-<li>  fix issue #101</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-7-2-2018-08-10">1.7.2 (2018-08-10)</h2>
-
-<ul>
-<li>  Update .travis.yml</li>
-<li>  fixed potential thread safety problem</li>
-<li>  trying to apply changes discussed in issue #96</li>
-<li>  add transport hint</li>
-<li>  make hyperlinks clickable by allowing to open external links (#95)</li>
-<li>  Contributors: Davide Faconti, Romain Reignier</li>
-<li>  Update .travis.yml</li>
-<li>  fixed potential thread safety problem</li>
-<li>  trying to apply changes discussed in issue #96</li>
-<li>  add transport hint</li>
-<li>  make hyperlinks clickable by allowing to open external links (#95)</li>
-<li>  Contributors: Davide Faconti, Romain Reignier</li>
-</ul>
-
-<h2 id="1-7-1-2018-07-22">1.7.1 (2018-07-22)</h2>
-
-<ul>
-<li>  catch exceptions</li>
-<li>  fix resize of PlotData size. Reported in issue #94</li>
-<li>  Contributors: Davide Faconti</li>
-</ul>
-
-<h2 id="1-7-0-2018-07-19">1.7.0 (2018-07-19)</h2>
-
-<ul>
-<li>  fixing issue #93 (thread safety in XYPlot and streaming)</li>
-<li>  fix issue #92</li>
-<li>  bug fix</li>
-<li>  Issue #88 (#90)</li>
-<li>  Reorder header files to fix conflicts with boost and QT (#86)</li>
-<li>  Contributors: Davide Faconti, Enrique Fern</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -4671,7 +4062,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

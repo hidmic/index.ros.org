@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -434,7 +430,7 @@ mh5_anomaly_detector
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-08-19
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-08-18
         </span>
       </td>
     </tr>
@@ -592,12 +588,12 @@ classifiers to the Interface class for training, by calling the
     <span class="n">unsupervised_models</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">supervised_models</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="c"># Step 1</span>
-    <span class="n">input_file</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c"># YAML input</span>
-    <span class="n">interface</span> <span class="o">=</span> <span class="n">Interface</span><span class="p">(</span><span class="n">input_file</span><span class="p">)</span>
+<span class="c1"># Step 1
+</span>    <span class="n">input_file</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># YAML input
+</span>    <span class="n">interface</span> <span class="o">=</span> <span class="n">Interface</span><span class="p">(</span><span class="n">input_file</span><span class="p">)</span>
 
-<span class="c"># Step 2</span>
-    <span class="n">ocsvm</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">OneClassSVM</span><span class="p">(</span><span class="n">nu</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="s">"rbf"</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="c1"># Step 2
+</span>    <span class="n">ocsvm</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">OneClassSVM</span><span class="p">(</span><span class="n">nu</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="s">"rbf"</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
     <span class="n">unsupervised_models</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s">'ocsvm'</span><span class="p">,</span> <span class="n">clf_ocsvm</span><span class="p">))</span>
 
     <span class="n">svm1</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s">'rbf'</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
@@ -605,11 +601,11 @@ classifiers to the Interface class for training, by calling the
     <span class="n">svm2</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s">'rbf'</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
     <span class="n">supervised_models</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s">'rbfsvm2'</span><span class="p">,</span> <span class="n">svm2</span><span class="p">))</span>
 
-<span class="c"># Step 3</span>
-    <span class="n">interface</span><span class="o">.</span><span class="n">genmodel_train</span><span class="p">(</span><span class="n">unsupervised_models</span><span class="p">,</span> <span class="n">supervised_models</span><span class="p">)</span>
+<span class="c1"># Step 3
+</span>    <span class="n">interface</span><span class="o">.</span><span class="n">genmodel_train</span><span class="p">(</span><span class="n">unsupervised_models</span><span class="p">,</span> <span class="n">supervised_models</span><span class="p">)</span>
 
-<span class="c"># Step 4</span>
-    <span class="n">unsup</span><span class="p">,</span> <span class="n">sup</span> <span class="o">=</span> <span class="n">interface</span><span class="o">.</span><span class="n">get_testing_predictions</span><span class="p">()</span>
+<span class="c1"># Step 4
+</span>    <span class="n">unsup</span><span class="p">,</span> <span class="n">sup</span> <span class="o">=</span> <span class="n">interface</span><span class="o">.</span><span class="n">get_testing_predictions</span><span class="p">()</span>
 
 </code></pre></div>
 <h4 id="learning-library">Learning library</h4>
@@ -856,27 +852,6 @@ Then scripts should be able to run</p>
         
           <ul>
             
-              <li><a href="https://github.com/narayave/mh5_anomaly_detector/blob/master/./launch/run.launch" target="_blank">launch/run.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> THIS IS AN EXAMPLE FILE </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/narayave/mh5_anomaly_detector/blob/master/./launch/module.launch" target="_blank">launch/module.launch</a>
                 <ul class="list-unstyled">
                   
@@ -899,6 +874,27 @@ Then scripts should be able to run</p>
                       
                         
                           <li><strong>pkg_name</strong>  </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/narayave/mh5_anomaly_detector/blob/master/./launch/run.launch" target="_blank">launch/run.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> THIS IS AN EXAMPLE FILE </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                      
+                        
+                      
                         
                       
                     </ul>
@@ -1104,7 +1100,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

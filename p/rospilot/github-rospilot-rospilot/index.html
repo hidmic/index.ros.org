@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -532,366 +528,7 @@ rospilot
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-rospilot">Changelog for package rospilot</h1>
-
-<h2 id="1-5-2-2018-09-22">1.5.2 (2018-09-22)</h2>
-
-<ul>
-<li>  Fix compiler warnings</li>
-<li>  Fix SPS &amp; PPS ordering when using MFC encoder SPS should always be
-before PPS, as PPS references the SPS packet</li>
-<li>  Remove unnecessary C++11 compiler flag</li>
-<li>  Fix undefined behavior in AVPacket buffer management Use the
-provided av_new_packet() and av_packet_unref() functions instead
-of manual management of .data field</li>
-<li>  Fix undefined behavior in memory deallocation This buffer is an
-array, and therefore must be deallocated with delete[]</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-5-1-2018-09-03">1.5.1 (2018-09-03)</h2>
-
-<ul>
-<li>  Fix wlan configuration on Bionic</li>
-<li>  Fix Systemd service to work on Melodic</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-5-0-2018-08-04">1.5.0 (2018-08-04)</h2>
-
-<ul>
-<li>  Upgrade to Angular 5.2.11</li>
-<li>  Upgrade Highcharts</li>
-<li>  Set both pts and dts in video recorder</li>
-<li>  Properly set time_base on video recorder codec</li>
-<li>  Remove usage of deprecated encoding/decoding functions</li>
-<li>  Remove usage of deprecated AVPicture</li>
-<li>  Fix AVStream::codec deprecation warnings</li>
-<li>  Add error handling for call to avformat_write_header()</li>
-<li>  Cleanup VideoRecorder::stop()</li>
-<li>  Switch Travis to build melodic</li>
-<li>  Update ffmpeg usage to compile against newest version</li>
-<li>  Update environment variable to PGPASSWORD</li>
-<li>  Switch to Melodic-friendly dependencies</li>
-<li>  Hack: monkey patch Mapnik to fix Tilestache dependency</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-4-1-2018-03-10">1.4.1 (2018-03-10)</h2>
-
-<ul>
-<li>  Switch to HTTPS for openstreetmap.org</li>
-<li>  Workaround camera drivers that don't set keyframe flag</li>
-<li>  Add support for reading raw YUV from camera</li>
-<li>  Refactor pixel format handling</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-4-0-2017-11-19">1.4.0 (2017-11-19)</h2>
-
-<ul>
-<li>  Add "follow me" mode</li>
-<li>  Add support for direct h264 capture from camera</li>
-<li>  Improve automatic camera selection</li>
-<li>  Add vibration data to display Also includes accelerometer clipping
-counts</li>
-<li>  Add support for battery voltage monitoring</li>
-<li>  Enable pre-release tests</li>
-<li>  Add Travis integration</li>
-<li>  Refactor handling of NPM dependencies</li>
-<li>  Add native Systemd service</li>
-<li>  Set dns search domain for better compatibility</li>
-<li>  Update wifi setup script with proper dnsmasq dependency</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-3-8-2017-09-13">1.3.8 (2017-09-13)</h2>
-
-<ul>
-<li>  Remove dependency on nodejs-legacy Also remove usage of vendored npm
-version</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-3-7-2017-06-10">1.3.7 (2017-06-10)</h2>
-
-<ul>
-<li>  Update for newest NPM</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-3-6-2017-05-29">1.3.6 (2017-05-29)</h2>
-
-<ul>
-<li>  Add support for Pixhawk2.1</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-3-5-2017-03-12">1.3.5 (2017-03-12)</h2>
-
-<ul>
-<li>  Add missing include needed on Debian</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-3-4-2017-03-08">1.3.4 (2017-03-08)</h2>
-
-<ul>
-<li>  Rescale PTS properly</li>
-<li>  Fix usage of deprecated API</li>
-<li>  Fix usage of invalid iterator</li>
-<li>  Add more logging to camera node</li>
-<li>  Fix data structure corruption due to race</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-3-3-2016-08-24">1.3.3 (2016-08-24)</h2>
-
-<ul>
-<li>  Fix build on Debian</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-3-2-2016-08-24">1.3.2 (2016-08-24)</h2>
-
-<ul>
-<li>  Support building on Debian</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-3-1-2016-08-21">1.3.1 (2016-08-21)</h2>
-
-<ul>
-<li>  Fix build on Wily</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-3-0-2016-08-20">1.3.0 (2016-08-20)</h2>
-
-<ul>
-<li>  Initialize source frame data structure</li>
-<li>  Update init script to Kinetic</li>
-<li>  Set CherryPy to production instead of manually configuring it</li>
-<li>  Use npm for build</li>
-<li>  Use more canonical license string</li>
-<li>  Fix scoping in set waypoint callback</li>
-<li>  Improve mavlink wait logic to be interruptable</li>
-<li>  Fix retry logic for serial mavlink</li>
-<li>  Migrate to Angular 2.0</li>
-<li>  Add timeout to waypoint fetching Previously, if a message was lost
-waypoints would no longer be fetched and new ones could not be set</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-2-0-2016-05-14">1.2.0 (2016-05-14)</h2>
-
-<ul>
-<li>  Add people detector using OpenCV</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-1-1-2016-01-31">1.1.1 (2016-01-31)</h2>
-
-<ul>
-<li>  Copy files to /etc as part of setup script instead of package
-install</li>
-<li>  Fix warnings and installation of mapnik files</li>
-<li>  Add missing python-serial dependency</li>
-<li>  Cleanup linking of libturbojpeg This should fix compiling on other
-platforms like x86_32</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-1-0-2016-01-18">1.1.0 (2016-01-18)</h2>
-
-<ul>
-<li>  Auto-detect camera device path</li>
-<li>  Improve video streaming FPS ~2x</li>
-<li>  Add support for hardware h264 acceleration on Odroid XU4</li>
-<li>  Add FPS counter to camera page</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-0-3-2015-08-23">1.0.3 (2015-08-23)</h2>
-
-<ul>
-<li>  Fix race freeing background image sink resources</li>
-<li>  Fix bad free on older versions of libav</li>
-<li>  Improve formatting of first_time_setup.sh output</li>
-<li>  Update readme</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-0-2-2015-08-12">1.0.2 (2015-08-12)</h2>
-
-<ul>
-<li>  Remove unnecessary imports</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-0-1-2015-08-09">1.0.1 (2015-08-09)</h2>
-
-<ul>
-<li>  Fix compilation error on vivid and utopic</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-0-0-2015-08-08">1.0.0 (2015-08-08)</h2>
-
-<ul>
-<li>  Switch to H264 codec for streaming and recording</li>
-<li>  Fix a variety of minor bugs</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-2-5-2015-05-31">0.2.5 (2015-05-31)</h2>
-
-<ul>
-<li>  Tune MFC encoder parameters</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-2-4-2015-05-29">0.2.4 (2015-05-29)</h2>
-
-<ul>
-<li>  Fix hardware encoder</li>
-<li>  Fix detection of MFC</li>
-<li>  Update service script for jade</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-2-3-2015-05-02">0.2.3 (2015-05-02)</h2>
-
-<ul>
-<li>  Fix deprecation warnings</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-2-2-2015-04-30">0.2.2 (2015-04-30)</h2>
-
-<ul>
-<li>  Change CodecID to AVCodecID</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-2-1-2015-04-29">0.2.1 (2015-04-29)</h2>
-
-<ul>
-<li>  Switch to libnl 3.0</li>
-<li>  Update to new libavconv constants</li>
-<li>  Improve error handling in setup script</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-2-0-2015-04-22">0.2.0 (2015-04-22)</h2>
-
-<p>Main features:</p>
-
-<ul>
-<li>  Added map server to replace Google Maps</li>
-<li>  Added support for recording in h264 with hardware acceleration</li>
-<li>  Added support for Odroid Show</li>
-</ul>
-
-<p>Details:</p>
-
-<ul>
-<li>  Fix restart command in init.d script</li>
-<li>  Move services and params out of global namespace</li>
-<li>  Fix loading of video device selector</li>
-<li>  Add hostapd setup to first_time_setup script</li>
-<li>  Add setting in UI page to change codec</li>
-<li>  Fix packaging of camera_node</li>
-<li>  Optimize memory access when using MFC encoder</li>
-<li>  Fix mjpeg recording</li>
-<li>  Remove usage of tempnam, and cleanup some other code</li>
-<li>  Fix usage of avcodec_encode_video2</li>
-<li>  Replace usage of deprecated function</li>
-<li>  Split camera node source code into cpp files</li>
-<li>  Add (experimental) support for Exynos MFC</li>
-<li>  Fix h264 encoding</li>
-<li>  Improve media path expansion</li>
-<li>  Fix bug in auto resolution detection</li>
-<li>  Add auto-adjustment of height and width</li>
-<li>  Wait for device to connect before writing to Odroid Show</li>
-<li>  More code cleanup</li>
-<li>  Code cleanup</li>
-<li>  Fix debian package build</li>
-<li>  Add support for recording with mjpeg codec</li>
-<li>  Remove old vlc recorder node</li>
-<li>  Add recording in h264 support to camera node</li>
-<li>  Add support for usb cameras to camera node</li>
-<li>  Refactor ptp node</li>
-<li>  Media improvements Fix container format of recorded videos Add
-button to delete media</li>
-<li>  Add support for Odroid Show</li>
-<li>  Add thumbnails for videos</li>
-<li>  Set queue_size in mavlink node</li>
-<li>  Add flight mode to BasicStatus message and web ui</li>
-<li>  Fix race condition in settings page</li>
-<li>  Add carto style to osm2pgsql command</li>
-<li>  Add auto detection of APM and baudrate</li>
-<li>  Implement local mapnik server Also remove our dependency on Google
-Maps, so that we can run the map even when there's no internet
-connection</li>
-<li>  Rename variable to avoid shadowing</li>
-<li>  Fix image capture from webcam</li>
-<li>  Fix lint errors</li>
-<li>  Improve internet connection detection logic</li>
-<li>  Don't try to load google maps if there's no internet connection</li>
-<li>  Reduce chart update rate to 2Hz to improve performance</li>
-<li>  Add source maps for Angular and jQuery</li>
-<li>  Add button to shutdown on-board computer</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-1-1-2014-08-27">0.1.1 (2014-08-27)</h2>
-
-<ul>
-<li>  Fix debian package build</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-1-0-2014-08-26">0.1.0 (2014-08-26)</h2>
-
-<ul>
-<li>  Add PTP support</li>
-<li>  Add init.d script to auto start rospilot</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-0-4-2014-07-05">0.0.4 (2014-07-05)</h2>
-
-<ul>
-<li>  Use more standard compliant glob syntax</li>
-<li>  Make .gitignore less aggressive</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-0-3-2014-06-28">0.0.3 (2014-06-28)</h2>
-
-<ul>
-<li>  Change web_ui to use pkg_resources for static assets</li>
-<li>  Add udev rule to installation targets</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-0-2-2014-06-15">0.0.2 (2014-06-15)</h2>
-
-<ul>
-<li>  Remove pymavlink dependency</li>
-<li>  Switch to a library for the HMC5883 communication</li>
-<li>  Add more documentation</li>
-<li>  Add support for MPU6050 to firmware</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-0-1-2014-06-02">0.0.1 (2014-06-02)</h2>
-
-<ul>
-<li>  Initial release of rospilot</li>
-<li>  Contributors: Christopher Berner, bordicon, cberner</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1391,19 +1028,6 @@ connection</li>
         
           <ul>
             
-              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./launch/mavlink_only.launch" target="_blank">launch/mavlink_only.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./launch/rospilot.launch" target="_blank">launch/rospilot.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1413,6 +1037,19 @@ connection</li>
                     <ul>
                       
                         
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./launch/mavlink_only.launch" target="_blank">launch/mavlink_only.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
                       
                     </ul>
                   </li>
@@ -1432,29 +1069,29 @@ connection</li>
         
           <ul>
             
-              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/Resolution.msg" target="_blank">msg/Resolution.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/BasicStatus.msg" target="_blank">msg/BasicStatus.msg</a></li>
+              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/Resolutions.msg" target="_blank">msg/Resolutions.msg</a></li>
             
               <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/IMURaw.msg" target="_blank">msg/IMURaw.msg</a></li>
             
-              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/Attitude.msg" target="_blank">msg/Attitude.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/Battery.msg" target="_blank">msg/Battery.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/Waypoints.msg" target="_blank">msg/Waypoints.msg</a></li>
-            
               <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/GPSRaw.msg" target="_blank">msg/GPSRaw.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/VisionTarget.msg" target="_blank">msg/VisionTarget.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/Waypoint.msg" target="_blank">msg/Waypoint.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/Resolutions.msg" target="_blank">msg/Resolutions.msg</a></li>
             
               <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/RCState.msg" target="_blank">msg/RCState.msg</a></li>
             
+              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/Attitude.msg" target="_blank">msg/Attitude.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/BasicStatus.msg" target="_blank">msg/BasicStatus.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/Waypoint.msg" target="_blank">msg/Waypoint.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/Waypoints.msg" target="_blank">msg/Waypoints.msg</a></li>
+            
               <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/VisionTargets.msg" target="_blank">msg/VisionTargets.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/VisionTarget.msg" target="_blank">msg/VisionTarget.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/Resolution.msg" target="_blank">msg/Resolution.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./msg/Battery.msg" target="_blank">msg/Battery.msg</a></li>
             
           </ul>
         
@@ -1469,11 +1106,11 @@ connection</li>
         
           <ul>
             
-              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./srv/SetWaypoints.srv" target="_blank">srv/SetWaypoints.srv</a></li>
-            
               <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./srv/CaptureImage.srv" target="_blank">srv/CaptureImage.srv</a></li>
             
               <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./srv/SetBasicMode.srv" target="_blank">srv/SetBasicMode.srv</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/melodic/./srv/SetWaypoints.srv" target="_blank">srv/SetWaypoints.srv</a></li>
             
           </ul>
         
@@ -1906,323 +1543,7 @@ rospilot
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-rospilot">Changelog for package rospilot</h1>
-
-<h2 id="1-4-1-2018-03-10">1.4.1 (2018-03-10)</h2>
-
-<ul>
-<li>  Switch to HTTPS for openstreetmap.org</li>
-<li>  Workaround camera drivers that don't set keyframe flag</li>
-<li>  Add support for reading raw YUV from camera</li>
-<li>  Refactor pixel format handling</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-4-0-2017-11-19">1.4.0 (2017-11-19)</h2>
-
-<ul>
-<li>  Add "follow me" mode</li>
-<li>  Add support for direct h264 capture from camera</li>
-<li>  Improve automatic camera selection</li>
-<li>  Add vibration data to display Also includes accelerometer clipping
-counts</li>
-<li>  Add support for battery voltage monitoring</li>
-<li>  Enable pre-release tests</li>
-<li>  Add Travis integration</li>
-<li>  Refactor handling of NPM dependencies</li>
-<li>  Add native Systemd service</li>
-<li>  Set dns search domain for better compatibility</li>
-<li>  Update wifi setup script with proper dnsmasq dependency</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-3-8-2017-09-13">1.3.8 (2017-09-13)</h2>
-
-<ul>
-<li>  Remove dependency on nodejs-legacy Also remove usage of vendored npm
-version</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-3-7-2017-06-10">1.3.7 (2017-06-10)</h2>
-
-<ul>
-<li>  Update for newest NPM</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-3-6-2017-05-29">1.3.6 (2017-05-29)</h2>
-
-<ul>
-<li>  Add support for Pixhawk2.1</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-3-5-2017-03-12">1.3.5 (2017-03-12)</h2>
-
-<ul>
-<li>  Add missing include needed on Debian</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-3-4-2017-03-08">1.3.4 (2017-03-08)</h2>
-
-<ul>
-<li>  Rescale PTS properly</li>
-<li>  Fix usage of deprecated API</li>
-<li>  Fix usage of invalid iterator</li>
-<li>  Add more logging to camera node</li>
-<li>  Fix data structure corruption due to race</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-3-3-2016-08-24">1.3.3 (2016-08-24)</h2>
-
-<ul>
-<li>  Fix build on Debian</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-3-2-2016-08-24">1.3.2 (2016-08-24)</h2>
-
-<ul>
-<li>  Support building on Debian</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-3-1-2016-08-21">1.3.1 (2016-08-21)</h2>
-
-<ul>
-<li>  Fix build on Wily</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-3-0-2016-08-20">1.3.0 (2016-08-20)</h2>
-
-<ul>
-<li>  Initialize source frame data structure</li>
-<li>  Update init script to Kinetic</li>
-<li>  Set CherryPy to production instead of manually configuring it</li>
-<li>  Use npm for build</li>
-<li>  Use more canonical license string</li>
-<li>  Fix scoping in set waypoint callback</li>
-<li>  Improve mavlink wait logic to be interruptable</li>
-<li>  Fix retry logic for serial mavlink</li>
-<li>  Migrate to Angular 2.0</li>
-<li>  Add timeout to waypoint fetching Previously, if a message was lost
-waypoints would no longer be fetched and new ones could not be set</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-2-0-2016-05-14">1.2.0 (2016-05-14)</h2>
-
-<ul>
-<li>  Add people detector using OpenCV</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-1-1-2016-01-31">1.1.1 (2016-01-31)</h2>
-
-<ul>
-<li>  Copy files to /etc as part of setup script instead of package
-install</li>
-<li>  Fix warnings and installation of mapnik files</li>
-<li>  Add missing python-serial dependency</li>
-<li>  Cleanup linking of libturbojpeg This should fix compiling on other
-platforms like x86_32</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-1-0-2016-01-18">1.1.0 (2016-01-18)</h2>
-
-<ul>
-<li>  Auto-detect camera device path</li>
-<li>  Improve video streaming FPS ~2x</li>
-<li>  Add support for hardware h264 acceleration on Odroid XU4</li>
-<li>  Add FPS counter to camera page</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-0-3-2015-08-23">1.0.3 (2015-08-23)</h2>
-
-<ul>
-<li>  Fix race freeing background image sink resources</li>
-<li>  Fix bad free on older versions of libav</li>
-<li>  Improve formatting of first_time_setup.sh output</li>
-<li>  Update readme</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-0-2-2015-08-12">1.0.2 (2015-08-12)</h2>
-
-<ul>
-<li>  Remove unnecessary imports</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-0-1-2015-08-09">1.0.1 (2015-08-09)</h2>
-
-<ul>
-<li>  Fix compilation error on vivid and utopic</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-0-0-2015-08-08">1.0.0 (2015-08-08)</h2>
-
-<ul>
-<li>  Switch to H264 codec for streaming and recording</li>
-<li>  Fix a variety of minor bugs</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-2-5-2015-05-31">0.2.5 (2015-05-31)</h2>
-
-<ul>
-<li>  Tune MFC encoder parameters</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-2-4-2015-05-29">0.2.4 (2015-05-29)</h2>
-
-<ul>
-<li>  Fix hardware encoder</li>
-<li>  Fix detection of MFC</li>
-<li>  Update service script for jade</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-2-3-2015-05-02">0.2.3 (2015-05-02)</h2>
-
-<ul>
-<li>  Fix deprecation warnings</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-2-2-2015-04-30">0.2.2 (2015-04-30)</h2>
-
-<ul>
-<li>  Change CodecID to AVCodecID</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-2-1-2015-04-29">0.2.1 (2015-04-29)</h2>
-
-<ul>
-<li>  Switch to libnl 3.0</li>
-<li>  Update to new libavconv constants</li>
-<li>  Improve error handling in setup script</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-2-0-2015-04-22">0.2.0 (2015-04-22)</h2>
-
-<p>Main features:</p>
-
-<ul>
-<li>  Added map server to replace Google Maps</li>
-<li>  Added support for recording in h264 with hardware acceleration</li>
-<li>  Added support for Odroid Show</li>
-</ul>
-
-<p>Details:</p>
-
-<ul>
-<li>  Fix restart command in init.d script</li>
-<li>  Move services and params out of global namespace</li>
-<li>  Fix loading of video device selector</li>
-<li>  Add hostapd setup to first_time_setup script</li>
-<li>  Add setting in UI page to change codec</li>
-<li>  Fix packaging of camera_node</li>
-<li>  Optimize memory access when using MFC encoder</li>
-<li>  Fix mjpeg recording</li>
-<li>  Remove usage of tempnam, and cleanup some other code</li>
-<li>  Fix usage of avcodec_encode_video2</li>
-<li>  Replace usage of deprecated function</li>
-<li>  Split camera node source code into cpp files</li>
-<li>  Add (experimental) support for Exynos MFC</li>
-<li>  Fix h264 encoding</li>
-<li>  Improve media path expansion</li>
-<li>  Fix bug in auto resolution detection</li>
-<li>  Add auto-adjustment of height and width</li>
-<li>  Wait for device to connect before writing to Odroid Show</li>
-<li>  More code cleanup</li>
-<li>  Code cleanup</li>
-<li>  Fix debian package build</li>
-<li>  Add support for recording with mjpeg codec</li>
-<li>  Remove old vlc recorder node</li>
-<li>  Add recording in h264 support to camera node</li>
-<li>  Add support for usb cameras to camera node</li>
-<li>  Refactor ptp node</li>
-<li>  Media improvements Fix container format of recorded videos Add
-button to delete media</li>
-<li>  Add support for Odroid Show</li>
-<li>  Add thumbnails for videos</li>
-<li>  Set queue_size in mavlink node</li>
-<li>  Add flight mode to BasicStatus message and web ui</li>
-<li>  Fix race condition in settings page</li>
-<li>  Add carto style to osm2pgsql command</li>
-<li>  Add auto detection of APM and baudrate</li>
-<li>  Implement local mapnik server Also remove our dependency on Google
-Maps, so that we can run the map even when there's no internet
-connection</li>
-<li>  Rename variable to avoid shadowing</li>
-<li>  Fix image capture from webcam</li>
-<li>  Fix lint errors</li>
-<li>  Improve internet connection detection logic</li>
-<li>  Don't try to load google maps if there's no internet connection</li>
-<li>  Reduce chart update rate to 2Hz to improve performance</li>
-<li>  Add source maps for Angular and jQuery</li>
-<li>  Add button to shutdown on-board computer</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-1-1-2014-08-27">0.1.1 (2014-08-27)</h2>
-
-<ul>
-<li>  Fix debian package build</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-1-0-2014-08-26">0.1.0 (2014-08-26)</h2>
-
-<ul>
-<li>  Add PTP support</li>
-<li>  Add init.d script to auto start rospilot</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-0-4-2014-07-05">0.0.4 (2014-07-05)</h2>
-
-<ul>
-<li>  Use more standard compliant glob syntax</li>
-<li>  Make .gitignore less aggressive</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-0-3-2014-06-28">0.0.3 (2014-06-28)</h2>
-
-<ul>
-<li>  Change web_ui to use pkg_resources for static assets</li>
-<li>  Add udev rule to installation targets</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-0-2-2014-06-15">0.0.2 (2014-06-15)</h2>
-
-<ul>
-<li>  Remove pymavlink dependency</li>
-<li>  Switch to a library for the HMC5883 communication</li>
-<li>  Add more documentation</li>
-<li>  Add support for MPU6050 to firmware</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-0-1-2014-06-02">0.0.1 (2014-06-02)</h2>
-
-<ul>
-<li>  Initial release of rospilot</li>
-<li>  Contributors: Christopher Berner, bordicon, cberner</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2727,19 +2048,6 @@ connection</li>
         
           <ul>
             
-              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./launch/mavlink_only.launch" target="_blank">launch/mavlink_only.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./launch/rospilot.launch" target="_blank">launch/rospilot.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2749,6 +2057,19 @@ connection</li>
                     <ul>
                       
                         
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./launch/mavlink_only.launch" target="_blank">launch/mavlink_only.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
                       
                     </ul>
                   </li>
@@ -2768,29 +2089,29 @@ connection</li>
         
           <ul>
             
-              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/Resolution.msg" target="_blank">msg/Resolution.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/BasicStatus.msg" target="_blank">msg/BasicStatus.msg</a></li>
+              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/Resolutions.msg" target="_blank">msg/Resolutions.msg</a></li>
             
               <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/IMURaw.msg" target="_blank">msg/IMURaw.msg</a></li>
             
-              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/Attitude.msg" target="_blank">msg/Attitude.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/Battery.msg" target="_blank">msg/Battery.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/Waypoints.msg" target="_blank">msg/Waypoints.msg</a></li>
-            
               <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/GPSRaw.msg" target="_blank">msg/GPSRaw.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/VisionTarget.msg" target="_blank">msg/VisionTarget.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/Waypoint.msg" target="_blank">msg/Waypoint.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/Resolutions.msg" target="_blank">msg/Resolutions.msg</a></li>
             
               <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/RCState.msg" target="_blank">msg/RCState.msg</a></li>
             
+              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/Attitude.msg" target="_blank">msg/Attitude.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/BasicStatus.msg" target="_blank">msg/BasicStatus.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/Waypoint.msg" target="_blank">msg/Waypoint.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/Waypoints.msg" target="_blank">msg/Waypoints.msg</a></li>
+            
               <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/VisionTargets.msg" target="_blank">msg/VisionTargets.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/VisionTarget.msg" target="_blank">msg/VisionTarget.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/Resolution.msg" target="_blank">msg/Resolution.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./msg/Battery.msg" target="_blank">msg/Battery.msg</a></li>
             
           </ul>
         
@@ -2805,11 +2126,11 @@ connection</li>
         
           <ul>
             
-              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./srv/SetWaypoints.srv" target="_blank">srv/SetWaypoints.srv</a></li>
-            
               <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./srv/CaptureImage.srv" target="_blank">srv/CaptureImage.srv</a></li>
             
               <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./srv/SetBasicMode.srv" target="_blank">srv/SetBasicMode.srv</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/kinetic/./srv/SetWaypoints.srv" target="_blank">srv/SetWaypoints.srv</a></li>
             
           </ul>
         
@@ -3253,62 +2574,7 @@ rospilot
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-rospilot">Changelog for package rospilot</h1>
-
-<h2 id="0-1-2-2016-06-27">0.1.2 (2016-06-27)</h2>
-
-<ul>
-<li>  Reduce chart update rate to 2Hz to improve performance</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-1-1-2014-08-27">0.1.1 (2014-08-27)</h2>
-
-<ul>
-<li>  Fix debian package build</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-1-0-2014-08-26">0.1.0 (2014-08-26)</h2>
-
-<ul>
-<li>  Add PTP support</li>
-<li>  Add init.d script to auto start rospilot</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-0-4-2014-07-05">0.0.4 (2014-07-05)</h2>
-
-<ul>
-<li>  Use more standard compliant glob syntax</li>
-<li>  Make .gitignore less aggressive</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-0-3-2014-06-28">0.0.3 (2014-06-28)</h2>
-
-<ul>
-<li>  Change web_ui to use pkg_resources for static assets</li>
-<li>  Add udev rule to installation targets</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-0-2-2014-06-15">0.0.2 (2014-06-15)</h2>
-
-<ul>
-<li>  Remove pymavlink dependency</li>
-<li>  Switch to a library for the HMC5883 communication</li>
-<li>  Add more documentation</li>
-<li>  Add support for MPU6050 to firmware</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-0-1-2014-06-02">0.0.1 (2014-06-02)</h2>
-
-<ul>
-<li>  Initial release of rospilot</li>
-<li>  Contributors: Christopher Berner, bordicon, cberner</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3660,13 +2926,15 @@ rospilot
         
           <ul>
             
-              <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./launch/mavlink_only.launch" target="_blank">launch/mavlink_only.launch</a>
+              <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./launch/rospilot.launch" target="_blank">launch/rospilot.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
+                      
+                        
                       
                     </ul>
                   </li>
@@ -3688,15 +2956,13 @@ rospilot
                 </ul>
               </li>
             
-              <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./launch/rospilot.launch" target="_blank">launch/rospilot.launch</a>
+              <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./launch/mavlink_only.launch" target="_blank">launch/mavlink_only.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
-                      
-                        
                       
                     </ul>
                   </li>
@@ -3716,19 +2982,19 @@ rospilot
         
           <ul>
             
-              <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./msg/BasicStatus.msg" target="_blank">msg/BasicStatus.msg</a></li>
-            
               <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./msg/IMURaw.msg" target="_blank">msg/IMURaw.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./msg/Attitude.msg" target="_blank">msg/Attitude.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./msg/Waypoints.msg" target="_blank">msg/Waypoints.msg</a></li>
             
               <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./msg/GPSRaw.msg" target="_blank">msg/GPSRaw.msg</a></li>
             
+              <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./msg/RCState.msg" target="_blank">msg/RCState.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./msg/Attitude.msg" target="_blank">msg/Attitude.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./msg/BasicStatus.msg" target="_blank">msg/BasicStatus.msg</a></li>
+            
               <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./msg/Waypoint.msg" target="_blank">msg/Waypoint.msg</a></li>
             
-              <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./msg/RCState.msg" target="_blank">msg/RCState.msg</a></li>
+              <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./msg/Waypoints.msg" target="_blank">msg/Waypoints.msg</a></li>
             
           </ul>
         
@@ -3743,13 +3009,13 @@ rospilot
         
           <ul>
             
-              <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./srv/SetWaypoints.srv" target="_blank">srv/SetWaypoints.srv</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./srv/Glob.srv" target="_blank">srv/Glob.srv</a></li>
-            
               <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./srv/CaptureImage.srv" target="_blank">srv/CaptureImage.srv</a></li>
             
               <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./srv/SetBasicMode.srv" target="_blank">srv/SetBasicMode.srv</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./srv/Glob.srv" target="_blank">srv/Glob.srv</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/indigo/./srv/SetWaypoints.srv" target="_blank">srv/SetWaypoints.srv</a></li>
             
           </ul>
         
@@ -4182,217 +3448,7 @@ rospilot
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-rospilot">Changelog for package rospilot</h1>
-
-<h2 id="1-2-0-2016-05-14">1.2.0 (2016-05-14)</h2>
-
-<ul>
-<li>  Add people detector using OpenCV</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-1-1-2016-01-31">1.1.1 (2016-01-31)</h2>
-
-<ul>
-<li>  Copy files to /etc as part of setup script instead of package
-install</li>
-<li>  Fix warnings and installation of mapnik files</li>
-<li>  Add missing python-serial dependency</li>
-<li>  Cleanup linking of libturbojpeg This should fix compiling on other
-platforms like x86_32</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-1-0-2016-01-18">1.1.0 (2016-01-18)</h2>
-
-<ul>
-<li>  Auto-detect camera device path</li>
-<li>  Improve video streaming FPS ~2x</li>
-<li>  Add support for hardware h264 acceleration on Odroid XU4</li>
-<li>  Add FPS counter to camera page</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-0-3-2015-08-23">1.0.3 (2015-08-23)</h2>
-
-<ul>
-<li>  Fix race freeing background image sink resources</li>
-<li>  Fix bad free on older versions of libav</li>
-<li>  Improve formatting of first_time_setup.sh output</li>
-<li>  Update readme</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-0-2-2015-08-12">1.0.2 (2015-08-12)</h2>
-
-<ul>
-<li>  Remove unnecessary imports</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-0-1-2015-08-09">1.0.1 (2015-08-09)</h2>
-
-<ul>
-<li>  Fix compilation error on vivid and utopic</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="1-0-0-2015-08-08">1.0.0 (2015-08-08)</h2>
-
-<ul>
-<li>  Switch to H264 codec for streaming and recording</li>
-<li>  Fix a variety of minor bugs</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-2-5-2015-05-31">0.2.5 (2015-05-31)</h2>
-
-<ul>
-<li>  Tune MFC encoder parameters</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-2-4-2015-05-29">0.2.4 (2015-05-29)</h2>
-
-<ul>
-<li>  Fix hardware encoder</li>
-<li>  Fix detection of MFC</li>
-<li>  Update service script for jade</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-2-3-2015-05-02">0.2.3 (2015-05-02)</h2>
-
-<ul>
-<li>  Fix deprecation warnings</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-2-2-2015-04-30">0.2.2 (2015-04-30)</h2>
-
-<ul>
-<li>  Change CodecID to AVCodecID</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-2-1-2015-04-29">0.2.1 (2015-04-29)</h2>
-
-<ul>
-<li>  Switch to libnl 3.0</li>
-<li>  Update to new libavconv constants</li>
-<li>  Improve error handling in setup script</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-2-0-2015-04-22">0.2.0 (2015-04-22)</h2>
-
-<p>Main features:</p>
-
-<ul>
-<li>  Added map server to replace Google Maps</li>
-<li>  Added support for recording in h264 with hardware acceleration</li>
-<li>  Added support for Odroid Show</li>
-</ul>
-
-<p>Details:</p>
-
-<ul>
-<li>  Fix restart command in init.d script</li>
-<li>  Move services and params out of global namespace</li>
-<li>  Fix loading of video device selector</li>
-<li>  Add hostapd setup to first_time_setup script</li>
-<li>  Add setting in UI page to change codec</li>
-<li>  Fix packaging of camera_node</li>
-<li>  Optimize memory access when using MFC encoder</li>
-<li>  Fix mjpeg recording</li>
-<li>  Remove usage of tempnam, and cleanup some other code</li>
-<li>  Fix usage of avcodec_encode_video2</li>
-<li>  Replace usage of deprecated function</li>
-<li>  Split camera node source code into cpp files</li>
-<li>  Add (experimental) support for Exynos MFC</li>
-<li>  Fix h264 encoding</li>
-<li>  Improve media path expansion</li>
-<li>  Fix bug in auto resolution detection</li>
-<li>  Add auto-adjustment of height and width</li>
-<li>  Wait for device to connect before writing to Odroid Show</li>
-<li>  More code cleanup</li>
-<li>  Code cleanup</li>
-<li>  Fix debian package build</li>
-<li>  Add support for recording with mjpeg codec</li>
-<li>  Remove old vlc recorder node</li>
-<li>  Add recording in h264 support to camera node</li>
-<li>  Add support for usb cameras to camera node</li>
-<li>  Refactor ptp node</li>
-<li>  Media improvements Fix container format of recorded videos Add
-button to delete media</li>
-<li>  Add support for Odroid Show</li>
-<li>  Add thumbnails for videos</li>
-<li>  Set queue_size in mavlink node</li>
-<li>  Add flight mode to BasicStatus message and web ui</li>
-<li>  Fix race condition in settings page</li>
-<li>  Add carto style to osm2pgsql command</li>
-<li>  Add auto detection of APM and baudrate</li>
-<li>  Implement local mapnik server Also remove our dependency on Google
-Maps, so that we can run the map even when there's no internet
-connection</li>
-<li>  Rename variable to avoid shadowing</li>
-<li>  Fix image capture from webcam</li>
-<li>  Fix lint errors</li>
-<li>  Improve internet connection detection logic</li>
-<li>  Don't try to load google maps if there's no internet connection</li>
-<li>  Reduce chart update rate to 2Hz to improve performance</li>
-<li>  Add source maps for Angular and jQuery</li>
-<li>  Add button to shutdown on-board computer</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-1-1-2014-08-27">0.1.1 (2014-08-27)</h2>
-
-<ul>
-<li>  Fix debian package build</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-1-0-2014-08-26">0.1.0 (2014-08-26)</h2>
-
-<ul>
-<li>  Add PTP support</li>
-<li>  Add init.d script to auto start rospilot</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-0-4-2014-07-05">0.0.4 (2014-07-05)</h2>
-
-<ul>
-<li>  Use more standard compliant glob syntax</li>
-<li>  Make .gitignore less aggressive</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-0-3-2014-06-28">0.0.3 (2014-06-28)</h2>
-
-<ul>
-<li>  Change web_ui to use pkg_resources for static assets</li>
-<li>  Add udev rule to installation targets</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-0-2-2014-06-15">0.0.2 (2014-06-15)</h2>
-
-<ul>
-<li>  Remove pymavlink dependency</li>
-<li>  Switch to a library for the HMC5883 communication</li>
-<li>  Add more documentation</li>
-<li>  Add support for MPU6050 to firmware</li>
-<li>  Contributors: Christopher Berner</li>
-</ul>
-
-<h2 id="0-0-1-2014-06-02">0.0.1 (2014-06-02)</h2>
-
-<ul>
-<li>  Initial release of rospilot</li>
-<li>  Contributors: Christopher Berner, bordicon, cberner</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -4885,19 +3941,6 @@ connection</li>
         
           <ul>
             
-              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./launch/mavlink_only.launch" target="_blank">launch/mavlink_only.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/rospilot/rospilot/blob/jade/./launch/rospilot.launch" target="_blank">launch/rospilot.launch</a>
                 <ul class="list-unstyled">
                   
@@ -4907,6 +3950,19 @@ connection</li>
                     <ul>
                       
                         
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./launch/mavlink_only.launch" target="_blank">launch/mavlink_only.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
                       
                     </ul>
                   </li>
@@ -4926,27 +3982,27 @@ connection</li>
         
           <ul>
             
-              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./msg/Resolution.msg" target="_blank">msg/Resolution.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./msg/BasicStatus.msg" target="_blank">msg/BasicStatus.msg</a></li>
+              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./msg/Resolutions.msg" target="_blank">msg/Resolutions.msg</a></li>
             
               <li><a href="https://github.com/rospilot/rospilot/blob/jade/./msg/IMURaw.msg" target="_blank">msg/IMURaw.msg</a></li>
             
-              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./msg/Attitude.msg" target="_blank">msg/Attitude.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./msg/Waypoints.msg" target="_blank">msg/Waypoints.msg</a></li>
-            
               <li><a href="https://github.com/rospilot/rospilot/blob/jade/./msg/GPSRaw.msg" target="_blank">msg/GPSRaw.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./msg/VisionTarget.msg" target="_blank">msg/VisionTarget.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./msg/Waypoint.msg" target="_blank">msg/Waypoint.msg</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./msg/Resolutions.msg" target="_blank">msg/Resolutions.msg</a></li>
             
               <li><a href="https://github.com/rospilot/rospilot/blob/jade/./msg/RCState.msg" target="_blank">msg/RCState.msg</a></li>
             
+              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./msg/Attitude.msg" target="_blank">msg/Attitude.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./msg/BasicStatus.msg" target="_blank">msg/BasicStatus.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./msg/Waypoint.msg" target="_blank">msg/Waypoint.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./msg/Waypoints.msg" target="_blank">msg/Waypoints.msg</a></li>
+            
               <li><a href="https://github.com/rospilot/rospilot/blob/jade/./msg/VisionTargets.msg" target="_blank">msg/VisionTargets.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./msg/VisionTarget.msg" target="_blank">msg/VisionTarget.msg</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./msg/Resolution.msg" target="_blank">msg/Resolution.msg</a></li>
             
           </ul>
         
@@ -4961,13 +4017,13 @@ connection</li>
         
           <ul>
             
-              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./srv/SetWaypoints.srv" target="_blank">srv/SetWaypoints.srv</a></li>
-            
-              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./srv/Glob.srv" target="_blank">srv/Glob.srv</a></li>
-            
               <li><a href="https://github.com/rospilot/rospilot/blob/jade/./srv/CaptureImage.srv" target="_blank">srv/CaptureImage.srv</a></li>
             
               <li><a href="https://github.com/rospilot/rospilot/blob/jade/./srv/SetBasicMode.srv" target="_blank">srv/SetBasicMode.srv</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./srv/Glob.srv" target="_blank">srv/Glob.srv</a></li>
+            
+              <li><a href="https://github.com/rospilot/rospilot/blob/jade/./srv/SetWaypoints.srv" target="_blank">srv/SetWaypoints.srv</a></li>
             
           </ul>
         
@@ -5120,7 +4176,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

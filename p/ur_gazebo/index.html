@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -606,71 +602,7 @@ ur_msgs
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-ur_gazebo">Changelog for package ur_gazebo</h1>
-
-<h2 id="1-2-1-2018-01-06">1.2.1 (2018-01-06)</h2>
-
-<h2 id="1-2-0-2017-08-04">1.2.0 (2017-08-04)</h2>
-
-<ul>
-<li>  Remove dependency on ros_controllers metapackage. As per
-<a href="http://www.ros.org/reps/rep-0127.html">http://www.ros.org/reps/rep-0127.html</a>, packages are not allowed to
-depend on metapackages.</li>
-<li>  Contributors: Miguel Prada</li>
-</ul>
-
-<h2 id="1-1-9-2017-01-02">1.1.9 (2017-01-02)</h2>
-
-<ul>
-<li>  No changes.</li>
-</ul>
-
-<h2 id="1-1-8-2016-12-30">1.1.8 (2016-12-30)</h2>
-
-<ul>
-<li>  ur_gazebo: escape underscore in changelog
-(<a href="https://github.com/ros-industrial/universal_robot/issues/279">#279</a>).</li>
-<li>  all: update maintainers.</li>
-<li>  Contributors: gavanderhoorn</li>
-</ul>
-
-<h2 id="1-1-7-2016-12-29">1.1.7 (2016-12-29)</h2>
-
-<ul>
-<li>  ur_gazebo: add controller_manager as run dependency.</li>
-<li>  Contributors: Hans-Joachim Krauch</li>
-</ul>
-
-<h2 id="1-1-6-2016-04-01">1.1.6 (2016-04-01)</h2>
-
-<ul>
-<li>  provide launch files for ur3</li>
-<li>  use controller_manager spawn</li>
-<li>  allow to start gazebo without gui</li>
-<li>  adjust controllers to new hardwareInterface - affects simulation
-only</li>
-<li>  Contributors: ipa-fxm</li>
-</ul>
-
-<h2 id="1-0-2-2014-03-31">1.0.2 (2014-03-31)</h2>
-
-<h2 id="1-0-1-2014-03-31">1.0.1 (2014-03-31)</h2>
-
-<ul>
-<li>  adapt launch files in order to be able to use normal/limited xacro</li>
-<li>  updates for latest gazebo under hydro</li>
-<li>  Contributors: ipa-fxm</li>
-<li>  Added definitions for adding tergets in install folder. Issue
-<a href="https://github.com/ros-industrial/universal_robot/issues/10">#10</a>.</li>
-<li>  Added definitions for adding tergets in install folder. Issue
-<a href="https://github.com/ros-industrial/universal_robot/issues/10">#10</a>.</li>
-<li>  Updated to catkin. ur_driver's files were added to nested Python
-directory for including in other packages.</li>
-<li>  removed <code>arm_</code> prefix from joint names in gazebo controller config</li>
-<li>  Renamed packages and new groovy version</li>
-<li>  Added ur10 and renamed packages</li>
-<li>  Contributors: IPR-SR2, Kelsey, Mathias L</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -960,7 +892,7 @@ directory for including in other packages.</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros-industrial/universal_robot/blob/kinetic-devel/ur_gazebo/launch/ur3.launch" target="_blank">launch/ur3.launch</a>
+              <li><a href="https://github.com/ros-industrial/universal_robot/blob/kinetic-devel/ur_gazebo/launch/ur10.launch" target="_blank">launch/ur10.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -995,7 +927,20 @@ directory for including in other packages.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/universal_robot/blob/kinetic-devel/ur_gazebo/launch/ur3_joint_limited.launch" target="_blank">launch/ur3_joint_limited.launch</a>
+              <li><a href="https://github.com/ros-industrial/universal_robot/blob/kinetic-devel/ur_gazebo/launch/controller_utils.launch" target="_blank">launch/controller_utils.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/universal_robot/blob/kinetic-devel/ur_gazebo/launch/ur10_joint_limited.launch" target="_blank">launch/ur10_joint_limited.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1010,19 +955,6 @@ directory for including in other packages.</li>
                         
                       
                         
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/universal_robot/blob/kinetic-devel/ur_gazebo/launch/controller_utils.launch" target="_blank">launch/controller_utils.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
                       
                     </ul>
                   </li>
@@ -1050,7 +982,7 @@ directory for including in other packages.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/universal_robot/blob/kinetic-devel/ur_gazebo/launch/ur10_joint_limited.launch" target="_blank">launch/ur10_joint_limited.launch</a>
+              <li><a href="https://github.com/ros-industrial/universal_robot/blob/kinetic-devel/ur_gazebo/launch/ur3_joint_limited.launch" target="_blank">launch/ur3_joint_limited.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1106,7 +1038,7 @@ directory for including in other packages.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/universal_robot/blob/kinetic-devel/ur_gazebo/launch/ur10.launch" target="_blank">launch/ur10.launch</a>
+              <li><a href="https://github.com/ros-industrial/universal_robot/blob/kinetic-devel/ur_gazebo/launch/ur3.launch" target="_blank">launch/ur3.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1660,71 +1592,7 @@ ur_msgs
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-ur_gazebo">Changelog for package ur_gazebo</h1>
-
-<h2 id="1-1-11-2018-01-06">1.1.11 (2018-01-06)</h2>
-
-<h2 id="1-1-10-2017-08-04">1.1.10 (2017-08-04)</h2>
-
-<ul>
-<li>  Remove dependency on ros_controllers metapackage. As per
-<a href="http://www.ros.org/reps/rep-0127.html">http://www.ros.org/reps/rep-0127.html</a>, packages are not allowed to
-depend on metapackages.</li>
-<li>  Contributors: Miguel Prada</li>
-</ul>
-
-<h2 id="1-1-9-2017-01-02">1.1.9 (2017-01-02)</h2>
-
-<ul>
-<li>  No changes.</li>
-</ul>
-
-<h2 id="1-1-8-2016-12-30">1.1.8 (2016-12-30)</h2>
-
-<ul>
-<li>  ur_gazebo: escape underscore in changelog
-(<a href="https://github.com/ros-industrial/universal_robot/issues/279">#279</a>).</li>
-<li>  all: update maintainers.</li>
-<li>  Contributors: gavanderhoorn</li>
-</ul>
-
-<h2 id="1-1-7-2016-12-29">1.1.7 (2016-12-29)</h2>
-
-<ul>
-<li>  ur_gazebo: add controller_manager as run dependency.</li>
-<li>  Contributors: Hans-Joachim Krauch</li>
-</ul>
-
-<h2 id="1-1-6-2016-04-01">1.1.6 (2016-04-01)</h2>
-
-<ul>
-<li>  provide launch files for ur3</li>
-<li>  use controller_manager spawn</li>
-<li>  allow to start gazebo without gui</li>
-<li>  adjust controllers to new hardwareInterface - affects simulation
-only</li>
-<li>  Contributors: ipa-fxm</li>
-</ul>
-
-<h2 id="1-0-2-2014-03-31">1.0.2 (2014-03-31)</h2>
-
-<h2 id="1-0-1-2014-03-31">1.0.1 (2014-03-31)</h2>
-
-<ul>
-<li>  adapt launch files in order to be able to use normal/limited xacro</li>
-<li>  updates for latest gazebo under hydro</li>
-<li>  Contributors: ipa-fxm</li>
-<li>  Added definitions for adding tergets in install folder. Issue
-<a href="https://github.com/ros-industrial/universal_robot/issues/10">#10</a>.</li>
-<li>  Added definitions for adding tergets in install folder. Issue
-<a href="https://github.com/ros-industrial/universal_robot/issues/10">#10</a>.</li>
-<li>  Updated to catkin. ur_driver's files were added to nested Python
-directory for including in other packages.</li>
-<li>  removed <code>arm_</code> prefix from joint names in gazebo controller config</li>
-<li>  Renamed packages and new groovy version</li>
-<li>  Added ur10 and renamed packages</li>
-<li>  Contributors: IPR-SR2, Kelsey, Mathias L</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1994,7 +1862,7 @@ directory for including in other packages.</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros-industrial/universal_robot/blob/indigo-devel/ur_gazebo/launch/ur3.launch" target="_blank">launch/ur3.launch</a>
+              <li><a href="https://github.com/ros-industrial/universal_robot/blob/indigo-devel/ur_gazebo/launch/ur10.launch" target="_blank">launch/ur10.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2029,7 +1897,20 @@ directory for including in other packages.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/universal_robot/blob/indigo-devel/ur_gazebo/launch/ur3_joint_limited.launch" target="_blank">launch/ur3_joint_limited.launch</a>
+              <li><a href="https://github.com/ros-industrial/universal_robot/blob/indigo-devel/ur_gazebo/launch/controller_utils.launch" target="_blank">launch/controller_utils.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/universal_robot/blob/indigo-devel/ur_gazebo/launch/ur10_joint_limited.launch" target="_blank">launch/ur10_joint_limited.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2044,19 +1925,6 @@ directory for including in other packages.</li>
                         
                       
                         
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/universal_robot/blob/indigo-devel/ur_gazebo/launch/controller_utils.launch" target="_blank">launch/controller_utils.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
                       
                     </ul>
                   </li>
@@ -2084,7 +1952,7 @@ directory for including in other packages.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/universal_robot/blob/indigo-devel/ur_gazebo/launch/ur10_joint_limited.launch" target="_blank">launch/ur10_joint_limited.launch</a>
+              <li><a href="https://github.com/ros-industrial/universal_robot/blob/indigo-devel/ur_gazebo/launch/ur3_joint_limited.launch" target="_blank">launch/ur3_joint_limited.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2140,7 +2008,7 @@ directory for including in other packages.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/universal_robot/blob/indigo-devel/ur_gazebo/launch/ur10.launch" target="_blank">launch/ur10.launch</a>
+              <li><a href="https://github.com/ros-industrial/universal_robot/blob/indigo-devel/ur_gazebo/launch/ur3.launch" target="_blank">launch/ur3.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2687,27 +2555,7 @@ ur_msgs
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-ur_gazebo">Changelog for package ur_gazebo</h1>
-
-<h2 id="1-0-2-2014-03-31">1.0.2 (2014-03-31)</h2>
-
-<h2 id="1-0-1-2014-03-31">1.0.1 (2014-03-31)</h2>
-
-<ul>
-<li>  adapt launch files in order to be able to use normal/limited xacro</li>
-<li>  updates for latest gazebo under hydro</li>
-<li>  Contributors: ipa-fxm</li>
-<li>  Added definitions for adding tergets in install folder. Issue
-<a href="https://github.com/ros-industrial/universal_robot/issues/10">#10</a>.</li>
-<li>  Added definitions for adding tergets in install folder. Issue
-<a href="https://github.com/ros-industrial/universal_robot/issues/10">#10</a>.</li>
-<li>  Updated to catkin. ur_driver's files were added to nested Python
-directory for including in other packages.</li>
-<li>  removed arm_ prefix from joint names in gazebo controller config</li>
-<li>  Renamed packages and new groovy version</li>
-<li>  Added ur10 and renamed packages</li>
-<li>  Contributors: IPR-SR2, Kelsey, Mathias L</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3017,50 +2865,7 @@ directory for including in other packages.</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros-industrial/universal_robot/blob/hydro-devel/ur_gazebo/launch/controller_utils.launch" target="_blank">launch/controller_utils.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/universal_robot/blob/hydro-devel/ur_gazebo/launch/ur5_joint_limited.launch" target="_blank">launch/ur5_joint_limited.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/universal_robot/blob/hydro-devel/ur_gazebo/launch/ur10_joint_limited.launch" target="_blank">launch/ur10_joint_limited.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/universal_robot/blob/hydro-devel/ur_gazebo/launch/ur5.launch" target="_blank">launch/ur5.launch</a>
+              <li><a href="https://github.com/ros-industrial/universal_robot/blob/hydro-devel/ur_gazebo/launch/ur10.launch" target="_blank">launch/ur10.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3089,7 +2894,50 @@ directory for including in other packages.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/universal_robot/blob/hydro-devel/ur_gazebo/launch/ur10.launch" target="_blank">launch/ur10.launch</a>
+              <li><a href="https://github.com/ros-industrial/universal_robot/blob/hydro-devel/ur_gazebo/launch/controller_utils.launch" target="_blank">launch/controller_utils.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/universal_robot/blob/hydro-devel/ur_gazebo/launch/ur10_joint_limited.launch" target="_blank">launch/ur10_joint_limited.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/universal_robot/blob/hydro-devel/ur_gazebo/launch/ur5_joint_limited.launch" target="_blank">launch/ur5_joint_limited.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/universal_robot/blob/hydro-devel/ur_gazebo/launch/ur5.launch" target="_blank">launch/ur5.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3284,7 +3132,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

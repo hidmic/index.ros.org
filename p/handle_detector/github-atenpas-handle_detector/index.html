@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -504,18 +500,62 @@ handle_detector
       </div>
     </div>
     
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="panel panel-default">
-            <div class="panel-heading"><span class="glyphicon glyphicon-file"></span> README </div>
-            <div class="panel-body">
-            <em>No README found.</em>
-             <em><a href="/r/handle_detector/github-atenpas-handle_detector/#kinetic">See repository README.</a></em>
-            
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/atenpas/handle_detector/blob/kinetic/./README.md">README.md</a></div>
+              <div class="panel-body">
+                    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="rendered-markdown">
+<h1 id="handle-detector">Handle Detector</h1>
+
+<p><strong>Author:</strong> Andreas ten Pas (<a href="mailto:atp@ccs.neu.edu">atp@ccs.neu.edu</a>)</p>
+
+<p><strong>Version:</strong> 1.0.0</p>
+
+<p><strong>Wiki:</strong> <a href="http://wiki.ros.org/handle_detector">http://wiki.ros.org/handle_detector</a></p>
+
+<p><strong>Author's Website:</strong> <a href="http://www.ccs.neu.edu/home/atp/">http://www.ccs.neu.edu/home/atp/</a></p>
+
+<h2 id="overview">OVERVIEW</h2>
+
+<p>This package takes a point cloud as input and produces a list of handels / enveloping grasp affordances as output.</p>
+
+<h3 id="input-point-cloud">Input: point cloud</h3>
+
+<p><img src="https://raw.githubusercontent.com/atenpas/handle_detector/kinetic/.//readme/example_table0.png" alt="" style="width: 400px;"></p>
+
+<h3 id="output-handles-enveloping-grasp-affordances">Output: handles / enveloping grasp affordances</h3>
+
+<p><img src="https://raw.githubusercontent.com/atenpas/handle_detector/kinetic/.//readme/example_table1.png" alt="" style="width: 400px;"></p>
+
+<h2 id="requirements">REQUIREMENTS</h2>
+
+<ol>
+<li>ROS Kinetic (<a href="http://wiki.ros.org/kinetic">http://wiki.ros.org/kinetic</a>)</li>
+<li>Lapack (install in Ubuntu using: sudo apt-get install liblapack-dev)</li>
+<li>Openni_launch (<a href="http://wiki.ros.org/openni_launch">http://wiki.ros.org/openni_launch</a>; install in Ubuntu using: sudo apt install ros-kinetic-openni-launch)</li>
+</ol>
+
+<h2 id="instructions">INSTRUCTIONS</h2>
+
+<ol>
+<li>Run handle detection on a *.pcd file: <code>roslaunch handle_detector localization_pcd_file.launch</code>
+</li>
+<li>Run handle detection with a depth sensor (e.g., Kinect): <code>roslaunch handle_detector localization_sensor.launch</code>
+</li>
+<li>Run handle detection with <em>importance sampling</em> on a *.pcd file: <code>roslaunch handle_detector importance_sampling_pcd_file.launch</code> </li>
+</ol>
+
+<p>For detailed instructions, have a look at: <a href="http://wiki.ros.org/handle_detector">http://wiki.ros.org/handle_detector</a>.</p>
+</div></body></html>
+
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      
     
     <div class="row">
       <div class="col-xs-12">
@@ -915,7 +955,7 @@ Forthcoming
                 </ul>
               </li>
             
-              <li><a href="https://github.com/atenpas/handle_detector/blob/kinetic/./launch/importance_sampling_pcd_file.launch" target="_blank">launch/importance_sampling_pcd_file.launch</a>
+              <li><a href="https://github.com/atenpas/handle_detector/blob/kinetic/./launch/localization_sensor.launch" target="_blank">launch/localization_sensor.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -928,7 +968,7 @@ Forthcoming
                 </ul>
               </li>
             
-              <li><a href="https://github.com/atenpas/handle_detector/blob/kinetic/./launch/localization_sensor.launch" target="_blank">launch/localization_sensor.launch</a>
+              <li><a href="https://github.com/atenpas/handle_detector/blob/kinetic/./launch/importance_sampling_pcd_file.launch" target="_blank">launch/importance_sampling_pcd_file.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -954,11 +994,11 @@ Forthcoming
         
           <ul>
             
-              <li><a href="https://github.com/atenpas/handle_detector/blob/kinetic/./msg/CylinderMsg.msg" target="_blank">msg/CylinderMsg.msg</a></li>
+              <li><a href="https://github.com/atenpas/handle_detector/blob/kinetic/./msg/CylinderArrayMsg.msg" target="_blank">msg/CylinderArrayMsg.msg</a></li>
             
               <li><a href="https://github.com/atenpas/handle_detector/blob/kinetic/./msg/HandleListMsg.msg" target="_blank">msg/HandleListMsg.msg</a></li>
             
-              <li><a href="https://github.com/atenpas/handle_detector/blob/kinetic/./msg/CylinderArrayMsg.msg" target="_blank">msg/CylinderArrayMsg.msg</a></li>
+              <li><a href="https://github.com/atenpas/handle_detector/blob/kinetic/./msg/CylinderMsg.msg" target="_blank">msg/CylinderMsg.msg</a></li>
             
           </ul>
         
@@ -1283,7 +1323,7 @@ handle_detector
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-01-31
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-01-30
         </span>
       </td>
     </tr>
@@ -1350,18 +1390,54 @@ handle_detector
       </div>
     </div>
     
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="panel panel-default">
-            <div class="panel-heading"><span class="glyphicon glyphicon-file"></span> README </div>
-            <div class="panel-body">
-            <em>No README found.</em>
-             <em><a href="/r/handle_detector/github-atenpas-handle_detector/#indigo">See repository README.</a></em>
-            
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/atenpas/handle_detector/blob/indigo/./README.md">README.md</a></div>
+              <div class="panel-body">
+                    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="rendered-markdown">
+<h1 id="handle-detector">Handle Detector</h1>
+
+<p><strong>Author:</strong> Andreas ten Pas (<a href="mailto:atp@ccs.neu.edu">atp@ccs.neu.edu</a>)</p>
+
+<p><strong>Version:</strong> 1.0.0</p>
+
+<p><strong>Wiki:</strong> <a href="http://wiki.ros.org/handle_detector">http://wiki.ros.org/handle_detector</a></p>
+
+<p><strong>Author's Website:</strong> <a href="http://www.ccs.neu.edu/home/atp/">http://www.ccs.neu.edu/home/atp/</a></p>
+
+<h2 id="overview">OVERVIEW</h2>
+
+<p>This package takes a point cloud as input and produces a list of handels / enveloping grasp affordances as output.</p>
+
+<h3 id="input-point-cloud">Input: point cloud</h3>
+
+<p><img src="https://raw.githubusercontent.com/atenpas/handle_detector/indigo/.//readme/example_table0.png" alt="" style="width: 400px;"></p>
+
+<h3 id="output-handles-enveloping-grasp-affordances">Output: handles / enveloping grasp affordances</h3>
+
+<p><img src="https://raw.githubusercontent.com/atenpas/handle_detector/indigo/.//readme/example_table1.png" alt="" style="width: 400px;"></p>
+
+<h2 id="requirements">REQUIREMENTS</h2>
+
+<ol>
+<li>ROS Hydro (<a href="http://wiki.ros.org/hydro">http://wiki.ros.org/hydro</a>)</li>
+<li>Lapack (install in Ubuntu using: sudo apt-get install liblapack-dev)</li>
+<li>Openni_launch (<a href="http://wiki.ros.org/openni_launch">http://wiki.ros.org/openni_launch</a>; install in Ubuntu using: sudo apt-get install ros-hydro-openni-launch)</li>
+</ol>
+
+<h2 id="instructions">INSTRUCTIONS</h2>
+
+<p>Please look at <a href="http://wiki.ros.org/handle_detector">http://wiki.ros.org/handle_detector</a> for detailed instructions.</p>
+</div></body></html>
+
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      
     
     <div class="row">
       <div class="col-xs-12">
@@ -1761,7 +1837,7 @@ Forthcoming
                 </ul>
               </li>
             
-              <li><a href="https://github.com/atenpas/handle_detector/blob/indigo/./launch/importance_sampling_pcd_file.launch" target="_blank">launch/importance_sampling_pcd_file.launch</a>
+              <li><a href="https://github.com/atenpas/handle_detector/blob/indigo/./launch/localization_sensor.launch" target="_blank">launch/localization_sensor.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1774,7 +1850,7 @@ Forthcoming
                 </ul>
               </li>
             
-              <li><a href="https://github.com/atenpas/handle_detector/blob/indigo/./launch/localization_sensor.launch" target="_blank">launch/localization_sensor.launch</a>
+              <li><a href="https://github.com/atenpas/handle_detector/blob/indigo/./launch/importance_sampling_pcd_file.launch" target="_blank">launch/importance_sampling_pcd_file.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1800,11 +1876,11 @@ Forthcoming
         
           <ul>
             
-              <li><a href="https://github.com/atenpas/handle_detector/blob/indigo/./msg/CylinderMsg.msg" target="_blank">msg/CylinderMsg.msg</a></li>
+              <li><a href="https://github.com/atenpas/handle_detector/blob/indigo/./msg/CylinderArrayMsg.msg" target="_blank">msg/CylinderArrayMsg.msg</a></li>
             
               <li><a href="https://github.com/atenpas/handle_detector/blob/indigo/./msg/HandleListMsg.msg" target="_blank">msg/HandleListMsg.msg</a></li>
             
-              <li><a href="https://github.com/atenpas/handle_detector/blob/indigo/./msg/CylinderArrayMsg.msg" target="_blank">msg/CylinderArrayMsg.msg</a></li>
+              <li><a href="https://github.com/atenpas/handle_detector/blob/indigo/./msg/CylinderMsg.msg" target="_blank">msg/CylinderMsg.msg</a></li>
             
           </ul>
         
@@ -2145,7 +2221,7 @@ handle_detector
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2014-10-11
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2014-10-10
         </span>
       </td>
     </tr>
@@ -2675,7 +2751,7 @@ Forthcoming
                 </ul>
               </li>
             
-              <li><a href="https://github.com/atenpas/handle_detector/blob/master/./launch/importance_sampling_pcd_file.launch" target="_blank">launch/importance_sampling_pcd_file.launch</a>
+              <li><a href="https://github.com/atenpas/handle_detector/blob/master/./launch/localization_sensor.launch" target="_blank">launch/localization_sensor.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2688,7 +2764,7 @@ Forthcoming
                 </ul>
               </li>
             
-              <li><a href="https://github.com/atenpas/handle_detector/blob/master/./launch/localization_sensor.launch" target="_blank">launch/localization_sensor.launch</a>
+              <li><a href="https://github.com/atenpas/handle_detector/blob/master/./launch/importance_sampling_pcd_file.launch" target="_blank">launch/importance_sampling_pcd_file.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2714,11 +2790,11 @@ Forthcoming
         
           <ul>
             
-              <li><a href="https://github.com/atenpas/handle_detector/blob/master/./msg/CylinderMsg.msg" target="_blank">msg/CylinderMsg.msg</a></li>
+              <li><a href="https://github.com/atenpas/handle_detector/blob/master/./msg/CylinderArrayMsg.msg" target="_blank">msg/CylinderArrayMsg.msg</a></li>
             
               <li><a href="https://github.com/atenpas/handle_detector/blob/master/./msg/HandleListMsg.msg" target="_blank">msg/HandleListMsg.msg</a></li>
             
-              <li><a href="https://github.com/atenpas/handle_detector/blob/master/./msg/CylinderArrayMsg.msg" target="_blank">msg/CylinderArrayMsg.msg</a></li>
+              <li><a href="https://github.com/atenpas/handle_detector/blob/master/./msg/CylinderMsg.msg" target="_blank">msg/CylinderMsg.msg</a></li>
             
           </ul>
         
@@ -2874,7 +2950,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

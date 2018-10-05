@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -831,10 +827,99 @@ kurt_gazebo
         
           <ul>
             
-              <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/sick_lms100.launch" target="_blank">launch/sick_lms100.launch</a>
+              <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/ekf.launch" target="_blank">launch/ekf.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>use_phidgets_imu</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/openni.launch" target="_blank">launch/openni.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/kurt360.launch" target="_blank">launch/kurt360.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>use_phidgets_imu</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/sick_s300.launch" target="_blank">launch/sick_s300.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/kurt2_outdoor.launch" target="_blank">launch/kurt2_outdoor.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>use_phidgets_imu</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/phidgets_imu.launch" target="_blank">launch/phidgets_imu.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> Phidgets IMU launch file </em></li>
                   
                   <li>
                     <ul>
@@ -863,7 +948,33 @@ kurt_gazebo
                 </ul>
               </li>
             
-              <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/ekf.launch" target="_blank">launch/ekf.launch</a>
+              <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/laser_filter_chain.launch" target="_blank">launch/laser_filter_chain.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/sick_lms100.launch" target="_blank">launch/sick_lms100.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/sick_lms200.launch" target="_blank">launch/sick_lms200.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -872,21 +983,16 @@ kurt_gazebo
                     <ul>
                       
                         
-                          <li><strong>use_phidgets_imu</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>device</strong> <em>&#91;default: /dev/scanner&#93; </em></li>
                         
                       
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/phidgets_imu.launch" target="_blank">launch/phidgets_imu.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> Phidgets IMU launch file </em></li>
-                  
-                  <li>
-                    <ul>
+                        
+                          <li><strong>topic</strong> <em>&#91;default: scan&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>frame</strong> <em>&#91;default: laser&#93; </em></li>
+                        
                       
                     </ul>
                   </li>
@@ -929,44 +1035,6 @@ kurt_gazebo
                 </ul>
               </li>
             
-              <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/sick_s300.launch" target="_blank">launch/sick_s300.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/kurt360.launch" target="_blank">launch/kurt360.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>use_phidgets_imu</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/rotunit.launch" target="_blank">launch/rotunit.launch</a>
                 <ul class="list-unstyled">
                   
@@ -980,78 +1048,6 @@ kurt_gazebo
                         
                       
                         
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/sick_lms200.launch" target="_blank">launch/sick_lms200.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>device</strong> <em>&#91;default: /dev/scanner&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>topic</strong> <em>&#91;default: scan&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>frame</strong> <em>&#91;default: laser&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/openni.launch" target="_blank">launch/openni.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/kurt2_outdoor.launch" target="_blank">launch/kurt2_outdoor.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>use_phidgets_imu</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/kurt_driver/blob/kinetic/kurt_bringup/launch/laser_filter_chain.launch" target="_blank">launch/laser_filter_chain.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
                       
                     </ul>
                   </li>
@@ -1803,10 +1799,99 @@ kurt_gazebo
         
           <ul>
             
-              <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/sick_lms100.launch" target="_blank">launch/sick_lms100.launch</a>
+              <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/ekf.launch" target="_blank">launch/ekf.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>use_phidgets_imu</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/openni.launch" target="_blank">launch/openni.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/kurt360.launch" target="_blank">launch/kurt360.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>use_phidgets_imu</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/sick_s300.launch" target="_blank">launch/sick_s300.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/kurt2_outdoor.launch" target="_blank">launch/kurt2_outdoor.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>use_phidgets_imu</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/phidgets_imu.launch" target="_blank">launch/phidgets_imu.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> Phidgets IMU launch file </em></li>
                   
                   <li>
                     <ul>
@@ -1835,7 +1920,33 @@ kurt_gazebo
                 </ul>
               </li>
             
-              <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/ekf.launch" target="_blank">launch/ekf.launch</a>
+              <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/laser_filter_chain.launch" target="_blank">launch/laser_filter_chain.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/sick_lms100.launch" target="_blank">launch/sick_lms100.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/sick_lms200.launch" target="_blank">launch/sick_lms200.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1844,21 +1955,16 @@ kurt_gazebo
                     <ul>
                       
                         
-                          <li><strong>use_phidgets_imu</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>device</strong> <em>&#91;default: /dev/scanner&#93; </em></li>
                         
                       
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/phidgets_imu.launch" target="_blank">launch/phidgets_imu.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> Phidgets IMU launch file </em></li>
-                  
-                  <li>
-                    <ul>
+                        
+                          <li><strong>topic</strong> <em>&#91;default: scan&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>frame</strong> <em>&#91;default: laser&#93; </em></li>
+                        
                       
                     </ul>
                   </li>
@@ -1901,44 +2007,6 @@ kurt_gazebo
                 </ul>
               </li>
             
-              <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/sick_s300.launch" target="_blank">launch/sick_s300.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/kurt360.launch" target="_blank">launch/kurt360.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>use_phidgets_imu</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/rotunit.launch" target="_blank">launch/rotunit.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1952,78 +2020,6 @@ kurt_gazebo
                         
                       
                         
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/sick_lms200.launch" target="_blank">launch/sick_lms200.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>device</strong> <em>&#91;default: /dev/scanner&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>topic</strong> <em>&#91;default: scan&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>frame</strong> <em>&#91;default: laser&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/openni.launch" target="_blank">launch/openni.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/kurt2_outdoor.launch" target="_blank">launch/kurt2_outdoor.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>use_phidgets_imu</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/kurt_driver/blob/indigo_catkin/kurt_bringup/launch/laser_filter_chain.launch" target="_blank">launch/laser_filter_chain.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
                       
                     </ul>
                   </li>
@@ -2791,10 +2787,99 @@ kurt_gazebo
         
           <ul>
             
-              <li><a href="https://github.com/uos/kurt_driver/blob/hydro_catkin/kurt_bringup/launch/sick_lms100.launch" target="_blank">launch/sick_lms100.launch</a>
+              <li><a href="https://github.com/uos/kurt_driver/blob/hydro_catkin/kurt_bringup/launch/ekf.launch" target="_blank">launch/ekf.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>use_phidgets_imu</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/hydro_catkin/kurt_bringup/launch/openni.launch" target="_blank">launch/openni.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/hydro_catkin/kurt_bringup/launch/kurt360.launch" target="_blank">launch/kurt360.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>use_phidgets_imu</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/hydro_catkin/kurt_bringup/launch/sick_s300.launch" target="_blank">launch/sick_s300.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/hydro_catkin/kurt_bringup/launch/kurt2_outdoor.launch" target="_blank">launch/kurt2_outdoor.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>use_phidgets_imu</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/hydro_catkin/kurt_bringup/launch/phidgets_imu.launch" target="_blank">launch/phidgets_imu.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> Phidgets IMU launch file </em></li>
                   
                   <li>
                     <ul>
@@ -2823,7 +2908,20 @@ kurt_gazebo
                 </ul>
               </li>
             
-              <li><a href="https://github.com/uos/kurt_driver/blob/hydro_catkin/kurt_bringup/launch/ekf.launch" target="_blank">launch/ekf.launch</a>
+              <li><a href="https://github.com/uos/kurt_driver/blob/hydro_catkin/kurt_bringup/launch/sick_lms100.launch" target="_blank">launch/sick_lms100.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/kurt_driver/blob/hydro_catkin/kurt_bringup/launch/sick_lms200.launch" target="_blank">launch/sick_lms200.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2832,21 +2930,16 @@ kurt_gazebo
                     <ul>
                       
                         
-                          <li><strong>use_phidgets_imu</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>device</strong> <em>&#91;default: /dev/scanner&#93; </em></li>
                         
                       
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/kurt_driver/blob/hydro_catkin/kurt_bringup/launch/phidgets_imu.launch" target="_blank">launch/phidgets_imu.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> Phidgets IMU launch file </em></li>
-                  
-                  <li>
-                    <ul>
+                        
+                          <li><strong>topic</strong> <em>&#91;default: scan&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>frame</strong> <em>&#91;default: laser&#93; </em></li>
+                        
                       
                     </ul>
                   </li>
@@ -2889,44 +2982,6 @@ kurt_gazebo
                 </ul>
               </li>
             
-              <li><a href="https://github.com/uos/kurt_driver/blob/hydro_catkin/kurt_bringup/launch/sick_s300.launch" target="_blank">launch/sick_s300.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/kurt_driver/blob/hydro_catkin/kurt_bringup/launch/kurt360.launch" target="_blank">launch/kurt360.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>use_phidgets_imu</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/uos/kurt_driver/blob/hydro_catkin/kurt_bringup/launch/rotunit.launch" target="_blank">launch/rotunit.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2937,65 +2992,6 @@ kurt_gazebo
                       
                         
                       
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/kurt_driver/blob/hydro_catkin/kurt_bringup/launch/sick_lms200.launch" target="_blank">launch/sick_lms200.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>device</strong> <em>&#91;default: /dev/scanner&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>topic</strong> <em>&#91;default: scan&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>frame</strong> <em>&#91;default: laser&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/kurt_driver/blob/hydro_catkin/kurt_bringup/launch/openni.launch" target="_blank">launch/openni.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/kurt_driver/blob/hydro_catkin/kurt_bringup/launch/kurt2_outdoor.launch" target="_blank">launch/kurt2_outdoor.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>use_phidgets_imu</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -3171,7 +3167,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

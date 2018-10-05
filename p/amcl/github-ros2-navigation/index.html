@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -527,107 +523,7 @@ map_server
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-amcl">Changelog for package amcl</h1>
-
-<h2 id="1-14-0-2016-05-20">1.14.0 (2016-05-20)</h2>
-
-<ul>
-<li>  Allow AMCL to run from bag file to allow very fast testing.</li>
-<li>  Fixes interpretation of a delayed initialpose message (see
-<a href="https://github.com/ros-planning/navigation/issues/424">#424</a>). The
-tf lookup as it was before this change was very likely to fail
-as ros::Time::now() was used to look up a tf without waiting on the
-tf's availability. Additionally, the computation of the "new pose"
-by multiplying the delta that the robot moved from the initialpose's
-timestamp to ros::Time::now() was wrong. That delta has to by
-multiplied from the right to the "old pose". This commit also
-changes the reference frame to look up this delta to be the odom
-frame as this one is supposed to be smooth and therefore the best
-reference to get relative robot motion in the robot (base link)
-frame.</li>
-<li>  New unit test for proper interpretation of a delayed initialpose
-message. Modifies the set_pose.py script to be able to send an
-initial pose with a user defined time stamp at a user defined time.
-Adds a rostest to exercise this new option. This reveals the issues
-mentioned in
-<a href="https://github.com/ros-planning/navigation/issues/424">#424</a> (the
-new test fails).</li>
-<li>  Contributors: Derek King, Stephan Wirth</li>
-</ul>
-
-<h2 id="1-13-1-2015-10-29">1.13.1 (2015-10-29)</h2>
-
-<ul>
-<li>  adds the set_map service to amcl</li>
-<li>  fix pthread_mutex_lock on shutdown</li>
-<li>  Contributors: Michael Ferguson, Stephan Wirth</li>
-</ul>
-
-<h2 id="1-13-0-2015-03-17">1.13.0 (2015-03-17)</h2>
-
-<ul>
-<li>  amcl_node will now save latest pose on shutdown</li>
-<li>  Contributors: Ian Danforth</li>
-</ul>
-
-<h2 id="1-12-0-2015-02-04">1.12.0 (2015-02-04)</h2>
-
-<ul>
-<li>  update maintainer email</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="1-11-15-2015-02-03">1.11.15 (2015-02-03)</h2>
-
-<h2 id="1-11-14-2014-12-05">1.11.14 (2014-12-05)</h2>
-
-<h2 id="1-11-13-2014-10-02">1.11.13 (2014-10-02)</h2>
-
-<h2 id="1-11-12-2014-10-01">1.11.12 (2014-10-01)</h2>
-
-<ul>
-<li>  Bug fix to remove particle weights being reset when motion model is
-updated</li>
-<li>  Integrated new sensor model which calculates the observation
-likelihood in a probabilistic manner Also includes the option to do
-beam-skipping (to better handle observations from dynamic obstacles)</li>
-<li>  Pose pulled from parameter server when new map received</li>
-<li>  Contributors: Steven Kordell, hes3pal</li>
-</ul>
-
-<h2 id="1-11-11-2014-07-23">1.11.11 (2014-07-23)</h2>
-
-<h2 id="1-11-10-2014-06-25">1.11.10 (2014-06-25)</h2>
-
-<h2 id="1-11-9-2014-06-10">1.11.9 (2014-06-10)</h2>
-
-<h2 id="1-11-8-2014-05-21">1.11.8 (2014-05-21)</h2>
-
-<h2 id="1-11-7-2014-05-21">1.11.7 (2014-05-21)</h2>
-
-<ul>
-<li>  removes useless this-&gt;z_max = z_max assignment</li>
-<li>  Fix warning string.</li>
-<li>  Contributors: Jeremiah Via, enriquefernandez</li>
-</ul>
-
-<h2 id="1-11-5-2014-01-30">1.11.5 (2014-01-30)</h2>
-
-<ul>
-<li>  Fix for
-<a href="https://github.com/ros-planning/navigation/issues/160">#160</a>
-</li>
-<li>  Download test data from download.ros.org instead of willow</li>
-<li>  Change maintainer from Hersh to Lu</li>
-</ul>
-
-<h2 id="1-11-4-2013-09-27">1.11.4 (2013-09-27)</h2>
-
-<ul>
-<li>  Package URL Updates</li>
-<li>  amcl_pose and particle cloud are now published latched</li>
-<li>  Fixed or commented out failing amcl tests.</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -914,7 +810,7 @@ beam-skipping (to better handle observations from dynamic obstacles)</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros2/navigation/blob/bouncy/amcl/examples/amcl_omni.launch" target="_blank">examples/amcl_omni.launch</a>
+              <li><a href="https://github.com/ros2/navigation/blob/bouncy/amcl/examples/amcl_diff.launch" target="_blank">examples/amcl_diff.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -927,7 +823,7 @@ beam-skipping (to better handle observations from dynamic obstacles)</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/bouncy/amcl/examples/amcl_diff.launch" target="_blank">examples/amcl_diff.launch</a>
+              <li><a href="https://github.com/ros2/navigation/blob/bouncy/amcl/examples/amcl_omni.launch" target="_blank">examples/amcl_omni.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -955,35 +851,7 @@ setting pose: 30.329 34.644 3.142
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/bouncy/amcl/test/set_initial_pose.xml" target="_blank">test/set_initial_pose.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> setting pose: 47.943 21.421 -0.503
-setting pose: 30.329 34.644 3.142 
-117.5s </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros2/navigation/blob/bouncy/amcl/test/small_loop_crazy_driving_prg.xml" target="_blank">test/small_loop_crazy_driving_prg.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros2/navigation/blob/bouncy/amcl/test/texas_willow_hallway_loop_corrected.xml" target="_blank">test/texas_willow_hallway_loop_corrected.xml</a>
+              <li><a href="https://github.com/ros2/navigation/blob/bouncy/amcl/test/texas_greenroom_loop.xml" target="_blank">test/texas_greenroom_loop.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1024,7 +892,33 @@ setting pose: 30.329 34.644 3.142
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/bouncy/amcl/test/small_loop_prf.xml" target="_blank">test/small_loop_prf.xml</a>
+              <li><a href="https://github.com/ros2/navigation/blob/bouncy/amcl/test/small_loop_crazy_driving_prg.xml" target="_blank">test/small_loop_crazy_driving_prg.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/bouncy/amcl/test/texas_willow_hallway_loop_corrected.xml" target="_blank">test/texas_willow_hallway_loop_corrected.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/bouncy/amcl/test/small_loop_crazy_driving_prg_corrected.xml" target="_blank">test/small_loop_crazy_driving_prg_corrected.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1052,33 +946,35 @@ setting pose: 30.329 34.644 3.142
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/bouncy/amcl/test/small_loop_crazy_driving_prg_corrected.xml" target="_blank">test/small_loop_crazy_driving_prg_corrected.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros2/navigation/blob/bouncy/amcl/test/texas_greenroom_loop.xml" target="_blank">test/texas_greenroom_loop.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ros2/navigation/blob/bouncy/amcl/test/texas_willow_hallway_loop.xml" target="_blank">test/texas_willow_hallway_loop.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/bouncy/amcl/test/set_initial_pose.xml" target="_blank">test/set_initial_pose.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> setting pose: 47.943 21.421 -0.503
+setting pose: 30.329 34.644 3.142 
+117.5s </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/bouncy/amcl/test/small_loop_prf.xml" target="_blank">test/small_loop_prf.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1591,7 +1487,7 @@ voxel_grid
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2016-12-07
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2016-12-06
         </span>
       </td>
     </tr>
@@ -1688,107 +1584,7 @@ voxel_grid
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-amcl">Changelog for package amcl</h1>
-
-<h2 id="1-14-0-2016-05-20">1.14.0 (2016-05-20)</h2>
-
-<ul>
-<li>  Allow AMCL to run from bag file to allow very fast testing.</li>
-<li>  Fixes interpretation of a delayed initialpose message (see
-<a href="https://github.com/ros-planning/navigation/issues/424">#424</a>). The
-tf lookup as it was before this change was very likely to fail
-as ros::Time::now() was used to look up a tf without waiting on the
-tf's availability. Additionally, the computation of the "new pose"
-by multiplying the delta that the robot moved from the initialpose's
-timestamp to ros::Time::now() was wrong. That delta has to by
-multiplied from the right to the "old pose". This commit also
-changes the reference frame to look up this delta to be the odom
-frame as this one is supposed to be smooth and therefore the best
-reference to get relative robot motion in the robot (base link)
-frame.</li>
-<li>  New unit test for proper interpretation of a delayed initialpose
-message. Modifies the set_pose.py script to be able to send an
-initial pose with a user defined time stamp at a user defined time.
-Adds a rostest to exercise this new option. This reveals the issues
-mentioned in
-<a href="https://github.com/ros-planning/navigation/issues/424">#424</a> (the
-new test fails).</li>
-<li>  Contributors: Derek King, Stephan Wirth</li>
-</ul>
-
-<h2 id="1-13-1-2015-10-29">1.13.1 (2015-10-29)</h2>
-
-<ul>
-<li>  adds the set_map service to amcl</li>
-<li>  fix pthread_mutex_lock on shutdown</li>
-<li>  Contributors: Michael Ferguson, Stephan Wirth</li>
-</ul>
-
-<h2 id="1-13-0-2015-03-17">1.13.0 (2015-03-17)</h2>
-
-<ul>
-<li>  amcl_node will now save latest pose on shutdown</li>
-<li>  Contributors: Ian Danforth</li>
-</ul>
-
-<h2 id="1-12-0-2015-02-04">1.12.0 (2015-02-04)</h2>
-
-<ul>
-<li>  update maintainer email</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="1-11-15-2015-02-03">1.11.15 (2015-02-03)</h2>
-
-<h2 id="1-11-14-2014-12-05">1.11.14 (2014-12-05)</h2>
-
-<h2 id="1-11-13-2014-10-02">1.11.13 (2014-10-02)</h2>
-
-<h2 id="1-11-12-2014-10-01">1.11.12 (2014-10-01)</h2>
-
-<ul>
-<li>  Bug fix to remove particle weights being reset when motion model is
-updated</li>
-<li>  Integrated new sensor model which calculates the observation
-likelihood in a probabilistic manner Also includes the option to do
-beam-skipping (to better handle observations from dynamic obstacles)</li>
-<li>  Pose pulled from parameter server when new map received</li>
-<li>  Contributors: Steven Kordell, hes3pal</li>
-</ul>
-
-<h2 id="1-11-11-2014-07-23">1.11.11 (2014-07-23)</h2>
-
-<h2 id="1-11-10-2014-06-25">1.11.10 (2014-06-25)</h2>
-
-<h2 id="1-11-9-2014-06-10">1.11.9 (2014-06-10)</h2>
-
-<h2 id="1-11-8-2014-05-21">1.11.8 (2014-05-21)</h2>
-
-<h2 id="1-11-7-2014-05-21">1.11.7 (2014-05-21)</h2>
-
-<ul>
-<li>  removes useless this-&gt;z_max = z_max assignment</li>
-<li>  Fix warning string.</li>
-<li>  Contributors: Jeremiah Via, enriquefernandez</li>
-</ul>
-
-<h2 id="1-11-5-2014-01-30">1.11.5 (2014-01-30)</h2>
-
-<ul>
-<li>  Fix for
-<a href="https://github.com/ros-planning/navigation/issues/160">#160</a>
-</li>
-<li>  Download test data from download.ros.org instead of willow</li>
-<li>  Change maintainer from Hersh to Lu</li>
-</ul>
-
-<h2 id="1-11-4-2013-09-27">1.11.4 (2013-09-27)</h2>
-
-<ul>
-<li>  Package URL Updates</li>
-<li>  amcl_pose and particle cloud are now published latched</li>
-<li>  Fixed or commented out failing amcl tests.</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2248,7 +2044,7 @@ beam-skipping (to better handle observations from dynamic obstacles)</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros2/navigation/blob/kinetic-devel/amcl/examples/amcl_omni.launch" target="_blank">examples/amcl_omni.launch</a>
+              <li><a href="https://github.com/ros2/navigation/blob/kinetic-devel/amcl/examples/amcl_diff.launch" target="_blank">examples/amcl_diff.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2261,7 +2057,7 @@ beam-skipping (to better handle observations from dynamic obstacles)</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/kinetic-devel/amcl/examples/amcl_diff.launch" target="_blank">examples/amcl_diff.launch</a>
+              <li><a href="https://github.com/ros2/navigation/blob/kinetic-devel/amcl/examples/amcl_omni.launch" target="_blank">examples/amcl_omni.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2289,35 +2085,7 @@ setting pose: 30.329 34.644 3.142
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/kinetic-devel/amcl/test/set_initial_pose.xml" target="_blank">test/set_initial_pose.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> setting pose: 47.943 21.421 -0.503
-setting pose: 30.329 34.644 3.142 
-117.5s </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros2/navigation/blob/kinetic-devel/amcl/test/small_loop_crazy_driving_prg.xml" target="_blank">test/small_loop_crazy_driving_prg.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros2/navigation/blob/kinetic-devel/amcl/test/texas_willow_hallway_loop_corrected.xml" target="_blank">test/texas_willow_hallway_loop_corrected.xml</a>
+              <li><a href="https://github.com/ros2/navigation/blob/kinetic-devel/amcl/test/texas_greenroom_loop.xml" target="_blank">test/texas_greenroom_loop.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2358,7 +2126,33 @@ setting pose: 30.329 34.644 3.142
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/kinetic-devel/amcl/test/small_loop_prf.xml" target="_blank">test/small_loop_prf.xml</a>
+              <li><a href="https://github.com/ros2/navigation/blob/kinetic-devel/amcl/test/small_loop_crazy_driving_prg.xml" target="_blank">test/small_loop_crazy_driving_prg.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/kinetic-devel/amcl/test/texas_willow_hallway_loop_corrected.xml" target="_blank">test/texas_willow_hallway_loop_corrected.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/kinetic-devel/amcl/test/small_loop_crazy_driving_prg_corrected.xml" target="_blank">test/small_loop_crazy_driving_prg_corrected.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2386,33 +2180,35 @@ setting pose: 30.329 34.644 3.142
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/kinetic-devel/amcl/test/small_loop_crazy_driving_prg_corrected.xml" target="_blank">test/small_loop_crazy_driving_prg_corrected.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros2/navigation/blob/kinetic-devel/amcl/test/texas_greenroom_loop.xml" target="_blank">test/texas_greenroom_loop.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ros2/navigation/blob/kinetic-devel/amcl/test/texas_willow_hallway_loop.xml" target="_blank">test/texas_willow_hallway_loop.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/kinetic-devel/amcl/test/set_initial_pose.xml" target="_blank">test/set_initial_pose.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> setting pose: 47.943 21.421 -0.503
+setting pose: 30.329 34.644 3.142 
+117.5s </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/kinetic-devel/amcl/test/small_loop_prf.xml" target="_blank">test/small_loop_prf.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3014,113 +2810,7 @@ voxel_grid
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-amcl">Changelog for package amcl</h1>
-
-<h2 id="1-12-13-2016-08-15">1.12.13 (2016-08-15)</h2>
-
-<h2 id="1-12-12-2016-06-24">1.12.12 (2016-06-24)</h2>
-
-<h2 id="1-12-11-2016-06-08">1.12.11 (2016-06-08)</h2>
-
-<h2 id="1-12-10-2016-05-27">1.12.10 (2016-05-27)</h2>
-
-<h2 id="1-12-9-2016-05-26">1.12.9 (2016-05-26)</h2>
-
-<h2 id="1-12-8-2016-05-16">1.12.8 (2016-05-16)</h2>
-
-<ul>
-<li>  Allow AMCL to run from bag file to allow very fast testing.</li>
-<li>  Fixes interpretation of a delayed initialpose message</li>
-<li>  Contributors: Derek King, Michael Ferguson, Stephan Wirth</li>
-</ul>
-
-<h2 id="1-12-7-2016-01-05">1.12.7 (2016-01-05)</h2>
-
-<h2 id="1-12-6-2016-01-02">1.12.6 (2016-01-02)</h2>
-
-<h2 id="1-12-5-2015-10-29">1.12.5 (2015-10-29)</h2>
-
-<h2 id="1-12-4-2015-06-03">1.12.4 (2015-06-03)</h2>
-
-<ul>
-<li>  add the set_map service to amcl</li>
-<li>  Contributors: Michael Ferguson, Stephan Wirth</li>
-</ul>
-
-<h2 id="1-12-3-2015-04-30">1.12.3 (2015-04-30)</h2>
-
-<h2 id="1-12-2-2015-03-31">1.12.2 (2015-03-31)</h2>
-
-<ul>
-<li>  fix pthread_mutex_lock on shutdown</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="1-12-1-2015-03-14">1.12.1 (2015-03-14)</h2>
-
-<ul>
-<li>  amcl_node will now save latest pose on shutdown</li>
-<li>  Contributors: iandanforth</li>
-</ul>
-
-<h2 id="1-12-0-2015-02-04">1.12.0 (2015-02-04)</h2>
-
-<ul>
-<li>  update maintainer email</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="1-11-15-2015-02-03">1.11.15 (2015-02-03)</h2>
-
-<h2 id="1-11-14-2014-12-05">1.11.14 (2014-12-05)</h2>
-
-<h2 id="1-11-13-2014-10-02">1.11.13 (2014-10-02)</h2>
-
-<h2 id="1-11-12-2014-10-01">1.11.12 (2014-10-01)</h2>
-
-<ul>
-<li>  Bug fix to remove particle weights being reset when motion model is
-updated</li>
-<li>  Integrated new sensor model which calculates the observation
-likelihood in a probabilistic manner Also includes the option to do
-beam-skipping (to better handle observations from dynamic obstacles)</li>
-<li>  Pose pulled from parameter server when new map received</li>
-<li>  Contributors: Steven Kordell, hes3pal</li>
-</ul>
-
-<h2 id="1-11-11-2014-07-23">1.11.11 (2014-07-23)</h2>
-
-<h2 id="1-11-10-2014-06-25">1.11.10 (2014-06-25)</h2>
-
-<h2 id="1-11-9-2014-06-10">1.11.9 (2014-06-10)</h2>
-
-<h2 id="1-11-8-2014-05-21">1.11.8 (2014-05-21)</h2>
-
-<h2 id="1-11-7-2014-05-21">1.11.7 (2014-05-21)</h2>
-
-<ul>
-<li>  removes useless this-&gt;z_max = z_max assignment</li>
-<li>  Fix warning string.</li>
-<li>  Contributors: Jeremiah Via, enriquefernandez</li>
-</ul>
-
-<h2 id="1-11-5-2014-01-30">1.11.5 (2014-01-30)</h2>
-
-<ul>
-<li>  Fix for
-<a href="https://github.com/ros-planning/navigation/issues/160">#160</a>
-</li>
-<li>  Download test data from download.ros.org instead of willow</li>
-<li>  Change maintainer from Hersh to Lu</li>
-</ul>
-
-<h2 id="1-11-4-2013-09-27">1.11.4 (2013-09-27)</h2>
-
-<ul>
-<li>  Package URL Updates</li>
-<li>  amcl_pose and particle cloud are now published latched</li>
-<li>  Fixed or commented out failing amcl tests.</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3692,7 +3382,7 @@ beam-skipping (to better handle observations from dynamic obstacles)</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros2/navigation/blob/indigo-devel/amcl/examples/amcl_omni.launch" target="_blank">examples/amcl_omni.launch</a>
+              <li><a href="https://github.com/ros2/navigation/blob/indigo-devel/amcl/examples/amcl_diff.launch" target="_blank">examples/amcl_diff.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3705,7 +3395,7 @@ beam-skipping (to better handle observations from dynamic obstacles)</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/indigo-devel/amcl/examples/amcl_diff.launch" target="_blank">examples/amcl_diff.launch</a>
+              <li><a href="https://github.com/ros2/navigation/blob/indigo-devel/amcl/examples/amcl_omni.launch" target="_blank">examples/amcl_omni.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3733,35 +3423,7 @@ setting pose: 30.329 34.644 3.142
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/indigo-devel/amcl/test/set_initial_pose.xml" target="_blank">test/set_initial_pose.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> setting pose: 47.943 21.421 -0.503
-setting pose: 30.329 34.644 3.142 
-117.5s </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros2/navigation/blob/indigo-devel/amcl/test/small_loop_crazy_driving_prg.xml" target="_blank">test/small_loop_crazy_driving_prg.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros2/navigation/blob/indigo-devel/amcl/test/texas_willow_hallway_loop_corrected.xml" target="_blank">test/texas_willow_hallway_loop_corrected.xml</a>
+              <li><a href="https://github.com/ros2/navigation/blob/indigo-devel/amcl/test/texas_greenroom_loop.xml" target="_blank">test/texas_greenroom_loop.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3802,7 +3464,33 @@ setting pose: 30.329 34.644 3.142
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/indigo-devel/amcl/test/small_loop_prf.xml" target="_blank">test/small_loop_prf.xml</a>
+              <li><a href="https://github.com/ros2/navigation/blob/indigo-devel/amcl/test/small_loop_crazy_driving_prg.xml" target="_blank">test/small_loop_crazy_driving_prg.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/indigo-devel/amcl/test/texas_willow_hallway_loop_corrected.xml" target="_blank">test/texas_willow_hallway_loop_corrected.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/indigo-devel/amcl/test/small_loop_crazy_driving_prg_corrected.xml" target="_blank">test/small_loop_crazy_driving_prg_corrected.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3830,33 +3518,35 @@ setting pose: 30.329 34.644 3.142
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/indigo-devel/amcl/test/small_loop_crazy_driving_prg_corrected.xml" target="_blank">test/small_loop_crazy_driving_prg_corrected.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros2/navigation/blob/indigo-devel/amcl/test/texas_greenroom_loop.xml" target="_blank">test/texas_greenroom_loop.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ros2/navigation/blob/indigo-devel/amcl/test/texas_willow_hallway_loop.xml" target="_blank">test/texas_willow_hallway_loop.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/indigo-devel/amcl/test/set_initial_pose.xml" target="_blank">test/set_initial_pose.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> setting pose: 47.943 21.421 -0.503
+setting pose: 30.329 34.644 3.142 
+117.5s </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/indigo-devel/amcl/test/small_loop_prf.xml" target="_blank">test/small_loop_prf.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -4233,7 +3923,7 @@ map_server
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-12-09
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-12-08
         </span>
       </td>
     </tr>
@@ -4332,107 +4022,7 @@ map_server
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-amcl">Changelog for package amcl</h1>
-
-<h2 id="1-14-0-2016-05-20">1.14.0 (2016-05-20)</h2>
-
-<ul>
-<li>  Allow AMCL to run from bag file to allow very fast testing.</li>
-<li>  Fixes interpretation of a delayed initialpose message (see
-<a href="https://github.com/ros-planning/navigation/issues/424">#424</a>). The
-tf lookup as it was before this change was very likely to fail
-as ros::Time::now() was used to look up a tf without waiting on the
-tf's availability. Additionally, the computation of the "new pose"
-by multiplying the delta that the robot moved from the initialpose's
-timestamp to ros::Time::now() was wrong. That delta has to by
-multiplied from the right to the "old pose". This commit also
-changes the reference frame to look up this delta to be the odom
-frame as this one is supposed to be smooth and therefore the best
-reference to get relative robot motion in the robot (base link)
-frame.</li>
-<li>  New unit test for proper interpretation of a delayed initialpose
-message. Modifies the set_pose.py script to be able to send an
-initial pose with a user defined time stamp at a user defined time.
-Adds a rostest to exercise this new option. This reveals the issues
-mentioned in
-<a href="https://github.com/ros-planning/navigation/issues/424">#424</a> (the
-new test fails).</li>
-<li>  Contributors: Derek King, Stephan Wirth</li>
-</ul>
-
-<h2 id="1-13-1-2015-10-29">1.13.1 (2015-10-29)</h2>
-
-<ul>
-<li>  adds the set_map service to amcl</li>
-<li>  fix pthread_mutex_lock on shutdown</li>
-<li>  Contributors: Michael Ferguson, Stephan Wirth</li>
-</ul>
-
-<h2 id="1-13-0-2015-03-17">1.13.0 (2015-03-17)</h2>
-
-<ul>
-<li>  amcl_node will now save latest pose on shutdown</li>
-<li>  Contributors: Ian Danforth</li>
-</ul>
-
-<h2 id="1-12-0-2015-02-04">1.12.0 (2015-02-04)</h2>
-
-<ul>
-<li>  update maintainer email</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="1-11-15-2015-02-03">1.11.15 (2015-02-03)</h2>
-
-<h2 id="1-11-14-2014-12-05">1.11.14 (2014-12-05)</h2>
-
-<h2 id="1-11-13-2014-10-02">1.11.13 (2014-10-02)</h2>
-
-<h2 id="1-11-12-2014-10-01">1.11.12 (2014-10-01)</h2>
-
-<ul>
-<li>  Bug fix to remove particle weights being reset when motion model is
-updated</li>
-<li>  Integrated new sensor model which calculates the observation
-likelihood in a probabilistic manner Also includes the option to do
-beam-skipping (to better handle observations from dynamic obstacles)</li>
-<li>  Pose pulled from parameter server when new map received</li>
-<li>  Contributors: Steven Kordell, hes3pal</li>
-</ul>
-
-<h2 id="1-11-11-2014-07-23">1.11.11 (2014-07-23)</h2>
-
-<h2 id="1-11-10-2014-06-25">1.11.10 (2014-06-25)</h2>
-
-<h2 id="1-11-9-2014-06-10">1.11.9 (2014-06-10)</h2>
-
-<h2 id="1-11-8-2014-05-21">1.11.8 (2014-05-21)</h2>
-
-<h2 id="1-11-7-2014-05-21">1.11.7 (2014-05-21)</h2>
-
-<ul>
-<li>  removes useless this-&gt;z_max = z_max assignment</li>
-<li>  Fix warning string.</li>
-<li>  Contributors: Jeremiah Via, enriquefernandez</li>
-</ul>
-
-<h2 id="1-11-5-2014-01-30">1.11.5 (2014-01-30)</h2>
-
-<ul>
-<li>  Fix for
-<a href="https://github.com/ros-planning/navigation/issues/160">#160</a>
-</li>
-<li>  Download test data from download.ros.org instead of willow</li>
-<li>  Change maintainer from Hersh to Lu</li>
-</ul>
-
-<h2 id="1-11-4-2013-09-27">1.11.4 (2013-09-27)</h2>
-
-<ul>
-<li>  Package URL Updates</li>
-<li>  amcl_pose and particle cloud are now published latched</li>
-<li>  Fixed or commented out failing amcl tests.</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -4719,7 +4309,7 @@ beam-skipping (to better handle observations from dynamic obstacles)</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros2/navigation/blob/ardent/amcl/examples/amcl_omni.launch" target="_blank">examples/amcl_omni.launch</a>
+              <li><a href="https://github.com/ros2/navigation/blob/ardent/amcl/examples/amcl_diff.launch" target="_blank">examples/amcl_diff.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -4732,7 +4322,7 @@ beam-skipping (to better handle observations from dynamic obstacles)</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/ardent/amcl/examples/amcl_diff.launch" target="_blank">examples/amcl_diff.launch</a>
+              <li><a href="https://github.com/ros2/navigation/blob/ardent/amcl/examples/amcl_omni.launch" target="_blank">examples/amcl_omni.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -4760,35 +4350,7 @@ setting pose: 30.329 34.644 3.142
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/ardent/amcl/test/set_initial_pose.xml" target="_blank">test/set_initial_pose.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> setting pose: 47.943 21.421 -0.503
-setting pose: 30.329 34.644 3.142 
-117.5s </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros2/navigation/blob/ardent/amcl/test/small_loop_crazy_driving_prg.xml" target="_blank">test/small_loop_crazy_driving_prg.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros2/navigation/blob/ardent/amcl/test/texas_willow_hallway_loop_corrected.xml" target="_blank">test/texas_willow_hallway_loop_corrected.xml</a>
+              <li><a href="https://github.com/ros2/navigation/blob/ardent/amcl/test/texas_greenroom_loop.xml" target="_blank">test/texas_greenroom_loop.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -4829,7 +4391,33 @@ setting pose: 30.329 34.644 3.142
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/ardent/amcl/test/small_loop_prf.xml" target="_blank">test/small_loop_prf.xml</a>
+              <li><a href="https://github.com/ros2/navigation/blob/ardent/amcl/test/small_loop_crazy_driving_prg.xml" target="_blank">test/small_loop_crazy_driving_prg.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/ardent/amcl/test/texas_willow_hallway_loop_corrected.xml" target="_blank">test/texas_willow_hallway_loop_corrected.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/ardent/amcl/test/small_loop_crazy_driving_prg_corrected.xml" target="_blank">test/small_loop_crazy_driving_prg_corrected.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -4857,33 +4445,35 @@ setting pose: 30.329 34.644 3.142
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/ardent/amcl/test/small_loop_crazy_driving_prg_corrected.xml" target="_blank">test/small_loop_crazy_driving_prg_corrected.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros2/navigation/blob/ardent/amcl/test/texas_greenroom_loop.xml" target="_blank">test/texas_greenroom_loop.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ros2/navigation/blob/ardent/amcl/test/texas_willow_hallway_loop.xml" target="_blank">test/texas_willow_hallway_loop.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/ardent/amcl/test/set_initial_pose.xml" target="_blank">test/set_initial_pose.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> setting pose: 47.943 21.421 -0.503
+setting pose: 30.329 34.644 3.142 
+117.5s </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/ardent/amcl/test/small_loop_prf.xml" target="_blank">test/small_loop_prf.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -5477,81 +5067,7 @@ voxel_grid
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-amcl">Changelog for package amcl</h1>
-
-<h2 id="1-13-1-2015-10-29">1.13.1 (2015-10-29)</h2>
-
-<ul>
-<li>  adds the set_map service to amcl</li>
-<li>  fix pthread_mutex_lock on shutdown</li>
-<li>  Contributors: Michael Ferguson, Stephan Wirth</li>
-</ul>
-
-<h2 id="1-13-0-2015-03-17">1.13.0 (2015-03-17)</h2>
-
-<ul>
-<li>  amcl_node will now save latest pose on shutdown</li>
-<li>  Contributors: Ian Danforth</li>
-</ul>
-
-<h2 id="1-12-0-2015-02-04">1.12.0 (2015-02-04)</h2>
-
-<ul>
-<li>  update maintainer email</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="1-11-15-2015-02-03">1.11.15 (2015-02-03)</h2>
-
-<h2 id="1-11-14-2014-12-05">1.11.14 (2014-12-05)</h2>
-
-<h2 id="1-11-13-2014-10-02">1.11.13 (2014-10-02)</h2>
-
-<h2 id="1-11-12-2014-10-01">1.11.12 (2014-10-01)</h2>
-
-<ul>
-<li>  Bug fix to remove particle weights being reset when motion model is
-updated</li>
-<li>  Integrated new sensor model which calculates the observation
-likelihood in a probabilistic manner Also includes the option to do
-beam-skipping (to better handle observations from dynamic obstacles)</li>
-<li>  Pose pulled from parameter server when new map received</li>
-<li>  Contributors: Steven Kordell, hes3pal</li>
-</ul>
-
-<h2 id="1-11-11-2014-07-23">1.11.11 (2014-07-23)</h2>
-
-<h2 id="1-11-10-2014-06-25">1.11.10 (2014-06-25)</h2>
-
-<h2 id="1-11-9-2014-06-10">1.11.9 (2014-06-10)</h2>
-
-<h2 id="1-11-8-2014-05-21">1.11.8 (2014-05-21)</h2>
-
-<h2 id="1-11-7-2014-05-21">1.11.7 (2014-05-21)</h2>
-
-<ul>
-<li>  removes useless this-&gt;z_max = z_max assignment</li>
-<li>  Fix warning string.</li>
-<li>  Contributors: Jeremiah Via, enriquefernandez</li>
-</ul>
-
-<h2 id="1-11-5-2014-01-30">1.11.5 (2014-01-30)</h2>
-
-<ul>
-<li>  Fix for
-<a href="https://github.com/ros-planning/navigation/issues/160">#160</a>
-</li>
-<li>  Download test data from download.ros.org instead of willow</li>
-<li>  Change maintainer from Hersh to Lu</li>
-</ul>
-
-<h2 id="1-11-4-2013-09-27">1.11.4 (2013-09-27)</h2>
-
-<ul>
-<li>  Package URL Updates</li>
-<li>  amcl_pose and particle cloud are now published latched</li>
-<li>  Fixed or commented out failing amcl tests.</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -5874,7 +5390,7 @@ beam-skipping (to better handle observations from dynamic obstacles)</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros2/navigation/blob/jade-devel/amcl/examples/amcl_omni.launch" target="_blank">examples/amcl_omni.launch</a>
+              <li><a href="https://github.com/ros2/navigation/blob/jade-devel/amcl/examples/amcl_diff.launch" target="_blank">examples/amcl_diff.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -5887,7 +5403,7 @@ beam-skipping (to better handle observations from dynamic obstacles)</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/jade-devel/amcl/examples/amcl_diff.launch" target="_blank">examples/amcl_diff.launch</a>
+              <li><a href="https://github.com/ros2/navigation/blob/jade-devel/amcl/examples/amcl_omni.launch" target="_blank">examples/amcl_omni.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -5915,35 +5431,7 @@ setting pose: 30.329 34.644 3.142
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/jade-devel/amcl/test/set_initial_pose.xml" target="_blank">test/set_initial_pose.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> setting pose: 47.943 21.421 -0.503
-setting pose: 30.329 34.644 3.142 
-117.5s </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros2/navigation/blob/jade-devel/amcl/test/small_loop_crazy_driving_prg.xml" target="_blank">test/small_loop_crazy_driving_prg.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros2/navigation/blob/jade-devel/amcl/test/texas_willow_hallway_loop_corrected.xml" target="_blank">test/texas_willow_hallway_loop_corrected.xml</a>
+              <li><a href="https://github.com/ros2/navigation/blob/jade-devel/amcl/test/texas_greenroom_loop.xml" target="_blank">test/texas_greenroom_loop.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -5984,7 +5472,33 @@ setting pose: 30.329 34.644 3.142
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/jade-devel/amcl/test/small_loop_prf.xml" target="_blank">test/small_loop_prf.xml</a>
+              <li><a href="https://github.com/ros2/navigation/blob/jade-devel/amcl/test/small_loop_crazy_driving_prg.xml" target="_blank">test/small_loop_crazy_driving_prg.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/jade-devel/amcl/test/texas_willow_hallway_loop_corrected.xml" target="_blank">test/texas_willow_hallway_loop_corrected.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/jade-devel/amcl/test/small_loop_crazy_driving_prg_corrected.xml" target="_blank">test/small_loop_crazy_driving_prg_corrected.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -6012,33 +5526,35 @@ setting pose: 30.329 34.644 3.142
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/jade-devel/amcl/test/small_loop_crazy_driving_prg_corrected.xml" target="_blank">test/small_loop_crazy_driving_prg_corrected.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros2/navigation/blob/jade-devel/amcl/test/texas_greenroom_loop.xml" target="_blank">test/texas_greenroom_loop.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ros2/navigation/blob/jade-devel/amcl/test/texas_willow_hallway_loop.xml" target="_blank">test/texas_willow_hallway_loop.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/jade-devel/amcl/test/set_initial_pose.xml" target="_blank">test/set_initial_pose.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> setting pose: 47.943 21.421 -0.503
+setting pose: 30.329 34.644 3.142 
+117.5s </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/jade-devel/amcl/test/small_loop_prf.xml" target="_blank">test/small_loop_prf.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -6543,7 +6059,7 @@ voxel_grid
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2015-05-01
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2015-04-30
         </span>
       </td>
     </tr>
@@ -6640,66 +6156,7 @@ voxel_grid
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-amcl">Changelog for package amcl</h1>
-
-<h2 id="1-11-16-2015-04-30">1.11.16 (2015-04-30)</h2>
-
-<ul>
-<li>  update maintainer email</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="1-11-15-2015-02-03">1.11.15 (2015-02-03)</h2>
-
-<h2 id="1-11-14-2014-12-05">1.11.14 (2014-12-05)</h2>
-
-<h2 id="1-11-13-2014-10-02">1.11.13 (2014-10-02)</h2>
-
-<h2 id="1-11-12-2014-10-01">1.11.12 (2014-10-01)</h2>
-
-<ul>
-<li>  Bug fix to remove particle weights being reset when motion model is
-updated</li>
-<li>  Integrated new sensor model which calculates the observation
-likelihood in a probabilistic manner Also includes the option to do
-beam-skipping (to better handle observations from dynamic obstacles)</li>
-<li>  Pose pulled from parameter server when new map received</li>
-<li>  Contributors: Steven Kordell, hes3pal</li>
-</ul>
-
-<h2 id="1-11-11-2014-07-23">1.11.11 (2014-07-23)</h2>
-
-<h2 id="1-11-10-2014-06-25">1.11.10 (2014-06-25)</h2>
-
-<h2 id="1-11-9-2014-06-10">1.11.9 (2014-06-10)</h2>
-
-<h2 id="1-11-8-2014-05-21">1.11.8 (2014-05-21)</h2>
-
-<h2 id="1-11-7-2014-05-21">1.11.7 (2014-05-21)</h2>
-
-<ul>
-<li>  removes useless this-&gt;z_max = z_max assignment</li>
-<li>  Fix warning string.</li>
-<li>  Contributors: Jeremiah Via, enriquefernandez</li>
-</ul>
-
-<h2 id="1-11-5-2014-01-30">1.11.5 (2014-01-30)</h2>
-
-<ul>
-<li>  Fix for
-<a href="https://github.com/ros-planning/navigation/issues/160">#160</a>
-</li>
-<li>  Download test data from download.ros.org instead of willow</li>
-<li>  Change maintainer from Hersh to Lu</li>
-</ul>
-
-<h2 id="1-11-4-2013-09-27">1.11.4 (2013-09-27)</h2>
-
-<ul>
-<li>  Package URL Updates</li>
-<li>  amcl_pose and particle cloud are now published latched</li>
-<li>  Fixed or commented out failing amcl tests.</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -7125,7 +6582,7 @@ beam-skipping (to better handle observations from dynamic obstacles)</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros2/navigation/blob/hydro-devel/amcl/examples/amcl_omni.launch" target="_blank">examples/amcl_omni.launch</a>
+              <li><a href="https://github.com/ros2/navigation/blob/hydro-devel/amcl/examples/amcl_diff.launch" target="_blank">examples/amcl_diff.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -7138,7 +6595,7 @@ beam-skipping (to better handle observations from dynamic obstacles)</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/hydro-devel/amcl/examples/amcl_diff.launch" target="_blank">examples/amcl_diff.launch</a>
+              <li><a href="https://github.com/ros2/navigation/blob/hydro-devel/amcl/examples/amcl_omni.launch" target="_blank">examples/amcl_omni.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -7166,12 +6623,23 @@ setting pose: 30.329 34.644 3.142
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/hydro-devel/amcl/test/set_initial_pose.xml" target="_blank">test/set_initial_pose.xml</a>
+              <li><a href="https://github.com/ros2/navigation/blob/hydro-devel/amcl/test/texas_greenroom_loop.xml" target="_blank">test/texas_greenroom_loop.xml</a>
                 <ul class="list-unstyled">
                   
-                    <li><em> setting pose: 47.943 21.421 -0.503
-setting pose: 30.329 34.644 3.142 
-117.5s </em></li>
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/hydro-devel/amcl/test/texas_greenroom_loop_corrected.xml" target="_blank">test/texas_greenroom_loop_corrected.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
                   
                   <li>
                     <ul>
@@ -7207,20 +6675,7 @@ setting pose: 30.329 34.644 3.142
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/hydro-devel/amcl/test/texas_greenroom_loop_corrected.xml" target="_blank">test/texas_greenroom_loop_corrected.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros2/navigation/blob/hydro-devel/amcl/test/small_loop_prf.xml" target="_blank">test/small_loop_prf.xml</a>
+              <li><a href="https://github.com/ros2/navigation/blob/hydro-devel/amcl/test/small_loop_crazy_driving_prg_corrected.xml" target="_blank">test/small_loop_crazy_driving_prg_corrected.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -7248,33 +6703,35 @@ setting pose: 30.329 34.644 3.142
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros2/navigation/blob/hydro-devel/amcl/test/small_loop_crazy_driving_prg_corrected.xml" target="_blank">test/small_loop_crazy_driving_prg_corrected.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros2/navigation/blob/hydro-devel/amcl/test/texas_greenroom_loop.xml" target="_blank">test/texas_greenroom_loop.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ros2/navigation/blob/hydro-devel/amcl/test/texas_willow_hallway_loop.xml" target="_blank">test/texas_willow_hallway_loop.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/hydro-devel/amcl/test/set_initial_pose.xml" target="_blank">test/set_initial_pose.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> setting pose: 47.943 21.421 -0.503
+setting pose: 30.329 34.644 3.142 
+117.5s </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros2/navigation/blob/hydro-devel/amcl/test/small_loop_prf.xml" target="_blank">test/small_loop_prf.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -7467,7 +6924,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

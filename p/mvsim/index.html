@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -616,48 +612,7 @@ Copyright (C) 2017 Jose Luis Blanco <a href="mailto:jlblanco@ual.es">jlblanco@ua
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-mvsim">Changelog for package mvsim</h1>
-
-<h2 id="0-2-0-2018-06-28">0.2.0 (2018-06-28)</h2>
-
-<ul>
-<li>  fix build against mrpt1</li>
-<li>  update to package XML format 2</li>
-<li>  fix build in mrpt 2.0</li>
-<li>  use docker in travis</li>
-<li>  Allow mvsim to be built w/o ROS again</li>
-<li>  Merge pull request
-<a href="https://github.com/ual-arm-ros-pkg/mvsim/issues/10">#10</a> from
-spsancti/master GSoC contribution to mvsim See discussion thread:
-<a href="https://github.com/MRPT/GSoC2017-discussions/issues/2">https://github.com/MRPT/GSoC2017-discussions/issues/2</a>
-</li>
-<li>  Added description of world files</li>
-<li>  Added description of loggers and Ward-Iagnemma friction model</li>
-<li>  Added refernce to Torsen-defferntial</li>
-<li>  Added desctiption of Ackermann-drivetrain dynamics</li>
-<li>  Added Doxyfile</li>
-<li>  Added user manual with basic friction model described</li>
-<li>  Added text logger for CSV format</li>
-<li>  Add mvsim slam demo.</li>
-<li>  fix catkin deps: it now requires mrpt_bridge</li>
-<li>  LaserScanner: new option to make all fixtures invisible</li>
-<li>  Contributors: Borys Tymchenko, Jose Luis Blanco Claraco, Logrus</li>
-</ul>
-
-<h2 id="0-1-2-2015-05-24">0.1.2 (2015-05-24)</h2>
-
-<ul>
-<li>  Cleaner build against mrpt 1.3.0</li>
-<li>  Fix build against mrpt 1.3.0</li>
-<li>  Contributors: Jose Luis Blanco</li>
-</ul>
-
-<h2 id="0-1-1-2014-12-28">0.1.1 (2014-12-28)</h2>
-
-<ul>
-<li>  First public release.</li>
-<li>  Contributors: Jose Luis Blanco</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -964,27 +919,6 @@ spsancti/master GSoC contribution to mvsim See discussion thread:
         
           <ul>
             
-              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/localization_pf_demo1.launch" target="_blank">mvsim_tutorial/localization_pf_demo1.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_1robot.xml&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>mvsim_do_fake_localization</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/mvsim_slam.launch" target="_blank">mvsim_tutorial/mvsim_slam.launch</a>
                 <ul class="list-unstyled">
                   
@@ -995,23 +929,6 @@ spsancti/master GSoC contribution to mvsim See discussion thread:
                       
                         
                           <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_slam.xml&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/mvsim_demo_2robots.launch" target="_blank">mvsim_tutorial/mvsim_demo_2robots.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_2robots.xml&#93; </em></li>
                         
                       
                     </ul>
@@ -1033,6 +950,44 @@ spsancti/master GSoC contribution to mvsim See discussion thread:
                       
                         
                           <li><strong>mvsim_do_fake_localization</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/localization_pf_demo1.launch" target="_blank">mvsim_tutorial/localization_pf_demo1.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_1robot.xml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mvsim_do_fake_localization</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/mvsim_demo_2robots.launch" target="_blank">mvsim_tutorial/mvsim_demo_2robots.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_2robots.xml&#93; </em></li>
                         
                       
                     </ul>
@@ -1576,48 +1531,7 @@ Copyright (C) 2017 Jose Luis Blanco <a href="mailto:jlblanco@ual.es">jlblanco@ua
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-mvsim">Changelog for package mvsim</h1>
-
-<h2 id="0-2-0-2018-06-28">0.2.0 (2018-06-28)</h2>
-
-<ul>
-<li>  fix build against mrpt1</li>
-<li>  update to package XML format 2</li>
-<li>  fix build in mrpt 2.0</li>
-<li>  use docker in travis</li>
-<li>  Allow mvsim to be built w/o ROS again</li>
-<li>  Merge pull request
-<a href="https://github.com/ual-arm-ros-pkg/mvsim/issues/10">#10</a> from
-spsancti/master GSoC contribution to mvsim See discussion thread:
-<a href="https://github.com/MRPT/GSoC2017-discussions/issues/2">https://github.com/MRPT/GSoC2017-discussions/issues/2</a>
-</li>
-<li>  Added description of world files</li>
-<li>  Added description of loggers and Ward-Iagnemma friction model</li>
-<li>  Added refernce to Torsen-defferntial</li>
-<li>  Added desctiption of Ackermann-drivetrain dynamics</li>
-<li>  Added Doxyfile</li>
-<li>  Added user manual with basic friction model described</li>
-<li>  Added text logger for CSV format</li>
-<li>  Add mvsim slam demo.</li>
-<li>  fix catkin deps: it now requires mrpt_bridge</li>
-<li>  LaserScanner: new option to make all fixtures invisible</li>
-<li>  Contributors: Borys Tymchenko, Jose Luis Blanco Claraco, Logrus</li>
-</ul>
-
-<h2 id="0-1-2-2015-05-24">0.1.2 (2015-05-24)</h2>
-
-<ul>
-<li>  Cleaner build against mrpt 1.3.0</li>
-<li>  Fix build against mrpt 1.3.0</li>
-<li>  Contributors: Jose Luis Blanco</li>
-</ul>
-
-<h2 id="0-1-1-2014-12-28">0.1.1 (2014-12-28)</h2>
-
-<ul>
-<li>  First public release.</li>
-<li>  Contributors: Jose Luis Blanco</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1947,27 +1861,6 @@ spsancti/master GSoC contribution to mvsim See discussion thread:
         
           <ul>
             
-              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/localization_pf_demo1.launch" target="_blank">mvsim_tutorial/localization_pf_demo1.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_1robot.xml&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>mvsim_do_fake_localization</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/mvsim_slam.launch" target="_blank">mvsim_tutorial/mvsim_slam.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1978,23 +1871,6 @@ spsancti/master GSoC contribution to mvsim See discussion thread:
                       
                         
                           <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_slam.xml&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/mvsim_demo_2robots.launch" target="_blank">mvsim_tutorial/mvsim_demo_2robots.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_2robots.xml&#93; </em></li>
                         
                       
                     </ul>
@@ -2016,6 +1892,44 @@ spsancti/master GSoC contribution to mvsim See discussion thread:
                       
                         
                           <li><strong>mvsim_do_fake_localization</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/localization_pf_demo1.launch" target="_blank">mvsim_tutorial/localization_pf_demo1.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_1robot.xml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mvsim_do_fake_localization</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/mvsim_demo_2robots.launch" target="_blank">mvsim_tutorial/mvsim_demo_2robots.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_2robots.xml&#93; </em></li>
                         
                       
                     </ul>
@@ -2559,48 +2473,7 @@ Copyright (C) 2017 Jose Luis Blanco <a href="mailto:jlblanco@ual.es">jlblanco@ua
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-mvsim">Changelog for package mvsim</h1>
-
-<h2 id="0-2-0-2018-06-28">0.2.0 (2018-06-28)</h2>
-
-<ul>
-<li>  fix build against mrpt1</li>
-<li>  update to package XML format 2</li>
-<li>  fix build in mrpt 2.0</li>
-<li>  use docker in travis</li>
-<li>  Allow mvsim to be built w/o ROS again</li>
-<li>  Merge pull request
-<a href="https://github.com/ual-arm-ros-pkg/mvsim/issues/10">#10</a> from
-spsancti/master GSoC contribution to mvsim See discussion thread:
-<a href="https://github.com/MRPT/GSoC2017-discussions/issues/2">https://github.com/MRPT/GSoC2017-discussions/issues/2</a>
-</li>
-<li>  Added description of world files</li>
-<li>  Added description of loggers and Ward-Iagnemma friction model</li>
-<li>  Added refernce to Torsen-defferntial</li>
-<li>  Added desctiption of Ackermann-drivetrain dynamics</li>
-<li>  Added Doxyfile</li>
-<li>  Added user manual with basic friction model described</li>
-<li>  Added text logger for CSV format</li>
-<li>  Add mvsim slam demo.</li>
-<li>  fix catkin deps: it now requires mrpt_bridge</li>
-<li>  LaserScanner: new option to make all fixtures invisible</li>
-<li>  Contributors: Borys Tymchenko, Jose Luis Blanco Claraco, Logrus</li>
-</ul>
-
-<h2 id="0-1-2-2015-05-24">0.1.2 (2015-05-24)</h2>
-
-<ul>
-<li>  Cleaner build against mrpt 1.3.0</li>
-<li>  Fix build against mrpt 1.3.0</li>
-<li>  Contributors: Jose Luis Blanco</li>
-</ul>
-
-<h2 id="0-1-1-2014-12-28">0.1.1 (2014-12-28)</h2>
-
-<ul>
-<li>  First public release.</li>
-<li>  Contributors: Jose Luis Blanco</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2907,27 +2780,6 @@ spsancti/master GSoC contribution to mvsim See discussion thread:
         
           <ul>
             
-              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/localization_pf_demo1.launch" target="_blank">mvsim_tutorial/localization_pf_demo1.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_1robot.xml&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>mvsim_do_fake_localization</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/mvsim_slam.launch" target="_blank">mvsim_tutorial/mvsim_slam.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2938,23 +2790,6 @@ spsancti/master GSoC contribution to mvsim See discussion thread:
                       
                         
                           <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_slam.xml&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/mvsim_demo_2robots.launch" target="_blank">mvsim_tutorial/mvsim_demo_2robots.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_2robots.xml&#93; </em></li>
                         
                       
                     </ul>
@@ -2976,6 +2811,44 @@ spsancti/master GSoC contribution to mvsim See discussion thread:
                       
                         
                           <li><strong>mvsim_do_fake_localization</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/localization_pf_demo1.launch" target="_blank">mvsim_tutorial/localization_pf_demo1.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_1robot.xml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mvsim_do_fake_localization</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/mvsim_demo_2robots.launch" target="_blank">mvsim_tutorial/mvsim_demo_2robots.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_2robots.xml&#93; </em></li>
                         
                       
                     </ul>
@@ -3519,48 +3392,7 @@ Copyright (C) 2017 Jose Luis Blanco <a href="mailto:jlblanco@ual.es">jlblanco@ua
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-mvsim">Changelog for package mvsim</h1>
-
-<h2 id="0-2-0-2018-06-28">0.2.0 (2018-06-28)</h2>
-
-<ul>
-<li>  fix build against mrpt1</li>
-<li>  update to package XML format 2</li>
-<li>  fix build in mrpt 2.0</li>
-<li>  use docker in travis</li>
-<li>  Allow mvsim to be built w/o ROS again</li>
-<li>  Merge pull request
-<a href="https://github.com/ual-arm-ros-pkg/mvsim/issues/10">#10</a> from
-spsancti/master GSoC contribution to mvsim See discussion thread:
-<a href="https://github.com/MRPT/GSoC2017-discussions/issues/2">https://github.com/MRPT/GSoC2017-discussions/issues/2</a>
-</li>
-<li>  Added description of world files</li>
-<li>  Added description of loggers and Ward-Iagnemma friction model</li>
-<li>  Added refernce to Torsen-defferntial</li>
-<li>  Added desctiption of Ackermann-drivetrain dynamics</li>
-<li>  Added Doxyfile</li>
-<li>  Added user manual with basic friction model described</li>
-<li>  Added text logger for CSV format</li>
-<li>  Add mvsim slam demo.</li>
-<li>  fix catkin deps: it now requires mrpt_bridge</li>
-<li>  LaserScanner: new option to make all fixtures invisible</li>
-<li>  Contributors: Borys Tymchenko, Jose Luis Blanco Claraco, Logrus</li>
-</ul>
-
-<h2 id="0-1-2-2015-05-24">0.1.2 (2015-05-24)</h2>
-
-<ul>
-<li>  Cleaner build against mrpt 1.3.0</li>
-<li>  Fix build against mrpt 1.3.0</li>
-<li>  Contributors: Jose Luis Blanco</li>
-</ul>
-
-<h2 id="0-1-1-2014-12-28">0.1.1 (2014-12-28)</h2>
-
-<ul>
-<li>  First public release.</li>
-<li>  Contributors: Jose Luis Blanco</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3867,27 +3699,6 @@ spsancti/master GSoC contribution to mvsim See discussion thread:
         
           <ul>
             
-              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/localization_pf_demo1.launch" target="_blank">mvsim_tutorial/localization_pf_demo1.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_1robot.xml&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>mvsim_do_fake_localization</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/mvsim_slam.launch" target="_blank">mvsim_tutorial/mvsim_slam.launch</a>
                 <ul class="list-unstyled">
                   
@@ -3898,23 +3709,6 @@ spsancti/master GSoC contribution to mvsim See discussion thread:
                       
                         
                           <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_slam.xml&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/mvsim_demo_2robots.launch" target="_blank">mvsim_tutorial/mvsim_demo_2robots.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_2robots.xml&#93; </em></li>
                         
                       
                     </ul>
@@ -3936,6 +3730,44 @@ spsancti/master GSoC contribution to mvsim See discussion thread:
                       
                         
                           <li><strong>mvsim_do_fake_localization</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/localization_pf_demo1.launch" target="_blank">mvsim_tutorial/localization_pf_demo1.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_1robot.xml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mvsim_do_fake_localization</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/mvsim_demo_2robots.launch" target="_blank">mvsim_tutorial/mvsim_demo_2robots.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_2robots.xml&#93; </em></li>
                         
                       
                     </ul>
@@ -4487,48 +4319,7 @@ Copyright (C) 2017 Jose Luis Blanco <a href="mailto:jlblanco@ual.es">jlblanco@ua
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-mvsim">Changelog for package mvsim</h1>
-
-<h2 id="0-2-0-2018-06-28">0.2.0 (2018-06-28)</h2>
-
-<ul>
-<li>  fix build against mrpt1</li>
-<li>  update to package XML format 2</li>
-<li>  fix build in mrpt 2.0</li>
-<li>  use docker in travis</li>
-<li>  Allow mvsim to be built w/o ROS again</li>
-<li>  Merge pull request
-<a href="https://github.com/ual-arm-ros-pkg/mvsim/issues/10">#10</a> from
-spsancti/master GSoC contribution to mvsim See discussion thread:
-<a href="https://github.com/MRPT/GSoC2017-discussions/issues/2">https://github.com/MRPT/GSoC2017-discussions/issues/2</a>
-</li>
-<li>  Added description of world files</li>
-<li>  Added description of loggers and Ward-Iagnemma friction model</li>
-<li>  Added refernce to Torsen-defferntial</li>
-<li>  Added desctiption of Ackermann-drivetrain dynamics</li>
-<li>  Added Doxyfile</li>
-<li>  Added user manual with basic friction model described</li>
-<li>  Added text logger for CSV format</li>
-<li>  Add mvsim slam demo.</li>
-<li>  fix catkin deps: it now requires mrpt_bridge</li>
-<li>  LaserScanner: new option to make all fixtures invisible</li>
-<li>  Contributors: Borys Tymchenko, Jose Luis Blanco Claraco, Logrus</li>
-</ul>
-
-<h2 id="0-1-2-2015-05-24">0.1.2 (2015-05-24)</h2>
-
-<ul>
-<li>  Cleaner build against mrpt 1.3.0</li>
-<li>  Fix build against mrpt 1.3.0</li>
-<li>  Contributors: Jose Luis Blanco</li>
-</ul>
-
-<h2 id="0-1-1-2014-12-28">0.1.1 (2014-12-28)</h2>
-
-<ul>
-<li>  First public release.</li>
-<li>  Contributors: Jose Luis Blanco</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -4835,27 +4626,6 @@ spsancti/master GSoC contribution to mvsim See discussion thread:
         
           <ul>
             
-              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/localization_pf_demo1.launch" target="_blank">mvsim_tutorial/localization_pf_demo1.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_1robot.xml&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>mvsim_do_fake_localization</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/mvsim_slam.launch" target="_blank">mvsim_tutorial/mvsim_slam.launch</a>
                 <ul class="list-unstyled">
                   
@@ -4866,23 +4636,6 @@ spsancti/master GSoC contribution to mvsim See discussion thread:
                       
                         
                           <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_slam.xml&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/mvsim_demo_2robots.launch" target="_blank">mvsim_tutorial/mvsim_demo_2robots.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_2robots.xml&#93; </em></li>
                         
                       
                     </ul>
@@ -4904,6 +4657,44 @@ spsancti/master GSoC contribution to mvsim See discussion thread:
                       
                         
                           <li><strong>mvsim_do_fake_localization</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/localization_pf_demo1.launch" target="_blank">mvsim_tutorial/localization_pf_demo1.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_1robot.xml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mvsim_do_fake_localization</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ual-arm-ros-pkg/mvsim/blob/master/./mvsim_tutorial/mvsim_demo_2robots.launch" target="_blank">mvsim_tutorial/mvsim_demo_2robots.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>world_file</strong> <em>&#91;default: $(find mvsim)/mvsim_tutorial/mvsim_demo_2robots.xml&#93; </em></li>
                         
                       
                     </ul>
@@ -5089,7 +4880,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

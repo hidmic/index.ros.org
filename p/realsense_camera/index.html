@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -584,32 +580,7 @@ as current plan is to <a href="https://github.com/intel-ros/realsense/issues/47"
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-realsense_camera">Changelog for package realsense_camera</h1>
-
-<p>1.8.1 (2017-12-20) -----------* Added missing ZR300 launch file
-arguments (#259) * Fixed ZR300 launch file typo (#244) * Added LR200
-support (#245) * Added RGDB launch file for the ZR300 * Updated code
-to cache ZR300 IMU data (#186) * Contributors: Benjamin Maidel, Dinesh
-Bolkensteyn, Itay Carpis, Junya Hayashi, Matt Curfman, Murilo Belluzzo,
-Reagan Lopez, Sergey Dorodnicov</p>
-
-<h2 id="1-8-0-2017-03-27">1.8.0 (2017-03-27)</h2>
-
-<ul>
-<li>  Enable configuration of the TF publication rate when using
-tf_dynamic</li>
-<li>  Enable roslint when CATKIN_ENABLE_TESTING is True</li>
-<li>  Add option to link against non-catkin librealsense</li>
-<li>  Fixed LR auto exposure (#131)</li>
-<li>  Dynamic reconfig autoexposure/exposure control
-SR300/F200/R200 (#213)</li>
-<li>  Added check for depth_enable dynamic change</li>
-<li>  Update Debug Tool</li>
-<li>  Added SyncNodelet class as new base for F200/SR300/R200
-(#207, #210)</li>
-<li>  Contributors: Amanda Brindle, Dmitry Rozhkov, James Sergeant, Mark
-Horn, Matthew Hansen, Reagan Lopez, S</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1026,6 +997,232 @@ Horn, Matthew Hansen, Reagan Lopez, S</li>
         
           <ul>
             
+              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/r200_nodelet_modify_params.launch" target="_blank">launch/r200_nodelet_modify_params.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> Sample launch file for modifying the parameters of RealSense R200 camera </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>camera_type</strong> <em>&#91;default: R200&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>serial_no</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>usb_port_id</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: nodelet_manager&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_depth</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_ir</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_ir2</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_color</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_pointcloud</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_tf</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_tf_dynamic</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>tf_publication_rate</strong> <em>&#91;default: 1.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mode</strong> <em>&#91;default: manual&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_width</strong> <em>&#91;default: 640&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_height</strong> <em>&#91;default: 480&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>color_width</strong> <em>&#91;default: 1920&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>color_height</strong> <em>&#91;default: 1080&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_fps</strong> <em>&#91;default: 30&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>color_fps</strong> <em>&#91;default: 30&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/r200_nodelet_default.launch" target="_blank">launch/r200_nodelet_default.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> Sample launch file for using RealSense R200 camera with default configurations </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>camera_type</strong> <em>&#91;default: R200&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>serial_no</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>usb_port_id</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: nodelet_manager&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mode</strong> <em>&#91;default: manual&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>color_fps</strong> <em>&#91;default: 30&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/get_debug_info.launch" target="_blank">launch/get_debug_info.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> launch file for data collection of RealSense camera configurations </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/f200_nodelet_default.launch" target="_blank">launch/f200_nodelet_default.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> Sample launch file for using RealSense F200 camera with default configurations </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>camera_type</strong> <em>&#91;default: F200&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>serial_no</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>usb_port_id</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: nodelet_manager&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mode</strong> <em>&#91;default: manual&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_width</strong> <em>&#91;default: 640&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_height</strong> <em>&#91;default: 480&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>color_fps</strong> <em>&#91;default: 30&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/zr300_nodelet_rgbd.launch" target="_blank">launch/zr300_nodelet_rgbd.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1241,10 +1438,10 @@ Horn, Matthew Hansen, Reagan Lopez, S</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/r200_nodelet_modify_params.launch" target="_blank">launch/r200_nodelet_modify_params.launch</a>
+              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/sr300_nodelet_default.launch" target="_blank">launch/sr300_nodelet_default.launch</a>
                 <ul class="list-unstyled">
                   
-                    <li><em> Sample launch file for modifying the parameters of RealSense R200 camera </em></li>
+                    <li><em> Sample launch file for using RealSense SR300 camera with default configurations </em></li>
                   
                   <li>
                     <ul>
@@ -1254,110 +1451,7 @@ Horn, Matthew Hansen, Reagan Lopez, S</li>
                         
                       
                         
-                          <li><strong>camera_type</strong> <em>&#91;default: R200&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>serial_no</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>usb_port_id</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: nodelet_manager&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_depth</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_ir</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_ir2</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_color</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_pointcloud</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_tf</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_tf_dynamic</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>tf_publication_rate</strong> <em>&#91;default: 1.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>mode</strong> <em>&#91;default: manual&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_width</strong> <em>&#91;default: 640&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_height</strong> <em>&#91;default: 480&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>color_width</strong> <em>&#91;default: 1920&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>color_height</strong> <em>&#91;default: 1080&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_fps</strong> <em>&#91;default: 30&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>color_fps</strong> <em>&#91;default: 30&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/f200_nodelet_default.launch" target="_blank">launch/f200_nodelet_default.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> Sample launch file for using RealSense F200 camera with default configurations </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>camera_type</strong> <em>&#91;default: F200&#93; </em></li>
+                          <li><strong>camera_type</strong> <em>&#91;default: SR300&#93; </em></li>
                         
                       
                         
@@ -1809,129 +1903,6 @@ Horn, Matthew Hansen, Reagan Lopez, S</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/sr300_nodelet_default.launch" target="_blank">launch/sr300_nodelet_default.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> Sample launch file for using RealSense SR300 camera with default configurations </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>camera_type</strong> <em>&#91;default: SR300&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>serial_no</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>usb_port_id</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: nodelet_manager&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>mode</strong> <em>&#91;default: manual&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_width</strong> <em>&#91;default: 640&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_height</strong> <em>&#91;default: 480&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>color_fps</strong> <em>&#91;default: 30&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/get_debug_info.launch" target="_blank">launch/get_debug_info.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> launch file for data collection of RealSense camera configurations </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/r200_nodelet_default.launch" target="_blank">launch/r200_nodelet_default.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> Sample launch file for using RealSense R200 camera with default configurations </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>camera_type</strong> <em>&#91;default: R200&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>serial_no</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>usb_port_id</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: nodelet_manager&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>mode</strong> <em>&#91;default: manual&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>color_fps</strong> <em>&#91;default: 30&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/zr300_nodelet_default.launch" target="_blank">launch/zr300_nodelet_default.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2062,63 +2033,6 @@ Horn, Matthew Hansen, Reagan Lopez, S</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/includes/nodelet.launch.xml" target="_blank">launch/includes/nodelet.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> Entry point for using realsense_camera </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>camera_type</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth</strong> <em>&#91;default: depth&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb</strong> <em>&#91;default: color&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ir</strong> <em>&#91;default: ir&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ir2</strong> <em>&#91;default: ir2&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>fisheye</strong> <em>&#91;default: fisheye&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>imu</strong> <em>&#91;default: imu&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>serial_no</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>usb_port_id</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/includes/nodelet_rgbd.launch.xml" target="_blank">launch/includes/nodelet_rgbd.launch.xml</a>
                 <ul class="list-unstyled">
                   
@@ -2236,6 +2150,63 @@ Horn, Matthew Hansen, Reagan Lopez, S</li>
                 </ul>
               </li>
             
+              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/includes/nodelet.launch.xml" target="_blank">launch/includes/nodelet.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> Entry point for using realsense_camera </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>manager</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>camera_type</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth</strong> <em>&#91;default: depth&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb</strong> <em>&#91;default: color&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ir</strong> <em>&#91;default: ir&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ir2</strong> <em>&#91;default: ir2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>fisheye</strong> <em>&#91;default: fisheye&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>imu</strong> <em>&#91;default: imu&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>serial_no</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>usb_port_id</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
           </ul>
         
       </div>
@@ -2264,15 +2235,15 @@ Horn, Matthew Hansen, Reagan Lopez, S</li>
         
           <ul>
             
-              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/srv/CameraConfiguration.srv" target="_blank">srv/CameraConfiguration.srv</a></li>
-            
-              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/srv/ForcePower.srv" target="_blank">srv/ForcePower.srv</a></li>
+              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/srv/SetPower.srv" target="_blank">srv/SetPower.srv</a></li>
             
               <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/srv/GetIMUInfo.srv" target="_blank">srv/GetIMUInfo.srv</a></li>
             
-              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/srv/SetPower.srv" target="_blank">srv/SetPower.srv</a></li>
-            
               <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/srv/IsPowered.srv" target="_blank">srv/IsPowered.srv</a></li>
+            
+              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/srv/ForcePower.srv" target="_blank">srv/ForcePower.srv</a></li>
+            
+              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/srv/CameraConfiguration.srv" target="_blank">srv/CameraConfiguration.srv</a></li>
             
           </ul>
         
@@ -2740,32 +2711,7 @@ as current plan is to <a href="https://github.com/intel-ros/realsense/issues/47"
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-realsense_camera">Changelog for package realsense_camera</h1>
-
-<p>1.8.1 (2017-12-20) -----------* Added missing ZR300 launch file
-arguments (#259) * Fixed ZR300 launch file typo (#244) * Added LR200
-support (#245) * Added RGDB launch file for the ZR300 * Updated code
-to cache ZR300 IMU data (#186) * Contributors: Benjamin Maidel, Dinesh
-Bolkensteyn, Itay Carpis, Junya Hayashi, Matt Curfman, Murilo Belluzzo,
-Reagan Lopez, Sergey Dorodnicov</p>
-
-<h2 id="1-8-0-2017-03-27">1.8.0 (2017-03-27)</h2>
-
-<ul>
-<li>  Enable configuration of the TF publication rate when using
-tf_dynamic</li>
-<li>  Enable roslint when CATKIN_ENABLE_TESTING is True</li>
-<li>  Add option to link against non-catkin librealsense</li>
-<li>  Fixed LR auto exposure (#131)</li>
-<li>  Dynamic reconfig autoexposure/exposure control
-SR300/F200/R200 (#213)</li>
-<li>  Added check for depth_enable dynamic change</li>
-<li>  Update Debug Tool</li>
-<li>  Added SyncNodelet class as new base for F200/SR300/R200
-(#207, #210)</li>
-<li>  Contributors: Amanda Brindle, Dmitry Rozhkov, James Sergeant, Mark
-Horn, Matthew Hansen, Reagan Lopez, S</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3182,6 +3128,232 @@ Horn, Matthew Hansen, Reagan Lopez, S</li>
         
           <ul>
             
+              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/r200_nodelet_modify_params.launch" target="_blank">launch/r200_nodelet_modify_params.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> Sample launch file for modifying the parameters of RealSense R200 camera </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>camera_type</strong> <em>&#91;default: R200&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>serial_no</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>usb_port_id</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: nodelet_manager&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_depth</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_ir</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_ir2</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_color</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_pointcloud</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_tf</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_tf_dynamic</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>tf_publication_rate</strong> <em>&#91;default: 1.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mode</strong> <em>&#91;default: manual&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_width</strong> <em>&#91;default: 640&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_height</strong> <em>&#91;default: 480&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>color_width</strong> <em>&#91;default: 1920&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>color_height</strong> <em>&#91;default: 1080&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_fps</strong> <em>&#91;default: 30&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>color_fps</strong> <em>&#91;default: 30&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/r200_nodelet_default.launch" target="_blank">launch/r200_nodelet_default.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> Sample launch file for using RealSense R200 camera with default configurations </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>camera_type</strong> <em>&#91;default: R200&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>serial_no</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>usb_port_id</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: nodelet_manager&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mode</strong> <em>&#91;default: manual&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>color_fps</strong> <em>&#91;default: 30&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/get_debug_info.launch" target="_blank">launch/get_debug_info.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> launch file for data collection of RealSense camera configurations </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/f200_nodelet_default.launch" target="_blank">launch/f200_nodelet_default.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> Sample launch file for using RealSense F200 camera with default configurations </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>camera_type</strong> <em>&#91;default: F200&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>serial_no</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>usb_port_id</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: nodelet_manager&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mode</strong> <em>&#91;default: manual&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_width</strong> <em>&#91;default: 640&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_height</strong> <em>&#91;default: 480&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>color_fps</strong> <em>&#91;default: 30&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/zr300_nodelet_rgbd.launch" target="_blank">launch/zr300_nodelet_rgbd.launch</a>
                 <ul class="list-unstyled">
                   
@@ -3397,10 +3569,10 @@ Horn, Matthew Hansen, Reagan Lopez, S</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/r200_nodelet_modify_params.launch" target="_blank">launch/r200_nodelet_modify_params.launch</a>
+              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/sr300_nodelet_default.launch" target="_blank">launch/sr300_nodelet_default.launch</a>
                 <ul class="list-unstyled">
                   
-                    <li><em> Sample launch file for modifying the parameters of RealSense R200 camera </em></li>
+                    <li><em> Sample launch file for using RealSense SR300 camera with default configurations </em></li>
                   
                   <li>
                     <ul>
@@ -3410,110 +3582,7 @@ Horn, Matthew Hansen, Reagan Lopez, S</li>
                         
                       
                         
-                          <li><strong>camera_type</strong> <em>&#91;default: R200&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>serial_no</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>usb_port_id</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: nodelet_manager&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_depth</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_ir</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_ir2</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_color</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_pointcloud</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_tf</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_tf_dynamic</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>tf_publication_rate</strong> <em>&#91;default: 1.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>mode</strong> <em>&#91;default: manual&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_width</strong> <em>&#91;default: 640&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_height</strong> <em>&#91;default: 480&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>color_width</strong> <em>&#91;default: 1920&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>color_height</strong> <em>&#91;default: 1080&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_fps</strong> <em>&#91;default: 30&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>color_fps</strong> <em>&#91;default: 30&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/f200_nodelet_default.launch" target="_blank">launch/f200_nodelet_default.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> Sample launch file for using RealSense F200 camera with default configurations </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>camera_type</strong> <em>&#91;default: F200&#93; </em></li>
+                          <li><strong>camera_type</strong> <em>&#91;default: SR300&#93; </em></li>
                         
                       
                         
@@ -3965,129 +4034,6 @@ Horn, Matthew Hansen, Reagan Lopez, S</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/sr300_nodelet_default.launch" target="_blank">launch/sr300_nodelet_default.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> Sample launch file for using RealSense SR300 camera with default configurations </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>camera_type</strong> <em>&#91;default: SR300&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>serial_no</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>usb_port_id</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: nodelet_manager&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>mode</strong> <em>&#91;default: manual&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_width</strong> <em>&#91;default: 640&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_height</strong> <em>&#91;default: 480&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>color_fps</strong> <em>&#91;default: 30&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/get_debug_info.launch" target="_blank">launch/get_debug_info.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> launch file for data collection of RealSense camera configurations </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/r200_nodelet_default.launch" target="_blank">launch/r200_nodelet_default.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> Sample launch file for using RealSense R200 camera with default configurations </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>camera_type</strong> <em>&#91;default: R200&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>serial_no</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>usb_port_id</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: nodelet_manager&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>mode</strong> <em>&#91;default: manual&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>color_fps</strong> <em>&#91;default: 30&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/zr300_nodelet_default.launch" target="_blank">launch/zr300_nodelet_default.launch</a>
                 <ul class="list-unstyled">
                   
@@ -4218,63 +4164,6 @@ Horn, Matthew Hansen, Reagan Lopez, S</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/includes/nodelet.launch.xml" target="_blank">launch/includes/nodelet.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> Entry point for using realsense_camera </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>camera_type</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth</strong> <em>&#91;default: depth&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb</strong> <em>&#91;default: color&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ir</strong> <em>&#91;default: ir&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ir2</strong> <em>&#91;default: ir2&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>fisheye</strong> <em>&#91;default: fisheye&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>imu</strong> <em>&#91;default: imu&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>serial_no</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>usb_port_id</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/includes/nodelet_rgbd.launch.xml" target="_blank">launch/includes/nodelet_rgbd.launch.xml</a>
                 <ul class="list-unstyled">
                   
@@ -4392,6 +4281,63 @@ Horn, Matthew Hansen, Reagan Lopez, S</li>
                 </ul>
               </li>
             
+              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/launch/includes/nodelet.launch.xml" target="_blank">launch/includes/nodelet.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> Entry point for using realsense_camera </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>manager</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>camera_type</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth</strong> <em>&#91;default: depth&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb</strong> <em>&#91;default: color&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ir</strong> <em>&#91;default: ir&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ir2</strong> <em>&#91;default: ir2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>fisheye</strong> <em>&#91;default: fisheye&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>imu</strong> <em>&#91;default: imu&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>serial_no</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>usb_port_id</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
           </ul>
         
       </div>
@@ -4420,15 +4366,15 @@ Horn, Matthew Hansen, Reagan Lopez, S</li>
         
           <ul>
             
-              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/srv/CameraConfiguration.srv" target="_blank">srv/CameraConfiguration.srv</a></li>
-            
-              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/srv/ForcePower.srv" target="_blank">srv/ForcePower.srv</a></li>
+              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/srv/SetPower.srv" target="_blank">srv/SetPower.srv</a></li>
             
               <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/srv/GetIMUInfo.srv" target="_blank">srv/GetIMUInfo.srv</a></li>
             
-              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/srv/SetPower.srv" target="_blank">srv/SetPower.srv</a></li>
-            
               <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/srv/IsPowered.srv" target="_blank">srv/IsPowered.srv</a></li>
+            
+              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/srv/ForcePower.srv" target="_blank">srv/ForcePower.srv</a></li>
+            
+              <li><a href="https://github.com/intel-ros/realsense/blob/indigo-devel/realsense_camera/srv/CameraConfiguration.srv" target="_blank">srv/CameraConfiguration.srv</a></li>
             
           </ul>
         
@@ -4602,7 +4548,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

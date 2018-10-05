@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -580,70 +576,7 @@ If you would like for the radar devices to output the FFT data, utilize a "ROS s
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-radar_omnipresense">Changelog for package radar_omnipresense</h1>
-
-<h2 id="0-3-0-2018-09-10">0.3.0 (2018-09-10)</h2>
-
-<ul>
-<li>  Remove use of rapidjson</li>
-<li>  make compatible with OPS241 (API v 1.0-1-1) and OPS242 (v1.2
-and beyond)</li>
-<li>  Contributors: Jim Whitfield</li>
-</ul>
-
-<h2 id="0-2-0-2018-05-31">0.2.0 (2018-05-31)</h2>
-
-<ul>
-<li>  serialconnection folder</li>
-<li>  added rapidjson, which has all needed header files</li>
-<li>  added rapidjson folder in lib folder</li>
-<li>  added rapidjson include the lib folder and 'wrapped' it in a
-radar_omnipresense namespace</li>
-<li>  Contributors: Garren Hendricks, Jim Whitfield</li>
-</ul>
-
-<h2 id="0-1-0-2018-05-11">0.1.0 (2018-05-11)</h2>
-
-<ul>
-<li>  commiting the 2011 api version of the code. The branch
-RapidJSON_preserve contians 2015 api version. That branch should
-not be modified at all</li>
-<li>  altered findrapidjson</li>
-<li>  updated CMakeLists and utest to 'pass'</li>
-<li>  adding files for very simple 'unit testing'</li>
-<li>  Updated the readme to no longer say that you need to download and
-install LinuxCommConnection for the package</li>
-<li>  Added the lib file so that linuxcommconnection is no longer a
-depedency issue</li>
-<li>  Prepping for ros package submittal</li>
-<li>  Added the lib file so that linuxcommconnection is no longer a
-depedency issue</li>
-<li>  address RapidJSON dependency</li>
-<li>  added raw msgs</li>
-<li>  Contributors: Garren Hendricks, Jim Whitfield</li>
-</ul>
-
-<h2 id="0-0-1-2018-04-07">0.0.1 (2018-04-07)</h2>
-
-<ul>
-<li>  Merge branch 'master' of
-<a href="https://github.com/SCU-RSL-ROS/radar_omnipresense">https://github.com/SCU-RSL-ROS/radar_omnipresense</a>
-</li>
-<li>  added doxygen detectable documentation for the function prototypes</li>
-<li>  changed the topic name from 'radar' to 'radar_report'</li>
-<li>  sensor id field shows the serial port that the radar is connected to</li>
-<li>  added the rosluanch file for a single radar sensor and then have a
-rosluanch file that will launch multiple radar sensors, currently it
-launches 2</li>
-<li>  Added unix time stamp to msg data</li>
-<li>  Adding folder udev to contain device rules for usb radar device.
-also adding a bash script to move the rules to proper
-filesystem location.</li>
-<li>  Create LICENSE</li>
-<li>  added Findrapidjson.cmake</li>
-<li>  Contributors: Garren Hendricks, Matthew Condino, Pillager225,
-RyanLoringCooper, Jim Whitfield</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -830,7 +763,7 @@ RyanLoringCooper, Jim Whitfield</li>
         
           <ul>
             
-              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./launch/multi_radar.launch" target="_blank">launch/multi_radar.launch</a>
+              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./launch/single_radar.launch" target="_blank">launch/single_radar.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -843,7 +776,7 @@ RyanLoringCooper, Jim Whitfield</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./launch/single_radar.launch" target="_blank">launch/single_radar.launch</a>
+              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./launch/multi_radar.launch" target="_blank">launch/multi_radar.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -871,9 +804,9 @@ RyanLoringCooper, Jim Whitfield</li>
             
               <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./msg/raw.msg" target="_blank">msg/raw.msg</a></li>
             
-              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./msg/fft.msg" target="_blank">msg/fft.msg</a></li>
-            
               <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./msg/radar_data.msg" target="_blank">msg/radar_data.msg</a></li>
+            
+              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./msg/fft.msg" target="_blank">msg/fft.msg</a></li>
             
           </ul>
         
@@ -888,9 +821,9 @@ RyanLoringCooper, Jim Whitfield</li>
         
           <ul>
             
-              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./srv/IsConnected.srv" target="_blank">srv/IsConnected.srv</a></li>
-            
               <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./srv/SendAPICommand.srv" target="_blank">srv/SendAPICommand.srv</a></li>
+            
+              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./srv/IsConnected.srv" target="_blank">srv/IsConnected.srv</a></li>
             
           </ul>
         
@@ -1363,70 +1296,7 @@ If you would like for the radar devices to output the FFT data, utilize a "ROS s
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-radar_omnipresense">Changelog for package radar_omnipresense</h1>
-
-<h2 id="0-3-0-2018-09-10">0.3.0 (2018-09-10)</h2>
-
-<ul>
-<li>  Remove use of rapidjson</li>
-<li>  make compatible with OPS241 (API v 1.0-1-1) and OPS242 (v1.2
-and beyond)</li>
-<li>  Contributors: Jim Whitfield</li>
-</ul>
-
-<h2 id="0-2-0-2018-05-31">0.2.0 (2018-05-31)</h2>
-
-<ul>
-<li>  serialconnection folder</li>
-<li>  added rapidjson, which has all needed header files</li>
-<li>  added rapidjson folder in lib folder</li>
-<li>  added rapidjson include the lib folder and 'wrapped' it in a
-radar_omnipresense namespace</li>
-<li>  Contributors: Garren Hendricks, Jim Whitfield</li>
-</ul>
-
-<h2 id="0-1-0-2018-05-11">0.1.0 (2018-05-11)</h2>
-
-<ul>
-<li>  commiting the 2011 api version of the code. The branch
-RapidJSON_preserve contians 2015 api version. That branch should
-not be modified at all</li>
-<li>  altered findrapidjson</li>
-<li>  updated CMakeLists and utest to 'pass'</li>
-<li>  adding files for very simple 'unit testing'</li>
-<li>  Updated the readme to no longer say that you need to download and
-install LinuxCommConnection for the package</li>
-<li>  Added the lib file so that linuxcommconnection is no longer a
-depedency issue</li>
-<li>  Prepping for ros package submittal</li>
-<li>  Added the lib file so that linuxcommconnection is no longer a
-depedency issue</li>
-<li>  address RapidJSON dependency</li>
-<li>  added raw msgs</li>
-<li>  Contributors: Garren Hendricks, Jim Whitfield</li>
-</ul>
-
-<h2 id="0-0-1-2018-04-07">0.0.1 (2018-04-07)</h2>
-
-<ul>
-<li>  Merge branch 'master' of
-<a href="https://github.com/SCU-RSL-ROS/radar_omnipresense">https://github.com/SCU-RSL-ROS/radar_omnipresense</a>
-</li>
-<li>  added doxygen detectable documentation for the function prototypes</li>
-<li>  changed the topic name from 'radar' to 'radar_report'</li>
-<li>  sensor id field shows the serial port that the radar is connected to</li>
-<li>  added the rosluanch file for a single radar sensor and then have a
-rosluanch file that will launch multiple radar sensors, currently it
-launches 2</li>
-<li>  Added unix time stamp to msg data</li>
-<li>  Adding folder udev to contain device rules for usb radar device.
-also adding a bash script to move the rules to proper
-filesystem location.</li>
-<li>  Create LICENSE</li>
-<li>  added Findrapidjson.cmake</li>
-<li>  Contributors: Garren Hendricks, Matthew Condino, Pillager225,
-RyanLoringCooper, Jim Whitfield</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1613,7 +1483,7 @@ RyanLoringCooper, Jim Whitfield</li>
         
           <ul>
             
-              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./launch/multi_radar.launch" target="_blank">launch/multi_radar.launch</a>
+              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./launch/single_radar.launch" target="_blank">launch/single_radar.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1626,7 +1496,7 @@ RyanLoringCooper, Jim Whitfield</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./launch/single_radar.launch" target="_blank">launch/single_radar.launch</a>
+              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./launch/multi_radar.launch" target="_blank">launch/multi_radar.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1654,9 +1524,9 @@ RyanLoringCooper, Jim Whitfield</li>
             
               <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./msg/raw.msg" target="_blank">msg/raw.msg</a></li>
             
-              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./msg/fft.msg" target="_blank">msg/fft.msg</a></li>
-            
               <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./msg/radar_data.msg" target="_blank">msg/radar_data.msg</a></li>
+            
+              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./msg/fft.msg" target="_blank">msg/fft.msg</a></li>
             
           </ul>
         
@@ -1671,9 +1541,9 @@ RyanLoringCooper, Jim Whitfield</li>
         
           <ul>
             
-              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./srv/IsConnected.srv" target="_blank">srv/IsConnected.srv</a></li>
-            
               <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./srv/SendAPICommand.srv" target="_blank">srv/SendAPICommand.srv</a></li>
+            
+              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./srv/IsConnected.srv" target="_blank">srv/IsConnected.srv</a></li>
             
           </ul>
         
@@ -2146,70 +2016,7 @@ If you would like for the radar devices to output the FFT data, utilize a "ROS s
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-radar_omnipresense">Changelog for package radar_omnipresense</h1>
-
-<h2 id="0-3-0-2018-09-10">0.3.0 (2018-09-10)</h2>
-
-<ul>
-<li>  Remove use of rapidjson</li>
-<li>  make compatible with OPS241 (API v 1.0-1-1) and OPS242 (v1.2
-and beyond)</li>
-<li>  Contributors: Jim Whitfield</li>
-</ul>
-
-<h2 id="0-2-0-2018-05-31">0.2.0 (2018-05-31)</h2>
-
-<ul>
-<li>  serialconnection folder</li>
-<li>  added rapidjson, which has all needed header files</li>
-<li>  added rapidjson folder in lib folder</li>
-<li>  added rapidjson include the lib folder and 'wrapped' it in a
-radar_omnipresense namespace</li>
-<li>  Contributors: Garren Hendricks, Jim Whitfield</li>
-</ul>
-
-<h2 id="0-1-0-2018-05-11">0.1.0 (2018-05-11)</h2>
-
-<ul>
-<li>  commiting the 2011 api version of the code. The branch
-RapidJSON_preserve contians 2015 api version. That branch should
-not be modified at all</li>
-<li>  altered findrapidjson</li>
-<li>  updated CMakeLists and utest to 'pass'</li>
-<li>  adding files for very simple 'unit testing'</li>
-<li>  Updated the readme to no longer say that you need to download and
-install LinuxCommConnection for the package</li>
-<li>  Added the lib file so that linuxcommconnection is no longer a
-depedency issue</li>
-<li>  Prepping for ros package submittal</li>
-<li>  Added the lib file so that linuxcommconnection is no longer a
-depedency issue</li>
-<li>  address RapidJSON dependency</li>
-<li>  added raw msgs</li>
-<li>  Contributors: Garren Hendricks, Jim Whitfield</li>
-</ul>
-
-<h2 id="0-0-1-2018-04-07">0.0.1 (2018-04-07)</h2>
-
-<ul>
-<li>  Merge branch 'master' of
-<a href="https://github.com/SCU-RSL-ROS/radar_omnipresense">https://github.com/SCU-RSL-ROS/radar_omnipresense</a>
-</li>
-<li>  added doxygen detectable documentation for the function prototypes</li>
-<li>  changed the topic name from 'radar' to 'radar_report'</li>
-<li>  sensor id field shows the serial port that the radar is connected to</li>
-<li>  added the rosluanch file for a single radar sensor and then have a
-rosluanch file that will launch multiple radar sensors, currently it
-launches 2</li>
-<li>  Added unix time stamp to msg data</li>
-<li>  Adding folder udev to contain device rules for usb radar device.
-also adding a bash script to move the rules to proper
-filesystem location.</li>
-<li>  Create LICENSE</li>
-<li>  added Findrapidjson.cmake</li>
-<li>  Contributors: Garren Hendricks, Matthew Condino, Pillager225,
-RyanLoringCooper, Jim Whitfield</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2396,7 +2203,7 @@ RyanLoringCooper, Jim Whitfield</li>
         
           <ul>
             
-              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./launch/multi_radar.launch" target="_blank">launch/multi_radar.launch</a>
+              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./launch/single_radar.launch" target="_blank">launch/single_radar.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2409,7 +2216,7 @@ RyanLoringCooper, Jim Whitfield</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./launch/single_radar.launch" target="_blank">launch/single_radar.launch</a>
+              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./launch/multi_radar.launch" target="_blank">launch/multi_radar.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2437,9 +2244,9 @@ RyanLoringCooper, Jim Whitfield</li>
             
               <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./msg/raw.msg" target="_blank">msg/raw.msg</a></li>
             
-              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./msg/fft.msg" target="_blank">msg/fft.msg</a></li>
-            
               <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./msg/radar_data.msg" target="_blank">msg/radar_data.msg</a></li>
+            
+              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./msg/fft.msg" target="_blank">msg/fft.msg</a></li>
             
           </ul>
         
@@ -2454,9 +2261,9 @@ RyanLoringCooper, Jim Whitfield</li>
         
           <ul>
             
-              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./srv/IsConnected.srv" target="_blank">srv/IsConnected.srv</a></li>
-            
               <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./srv/SendAPICommand.srv" target="_blank">srv/SendAPICommand.srv</a></li>
+            
+              <li><a href="https://github.com/SCU-RSL-ROS/radar_omnipresense/blob/0.3.0/./srv/IsConnected.srv" target="_blank">srv/IsConnected.srv</a></li>
             
           </ul>
         
@@ -2633,7 +2440,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

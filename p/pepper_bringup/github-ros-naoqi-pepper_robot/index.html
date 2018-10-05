@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -461,7 +457,7 @@ pepper_sensors_py
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-02-12
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-02-11
         </span>
       </td>
     </tr>
@@ -554,85 +550,7 @@ pepper_sensors_py
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-pepper_bringup">Changelog for package pepper_bringup</h1>
-
-<h2 id="0-1-10-2017-01-17">0.1.10 (2017-01-17)</h2>
-
-<ul>
-<li>  Merge pull request
-<a href="https://github.com/ros-naoqi/pepper_robot/issues/34">#34</a> from
-ros-naoqi/change_maintainer change maintainership</li>
-<li>  change maintainership</li>
-<li>  Contributors: Karsten Knese</li>
-</ul>
-
-<h2 id="0-1-9-2017-01-17">0.1.9 (2017-01-17)</h2>
-
-<ul>
-<li>  correct old emailaddress in package.xml</li>
-<li>  [pepper_bringup] add perception.launch.xml</li>
-<li>  add naoqi_pose/launch/pose_manager.launch + ns pepper_robot</li>
-<li>  add an explicit dependency to get tests to pass on Travis.</li>
-<li>  launch/pepper_full.launch : support nao_port in
-launch/naoqi_driver.launch
-<a href="https://github.com/ros-naoqi/naoqi_driver/pull/52">https://github.com/ros-naoqi/naoqi_driver/pull/52</a>
-</li>
-<li>  Contributors: Kanae Kochigami, Karsten Knese, Kei Okada, Vincent
-Rabaud, Yuki Furuta</li>
-</ul>
-
-<h2 id="0-1-8-2015-12-18">0.1.8 (2015-12-18)</h2>
-
-<ul>
-<li>  [pepper_bringup/package.xml] add naoqi_pose, naoqi_driver_py
-to run_depend [pepper_bringup/CMakeLists.txt] add test for
-launch file validation</li>
-<li>  Contributors: Yuki Furuta</li>
-</ul>
-
-<h2 id="0-1-7-2015-08-11">0.1.7 (2015-08-11)</h2>
-
-<ul>
-<li>  introduce namespace for pepper_bringup</li>
-<li>  include pose manager for teleop</li>
-<li>  Contributors: Karsten Knese</li>
-</ul>
-
-<h2 id="0-1-6-2015-07-31">0.1.6 (2015-07-31)</h2>
-
-<h2 id="0-1-5-2015-07-31">0.1.5 (2015-07-31)</h2>
-
-<ul>
-<li>  0.1.4</li>
-<li>  generate changelog</li>
-<li>  update maintainer email</li>
-<li>  rename naoqi_driver</li>
-<li>  pepper_sensor to pepper_sensor_py</li>
-<li>  transfer to naoqi_py</li>
-<li>  Contributors: Karsten Knese</li>
-</ul>
-
-<h2 id="0-1-4-2015-07-30">0.1.4 (2015-07-30)</h2>
-
-<ul>
-<li>  update maintainer email</li>
-<li>  rename naoqi_driver</li>
-<li>  pepper_sensor to pepper_sensor_py</li>
-<li>  transfer to naoqi_py</li>
-<li>  Contributors: Karsten Knese</li>
-</ul>
-
-<h2 id="0-1-3-2015-06-25">0.1.3 (2015-06-25)</h2>
-
-<h2 id="0-1-2-2015-04-10">0.1.2 (2015-04-10)</h2>
-
-<h2 id="0-1-1-2015-04-08">0.1.1 (2015-04-08)</h2>
-
-<ul>
-<li>  update dependency</li>
-<li>  initial commit of URDF and basic scripts</li>
-<li>  Contributors: Vincent Rabaud</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -882,55 +800,6 @@ launch file validation</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros-naoqi/pepper_robot/blob/master/pepper_bringup/launch/pepper_full.launch" target="_blank">launch/pepper_full.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>roscore_ip</strong> <em>&#91;default: 127.0.0.1&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>network_interface</strong> <em>&#91;default: eth0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>namespace</strong> <em>&#91;default: $(optenv ROS_NAMESPACE pepper_robot)&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ros-naoqi/pepper_robot/blob/master/pepper_bringup/launch/pepper_full_py.launch" target="_blank">launch/pepper_full_py.launch</a>
                 <ul class="list-unstyled">
                   
@@ -961,6 +830,55 @@ launch file validation</li>
                       
                         
                       
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-naoqi/pepper_robot/blob/master/pepper_bringup/launch/pepper_full.launch" target="_blank">launch/pepper_full.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>roscore_ip</strong> <em>&#91;default: 127.0.0.1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>network_interface</strong> <em>&#91;default: eth0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>namespace</strong> <em>&#91;default: $(optenv ROS_NAMESPACE pepper_robot)&#93; </em></li>
                         
                       
                         
@@ -1451,7 +1369,7 @@ pepper_sensors_py
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-02-12
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-02-11
         </span>
       </td>
     </tr>
@@ -1544,85 +1462,7 @@ pepper_sensors_py
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-pepper_bringup">Changelog for package pepper_bringup</h1>
-
-<h2 id="0-1-10-2017-01-17">0.1.10 (2017-01-17)</h2>
-
-<ul>
-<li>  Merge pull request
-<a href="https://github.com/ros-naoqi/pepper_robot/issues/34">#34</a> from
-ros-naoqi/change_maintainer change maintainership</li>
-<li>  change maintainership</li>
-<li>  Contributors: Karsten Knese</li>
-</ul>
-
-<h2 id="0-1-9-2017-01-17">0.1.9 (2017-01-17)</h2>
-
-<ul>
-<li>  correct old emailaddress in package.xml</li>
-<li>  [pepper_bringup] add perception.launch.xml</li>
-<li>  add naoqi_pose/launch/pose_manager.launch + ns pepper_robot</li>
-<li>  add an explicit dependency to get tests to pass on Travis.</li>
-<li>  launch/pepper_full.launch : support nao_port in
-launch/naoqi_driver.launch
-<a href="https://github.com/ros-naoqi/naoqi_driver/pull/52">https://github.com/ros-naoqi/naoqi_driver/pull/52</a>
-</li>
-<li>  Contributors: Kanae Kochigami, Karsten Knese, Kei Okada, Vincent
-Rabaud, Yuki Furuta</li>
-</ul>
-
-<h2 id="0-1-8-2015-12-18">0.1.8 (2015-12-18)</h2>
-
-<ul>
-<li>  [pepper_bringup/package.xml] add naoqi_pose, naoqi_driver_py
-to run_depend [pepper_bringup/CMakeLists.txt] add test for
-launch file validation</li>
-<li>  Contributors: Yuki Furuta</li>
-</ul>
-
-<h2 id="0-1-7-2015-08-11">0.1.7 (2015-08-11)</h2>
-
-<ul>
-<li>  introduce namespace for pepper_bringup</li>
-<li>  include pose manager for teleop</li>
-<li>  Contributors: Karsten Knese</li>
-</ul>
-
-<h2 id="0-1-6-2015-07-31">0.1.6 (2015-07-31)</h2>
-
-<h2 id="0-1-5-2015-07-31">0.1.5 (2015-07-31)</h2>
-
-<ul>
-<li>  0.1.4</li>
-<li>  generate changelog</li>
-<li>  update maintainer email</li>
-<li>  rename naoqi_driver</li>
-<li>  pepper_sensor to pepper_sensor_py</li>
-<li>  transfer to naoqi_py</li>
-<li>  Contributors: Karsten Knese</li>
-</ul>
-
-<h2 id="0-1-4-2015-07-30">0.1.4 (2015-07-30)</h2>
-
-<ul>
-<li>  update maintainer email</li>
-<li>  rename naoqi_driver</li>
-<li>  pepper_sensor to pepper_sensor_py</li>
-<li>  transfer to naoqi_py</li>
-<li>  Contributors: Karsten Knese</li>
-</ul>
-
-<h2 id="0-1-3-2015-06-25">0.1.3 (2015-06-25)</h2>
-
-<h2 id="0-1-2-2015-04-10">0.1.2 (2015-04-10)</h2>
-
-<h2 id="0-1-1-2015-04-08">0.1.1 (2015-04-08)</h2>
-
-<ul>
-<li>  update dependency</li>
-<li>  initial commit of URDF and basic scripts</li>
-<li>  Contributors: Vincent Rabaud</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1900,55 +1740,6 @@ launch file validation</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros-naoqi/pepper_robot/blob/master/pepper_bringup/launch/pepper_full.launch" target="_blank">launch/pepper_full.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>roscore_ip</strong> <em>&#91;default: 127.0.0.1&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>network_interface</strong> <em>&#91;default: eth0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>namespace</strong> <em>&#91;default: $(optenv ROS_NAMESPACE pepper_robot)&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ros-naoqi/pepper_robot/blob/master/pepper_bringup/launch/pepper_full_py.launch" target="_blank">launch/pepper_full_py.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1979,6 +1770,55 @@ launch file validation</li>
                       
                         
                       
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-naoqi/pepper_robot/blob/master/pepper_bringup/launch/pepper_full.launch" target="_blank">launch/pepper_full.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>roscore_ip</strong> <em>&#91;default: 127.0.0.1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>network_interface</strong> <em>&#91;default: eth0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>namespace</strong> <em>&#91;default: $(optenv ROS_NAMESPACE pepper_robot)&#93; </em></li>
                         
                       
                         
@@ -2477,7 +2317,7 @@ pepper_sensors_py
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-02-12
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-02-11
         </span>
       </td>
     </tr>
@@ -2570,85 +2410,7 @@ pepper_sensors_py
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-pepper_bringup">Changelog for package pepper_bringup</h1>
-
-<h2 id="0-1-10-2017-01-17">0.1.10 (2017-01-17)</h2>
-
-<ul>
-<li>  Merge pull request
-<a href="https://github.com/ros-naoqi/pepper_robot/issues/34">#34</a> from
-ros-naoqi/change_maintainer change maintainership</li>
-<li>  change maintainership</li>
-<li>  Contributors: Karsten Knese</li>
-</ul>
-
-<h2 id="0-1-9-2017-01-17">0.1.9 (2017-01-17)</h2>
-
-<ul>
-<li>  correct old emailaddress in package.xml</li>
-<li>  [pepper_bringup] add perception.launch.xml</li>
-<li>  add naoqi_pose/launch/pose_manager.launch + ns pepper_robot</li>
-<li>  add an explicit dependency to get tests to pass on Travis.</li>
-<li>  launch/pepper_full.launch : support nao_port in
-launch/naoqi_driver.launch
-<a href="https://github.com/ros-naoqi/naoqi_driver/pull/52">https://github.com/ros-naoqi/naoqi_driver/pull/52</a>
-</li>
-<li>  Contributors: Kanae Kochigami, Karsten Knese, Kei Okada, Vincent
-Rabaud, Yuki Furuta</li>
-</ul>
-
-<h2 id="0-1-8-2015-12-18">0.1.8 (2015-12-18)</h2>
-
-<ul>
-<li>  [pepper_bringup/package.xml] add naoqi_pose, naoqi_driver_py
-to run_depend [pepper_bringup/CMakeLists.txt] add test for
-launch file validation</li>
-<li>  Contributors: Yuki Furuta</li>
-</ul>
-
-<h2 id="0-1-7-2015-08-11">0.1.7 (2015-08-11)</h2>
-
-<ul>
-<li>  introduce namespace for pepper_bringup</li>
-<li>  include pose manager for teleop</li>
-<li>  Contributors: Karsten Knese</li>
-</ul>
-
-<h2 id="0-1-6-2015-07-31">0.1.6 (2015-07-31)</h2>
-
-<h2 id="0-1-5-2015-07-31">0.1.5 (2015-07-31)</h2>
-
-<ul>
-<li>  0.1.4</li>
-<li>  generate changelog</li>
-<li>  update maintainer email</li>
-<li>  rename naoqi_driver</li>
-<li>  pepper_sensor to pepper_sensor_py</li>
-<li>  transfer to naoqi_py</li>
-<li>  Contributors: Karsten Knese</li>
-</ul>
-
-<h2 id="0-1-4-2015-07-30">0.1.4 (2015-07-30)</h2>
-
-<ul>
-<li>  update maintainer email</li>
-<li>  rename naoqi_driver</li>
-<li>  pepper_sensor to pepper_sensor_py</li>
-<li>  transfer to naoqi_py</li>
-<li>  Contributors: Karsten Knese</li>
-</ul>
-
-<h2 id="0-1-3-2015-06-25">0.1.3 (2015-06-25)</h2>
-
-<h2 id="0-1-2-2015-04-10">0.1.2 (2015-04-10)</h2>
-
-<h2 id="0-1-1-2015-04-08">0.1.1 (2015-04-08)</h2>
-
-<ul>
-<li>  update dependency</li>
-<li>  initial commit of URDF and basic scripts</li>
-<li>  Contributors: Vincent Rabaud</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2898,55 +2660,6 @@ launch file validation</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros-naoqi/pepper_robot/blob/master/pepper_bringup/launch/pepper_full.launch" target="_blank">launch/pepper_full.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>roscore_ip</strong> <em>&#91;default: 127.0.0.1&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>network_interface</strong> <em>&#91;default: eth0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>namespace</strong> <em>&#91;default: $(optenv ROS_NAMESPACE pepper_robot)&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ros-naoqi/pepper_robot/blob/master/pepper_bringup/launch/pepper_full_py.launch" target="_blank">launch/pepper_full_py.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2977,6 +2690,55 @@ launch file validation</li>
                       
                         
                       
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-naoqi/pepper_robot/blob/master/pepper_bringup/launch/pepper_full.launch" target="_blank">launch/pepper_full.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>roscore_ip</strong> <em>&#91;default: 127.0.0.1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>network_interface</strong> <em>&#91;default: eth0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>namespace</strong> <em>&#91;default: $(optenv ROS_NAMESPACE pepper_robot)&#93; </em></li>
                         
                       
                         
@@ -3467,7 +3229,7 @@ pepper_sensors_py
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-02-12
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-02-11
         </span>
       </td>
     </tr>
@@ -3560,85 +3322,7 @@ pepper_sensors_py
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-pepper_bringup">Changelog for package pepper_bringup</h1>
-
-<h2 id="0-1-10-2017-01-17">0.1.10 (2017-01-17)</h2>
-
-<ul>
-<li>  Merge pull request
-<a href="https://github.com/ros-naoqi/pepper_robot/issues/34">#34</a> from
-ros-naoqi/change_maintainer change maintainership</li>
-<li>  change maintainership</li>
-<li>  Contributors: Karsten Knese</li>
-</ul>
-
-<h2 id="0-1-9-2017-01-17">0.1.9 (2017-01-17)</h2>
-
-<ul>
-<li>  correct old emailaddress in package.xml</li>
-<li>  [pepper_bringup] add perception.launch.xml</li>
-<li>  add naoqi_pose/launch/pose_manager.launch + ns pepper_robot</li>
-<li>  add an explicit dependency to get tests to pass on Travis.</li>
-<li>  launch/pepper_full.launch : support nao_port in
-launch/naoqi_driver.launch
-<a href="https://github.com/ros-naoqi/naoqi_driver/pull/52">https://github.com/ros-naoqi/naoqi_driver/pull/52</a>
-</li>
-<li>  Contributors: Kanae Kochigami, Karsten Knese, Kei Okada, Vincent
-Rabaud, Yuki Furuta</li>
-</ul>
-
-<h2 id="0-1-8-2015-12-18">0.1.8 (2015-12-18)</h2>
-
-<ul>
-<li>  [pepper_bringup/package.xml] add naoqi_pose, naoqi_driver_py
-to run_depend [pepper_bringup/CMakeLists.txt] add test for
-launch file validation</li>
-<li>  Contributors: Yuki Furuta</li>
-</ul>
-
-<h2 id="0-1-7-2015-08-11">0.1.7 (2015-08-11)</h2>
-
-<ul>
-<li>  introduce namespace for pepper_bringup</li>
-<li>  include pose manager for teleop</li>
-<li>  Contributors: Karsten Knese</li>
-</ul>
-
-<h2 id="0-1-6-2015-07-31">0.1.6 (2015-07-31)</h2>
-
-<h2 id="0-1-5-2015-07-31">0.1.5 (2015-07-31)</h2>
-
-<ul>
-<li>  0.1.4</li>
-<li>  generate changelog</li>
-<li>  update maintainer email</li>
-<li>  rename naoqi_driver</li>
-<li>  pepper_sensor to pepper_sensor_py</li>
-<li>  transfer to naoqi_py</li>
-<li>  Contributors: Karsten Knese</li>
-</ul>
-
-<h2 id="0-1-4-2015-07-30">0.1.4 (2015-07-30)</h2>
-
-<ul>
-<li>  update maintainer email</li>
-<li>  rename naoqi_driver</li>
-<li>  pepper_sensor to pepper_sensor_py</li>
-<li>  transfer to naoqi_py</li>
-<li>  Contributors: Karsten Knese</li>
-</ul>
-
-<h2 id="0-1-3-2015-06-25">0.1.3 (2015-06-25)</h2>
-
-<h2 id="0-1-2-2015-04-10">0.1.2 (2015-04-10)</h2>
-
-<h2 id="0-1-1-2015-04-08">0.1.1 (2015-04-08)</h2>
-
-<ul>
-<li>  update dependency</li>
-<li>  initial commit of URDF and basic scripts</li>
-<li>  Contributors: Vincent Rabaud</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3916,55 +3600,6 @@ launch file validation</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros-naoqi/pepper_robot/blob/master/pepper_bringup/launch/pepper_full.launch" target="_blank">launch/pepper_full.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>roscore_ip</strong> <em>&#91;default: 127.0.0.1&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>network_interface</strong> <em>&#91;default: eth0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>namespace</strong> <em>&#91;default: $(optenv ROS_NAMESPACE pepper_robot)&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ros-naoqi/pepper_robot/blob/master/pepper_bringup/launch/pepper_full_py.launch" target="_blank">launch/pepper_full_py.launch</a>
                 <ul class="list-unstyled">
                   
@@ -3995,6 +3630,55 @@ launch file validation</li>
                       
                         
                       
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-naoqi/pepper_robot/blob/master/pepper_bringup/launch/pepper_full.launch" target="_blank">launch/pepper_full.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>roscore_ip</strong> <em>&#91;default: 127.0.0.1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>network_interface</strong> <em>&#91;default: eth0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>namespace</strong> <em>&#91;default: $(optenv ROS_NAMESPACE pepper_robot)&#93; </em></li>
                         
                       
                         
@@ -4292,7 +3976,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -546,62 +542,7 @@ ridgeback_navigation
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-ridgeback_navigation">Changelog for package ridgeback_navigation</h1>
-
-<h2 id="0-2-1-2018-04-12">0.2.1 (2018-04-12)</h2>
-
-<h2 id="0-2-0-2018-04-12">0.2.0 (2018-04-12)</h2>
-
-<ul>
-<li>  Updated to Package format 2.</li>
-<li>  Contributors: Tony Baltovski</li>
-</ul>
-
-<h2 id="0-1-10-2017-06-26">0.1.10 (2017-06-26)</h2>
-
-<h2 id="0-1-9-2017-04-17">0.1.9 (2017-04-17)</h2>
-
-<ul>
-<li>  Changed amcl odom model type to omni-corrected.</li>
-<li>  Updated maintainer.</li>
-<li>  Contributors: Tony Baltovski</li>
-</ul>
-
-<h2 id="0-1-8-2016-09-30">0.1.8 (2016-09-30)</h2>
-
-<h2 id="0-1-7-2016-07-18">0.1.7 (2016-07-18)</h2>
-
-<h2 id="0-1-6-2016-05-25">0.1.6 (2016-05-25)</h2>
-
-<ul>
-<li>  Updated laser scan topic and robot footprint. Also, enabled
-holonomic motion.</li>
-<li>  Contributors: Tony Baltovski</li>
-</ul>
-
-<h2 id="0-1-5-2016-04-22">0.1.5 (2016-04-22)</h2>
-
-<h2 id="0-1-4-2016-04-18">0.1.4 (2016-04-18)</h2>
-
-<h2 id="0-1-3-2016-03-02">0.1.3 (2016-03-02)</h2>
-
-<ul>
-<li>  Removed CATKIN_IGNORE from ridgeback_navigation.</li>
-<li>  ridgeback_navigation: remove deprecated footprint layer</li>
-<li>  Simulation using gazebo_ros_force_based_move.</li>
-<li>  Contributors: Achim Krauch, Mike Purvis, Tony Baltovski</li>
-</ul>
-
-<h2 id="0-1-2-2015-12-22">0.1.2 (2015-12-22)</h2>
-
-<h2 id="0-1-1-2015-12-01">0.1.1 (2015-12-01)</h2>
-
-<h2 id="0-1-0-2015-11-19">0.1.0 (2015-11-19)</h2>
-
-<ul>
-<li>  Initial ridgeback release.</li>
-<li>  Contributors: Mike Purvis, Tony Baltovski</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -679,7 +620,7 @@ holonomic motion.</li>
         
           <ul>
             
-              <li><a href="https://github.com/ridgeback/ridgeback/blob/kinetic-devel/ridgeback_navigation/launch/odom_navigation_demo.launch" target="_blank">launch/odom_navigation_demo.launch</a>
+              <li><a href="https://github.com/ridgeback/ridgeback/blob/kinetic-devel/ridgeback_navigation/launch/gmapping_demo.launch" target="_blank">launch/gmapping_demo.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -692,13 +633,17 @@ holonomic motion.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ridgeback/ridgeback/blob/kinetic-devel/ridgeback_navigation/launch/gmapping_demo.launch" target="_blank">launch/gmapping_demo.launch</a>
+              <li><a href="https://github.com/ridgeback/ridgeback/blob/kinetic-devel/ridgeback_navigation/launch/amcl_demo.launch" target="_blank">launch/amcl_demo.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
+                      
+                        
+                          <li><strong>map_file</strong> <em>&#91;default: $(find ridgeback_navigation)/maps/ridgeback_race.yaml&#93; </em></li>
+                        
                       
                     </ul>
                   </li>
@@ -726,19 +671,6 @@ holonomic motion.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ridgeback/ridgeback/blob/kinetic-devel/ridgeback_navigation/launch/include/move_base.launch" target="_blank">launch/include/move_base.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ridgeback/ridgeback/blob/kinetic-devel/ridgeback_navigation/launch/include/gmapping.launch" target="_blank">launch/include/gmapping.launch</a>
                 <ul class="list-unstyled">
                   
@@ -756,7 +688,7 @@ holonomic motion.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ridgeback/ridgeback/blob/kinetic-devel/ridgeback_navigation/launch/amcl_demo.launch" target="_blank">launch/amcl_demo.launch</a>
+              <li><a href="https://github.com/ridgeback/ridgeback/blob/kinetic-devel/ridgeback_navigation/launch/include/move_base.launch" target="_blank">launch/include/move_base.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -764,9 +696,18 @@ holonomic motion.</li>
                   <li>
                     <ul>
                       
-                        
-                          <li><strong>map_file</strong> <em>&#91;default: $(find ridgeback_navigation)/maps/ridgeback_race.yaml&#93; </em></li>
-                        
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ridgeback/ridgeback/blob/kinetic-devel/ridgeback_navigation/launch/odom_navigation_demo.launch" target="_blank">launch/odom_navigation_demo.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
                       
                     </ul>
                   </li>
@@ -1219,60 +1160,7 @@ ridgeback_navigation
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-ridgeback_navigation">Changelog for package ridgeback_navigation</h1>
-
-<h2 id="0-1-11-2018-04-12">0.1.11 (2018-04-12)</h2>
-
-<ul>
-<li>  Updated to Package format 2.</li>
-<li>  Contributors: Tony Baltovski</li>
-</ul>
-
-<h2 id="0-1-10-2017-06-26">0.1.10 (2017-06-26)</h2>
-
-<h2 id="0-1-9-2017-04-17">0.1.9 (2017-04-17)</h2>
-
-<ul>
-<li>  Changed amcl odom model type to omni-corrected.</li>
-<li>  Updated maintainer.</li>
-<li>  Contributors: Tony Baltovski</li>
-</ul>
-
-<h2 id="0-1-8-2016-09-30">0.1.8 (2016-09-30)</h2>
-
-<h2 id="0-1-7-2016-07-18">0.1.7 (2016-07-18)</h2>
-
-<h2 id="0-1-6-2016-05-25">0.1.6 (2016-05-25)</h2>
-
-<ul>
-<li>  Updated laser scan topic and robot footprint. Also, enabled
-holonomic motion.</li>
-<li>  Contributors: Tony Baltovski</li>
-</ul>
-
-<h2 id="0-1-5-2016-04-22">0.1.5 (2016-04-22)</h2>
-
-<h2 id="0-1-4-2016-04-18">0.1.4 (2016-04-18)</h2>
-
-<h2 id="0-1-3-2016-03-02">0.1.3 (2016-03-02)</h2>
-
-<ul>
-<li>  Removed CATKIN_IGNORE from ridgeback_navigation.</li>
-<li>  ridgeback_navigation: remove deprecated footprint layer</li>
-<li>  Simulation using gazebo_ros_force_based_move.</li>
-<li>  Contributors: Achim Krauch, Mike Purvis, Tony Baltovski</li>
-</ul>
-
-<h2 id="0-1-2-2015-12-22">0.1.2 (2015-12-22)</h2>
-
-<h2 id="0-1-1-2015-12-01">0.1.1 (2015-12-01)</h2>
-
-<h2 id="0-1-0-2015-11-19">0.1.0 (2015-11-19)</h2>
-
-<ul>
-<li>  Initial ridgeback release.</li>
-<li>  Contributors: Mike Purvis, Tony Baltovski</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1350,7 +1238,7 @@ holonomic motion.</li>
         
           <ul>
             
-              <li><a href="https://github.com/ridgeback/ridgeback/blob/indigo-devel/ridgeback_navigation/launch/odom_navigation_demo.launch" target="_blank">launch/odom_navigation_demo.launch</a>
+              <li><a href="https://github.com/ridgeback/ridgeback/blob/indigo-devel/ridgeback_navigation/launch/gmapping_demo.launch" target="_blank">launch/gmapping_demo.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1363,13 +1251,17 @@ holonomic motion.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ridgeback/ridgeback/blob/indigo-devel/ridgeback_navigation/launch/gmapping_demo.launch" target="_blank">launch/gmapping_demo.launch</a>
+              <li><a href="https://github.com/ridgeback/ridgeback/blob/indigo-devel/ridgeback_navigation/launch/amcl_demo.launch" target="_blank">launch/amcl_demo.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
+                      
+                        
+                          <li><strong>map_file</strong> <em>&#91;default: $(find ridgeback_navigation)/maps/ridgeback_race.yaml&#93; </em></li>
+                        
                       
                     </ul>
                   </li>
@@ -1397,19 +1289,6 @@ holonomic motion.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ridgeback/ridgeback/blob/indigo-devel/ridgeback_navigation/launch/include/move_base.launch" target="_blank">launch/include/move_base.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ridgeback/ridgeback/blob/indigo-devel/ridgeback_navigation/launch/include/gmapping.launch" target="_blank">launch/include/gmapping.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1427,7 +1306,7 @@ holonomic motion.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ridgeback/ridgeback/blob/indigo-devel/ridgeback_navigation/launch/amcl_demo.launch" target="_blank">launch/amcl_demo.launch</a>
+              <li><a href="https://github.com/ridgeback/ridgeback/blob/indigo-devel/ridgeback_navigation/launch/include/move_base.launch" target="_blank">launch/include/move_base.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1435,9 +1314,18 @@ holonomic motion.</li>
                   <li>
                     <ul>
                       
-                        
-                          <li><strong>map_file</strong> <em>&#91;default: $(find ridgeback_navigation)/maps/ridgeback_race.yaml&#93; </em></li>
-                        
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ridgeback/ridgeback/blob/indigo-devel/ridgeback_navigation/launch/odom_navigation_demo.launch" target="_blank">launch/odom_navigation_demo.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
                       
                     </ul>
                   </li>
@@ -1634,7 +1522,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

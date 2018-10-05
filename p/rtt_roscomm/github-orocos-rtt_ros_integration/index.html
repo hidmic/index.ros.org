@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -864,12 +860,12 @@ service types with the <code>rosservice_registry</code> service.</p>
 <h2 id="usage">Usage</h2>
 
 <h3 id="connecting-an-orocos-port-to-a-ros-topic">Connecting an Orocos Port to a ROS Topic</h3>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Imports</span>
-<span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
-<span class="c"># Publish</span>
-<span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_output"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_output"</span><span class="p">))</span>
-<span class="c"># Subscribe</span>
-<span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_input"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_input"</span><span class="p">))</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">## Imports
+</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
+<span class="c1"># Publish
+</span><span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_output"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_output"</span><span class="p">))</span>
+<span class="c1"># Subscribe
+</span><span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_input"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_input"</span><span class="p">))</span>
 
 </code></pre></div>
 <p>You can also set up these connections in C++ code:</p>
@@ -896,22 +892,22 @@ my_port_.createStream(rtt_roscomm::topic("~" + this-&gt;getName() + "/my_compone
 
 <p>To connect an Orocos operation to a ROS service via .ops script from within an
 Orocos DeploymentComponent: </p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Imports</span>
-<span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">## Imports
+</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
 <span class="k">import</span><span class="p">(</span><span class="s">"rtt_std_srvs"</span><span class="p">)</span>
 
-<span class="c">## Load some application-specific component</span>
-<span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
-<span class="c">## Load the rosservice RTT service for this components</span>
-<span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"rosservice"</span><span class="p">)</span>
+<span class="c1">## Load some application-specific component
+</span><span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
+<span class="c1">## Load the rosservice RTT service for this components
+</span><span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"rosservice"</span><span class="p">)</span>
 
-<span class="c">## Expose a provided operation of this component as a ROS service</span>
-<span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+<span class="c1">## Expose a provided operation of this component as a ROS service
+</span><span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
   <span class="s">"some_provided_service.some_operation"</span><span class="p">,</span>
   <span class="s">"/some/ros/namespace/empty"</span><span class="p">,</span> <span class="s">"std_srvs/Empty"</span><span class="p">)</span>
 
-<span class="c">## Expose a ROS service to this component</span>
-<span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+<span class="c1">## Expose a ROS service to this component
+</span><span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
   <span class="s">"some_Required_service.some_operation_caller"</span><span class="p">,</span>
   <span class="s">"/some/ros/namespace/empty"</span><span class="p">,</span> <span class="s">"std_srvs/Empty"</span><span class="p">)</span>
 
@@ -985,116 +981,7 @@ operation signature.</li>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-rtt_roscomm">Changelog for package rtt_roscomm</h1>
-
-<h2 id="2-9-1-2017-11-16">2.9.1 (2017-11-16)</h2>
-
-<ul>
-<li>  Merge with version 2.8.6</li>
-</ul>
-
-<h2 id="2-9-0-2017-05-02">2.9.0 (2017-05-02)</h2>
-
-<ul>
-<li>  rtt_roscomm: find templates and create_boost_header.py script
-directly in the source-space</li>
-<li>  rtt_roscomm: fixed missing package headers include directories for
-service proxies (fix
-<a href="https://github.com/orocos/rtt_ros_integration/issues/87">#87</a>)</li>
-<li>  rtt_roscomm: remove using namespace directive from
-rtt_rostopic_ros_msg_transporter.hpp header</li>
-<li>  Added deprecation warning for header rtt_roscomm/rtt_rostopic.h
-and updated some include directives within rtt_ros_integration</li>
-<li>  rtt_roscomm: remove using namespace directive from
-rtt_rostopic_ros_msg_transporter.hpp header</li>
-<li>  rtt_roscomm: renamed header rtt_rostopic.h to rostopic.h and
-changed namespace for the ROSService service requester for
-consistency</li>
-<li>  rtt_roscomm: added new operations to the documentation in README.md</li>
-<li>  rtt_roscomm: get rid of custom IDL</li>
-<li>  rtt_roscomm: use @ROSMSGTYPE@ variable in
-ros_msg_corba_conversion.hpp.in to allow reuse for custom types</li>
-<li>  rtt_roscomm: do not include boost header from Types.hpp</li>
-<li>  rtt_roscomm: avoid unnecessary copy during conversion of ROS types
-to CORBA sequence and catch StreamOverrunException</li>
-<li>  rtt_roscomm: do not generate unused source files for per-message
-typekit</li>
-<li>  rtt_roscomm: avoid mismatched-tags warning in clang by removing the
-extern template declaration and instantiation for
-RTT::internal::DataSourceTypeInfo&lt;T&gt;</li>
-<li>  rtt_roscomm: introduced cmake options ENABLE_MQ and ENABLE_CORBA
-and disable additional transport plugins by default</li>
-<li>  Added individual changelogs and bumped versions to 2.9.0</li>
-<li>  Also add a virtual destructor to the base class of the ROS Service
-Proxy</li>
-<li>  Added an explicit destructor to shutdown services servers, and
-cleanup the registered proxies</li>
-<li>  Added CORBA and mqueue transport for ROS typekits</li>
-<li>  rtt_roscomm: added support for updated dataflow semantics (RTT
-version &gt;= 2.8.99)</li>
-<li>  Contributors: Antoine Hoarau, Guillaume Walck, Johannes Meyer</li>
-</ul>
-
-<h2 id="2-8-6-2017-11-15">2.8.6 (2017-11-15)</h2>
-
-<ul>
-<li>  rtt_roscomm: also set \${PROJECT_NAME}_EXPORTED_LIBRARIES in
-parent scope Related to
-<a href="https://github.com/orocos-toolchain/rtt/pull/244">https://github.com/orocos-toolchain/rtt/pull/244</a>.</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="2-8-5-2017-03-28">2.8.5 (2017-03-28)</h2>
-
-<ul>
-<li>  Merge pull request
-<a href="https://github.com/orocos/rtt_ros_integration/issues/85">#85</a> from
-meyerj/ros-primitives-transport-indigo-devel Added a ROS transport
-plugin for primitive types (indigo-devel)</li>
-<li>  rtt_roscomm: fix caller engine in RosServiceServerProxyBase to make
-sure that OwnThread operations are executed in the owner's thread</li>
-<li>  rtt_roscomm: added topicLatched() method to rtt_rostopic service</li>
-<li>  rtt_roscomm: only set CMAKE_BUILD_TYPE to MinSizeRel if either
-not set or if it was Release before This enables debugging of
-ROS typekits.</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="2-8-4-2016-11-26">2.8.4 (2016-11-26)</h2>
-
-<ul>
-<li>  Merge pull request
-<a href="https://github.com/orocos/rtt_ros_integration/issues/79">#79</a> from
-meyerj/added-rtt-rosservice-operations rtt_roscomm: added
-operations disconnect() and disconnectAll() to the rosservice
-service</li>
-<li>  Merge branch
-'B<a href="https://github.com/orocos/rtt_ros_integration/issues/59">#59</a>cleaning_registered_services'
-of <a href="https://github.com/ubi-agni/rtt_ros_integration">https://github.com/ubi-agni/rtt_ros_integration</a> into
-indigo-devel</li>
-<li>  rtt_roscomm: include exported headers and link typekit and
-transport plugin to exported libraries</li>
-<li>  rtt_roscomm: export build dependency roscpp</li>
-<li>  Contributors: Johannes Meyer, Guillaume Walck</li>
-</ul>
-
-<h2 id="2-8-3-2016-07-20">2.8.3 (2016-07-20)</h2>
-
-<ul>
-<li>  rtt_roscomm: set minimum ROS subscriber queue_size to 1</li>
-<li>  rtt_roscomm: fixed destruction of RosSubChannelElement&lt;T&gt; and
-ROS subscriber shutdown (fix
-<a href="https://github.com/orocos/rtt_ros_integration/issues/61">#61</a>)</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="2-8-2-2015-06-12">2.8.2 (2015-06-12)</h2>
-
-<ul>
-<li>  see
-<a href="../rtt_ros_integration/CHANGELOG.rst">rtt_ros_integratoin/CHANGELOG.rst</a>
-</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2295,12 +2182,12 @@ service types with the <code>rosservice_registry</code> service.</p>
 <h2 id="usage">Usage</h2>
 
 <h3 id="connecting-an-orocos-port-to-a-ros-topic">Connecting an Orocos Port to a ROS Topic</h3>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Imports</span>
-<span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
-<span class="c"># Publish</span>
-<span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_output"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_output"</span><span class="p">))</span>
-<span class="c"># Subscribe</span>
-<span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_input"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_input"</span><span class="p">))</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">## Imports
+</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
+<span class="c1"># Publish
+</span><span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_output"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_output"</span><span class="p">))</span>
+<span class="c1"># Subscribe
+</span><span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_input"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_input"</span><span class="p">))</span>
 
 </code></pre></div>
 <p>You can also set up these connections in C++ code:</p>
@@ -2327,22 +2214,22 @@ my_port_.createStream(rtt_roscomm::topic("~" + this-&gt;getName() + "/my_compone
 
 <p>To connect an Orocos operation to a ROS service via .ops script from within an
 Orocos DeploymentComponent: </p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Imports</span>
-<span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">## Imports
+</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
 <span class="k">import</span><span class="p">(</span><span class="s">"rtt_std_srvs"</span><span class="p">)</span>
 
-<span class="c">## Load some application-specific component</span>
-<span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
-<span class="c">## Load the rosservice RTT service for this components</span>
-<span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"rosservice"</span><span class="p">)</span>
+<span class="c1">## Load some application-specific component
+</span><span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
+<span class="c1">## Load the rosservice RTT service for this components
+</span><span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"rosservice"</span><span class="p">)</span>
 
-<span class="c">## Expose a provided operation of this component as a ROS service</span>
-<span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+<span class="c1">## Expose a provided operation of this component as a ROS service
+</span><span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
   <span class="s">"some_provided_service.some_operation"</span><span class="p">,</span>
   <span class="s">"/some/ros/namespace/empty"</span><span class="p">,</span> <span class="s">"std_srvs/Empty"</span><span class="p">)</span>
 
-<span class="c">## Expose a ROS service to this component</span>
-<span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+<span class="c1">## Expose a ROS service to this component
+</span><span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
   <span class="s">"some_Required_service.some_operation_caller"</span><span class="p">,</span>
   <span class="s">"/some/ros/namespace/empty"</span><span class="p">,</span> <span class="s">"std_srvs/Empty"</span><span class="p">)</span>
 
@@ -2416,116 +2303,7 @@ operation signature.</li>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-rtt_roscomm">Changelog for package rtt_roscomm</h1>
-
-<h2 id="2-9-1-2017-11-16">2.9.1 (2017-11-16)</h2>
-
-<ul>
-<li>  Merge with version 2.8.6</li>
-</ul>
-
-<h2 id="2-9-0-2017-05-02">2.9.0 (2017-05-02)</h2>
-
-<ul>
-<li>  rtt_roscomm: find templates and create_boost_header.py script
-directly in the source-space</li>
-<li>  rtt_roscomm: fixed missing package headers include directories for
-service proxies (fix
-<a href="https://github.com/orocos/rtt_ros_integration/issues/87">#87</a>)</li>
-<li>  rtt_roscomm: remove using namespace directive from
-rtt_rostopic_ros_msg_transporter.hpp header</li>
-<li>  Added deprecation warning for header rtt_roscomm/rtt_rostopic.h
-and updated some include directives within rtt_ros_integration</li>
-<li>  rtt_roscomm: remove using namespace directive from
-rtt_rostopic_ros_msg_transporter.hpp header</li>
-<li>  rtt_roscomm: renamed header rtt_rostopic.h to rostopic.h and
-changed namespace for the ROSService service requester for
-consistency</li>
-<li>  rtt_roscomm: added new operations to the documentation in README.md</li>
-<li>  rtt_roscomm: get rid of custom IDL</li>
-<li>  rtt_roscomm: use @ROSMSGTYPE@ variable in
-ros_msg_corba_conversion.hpp.in to allow reuse for custom types</li>
-<li>  rtt_roscomm: do not include boost header from Types.hpp</li>
-<li>  rtt_roscomm: avoid unnecessary copy during conversion of ROS types
-to CORBA sequence and catch StreamOverrunException</li>
-<li>  rtt_roscomm: do not generate unused source files for per-message
-typekit</li>
-<li>  rtt_roscomm: avoid mismatched-tags warning in clang by removing the
-extern template declaration and instantiation for
-RTT::internal::DataSourceTypeInfo&lt;T&gt;</li>
-<li>  rtt_roscomm: introduced cmake options ENABLE_MQ and ENABLE_CORBA
-and disable additional transport plugins by default</li>
-<li>  Added individual changelogs and bumped versions to 2.9.0</li>
-<li>  Also add a virtual destructor to the base class of the ROS Service
-Proxy</li>
-<li>  Added an explicit destructor to shutdown services servers, and
-cleanup the registered proxies</li>
-<li>  Added CORBA and mqueue transport for ROS typekits</li>
-<li>  rtt_roscomm: added support for updated dataflow semantics (RTT
-version &gt;= 2.8.99)</li>
-<li>  Contributors: Antoine Hoarau, Guillaume Walck, Johannes Meyer</li>
-</ul>
-
-<h2 id="2-8-6-2017-11-15">2.8.6 (2017-11-15)</h2>
-
-<ul>
-<li>  rtt_roscomm: also set \${PROJECT_NAME}_EXPORTED_LIBRARIES in
-parent scope Related to
-<a href="https://github.com/orocos-toolchain/rtt/pull/244">https://github.com/orocos-toolchain/rtt/pull/244</a>.</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="2-8-5-2017-03-28">2.8.5 (2017-03-28)</h2>
-
-<ul>
-<li>  Merge pull request
-<a href="https://github.com/orocos/rtt_ros_integration/issues/85">#85</a> from
-meyerj/ros-primitives-transport-indigo-devel Added a ROS transport
-plugin for primitive types (indigo-devel)</li>
-<li>  rtt_roscomm: fix caller engine in RosServiceServerProxyBase to make
-sure that OwnThread operations are executed in the owner's thread</li>
-<li>  rtt_roscomm: added topicLatched() method to rtt_rostopic service</li>
-<li>  rtt_roscomm: only set CMAKE_BUILD_TYPE to MinSizeRel if either
-not set or if it was Release before This enables debugging of
-ROS typekits.</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="2-8-4-2016-11-26">2.8.4 (2016-11-26)</h2>
-
-<ul>
-<li>  Merge pull request
-<a href="https://github.com/orocos/rtt_ros_integration/issues/79">#79</a> from
-meyerj/added-rtt-rosservice-operations rtt_roscomm: added
-operations disconnect() and disconnectAll() to the rosservice
-service</li>
-<li>  Merge branch
-'B<a href="https://github.com/orocos/rtt_ros_integration/issues/59">#59</a>cleaning_registered_services'
-of <a href="https://github.com/ubi-agni/rtt_ros_integration">https://github.com/ubi-agni/rtt_ros_integration</a> into
-indigo-devel</li>
-<li>  rtt_roscomm: include exported headers and link typekit and
-transport plugin to exported libraries</li>
-<li>  rtt_roscomm: export build dependency roscpp</li>
-<li>  Contributors: Johannes Meyer, Guillaume Walck</li>
-</ul>
-
-<h2 id="2-8-3-2016-07-20">2.8.3 (2016-07-20)</h2>
-
-<ul>
-<li>  rtt_roscomm: set minimum ROS subscriber queue_size to 1</li>
-<li>  rtt_roscomm: fixed destruction of RosSubChannelElement&lt;T&gt; and
-ROS subscriber shutdown (fix
-<a href="https://github.com/orocos/rtt_ros_integration/issues/61">#61</a>)</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="2-8-2-2015-06-12">2.8.2 (2015-06-12)</h2>
-
-<ul>
-<li>  see
-<a href="../rtt_ros_integration/CHANGELOG.rst">rtt_ros_integratoin/CHANGELOG.rst</a>
-</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3746,12 +3524,12 @@ service types with the <code>rosservice_registry</code> service.</p>
 <h2 id="usage">Usage</h2>
 
 <h3 id="connecting-an-orocos-port-to-a-ros-topic">Connecting an Orocos Port to a ROS Topic</h3>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Imports</span>
-<span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
-<span class="c"># Publish</span>
-<span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_output"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_output"</span><span class="p">))</span>
-<span class="c"># Subscribe</span>
-<span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_input"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_input"</span><span class="p">))</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">## Imports
+</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
+<span class="c1"># Publish
+</span><span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_output"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_output"</span><span class="p">))</span>
+<span class="c1"># Subscribe
+</span><span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_input"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_input"</span><span class="p">))</span>
 
 </code></pre></div>
 <p>You can also set up these connections in C++ code:</p>
@@ -3778,22 +3556,22 @@ my_port_.createStream(rtt_roscomm::topic("~" + this-&gt;getName() + "/my_compone
 
 <p>To connect an Orocos operation to a ROS service via .ops script from within an
 Orocos DeploymentComponent: </p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Imports</span>
-<span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">## Imports
+</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
 <span class="k">import</span><span class="p">(</span><span class="s">"rtt_std_srvs"</span><span class="p">)</span>
 
-<span class="c">## Load some application-specific component</span>
-<span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
-<span class="c">## Load the rosservice RTT service for this components</span>
-<span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"rosservice"</span><span class="p">)</span>
+<span class="c1">## Load some application-specific component
+</span><span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
+<span class="c1">## Load the rosservice RTT service for this components
+</span><span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"rosservice"</span><span class="p">)</span>
 
-<span class="c">## Expose a provided operation of this component as a ROS service</span>
-<span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+<span class="c1">## Expose a provided operation of this component as a ROS service
+</span><span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
   <span class="s">"some_provided_service.some_operation"</span><span class="p">,</span>
   <span class="s">"/some/ros/namespace/empty"</span><span class="p">,</span> <span class="s">"std_srvs/Empty"</span><span class="p">)</span>
 
-<span class="c">## Expose a ROS service to this component</span>
-<span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+<span class="c1">## Expose a ROS service to this component
+</span><span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
   <span class="s">"some_Required_service.some_operation_caller"</span><span class="p">,</span>
   <span class="s">"/some/ros/namespace/empty"</span><span class="p">,</span> <span class="s">"std_srvs/Empty"</span><span class="p">)</span>
 
@@ -3867,68 +3645,7 @@ operation signature.</li>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-rtt_roscomm">Changelog for package rtt_roscomm</h1>
-
-<h2 id="2-8-6-2017-11-15">2.8.6 (2017-11-15)</h2>
-
-<ul>
-<li>  rtt_roscomm: also set \${PROJECT_NAME}_EXPORTED_LIBRARIES in
-parent scope Related to
-<a href="https://github.com/orocos-toolchain/rtt/pull/244">https://github.com/orocos-toolchain/rtt/pull/244</a>.</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="2-8-5-2017-03-28">2.8.5 (2017-03-28)</h2>
-
-<ul>
-<li>  Merge pull request
-<a href="https://github.com/orocos/rtt_ros_integration/issues/85">#85</a> from
-meyerj/ros-primitives-transport-indigo-devel Added a ROS transport
-plugin for primitive types (indigo-devel)</li>
-<li>  rtt_roscomm: fix caller engine in RosServiceServerProxyBase to make
-sure that OwnThread operations are executed in the owner's thread</li>
-<li>  rtt_roscomm: added topicLatched() method to rtt_rostopic service</li>
-<li>  rtt_roscomm: only set CMAKE_BUILD_TYPE to MinSizeRel if either
-not set or if it was Release before This enables debugging of
-ROS typekits.</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="2-8-4-2016-11-26">2.8.4 (2016-11-26)</h2>
-
-<ul>
-<li>  Merge pull request
-<a href="https://github.com/orocos/rtt_ros_integration/issues/79">#79</a> from
-meyerj/added-rtt-rosservice-operations rtt_roscomm: added
-operations disconnect() and disconnectAll() to the rosservice
-service</li>
-<li>  Merge branch
-'B<a href="https://github.com/orocos/rtt_ros_integration/issues/59">#59</a>cleaning_registered_services'
-of <a href="https://github.com/ubi-agni/rtt_ros_integration">https://github.com/ubi-agni/rtt_ros_integration</a> into
-indigo-devel</li>
-<li>  rtt_roscomm: include exported headers and link typekit and
-transport plugin to exported libraries</li>
-<li>  rtt_roscomm: export build dependency roscpp</li>
-<li>  Contributors: Johannes Meyer, Guillaume Walck</li>
-</ul>
-
-<h2 id="2-8-3-2016-07-20">2.8.3 (2016-07-20)</h2>
-
-<ul>
-<li>  rtt_roscomm: set minimum ROS subscriber queue_size to 1</li>
-<li>  rtt_roscomm: fixed destruction of RosSubChannelElement&lt;T&gt; and
-ROS subscriber shutdown (fix
-<a href="https://github.com/orocos/rtt_ros_integration/issues/61">#61</a>)</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="2-8-2-2015-06-12">2.8.2 (2015-06-12)</h2>
-
-<ul>
-<li>  see
-<a href="../rtt_ros_integration/CHANGELOG.rst">rtt_ros_integratoin/CHANGELOG.rst</a>
-</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -5157,12 +4874,12 @@ service types with the <code>rosservice_registry</code> service.</p>
 <h2 id="usage">Usage</h2>
 
 <h3 id="connecting-an-orocos-port-to-a-ros-topic">Connecting an Orocos Port to a ROS Topic</h3>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Imports</span>
-<span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
-<span class="c"># Publish</span>
-<span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_output"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_output"</span><span class="p">))</span>
-<span class="c"># Subscribe</span>
-<span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_input"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_input"</span><span class="p">))</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">## Imports
+</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
+<span class="c1"># Publish
+</span><span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_output"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_output"</span><span class="p">))</span>
+<span class="c1"># Subscribe
+</span><span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_input"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_input"</span><span class="p">))</span>
 
 </code></pre></div>
 <p>You can also set up these connections in C++ code:</p>
@@ -5189,22 +4906,22 @@ my_port_.createStream(rtt_roscomm::topic("~" + this-&gt;getName() + "/my_compone
 
 <p>To connect an Orocos operation to a ROS service via .ops script from within an
 Orocos DeploymentComponent: </p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Imports</span>
-<span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">## Imports
+</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
 <span class="k">import</span><span class="p">(</span><span class="s">"rtt_std_srvs"</span><span class="p">)</span>
 
-<span class="c">## Load some application-specific component</span>
-<span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
-<span class="c">## Load the rosservice RTT service for this components</span>
-<span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"rosservice"</span><span class="p">)</span>
+<span class="c1">## Load some application-specific component
+</span><span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
+<span class="c1">## Load the rosservice RTT service for this components
+</span><span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"rosservice"</span><span class="p">)</span>
 
-<span class="c">## Expose a provided operation of this component as a ROS service</span>
-<span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+<span class="c1">## Expose a provided operation of this component as a ROS service
+</span><span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
   <span class="s">"some_provided_service.some_operation"</span><span class="p">,</span>
   <span class="s">"/some/ros/namespace/empty"</span><span class="p">,</span> <span class="s">"std_srvs/Empty"</span><span class="p">)</span>
 
-<span class="c">## Expose a ROS service to this component</span>
-<span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+<span class="c1">## Expose a ROS service to this component
+</span><span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
   <span class="s">"some_Required_service.some_operation_caller"</span><span class="p">,</span>
   <span class="s">"/some/ros/namespace/empty"</span><span class="p">,</span> <span class="s">"std_srvs/Empty"</span><span class="p">)</span>
 
@@ -5278,68 +4995,7 @@ operation signature.</li>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-rtt_roscomm">Changelog for package rtt_roscomm</h1>
-
-<h2 id="2-8-6-2017-11-15">2.8.6 (2017-11-15)</h2>
-
-<ul>
-<li>  rtt_roscomm: also set \${PROJECT_NAME}_EXPORTED_LIBRARIES in
-parent scope Related to
-<a href="https://github.com/orocos-toolchain/rtt/pull/244">https://github.com/orocos-toolchain/rtt/pull/244</a>.</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="2-8-5-2017-03-28">2.8.5 (2017-03-28)</h2>
-
-<ul>
-<li>  Merge pull request
-<a href="https://github.com/orocos/rtt_ros_integration/issues/85">#85</a> from
-meyerj/ros-primitives-transport-indigo-devel Added a ROS transport
-plugin for primitive types (indigo-devel)</li>
-<li>  rtt_roscomm: fix caller engine in RosServiceServerProxyBase to make
-sure that OwnThread operations are executed in the owner's thread</li>
-<li>  rtt_roscomm: added topicLatched() method to rtt_rostopic service</li>
-<li>  rtt_roscomm: only set CMAKE_BUILD_TYPE to MinSizeRel if either
-not set or if it was Release before This enables debugging of
-ROS typekits.</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="2-8-4-2016-11-26">2.8.4 (2016-11-26)</h2>
-
-<ul>
-<li>  Merge pull request
-<a href="https://github.com/orocos/rtt_ros_integration/issues/79">#79</a> from
-meyerj/added-rtt-rosservice-operations rtt_roscomm: added
-operations disconnect() and disconnectAll() to the rosservice
-service</li>
-<li>  Merge branch
-'B<a href="https://github.com/orocos/rtt_ros_integration/issues/59">#59</a>cleaning_registered_services'
-of <a href="https://github.com/ubi-agni/rtt_ros_integration">https://github.com/ubi-agni/rtt_ros_integration</a> into
-indigo-devel</li>
-<li>  rtt_roscomm: include exported headers and link typekit and
-transport plugin to exported libraries</li>
-<li>  rtt_roscomm: export build dependency roscpp</li>
-<li>  Contributors: Johannes Meyer, Guillaume Walck</li>
-</ul>
-
-<h2 id="2-8-3-2016-07-20">2.8.3 (2016-07-20)</h2>
-
-<ul>
-<li>  rtt_roscomm: set minimum ROS subscriber queue_size to 1</li>
-<li>  rtt_roscomm: fixed destruction of RosSubChannelElement&lt;T&gt; and
-ROS subscriber shutdown (fix
-<a href="https://github.com/orocos/rtt_ros_integration/issues/61">#61</a>)</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="2-8-2-2015-06-12">2.8.2 (2015-06-12)</h2>
-
-<ul>
-<li>  see
-<a href="../rtt_ros_integration/CHANGELOG.rst">rtt_ros_integratoin/CHANGELOG.rst</a>
-</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -6524,12 +6180,12 @@ service types with the <code>rosservice_registry</code> service.</p>
 <h2 id="usage">Usage</h2>
 
 <h3 id="connecting-an-orocos-port-to-a-ros-topic">Connecting an Orocos Port to a ROS Topic</h3>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Imports</span>
-<span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
-<span class="c"># Publish</span>
-<span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_output"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_output"</span><span class="p">))</span>
-<span class="c"># Subscribe</span>
-<span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_input"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_input"</span><span class="p">))</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">## Imports
+</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
+<span class="c1"># Publish
+</span><span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_output"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_output"</span><span class="p">))</span>
+<span class="c1"># Subscribe
+</span><span class="n">stream</span><span class="p">(</span><span class="s">"my_component.my_input"</span><span class="p">,</span> <span class="n">ros</span><span class="o">.</span><span class="n">comm</span><span class="o">.</span><span class="n">topic</span><span class="p">(</span><span class="s">"my_ros_input"</span><span class="p">))</span>
 
 </code></pre></div>
 <p>You can also set up these connections in C++ code:</p>
@@ -6556,22 +6212,22 @@ my_port_.createStream(rtt_roscomm::topic("~" + this-&gt;getName() + "/my_compone
 
 <p>To connect an Orocos operation to a ROS service via .ops script from within an
 Orocos DeploymentComponent: </p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Imports</span>
-<span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">## Imports
+</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_roscomm"</span><span class="p">)</span>
 <span class="k">import</span><span class="p">(</span><span class="s">"rtt_std_srvs"</span><span class="p">)</span>
 
-<span class="c">## Load some application-specific component</span>
-<span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
-<span class="c">## Load the rosservice RTT service for this components</span>
-<span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"rosservice"</span><span class="p">)</span>
+<span class="c1">## Load some application-specific component
+</span><span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
+<span class="c1">## Load the rosservice RTT service for this components
+</span><span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"rosservice"</span><span class="p">)</span>
 
-<span class="c">## Expose a provided operation of this component as a ROS service</span>
-<span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+<span class="c1">## Expose a provided operation of this component as a ROS service
+</span><span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
   <span class="s">"some_provided_service.some_operation"</span><span class="p">,</span>
   <span class="s">"/some/ros/namespace/empty"</span><span class="p">,</span> <span class="s">"std_srvs/Empty"</span><span class="p">)</span>
 
-<span class="c">## Expose a ROS service to this component</span>
-<span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+<span class="c1">## Expose a ROS service to this component
+</span><span class="n">some_component_name</span><span class="o">.</span><span class="n">rosservice</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
   <span class="s">"some_Required_service.some_operation_caller"</span><span class="p">,</span>
   <span class="s">"/some/ros/namespace/empty"</span><span class="p">,</span> <span class="s">"std_srvs/Empty"</span><span class="p">)</span>
 
@@ -7338,7 +6994,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

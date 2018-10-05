@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -631,90 +627,7 @@ hector_uav_msgs
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-hector_quadrotor_gazebo">Changelog for package hector_quadrotor_gazebo</h1>
-
-<h2 id="0-3-5-2015-03-28">0.3.5 (2015-03-28)</h2>
-
-<h2 id="0-3-4-2015-02-22">0.3.4 (2015-02-22)</h2>
-
-<ul>
-<li>  added missing run_depend hector_quadrotor_pose_estimation to
-package.xml</li>
-<li>  set pose_estimation/publish_world_nav_transform parameter to
-true explicitly</li>
-<li>
-<p>updated package for the latest version of hector_pose_estimation</p>
-
-<ul>
-<li>  Geographic reference latitude and longitude set to 49.860246N
-8.687077E (Lichtwiese).</li>
-</ul>
-
-<p>* Reenabled auto_elevation, auto_reference and auto_heading
-parameters for hector_pose_estimation. hector_pose_estimation
-will publish the world-&gt;nav transform depending on its
-reference pose.</p>
-</li>
-<li><p>added parameter file for hector_quadrotor_pose_estimation for a
-simulated quadrotor The parameter file disables the auto_elevation,
-auto_reference, auto_heading modes of hector_pose_estimation and
-sets the corresponding values manually with what is simulated in the
-gazebo sensor plugins. This simplifies the comparison of estimated
-poses with ground truth information.</p></li>
-<li><p>explicitly set the pose_estimation/nav_frame parameter in
-spawn_quadrotor.launch</p></li>
-<li><p>disabled detection of available plugins in cmake The aerodynamics
-and propulsion plugins are built unconditinally now in
-hector_quadrotor_gazebo_plugins and the detection is obsolete.
-Additionally we used platform-specific library prefixes and suffixes
-in find_libary() which caused errors on different platforms.</p></li>
-<li><p>Contributors: Johannes Meyer</p></li>
-</ul>
-
-<h2 id="0-3-3-2014-09-01">0.3.3 (2014-09-01)</h2>
-
-<ul>
-<li>  cleaned up launch files and fixed argument forwarding to
-spawn_quadrotor.launch</li>
-<li>  removed all RTT related plugins</li>
-<li>  added separate update timer for MotorStatus output in propulsion
-plugin</li>
-<li>  added launch file argument to enable/disable pose estimation</li>
-<li>  moved simulation package dependencies from hector_quadrotor
-metapackage to hector_quadrotor_gazebo</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="0-3-2-2014-03-30">0.3.2 (2014-03-30)</h2>
-
-<h2 id="0-3-1-2013-12-26">0.3.1 (2013-12-26)</h2>
-
-<ul>
-<li>  also check if a target exists when searching available plugins</li>
-<li>  enables aerodynamics plugin in default configuration</li>
-<li>  limit controlPeriod to 100Hz</li>
-<li>  a few fixes for RTT integration in hector_quadrotor. Added urdf
-macro for rtt_gazebo_plugin macro.</li>
-<li>  deprecated quadrotor_simple_controller.gazebo.xacro</li>
-<li>  fixed node type for static_transform_publisher in
-spawn_quadrotor.launch</li>
-<li>  changed frame_id for gazebo fixed frame to /world and added a
-static_transform_publisher for world-&gt;nav</li>
-<li>  increased drift for the barometric pressure sensor</li>
-<li>  added some command input ports to quadrotor_controller.gazebo.xacro</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="0-3-0-2013-09-11">0.3.0 (2013-09-11)</h2>
-
-<ul>
-<li>  Catkinized stack hector_quadrotor and integrated
-hector_quadrotor_demo package from former hector_quadrotor_apps
-stack</li>
-<li>  increased drift for the barometric pressure sensor</li>
-<li>  added some command input ports to quadrotor_controller.gazebo.xacro</li>
-<li>  added launch file for two quadrotors</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1115,7 +1028,7 @@ stack</li>
         
           <ul>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/kinetic-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_asus_with_laser.launch" target="_blank">launch/spawn_quadrotor_with_asus_with_laser.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/kinetic-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_slam.launch" target="_blank">launch/spawn_quadrotor_slam.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1125,6 +1038,10 @@ stack</li>
                       
                         
                           <li><strong>name</strong> <em>&#91;default: quadrotor&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>model</strong> <em>&#91;default: $(find hector_quadrotor_description)/urdf/quadrotor_hokuyo_utm30lx.gazebo.xacro&#93; </em></li>
                         
                       
                         
@@ -1179,6 +1096,49 @@ stack</li>
                       
                         
                           <li><strong>z</strong> <em>&#91;default: $(arg z)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/kinetic-devel/hector_quadrotor_gazebo/launch/quadrotor_empty_world.launch" target="_blank">launch/quadrotor_empty_world.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_sim_time</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>headless</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
                         
                       
                         
@@ -1267,7 +1227,7 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/kinetic-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_slam.launch" target="_blank">launch/spawn_quadrotor_slam.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/kinetic-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_kinect.launch" target="_blank">launch/spawn_quadrotor_with_kinect.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1277,10 +1237,6 @@ stack</li>
                       
                         
                           <li><strong>name</strong> <em>&#91;default: quadrotor&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>model</strong> <em>&#91;default: $(find hector_quadrotor_description)/urdf/quadrotor_hokuyo_utm30lx.gazebo.xacro&#93; </em></li>
                         
                       
                         
@@ -1348,7 +1304,84 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/kinetic-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_asus.launch" target="_blank">launch/spawn_quadrotor_with_asus.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/kinetic-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_asus_with_laser.launch" target="_blank">launch/spawn_quadrotor_with_asus_with_laser.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>name</strong> <em>&#91;default: quadrotor&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>tf_prefix</strong> <em>&#91;default: $(optenv ROS_NAMESPACE)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>x</strong> <em>&#91;default: 0.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>y</strong> <em>&#91;default: 0.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>z</strong> <em>&#91;default: 0.3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_ground_truth_for_tf</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_ground_truth_for_control</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_pose_estimation</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_pose_estimation</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>name</strong> <em>&#91;default: $(arg name)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>tf_prefix</strong> <em>&#91;default: $(arg tf_prefix)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>x</strong> <em>&#91;default: $(arg x)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>y</strong> <em>&#91;default: $(arg y)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>z</strong> <em>&#91;default: $(arg z)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/kinetic-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_laser.launch" target="_blank">launch/spawn_quadrotor_with_laser.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1502,82 +1535,6 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/kinetic-devel/hector_quadrotor_gazebo/launch/spawn_two_quadrotors.launch" target="_blank">launch/spawn_two_quadrotors.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>model</strong> <em>&#91;default: $(find hector_quadrotor_description)/urdf/quadrotor.gazebo.xacro&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/kinetic-devel/hector_quadrotor_gazebo/launch/quadrotor_empty_world.launch" target="_blank">launch/quadrotor_empty_world.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_sim_time</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>headless</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/kinetic-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_cam.launch" target="_blank">launch/spawn_quadrotor_with_cam.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1655,7 +1612,7 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/kinetic-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_kinect.launch" target="_blank">launch/spawn_quadrotor_with_kinect.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/kinetic-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_asus.launch" target="_blank">launch/spawn_quadrotor_with_asus.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1732,7 +1689,7 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/kinetic-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_laser.launch" target="_blank">launch/spawn_quadrotor_with_laser.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/kinetic-devel/hector_quadrotor_gazebo/launch/spawn_two_quadrotors.launch" target="_blank">launch/spawn_two_quadrotors.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1741,61 +1698,17 @@ stack</li>
                     <ul>
                       
                         
-                          <li><strong>name</strong> <em>&#91;default: quadrotor&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>tf_prefix</strong> <em>&#91;default: $(optenv ROS_NAMESPACE)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>x</strong> <em>&#91;default: 0.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>y</strong> <em>&#91;default: 0.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>z</strong> <em>&#91;default: 0.3&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_ground_truth_for_tf</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_ground_truth_for_control</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_pose_estimation</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_pose_estimation</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>name</strong> <em>&#91;default: $(arg name)&#93; </em></li>
+                          <li><strong>model</strong> <em>&#91;default: $(find hector_quadrotor_description)/urdf/quadrotor.gazebo.xacro&#93; </em></li>
                         
                       
                         
                       
                         
-                          <li><strong>tf_prefix</strong> <em>&#91;default: $(arg tf_prefix)&#93; </em></li>
+                      
                         
                       
                         
-                          <li><strong>x</strong> <em>&#91;default: $(arg x)&#93; </em></li>
-                        
                       
-                        
-                          <li><strong>y</strong> <em>&#91;default: $(arg y)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>z</strong> <em>&#91;default: $(arg z)&#93; </em></li>
                         
                       
                         
@@ -2321,90 +2234,7 @@ hector_uav_msgs
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-hector_quadrotor_gazebo">Changelog for package hector_quadrotor_gazebo</h1>
-
-<h2 id="0-3-5-2015-03-28">0.3.5 (2015-03-28)</h2>
-
-<h2 id="0-3-4-2015-02-22">0.3.4 (2015-02-22)</h2>
-
-<ul>
-<li>  added missing run_depend hector_quadrotor_pose_estimation to
-package.xml</li>
-<li>  set pose_estimation/publish_world_nav_transform parameter to
-true explicitly</li>
-<li>
-<p>updated package for the latest version of hector_pose_estimation</p>
-
-<ul>
-<li>  Geographic reference latitude and longitude set to 49.860246N
-8.687077E (Lichtwiese).</li>
-</ul>
-
-<p>* Reenabled auto_elevation, auto_reference and auto_heading
-parameters for hector_pose_estimation. hector_pose_estimation
-will publish the world-&gt;nav transform depending on its
-reference pose.</p>
-</li>
-<li><p>added parameter file for hector_quadrotor_pose_estimation for a
-simulated quadrotor The parameter file disables the auto_elevation,
-auto_reference, auto_heading modes of hector_pose_estimation and
-sets the corresponding values manually with what is simulated in the
-gazebo sensor plugins. This simplifies the comparison of estimated
-poses with ground truth information.</p></li>
-<li><p>explicitly set the pose_estimation/nav_frame parameter in
-spawn_quadrotor.launch</p></li>
-<li><p>disabled detection of available plugins in cmake The aerodynamics
-and propulsion plugins are built unconditinally now in
-hector_quadrotor_gazebo_plugins and the detection is obsolete.
-Additionally we used platform-specific library prefixes and suffixes
-in find_libary() which caused errors on different platforms.</p></li>
-<li><p>Contributors: Johannes Meyer</p></li>
-</ul>
-
-<h2 id="0-3-3-2014-09-01">0.3.3 (2014-09-01)</h2>
-
-<ul>
-<li>  cleaned up launch files and fixed argument forwarding to
-spawn_quadrotor.launch</li>
-<li>  removed all RTT related plugins</li>
-<li>  added separate update timer for MotorStatus output in propulsion
-plugin</li>
-<li>  added launch file argument to enable/disable pose estimation</li>
-<li>  moved simulation package dependencies from hector_quadrotor
-metapackage to hector_quadrotor_gazebo</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="0-3-2-2014-03-30">0.3.2 (2014-03-30)</h2>
-
-<h2 id="0-3-1-2013-12-26">0.3.1 (2013-12-26)</h2>
-
-<ul>
-<li>  also check if a target exists when searching available plugins</li>
-<li>  enables aerodynamics plugin in default configuration</li>
-<li>  limit controlPeriod to 100Hz</li>
-<li>  a few fixes for RTT integration in hector_quadrotor. Added urdf
-macro for rtt_gazebo_plugin macro.</li>
-<li>  deprecated quadrotor_simple_controller.gazebo.xacro</li>
-<li>  fixed node type for static_transform_publisher in
-spawn_quadrotor.launch</li>
-<li>  changed frame_id for gazebo fixed frame to /world and added a
-static_transform_publisher for world-&gt;nav</li>
-<li>  increased drift for the barometric pressure sensor</li>
-<li>  added some command input ports to quadrotor_controller.gazebo.xacro</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="0-3-0-2013-09-11">0.3.0 (2013-09-11)</h2>
-
-<ul>
-<li>  Catkinized stack hector_quadrotor and integrated
-hector_quadrotor_demo package from former hector_quadrotor_apps
-stack</li>
-<li>  increased drift for the barometric pressure sensor</li>
-<li>  added some command input ports to quadrotor_controller.gazebo.xacro</li>
-<li>  added launch file for two quadrotors</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2765,7 +2595,7 @@ stack</li>
         
           <ul>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/indigo-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_asus_with_laser.launch" target="_blank">launch/spawn_quadrotor_with_asus_with_laser.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/indigo-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_slam.launch" target="_blank">launch/spawn_quadrotor_slam.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2775,6 +2605,10 @@ stack</li>
                       
                         
                           <li><strong>name</strong> <em>&#91;default: quadrotor&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>model</strong> <em>&#91;default: $(find hector_quadrotor_description)/urdf/quadrotor_hokuyo_utm30lx.gazebo.xacro&#93; </em></li>
                         
                       
                         
@@ -2829,6 +2663,49 @@ stack</li>
                       
                         
                           <li><strong>z</strong> <em>&#91;default: $(arg z)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/indigo-devel/hector_quadrotor_gazebo/launch/quadrotor_empty_world.launch" target="_blank">launch/quadrotor_empty_world.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_sim_time</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>headless</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
                         
                       
                         
@@ -2911,7 +2788,7 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/indigo-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_slam.launch" target="_blank">launch/spawn_quadrotor_slam.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/indigo-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_kinect.launch" target="_blank">launch/spawn_quadrotor_with_kinect.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2921,10 +2798,6 @@ stack</li>
                       
                         
                           <li><strong>name</strong> <em>&#91;default: quadrotor&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>model</strong> <em>&#91;default: $(find hector_quadrotor_description)/urdf/quadrotor_hokuyo_utm30lx.gazebo.xacro&#93; </em></li>
                         
                       
                         
@@ -2992,7 +2865,84 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/indigo-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_asus.launch" target="_blank">launch/spawn_quadrotor_with_asus.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/indigo-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_asus_with_laser.launch" target="_blank">launch/spawn_quadrotor_with_asus_with_laser.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>name</strong> <em>&#91;default: quadrotor&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>tf_prefix</strong> <em>&#91;default: $(optenv ROS_NAMESPACE)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>x</strong> <em>&#91;default: 0.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>y</strong> <em>&#91;default: 0.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>z</strong> <em>&#91;default: 0.3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_ground_truth_for_tf</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_ground_truth_for_control</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_pose_estimation</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_pose_estimation</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>name</strong> <em>&#91;default: $(arg name)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>tf_prefix</strong> <em>&#91;default: $(arg tf_prefix)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>x</strong> <em>&#91;default: $(arg x)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>y</strong> <em>&#91;default: $(arg y)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>z</strong> <em>&#91;default: $(arg z)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/indigo-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_laser.launch" target="_blank">launch/spawn_quadrotor_with_laser.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3146,82 +3096,6 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/indigo-devel/hector_quadrotor_gazebo/launch/spawn_two_quadrotors.launch" target="_blank">launch/spawn_two_quadrotors.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>model</strong> <em>&#91;default: $(find hector_quadrotor_description)/urdf/quadrotor.gazebo.xacro&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/indigo-devel/hector_quadrotor_gazebo/launch/quadrotor_empty_world.launch" target="_blank">launch/quadrotor_empty_world.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_sim_time</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>headless</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/indigo-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_cam.launch" target="_blank">launch/spawn_quadrotor_with_cam.launch</a>
                 <ul class="list-unstyled">
                   
@@ -3299,7 +3173,7 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/indigo-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_kinect.launch" target="_blank">launch/spawn_quadrotor_with_kinect.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/indigo-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_asus.launch" target="_blank">launch/spawn_quadrotor_with_asus.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3376,7 +3250,7 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/indigo-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_laser.launch" target="_blank">launch/spawn_quadrotor_with_laser.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/indigo-devel/hector_quadrotor_gazebo/launch/spawn_two_quadrotors.launch" target="_blank">launch/spawn_two_quadrotors.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3385,61 +3259,17 @@ stack</li>
                     <ul>
                       
                         
-                          <li><strong>name</strong> <em>&#91;default: quadrotor&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>tf_prefix</strong> <em>&#91;default: $(optenv ROS_NAMESPACE)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>x</strong> <em>&#91;default: 0.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>y</strong> <em>&#91;default: 0.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>z</strong> <em>&#91;default: 0.3&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_ground_truth_for_tf</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_ground_truth_for_control</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_pose_estimation</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_pose_estimation</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>name</strong> <em>&#91;default: $(arg name)&#93; </em></li>
+                          <li><strong>model</strong> <em>&#91;default: $(find hector_quadrotor_description)/urdf/quadrotor.gazebo.xacro&#93; </em></li>
                         
                       
                         
                       
                         
-                          <li><strong>tf_prefix</strong> <em>&#91;default: $(arg tf_prefix)&#93; </em></li>
+                      
                         
                       
                         
-                          <li><strong>x</strong> <em>&#91;default: $(arg x)&#93; </em></li>
-                        
                       
-                        
-                          <li><strong>y</strong> <em>&#91;default: $(arg y)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>z</strong> <em>&#91;default: $(arg z)&#93; </em></li>
                         
                       
                         
@@ -3973,90 +3803,7 @@ hector_uav_msgs
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-hector_quadrotor_gazebo">Changelog for package hector_quadrotor_gazebo</h1>
-
-<h2 id="0-3-5-2015-03-28">0.3.5 (2015-03-28)</h2>
-
-<h2 id="0-3-4-2015-02-22">0.3.4 (2015-02-22)</h2>
-
-<ul>
-<li>  added missing run_depend hector_quadrotor_pose_estimation to
-package.xml</li>
-<li>  set pose_estimation/publish_world_nav_transform parameter to
-true explicitly</li>
-<li>
-<p>updated package for the latest version of hector_pose_estimation</p>
-
-<ul>
-<li>  Geographic reference latitude and longitude set to 49.860246N
-8.687077E (Lichtwiese).</li>
-</ul>
-
-<p>* Reenabled auto_elevation, auto_reference and auto_heading
-parameters for hector_pose_estimation. hector_pose_estimation
-will publish the world-&gt;nav transform depending on its
-reference pose.</p>
-</li>
-<li><p>added parameter file for hector_quadrotor_pose_estimation for a
-simulated quadrotor The parameter file disables the auto_elevation,
-auto_reference, auto_heading modes of hector_pose_estimation and
-sets the corresponding values manually with what is simulated in the
-gazebo sensor plugins. This simplifies the comparison of estimated
-poses with ground truth information.</p></li>
-<li><p>explicitly set the pose_estimation/nav_frame parameter in
-spawn_quadrotor.launch</p></li>
-<li><p>disabled detection of available plugins in cmake The aerodynamics
-and propulsion plugins are built unconditinally now in
-hector_quadrotor_gazebo_plugins and the detection is obsolete.
-Additionally we used platform-specific library prefixes and suffixes
-in find_libary() which caused errors on different platforms.</p></li>
-<li><p>Contributors: Johannes Meyer</p></li>
-</ul>
-
-<h2 id="0-3-3-2014-09-01">0.3.3 (2014-09-01)</h2>
-
-<ul>
-<li>  cleaned up launch files and fixed argument forwarding to
-spawn_quadrotor.launch</li>
-<li>  removed all RTT related plugins</li>
-<li>  added separate update timer for MotorStatus output in propulsion
-plugin</li>
-<li>  added launch file argument to enable/disable pose estimation</li>
-<li>  moved simulation package dependencies from hector_quadrotor
-metapackage to hector_quadrotor_gazebo</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="0-3-2-2014-03-30">0.3.2 (2014-03-30)</h2>
-
-<h2 id="0-3-1-2013-12-26">0.3.1 (2013-12-26)</h2>
-
-<ul>
-<li>  also check if a target exists when searching available plugins</li>
-<li>  enables aerodynamics plugin in default configuration</li>
-<li>  limit controlPeriod to 100Hz</li>
-<li>  a few fixes for RTT integration in hector_quadrotor. Added urdf
-macro for rtt_gazebo_plugin macro.</li>
-<li>  deprecated quadrotor_simple_controller.gazebo.xacro</li>
-<li>  fixed node type for static_transform_publisher in
-spawn_quadrotor.launch</li>
-<li>  changed frame_id for gazebo fixed frame to /world and added a
-static_transform_publisher for world-&gt;nav</li>
-<li>  increased drift for the barometric pressure sensor</li>
-<li>  added some command input ports to quadrotor_controller.gazebo.xacro</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="0-3-0-2013-09-11">0.3.0 (2013-09-11)</h2>
-
-<ul>
-<li>  Catkinized stack hector_quadrotor and integrated
-hector_quadrotor_demo package from former hector_quadrotor_apps
-stack</li>
-<li>  increased drift for the barometric pressure sensor</li>
-<li>  added some command input ports to quadrotor_controller.gazebo.xacro</li>
-<li>  added launch file for two quadrotors</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -4417,7 +4164,7 @@ stack</li>
         
           <ul>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/jade-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_asus_with_laser.launch" target="_blank">launch/spawn_quadrotor_with_asus_with_laser.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/jade-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_slam.launch" target="_blank">launch/spawn_quadrotor_slam.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -4427,6 +4174,10 @@ stack</li>
                       
                         
                           <li><strong>name</strong> <em>&#91;default: quadrotor&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>model</strong> <em>&#91;default: $(find hector_quadrotor_description)/urdf/quadrotor_hokuyo_utm30lx.gazebo.xacro&#93; </em></li>
                         
                       
                         
@@ -4481,6 +4232,49 @@ stack</li>
                       
                         
                           <li><strong>z</strong> <em>&#91;default: $(arg z)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/jade-devel/hector_quadrotor_gazebo/launch/quadrotor_empty_world.launch" target="_blank">launch/quadrotor_empty_world.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_sim_time</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>headless</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
                         
                       
                         
@@ -4563,7 +4357,7 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/jade-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_slam.launch" target="_blank">launch/spawn_quadrotor_slam.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/jade-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_kinect.launch" target="_blank">launch/spawn_quadrotor_with_kinect.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -4573,10 +4367,6 @@ stack</li>
                       
                         
                           <li><strong>name</strong> <em>&#91;default: quadrotor&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>model</strong> <em>&#91;default: $(find hector_quadrotor_description)/urdf/quadrotor_hokuyo_utm30lx.gazebo.xacro&#93; </em></li>
                         
                       
                         
@@ -4644,7 +4434,84 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/jade-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_asus.launch" target="_blank">launch/spawn_quadrotor_with_asus.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/jade-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_asus_with_laser.launch" target="_blank">launch/spawn_quadrotor_with_asus_with_laser.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>name</strong> <em>&#91;default: quadrotor&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>tf_prefix</strong> <em>&#91;default: $(optenv ROS_NAMESPACE)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>x</strong> <em>&#91;default: 0.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>y</strong> <em>&#91;default: 0.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>z</strong> <em>&#91;default: 0.3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_ground_truth_for_tf</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_ground_truth_for_control</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_pose_estimation</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_pose_estimation</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>name</strong> <em>&#91;default: $(arg name)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>tf_prefix</strong> <em>&#91;default: $(arg tf_prefix)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>x</strong> <em>&#91;default: $(arg x)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>y</strong> <em>&#91;default: $(arg y)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>z</strong> <em>&#91;default: $(arg z)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/jade-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_laser.launch" target="_blank">launch/spawn_quadrotor_with_laser.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -4798,82 +4665,6 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/jade-devel/hector_quadrotor_gazebo/launch/spawn_two_quadrotors.launch" target="_blank">launch/spawn_two_quadrotors.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>model</strong> <em>&#91;default: $(find hector_quadrotor_description)/urdf/quadrotor.gazebo.xacro&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/jade-devel/hector_quadrotor_gazebo/launch/quadrotor_empty_world.launch" target="_blank">launch/quadrotor_empty_world.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_sim_time</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>headless</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/jade-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_cam.launch" target="_blank">launch/spawn_quadrotor_with_cam.launch</a>
                 <ul class="list-unstyled">
                   
@@ -4951,7 +4742,7 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/jade-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_kinect.launch" target="_blank">launch/spawn_quadrotor_with_kinect.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/jade-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_asus.launch" target="_blank">launch/spawn_quadrotor_with_asus.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -5028,7 +4819,7 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/jade-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_laser.launch" target="_blank">launch/spawn_quadrotor_with_laser.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/jade-devel/hector_quadrotor_gazebo/launch/spawn_two_quadrotors.launch" target="_blank">launch/spawn_two_quadrotors.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -5037,61 +4828,17 @@ stack</li>
                     <ul>
                       
                         
-                          <li><strong>name</strong> <em>&#91;default: quadrotor&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>tf_prefix</strong> <em>&#91;default: $(optenv ROS_NAMESPACE)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>x</strong> <em>&#91;default: 0.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>y</strong> <em>&#91;default: 0.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>z</strong> <em>&#91;default: 0.3&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_ground_truth_for_tf</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_ground_truth_for_control</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_pose_estimation</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_pose_estimation</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>name</strong> <em>&#91;default: $(arg name)&#93; </em></li>
+                          <li><strong>model</strong> <em>&#91;default: $(find hector_quadrotor_description)/urdf/quadrotor.gazebo.xacro&#93; </em></li>
                         
                       
                         
                       
                         
-                          <li><strong>tf_prefix</strong> <em>&#91;default: $(arg tf_prefix)&#93; </em></li>
+                      
                         
                       
                         
-                          <li><strong>x</strong> <em>&#91;default: $(arg x)&#93; </em></li>
-                        
                       
-                        
-                          <li><strong>y</strong> <em>&#91;default: $(arg y)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>z</strong> <em>&#91;default: $(arg z)&#93; </em></li>
                         
                       
                         
@@ -5617,90 +5364,7 @@ hector_uav_msgs
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-hector_quadrotor_gazebo">Changelog for package hector_quadrotor_gazebo</h1>
-
-<h2 id="0-3-5-2015-03-28">0.3.5 (2015-03-28)</h2>
-
-<h2 id="0-3-4-2015-02-22">0.3.4 (2015-02-22)</h2>
-
-<ul>
-<li>  added missing run_depend hector_quadrotor_pose_estimation to
-package.xml</li>
-<li>  set pose_estimation/publish_world_nav_transform parameter to
-true explicitly</li>
-<li>
-<p>updated package for the latest version of hector_pose_estimation</p>
-
-<ul>
-<li>  Geographic reference latitude and longitude set to 49.860246N
-8.687077E (Lichtwiese).</li>
-</ul>
-
-<p>* Reenabled auto_elevation, auto_reference and auto_heading
-parameters for hector_pose_estimation. hector_pose_estimation
-will publish the world-&gt;nav transform depending on its
-reference pose.</p>
-</li>
-<li><p>added parameter file for hector_quadrotor_pose_estimation for a
-simulated quadrotor The parameter file disables the auto_elevation,
-auto_reference, auto_heading modes of hector_pose_estimation and
-sets the corresponding values manually with what is simulated in the
-gazebo sensor plugins. This simplifies the comparison of estimated
-poses with ground truth information.</p></li>
-<li><p>explicitly set the pose_estimation/nav_frame parameter in
-spawn_quadrotor.launch</p></li>
-<li><p>disabled detection of available plugins in cmake The aerodynamics
-and propulsion plugins are built unconditinally now in
-hector_quadrotor_gazebo_plugins and the detection is obsolete.
-Additionally we used platform-specific library prefixes and suffixes
-in find_libary() which caused errors on different platforms.</p></li>
-<li><p>Contributors: Johannes Meyer</p></li>
-</ul>
-
-<h2 id="0-3-3-2014-09-01">0.3.3 (2014-09-01)</h2>
-
-<ul>
-<li>  cleaned up launch files and fixed argument forwarding to
-spawn_quadrotor.launch</li>
-<li>  removed all RTT related plugins</li>
-<li>  added separate update timer for MotorStatus output in propulsion
-plugin</li>
-<li>  added launch file argument to enable/disable pose estimation</li>
-<li>  moved simulation package dependencies from hector_quadrotor
-metapackage to hector_quadrotor_gazebo</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="0-3-2-2014-03-30">0.3.2 (2014-03-30)</h2>
-
-<h2 id="0-3-1-2013-12-26">0.3.1 (2013-12-26)</h2>
-
-<ul>
-<li>  also check if a target exists when searching available plugins</li>
-<li>  enables aerodynamics plugin in default configuration</li>
-<li>  limit controlPeriod to 100Hz</li>
-<li>  a few fixes for RTT integration in hector_quadrotor. Added urdf
-macro for rtt_gazebo_plugin macro.</li>
-<li>  deprecated quadrotor_simple_controller.gazebo.xacro</li>
-<li>  fixed node type for static_transform_publisher in
-spawn_quadrotor.launch</li>
-<li>  changed frame_id for gazebo fixed frame to /world and added a
-static_transform_publisher for world-&gt;nav</li>
-<li>  increased drift for the barometric pressure sensor</li>
-<li>  added some command input ports to quadrotor_controller.gazebo.xacro</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="0-3-0-2013-09-11">0.3.0 (2013-09-11)</h2>
-
-<ul>
-<li>  Catkinized stack hector_quadrotor and integrated
-hector_quadrotor_demo package from former hector_quadrotor_apps
-stack</li>
-<li>  increased drift for the barometric pressure sensor</li>
-<li>  added some command input ports to quadrotor_controller.gazebo.xacro</li>
-<li>  added launch file for two quadrotors</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -6075,7 +5739,7 @@ stack</li>
         
           <ul>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/hydro-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_asus_with_laser.launch" target="_blank">launch/spawn_quadrotor_with_asus_with_laser.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/hydro-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_slam.launch" target="_blank">launch/spawn_quadrotor_slam.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -6085,6 +5749,10 @@ stack</li>
                       
                         
                           <li><strong>name</strong> <em>&#91;default: quadrotor&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>model</strong> <em>&#91;default: $(find hector_quadrotor_description)/urdf/quadrotor_hokuyo_utm30lx.gazebo.xacro&#93; </em></li>
                         
                       
                         
@@ -6139,6 +5807,49 @@ stack</li>
                       
                         
                           <li><strong>z</strong> <em>&#91;default: $(arg z)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/hydro-devel/hector_quadrotor_gazebo/launch/quadrotor_empty_world.launch" target="_blank">launch/quadrotor_empty_world.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_sim_time</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>headless</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
                         
                       
                         
@@ -6221,7 +5932,7 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/hydro-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_slam.launch" target="_blank">launch/spawn_quadrotor_slam.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/hydro-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_kinect.launch" target="_blank">launch/spawn_quadrotor_with_kinect.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -6231,10 +5942,6 @@ stack</li>
                       
                         
                           <li><strong>name</strong> <em>&#91;default: quadrotor&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>model</strong> <em>&#91;default: $(find hector_quadrotor_description)/urdf/quadrotor_hokuyo_utm30lx.gazebo.xacro&#93; </em></li>
                         
                       
                         
@@ -6302,7 +6009,84 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/hydro-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_asus.launch" target="_blank">launch/spawn_quadrotor_with_asus.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/hydro-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_asus_with_laser.launch" target="_blank">launch/spawn_quadrotor_with_asus_with_laser.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>name</strong> <em>&#91;default: quadrotor&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>tf_prefix</strong> <em>&#91;default: $(optenv ROS_NAMESPACE)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>x</strong> <em>&#91;default: 0.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>y</strong> <em>&#91;default: 0.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>z</strong> <em>&#91;default: 0.3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_ground_truth_for_tf</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_ground_truth_for_control</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_pose_estimation</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_pose_estimation</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>name</strong> <em>&#91;default: $(arg name)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>tf_prefix</strong> <em>&#91;default: $(arg tf_prefix)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>x</strong> <em>&#91;default: $(arg x)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>y</strong> <em>&#91;default: $(arg y)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>z</strong> <em>&#91;default: $(arg z)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/hydro-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_laser.launch" target="_blank">launch/spawn_quadrotor_with_laser.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -6456,82 +6240,6 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/hydro-devel/hector_quadrotor_gazebo/launch/spawn_two_quadrotors.launch" target="_blank">launch/spawn_two_quadrotors.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>model</strong> <em>&#91;default: $(find hector_quadrotor_description)/urdf/quadrotor.gazebo.xacro&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/hydro-devel/hector_quadrotor_gazebo/launch/quadrotor_empty_world.launch" target="_blank">launch/quadrotor_empty_world.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_sim_time</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>headless</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/hydro-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_cam.launch" target="_blank">launch/spawn_quadrotor_with_cam.launch</a>
                 <ul class="list-unstyled">
                   
@@ -6609,7 +6317,7 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/hydro-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_kinect.launch" target="_blank">launch/spawn_quadrotor_with_kinect.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/hydro-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_asus.launch" target="_blank">launch/spawn_quadrotor_with_asus.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -6686,7 +6394,7 @@ stack</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/hydro-devel/hector_quadrotor_gazebo/launch/spawn_quadrotor_with_laser.launch" target="_blank">launch/spawn_quadrotor_with_laser.launch</a>
+              <li><a href="https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor/blob/hydro-devel/hector_quadrotor_gazebo/launch/spawn_two_quadrotors.launch" target="_blank">launch/spawn_two_quadrotors.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -6695,61 +6403,17 @@ stack</li>
                     <ul>
                       
                         
-                          <li><strong>name</strong> <em>&#91;default: quadrotor&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>tf_prefix</strong> <em>&#91;default: $(optenv ROS_NAMESPACE)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>x</strong> <em>&#91;default: 0.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>y</strong> <em>&#91;default: 0.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>z</strong> <em>&#91;default: 0.3&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_ground_truth_for_tf</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_ground_truth_for_control</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_pose_estimation</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_pose_estimation</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>name</strong> <em>&#91;default: $(arg name)&#93; </em></li>
+                          <li><strong>model</strong> <em>&#91;default: $(find hector_quadrotor_description)/urdf/quadrotor.gazebo.xacro&#93; </em></li>
                         
                       
                         
                       
                         
-                          <li><strong>tf_prefix</strong> <em>&#91;default: $(arg tf_prefix)&#93; </em></li>
+                      
                         
                       
                         
-                          <li><strong>x</strong> <em>&#91;default: $(arg x)&#93; </em></li>
-                        
                       
-                        
-                          <li><strong>y</strong> <em>&#91;default: $(arg y)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>z</strong> <em>&#91;default: $(arg z)&#93; </em></li>
                         
                       
                         
@@ -6928,7 +6592,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

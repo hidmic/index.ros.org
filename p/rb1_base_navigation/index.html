@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -474,7 +470,7 @@ rb1_base_pad
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-07
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-28
         </span>
       </td>
     </tr>
@@ -772,50 +768,7 @@ Simple test:
         
           <ul>
             
-              <li><a href="https://github.com/RobotnikAutomation/rb1_base_common/blob/kinetic-devel/rb1_base_navigation/launch/gmapping/rb1_base_gmapping.launch" target="_blank">launch/gmapping/rb1_base_gmapping.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em>  To save the map:
-			rosrun map_server map_saver -f mymap 
-</em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>id_robot</strong> <em>&#91;default: rb1_base&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>prefix</strong> <em>&#91;default: $(arg id_robot)_&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>scan_topic</strong> <em>&#91;default: front_laser/scan&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>map_frame</strong> <em>&#91;default: $(arg prefix)map&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>odom_frame</strong> <em>&#91;default: $(arg prefix)odom&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>base_frame</strong> <em>&#91;default: $(arg prefix)base_link&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>max_urange</strong> <em>&#91;default: 19.9&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/RobotnikAutomation/rb1_base_common/blob/kinetic-devel/rb1_base_navigation/launch/gmapping/move_base_gmapping.launch" target="_blank">launch/gmapping/move_base_gmapping.launch</a>
+              <li><a href="https://github.com/RobotnikAutomation/rb1_base_common/blob/kinetic-devel/rb1_base_navigation/launch/navigation_local/move_base_local.launch" target="_blank">launch/navigation_local/move_base_local.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -829,30 +782,6 @@ Simple test:
                       
                         
                           <li><strong>prefix</strong> <em>&#91;default: $(arg id_robot)_&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>cmd_vel_topic</strong> <em>&#91;default: move_base/cmd_vel&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>odom_topic</strong> <em>&#91;default: robotnik_base_control/odom&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>scan_topic</strong> <em>&#91;default: front_laser/scan&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>global_frame</strong> <em>&#91;default: $(arg prefix)map&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>odom_frame</strong> <em>&#91;default: $(arg prefix)odom&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>base_frame</strong> <em>&#91;default: $(arg prefix)base_link&#93; </em></li>
                         
                       
                     </ul>
@@ -886,51 +815,6 @@ Simple test:
                       
                         
                           <li><strong>prefix</strong> <em>&#91;default: $(arg id_robot)_&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>scan_topic</strong> <em>&#91;default: front_laser/scan&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/RobotnikAutomation/rb1_base_common/blob/kinetic-devel/rb1_base_navigation/launch/navigation_amcl/move_base.launch" target="_blank">launch/navigation_amcl/move_base.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>prefix</strong> <em>&#91;default: rb1_base_&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>cmd_vel_topic</strong> <em>&#91;default: move_base/cmd_vel&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>odom_topic</strong> <em>&#91;default: robotnik_base_control/odom&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>global_frame</strong> <em>&#91;default: $(arg prefix)map&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>odom_frame</strong> <em>&#91;default: $(arg prefix)odom&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>base_frame</strong> <em>&#91;default: $(arg prefix)base_footprint&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>laser_frame</strong> <em>&#91;default: $(arg prefix)front_laser_link&#93; </em></li>
                         
                       
                         
@@ -987,6 +871,51 @@ Simple test:
                 </ul>
               </li>
             
+              <li><a href="https://github.com/RobotnikAutomation/rb1_base_common/blob/kinetic-devel/rb1_base_navigation/launch/navigation_amcl/move_base.launch" target="_blank">launch/navigation_amcl/move_base.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>prefix</strong> <em>&#91;default: rb1_base_&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>cmd_vel_topic</strong> <em>&#91;default: move_base/cmd_vel&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>odom_topic</strong> <em>&#91;default: robotnik_base_control/odom&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>global_frame</strong> <em>&#91;default: $(arg prefix)map&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>odom_frame</strong> <em>&#91;default: $(arg prefix)odom&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>base_frame</strong> <em>&#91;default: $(arg prefix)base_footprint&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>laser_frame</strong> <em>&#91;default: $(arg prefix)front_laser_link&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>scan_topic</strong> <em>&#91;default: front_laser/scan&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/RobotnikAutomation/rb1_base_common/blob/kinetic-devel/rb1_base_navigation/launch/docking/rb1_base_docking.launch" target="_blank">launch/docking/rb1_base_docking.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1030,7 +959,7 @@ Simple test:
                 </ul>
               </li>
             
-              <li><a href="https://github.com/RobotnikAutomation/rb1_base_common/blob/kinetic-devel/rb1_base_navigation/launch/navigation_local/move_base_local.launch" target="_blank">launch/navigation_local/move_base_local.launch</a>
+              <li><a href="https://github.com/RobotnikAutomation/rb1_base_common/blob/kinetic-devel/rb1_base_navigation/launch/gmapping/move_base_gmapping.launch" target="_blank">launch/gmapping/move_base_gmapping.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1044,6 +973,73 @@ Simple test:
                       
                         
                           <li><strong>prefix</strong> <em>&#91;default: $(arg id_robot)_&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>cmd_vel_topic</strong> <em>&#91;default: move_base/cmd_vel&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>odom_topic</strong> <em>&#91;default: robotnik_base_control/odom&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>scan_topic</strong> <em>&#91;default: front_laser/scan&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>global_frame</strong> <em>&#91;default: $(arg prefix)map&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>odom_frame</strong> <em>&#91;default: $(arg prefix)odom&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>base_frame</strong> <em>&#91;default: $(arg prefix)base_link&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/RobotnikAutomation/rb1_base_common/blob/kinetic-devel/rb1_base_navigation/launch/gmapping/rb1_base_gmapping.launch" target="_blank">launch/gmapping/rb1_base_gmapping.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em>  To save the map:
+			rosrun map_server map_saver -f mymap 
+</em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>id_robot</strong> <em>&#91;default: rb1_base&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>prefix</strong> <em>&#91;default: $(arg id_robot)_&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>scan_topic</strong> <em>&#91;default: front_laser/scan&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>map_frame</strong> <em>&#91;default: $(arg prefix)map&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>odom_frame</strong> <em>&#91;default: $(arg prefix)odom&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>base_frame</strong> <em>&#91;default: $(arg prefix)base_link&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>max_urange</strong> <em>&#91;default: 19.9&#93; </em></li>
                         
                       
                     </ul>
@@ -1832,12 +1828,10 @@ must be &gt; than the maxUrange of the gmapping node param.
         
           <ul>
             
-              <li><a href="https://github.com/RobotnikAutomation/rb1_base_common/blob/indigo-devel/rb1_base_navigation/launch/gmapping/rb1_base_gmapping.launch" target="_blank">launch/gmapping/rb1_base_gmapping.launch</a>
+              <li><a href="https://github.com/RobotnikAutomation/rb1_base_common/blob/indigo-devel/rb1_base_navigation/launch/navigation_local/move_base_obstacle.launch" target="_blank">launch/navigation_local/move_base_obstacle.launch</a>
                 <ul class="list-unstyled">
                   
-                    <li><em>  To save the map:
-			rosrun map_server map_saver -f mymap 
-</em></li>
+                    <li><em></em></li>
                   
                   <li>
                     <ul>
@@ -1847,7 +1841,7 @@ must be &gt; than the maxUrange of the gmapping node param.
                 </ul>
               </li>
             
-              <li><a href="https://github.com/RobotnikAutomation/rb1_base_common/blob/indigo-devel/rb1_base_navigation/launch/gmapping/move_base_gmapping.launch" target="_blank">launch/gmapping/move_base_gmapping.launch</a>
+              <li><a href="https://github.com/RobotnikAutomation/rb1_base_common/blob/indigo-devel/rb1_base_navigation/launch/navigation_local/move_base_local.launch" target="_blank">launch/navigation_local/move_base_local.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1923,7 +1917,7 @@ must be &gt; than the maxUrange of the gmapping node param.
                 </ul>
               </li>
             
-              <li><a href="https://github.com/RobotnikAutomation/rb1_base_common/blob/indigo-devel/rb1_base_navigation/launch/navigation_local/move_base_local.launch" target="_blank">launch/navigation_local/move_base_local.launch</a>
+              <li><a href="https://github.com/RobotnikAutomation/rb1_base_common/blob/indigo-devel/rb1_base_navigation/launch/gmapping/move_base_gmapping.launch" target="_blank">launch/gmapping/move_base_gmapping.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1936,10 +1930,12 @@ must be &gt; than the maxUrange of the gmapping node param.
                 </ul>
               </li>
             
-              <li><a href="https://github.com/RobotnikAutomation/rb1_base_common/blob/indigo-devel/rb1_base_navigation/launch/navigation_local/move_base_obstacle.launch" target="_blank">launch/navigation_local/move_base_obstacle.launch</a>
+              <li><a href="https://github.com/RobotnikAutomation/rb1_base_common/blob/indigo-devel/rb1_base_navigation/launch/gmapping/rb1_base_gmapping.launch" target="_blank">launch/gmapping/rb1_base_gmapping.launch</a>
                 <ul class="list-unstyled">
                   
-                    <li><em></em></li>
+                    <li><em>  To save the map:
+			rosrun map_server map_saver -f mymap 
+</em></li>
                   
                   <li>
                     <ul>
@@ -2139,7 +2135,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

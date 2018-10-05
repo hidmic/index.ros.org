@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -501,84 +497,7 @@ rclpy
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-rclpy">Changelog for package rclpy</h1>
-
-<h2 id="0-5-4-2018-08-22">0.5.4 (2018-08-22)</h2>
-
-<ul>
-<li>  Fix executor.remove_node()
-(<a href="https://github.com/ros2/rclpy/issues/217">#217</a>)</li>
-<li>  executor.add_node() returns a bool
-(<a href="https://github.com/ros2/rclpy/issues/216">#216</a>)</li>
-<li>  Contributors: Mikael Arguedas, Shane Loretz</li>
-</ul>
-
-<h2 id="0-5-3-2018-07-17">0.5.3 (2018-07-17)</h2>
-
-<ul>
-<li>  use test_msgs instead of std_msgs
-(<a href="https://github.com/ros2/rclpy/issues/204">#204</a>)</li>
-<li>  Fixes memory leaks for nested fields
-(<a href="https://github.com/ros2/rclpy/issues/203">#203</a>) This separates
-memory allocation out from convert_from_py function. Now it uses
-separate create_message function to allocate message, making it
-explicit gives better control where and how memory is allocated
-and freed.</li>
-<li>  Contributors: Martins Mozeiko, Mikael Arguedas</li>
-</ul>
-
-<h2 id="0-5-1-2018-06-27">0.5.1 (2018-06-27)</h2>
-
-<ul>
-<li>  Changed the maintainer to be William Woodall.
-(<a href="https://github.com/ros2/rclpy/issues/196">#196</a>)</li>
-<li>  Contributors: William Woodall</li>
-</ul>
-
-<h2 id="0-5-0-2018-06-25">0.5.0 (2018-06-25)</h2>
-
-<ul>
-<li>  Changed the rclpy signal handler so that it is registered in
-<code>rclpy_init()</code> rather than in each wait.
-(<a href="https://github.com/ros2/rclpy/issues/194">#194</a>)</li>
-<li>  Changed the signal handler in rclpy to call the original signal
-handler when receiving SIGINT during a wait on a wait set.
-(<a href="https://github.com/ros2/rclpy/issues/191">#191</a>)</li>
-<li>  Added API for counting the number of publishers and subscribers on
-a topic. (<a href="https://github.com/ros2/rclpy/issues/183">#183</a>)</li>
-<li>  Updated Node interface so it can use the command line arguments and
-can optionally ignore global arguments.
-(<a href="https://github.com/ros2/rclpy/issues/185">#185</a>)</li>
-<li>  Changed the <code>rclpy.spin*()</code> functions to use a persistent executor.
-(<a href="https://github.com/ros2/rclpy/issues/176">#176</a>)</li>
-<li>  Fixed a bug related to zero-initialization.
-(<a href="https://github.com/ros2/rclpy/issues/182">#182</a>)</li>
-<li>  Added code to handle node names which are <code>nullptr</code>.
-(<a href="https://github.com/ros2/rclpy/issues/177">#177</a>)</li>
-<li>  Refactored client class so that it can handle multiple requests.
-(<a href="https://github.com/ros2/rclpy/issues/170">#170</a>)</li>
-<li>  Fixed <code>rclpy_init()</code> so that it actually passes command line
-arguments to <code>rcl_init()</code>
-(<a href="https://github.com/ros2/rclpy/issues/179">#179</a>)</li>
-<li>  Changed logging to get the node's logger name from rcl.
-(<a href="https://github.com/ros2/rclpy/issues/174">#174</a>)</li>
-<li>  Fixed a bug where <code>rclpy_take_response()</code> was ignoring the
-sequence number. (<a href="https://github.com/ros2/rclpy/issues/171">#171</a>)</li>
-<li>  Added support for Futures and coroutines in the executor.
-(<a href="https://github.com/ros2/rclpy/issues/166">#166</a>)</li>
-<li>  Updated code to match API change needed to avoid accidental
-nullptr dereference.
-(<a href="https://github.com/ros2/rclpy/issues/157">#157</a>)
-* Signed-off-by: Ethan Gao &lt;<a href="mailto:ethan.gao@linux.intel.com">ethan.gao@linux.intel.com</a>&gt;</li>
-<li>  Added a sleep to workaround race condition in
-MultiThreadedExecutor test.
-(<a href="https://github.com/ros2/rclpy/issues/168">#168</a>)</li>
-<li>  Disable 1kHz timer tests on the ARM architectures.
-(<a href="https://github.com/ros2/rclpy/issues/169">#169</a>)</li>
-<li>  Contributors: Dirk Thomas, Ethan Gao, Michael Carroll, Mikael
-Arguedas, Nick Medveditskov, Shane Loretz, Tully Foote, William
-Woodall, dhood</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1202,7 +1121,7 @@ rclpy
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-12-09
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-12-08
         </span>
       </td>
     </tr>
@@ -1665,7 +1584,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

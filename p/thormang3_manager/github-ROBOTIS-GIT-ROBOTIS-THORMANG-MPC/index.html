@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -645,84 +641,7 @@ thormang3_walking_module
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-thormang3_manager">Changelog for package thormang3_manager</h1>
-
-<h2 id="0-2-0-2018-03-27">0.2.0 (2018-03-27)</h2>
-
-<ul>
-<li>  modified build option and dependencies configuration</li>
-<li>  modified cmake &amp; package setting for yaml-cpp</li>
-<li>  changed depend pkg for catkin dependencies and package.xml format to
-v2</li>
-<li>  changed include path for dependencies and license to Apache v2</li>
-<li>  changed node setting</li>
-<li>  changed gazebo mode to false</li>
-<li>  upgrade walking algorism</li>
-<li>  Contributors: Kayman, SCH, Pyo</li>
-</ul>
-
-<h2 id="0-1-3-2017-05-23">0.1.3 (2017-05-23)</h2>
-
-<ul>
-<li>  updated cmake file for ros install</li>
-<li>  Contributors: SCH</li>
-</ul>
-
-<h2 id="0-1-2-2017-04-24">0.1.2 (2017-04-24)</h2>
-
-<ul>
-<li>  edited action file and dxl_init</li>
-<li>  reupload ft yaml</li>
-<li>  added function for action_editor to action_module</li>
-<li>  findpackage build_depend module msgs added</li>
-<li>  added control_cycle value.</li>
-<li>  upgrade walking balance control</li>
-<li>  manager parameter modified</li>
-<li>  manipulation &amp; gripper module clean up</li>
-<li>  merged develop with feature_walking_upgrade</li>
-<li>  minor bug fixed</li>
-<li>  deleted old config</li>
-<li>  updated ft_data.yaml</li>
-<li>  initialize ftdata and offset data</li>
-<li>  wholebody inipose added</li>
-<li>  updated thormang3_head_control_module : scan lidar using range</li>
-<li>  wholebody balance gain update</li>
-<li>  gripper debug</li>
-<li>  manager modified</li>
-<li>  gripper module added</li>
-<li>  merge with wholebody</li>
-<li>  wholebody added</li>
-<li>  Contributors: Jay Song, Zerom, Kayman, SCH</li>
-</ul>
-
-<h2 id="0-1-1-2016-08-19">0.1.1 (2016-08-19)</h2>
-
-<ul>
-<li>  package name changed imu_3dm_gx4 -&gt; thormang3_imu_3dm_gx4</li>
-<li>  Contributors: Jay-Song</li>
-</ul>
-
-<h2 id="0-1-0-2016-08-18">0.1.0 (2016-08-18)</h2>
-
-<ul>
-<li>  first public release for Kinetic</li>
-<li>  modified package information for release</li>
-<li>  a bug fixed test on real robot and fix bug</li>
-<li>  merged remote-tracking branch 'remotes/origin/develop' into
-walking_upgrade</li>
-<li>  modified motion_module_tutorial / sensor_module_tutorial</li>
-<li>  ROS C++ coding style is applied</li>
-<li>  file name changed</li>
-<li>  thormang3_manager : ROS C++ Coding Style is applied</li>
-<li>  ROS c++ coding stylie is applying, first
-thormang3_kinematics_dynamics complete</li>
-<li>  modify thormang3_manager.launch for real robot</li>
-<li>  added thormang3_action_module</li>
-<li>  fixed high CPU consumption due to busy waits</li>
-<li>  launch param name changed.</li>
-<li>  gazebo_robot_name changed.</li>
-<li>  Contributors: Alexander Stumpf, Jay Song, Zerom, SCH, Pyo</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -989,27 +908,6 @@ thormang3_kinematics_dynamics complete</li>
         
           <ul>
             
-              <li><a href="https://github.com/ROBOTIS-GIT/ROBOTIS-THORMANG-MPC/blob/kinetic-devel/thormang3_manager/launch/thormang3_manager.launch" target="_blank">launch/thormang3_manager.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>use_imu</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_lidar</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ROBOTIS-GIT/ROBOTIS-THORMANG-MPC/blob/kinetic-devel/thormang3_manager/launch/thormang3_manager_gazebo.launch" target="_blank">launch/thormang3_manager_gazebo.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1024,6 +922,27 @@ thormang3_kinematics_dynamics complete</li>
                       
                         
                           <li><strong>use_lidar</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ROBOTIS-GIT/ROBOTIS-THORMANG-MPC/blob/kinetic-devel/thormang3_manager/launch/thormang3_manager.launch" target="_blank">launch/thormang3_manager.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>use_imu</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_lidar</strong> <em>&#91;default: true&#93; </em></li>
                         
                       
                     </ul>
@@ -1228,7 +1147,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

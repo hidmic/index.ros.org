@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -769,438 +765,7 @@ xmlrpcpp
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-roscpp">Changelog for package roscpp</h1>
-
-<h2 id="1-14-3-2018-08-06">1.14.3 (2018-08-06)</h2>
-
-<ul>
-<li>  add hasStarted() to Timer API
-(<a href="https://github.com/ros/ros_comm/issues/1464">#1464</a>)</li>
-<li>  fix compiler warnings about unused variables
-(<a href="https://github.com/ros/ros_comm/issues/1428">#1428</a>)</li>
-</ul>
-
-<h2 id="1-14-2-2018-06-06">1.14.2 (2018-06-06)</h2>
-
-<h2 id="1-14-1-2018-05-21">1.14.1 (2018-05-21)</h2>
-
-<h2 id="1-14-0-2018-05-21">1.14.0 (2018-05-21)</h2>
-
-<ul>
-<li>  force a rebuild of the pollset on flag changes
-(<a href="https://github.com/ros/ros_comm/issues/1393">#1393</a>)</li>
-<li>  fix integer overflow for oneshot timers
-(<a href="https://github.com/ros/ros_comm/issues/1382">#1382</a>)</li>
-<li>  convert the period standard deviation in StatisticsLogger to
-Duration at the end
-(<a href="https://github.com/ros/ros_comm/issues/1361">#1361</a>)</li>
-<li>  add time when timer expired to timer events
-(<a href="https://github.com/ros/ros_comm/issues/1130">#1130</a>)</li>
-<li>  replace DCL pattern with static variable
-(<a href="https://github.com/ros/ros_comm/issues/1365">#1365</a>)</li>
-<li>  add parameter to stop clients from generating rosout topics list
-(<a href="https://github.com/ros/ros_comm/issues/1241">#1241</a>)</li>
-</ul>
-
-<h2 id="1-13-6-2018-02-05">1.13.6 (2018-02-05)</h2>
-
-<ul>
-<li>  avoid recreating poll set
-(<a href="https://github.com/ros/ros_comm/pull/1281">#1281</a>)</li>
-<li>  switch to using epoll
-(<a href="https://github.com/ros/ros_comm/pull/1217">#1217</a>)</li>
-<li>  monotonic clock for callback queue timeouts
-(<a href="https://github.com/ros/ros_comm/pull/1250">#1250</a>)</li>
-<li>  fix IPv6 initialization order
-(<a href="https://github.com/ros/ros_comm/issues/1262">#1262</a>)</li>
-<li>  changed error message for single threaded spinner
-(<a href="https://github.com/ros/ros_comm/pull/1164">#1164</a>)</li>
-</ul>
-
-<h2 id="1-13-5-2017-11-09">1.13.5 (2017-11-09)</h2>
-
-<h2 id="1-13-4-2017-11-02">1.13.4 (2017-11-02)</h2>
-
-<h2 id="1-13-3-2017-10-25">1.13.3 (2017-10-25)</h2>
-
-<ul>
-<li>  avoid unused parameter warning in TransportTCP
-(<a href="https://github.com/ros/ros_comm/issues/1195">#1195</a>)</li>
-<li>  check if socket options are available before using them
-(<a href="https://github.com/ros/ros_comm/issues/1172">#1172</a>)</li>
-</ul>
-
-<h2 id="1-13-2-2017-08-15">1.13.2 (2017-08-15)</h2>
-
-<ul>
-<li>  only use CLOCK_MONOTONIC if not on OS X
-(<a href="https://github.com/ros/ros_comm/issues/1142">#1142</a>)</li>
-<li>  xmlrpc_manager: use SteadyTime for timeout
-(<a href="https://github.com/ros/ros_comm/issues/1134">#1134</a>)</li>
-<li>  ignore headers with zero stamp in statistics
-(<a href="https://github.com/ros/ros_comm/issues/1127">#1127</a>)</li>
-</ul>
-
-<h2 id="1-13-1-2017-07-27">1.13.1 (2017-07-27)</h2>
-
-<ul>
-<li>  add SteadyTimer, used in TimerManager
-(<a href="https://github.com/ros/ros_comm/issues/1014">#1014</a>)</li>
-<li>  include missing header for writev()
-(<a href="https://github.com/ros/ros_comm/pull/1105">#1105</a>)</li>
-<li>  clean the namespace to get rid of double or trailing forward slashes
-(<a href="https://github.com/ros/ros_comm/issues/1100">#1100</a>)</li>
-<li>  add missing mutex lock for publisher links
-(<a href="https://github.com/ros/ros_comm/pull/1090">#1090</a>)</li>
-<li>  fix race condition that lead to miss first message
-(<a href="https://github.com/ros/ros_comm/issues/1058">#1058</a>)</li>
-<li>  fix bug in transport_tcp on Windows
-(<a href="https://github.com/ros/ros_comm/issues/1050">#1050</a>)</li>
-<li>  add subscriber to connection log messages
-(<a href="https://github.com/ros/ros_comm/issues/1023">#1023</a>)</li>
-<li>  avoid deleting XmlRpcClient while being used in another thread
-(<a href="https://github.com/ros/ros_comm/issues/1013">#1013</a>)</li>
-</ul>
-
-<h2 id="1-13-0-2017-02-22">1.13.0 (2017-02-22)</h2>
-
-<ul>
-<li>  remove support for multiple spinners on the same queue which existed
-only for backward compatibily
-(<a href="https://github.com/ros/ros_comm/pull/988">#988</a>)</li>
-</ul>
-
-<h2 id="1-12-7-2017-02-17">1.12.7 (2017-02-17)</h2>
-
-<ul>
-<li>  move connection specific log message to new name
-roscpp_internal.connections
-(<a href="https://github.com/ros/ros_comm/pull/980">#980</a>)</li>
-<li>  move headers to include/xmlrpcpp
-(<a href="https://github.com/ros/ros_comm/issues/962">#962</a>)</li>
-<li>  fix UDP block number when EAGAIN or EWOULDBLOCK
-(<a href="https://github.com/ros/ros_comm/issues/957">#957</a>)</li>
-<li>  fix return code of master execute function
-(<a href="https://github.com/ros/ros_comm/pull/938">#938</a>)</li>
-<li>  change WallTimerEvent from class to struct
-(<a href="https://github.com/ros/ros_comm/pull/924">#924</a>)</li>
-</ul>
-
-<h2 id="1-12-6-2016-10-26">1.12.6 (2016-10-26)</h2>
-
-<h2 id="1-12-5-2016-09-30">1.12.5 (2016-09-30)</h2>
-
-<h2 id="1-12-4-2016-09-19">1.12.4 (2016-09-19)</h2>
-
-<h2 id="1-12-3-2016-09-17">1.12.3 (2016-09-17)</h2>
-
-<ul>
-<li>  fix multi-threaded spinning
-(<a href="https://github.com/ros/ros_comm/pull/867">#867</a>)</li>
-<li>  fix static destruction order
-(<a href="https://github.com/ros/ros_comm/pull/871">#871</a>)</li>
-<li>  throw exception on ros::init with empty node name
-(<a href="https://github.com/ros/ros_comm/pull/894">#894</a>)</li>
-<li>  improve debug message when queue is full
-(<a href="https://github.com/ros/ros_comm/issues/818">#818</a>)</li>
-</ul>
-
-<h2 id="1-12-2-2016-06-03">1.12.2 (2016-06-03)</h2>
-
-<ul>
-<li>  improve stacktrace for exceptions thrown in callbacks
-(<a href="https://github.com/ros/ros_comm/pull/811">#811</a>)</li>
-<li>  fix segfault if creating outgoing UDP transport fails
-(<a href="https://github.com/ros/ros_comm/pull/807">#807</a>)</li>
-</ul>
-
-<h2 id="1-12-1-2016-04-18">1.12.1 (2016-04-18)</h2>
-
-<ul>
-<li>  use directory specific compiler flags
-(<a href="https://github.com/ros/ros_comm/pull/785">#785</a>)</li>
-</ul>
-
-<h2 id="1-12-0-2016-03-18">1.12.0 (2016-03-18)</h2>
-
-<ul>
-<li>  improve TopicManager::instance
-(<a href="https://github.com/ros/ros_comm/issues/770">#770</a>)</li>
-<li>  change return value of param() to bool
-(<a href="https://github.com/ros/ros_comm/issues/753">#753</a>)</li>
-</ul>
-
-<h2 id="1-11-18-2016-03-17">1.11.18 (2016-03-17)</h2>
-
-<ul>
-<li>  fix CMake warning about non-existing targets</li>
-</ul>
-
-<h2 id="1-11-17-2016-03-11">1.11.17 (2016-03-11)</h2>
-
-<ul>
-<li>  fix order of argument in SubscriberLink interface to match actual
-implemenation (<a href="https://github.com/ros/ros_comm/issues/701">#701</a>)</li>
-<li>  add method for getting all the parameters from the parameter server
-as implemented in the rospy client
-(<a href="https://github.com/ros/ros_comm/issues/739">#739</a>)</li>
-<li>  use boost::make_shared instead of new for constructing
-boost::shared_ptr
-(<a href="https://github.com/ros/ros_comm/issues/740">#740</a>)</li>
-<li>  fix max elements param for statistics window
-(<a href="https://github.com/ros/ros_comm/issues/750">#750</a>)</li>
-<li>  improve NodeHandle constructor documentation
-(<a href="https://github.com/ros/ros_comm/issues/692">#692</a>)</li>
-</ul>
-
-<h2 id="1-11-16-2015-11-09">1.11.16 (2015-11-09)</h2>
-
-<ul>
-<li>  add getROSArg function
-(<a href="https://github.com/ros/ros_comm/pull/694">#694</a>)</li>
-</ul>
-
-<h2 id="1-11-15-2015-10-13">1.11.15 (2015-10-13)</h2>
-
-<ul>
-<li>  fix crash in onRetryTimer() callback
-(<a href="https://github.com/ros/ros_comm/issues/577">#577</a>)</li>
-</ul>
-
-<h2 id="1-11-14-2015-09-19">1.11.14 (2015-09-19)</h2>
-
-<ul>
-<li>  add optional reset argument to Timer::setPeriod()
-(<a href="https://github.com/ros/ros_comm/issues/590">#590</a>)</li>
-<li>  add getParam() and getParamCached() for float
-(<a href="https://github.com/ros/ros_comm/issues/621">#621</a>,
-<a href="https://github.com/ros/ros_comm/issues/623">#623</a>)</li>
-<li>  use explicit bool cast to compile with C++11
-(<a href="https://github.com/ros/ros_comm/pull/632">#632</a>)</li>
-</ul>
-
-<h2 id="1-11-13-2015-04-28">1.11.13 (2015-04-28)</h2>
-
-<h2 id="1-11-12-2015-04-27">1.11.12 (2015-04-27)</h2>
-
-<h2 id="1-11-11-2015-04-16">1.11.11 (2015-04-16)</h2>
-
-<ul>
-<li>  fix memory leak in transport constructor
-(<a href="https://github.com/ros/ros_comm/pull/570">#570</a>)</li>
-<li>  fix computation of stddev in statistics
-(<a href="https://github.com/ros/ros_comm/pull/556">#556</a>)</li>
-<li>  fix empty connection header topic
-(<a href="https://github.com/ros/ros_comm/issues/543">#543</a>)</li>
-<li>  alternative API to get parameter values
-(<a href="https://github.com/ros/ros_comm/pull/592">#592</a>)</li>
-<li>  add getCached() for float parameters
-(<a href="https://github.com/ros/ros_comm/pull/584">#584</a>)</li>
-</ul>
-
-<h2 id="1-11-10-2014-12-22">1.11.10 (2014-12-22)</h2>
-
-<ul>
-<li>  fix various defects reported by coverity</li>
-<li>  fix comment (<a href="https://github.com/ros/ros_comm/issues/529">#529</a>)</li>
-<li>  improve Android support
-(<a href="https://github.com/ros/ros_comm/pull/518">#518</a>)</li>
-</ul>
-
-<h2 id="1-11-9-2014-08-18">1.11.9 (2014-08-18)</h2>
-
-<ul>
-<li>  add accessor to expose whether service is persistent
-(<a href="https://github.com/ros/ros_comm/issues/489">#489</a>)</li>
-<li>  populate delivered_msgs field of TopicStatistics message
-(<a href="https://github.com/ros/ros_comm/issues/486">#486</a>)</li>
-</ul>
-
-<h2 id="1-11-8-2014-08-04">1.11.8 (2014-08-04)</h2>
-
-<ul>
-<li>  fix C++11 compatibility issue
-(<a href="https://github.com/ros/ros_comm/issues/483">#483</a>)</li>
-</ul>
-
-<h2 id="1-11-7-2014-07-18">1.11.7 (2014-07-18)</h2>
-
-<ul>
-<li>  fix segfault due to accessing a NULL pointer for some network
-interfaces (<a href="https://github.com/ros/ros_comm/issues/465">#465</a>)
-(regression from 1.11.6)</li>
-</ul>
-
-<h2 id="1-11-6-2014-07-10">1.11.6 (2014-07-10)</h2>
-
-<ul>
-<li>  check ROS_HOSTNAME for localhost / ROS_IP for 127./::1 and prevent
-connections from other hosts in that case
-(<a href="https://github.com/ros/ros_comm/issues/452">#452</a>)</li>
-</ul>
-
-<h2 id="1-11-5-2014-06-24">1.11.5 (2014-06-24)</h2>
-
-<ul>
-<li>  improve handling dropped connections
-(<a href="https://github.com/ros/ros_comm/issues/434">#434</a>)</li>
-<li>  add header needed for Android
-(<a href="https://github.com/ros/ros_comm/issues/441">#441</a>)</li>
-<li>  fix typo for parameter used for statistics
-(<a href="https://github.com/ros/ros_comm/issues/448">#448</a>)</li>
-</ul>
-
-<h2 id="1-11-4-2014-06-16">1.11.4 (2014-06-16)</h2>
-
-<h2 id="1-11-3-2014-05-21">1.11.3 (2014-05-21)</h2>
-
-<h2 id="1-11-2-2014-05-08">1.11.2 (2014-05-08)</h2>
-
-<h2 id="1-11-1-2014-05-07">1.11.1 (2014-05-07)</h2>
-
-<ul>
-<li>  update API to use boost::signals2
-(<a href="https://github.com/ros/ros_comm/issues/267">#267</a>)</li>
-<li>  only update param cache when being subscribed
-(<a href="https://github.com/ros/ros_comm/issues/351">#351</a>)</li>
-<li>  ensure to remove delete parameters completely</li>
-<li>  invalidate cached parent parameters when namespace parameter is set
-/ changes (<a href="https://github.com/ros/ros_comm/issues/352">#352</a>)</li>
-<li>  add optional topic/connection statistics
-(<a href="https://github.com/ros/ros_comm/issues/398">#398</a>)</li>
-<li>  add transport information in SlaveAPI::getBusInfo() for roscpp &amp;
-rospy (<a href="https://github.com/ros/ros_comm/issues/328">#328</a>)</li>
-<li>  add AsyncSpinner::canStart() to check if a spinner can be started</li>
-</ul>
-
-<h2 id="1-11-0-2014-03-04">1.11.0 (2014-03-04)</h2>
-
-<ul>
-<li>  allow getting parameters with name '/'
-(<a href="https://github.com/ros/ros_comm/issues/313">#313</a>)</li>
-<li>  support for /clock remapping
-(<a href="https://github.com/ros/ros_comm/issues/359">#359</a>)</li>
-<li>  suppress boost::signals deprecation warning
-(<a href="https://github.com/ros/ros_comm/issues/362">#362</a>)</li>
-<li>  use catkin_install_python() to install Python scripts
-(<a href="https://github.com/ros/ros_comm/issues/361">#361</a>)</li>
-</ul>
-
-<h2 id="1-10-0-2014-02-11">1.10.0 (2014-02-11)</h2>
-
-<ul>
-<li>  remove use of __connection header</li>
-</ul>
-
-<h2 id="1-9-54-2014-01-27">1.9.54 (2014-01-27)</h2>
-
-<ul>
-<li>  fix return value of pubUpdate()
-(<a href="https://github.com/ros/ros_comm/issues/334">#334</a>)</li>
-<li>  fix handling optional third xml rpc response argument
-(<a href="https://github.com/ros/ros_comm/issues/335">#335</a>)</li>
-</ul>
-
-<h2 id="1-9-53-2014-01-14">1.9.53 (2014-01-14)</h2>
-
-<h2 id="1-9-52-2014-01-08">1.9.52 (2014-01-08)</h2>
-
-<h2 id="1-9-51-2014-01-07">1.9.51 (2014-01-07)</h2>
-
-<ul>
-<li>  move several client library independent parts from ros_comm into
-roscpp_core, split rosbag storage specific stuff from client
-library usage (<a href="https://github.com/ros/ros_comm/issues/299">#299</a>)</li>
-<li>  add missing version dependency on roscpp_core stuff
-(<a href="https://github.com/ros/ros_comm/issues/299">#299</a>)</li>
-<li>  remove log4cxx dependency from roscpp, using new agnostic interface
-from rosconsole</li>
-<li>  fix compile problem with gcc 4.4
-(<a href="https://github.com/ros/ros_comm/issues/302">#302</a>)</li>
-<li>  fix clang warnings</li>
-<li>  fix usage of boost include directories</li>
-</ul>
-
-<h2 id="1-9-50-2013-10-04">1.9.50 (2013-10-04)</h2>
-
-<h2 id="1-9-49-2013-09-16">1.9.49 (2013-09-16)</h2>
-
-<ul>
-<li>  add rosparam getter/setter for std::vector and std::map
-(<a href="https://github.com/ros/ros_comm/issues/279">#279</a>)</li>
-</ul>
-
-<h2 id="1-9-48-2013-08-21">1.9.48 (2013-08-21)</h2>
-
-<h2 id="1-9-47-2013-07-03">1.9.47 (2013-07-03)</h2>
-
-<h2 id="1-9-46-2013-06-18">1.9.46 (2013-06-18)</h2>
-
-<h2 id="1-9-45-2013-06-06">1.9.45 (2013-06-06)</h2>
-
-<ul>
-<li>  improve handling of UDP transport, when fragmented packets are lost
-or arive out-of-order the connection is not dropped anymore, onle a
-single message is lost
-(<a href="https://github.com/ros/ros_comm/issues/226">#226</a>)</li>
-<li>  fix missing generation of constant definitions for services
-(<a href="https://github.com/ros/gencpp/issues/2">ros/gencpp#2</a>)</li>
-<li>  fix restoring thread context when callback throws an exception
-(<a href="https://github.com/ros/ros_comm/issues/219">#219</a>)</li>
-<li>  fix calling PollManager::shutdown() repeatedly
-(<a href="https://github.com/ros/ros_comm/issues/217">#217</a>)</li>
-</ul>
-
-<h2 id="1-9-44-2013-03-21">1.9.44 (2013-03-21)</h2>
-
-<ul>
-<li>  fix install destination for dll's under Windows</li>
-</ul>
-
-<h2 id="1-9-43-2013-03-13">1.9.43 (2013-03-13)</h2>
-
-<h2 id="1-9-42-2013-03-08">1.9.42 (2013-03-08)</h2>
-
-<ul>
-<li>  improve speed of message generation in dry packages
-(<a href="https://github.com/ros/ros_comm/issues/183">#183</a>)</li>
-<li>  fix roscpp service call deadlock
-(<a href="https://github.com/ros/ros_comm/issues/149">#149</a>)</li>
-<li>  fix freezing service calls when returning false
-(<a href="https://github.com/ros/ros_comm/issues/168">#168</a>)</li>
-<li>  fix error message publishing wrong message type
-(<a href="https://github.com/ros/ros_comm/issues/178">#178</a>)</li>
-<li>  fix missing explicit dependency on pthread
-(<a href="https://github.com/ros/ros_comm/issues/135">#135</a>)</li>
-<li>  fix compiler warning about wrong comparison of message md5 hashes
-(<a href="https://github.com/ros/ros_comm/issues/165">#165</a>)</li>
-</ul>
-
-<h2 id="1-9-41-2013-01-24">1.9.41 (2013-01-24)</h2>
-
-<ul>
-<li>  allow sending data exceeding 2GB in chunks
-(<a href="https://code.ros.org/trac/ros/ticket/4049">#4049</a>)</li>
-<li>  update getParam() doc
-(<a href="https://code.ros.org/trac/ros/ticket/1460">#1460</a>)</li>
-<li>  add param::get(float)
-(<a href="https://code.ros.org/trac/ros/ticket/3754">#3754</a>)</li>
-<li>  update inactive assert when publishing message with md5sum "*",
-update related tests
-(<a href="https://code.ros.org/trac/ros/ticket/3714">#3714</a>)</li>
-<li>  fix ros master retry timeout
-(<a href="https://code.ros.org/trac/ros/ticket/4024">#4024</a>)</li>
-<li>  fix inactive assert when publishing message with wrong type
-(<a href="https://code.ros.org/trac/ros/ticket/3714">#3714</a>)</li>
-</ul>
-
-<h2 id="1-9-40-2013-01-13">1.9.40 (2013-01-13)</h2>
-
-<h2 id="1-9-39-2012-12-29">1.9.39 (2012-12-29)</h2>
-
-<ul>
-<li>  first public release for Groovy</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1784,7 +1349,7 @@ update related tests
                       <td><a href="/r/find_object_2d/github-introlab-find-object">github-introlab-find-object</a></td>
                       <td class="text-center">
                         
-                        <a href="/p/find_object_2d/github-introlab-find-object#melodic-deps" class="inactive">
+                        <a href="/p/find_object_2d/github-introlab-find-object#melodic-deps" >
                           <span class="glyphicon glyphicon-arrow-right"></span>
                         </a>
                       </td>
@@ -2443,6 +2008,31 @@ update related tests
                       <td class="text-center">
                         
                         <a href="/p/libuvc_camera/github-ros-drivers-libuvc_ros#melodic-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/lms1xx/github-clearpathrobotics-LMS1xx#melodic">lms1xx</a></td>
+                      <td><a href="/r/lms1xx/github-clearpathrobotics-LMS1xx">github-clearpathrobotics-LMS1xx</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/lms1xx/github-clearpathrobotics-LMS1xx#melodic-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td><a href="/p/lms1xx/github-clearpathrobotics-lms1xx#melodic">lms1xx</a></td>
+                      <td><a href="/r/lms1xx/github-clearpathrobotics-lms1xx">github-clearpathrobotics-lms1xx</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/lms1xx/github-clearpathrobotics-lms1xx#melodic-deps" class="inactive">
                           <span class="glyphicon glyphicon-arrow-right"></span>
                         </a>
                       </td>
@@ -3921,6 +3511,20 @@ update related tests
                       <td class="text-center">
                         
                         <a href="/p/rqt_gui_cpp/github-ros-visualization-rqt#melodic-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/rtabmap_ros/github-introlab-rtabmap_ros#melodic">rtabmap_ros</a></td>
+                      <td><a href="/r/rtabmap_ros/github-introlab-rtabmap_ros">github-introlab-rtabmap_ros</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/rtabmap_ros/github-introlab-rtabmap_ros#melodic-deps" class="inactive">
                           <span class="glyphicon glyphicon-arrow-right"></span>
                         </a>
                       </td>
@@ -5654,6 +5258,62 @@ update related tests
                     
                     
                     <tr>
+                      <td><a href="/p/mbf_abstract_nav/github-magazino-move_base_flex#melodic">mbf_abstract_nav</a></td>
+                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/mbf_abstract_nav/github-magazino-move_base_flex#melodic-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/mbf_costmap_nav/github-magazino-move_base_flex#melodic">mbf_costmap_nav</a></td>
+                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/mbf_costmap_nav/github-magazino-move_base_flex#melodic-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/mbf_simple_nav/github-magazino-move_base_flex#melodic">mbf_simple_nav</a></td>
+                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/mbf_simple_nav/github-magazino-move_base_flex#melodic-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/mbf_utility/github-magazino-move_base_flex#melodic">mbf_utility</a></td>
+                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/mbf_utility/github-magazino-move_base_flex#melodic-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
                       <td><a href="/p/assisted_teleop/github-ros-planning-navigation_experimental#melodic">assisted_teleop</a></td>
                       <td><a href="/r/navigation_experimental/github-ros-planning-navigation_experimental">github-ros-planning-navigation_experimental</a></td>
                       <td class="text-center">
@@ -6065,6 +5725,20 @@ update related tests
                       <td class="text-center">
                         
                         <a href="/p/dynamixel_workbench_toolbox/github-ROBOTIS-GIT-dynamixel-workbench#melodic-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/ensenso_camera/github-ensenso-ros_driver#melodic">ensenso_camera</a></td>
+                      <td><a href="/r/ensenso_driver/github-ensenso-ros_driver">github-ensenso-ros_driver</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/ensenso_camera/github-ensenso-ros_driver#melodic-deps" >
                           <span class="glyphicon glyphicon-arrow-right"></span>
                         </a>
                       </td>
@@ -6887,9 +6561,9 @@ update related tests
             
               <li><a href="https://github.com/ros/ros_comm/blob/melodic-devel/clients/roscpp/srv/GetLoggers.srv" target="_blank">srv/GetLoggers.srv</a></li>
             
-              <li><a href="https://github.com/ros/ros_comm/blob/melodic-devel/clients/roscpp/srv/SetLoggerLevel.srv" target="_blank">srv/SetLoggerLevel.srv</a></li>
-            
               <li><a href="https://github.com/ros/ros_comm/blob/melodic-devel/clients/roscpp/srv/Empty.srv" target="_blank">srv/Empty.srv</a></li>
+            
+              <li><a href="https://github.com/ros/ros_comm/blob/melodic-devel/clients/roscpp/srv/SetLoggerLevel.srv" target="_blank">srv/SetLoggerLevel.srv</a></li>
             
           </ul>
         
@@ -7559,423 +7233,7 @@ xmlrpcpp
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-roscpp">Changelog for package roscpp</h1>
-
-<h2 id="1-13-7-2018-08-17">1.13.7 (2018-08-17)</h2>
-
-<ul>
-<li>  add hasStarted() to Timer API
-(<a href="https://github.com/ros/ros_comm/issues/1464">#1464</a>)</li>
-<li>  force a rebuild of the pollset on flag changes
-(<a href="https://github.com/ros/ros_comm/issues/1393">#1393</a>)</li>
-<li>  fix integer overflow for oneshot timers
-(<a href="https://github.com/ros/ros_comm/issues/1382">#1382</a>)</li>
-<li>  convert the period standard deviation in StatisticsLogger to
-Duration at the end
-(<a href="https://github.com/ros/ros_comm/issues/1361">#1361</a>)</li>
-<li>  replace DCL pattern with static variable
-(<a href="https://github.com/ros/ros_comm/issues/1365">#1365</a>)</li>
-</ul>
-
-<h2 id="1-13-6-2018-02-05">1.13.6 (2018-02-05)</h2>
-
-<ul>
-<li>  avoid recreating poll set
-(<a href="https://github.com/ros/ros_comm/pull/1281">#1281</a>)</li>
-<li>  switch to using epoll
-(<a href="https://github.com/ros/ros_comm/pull/1217">#1217</a>)</li>
-<li>  monotonic clock for callback queue timeouts
-(<a href="https://github.com/ros/ros_comm/pull/1250">#1250</a>)</li>
-<li>  fix IPv6 initialization order
-(<a href="https://github.com/ros/ros_comm/issues/1262">#1262</a>)</li>
-<li>  changed error message for single threaded spinner
-(<a href="https://github.com/ros/ros_comm/pull/1164">#1164</a>)</li>
-</ul>
-
-<h2 id="1-13-5-2017-11-09">1.13.5 (2017-11-09)</h2>
-
-<h2 id="1-13-4-2017-11-02">1.13.4 (2017-11-02)</h2>
-
-<h2 id="1-13-3-2017-10-25">1.13.3 (2017-10-25)</h2>
-
-<ul>
-<li>  avoid unused parameter warning in TransportTCP
-(<a href="https://github.com/ros/ros_comm/issues/1195">#1195</a>)</li>
-<li>  check if socket options are available before using them
-(<a href="https://github.com/ros/ros_comm/issues/1172">#1172</a>)</li>
-</ul>
-
-<h2 id="1-13-2-2017-08-15">1.13.2 (2017-08-15)</h2>
-
-<ul>
-<li>  only use CLOCK_MONOTONIC if not on OS X
-(<a href="https://github.com/ros/ros_comm/issues/1142">#1142</a>)</li>
-<li>  xmlrpc_manager: use SteadyTime for timeout
-(<a href="https://github.com/ros/ros_comm/issues/1134">#1134</a>)</li>
-<li>  ignore headers with zero stamp in statistics
-(<a href="https://github.com/ros/ros_comm/issues/1127">#1127</a>)</li>
-</ul>
-
-<h2 id="1-13-1-2017-07-27">1.13.1 (2017-07-27)</h2>
-
-<ul>
-<li>  add SteadyTimer, used in TimerManager
-(<a href="https://github.com/ros/ros_comm/issues/1014">#1014</a>)</li>
-<li>  include missing header for writev()
-(<a href="https://github.com/ros/ros_comm/pull/1105">#1105</a>)</li>
-<li>  clean the namespace to get rid of double or trailing forward slashes
-(<a href="https://github.com/ros/ros_comm/issues/1100">#1100</a>)</li>
-<li>  add missing mutex lock for publisher links
-(<a href="https://github.com/ros/ros_comm/pull/1090">#1090</a>)</li>
-<li>  fix race condition that lead to miss first message
-(<a href="https://github.com/ros/ros_comm/issues/1058">#1058</a>)</li>
-<li>  fix bug in transport_tcp on Windows
-(<a href="https://github.com/ros/ros_comm/issues/1050">#1050</a>)</li>
-<li>  add subscriber to connection log messages
-(<a href="https://github.com/ros/ros_comm/issues/1023">#1023</a>)</li>
-<li>  avoid deleting XmlRpcClient while being used in another thread
-(<a href="https://github.com/ros/ros_comm/issues/1013">#1013</a>)</li>
-</ul>
-
-<h2 id="1-13-0-2017-02-22">1.13.0 (2017-02-22)</h2>
-
-<ul>
-<li>  remove support for multiple spinners on the same queue which existed
-only for backward compatibily
-(<a href="https://github.com/ros/ros_comm/pull/988">#988</a>)</li>
-</ul>
-
-<h2 id="1-12-7-2017-02-17">1.12.7 (2017-02-17)</h2>
-
-<ul>
-<li>  move connection specific log message to new name
-roscpp_internal.connections
-(<a href="https://github.com/ros/ros_comm/pull/980">#980</a>)</li>
-<li>  move headers to include/xmlrpcpp
-(<a href="https://github.com/ros/ros_comm/issues/962">#962</a>)</li>
-<li>  fix UDP block number when EAGAIN or EWOULDBLOCK
-(<a href="https://github.com/ros/ros_comm/issues/957">#957</a>)</li>
-<li>  fix return code of master execute function
-(<a href="https://github.com/ros/ros_comm/pull/938">#938</a>)</li>
-<li>  change WallTimerEvent from class to struct
-(<a href="https://github.com/ros/ros_comm/pull/924">#924</a>)</li>
-</ul>
-
-<h2 id="1-12-6-2016-10-26">1.12.6 (2016-10-26)</h2>
-
-<h2 id="1-12-5-2016-09-30">1.12.5 (2016-09-30)</h2>
-
-<h2 id="1-12-4-2016-09-19">1.12.4 (2016-09-19)</h2>
-
-<h2 id="1-12-3-2016-09-17">1.12.3 (2016-09-17)</h2>
-
-<ul>
-<li>  fix multi-threaded spinning
-(<a href="https://github.com/ros/ros_comm/pull/867">#867</a>)</li>
-<li>  fix static destruction order
-(<a href="https://github.com/ros/ros_comm/pull/871">#871</a>)</li>
-<li>  throw exception on ros::init with empty node name
-(<a href="https://github.com/ros/ros_comm/pull/894">#894</a>)</li>
-<li>  improve debug message when queue is full
-(<a href="https://github.com/ros/ros_comm/issues/818">#818</a>)</li>
-</ul>
-
-<h2 id="1-12-2-2016-06-03">1.12.2 (2016-06-03)</h2>
-
-<ul>
-<li>  improve stacktrace for exceptions thrown in callbacks
-(<a href="https://github.com/ros/ros_comm/pull/811">#811</a>)</li>
-<li>  fix segfault if creating outgoing UDP transport fails
-(<a href="https://github.com/ros/ros_comm/pull/807">#807</a>)</li>
-</ul>
-
-<h2 id="1-12-1-2016-04-18">1.12.1 (2016-04-18)</h2>
-
-<ul>
-<li>  use directory specific compiler flags
-(<a href="https://github.com/ros/ros_comm/pull/785">#785</a>)</li>
-</ul>
-
-<h2 id="1-12-0-2016-03-18">1.12.0 (2016-03-18)</h2>
-
-<ul>
-<li>  improve TopicManager::instance
-(<a href="https://github.com/ros/ros_comm/issues/770">#770</a>)</li>
-<li>  change return value of param() to bool
-(<a href="https://github.com/ros/ros_comm/issues/753">#753</a>)</li>
-</ul>
-
-<h2 id="1-11-18-2016-03-17">1.11.18 (2016-03-17)</h2>
-
-<ul>
-<li>  fix CMake warning about non-existing targets</li>
-</ul>
-
-<h2 id="1-11-17-2016-03-11">1.11.17 (2016-03-11)</h2>
-
-<ul>
-<li>  fix order of argument in SubscriberLink interface to match actual
-implemenation (<a href="https://github.com/ros/ros_comm/issues/701">#701</a>)</li>
-<li>  add method for getting all the parameters from the parameter server
-as implemented in the rospy client
-(<a href="https://github.com/ros/ros_comm/issues/739">#739</a>)</li>
-<li>  use boost::make_shared instead of new for constructing
-boost::shared_ptr
-(<a href="https://github.com/ros/ros_comm/issues/740">#740</a>)</li>
-<li>  fix max elements param for statistics window
-(<a href="https://github.com/ros/ros_comm/issues/750">#750</a>)</li>
-<li>  improve NodeHandle constructor documentation
-(<a href="https://github.com/ros/ros_comm/issues/692">#692</a>)</li>
-</ul>
-
-<h2 id="1-11-16-2015-11-09">1.11.16 (2015-11-09)</h2>
-
-<ul>
-<li>  add getROSArg function
-(<a href="https://github.com/ros/ros_comm/pull/694">#694</a>)</li>
-</ul>
-
-<h2 id="1-11-15-2015-10-13">1.11.15 (2015-10-13)</h2>
-
-<ul>
-<li>  fix crash in onRetryTimer() callback
-(<a href="https://github.com/ros/ros_comm/issues/577">#577</a>)</li>
-</ul>
-
-<h2 id="1-11-14-2015-09-19">1.11.14 (2015-09-19)</h2>
-
-<ul>
-<li>  add optional reset argument to Timer::setPeriod()
-(<a href="https://github.com/ros/ros_comm/issues/590">#590</a>)</li>
-<li>  add getParam() and getParamCached() for float
-(<a href="https://github.com/ros/ros_comm/issues/621">#621</a>,
-<a href="https://github.com/ros/ros_comm/issues/623">#623</a>)</li>
-<li>  use explicit bool cast to compile with C++11
-(<a href="https://github.com/ros/ros_comm/pull/632">#632</a>)</li>
-</ul>
-
-<h2 id="1-11-13-2015-04-28">1.11.13 (2015-04-28)</h2>
-
-<h2 id="1-11-12-2015-04-27">1.11.12 (2015-04-27)</h2>
-
-<h2 id="1-11-11-2015-04-16">1.11.11 (2015-04-16)</h2>
-
-<ul>
-<li>  fix memory leak in transport constructor
-(<a href="https://github.com/ros/ros_comm/pull/570">#570</a>)</li>
-<li>  fix computation of stddev in statistics
-(<a href="https://github.com/ros/ros_comm/pull/556">#556</a>)</li>
-<li>  fix empty connection header topic
-(<a href="https://github.com/ros/ros_comm/issues/543">#543</a>)</li>
-<li>  alternative API to get parameter values
-(<a href="https://github.com/ros/ros_comm/pull/592">#592</a>)</li>
-<li>  add getCached() for float parameters
-(<a href="https://github.com/ros/ros_comm/pull/584">#584</a>)</li>
-</ul>
-
-<h2 id="1-11-10-2014-12-22">1.11.10 (2014-12-22)</h2>
-
-<ul>
-<li>  fix various defects reported by coverity</li>
-<li>  fix comment (<a href="https://github.com/ros/ros_comm/issues/529">#529</a>)</li>
-<li>  improve Android support
-(<a href="https://github.com/ros/ros_comm/pull/518">#518</a>)</li>
-</ul>
-
-<h2 id="1-11-9-2014-08-18">1.11.9 (2014-08-18)</h2>
-
-<ul>
-<li>  add accessor to expose whether service is persistent
-(<a href="https://github.com/ros/ros_comm/issues/489">#489</a>)</li>
-<li>  populate delivered_msgs field of TopicStatistics message
-(<a href="https://github.com/ros/ros_comm/issues/486">#486</a>)</li>
-</ul>
-
-<h2 id="1-11-8-2014-08-04">1.11.8 (2014-08-04)</h2>
-
-<ul>
-<li>  fix C++11 compatibility issue
-(<a href="https://github.com/ros/ros_comm/issues/483">#483</a>)</li>
-</ul>
-
-<h2 id="1-11-7-2014-07-18">1.11.7 (2014-07-18)</h2>
-
-<ul>
-<li>  fix segfault due to accessing a NULL pointer for some network
-interfaces (<a href="https://github.com/ros/ros_comm/issues/465">#465</a>)
-(regression from 1.11.6)</li>
-</ul>
-
-<h2 id="1-11-6-2014-07-10">1.11.6 (2014-07-10)</h2>
-
-<ul>
-<li>  check ROS_HOSTNAME for localhost / ROS_IP for 127./::1 and prevent
-connections from other hosts in that case
-(<a href="https://github.com/ros/ros_comm/issues/452">#452</a>)</li>
-</ul>
-
-<h2 id="1-11-5-2014-06-24">1.11.5 (2014-06-24)</h2>
-
-<ul>
-<li>  improve handling dropped connections
-(<a href="https://github.com/ros/ros_comm/issues/434">#434</a>)</li>
-<li>  add header needed for Android
-(<a href="https://github.com/ros/ros_comm/issues/441">#441</a>)</li>
-<li>  fix typo for parameter used for statistics
-(<a href="https://github.com/ros/ros_comm/issues/448">#448</a>)</li>
-</ul>
-
-<h2 id="1-11-4-2014-06-16">1.11.4 (2014-06-16)</h2>
-
-<h2 id="1-11-3-2014-05-21">1.11.3 (2014-05-21)</h2>
-
-<h2 id="1-11-2-2014-05-08">1.11.2 (2014-05-08)</h2>
-
-<h2 id="1-11-1-2014-05-07">1.11.1 (2014-05-07)</h2>
-
-<ul>
-<li>  update API to use boost::signals2
-(<a href="https://github.com/ros/ros_comm/issues/267">#267</a>)</li>
-<li>  only update param cache when being subscribed
-(<a href="https://github.com/ros/ros_comm/issues/351">#351</a>)</li>
-<li>  ensure to remove delete parameters completely</li>
-<li>  invalidate cached parent parameters when namespace parameter is set
-/ changes (<a href="https://github.com/ros/ros_comm/issues/352">#352</a>)</li>
-<li>  add optional topic/connection statistics
-(<a href="https://github.com/ros/ros_comm/issues/398">#398</a>)</li>
-<li>  add transport information in SlaveAPI::getBusInfo() for roscpp &amp;
-rospy (<a href="https://github.com/ros/ros_comm/issues/328">#328</a>)</li>
-<li>  add AsyncSpinner::canStart() to check if a spinner can be started</li>
-</ul>
-
-<h2 id="1-11-0-2014-03-04">1.11.0 (2014-03-04)</h2>
-
-<ul>
-<li>  allow getting parameters with name '/'
-(<a href="https://github.com/ros/ros_comm/issues/313">#313</a>)</li>
-<li>  support for /clock remapping
-(<a href="https://github.com/ros/ros_comm/issues/359">#359</a>)</li>
-<li>  suppress boost::signals deprecation warning
-(<a href="https://github.com/ros/ros_comm/issues/362">#362</a>)</li>
-<li>  use catkin_install_python() to install Python scripts
-(<a href="https://github.com/ros/ros_comm/issues/361">#361</a>)</li>
-</ul>
-
-<h2 id="1-10-0-2014-02-11">1.10.0 (2014-02-11)</h2>
-
-<ul>
-<li>  remove use of __connection header</li>
-</ul>
-
-<h2 id="1-9-54-2014-01-27">1.9.54 (2014-01-27)</h2>
-
-<ul>
-<li>  fix return value of pubUpdate()
-(<a href="https://github.com/ros/ros_comm/issues/334">#334</a>)</li>
-<li>  fix handling optional third xml rpc response argument
-(<a href="https://github.com/ros/ros_comm/issues/335">#335</a>)</li>
-</ul>
-
-<h2 id="1-9-53-2014-01-14">1.9.53 (2014-01-14)</h2>
-
-<h2 id="1-9-52-2014-01-08">1.9.52 (2014-01-08)</h2>
-
-<h2 id="1-9-51-2014-01-07">1.9.51 (2014-01-07)</h2>
-
-<ul>
-<li>  move several client library independent parts from ros_comm into
-roscpp_core, split rosbag storage specific stuff from client
-library usage (<a href="https://github.com/ros/ros_comm/issues/299">#299</a>)</li>
-<li>  add missing version dependency on roscpp_core stuff
-(<a href="https://github.com/ros/ros_comm/issues/299">#299</a>)</li>
-<li>  remove log4cxx dependency from roscpp, using new agnostic interface
-from rosconsole</li>
-<li>  fix compile problem with gcc 4.4
-(<a href="https://github.com/ros/ros_comm/issues/302">#302</a>)</li>
-<li>  fix clang warnings</li>
-<li>  fix usage of boost include directories</li>
-</ul>
-
-<h2 id="1-9-50-2013-10-04">1.9.50 (2013-10-04)</h2>
-
-<h2 id="1-9-49-2013-09-16">1.9.49 (2013-09-16)</h2>
-
-<ul>
-<li>  add rosparam getter/setter for std::vector and std::map
-(<a href="https://github.com/ros/ros_comm/issues/279">#279</a>)</li>
-</ul>
-
-<h2 id="1-9-48-2013-08-21">1.9.48 (2013-08-21)</h2>
-
-<h2 id="1-9-47-2013-07-03">1.9.47 (2013-07-03)</h2>
-
-<h2 id="1-9-46-2013-06-18">1.9.46 (2013-06-18)</h2>
-
-<h2 id="1-9-45-2013-06-06">1.9.45 (2013-06-06)</h2>
-
-<ul>
-<li>  improve handling of UDP transport, when fragmented packets are lost
-or arive out-of-order the connection is not dropped anymore, onle a
-single message is lost
-(<a href="https://github.com/ros/ros_comm/issues/226">#226</a>)</li>
-<li>  fix missing generation of constant definitions for services
-(<a href="https://github.com/ros/gencpp/issues/2">ros/gencpp#2</a>)</li>
-<li>  fix restoring thread context when callback throws an exception
-(<a href="https://github.com/ros/ros_comm/issues/219">#219</a>)</li>
-<li>  fix calling PollManager::shutdown() repeatedly
-(<a href="https://github.com/ros/ros_comm/issues/217">#217</a>)</li>
-</ul>
-
-<h2 id="1-9-44-2013-03-21">1.9.44 (2013-03-21)</h2>
-
-<ul>
-<li>  fix install destination for dll's under Windows</li>
-</ul>
-
-<h2 id="1-9-43-2013-03-13">1.9.43 (2013-03-13)</h2>
-
-<h2 id="1-9-42-2013-03-08">1.9.42 (2013-03-08)</h2>
-
-<ul>
-<li>  improve speed of message generation in dry packages
-(<a href="https://github.com/ros/ros_comm/issues/183">#183</a>)</li>
-<li>  fix roscpp service call deadlock
-(<a href="https://github.com/ros/ros_comm/issues/149">#149</a>)</li>
-<li>  fix freezing service calls when returning false
-(<a href="https://github.com/ros/ros_comm/issues/168">#168</a>)</li>
-<li>  fix error message publishing wrong message type
-(<a href="https://github.com/ros/ros_comm/issues/178">#178</a>)</li>
-<li>  fix missing explicit dependency on pthread
-(<a href="https://github.com/ros/ros_comm/issues/135">#135</a>)</li>
-<li>  fix compiler warning about wrong comparison of message md5 hashes
-(<a href="https://github.com/ros/ros_comm/issues/165">#165</a>)</li>
-</ul>
-
-<h2 id="1-9-41-2013-01-24">1.9.41 (2013-01-24)</h2>
-
-<ul>
-<li>  allow sending data exceeding 2GB in chunks
-(<a href="https://code.ros.org/trac/ros/ticket/4049">#4049</a>)</li>
-<li>  update getParam() doc
-(<a href="https://code.ros.org/trac/ros/ticket/1460">#1460</a>)</li>
-<li>  add param::get(float)
-(<a href="https://code.ros.org/trac/ros/ticket/3754">#3754</a>)</li>
-<li>  update inactive assert when publishing message with md5sum "*",
-update related tests
-(<a href="https://code.ros.org/trac/ros/ticket/3714">#3714</a>)</li>
-<li>  fix ros master retry timeout
-(<a href="https://code.ros.org/trac/ros/ticket/4024">#4024</a>)</li>
-<li>  fix inactive assert when publishing message with wrong type
-(<a href="https://code.ros.org/trac/ros/ticket/3714">#3714</a>)</li>
-</ul>
-
-<h2 id="1-9-40-2013-01-13">1.9.40 (2013-01-13)</h2>
-
-<h2 id="1-9-39-2012-12-29">1.9.39 (2012-12-29)</h2>
-
-<ul>
-<li>  first public release for Groovy</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -8657,7 +7915,7 @@ update related tests
                       <td><a href="/r/find_object_2d/github-introlab-find-object">github-introlab-find-object</a></td>
                       <td class="text-center">
                         
-                        <a href="/p/find_object_2d/github-introlab-find-object#lunar-deps" class="inactive">
+                        <a href="/p/find_object_2d/github-introlab-find-object#lunar-deps" >
                           <span class="glyphicon glyphicon-arrow-right"></span>
                         </a>
                       </td>
@@ -9862,6 +9120,34 @@ update related tests
                       <td class="text-center">
                         
                         <a href="/p/pointgrey_camera_driver/github-ros-drivers-pointgrey_camera_driver#lunar-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/pr2_teleop/github-pr2-pr2_apps#lunar">pr2_teleop</a></td>
+                      <td><a href="/r/pr2_apps/github-pr2-pr2_apps">github-pr2-pr2_apps</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/pr2_teleop/github-pr2-pr2_apps#lunar-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/pr2_teleop_general/github-pr2-pr2_apps#lunar">pr2_teleop_general</a></td>
+                      <td><a href="/r/pr2_apps/github-pr2-pr2_apps">github-pr2-pr2_apps</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/pr2_teleop_general/github-pr2-pr2_apps#lunar-deps" >
                           <span class="glyphicon glyphicon-arrow-right"></span>
                         </a>
                       </td>
@@ -12209,6 +11495,62 @@ update related tests
                     
                     
                     <tr>
+                      <td><a href="/p/mbf_abstract_nav/github-magazino-move_base_flex#lunar">mbf_abstract_nav</a></td>
+                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/mbf_abstract_nav/github-magazino-move_base_flex#lunar-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/mbf_costmap_nav/github-magazino-move_base_flex#lunar">mbf_costmap_nav</a></td>
+                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/mbf_costmap_nav/github-magazino-move_base_flex#lunar-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/mbf_simple_nav/github-magazino-move_base_flex#lunar">mbf_simple_nav</a></td>
+                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/mbf_simple_nav/github-magazino-move_base_flex#lunar-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/mbf_utility/github-magazino-move_base_flex#lunar">mbf_utility</a></td>
+                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/mbf_utility/github-magazino-move_base_flex#lunar-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
                       <td><a href="/p/assisted_teleop/github-ros-planning-navigation_experimental#lunar">assisted_teleop</a></td>
                       <td><a href="/r/navigation_experimental/github-ros-planning-navigation_experimental">github-ros-planning-navigation_experimental</a></td>
                       <td class="text-center">
@@ -12741,62 +12083,6 @@ update related tests
                     
                     
                     <tr>
-                      <td><a href="/p/mbf_abstract_nav/github-magazino-move_base_flex#lunar">mbf_abstract_nav</a></td>
-                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/mbf_abstract_nav/github-magazino-move_base_flex#lunar-deps" >
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/mbf_costmap_nav/github-magazino-move_base_flex#lunar">mbf_costmap_nav</a></td>
-                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/mbf_costmap_nav/github-magazino-move_base_flex#lunar-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/mbf_simple_nav/github-magazino-move_base_flex#lunar">mbf_simple_nav</a></td>
-                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/mbf_simple_nav/github-magazino-move_base_flex#lunar-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/mbf_utility/github-magazino-move_base_flex#lunar">mbf_utility</a></td>
-                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/mbf_utility/github-magazino-move_base_flex#lunar-deps" >
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
                       <td><a href="/p/nerian_stereo/github-nerian-vision-nerian_stereo#lunar">nerian_stereo</a></td>
                       <td><a href="/r/nerian_stereo/github-nerian-vision-nerian_stereo">github-nerian-vision-nerian_stereo</a></td>
                       <td class="text-center">
@@ -13120,9 +12406,9 @@ update related tests
             
               <li><a href="https://github.com/ros/ros_comm/blob/lunar-devel/clients/roscpp/srv/GetLoggers.srv" target="_blank">srv/GetLoggers.srv</a></li>
             
-              <li><a href="https://github.com/ros/ros_comm/blob/lunar-devel/clients/roscpp/srv/SetLoggerLevel.srv" target="_blank">srv/SetLoggerLevel.srv</a></li>
-            
               <li><a href="https://github.com/ros/ros_comm/blob/lunar-devel/clients/roscpp/srv/Empty.srv" target="_blank">srv/Empty.srv</a></li>
+            
+              <li><a href="https://github.com/ros/ros_comm/blob/lunar-devel/clients/roscpp/srv/SetLoggerLevel.srv" target="_blank">srv/SetLoggerLevel.srv</a></li>
             
           </ul>
         
@@ -13792,405 +13078,7 @@ xmlrpcpp
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-roscpp">Changelog for package roscpp</h1>
-
-<h2 id="1-12-14-2018-08-23">1.12.14 (2018-08-23)</h2>
-
-<ul>
-<li>  add hasStarted() to Timer API
-(<a href="https://github.com/ros/ros_comm/issues/1464">#1464</a>)</li>
-<li>  force a rebuild of the pollset on flag changes
-(<a href="https://github.com/ros/ros_comm/issues/1393">#1393</a>)</li>
-<li>  fix integer overflow for oneshot timers
-(<a href="https://github.com/ros/ros_comm/issues/1382">#1382</a>)</li>
-<li>  convert the period standard deviation in StatisticsLogger to
-Duration at the end
-(<a href="https://github.com/ros/ros_comm/issues/1361">#1361</a>)</li>
-<li>  replace DCL pattern with static variable
-(<a href="https://github.com/ros/ros_comm/issues/1365">#1365</a>)</li>
-</ul>
-
-<h2 id="1-12-13-2018-02-21">1.12.13 (2018-02-21)</h2>
-
-<ul>
-<li>  avoid recreating poll set
-(<a href="https://github.com/ros/ros_comm/pull/1281">#1281</a>)</li>
-<li>  switch to using epoll
-(<a href="https://github.com/ros/ros_comm/pull/1217">#1217</a>)</li>
-<li>  monotonic clock for callback queue timeouts
-(<a href="https://github.com/ros/ros_comm/pull/1250">#1250</a>)</li>
-<li>  fix IPv6 initialization order
-(<a href="https://github.com/ros/ros_comm/issues/1262">#1262</a>)</li>
-<li>  changed error message for single threaded spinner
-(<a href="https://github.com/ros/ros_comm/pull/1164">#1164</a>)</li>
-</ul>
-
-<h2 id="1-12-12-2017-11-16">1.12.12 (2017-11-16)</h2>
-
-<h2 id="1-12-11-2017-11-07">1.12.11 (2017-11-07)</h2>
-
-<h2 id="1-12-10-2017-11-06">1.12.10 (2017-11-06)</h2>
-
-<h2 id="1-12-9-2017-11-06">1.12.9 (2017-11-06)</h2>
-
-<h2 id="1-12-8-2017-11-06">1.12.8 (2017-11-06)</h2>
-
-<ul>
-<li>  check if socket options are available before using them
-(<a href="https://github.com/ros/ros_comm/issues/1172">#1172</a>)</li>
-<li>  only use CLOCK_MONOTONIC if not on OS X
-(<a href="https://github.com/ros/ros_comm/issues/1142">#1142</a>)</li>
-<li>  xmlrpc_manager: use SteadyTime for timeout
-(<a href="https://github.com/ros/ros_comm/issues/1134">#1134</a>)</li>
-<li>  ignore headers with zero stamp in statistics
-(<a href="https://github.com/ros/ros_comm/issues/1127">#1127</a>)</li>
-<li>  add SteadyTimer, used in TimerManager
-(<a href="https://github.com/ros/ros_comm/issues/1014">#1014</a>)</li>
-<li>  include missing header for writev()
-(<a href="https://github.com/ros/ros_comm/pull/1105">#1105</a>)</li>
-<li>  add missing mutex lock for publisher links
-(<a href="https://github.com/ros/ros_comm/pull/1090">#1090</a>)</li>
-<li>  fix race condition that lead to miss first message
-(<a href="https://github.com/ros/ros_comm/issues/1058">#1058</a>)</li>
-<li>  fix bug in transport_tcp on Windows
-(<a href="https://github.com/ros/ros_comm/issues/1050">#1050</a>)</li>
-<li>  add subscriber to connection log messages
-(<a href="https://github.com/ros/ros_comm/issues/1023">#1023</a>)</li>
-<li>  avoid deleting XmlRpcClient while being used in another thread
-(<a href="https://github.com/ros/ros_comm/issues/1013">#1013</a>)</li>
-</ul>
-
-<h2 id="1-12-7-2017-02-17">1.12.7 (2017-02-17)</h2>
-
-<ul>
-<li>  move connection specific log message to new name
-roscpp_internal.connections
-(<a href="https://github.com/ros/ros_comm/pull/980">#980</a>)</li>
-<li>  move headers to include/xmlrpcpp
-(<a href="https://github.com/ros/ros_comm/issues/962">#962</a>)</li>
-<li>  fix UDP block number when EAGAIN or EWOULDBLOCK
-(<a href="https://github.com/ros/ros_comm/issues/957">#957</a>)</li>
-<li>  fix return code of master execute function
-(<a href="https://github.com/ros/ros_comm/pull/938">#938</a>)</li>
-<li>  change WallTimerEvent from class to struct
-(<a href="https://github.com/ros/ros_comm/pull/924">#924</a>)</li>
-</ul>
-
-<h2 id="1-12-6-2016-10-26">1.12.6 (2016-10-26)</h2>
-
-<h2 id="1-12-5-2016-09-30">1.12.5 (2016-09-30)</h2>
-
-<h2 id="1-12-4-2016-09-19">1.12.4 (2016-09-19)</h2>
-
-<h2 id="1-12-3-2016-09-17">1.12.3 (2016-09-17)</h2>
-
-<ul>
-<li>  fix multi-threaded spinning
-(<a href="https://github.com/ros/ros_comm/pull/867">#867</a>)</li>
-<li>  fix static destruction order
-(<a href="https://github.com/ros/ros_comm/pull/871">#871</a>)</li>
-<li>  throw exception on ros::init with empty node name
-(<a href="https://github.com/ros/ros_comm/pull/894">#894</a>)</li>
-<li>  improve debug message when queue is full
-(<a href="https://github.com/ros/ros_comm/issues/818">#818</a>)</li>
-</ul>
-
-<h2 id="1-12-2-2016-06-03">1.12.2 (2016-06-03)</h2>
-
-<ul>
-<li>  improve stacktrace for exceptions thrown in callbacks
-(<a href="https://github.com/ros/ros_comm/pull/811">#811</a>)</li>
-<li>  fix segfault if creating outgoing UDP transport fails
-(<a href="https://github.com/ros/ros_comm/pull/807">#807</a>)</li>
-</ul>
-
-<h2 id="1-12-1-2016-04-18">1.12.1 (2016-04-18)</h2>
-
-<ul>
-<li>  use directory specific compiler flags
-(<a href="https://github.com/ros/ros_comm/pull/785">#785</a>)</li>
-</ul>
-
-<h2 id="1-12-0-2016-03-18">1.12.0 (2016-03-18)</h2>
-
-<ul>
-<li>  improve TopicManager::instance
-(<a href="https://github.com/ros/ros_comm/issues/770">#770</a>)</li>
-<li>  change return value of param() to bool
-(<a href="https://github.com/ros/ros_comm/issues/753">#753</a>)</li>
-</ul>
-
-<h2 id="1-11-18-2016-03-17">1.11.18 (2016-03-17)</h2>
-
-<ul>
-<li>  fix CMake warning about non-existing targets</li>
-</ul>
-
-<h2 id="1-11-17-2016-03-11">1.11.17 (2016-03-11)</h2>
-
-<ul>
-<li>  fix order of argument in SubscriberLink interface to match actual
-implemenation (<a href="https://github.com/ros/ros_comm/issues/701">#701</a>)</li>
-<li>  add method for getting all the parameters from the parameter server
-as implemented in the rospy client
-(<a href="https://github.com/ros/ros_comm/issues/739">#739</a>)</li>
-<li>  use boost::make_shared instead of new for constructing
-boost::shared_ptr
-(<a href="https://github.com/ros/ros_comm/issues/740">#740</a>)</li>
-<li>  fix max elements param for statistics window
-(<a href="https://github.com/ros/ros_comm/issues/750">#750</a>)</li>
-<li>  improve NodeHandle constructor documentation
-(<a href="https://github.com/ros/ros_comm/issues/692">#692</a>)</li>
-</ul>
-
-<h2 id="1-11-16-2015-11-09">1.11.16 (2015-11-09)</h2>
-
-<ul>
-<li>  add getROSArg function
-(<a href="https://github.com/ros/ros_comm/pull/694">#694</a>)</li>
-</ul>
-
-<h2 id="1-11-15-2015-10-13">1.11.15 (2015-10-13)</h2>
-
-<ul>
-<li>  fix crash in onRetryTimer() callback
-(<a href="https://github.com/ros/ros_comm/issues/577">#577</a>)</li>
-</ul>
-
-<h2 id="1-11-14-2015-09-19">1.11.14 (2015-09-19)</h2>
-
-<ul>
-<li>  add optional reset argument to Timer::setPeriod()
-(<a href="https://github.com/ros/ros_comm/issues/590">#590</a>)</li>
-<li>  add getParam() and getParamCached() for float
-(<a href="https://github.com/ros/ros_comm/issues/621">#621</a>,
-<a href="https://github.com/ros/ros_comm/issues/623">#623</a>)</li>
-<li>  use explicit bool cast to compile with C++11
-(<a href="https://github.com/ros/ros_comm/pull/632">#632</a>)</li>
-</ul>
-
-<h2 id="1-11-13-2015-04-28">1.11.13 (2015-04-28)</h2>
-
-<h2 id="1-11-12-2015-04-27">1.11.12 (2015-04-27)</h2>
-
-<h2 id="1-11-11-2015-04-16">1.11.11 (2015-04-16)</h2>
-
-<ul>
-<li>  fix memory leak in transport constructor
-(<a href="https://github.com/ros/ros_comm/pull/570">#570</a>)</li>
-<li>  fix computation of stddev in statistics
-(<a href="https://github.com/ros/ros_comm/pull/556">#556</a>)</li>
-<li>  fix empty connection header topic
-(<a href="https://github.com/ros/ros_comm/issues/543">#543</a>)</li>
-<li>  alternative API to get parameter values
-(<a href="https://github.com/ros/ros_comm/pull/592">#592</a>)</li>
-<li>  add getCached() for float parameters
-(<a href="https://github.com/ros/ros_comm/pull/584">#584</a>)</li>
-</ul>
-
-<h2 id="1-11-10-2014-12-22">1.11.10 (2014-12-22)</h2>
-
-<ul>
-<li>  fix various defects reported by coverity</li>
-<li>  fix comment (<a href="https://github.com/ros/ros_comm/issues/529">#529</a>)</li>
-<li>  improve Android support
-(<a href="https://github.com/ros/ros_comm/pull/518">#518</a>)</li>
-</ul>
-
-<h2 id="1-11-9-2014-08-18">1.11.9 (2014-08-18)</h2>
-
-<ul>
-<li>  add accessor to expose whether service is persistent
-(<a href="https://github.com/ros/ros_comm/issues/489">#489</a>)</li>
-<li>  populate delivered_msgs field of TopicStatistics message
-(<a href="https://github.com/ros/ros_comm/issues/486">#486</a>)</li>
-</ul>
-
-<h2 id="1-11-8-2014-08-04">1.11.8 (2014-08-04)</h2>
-
-<ul>
-<li>  fix C++11 compatibility issue
-(<a href="https://github.com/ros/ros_comm/issues/483">#483</a>)</li>
-</ul>
-
-<h2 id="1-11-7-2014-07-18">1.11.7 (2014-07-18)</h2>
-
-<ul>
-<li>  fix segfault due to accessing a NULL pointer for some network
-interfaces (<a href="https://github.com/ros/ros_comm/issues/465">#465</a>)
-(regression from 1.11.6)</li>
-</ul>
-
-<h2 id="1-11-6-2014-07-10">1.11.6 (2014-07-10)</h2>
-
-<ul>
-<li>  check ROS_HOSTNAME for localhost / ROS_IP for 127./::1 and prevent
-connections from other hosts in that case
-(<a href="https://github.com/ros/ros_comm/issues/452">#452</a>)</li>
-</ul>
-
-<h2 id="1-11-5-2014-06-24">1.11.5 (2014-06-24)</h2>
-
-<ul>
-<li>  improve handling dropped connections
-(<a href="https://github.com/ros/ros_comm/issues/434">#434</a>)</li>
-<li>  add header needed for Android
-(<a href="https://github.com/ros/ros_comm/issues/441">#441</a>)</li>
-<li>  fix typo for parameter used for statistics
-(<a href="https://github.com/ros/ros_comm/issues/448">#448</a>)</li>
-</ul>
-
-<h2 id="1-11-4-2014-06-16">1.11.4 (2014-06-16)</h2>
-
-<h2 id="1-11-3-2014-05-21">1.11.3 (2014-05-21)</h2>
-
-<h2 id="1-11-2-2014-05-08">1.11.2 (2014-05-08)</h2>
-
-<h2 id="1-11-1-2014-05-07">1.11.1 (2014-05-07)</h2>
-
-<ul>
-<li>  update API to use boost::signals2
-(<a href="https://github.com/ros/ros_comm/issues/267">#267</a>)</li>
-<li>  only update param cache when being subscribed
-(<a href="https://github.com/ros/ros_comm/issues/351">#351</a>)</li>
-<li>  ensure to remove delete parameters completely</li>
-<li>  invalidate cached parent parameters when namespace parameter is set
-/ changes (<a href="https://github.com/ros/ros_comm/issues/352">#352</a>)</li>
-<li>  add optional topic/connection statistics
-(<a href="https://github.com/ros/ros_comm/issues/398">#398</a>)</li>
-<li>  add transport information in SlaveAPI::getBusInfo() for roscpp &amp;
-rospy (<a href="https://github.com/ros/ros_comm/issues/328">#328</a>)</li>
-<li>  add AsyncSpinner::canStart() to check if a spinner can be started</li>
-</ul>
-
-<h2 id="1-11-0-2014-03-04">1.11.0 (2014-03-04)</h2>
-
-<ul>
-<li>  allow getting parameters with name '/'
-(<a href="https://github.com/ros/ros_comm/issues/313">#313</a>)</li>
-<li>  support for /clock remapping
-(<a href="https://github.com/ros/ros_comm/issues/359">#359</a>)</li>
-<li>  suppress boost::signals deprecation warning
-(<a href="https://github.com/ros/ros_comm/issues/362">#362</a>)</li>
-<li>  use catkin_install_python() to install Python scripts
-(<a href="https://github.com/ros/ros_comm/issues/361">#361</a>)</li>
-</ul>
-
-<h2 id="1-10-0-2014-02-11">1.10.0 (2014-02-11)</h2>
-
-<ul>
-<li>  remove use of __connection header</li>
-</ul>
-
-<h2 id="1-9-54-2014-01-27">1.9.54 (2014-01-27)</h2>
-
-<ul>
-<li>  fix return value of pubUpdate()
-(<a href="https://github.com/ros/ros_comm/issues/334">#334</a>)</li>
-<li>  fix handling optional third xml rpc response argument
-(<a href="https://github.com/ros/ros_comm/issues/335">#335</a>)</li>
-</ul>
-
-<h2 id="1-9-53-2014-01-14">1.9.53 (2014-01-14)</h2>
-
-<h2 id="1-9-52-2014-01-08">1.9.52 (2014-01-08)</h2>
-
-<h2 id="1-9-51-2014-01-07">1.9.51 (2014-01-07)</h2>
-
-<ul>
-<li>  move several client library independent parts from ros_comm into
-roscpp_core, split rosbag storage specific stuff from client
-library usage (<a href="https://github.com/ros/ros_comm/issues/299">#299</a>)</li>
-<li>  add missing version dependency on roscpp_core stuff
-(<a href="https://github.com/ros/ros_comm/issues/299">#299</a>)</li>
-<li>  remove log4cxx dependency from roscpp, using new agnostic interface
-from rosconsole</li>
-<li>  fix compile problem with gcc 4.4
-(<a href="https://github.com/ros/ros_comm/issues/302">#302</a>)</li>
-<li>  fix clang warnings</li>
-<li>  fix usage of boost include directories</li>
-</ul>
-
-<h2 id="1-9-50-2013-10-04">1.9.50 (2013-10-04)</h2>
-
-<h2 id="1-9-49-2013-09-16">1.9.49 (2013-09-16)</h2>
-
-<ul>
-<li>  add rosparam getter/setter for std::vector and std::map
-(<a href="https://github.com/ros/ros_comm/issues/279">#279</a>)</li>
-</ul>
-
-<h2 id="1-9-48-2013-08-21">1.9.48 (2013-08-21)</h2>
-
-<h2 id="1-9-47-2013-07-03">1.9.47 (2013-07-03)</h2>
-
-<h2 id="1-9-46-2013-06-18">1.9.46 (2013-06-18)</h2>
-
-<h2 id="1-9-45-2013-06-06">1.9.45 (2013-06-06)</h2>
-
-<ul>
-<li>  improve handling of UDP transport, when fragmented packets are lost
-or arive out-of-order the connection is not dropped anymore, onle a
-single message is lost
-(<a href="https://github.com/ros/ros_comm/issues/226">#226</a>)</li>
-<li>  fix missing generation of constant definitions for services
-(<a href="https://github.com/ros/gencpp/issues/2">ros/gencpp#2</a>)</li>
-<li>  fix restoring thread context when callback throws an exception
-(<a href="https://github.com/ros/ros_comm/issues/219">#219</a>)</li>
-<li>  fix calling PollManager::shutdown() repeatedly
-(<a href="https://github.com/ros/ros_comm/issues/217">#217</a>)</li>
-</ul>
-
-<h2 id="1-9-44-2013-03-21">1.9.44 (2013-03-21)</h2>
-
-<ul>
-<li>  fix install destination for dll's under Windows</li>
-</ul>
-
-<h2 id="1-9-43-2013-03-13">1.9.43 (2013-03-13)</h2>
-
-<h2 id="1-9-42-2013-03-08">1.9.42 (2013-03-08)</h2>
-
-<ul>
-<li>  improve speed of message generation in dry packages
-(<a href="https://github.com/ros/ros_comm/issues/183">#183</a>)</li>
-<li>  fix roscpp service call deadlock
-(<a href="https://github.com/ros/ros_comm/issues/149">#149</a>)</li>
-<li>  fix freezing service calls when returning false
-(<a href="https://github.com/ros/ros_comm/issues/168">#168</a>)</li>
-<li>  fix error message publishing wrong message type
-(<a href="https://github.com/ros/ros_comm/issues/178">#178</a>)</li>
-<li>  fix missing explicit dependency on pthread
-(<a href="https://github.com/ros/ros_comm/issues/135">#135</a>)</li>
-<li>  fix compiler warning about wrong comparison of message md5 hashes
-(<a href="https://github.com/ros/ros_comm/issues/165">#165</a>)</li>
-</ul>
-
-<h2 id="1-9-41-2013-01-24">1.9.41 (2013-01-24)</h2>
-
-<ul>
-<li>  allow sending data exceeding 2GB in chunks
-(<a href="https://code.ros.org/trac/ros/ticket/4049">#4049</a>)</li>
-<li>  update getParam() doc
-(<a href="https://code.ros.org/trac/ros/ticket/1460">#1460</a>)</li>
-<li>  add param::get(float)
-(<a href="https://code.ros.org/trac/ros/ticket/3754">#3754</a>)</li>
-<li>  update inactive assert when publishing message with md5sum "*",
-update related tests
-(<a href="https://code.ros.org/trac/ros/ticket/3714">#3714</a>)</li>
-<li>  fix ros master retry timeout
-(<a href="https://code.ros.org/trac/ros/ticket/4024">#4024</a>)</li>
-<li>  fix inactive assert when publishing message with wrong type
-(<a href="https://code.ros.org/trac/ros/ticket/3714">#3714</a>)</li>
-</ul>
-
-<h2 id="1-9-40-2013-01-13">1.9.40 (2013-01-13)</h2>
-
-<h2 id="1-9-39-2012-12-29">1.9.39 (2012-12-29)</h2>
-
-<ul>
-<li>  first public release for Groovy</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -15821,7 +14709,7 @@ update related tests
                       <td><a href="/r/find_object_2d/github-introlab-find-object">github-introlab-find-object</a></td>
                       <td class="text-center">
                         
-                        <a href="/p/find_object_2d/github-introlab-find-object#kinetic-deps" class="inactive">
+                        <a href="/p/find_object_2d/github-introlab-find-object#kinetic-deps" >
                           <span class="glyphicon glyphicon-arrow-right"></span>
                         </a>
                       </td>
@@ -20125,7 +19013,7 @@ update related tests
                       <td><a href="/r/ros_controllers/github-ros-controls-ros_controllers">github-ros-controls-ros_controllers</a></td>
                       <td class="text-center">
                         
-                        <a href="/p/force_torque_sensor_controller/github-ros-controls-ros_controllers#kinetic-deps" class="inactive">
+                        <a href="/p/force_torque_sensor_controller/github-ros-controls-ros_controllers#kinetic-deps" >
                           <span class="glyphicon glyphicon-arrow-right"></span>
                         </a>
                       </td>
@@ -25596,6 +24484,62 @@ update related tests
                     
                     
                     <tr>
+                      <td><a href="/p/mbf_abstract_nav/github-magazino-move_base_flex#kinetic">mbf_abstract_nav</a></td>
+                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/mbf_abstract_nav/github-magazino-move_base_flex#kinetic-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/mbf_costmap_nav/github-magazino-move_base_flex#kinetic">mbf_costmap_nav</a></td>
+                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/mbf_costmap_nav/github-magazino-move_base_flex#kinetic-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/mbf_simple_nav/github-magazino-move_base_flex#kinetic">mbf_simple_nav</a></td>
+                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/mbf_simple_nav/github-magazino-move_base_flex#kinetic-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/mbf_utility/github-magazino-move_base_flex#kinetic">mbf_utility</a></td>
+                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/mbf_utility/github-magazino-move_base_flex#kinetic-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
                       <td><a href="/p/mtig_driver/github-lukscasanova-mtig_driver#kinetic">mtig_driver</a></td>
                       <td><a href="/r/mtig_driver/github-lukscasanova-mtig_driver">github-lukscasanova-mtig_driver</a></td>
                       <td class="text-center">
@@ -26926,6 +25870,20 @@ update related tests
                     
                     
                     <tr>
+                      <td><a href="/p/ur_modern_driver/github-ThomasTimm-ur_modern_driver#kinetic">ur_modern_driver</a></td>
+                      <td><a href="/r/ur_modern_driver/github-ThomasTimm-ur_modern_driver">github-ThomasTimm-ur_modern_driver</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/ur_modern_driver/github-ThomasTimm-ur_modern_driver#kinetic-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
                       <td><a href="/p/urg_stamped/github-seqsense-urg_stamped#kinetic">urg_stamped</a></td>
                       <td><a href="/r/urg_stamped/github-seqsense-urg_stamped">github-seqsense-urg_stamped</a></td>
                       <td class="text-center">
@@ -27169,6 +26127,20 @@ update related tests
                       <td class="text-center">
                         
                         <a href="/p/sap_pkg/github-joaoquintas-auction_methods_stack#kinetic-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/audibot_gazebo/github-robustify-audibot#kinetic">audibot_gazebo</a></td>
+                      <td><a href="/r/audibot/github-robustify-audibot">github-robustify-audibot</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/audibot_gazebo/github-robustify-audibot#kinetic-deps" class="inactive">
                           <span class="glyphicon glyphicon-arrow-right"></span>
                         </a>
                       </td>
@@ -28018,6 +26990,20 @@ update related tests
                     
                     
                     <tr>
+                      <td><a href="/p/igvc_self_drive_gazebo_plugins/github-robustify-igvc_self_drive_sim#kinetic">igvc_self_drive_gazebo_plugins</a></td>
+                      <td><a href="/r/igvc_self_drive_sim/github-robustify-igvc_self_drive_sim">github-robustify-igvc_self_drive_sim</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/igvc_self_drive_gazebo_plugins/github-robustify-igvc_self_drive_sim#kinetic-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
                       <td><a href="/p/openpose_ros/github-tue-robotics-image_recognition#kinetic">openpose_ros</a></td>
                       <td><a href="/r/image_recognition/github-tue-robotics-image_recognition">github-tue-robotics-image_recognition</a></td>
                       <td class="text-center">
@@ -28317,62 +27303,6 @@ update related tests
                       <td class="text-center">
                         
                         <a href="/p/modelica_bridge/github-ModROS-modelica_bridge#kinetic-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/mbf_abstract_nav/github-magazino-move_base_flex#kinetic">mbf_abstract_nav</a></td>
-                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/mbf_abstract_nav/github-magazino-move_base_flex#kinetic-deps" >
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/mbf_costmap_nav/github-magazino-move_base_flex#kinetic">mbf_costmap_nav</a></td>
-                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/mbf_costmap_nav/github-magazino-move_base_flex#kinetic-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/mbf_simple_nav/github-magazino-move_base_flex#kinetic">mbf_simple_nav</a></td>
-                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/mbf_simple_nav/github-magazino-move_base_flex#kinetic-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/mbf_utility/github-magazino-move_base_flex#kinetic">mbf_utility</a></td>
-                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/mbf_utility/github-magazino-move_base_flex#kinetic-deps" >
                           <span class="glyphicon glyphicon-arrow-right"></span>
                         </a>
                       </td>
@@ -28821,6 +27751,20 @@ update related tests
                       <td class="text-center">
                         
                         <a href="/p/radar_omnipresense/github-SCU-RSL-ROS-radar_omnipresense#kinetic-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/raspicat_ros/github-rt-net-raspicat_ros#kinetic">raspicat_ros</a></td>
+                      <td><a href="/r/raspicat_ros/github-rt-net-raspicat_ros">github-rt-net-raspicat_ros</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/raspicat_ros/github-rt-net-raspicat_ros#kinetic-deps" class="inactive">
                           <span class="glyphicon glyphicon-arrow-right"></span>
                         </a>
                       </td>
@@ -30370,6 +29314,20 @@ update related tests
                     
                     
                     <tr>
+                      <td><a href="/p/visualstates/github-JdeRobot-VisualStates#kinetic">visualstates</a></td>
+                      <td><a href="/r/visualstates/github-JdeRobot-VisualStates">github-JdeRobot-VisualStates</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/visualstates/github-JdeRobot-VisualStates#kinetic-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
                       <td><a href="/p/vtec_tracker/github-lukscasanova-vtec_ros#kinetic">vtec_tracker</a></td>
                       <td><a href="/r/vtec_ros/github-lukscasanova-vtec_ros">github-lukscasanova-vtec_ros</a></td>
                       <td class="text-center">
@@ -30553,9 +29511,9 @@ update related tests
             
               <li><a href="https://github.com/ros/ros_comm/blob/kinetic-devel/clients/roscpp/srv/GetLoggers.srv" target="_blank">srv/GetLoggers.srv</a></li>
             
-              <li><a href="https://github.com/ros/ros_comm/blob/kinetic-devel/clients/roscpp/srv/SetLoggerLevel.srv" target="_blank">srv/SetLoggerLevel.srv</a></li>
-            
               <li><a href="https://github.com/ros/ros_comm/blob/kinetic-devel/clients/roscpp/srv/Empty.srv" target="_blank">srv/Empty.srv</a></li>
+            
+              <li><a href="https://github.com/ros/ros_comm/blob/kinetic-devel/clients/roscpp/srv/SetLoggerLevel.srv" target="_blank">srv/SetLoggerLevel.srv</a></li>
             
           </ul>
         
@@ -31225,302 +30183,7 @@ xmlrpcpp
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-roscpp">Changelog for package roscpp</h1>
-
-<h2 id="1-11-21-2017-03-06">1.11.21 (2017-03-06)</h2>
-
-<ul>
-<li>  fix UDP block number when EAGAIN or EWOULDBLOCK
-(<a href="https://github.com/ros/ros_comm/issues/957">#957</a>)</li>
-<li>  improve stacktrace for exceptions thrown in callbacks
-(<a href="https://github.com/ros/ros_comm/pull/811">#811</a>)</li>
-</ul>
-
-<h2 id="1-11-20-2016-06-27">1.11.20 (2016-06-27)</h2>
-
-<ul>
-<li>  fix segfault if connection fails
-(<a href="https://github.com/ros/ros_comm/pull/807">#807</a>)</li>
-</ul>
-
-<h2 id="1-11-19-2016-04-18">1.11.19 (2016-04-18)</h2>
-
-<ul>
-<li>  use directory specific compiler flags
-(<a href="https://github.com/ros/ros_comm/pull/785">#785</a>)</li>
-</ul>
-
-<h2 id="1-11-18-2016-03-17">1.11.18 (2016-03-17)</h2>
-
-<ul>
-<li>  fix CMake warning about non-existing targets</li>
-</ul>
-
-<h2 id="1-11-17-2016-03-11">1.11.17 (2016-03-11)</h2>
-
-<ul>
-<li>  fix order of argument in SubscriberLink interface to match actual
-implemenation (<a href="https://github.com/ros/ros_comm/issues/701">#701</a>)</li>
-<li>  add method for getting all the parameters from the parameter server
-as implemented in the rospy client
-(<a href="https://github.com/ros/ros_comm/issues/739">#739</a>)</li>
-<li>  use boost::make_shared instead of new for constructing
-boost::shared_ptr
-(<a href="https://github.com/ros/ros_comm/issues/740">#740</a>)</li>
-<li>  fix max elements param for statistics window
-(<a href="https://github.com/ros/ros_comm/issues/750">#750</a>)</li>
-<li>  improve NodeHandle constructor documentation
-(<a href="https://github.com/ros/ros_comm/issues/692">#692</a>)</li>
-</ul>
-
-<h2 id="1-11-16-2015-11-09">1.11.16 (2015-11-09)</h2>
-
-<ul>
-<li>  add getROSArg function
-(<a href="https://github.com/ros/ros_comm/pull/694">#694</a>)</li>
-</ul>
-
-<h2 id="1-11-15-2015-10-13">1.11.15 (2015-10-13)</h2>
-
-<ul>
-<li>  fix crash in onRetryTimer() callback
-(<a href="https://github.com/ros/ros_comm/issues/577">#577</a>)</li>
-</ul>
-
-<h2 id="1-11-14-2015-09-19">1.11.14 (2015-09-19)</h2>
-
-<ul>
-<li>  add optional reset argument to Timer::setPeriod()
-(<a href="https://github.com/ros/ros_comm/issues/590">#590</a>)</li>
-<li>  add getParam() and getParamCached() for float
-(<a href="https://github.com/ros/ros_comm/issues/621">#621</a>,
-<a href="https://github.com/ros/ros_comm/issues/623">#623</a>)</li>
-<li>  use explicit bool cast to compile with C++11
-(<a href="https://github.com/ros/ros_comm/pull/632">#632</a>)</li>
-</ul>
-
-<h2 id="1-11-13-2015-04-28">1.11.13 (2015-04-28)</h2>
-
-<h2 id="1-11-12-2015-04-27">1.11.12 (2015-04-27)</h2>
-
-<h2 id="1-11-11-2015-04-16">1.11.11 (2015-04-16)</h2>
-
-<ul>
-<li>  fix memory leak in transport constructor
-(<a href="https://github.com/ros/ros_comm/pull/570">#570</a>)</li>
-<li>  fix computation of stddev in statistics
-(<a href="https://github.com/ros/ros_comm/pull/556">#556</a>)</li>
-<li>  fix empty connection header topic
-(<a href="https://github.com/ros/ros_comm/issues/543">#543</a>)</li>
-<li>  alternative API to get parameter values
-(<a href="https://github.com/ros/ros_comm/pull/592">#592</a>)</li>
-<li>  add getCached() for float parameters
-(<a href="https://github.com/ros/ros_comm/pull/584">#584</a>)</li>
-</ul>
-
-<h2 id="1-11-10-2014-12-22">1.11.10 (2014-12-22)</h2>
-
-<ul>
-<li>  fix various defects reported by coverity</li>
-<li>  fix comment (<a href="https://github.com/ros/ros_comm/issues/529">#529</a>)</li>
-<li>  improve Android support
-(<a href="https://github.com/ros/ros_comm/pull/518">#518</a>)</li>
-</ul>
-
-<h2 id="1-11-9-2014-08-18">1.11.9 (2014-08-18)</h2>
-
-<ul>
-<li>  add accessor to expose whether service is persistent
-(<a href="https://github.com/ros/ros_comm/issues/489">#489</a>)</li>
-<li>  populate delivered_msgs field of TopicStatistics message
-(<a href="https://github.com/ros/ros_comm/issues/486">#486</a>)</li>
-</ul>
-
-<h2 id="1-11-8-2014-08-04">1.11.8 (2014-08-04)</h2>
-
-<ul>
-<li>  fix C++11 compatibility issue
-(<a href="https://github.com/ros/ros_comm/issues/483">#483</a>)</li>
-</ul>
-
-<h2 id="1-11-7-2014-07-18">1.11.7 (2014-07-18)</h2>
-
-<ul>
-<li>  fix segfault due to accessing a NULL pointer for some network
-interfaces (<a href="https://github.com/ros/ros_comm/issues/465">#465</a>)
-(regression from 1.11.6)</li>
-</ul>
-
-<h2 id="1-11-6-2014-07-10">1.11.6 (2014-07-10)</h2>
-
-<ul>
-<li>  check ROS_HOSTNAME for localhost / ROS_IP for 127./::1 and prevent
-connections from other hosts in that case
-(<a href="https://github.com/ros/ros_comm/issues/452">#452</a>)</li>
-</ul>
-
-<h2 id="1-11-5-2014-06-24">1.11.5 (2014-06-24)</h2>
-
-<ul>
-<li>  improve handling dropped connections
-(<a href="https://github.com/ros/ros_comm/issues/434">#434</a>)</li>
-<li>  add header needed for Android
-(<a href="https://github.com/ros/ros_comm/issues/441">#441</a>)</li>
-<li>  fix typo for parameter used for statistics
-(<a href="https://github.com/ros/ros_comm/issues/448">#448</a>)</li>
-</ul>
-
-<h2 id="1-11-4-2014-06-16">1.11.4 (2014-06-16)</h2>
-
-<h2 id="1-11-3-2014-05-21">1.11.3 (2014-05-21)</h2>
-
-<h2 id="1-11-2-2014-05-08">1.11.2 (2014-05-08)</h2>
-
-<h2 id="1-11-1-2014-05-07">1.11.1 (2014-05-07)</h2>
-
-<ul>
-<li>  update API to use boost::signals2
-(<a href="https://github.com/ros/ros_comm/issues/267">#267</a>)</li>
-<li>  only update param cache when being subscribed
-(<a href="https://github.com/ros/ros_comm/issues/351">#351</a>)</li>
-<li>  ensure to remove delete parameters completely</li>
-<li>  invalidate cached parent parameters when namespace parameter is set
-/ changes (<a href="https://github.com/ros/ros_comm/issues/352">#352</a>)</li>
-<li>  add optional topic/connection statistics
-(<a href="https://github.com/ros/ros_comm/issues/398">#398</a>)</li>
-<li>  add transport information in SlaveAPI::getBusInfo() for roscpp &amp;
-rospy (<a href="https://github.com/ros/ros_comm/issues/328">#328</a>)</li>
-<li>  add AsyncSpinner::canStart() to check if a spinner can be started</li>
-</ul>
-
-<h2 id="1-11-0-2014-03-04">1.11.0 (2014-03-04)</h2>
-
-<ul>
-<li>  allow getting parameters with name '/'
-(<a href="https://github.com/ros/ros_comm/issues/313">#313</a>)</li>
-<li>  support for /clock remapping
-(<a href="https://github.com/ros/ros_comm/issues/359">#359</a>)</li>
-<li>  suppress boost::signals deprecation warning
-(<a href="https://github.com/ros/ros_comm/issues/362">#362</a>)</li>
-<li>  use catkin_install_python() to install Python scripts
-(<a href="https://github.com/ros/ros_comm/issues/361">#361</a>)</li>
-</ul>
-
-<h2 id="1-10-0-2014-02-11">1.10.0 (2014-02-11)</h2>
-
-<ul>
-<li>  remove use of __connection header</li>
-</ul>
-
-<h2 id="1-9-54-2014-01-27">1.9.54 (2014-01-27)</h2>
-
-<ul>
-<li>  fix return value of pubUpdate()
-(<a href="https://github.com/ros/ros_comm/issues/334">#334</a>)</li>
-<li>  fix handling optional third xml rpc response argument
-(<a href="https://github.com/ros/ros_comm/issues/335">#335</a>)</li>
-</ul>
-
-<h2 id="1-9-53-2014-01-14">1.9.53 (2014-01-14)</h2>
-
-<h2 id="1-9-52-2014-01-08">1.9.52 (2014-01-08)</h2>
-
-<h2 id="1-9-51-2014-01-07">1.9.51 (2014-01-07)</h2>
-
-<ul>
-<li>  move several client library independent parts from ros_comm into
-roscpp_core, split rosbag storage specific stuff from client
-library usage (<a href="https://github.com/ros/ros_comm/issues/299">#299</a>)</li>
-<li>  add missing version dependency on roscpp_core stuff
-(<a href="https://github.com/ros/ros_comm/issues/299">#299</a>)</li>
-<li>  remove log4cxx dependency from roscpp, using new agnostic interface
-from rosconsole</li>
-<li>  fix compile problem with gcc 4.4
-(<a href="https://github.com/ros/ros_comm/issues/302">#302</a>)</li>
-<li>  fix clang warnings</li>
-<li>  fix usage of boost include directories</li>
-</ul>
-
-<h2 id="1-9-50-2013-10-04">1.9.50 (2013-10-04)</h2>
-
-<h2 id="1-9-49-2013-09-16">1.9.49 (2013-09-16)</h2>
-
-<ul>
-<li>  add rosparam getter/setter for std::vector and std::map
-(<a href="https://github.com/ros/ros_comm/issues/279">#279</a>)</li>
-</ul>
-
-<h2 id="1-9-48-2013-08-21">1.9.48 (2013-08-21)</h2>
-
-<h2 id="1-9-47-2013-07-03">1.9.47 (2013-07-03)</h2>
-
-<h2 id="1-9-46-2013-06-18">1.9.46 (2013-06-18)</h2>
-
-<h2 id="1-9-45-2013-06-06">1.9.45 (2013-06-06)</h2>
-
-<ul>
-<li>  improve handling of UDP transport, when fragmented packets are lost
-or arive out-of-order the connection is not dropped anymore, onle a
-single message is lost
-(<a href="https://github.com/ros/ros_comm/issues/226">#226</a>)</li>
-<li>  fix missing generation of constant definitions for services
-(<a href="https://github.com/ros/gencpp/issues/2">ros/gencpp#2</a>)</li>
-<li>  fix restoring thread context when callback throws an exception
-(<a href="https://github.com/ros/ros_comm/issues/219">#219</a>)</li>
-<li>  fix calling PollManager::shutdown() repeatedly
-(<a href="https://github.com/ros/ros_comm/issues/217">#217</a>)</li>
-</ul>
-
-<h2 id="1-9-44-2013-03-21">1.9.44 (2013-03-21)</h2>
-
-<ul>
-<li>  fix install destination for dll's under Windows</li>
-</ul>
-
-<h2 id="1-9-43-2013-03-13">1.9.43 (2013-03-13)</h2>
-
-<h2 id="1-9-42-2013-03-08">1.9.42 (2013-03-08)</h2>
-
-<ul>
-<li>  improve speed of message generation in dry packages
-(<a href="https://github.com/ros/ros_comm/issues/183">#183</a>)</li>
-<li>  fix roscpp service call deadlock
-(<a href="https://github.com/ros/ros_comm/issues/149">#149</a>)</li>
-<li>  fix freezing service calls when returning false
-(<a href="https://github.com/ros/ros_comm/issues/168">#168</a>)</li>
-<li>  fix error message publishing wrong message type
-(<a href="https://github.com/ros/ros_comm/issues/178">#178</a>)</li>
-<li>  fix missing explicit dependency on pthread
-(<a href="https://github.com/ros/ros_comm/issues/135">#135</a>)</li>
-<li>  fix compiler warning about wrong comparison of message md5 hashes
-(<a href="https://github.com/ros/ros_comm/issues/165">#165</a>)</li>
-</ul>
-
-<h2 id="1-9-41-2013-01-24">1.9.41 (2013-01-24)</h2>
-
-<ul>
-<li>  allow sending data exceeding 2GB in chunks
-(<a href="https://code.ros.org/trac/ros/ticket/4049">#4049</a>)</li>
-<li>  update getParam() doc
-(<a href="https://code.ros.org/trac/ros/ticket/1460">#1460</a>)</li>
-<li>  add param::get(float)
-(<a href="https://code.ros.org/trac/ros/ticket/3754">#3754</a>)</li>
-<li>  update inactive assert when publishing message with md5sum "*",
-update related tests
-(<a href="https://code.ros.org/trac/ros/ticket/3714">#3714</a>)</li>
-<li>  fix ros master retry timeout
-(<a href="https://code.ros.org/trac/ros/ticket/4024">#4024</a>)</li>
-<li>  fix inactive assert when publishing message with wrong type
-(<a href="https://code.ros.org/trac/ros/ticket/3714">#3714</a>)</li>
-</ul>
-
-<h2 id="1-9-40-2013-01-13">1.9.40 (2013-01-13)</h2>
-
-<h2 id="1-9-39-2012-12-29">1.9.39 (2012-12-29)</h2>
-
-<ul>
-<li>  first public release for Groovy</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -46792,6 +45455,62 @@ update related tests
                     
                     
                     <tr>
+                      <td><a href="/p/mbf_abstract_nav/github-magazino-move_base_flex#indigo">mbf_abstract_nav</a></td>
+                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/mbf_abstract_nav/github-magazino-move_base_flex#indigo-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/mbf_costmap_nav/github-magazino-move_base_flex#indigo">mbf_costmap_nav</a></td>
+                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/mbf_costmap_nav/github-magazino-move_base_flex#indigo-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/mbf_simple_nav/github-magazino-move_base_flex#indigo">mbf_simple_nav</a></td>
+                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/mbf_simple_nav/github-magazino-move_base_flex#indigo-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/mbf_utility/github-magazino-move_base_flex#indigo">mbf_utility</a></td>
+                      <td><a href="/r/move_base_flex/github-magazino-move_base_flex">github-magazino-move_base_flex</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/mbf_utility/github-magazino-move_base_flex#indigo-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
                       <td><a href="/p/moveit_goal_builder/github-jstnhuang-moveit_goal_builder#indigo">moveit_goal_builder</a></td>
                       <td><a href="/r/moveit_goal_builder/github-jstnhuang-moveit_goal_builder">github-jstnhuang-moveit_goal_builder</a></td>
                       <td class="text-center">
@@ -49621,9 +48340,9 @@ update related tests
             
               <li><a href="https://github.com/ros/ros_comm/blob/indigo-devel/clients/roscpp/srv/GetLoggers.srv" target="_blank">srv/GetLoggers.srv</a></li>
             
-              <li><a href="https://github.com/ros/ros_comm/blob/indigo-devel/clients/roscpp/srv/SetLoggerLevel.srv" target="_blank">srv/SetLoggerLevel.srv</a></li>
-            
               <li><a href="https://github.com/ros/ros_comm/blob/indigo-devel/clients/roscpp/srv/Empty.srv" target="_blank">srv/Empty.srv</a></li>
+            
+              <li><a href="https://github.com/ros/ros_comm/blob/indigo-devel/clients/roscpp/srv/SetLoggerLevel.srv" target="_blank">srv/SetLoggerLevel.srv</a></li>
             
           </ul>
         
@@ -50301,302 +49020,7 @@ xmlrpcpp
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-roscpp">Changelog for package roscpp</h1>
-
-<h2 id="1-11-21-2017-03-06">1.11.21 (2017-03-06)</h2>
-
-<ul>
-<li>  fix UDP block number when EAGAIN or EWOULDBLOCK
-(<a href="https://github.com/ros/ros_comm/issues/957">#957</a>)</li>
-<li>  improve stacktrace for exceptions thrown in callbacks
-(<a href="https://github.com/ros/ros_comm/pull/811">#811</a>)</li>
-</ul>
-
-<h2 id="1-11-20-2016-06-27">1.11.20 (2016-06-27)</h2>
-
-<ul>
-<li>  fix segfault if connection fails
-(<a href="https://github.com/ros/ros_comm/pull/807">#807</a>)</li>
-</ul>
-
-<h2 id="1-11-19-2016-04-18">1.11.19 (2016-04-18)</h2>
-
-<ul>
-<li>  use directory specific compiler flags
-(<a href="https://github.com/ros/ros_comm/pull/785">#785</a>)</li>
-</ul>
-
-<h2 id="1-11-18-2016-03-17">1.11.18 (2016-03-17)</h2>
-
-<ul>
-<li>  fix CMake warning about non-existing targets</li>
-</ul>
-
-<h2 id="1-11-17-2016-03-11">1.11.17 (2016-03-11)</h2>
-
-<ul>
-<li>  fix order of argument in SubscriberLink interface to match actual
-implemenation (<a href="https://github.com/ros/ros_comm/issues/701">#701</a>)</li>
-<li>  add method for getting all the parameters from the parameter server
-as implemented in the rospy client
-(<a href="https://github.com/ros/ros_comm/issues/739">#739</a>)</li>
-<li>  use boost::make_shared instead of new for constructing
-boost::shared_ptr
-(<a href="https://github.com/ros/ros_comm/issues/740">#740</a>)</li>
-<li>  fix max elements param for statistics window
-(<a href="https://github.com/ros/ros_comm/issues/750">#750</a>)</li>
-<li>  improve NodeHandle constructor documentation
-(<a href="https://github.com/ros/ros_comm/issues/692">#692</a>)</li>
-</ul>
-
-<h2 id="1-11-16-2015-11-09">1.11.16 (2015-11-09)</h2>
-
-<ul>
-<li>  add getROSArg function
-(<a href="https://github.com/ros/ros_comm/pull/694">#694</a>)</li>
-</ul>
-
-<h2 id="1-11-15-2015-10-13">1.11.15 (2015-10-13)</h2>
-
-<ul>
-<li>  fix crash in onRetryTimer() callback
-(<a href="https://github.com/ros/ros_comm/issues/577">#577</a>)</li>
-</ul>
-
-<h2 id="1-11-14-2015-09-19">1.11.14 (2015-09-19)</h2>
-
-<ul>
-<li>  add optional reset argument to Timer::setPeriod()
-(<a href="https://github.com/ros/ros_comm/issues/590">#590</a>)</li>
-<li>  add getParam() and getParamCached() for float
-(<a href="https://github.com/ros/ros_comm/issues/621">#621</a>,
-<a href="https://github.com/ros/ros_comm/issues/623">#623</a>)</li>
-<li>  use explicit bool cast to compile with C++11
-(<a href="https://github.com/ros/ros_comm/pull/632">#632</a>)</li>
-</ul>
-
-<h2 id="1-11-13-2015-04-28">1.11.13 (2015-04-28)</h2>
-
-<h2 id="1-11-12-2015-04-27">1.11.12 (2015-04-27)</h2>
-
-<h2 id="1-11-11-2015-04-16">1.11.11 (2015-04-16)</h2>
-
-<ul>
-<li>  fix memory leak in transport constructor
-(<a href="https://github.com/ros/ros_comm/pull/570">#570</a>)</li>
-<li>  fix computation of stddev in statistics
-(<a href="https://github.com/ros/ros_comm/pull/556">#556</a>)</li>
-<li>  fix empty connection header topic
-(<a href="https://github.com/ros/ros_comm/issues/543">#543</a>)</li>
-<li>  alternative API to get parameter values
-(<a href="https://github.com/ros/ros_comm/pull/592">#592</a>)</li>
-<li>  add getCached() for float parameters
-(<a href="https://github.com/ros/ros_comm/pull/584">#584</a>)</li>
-</ul>
-
-<h2 id="1-11-10-2014-12-22">1.11.10 (2014-12-22)</h2>
-
-<ul>
-<li>  fix various defects reported by coverity</li>
-<li>  fix comment (<a href="https://github.com/ros/ros_comm/issues/529">#529</a>)</li>
-<li>  improve Android support
-(<a href="https://github.com/ros/ros_comm/pull/518">#518</a>)</li>
-</ul>
-
-<h2 id="1-11-9-2014-08-18">1.11.9 (2014-08-18)</h2>
-
-<ul>
-<li>  add accessor to expose whether service is persistent
-(<a href="https://github.com/ros/ros_comm/issues/489">#489</a>)</li>
-<li>  populate delivered_msgs field of TopicStatistics message
-(<a href="https://github.com/ros/ros_comm/issues/486">#486</a>)</li>
-</ul>
-
-<h2 id="1-11-8-2014-08-04">1.11.8 (2014-08-04)</h2>
-
-<ul>
-<li>  fix C++11 compatibility issue
-(<a href="https://github.com/ros/ros_comm/issues/483">#483</a>)</li>
-</ul>
-
-<h2 id="1-11-7-2014-07-18">1.11.7 (2014-07-18)</h2>
-
-<ul>
-<li>  fix segfault due to accessing a NULL pointer for some network
-interfaces (<a href="https://github.com/ros/ros_comm/issues/465">#465</a>)
-(regression from 1.11.6)</li>
-</ul>
-
-<h2 id="1-11-6-2014-07-10">1.11.6 (2014-07-10)</h2>
-
-<ul>
-<li>  check ROS_HOSTNAME for localhost / ROS_IP for 127./::1 and prevent
-connections from other hosts in that case
-(<a href="https://github.com/ros/ros_comm/issues/452">#452</a>)</li>
-</ul>
-
-<h2 id="1-11-5-2014-06-24">1.11.5 (2014-06-24)</h2>
-
-<ul>
-<li>  improve handling dropped connections
-(<a href="https://github.com/ros/ros_comm/issues/434">#434</a>)</li>
-<li>  add header needed for Android
-(<a href="https://github.com/ros/ros_comm/issues/441">#441</a>)</li>
-<li>  fix typo for parameter used for statistics
-(<a href="https://github.com/ros/ros_comm/issues/448">#448</a>)</li>
-</ul>
-
-<h2 id="1-11-4-2014-06-16">1.11.4 (2014-06-16)</h2>
-
-<h2 id="1-11-3-2014-05-21">1.11.3 (2014-05-21)</h2>
-
-<h2 id="1-11-2-2014-05-08">1.11.2 (2014-05-08)</h2>
-
-<h2 id="1-11-1-2014-05-07">1.11.1 (2014-05-07)</h2>
-
-<ul>
-<li>  update API to use boost::signals2
-(<a href="https://github.com/ros/ros_comm/issues/267">#267</a>)</li>
-<li>  only update param cache when being subscribed
-(<a href="https://github.com/ros/ros_comm/issues/351">#351</a>)</li>
-<li>  ensure to remove delete parameters completely</li>
-<li>  invalidate cached parent parameters when namespace parameter is set
-/ changes (<a href="https://github.com/ros/ros_comm/issues/352">#352</a>)</li>
-<li>  add optional topic/connection statistics
-(<a href="https://github.com/ros/ros_comm/issues/398">#398</a>)</li>
-<li>  add transport information in SlaveAPI::getBusInfo() for roscpp &amp;
-rospy (<a href="https://github.com/ros/ros_comm/issues/328">#328</a>)</li>
-<li>  add AsyncSpinner::canStart() to check if a spinner can be started</li>
-</ul>
-
-<h2 id="1-11-0-2014-03-04">1.11.0 (2014-03-04)</h2>
-
-<ul>
-<li>  allow getting parameters with name '/'
-(<a href="https://github.com/ros/ros_comm/issues/313">#313</a>)</li>
-<li>  support for /clock remapping
-(<a href="https://github.com/ros/ros_comm/issues/359">#359</a>)</li>
-<li>  suppress boost::signals deprecation warning
-(<a href="https://github.com/ros/ros_comm/issues/362">#362</a>)</li>
-<li>  use catkin_install_python() to install Python scripts
-(<a href="https://github.com/ros/ros_comm/issues/361">#361</a>)</li>
-</ul>
-
-<h2 id="1-10-0-2014-02-11">1.10.0 (2014-02-11)</h2>
-
-<ul>
-<li>  remove use of __connection header</li>
-</ul>
-
-<h2 id="1-9-54-2014-01-27">1.9.54 (2014-01-27)</h2>
-
-<ul>
-<li>  fix return value of pubUpdate()
-(<a href="https://github.com/ros/ros_comm/issues/334">#334</a>)</li>
-<li>  fix handling optional third xml rpc response argument
-(<a href="https://github.com/ros/ros_comm/issues/335">#335</a>)</li>
-</ul>
-
-<h2 id="1-9-53-2014-01-14">1.9.53 (2014-01-14)</h2>
-
-<h2 id="1-9-52-2014-01-08">1.9.52 (2014-01-08)</h2>
-
-<h2 id="1-9-51-2014-01-07">1.9.51 (2014-01-07)</h2>
-
-<ul>
-<li>  move several client library independent parts from ros_comm into
-roscpp_core, split rosbag storage specific stuff from client
-library usage (<a href="https://github.com/ros/ros_comm/issues/299">#299</a>)</li>
-<li>  add missing version dependency on roscpp_core stuff
-(<a href="https://github.com/ros/ros_comm/issues/299">#299</a>)</li>
-<li>  remove log4cxx dependency from roscpp, using new agnostic interface
-from rosconsole</li>
-<li>  fix compile problem with gcc 4.4
-(<a href="https://github.com/ros/ros_comm/issues/302">#302</a>)</li>
-<li>  fix clang warnings</li>
-<li>  fix usage of boost include directories</li>
-</ul>
-
-<h2 id="1-9-50-2013-10-04">1.9.50 (2013-10-04)</h2>
-
-<h2 id="1-9-49-2013-09-16">1.9.49 (2013-09-16)</h2>
-
-<ul>
-<li>  add rosparam getter/setter for std::vector and std::map
-(<a href="https://github.com/ros/ros_comm/issues/279">#279</a>)</li>
-</ul>
-
-<h2 id="1-9-48-2013-08-21">1.9.48 (2013-08-21)</h2>
-
-<h2 id="1-9-47-2013-07-03">1.9.47 (2013-07-03)</h2>
-
-<h2 id="1-9-46-2013-06-18">1.9.46 (2013-06-18)</h2>
-
-<h2 id="1-9-45-2013-06-06">1.9.45 (2013-06-06)</h2>
-
-<ul>
-<li>  improve handling of UDP transport, when fragmented packets are lost
-or arive out-of-order the connection is not dropped anymore, onle a
-single message is lost
-(<a href="https://github.com/ros/ros_comm/issues/226">#226</a>)</li>
-<li>  fix missing generation of constant definitions for services
-(<a href="https://github.com/ros/gencpp/issues/2">ros/gencpp#2</a>)</li>
-<li>  fix restoring thread context when callback throws an exception
-(<a href="https://github.com/ros/ros_comm/issues/219">#219</a>)</li>
-<li>  fix calling PollManager::shutdown() repeatedly
-(<a href="https://github.com/ros/ros_comm/issues/217">#217</a>)</li>
-</ul>
-
-<h2 id="1-9-44-2013-03-21">1.9.44 (2013-03-21)</h2>
-
-<ul>
-<li>  fix install destination for dll's under Windows</li>
-</ul>
-
-<h2 id="1-9-43-2013-03-13">1.9.43 (2013-03-13)</h2>
-
-<h2 id="1-9-42-2013-03-08">1.9.42 (2013-03-08)</h2>
-
-<ul>
-<li>  improve speed of message generation in dry packages
-(<a href="https://github.com/ros/ros_comm/issues/183">#183</a>)</li>
-<li>  fix roscpp service call deadlock
-(<a href="https://github.com/ros/ros_comm/issues/149">#149</a>)</li>
-<li>  fix freezing service calls when returning false
-(<a href="https://github.com/ros/ros_comm/issues/168">#168</a>)</li>
-<li>  fix error message publishing wrong message type
-(<a href="https://github.com/ros/ros_comm/issues/178">#178</a>)</li>
-<li>  fix missing explicit dependency on pthread
-(<a href="https://github.com/ros/ros_comm/issues/135">#135</a>)</li>
-<li>  fix compiler warning about wrong comparison of message md5 hashes
-(<a href="https://github.com/ros/ros_comm/issues/165">#165</a>)</li>
-</ul>
-
-<h2 id="1-9-41-2013-01-24">1.9.41 (2013-01-24)</h2>
-
-<ul>
-<li>  allow sending data exceeding 2GB in chunks
-(<a href="https://code.ros.org/trac/ros/ticket/4049">#4049</a>)</li>
-<li>  update getParam() doc
-(<a href="https://code.ros.org/trac/ros/ticket/1460">#1460</a>)</li>
-<li>  add param::get(float)
-(<a href="https://code.ros.org/trac/ros/ticket/3754">#3754</a>)</li>
-<li>  update inactive assert when publishing message with md5sum "*",
-update related tests
-(<a href="https://code.ros.org/trac/ros/ticket/3714">#3714</a>)</li>
-<li>  fix ros master retry timeout
-(<a href="https://code.ros.org/trac/ros/ticket/4024">#4024</a>)</li>
-<li>  fix inactive assert when publishing message with wrong type
-(<a href="https://code.ros.org/trac/ros/ticket/3714">#3714</a>)</li>
-</ul>
-
-<h2 id="1-9-40-2013-01-13">1.9.40 (2013-01-13)</h2>
-
-<h2 id="1-9-39-2012-12-29">1.9.39 (2012-12-29)</h2>
-
-<ul>
-<li>  first public release for Groovy</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -58601,9 +57025,9 @@ update related tests
             
               <li><a href="https://github.com/ros/ros_comm/blob/indigo-devel/clients/roscpp/srv/GetLoggers.srv" target="_blank">srv/GetLoggers.srv</a></li>
             
-              <li><a href="https://github.com/ros/ros_comm/blob/indigo-devel/clients/roscpp/srv/SetLoggerLevel.srv" target="_blank">srv/SetLoggerLevel.srv</a></li>
-            
               <li><a href="https://github.com/ros/ros_comm/blob/indigo-devel/clients/roscpp/srv/Empty.srv" target="_blank">srv/Empty.srv</a></li>
+            
+              <li><a href="https://github.com/ros/ros_comm/blob/indigo-devel/clients/roscpp/srv/SetLoggerLevel.srv" target="_blank">srv/SetLoggerLevel.srv</a></li>
             
           </ul>
         
@@ -59273,143 +57697,7 @@ xmlrpcpp
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-roscpp">Changelog for package roscpp</h1>
-
-<h2 id="1-10-12-2014-12-29">1.10.12 (2014-12-29)</h2>
-
-<h2 id="1-10-11-2014-08-18">1.10.11 (2014-08-18)</h2>
-
-<ul>
-<li>  add accessor to expose whether service is persistent
-(<a href="https://github.com/ros/ros_comm/issues/489">#489</a>)</li>
-<li>  only update param cache when being subscribed
-(<a href="https://github.com/ros/ros_comm/issues/351">#351</a>)</li>
-<li>  ensure to remove delete parameters completely</li>
-<li>  invalidate cached parent parameters when namespace parameter is set
-/ changes (<a href="https://github.com/ros/ros_comm/issues/352">#352</a>)</li>
-</ul>
-
-<h2 id="1-10-10-2014-06-16">1.10.10 (2014-06-16)</h2>
-
-<h2 id="1-10-3-2014-06-02">1.10.3 (2014-06-02)</h2>
-
-<ul>
-<li>  add AsyncSpinner::canStart() to check if a spinner can be started</li>
-</ul>
-
-<h2 id="1-10-2-2014-03-03">1.10.2 (2014-03-03)</h2>
-
-<h2 id="1-10-1-2014-02-25">1.10.1 (2014-02-25)</h2>
-
-<h2 id="1-9-54-2014-01-27">1.9.54 (2014-01-27)</h2>
-
-<ul>
-<li>  fix return value of pubUpdate()
-(<a href="https://github.com/ros/ros_comm/issues/334">#334</a>)</li>
-<li>  fix handling optional third xml rpc response argument
-(<a href="https://github.com/ros/ros_comm/issues/335">#335</a>)</li>
-</ul>
-
-<h2 id="1-9-53-2014-01-14">1.9.53 (2014-01-14)</h2>
-
-<h2 id="1-9-52-2014-01-08">1.9.52 (2014-01-08)</h2>
-
-<h2 id="1-9-51-2014-01-07">1.9.51 (2014-01-07)</h2>
-
-<ul>
-<li>  move several client library independent parts from ros_comm into
-roscpp_core, split rosbag storage specific stuff from client
-library usage (<a href="https://github.com/ros/ros_comm/issues/299">#299</a>)</li>
-<li>  add missing version dependency on roscpp_core stuff
-(<a href="https://github.com/ros/ros_comm/issues/299">#299</a>)</li>
-<li>  remove log4cxx dependency from roscpp, using new agnostic interface
-from rosconsole</li>
-<li>  fix compile problem with gcc 4.4
-(<a href="https://github.com/ros/ros_comm/issues/302">#302</a>)</li>
-<li>  fix clang warnings</li>
-<li>  fix usage of boost include directories</li>
-</ul>
-
-<h2 id="1-9-50-2013-10-04">1.9.50 (2013-10-04)</h2>
-
-<h2 id="1-9-49-2013-09-16">1.9.49 (2013-09-16)</h2>
-
-<ul>
-<li>  add rosparam getter/setter for std::vector and std::map
-(<a href="https://github.com/ros/ros_comm/issues/279">#279</a>)</li>
-</ul>
-
-<h2 id="1-9-48-2013-08-21">1.9.48 (2013-08-21)</h2>
-
-<h2 id="1-9-47-2013-07-03">1.9.47 (2013-07-03)</h2>
-
-<h2 id="1-9-46-2013-06-18">1.9.46 (2013-06-18)</h2>
-
-<h2 id="1-9-45-2013-06-06">1.9.45 (2013-06-06)</h2>
-
-<ul>
-<li>  improve handling of UDP transport, when fragmented packets are lost
-or arive out-of-order the connection is not dropped anymore, onle a
-single message is lost
-(<a href="https://github.com/ros/ros_comm/issues/226">#226</a>)</li>
-<li>  fix missing generation of constant definitions for services
-(<a href="https://github.com/ros/gencpp/issues/2">ros/gencpp#2</a>)</li>
-<li>  fix restoring thread context when callback throws an exception
-(<a href="https://github.com/ros/ros_comm/issues/219">#219</a>)</li>
-<li>  fix calling PollManager::shutdown() repeatedly
-(<a href="https://github.com/ros/ros_comm/issues/217">#217</a>)</li>
-</ul>
-
-<h2 id="1-9-44-2013-03-21">1.9.44 (2013-03-21)</h2>
-
-<ul>
-<li>  fix install destination for dll's under Windows</li>
-</ul>
-
-<h2 id="1-9-43-2013-03-13">1.9.43 (2013-03-13)</h2>
-
-<h2 id="1-9-42-2013-03-08">1.9.42 (2013-03-08)</h2>
-
-<ul>
-<li>  improve speed of message generation in dry packages
-(<a href="https://github.com/ros/ros_comm/issues/183">#183</a>)</li>
-<li>  fix roscpp service call deadlock
-(<a href="https://github.com/ros/ros_comm/issues/149">#149</a>)</li>
-<li>  fix freezing service calls when returning false
-(<a href="https://github.com/ros/ros_comm/issues/168">#168</a>)</li>
-<li>  fix error message publishing wrong message type
-(<a href="https://github.com/ros/ros_comm/issues/178">#178</a>)</li>
-<li>  fix missing explicit dependency on pthread
-(<a href="https://github.com/ros/ros_comm/issues/135">#135</a>)</li>
-<li>  fix compiler warning about wrong comparison of message md5 hashes
-(<a href="https://github.com/ros/ros_comm/issues/165">#165</a>)</li>
-</ul>
-
-<h2 id="1-9-41-2013-01-24">1.9.41 (2013-01-24)</h2>
-
-<ul>
-<li>  allow sending data exceeding 2GB in chunks
-(<a href="https://code.ros.org/trac/ros/ticket/4049">#4049</a>)</li>
-<li>  update getParam() doc
-(<a href="https://code.ros.org/trac/ros/ticket/1460">#1460</a>)</li>
-<li>  add param::get(float)
-(<a href="https://code.ros.org/trac/ros/ticket/3754">#3754</a>)</li>
-<li>  update inactive assert when publishing message with md5sum *,
-update related tests
-(<a href="https://code.ros.org/trac/ros/ticket/3714">#3714</a>)</li>
-<li>  fix ros master retry timeout
-(<a href="https://code.ros.org/trac/ros/ticket/4024">#4024</a>)</li>
-<li>  fix inactive assert when publishing message with wrong type
-(<a href="https://code.ros.org/trac/ros/ticket/3714">#3714</a>)</li>
-</ul>
-
-<h2 id="1-9-40-2013-01-13">1.9.40 (2013-01-13)</h2>
-
-<h2 id="1-9-39-2012-12-29">1.9.39 (2012-12-29)</h2>
-
-<ul>
-<li>  first public release for Groovy</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -64103,20 +62391,6 @@ update related tests
                     
                     
                     <tr>
-                      <td><a href="/p/rqt_marble_plugin/github-TobiasBaer-marble_plugin#hydro">rqt_marble_plugin</a></td>
-                      <td><a href="/r/marble_plugin/github-TobiasBaer-marble_plugin">github-TobiasBaer-marble_plugin</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/rqt_marble_plugin/github-TobiasBaer-marble_plugin#hydro-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
                       <td><a href="/p/mdm_library/github-larsys-markov_decision_making#hydro">mdm_library</a></td>
                       <td><a href="/r/markov_decision_making/github-larsys-markov_decision_making">github-larsys-markov_decision_making</a></td>
                       <td class="text-center">
@@ -66974,20 +65248,6 @@ update related tests
                       <td class="text-center">
                         
                         <a href="/p/roomba_robin_interactive_markers/github-robinJKU-roomba_robin_viz#hydro-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/rosR/svn-code-p-ivs-ros-pkg-code-trunk-rosR#hydro">rosR</a></td>
-                      <td><a href="/r/rosR/svn-code-p-ivs-ros-pkg-code-trunk-rosR">svn-code-p-ivs-ros-pkg-code-trunk-rosR</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/rosR/svn-code-p-ivs-ros-pkg-code-trunk-rosR#hydro-deps" >
                           <span class="glyphicon glyphicon-arrow-right"></span>
                         </a>
                       </td>
@@ -70876,9 +69136,9 @@ update related tests
             
               <li><a href="https://github.com/ros/ros_comm/blob/hydro-devel/clients/roscpp/srv/GetLoggers.srv" target="_blank">srv/GetLoggers.srv</a></li>
             
-              <li><a href="https://github.com/ros/ros_comm/blob/hydro-devel/clients/roscpp/srv/SetLoggerLevel.srv" target="_blank">srv/SetLoggerLevel.srv</a></li>
-            
               <li><a href="https://github.com/ros/ros_comm/blob/hydro-devel/clients/roscpp/srv/Empty.srv" target="_blank">srv/Empty.srv</a></li>
+            
+              <li><a href="https://github.com/ros/ros_comm/blob/hydro-devel/clients/roscpp/srv/SetLoggerLevel.srv" target="_blank">srv/SetLoggerLevel.srv</a></li>
             
           </ul>
         
@@ -71023,7 +69283,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

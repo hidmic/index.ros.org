@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -592,27 +588,7 @@ sr_tactile_sensor_controller
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-sr_edc_launch">Changelog for package sr_edc_launch</h1>
-
-<h2 id="1-4-0-2015-04-07">1.4.0 (2015-04-07)</h2>
-
-<ul>
-<li>  Rename ros_grant</li>
-<li>  Add launchfile for a bimanual system in a single process</li>
-<li>  replace pr2-grant with ros_grant</li>
-<li>  UBI0.cpp, sr_motor_robot_lib.cpp and sr_muscle_robot_lib now
-match upstream Removed sr_bringup as calibration file is now in
-ros_ethercat</li>
-<li>  now using calibrate.py in sr_mechanism_controllers</li>
-</ul>
-
-<h2 id="1-3-1-2014-07-18">1.3.1 (2014-07-18)</h2>
-
-<h2 id="1-3-0-2014-02-14">1.3.0 (2014-02-14)</h2>
-
-<ul>
-<li>  first hydro release</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -982,83 +958,6 @@ ros_ethercat</li>
         
           <ul>
             
-              <li><a href="https://github.com/shadow-robot/sr-ros-interface-ethercat/blob/kinetic-devel/sr_edc_launch/sr_edc_bimanual.launch" target="_blank">sr_edc_bimanual.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>eth_port</strong> <em>&#91;default: $(optenv ETHERCAT_PORT eth0)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>calibration_controllers</strong> <em>&#91;default: 1&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>robot_description</strong> <em>&#91;default: '$(find sr_description)/robots/bimanual_shadowhand_motor.urdf.xacro'&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>pwm_control</strong> <em>&#91;default: $(optenv PWM_CONTROL 0)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rh_serial</strong> <em>&#91;default: 1050&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rh_id</strong> <em>&#91;default: rh&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>lh_serial</strong> <em>&#91;default: 1098&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>lh_id</strong> <em>&#91;default: lh&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rh_mapping_path</strong> <em>&#91;default: $(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>lh_mapping_path</strong> <em>&#91;default: $(find sr_edc_launch)/mappings/default_mappings/lh_E_v3.yaml&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/shadow-robot/sr-ros-interface-ethercat/blob/kinetic-devel/sr_edc_launch/sr_edc.launch" target="_blank">sr_edc.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1126,7 +1025,7 @@ ros_ethercat</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/shadow-robot/sr-ros-interface-ethercat/blob/kinetic-devel/sr_edc_launch/sr_edc_ros_control.launch" target="_blank">sr_edc_ros_control.launch</a>
+              <li><a href="https://github.com/shadow-robot/sr-ros-interface-ethercat/blob/kinetic-devel/sr_edc_launch/sr_edc_bimanual.launch" target="_blank">sr_edc_bimanual.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1147,47 +1046,37 @@ ros_ethercat</li>
                         
                       
                         
-                          <li><strong>robot_description</strong> <em>&#91;default: '$(find sr_description)/robots/shadowhand_motor.urdf.xacro'&#93; </em></li>
+                          <li><strong>robot_description</strong> <em>&#91;default: '$(find sr_description)/robots/bimanual_shadowhand_motor.urdf.xacro'&#93; </em></li>
                         
                       
                         
-                          <li><strong>pwm_control</strong> <em>&#91;default: $(optenv PWM_CONTROL 1)&#93; </em></li>
+                          <li><strong>pwm_control</strong> <em>&#91;default: $(optenv PWM_CONTROL 0)&#93; </em></li>
                         
                       
                         
-                          <li><strong>use_ns</strong> <em>&#91;default: true&#93; </em></li>
+                          <li><strong>rh_serial</strong> <em>&#91;default: 1050&#93; </em></li>
                         
                       
                         
-                          <li><strong>hand_serial</strong> <em>&#91;default: 1050&#93; </em></li>
+                          <li><strong>rh_id</strong> <em>&#91;default: rh&#93; </em></li>
                         
                       
                         
-                          <li><strong>hand_id</strong> <em>&#91;default: rh&#93; </em></li>
+                          <li><strong>lh_serial</strong> <em>&#91;default: 1098&#93; </em></li>
                         
                       
                         
-                          <li><strong>mapping_path</strong> <em>&#91;default: $(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml&#93; </em></li>
+                          <li><strong>lh_id</strong> <em>&#91;default: lh&#93; </em></li>
                         
                       
                         
-                          <li><strong>initial_z</strong> <em>&#91;default: 0.0&#93; </em></li>
+                          <li><strong>rh_mapping_path</strong> <em>&#91;default: $(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml&#93; </em></li>
                         
                       
                         
-                          <li><strong>load_robot_description</strong> <em>&#91;default: true&#93; </em></li>
+                          <li><strong>lh_mapping_path</strong> <em>&#91;default: $(find sr_edc_launch)/mappings/default_mappings/lh_E_v3.yaml&#93; </em></li>
                         
                       
-                        
-                          <li><strong>define_robot_hardware</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>hand_robot_hardware_name</strong> <em>&#91;default: unique_robot_hw&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>tf_prefix</strong> <em>&#91;default: &#93; </em></li>
                         
                       
                         
@@ -1296,7 +1185,7 @@ ros_ethercat</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/shadow-robot/sr-ros-interface-ethercat/blob/kinetic-devel/sr_edc_launch/hand_ros_control_robot_params.xml" target="_blank">hand_ros_control_robot_params.xml</a>
+              <li><a href="https://github.com/shadow-robot/sr-ros-interface-ethercat/blob/kinetic-devel/sr_edc_launch/sr_edc_ros_control.launch" target="_blank">sr_edc_ros_control.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1305,27 +1194,77 @@ ros_ethercat</li>
                     <ul>
                       
                         
-                          <li><strong>eth_port</strong>  </em></li>
+                          <li><strong>eth_port</strong> <em>&#91;default: $(optenv ETHERCAT_PORT eth0)&#93; </em></li>
                         
                       
                         
-                          <li><strong>left_hand_filter</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
-                          <li><strong>right_hand_filter</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>calibration_controllers</strong> <em>&#91;default: 1&#93; </em></li>
                         
                       
                         
-                          <li><strong>bimanual_filter</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>robot_description</strong> <em>&#91;default: '$(find sr_description)/robots/shadowhand_motor.urdf.xacro'&#93; </em></li>
                         
                       
                         
-                          <li><strong>robot_description_param</strong> <em>&#91;default: robot_description&#93; </em></li>
+                          <li><strong>pwm_control</strong> <em>&#91;default: $(optenv PWM_CONTROL 1)&#93; </em></li>
                         
                       
                         
-                          <li><strong>robot_hardware_name</strong>  </em></li>
+                          <li><strong>use_ns</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>hand_serial</strong> <em>&#91;default: 1050&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>hand_id</strong> <em>&#91;default: rh&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mapping_path</strong> <em>&#91;default: $(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>initial_z</strong> <em>&#91;default: 0.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>load_robot_description</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>define_robot_hardware</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>hand_robot_hardware_name</strong> <em>&#91;default: unique_robot_hw&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>tf_prefix</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
                         
                       
                     </ul>
@@ -1367,6 +1306,43 @@ ros_ethercat</li>
                       
                         
                       
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/shadow-robot/sr-ros-interface-ethercat/blob/kinetic-devel/sr_edc_launch/hand_ros_control_robot_params.xml" target="_blank">hand_ros_control_robot_params.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>eth_port</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>left_hand_filter</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>right_hand_filter</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>bimanual_filter</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>robot_description_param</strong> <em>&#91;default: robot_description&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>robot_hardware_name</strong>  </em></li>
                         
                       
                     </ul>
@@ -1866,27 +1842,7 @@ sr_tactile_sensor_controller
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-sr_edc_launch">Changelog for package sr_edc_launch</h1>
-
-<h2 id="1-4-0-2015-04-07">1.4.0 (2015-04-07)</h2>
-
-<ul>
-<li>  Rename ros_grant</li>
-<li>  Add launchfile for a bimanual system in a single process</li>
-<li>  replace pr2-grant with ros_grant</li>
-<li>  UBI0.cpp, sr_motor_robot_lib.cpp and sr_muscle_robot_lib now
-match upstream Removed sr_bringup as calibration file is now in
-ros_ethercat</li>
-<li>  now using calibrate.py in sr_mechanism_controllers</li>
-</ul>
-
-<h2 id="1-3-1-2014-07-18">1.3.1 (2014-07-18)</h2>
-
-<h2 id="1-3-0-2014-02-14">1.3.0 (2014-02-14)</h2>
-
-<ul>
-<li>  first hydro release</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2256,6 +2212,73 @@ ros_ethercat</li>
         
           <ul>
             
+              <li><a href="https://github.com/shadow-robot/sr-ros-interface-ethercat/blob/indigo-devel/sr_edc_launch/sr_edc.launch" target="_blank">sr_edc.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>eth_port</strong> <em>&#91;default: $(optenv ETHERCAT_PORT eth0)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_controllers</strong> <em>&#91;default: 1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>robot_description</strong> <em>&#91;default: $(find sr_description)/robots/shadowhand_motor.urdf.xacro&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>pwm_control</strong> <em>&#91;default: $(optenv PWM_CONTROL 1)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_ns</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>hand_serial</strong> <em>&#91;default: 1050&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>hand_id</strong> <em>&#91;default: rh&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mapping_path</strong> <em>&#91;default: $(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>initial_z</strong> <em>&#91;default: 0.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>tf_prefix</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/shadow-robot/sr-ros-interface-ethercat/blob/indigo-devel/sr_edc_launch/sr_edc_bimanual.launch" target="_blank">sr_edc_bimanual.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2316,73 +2339,6 @@ ros_ethercat</li>
                       
                         
                       
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/shadow-robot/sr-ros-interface-ethercat/blob/indigo-devel/sr_edc_launch/sr_edc.launch" target="_blank">sr_edc.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>eth_port</strong> <em>&#91;default: $(optenv ETHERCAT_PORT eth0)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>calibration_controllers</strong> <em>&#91;default: 1&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>robot_description</strong> <em>&#91;default: $(find sr_description)/robots/shadowhand_motor.urdf.xacro&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>pwm_control</strong> <em>&#91;default: $(optenv PWM_CONTROL 1)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_ns</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>hand_serial</strong> <em>&#91;default: 1050&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>hand_id</strong> <em>&#91;default: rh&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>mapping_path</strong> <em>&#91;default: $(find sr_edc_launch)/mappings/default_mappings/rh_E_v3.yaml&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>initial_z</strong> <em>&#91;default: 0.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>tf_prefix</strong> <em>&#91;default: &#93; </em></li>
                         
                       
                         
@@ -2942,36 +2898,7 @@ sr_robot_lib
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-sr_edc_launch">Changelog for package sr_edc_launch</h1>
-
-<h2 id="1-3-4-2014-09-19">1.3.4 (2014-09-19)</h2>
-
-<h2 id="1-3-3-2014-09-19">1.3.3 (2014-09-19)</h2>
-
-<ul>
-<li>  Non-existent version (used to avoid version number conflict
-with indigo).</li>
-</ul>
-
-<h2 id="1-3-2-2014-09-19">1.3.2 (2014-09-19)</h2>
-
-<ul>
-<li>  Non-existent version (used to avoid version number conflict
-with indigo).</li>
-</ul>
-
-<h2 id="1-3-1-2014-09-19">1.3.1 (2014-09-19)</h2>
-
-<ul>
-<li>  Non-existent version (used to avoid version number conflict
-with indigo).</li>
-</ul>
-
-<h2 id="1-3-0-2014-02-14">1.3.0 (2014-02-14)</h2>
-
-<ul>
-<li>  first hydro release</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3568,7 +3495,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

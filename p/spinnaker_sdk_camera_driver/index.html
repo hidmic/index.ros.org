@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -434,7 +430,7 @@ spinnaker_sdk_camera_driver
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-19
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-10-03
         </span>
       </td>
     </tr>
@@ -624,6 +620,19 @@ Distortion coefficients of all the cameras in the array.  Must match the number 
 Intrinsic coefficients of all the cameras in the array.  Must match the number of cam_ids provided.
 Specified as [fx  0 cx 0 fy cy 0  0  1]</li>
 </ul>
+
+<h2 id="multicamera-master-slave-setup">Multicamera Master-Slave Setup</h2>
+
+<p>When using multiple cameras, we have found that the only way to keep images between different cameras synched is by using a master-slave setup using the GPIO connector. So this is the only way we support multicamera operation with this code. A general guide for multi camera setup is available at <a href="https://www.ptgrey.com/tan/11052">https://www.ptgrey.com/tan/11052</a>, however note that we use a slightly different setup with our package.
+Refer to the <code>params/multi-cam_example.yaml</code> for an example on how to setup the configuration. You must specify a master_cam which must be one of the cameras in the cam_ids list. This master camera is the camera that is either explicitly software triggered by the code or triggered internally via a counter at a given frame rate. All the other cameras are triggered externally when the master camera triggers. In order to make this work, the wiring must be such that the external signal from the master camera <strong>Line2</strong> is connected to <strong>Line3</strong> on all slave cameras. To connect cameras in this way:
+* Connect the primary (master) camera's pin 3 (red wire, GPIO) to each secondary (slave) camera's pin 1 (green wire, GPI).
+* Connect the primary (master) camera's pin 5 (blue wire, opto ground) and pin 6 (brown wire, ground) to each secondary (slave) camera's pin 6 (brown wire, ground).</p>
+
+<p><strong>GPIO Pinouts for Blackfly S</strong><br>
+<img src="https://raw.githubusercontent.com/neufieldrobotics/spinnaker_sdk_camera_driver/master/.//docs/images/bfs_GPIO.png" alt="GPIO Pinouts for Blackfly S" width="640" align="middle"></p>
+
+<p><strong>GPIO Connections for Master/Slave config</strong><br>
+<img src="https://raw.githubusercontent.com/neufieldrobotics/spinnaker_sdk_camera_driver/master/.//docs/images/gpio_connections.png" alt="GPIO Connections for Master/Slave setup" width="360" align="middle">  </p>
 
 <h2 id="license">License</h2>
 
@@ -1186,7 +1195,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

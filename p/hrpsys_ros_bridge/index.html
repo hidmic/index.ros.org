@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -482,7 +478,7 @@ rtmros_common
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-05-14
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-05-13
         </span>
       </td>
     </tr>
@@ -664,422 +660,7 @@ Publish ROS topics by reading RTC's data ports. </li>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-hrpsys_ros_bridge">Changelog for package hrpsys_ros_bridge</h1>
-
-<h2 id="1-4-2-2017-12-22">1.4.2 (2017-12-22)</h2>
-
-<ul>
-<li>  add test to check
-<a href="https://github.com/start-jsk/rtmros_common/issues/1036">#1036</a>
-situation
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1038">#1038</a>)</li>
-<li>  duration == 0.0 results unexpected behavior, so force set 0.001 when
-duration == 0 s set
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1037">#1037</a> )</li>
-<li>  Contributors: Kei Okada</li>
-</ul>
-
-<h2 id="1-4-1-2017-10-25">1.4.1 (2017-10-25)</h2>
-
-<ul>
-<li>  Update of sensor_ros_bridge_connect.py
-
-<ul>
-<li>  Connect ReferenceForceUpdater's ref_force
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1033">#1033</a>)
-*
-[hrpsys_ros_bridge/scripts/sensor_ros_bridge_connect.py]
-connect reference force port to ReferenceForceUpdater or
-EmergencyStopper if exists.</li>
-<li>  Add wait for rmfo and vs
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1029">#1029</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge, sensor_ros_bridge_connect.py] add
-wait for initalizinig all components</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>  HrpsysSeqStateROSBridge
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1027">#1027</a>)
-
-<ul>
-<li>  [HrpsysSeqStateROSBridge] fix for using virtual force sensor</li>
-</ul>
-</li>
-<li>  Update rtm-ros-robot-interface.l
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1030">#1030</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Add
-documentation string for new arguments
-(set-ref-force-linear-p, return-value-mode)</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Add
-argument to set linear interpolation during increasing force</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Enable
-to set return value mode</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Enable
-to get fric coefficient wrench add update print messages</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Update
-otd checking loop for moment. Exit from do-until-key loop
-immediately when otd detection. Fix valiables for set ref force</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Use
-euslisp symbol as detector total wrench parameter</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Enable
-to access detector total wrench as euslisp symbol.</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Update
-otd checking loop. Exit from do-until-key loop immediately when
-otd detection.</li>
-</ul>
-</li>
-<li>  Contributors: MasakiMurooka, Shunichi Nozawa, YoheiKakiuchi</li>
-</ul>
-
-<h2 id="1-4-0-2017-08-09">1.4.0 (2017-08-09)</h2>
-
-<ul>
-<li>  display error message when body-&gt;sensor(j, i) is null
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1014">#1014</a>)</li>
-<li>  sensor_ros_bridge_connect.py : add more debug message
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1015">#1015</a>)</li>
-<li>  Update AutoBalancer and ReferenceForceUpdater euslisp method symbols
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1026">#1026</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Supprot :FootOriginExtMoment for RFU methods.</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Support UseForceMode setting as euslisp symbol
-in :set-auto-balancer-param.</li>
-</ul>
-</li>
-<li>  fix code to run both Indido and Kinetic
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1025">#1025</a>)
-
-<ul>
-<li>  /test/test-samplerobot-hcf.launch: increase time-limit to 600</li>
-<li>  test/{test-samplerobot.py,test-pa10.py} support both
-pr2_controllers_msgs and controllr_msgs</li>
-<li>  src/hrpsys_ros_bridge/hrpsys_dashboard.py: fix for qt5</li>
-<li>  add USE_PR2_CONTROLLERS_MSGS definition</li>
-<li>  CMakeLists.txt : we do not use pr2_msgs on build time</li>
-<li>  CMakeLists.txt : remove code to download wet
-pr2_controllers_msgs for groovy</li>
-</ul>
-</li>
-<li>  Support stride parameter with different length
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1022">#1022</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Support stride_parameter of different length</li>
-<li>  [hrpsys_ros_bridge/test/hrpsys-samples/samplerobot-auto-balancer.l]
-Add test to check stride parameter 4 and 6</li>
-</ul>
-</li>
-<li>  [HrpsysSeqStateROSBridge] fix stamp of joint_state. add stamp
-after reading m_rsangle
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1019">#1019</a>)
-
-<ul>
-<li>  [HrpsysSeqStateROSBridge] fix stamp of joint_state. add stamp
-after reading m_rsangle</li>
-</ul>
-</li>
-<li>  [HrpsysSeqStateROSBridge] remove subtraction magic number
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1013">#1013</a>)
-
-<ul>
-<li>  [HrpsysSeqStateROSBridge] remove subtraction magic number</li>
-</ul>
-</li>
-<li>  Support argumen t for setting duration of calibration. For
-:remove-xx methods, 8.0 by default[s]. For :reset-xx methods,
-0.1[s] by default for compatibility
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1011">#1011</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Support argument for setting duration of calibration. For
-:remove-xx methods, 8.0 by default[s]. For :reset-xx methods,
-0.1[s] by default for compatibility</li>
-</ul>
-</li>
-<li>  Add new methods for :remove-force-sensor-offset using RMFO
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1010">#1010</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Add
-new methods for :remove-force-sensor-offset using RMFO. Add
-warning message for deprecated remove-force methods.</li>
-</ul>
-</li>
-<li>  Update euslisp hrpsysbase samples
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1009">#1009</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/test/hrpsys-samples] Add README for
-Euslisp hrpsys example basically copied from ros wiki
-(<a href="http://wiki.ros.org/rtmros_common/Tutorials/WorkingWithEusLisp">http://wiki.ros.org/rtmros_common/Tutorials/WorkingWithEusLisp</a>)</li>
-<li>  [hrpsys_ros_bridge/test/hrpsys-samples/samplerobot-carry-object.l]
-Update carry demo euslisp sample.</li>
-<li>  [hrpsys_ros_bridge/test/hrpsys-samples/samplerobot-stabilizer.l]
-Update stabilizer euslisp sample according to hrpsys-base
-stabilizer sample update.</li>
-</ul>
-</li>
-<li>  Fix bug of sample4leg robot end-coords setting for arms.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1008">#1008</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/models/sample4legrobot.yaml] Fix bug of
-sample4legrobot end-coords setting for arms.</li>
-</ul>
-</li>
-<li>  Update project generator and refforce
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1007">#1007</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp] Update README for
-openhrp-project-generator</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Fix
-orientation for openhrp-project-generator</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Update
-for object turnaround detection to use initial ref forces</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Update
-dump function for openhrp project generator. Use
-openhrp-project-generator in openhrp3 package instead of
-_gen_project.launch</li>
-</ul>
-</li>
-<li>  Add forgotten update for robot.launch
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1004">https://github.com/start-jsk/rtmros_common/pull/1004</a>)
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1005">#1005</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/scripts/default_robot.launch.in] Add
-forgotten update in
-<a href="https://github.com/start-jsk/rtmros_common/pull/1004">https://github.com/start-jsk/rtmros_common/pull/1004</a>. Add
-USE_XXX of under-development RTCs for robot.launch such as
-samplerobot.launch to pass arguments to
-robot_ros_bridge.launch</li>
-</ul>
-</li>
-<li>  set USE_UNSTABLE_RTC as not all unstable rtc defiend in
-hrpsys_config.py, just for basic walking test, other latest
-development rtc is passed by arg
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1004">#1004</a>)
-
-<ul>
-<li>  set USE_UNSTABLE_RTC as not getUnstableRTC defined in
-hrpsys_config.py, it is for a basic walking test, other latest
-development rtc is passed by arg from
-test_samplerobot_euslisp_unittests.launch</li>
-<li>  [hrpsys_ros_bridge/launch/hrpsys_ros_bridge.launch,hrpsys_ros_bridge/scripts/default_robot_ros_bridge.launch.in,hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l,hrpsys_tools/launch/hrpsys.launch]
-Update for ObjectTurnaroundDetector RTC. add
-USE_REFERENCEFORCEUDPATER
-and USE_OBJECTCONTACTTURNAROUNDDETECTOR.</li>
-</ul>
-</li>
-<li>  Contributors: Kei Okada, Shunichi Nozawa, Yohei Kakiuchi</li>
-</ul>
-
-<h2 id="1-3-3-2017-02-12">1.3.3 (2017-02-12)</h2>
-
-<ul>
-<li>  HrpsysSeqStateROSBridge.cpp
-
-<ul>
-<li>  HrpsysSeqStateROSBridge occurs error if number of force sensor
-is different with size of contact states. fix number of force
-sensor
-(<a href="https://github.com/start-jsk/rtmros_common/issues/982">#982</a>)</li>
-<li>  Revert "[HrpsysSeqStateROSBridge] fix number of force sensor"
-<a href="https://github.com/start-jsk/rtmros_common/issues/984">#984</a>
-</li>
-<li>  Separate offset-removed force sensor data ports from rsforce,
-which is actual and non-offset-removed data port. Currently
-rsforce ports -&gt; rsforce ports + offforce ports.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/964">#964</a>)</li>
-<li>  Fixed mistake of sensor_link_name, when robot has only virturl
-force sonsors
-(<a href="https://github.com/start-jsk/rtmros_common/issues/945">#945</a>)</li>
-</ul>
-</li>
-<li>  HrpsysJointTrajectoryBridge.cpp
-
-<ul>
-<li>  publish feedback for joint_trajectory_actions
-(<a href="https://github.com/start-jsk/rtmros_common/issues/966">#966</a>)</li>
-</ul>
-</li>
-<li>  hrpsys_ros_bridge/launch/hrpsys_ros_bridge.launch
-
-<ul>
-<li>  Add argument to change buffer length of rtmlaunch connection.
-Set 8 by default (default setting in openrtm).
-(<a href="https://github.com/start-jsk/rtmros_common/issues/980">#980</a>)</li>
-<li>  fix model filename. Enable cache in ModelLoader, filename should
-be same as in .conf file.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/978">#978</a>)</li>
-</ul>
-</li>
-<li>
-<p>euslisp</p>
-
-<ul>
-<li>  [rtm-ros-robot-interface.l] refactor torque-controller
-interface
-(<a href="https://github.com/start-jsk/rtmros_common/issues/994">#994</a>)</li>
-<li>  Update sequencefull unit system and arguments
-(<a href="https://github.com/start-jsk/rtmros_common/issues/988">#988</a>)
-
-<ul>
-<li>  changed arguments of angle-vector-sequence-full see
-<a href="https://github.com/start-jsk/rtmros_common/issues/985">#985</a>
-</li>
-<li>  [hrpsys-samples/samplerobot-sequence-player.l] Add test
-for angle-vector-sequence-full (check validity)</li>
-<li>  [rtm-ros-robot-interface.l] Use root-coords and zmp in the
-abs frame and convert them inside the
-:angle-vector-sequence-full</li>
-<li>  [rtm-ros-robot-interface.l] Introduce fsensor length for
-wrench and optionals</li>
-<li>  [rtm-ros-robot-interface.l] Use [mm] and [deg/s]
-instead of [m] and [rad/s] for vel, pos, and zmp.</li>
-<li>  [rtm-ros-robot-interface.l] Use [deg] instead of [rad]
-for jpos argument and remove jvs arg.</li>
-<li>  [rtm-ros-robot-interface.l] Use tm as [ms],
-previously [s].</li>
-</ul>
-</li>
-<li>  [tm-ros-robot-interface.l] Update :reset-force-moment-offset
-to use :off force/moment vector
-(<a href="https://github.com/start-jsk/rtmros_common/issues/983">#983</a>)</li>
-<li>  [tm-ros-robot-interface.l] Added a missing keyword in
-def-set-get-method for TorqueControllerService.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/972">#972</a>)</li>
-<li>  [tm-ros-robot-interface.l] Add euslisp interface for torque
-controller
-(<a href="https://github.com/start-jsk/rtmros_common/issues/965">#965</a>)</li>
-<li>  [datalogger-log-parser.l] Modify unit of cogvel [m] -&gt;
-[mm] for euslisp
-(<a href="https://github.com/start-jsk/rtmros_common/issues/960">#960</a>)</li>
-<li>  [rtm-ros-robot-interface.l] Add get-go-pos-footsteps-sequence
-in rtm-ros-robot-interface.l and add test
-(<a href="https://github.com/start-jsk/rtmros_common/issues/965">#965</a>)</li>
-<li>  [rtm-ros-robot-interface.l] Update frame of wrench.
-Previously, wrench frame is mismatch with documentation string.
-Previous : local -&gt; new : world.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/963">#963</a>)</li>
-<li>  [rtm-ros-robot-interface.l] Add eefm force moment distribution
-weight parameter.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/958">#958</a>)</li>
-<li>  [rtm-ros-robot-interface.l] add Eus interface of
-SequencePlayserService_setJointAnglesSequenceFull and add test
-in test/hrpsys-samples/samplerobot-sequence-player.l
-(<a href="https://github.com/start-jsk/rtmros_common/issues/954">#954</a>)</li>
-<li>  [datalogger-log-parser.l] Add sh reference force and support
-both rpy and 3x3 matrix for WAIST
-log(<a href="https://github.com/start-jsk/rtmros_common/issues/956">#956</a>)</li>
-<li>  [rtm-ros-robot-interface.l] update rfu interface for idl
-changed in <a href="https://github.com/fkanehiro/hrpsys-base/pull/1005">https://github.com/fkanehiro/hrpsys-base/pull/1005</a>
-(<a href="https://github.com/start-jsk/rtmros_common/issues/952">#952</a>)</li>
-<li>
-<p>[datalogger-log-parser.l] Use joint-list length for datalogger
-joint angle conversion.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/953">#953</a>)</p>
-
-<ul>
-<li>  Add simulation actual root coords reading and check for
-existance of RobotHardware0_servoState in datalogger. Fix
-setting of simulators' data parser names.</li>
-</ul>
-
-<p>* Use joint-list length for datalogger joint angle conversion.</p>
-</li>
-<li><p>[rtm-ros-robot-interface.l] make directory for log files
-(<a href="https://github.com/start-jsk/rtmros_common/issues/951">#951</a>)</p></li>
-</ul>
-</li>
-<li><p>[scripts/default_robot_ros_bridge.launch.in] Add nameserver
-argument for ros_bridge.launch
-(<a href="https://github.com/start-jsk/rtmros_common/issues/950">#950</a>)</p></li>
-<li><p>[test/hrpsys-samples/samplerobot-stabilizer.l] Update loadPattern
-sample because add-optional-data-from-rs-list is included in
-dump-seq-pattern-file
-(<a href="https://github.com/start-jsk/rtmros_common/issues/959">#959</a>)</p></li>
-<li><p>Contributors: Ryo Koyama, Kei Okada, Noriaki Takasugi, Ryo Terasawa,
-Shunichi Nozawa, Yohei Kakiuchi, Yoshimaru Tanaka, Iori Kumagai,
-Iori Yanokura, Juntaro Tamura</p></li>
-</ul>
-
-<h2 id="1-3-2-2016-04-26">1.3.2 (2016-04-26)</h2>
-
-<ul>
-<li>  [fix] getFootStepParam interface according to upstream change.
-Remove rleg_coords and lleg_coords.</li>
-<li>  [fix] HrpsysSeqStateROSBridgeImpl.cpp: sensor-&gt;localR is world
-coords</li>
-<li>  [fix] Modified HrpsysSeqStateROSBridgeImpl to enable virtual force</li>
-<li>  [fix] [rtm-ros-robot-interface.l] add time constant prameter
-according to upstream idl update</li>
-<li>  [fix] [hrpsys_ros_bridge] Fix genjava problem by adding
-message_generation as build_depend</li>
-<li>  [fix] getFootStepParam interface according to upstream change.
-Remove rleg_coords and lleg_coords.</li>
-<li>  [fix] [hrpsys_ros_bridge]change D if D from hrpsys is empty</li>
-<li>  [feat] [hrpsys_ros_bridge/test/test-samplerobot.py] add test
-programs to check frame_id of off_xxsensor and
-ref_xxsensor (#940)</li>
-<li>  [feat] Set /robot/type param according to lower-case robot name
-such as samplerobot.</li>
-<li>  [feat] [hrpsys_ros_bridge/test/test-samplerobot.*] add a test
-program for init of hcf</li>
-<li>  [feat] fix collision visualization, color of sphere will be purple
-if collision occur</li>
-<li>  [feat] .travis.yml : add test when old hrpsys-ros-bridge
-exists (#929)</li>
-<li>  [feat] [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Add check for param existence for def-set-get-param-method to
-neglect idl mismatch error. Fix indent. (#933)</li>
-<li>  [feat] [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Add reference force updater euslisp methods.</li>
-<li>  [feat] [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Add object turnaround detector moment version interface.l</li>
-<li>  [feat] Add define controller
-<a href="https://github.com/start-jsk/rtmros_common/issues/887">#887</a>
-</li>
-<li>  [feat] Add leg limb controller setting.</li>
-<li>  [feat] Add method to define joint trajectory controller by
-default setting.</li>
-<li>  [feat] Add gopos overwrite and graspless manip mode to all demos</li>
-<li>  [feat] Add example for graspless manip mode and gopos overwrite.</li>
-<li>  [feat] Add euslisp interface for graspless manip mode.</li>
-<li>  [feat] add a set-default-step-time-with-the-same-swing-time method</li>
-<li>  [feat] add time constant prameter according to upstream idl update</li>
-<li>  [feat] Add HrpsysSeqStateROSBridge tf rate test</li>
-<li>  [feat] enable virtual force in HrpsysSeqStateROSBridgeImpl</li>
-<li>  [feat] Enable to set subscription_type for DataPorts from
-hrpsys_ros_bridge.launch argument. Use new by default to keep
-backward compatibility.</li>
-<li>  [feat] Add loading of optionalData from seq pattern file.</li>
-<li>  [improve] add more mesage to prevent confusion</li>
-<li>  [improve] Add setting for ReferenceForceUpdater</li>
-<li>  [improve] Reset object turnaround detector's detector total wrench
-mode as TOTAL_FORCE in force estimation.</li>
-<li>  [improve] Enable to set push_policy and push_rate for DataPorts
-from hrpsys_ros_bridge.launch argument. Use all and 50.0 by
-default to keep backward compatibility.</li>
-<li>  [improve] Rename tf extract script for test and add comments for
-that</li>
-<li>  [improve]
-add arguments(SIMULATOR_NAME_[ANGLE,VELOCITY,TORQUE]) to
-hrpsys_ros_bridge.launch, for connecting rtc components other than
-RobotHardware</li>
-<li>  [improve] add time constant prameter according to u</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1924,6 +1505,122 @@ RobotHardware</li>
         
           <ul>
             
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/hrpsys-samples/test_samplerobot_euslisp_unittests.launch" target="_blank">test/hrpsys-samples/test_samplerobot_euslisp_unittests.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> =*- mode: xml -*- </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>NOSIM</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>GUI</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>NOSIM</strong> <em>&#91;default: $(arg NOSIM)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>GUI</strong> <em>&#91;default: $(arg GUI)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: $(arg RUN_RVIZ)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>corbaport</strong> <em>&#91;default: 2809&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_UNSTABLE_RTC</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_EMERGENCYSTOPPER</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_REFERENCEFORCEUPDATER</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_OBJECTCONTACTTURNAROUNDDETECTOR</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/test-samplerobot-hcf.launch" target="_blank">test/test-samplerobot-hcf.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>corbaport</strong> <em>&#91;default: 2809&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>GUI</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_UNSTABLE_RTC</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/test-compile-robot.launch" target="_blank">test/test-compile-robot.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/robot_pose_ekf.launch" target="_blank">launch/robot_pose_ekf.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>base_link</strong> <em>&#91;default: BODY&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/samplerobot_startup-grxui.launch" target="_blank">launch/samplerobot_startup-grxui.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1936,60 +1633,6 @@ RobotHardware</li>
                           <li><strong>KILL_SERVERS</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
-                        
-                      
-                        
-                          <li><strong>KILL_SERVERS</strong> <em>&#91;default: $(arg KILL_SERVERS)&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/robot_monitor.launch" target="_blank">launch/robot_monitor.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>check_core_temps</strong> <em>&#91;default: False&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>check_ipmi_tool</strong> <em>&#91;default: False&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>check_nfs</strong> <em>&#91;default: False&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enforce_clock_speed</strong> <em>&#91;default: False&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>num_cores</strong> <em>&#91;default: 4&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/samplerobot-grxui.launch" target="_blank">launch/samplerobot-grxui.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>KILL_SERVERS</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -2229,7 +1872,7 @@ RobotHardware</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/robot_pose_ekf.launch" target="_blank">launch/robot_pose_ekf.launch</a>
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/samplerobot-grxui.launch" target="_blank">launch/samplerobot-grxui.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2238,7 +1881,44 @@ RobotHardware</li>
                     <ul>
                       
                         
-                          <li><strong>base_link</strong> <em>&#91;default: BODY&#93; </em></li>
+                          <li><strong>KILL_SERVERS</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>KILL_SERVERS</strong> <em>&#91;default: $(arg KILL_SERVERS)&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/robot_monitor.launch" target="_blank">launch/robot_monitor.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>check_core_temps</strong> <em>&#91;default: False&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>check_ipmi_tool</strong> <em>&#91;default: False&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>check_nfs</strong> <em>&#91;default: False&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enforce_clock_speed</strong> <em>&#91;default: False&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>num_cores</strong> <em>&#91;default: 4&#93; </em></li>
                         
                       
                     </ul>
@@ -2265,105 +1945,6 @@ RobotHardware</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/hrpsys-samples/test_samplerobot_euslisp_unittests.launch" target="_blank">test/hrpsys-samples/test_samplerobot_euslisp_unittests.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> =*- mode: xml -*- </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>NOSIM</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>GUI</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>NOSIM</strong> <em>&#91;default: $(arg NOSIM)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>GUI</strong> <em>&#91;default: $(arg GUI)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: $(arg RUN_RVIZ)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>corbaport</strong> <em>&#91;default: 2809&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_UNSTABLE_RTC</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_EMERGENCYSTOPPER</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_REFERENCEFORCEUPDATER</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_OBJECTCONTACTTURNAROUNDDETECTOR</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/test-compile-robot.launch" target="_blank">test/test-compile-robot.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/test-samplerobot-hcf.launch" target="_blank">test/test-samplerobot-hcf.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>corbaport</strong> <em>&#91;default: 2809&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>GUI</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_UNSTABLE_RTC</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
           </ul>
         
       </div>
@@ -2377,13 +1958,13 @@ RobotHardware</li>
         
           <ul>
             
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/MotorStates.msg" target="_blank">msg/MotorStates.msg</a></li>
-            
               <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/ContactState.msg" target="_blank">msg/ContactState.msg</a></li>
             
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/ContactStatesStamped.msg" target="_blank">msg/ContactStatesStamped.msg</a></li>
-            
               <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/ContactStateStamped.msg" target="_blank">msg/ContactStateStamped.msg</a></li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/MotorStates.msg" target="_blank">msg/MotorStates.msg</a></li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/ContactStatesStamped.msg" target="_blank">msg/ContactStatesStamped.msg</a></li>
             
           </ul>
         
@@ -2764,7 +2345,7 @@ rtmros_common
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-05-14
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-05-13
         </span>
       </td>
     </tr>
@@ -2946,422 +2527,7 @@ Publish ROS topics by reading RTC's data ports. </li>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-hrpsys_ros_bridge">Changelog for package hrpsys_ros_bridge</h1>
-
-<h2 id="1-4-2-2017-12-22">1.4.2 (2017-12-22)</h2>
-
-<ul>
-<li>  add test to check
-<a href="https://github.com/start-jsk/rtmros_common/issues/1036">#1036</a>
-situation
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1038">#1038</a>)</li>
-<li>  duration == 0.0 results unexpected behavior, so force set 0.001 when
-duration == 0 s set
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1037">#1037</a> )</li>
-<li>  Contributors: Kei Okada</li>
-</ul>
-
-<h2 id="1-4-1-2017-10-25">1.4.1 (2017-10-25)</h2>
-
-<ul>
-<li>  Update of sensor_ros_bridge_connect.py
-
-<ul>
-<li>  Connect ReferenceForceUpdater's ref_force
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1033">#1033</a>)
-*
-[hrpsys_ros_bridge/scripts/sensor_ros_bridge_connect.py]
-connect reference force port to ReferenceForceUpdater or
-EmergencyStopper if exists.</li>
-<li>  Add wait for rmfo and vs
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1029">#1029</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge, sensor_ros_bridge_connect.py] add
-wait for initalizinig all components</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>  HrpsysSeqStateROSBridge
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1027">#1027</a>)
-
-<ul>
-<li>  [HrpsysSeqStateROSBridge] fix for using virtual force sensor</li>
-</ul>
-</li>
-<li>  Update rtm-ros-robot-interface.l
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1030">#1030</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Add
-documentation string for new arguments
-(set-ref-force-linear-p, return-value-mode)</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Add
-argument to set linear interpolation during increasing force</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Enable
-to set return value mode</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Enable
-to get fric coefficient wrench add update print messages</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Update
-otd checking loop for moment. Exit from do-until-key loop
-immediately when otd detection. Fix valiables for set ref force</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Use
-euslisp symbol as detector total wrench parameter</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Enable
-to access detector total wrench as euslisp symbol.</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Update
-otd checking loop. Exit from do-until-key loop immediately when
-otd detection.</li>
-</ul>
-</li>
-<li>  Contributors: MasakiMurooka, Shunichi Nozawa, YoheiKakiuchi</li>
-</ul>
-
-<h2 id="1-4-0-2017-08-09">1.4.0 (2017-08-09)</h2>
-
-<ul>
-<li>  display error message when body-&gt;sensor(j, i) is null
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1014">#1014</a>)</li>
-<li>  sensor_ros_bridge_connect.py : add more debug message
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1015">#1015</a>)</li>
-<li>  Update AutoBalancer and ReferenceForceUpdater euslisp method symbols
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1026">#1026</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Supprot :FootOriginExtMoment for RFU methods.</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Support UseForceMode setting as euslisp symbol
-in :set-auto-balancer-param.</li>
-</ul>
-</li>
-<li>  fix code to run both Indido and Kinetic
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1025">#1025</a>)
-
-<ul>
-<li>  /test/test-samplerobot-hcf.launch: increase time-limit to 600</li>
-<li>  test/{test-samplerobot.py,test-pa10.py} support both
-pr2_controllers_msgs and controllr_msgs</li>
-<li>  src/hrpsys_ros_bridge/hrpsys_dashboard.py: fix for qt5</li>
-<li>  add USE_PR2_CONTROLLERS_MSGS definition</li>
-<li>  CMakeLists.txt : we do not use pr2_msgs on build time</li>
-<li>  CMakeLists.txt : remove code to download wet
-pr2_controllers_msgs for groovy</li>
-</ul>
-</li>
-<li>  Support stride parameter with different length
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1022">#1022</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Support stride_parameter of different length</li>
-<li>  [hrpsys_ros_bridge/test/hrpsys-samples/samplerobot-auto-balancer.l]
-Add test to check stride parameter 4 and 6</li>
-</ul>
-</li>
-<li>  [HrpsysSeqStateROSBridge] fix stamp of joint_state. add stamp
-after reading m_rsangle
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1019">#1019</a>)
-
-<ul>
-<li>  [HrpsysSeqStateROSBridge] fix stamp of joint_state. add stamp
-after reading m_rsangle</li>
-</ul>
-</li>
-<li>  [HrpsysSeqStateROSBridge] remove subtraction magic number
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1013">#1013</a>)
-
-<ul>
-<li>  [HrpsysSeqStateROSBridge] remove subtraction magic number</li>
-</ul>
-</li>
-<li>  Support argumen t for setting duration of calibration. For
-:remove-xx methods, 8.0 by default[s]. For :reset-xx methods,
-0.1[s] by default for compatibility
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1011">#1011</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Support argument for setting duration of calibration. For
-:remove-xx methods, 8.0 by default[s]. For :reset-xx methods,
-0.1[s] by default for compatibility</li>
-</ul>
-</li>
-<li>  Add new methods for :remove-force-sensor-offset using RMFO
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1010">#1010</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Add
-new methods for :remove-force-sensor-offset using RMFO. Add
-warning message for deprecated remove-force methods.</li>
-</ul>
-</li>
-<li>  Update euslisp hrpsysbase samples
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1009">#1009</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/test/hrpsys-samples] Add README for
-Euslisp hrpsys example basically copied from ros wiki
-(<a href="http://wiki.ros.org/rtmros_common/Tutorials/WorkingWithEusLisp">http://wiki.ros.org/rtmros_common/Tutorials/WorkingWithEusLisp</a>)</li>
-<li>  [hrpsys_ros_bridge/test/hrpsys-samples/samplerobot-carry-object.l]
-Update carry demo euslisp sample.</li>
-<li>  [hrpsys_ros_bridge/test/hrpsys-samples/samplerobot-stabilizer.l]
-Update stabilizer euslisp sample according to hrpsys-base
-stabilizer sample update.</li>
-</ul>
-</li>
-<li>  Fix bug of sample4leg robot end-coords setting for arms.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1008">#1008</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/models/sample4legrobot.yaml] Fix bug of
-sample4legrobot end-coords setting for arms.</li>
-</ul>
-</li>
-<li>  Update project generator and refforce
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1007">#1007</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp] Update README for
-openhrp-project-generator</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Fix
-orientation for openhrp-project-generator</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Update
-for object turnaround detection to use initial ref forces</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Update
-dump function for openhrp project generator. Use
-openhrp-project-generator in openhrp3 package instead of
-_gen_project.launch</li>
-</ul>
-</li>
-<li>  Add forgotten update for robot.launch
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1004">https://github.com/start-jsk/rtmros_common/pull/1004</a>)
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1005">#1005</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/scripts/default_robot.launch.in] Add
-forgotten update in
-<a href="https://github.com/start-jsk/rtmros_common/pull/1004">https://github.com/start-jsk/rtmros_common/pull/1004</a>. Add
-USE_XXX of under-development RTCs for robot.launch such as
-samplerobot.launch to pass arguments to
-robot_ros_bridge.launch</li>
-</ul>
-</li>
-<li>  set USE_UNSTABLE_RTC as not all unstable rtc defiend in
-hrpsys_config.py, just for basic walking test, other latest
-development rtc is passed by arg
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1004">#1004</a>)
-
-<ul>
-<li>  set USE_UNSTABLE_RTC as not getUnstableRTC defined in
-hrpsys_config.py, it is for a basic walking test, other latest
-development rtc is passed by arg from
-test_samplerobot_euslisp_unittests.launch</li>
-<li>  [hrpsys_ros_bridge/launch/hrpsys_ros_bridge.launch,hrpsys_ros_bridge/scripts/default_robot_ros_bridge.launch.in,hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l,hrpsys_tools/launch/hrpsys.launch]
-Update for ObjectTurnaroundDetector RTC. add
-USE_REFERENCEFORCEUDPATER
-and USE_OBJECTCONTACTTURNAROUNDDETECTOR.</li>
-</ul>
-</li>
-<li>  Contributors: Kei Okada, Shunichi Nozawa, Yohei Kakiuchi</li>
-</ul>
-
-<h2 id="1-3-3-2017-02-12">1.3.3 (2017-02-12)</h2>
-
-<ul>
-<li>  HrpsysSeqStateROSBridge.cpp
-
-<ul>
-<li>  HrpsysSeqStateROSBridge occurs error if number of force sensor
-is different with size of contact states. fix number of force
-sensor
-(<a href="https://github.com/start-jsk/rtmros_common/issues/982">#982</a>)</li>
-<li>  Revert "[HrpsysSeqStateROSBridge] fix number of force sensor"
-<a href="https://github.com/start-jsk/rtmros_common/issues/984">#984</a>
-</li>
-<li>  Separate offset-removed force sensor data ports from rsforce,
-which is actual and non-offset-removed data port. Currently
-rsforce ports -&gt; rsforce ports + offforce ports.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/964">#964</a>)</li>
-<li>  Fixed mistake of sensor_link_name, when robot has only virturl
-force sonsors
-(<a href="https://github.com/start-jsk/rtmros_common/issues/945">#945</a>)</li>
-</ul>
-</li>
-<li>  HrpsysJointTrajectoryBridge.cpp
-
-<ul>
-<li>  publish feedback for joint_trajectory_actions
-(<a href="https://github.com/start-jsk/rtmros_common/issues/966">#966</a>)</li>
-</ul>
-</li>
-<li>  hrpsys_ros_bridge/launch/hrpsys_ros_bridge.launch
-
-<ul>
-<li>  Add argument to change buffer length of rtmlaunch connection.
-Set 8 by default (default setting in openrtm).
-(<a href="https://github.com/start-jsk/rtmros_common/issues/980">#980</a>)</li>
-<li>  fix model filename. Enable cache in ModelLoader, filename should
-be same as in .conf file.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/978">#978</a>)</li>
-</ul>
-</li>
-<li>
-<p>euslisp</p>
-
-<ul>
-<li>  [rtm-ros-robot-interface.l] refactor torque-controller
-interface
-(<a href="https://github.com/start-jsk/rtmros_common/issues/994">#994</a>)</li>
-<li>  Update sequencefull unit system and arguments
-(<a href="https://github.com/start-jsk/rtmros_common/issues/988">#988</a>)
-
-<ul>
-<li>  changed arguments of angle-vector-sequence-full see
-<a href="https://github.com/start-jsk/rtmros_common/issues/985">#985</a>
-</li>
-<li>  [hrpsys-samples/samplerobot-sequence-player.l] Add test
-for angle-vector-sequence-full (check validity)</li>
-<li>  [rtm-ros-robot-interface.l] Use root-coords and zmp in the
-abs frame and convert them inside the
-:angle-vector-sequence-full</li>
-<li>  [rtm-ros-robot-interface.l] Introduce fsensor length for
-wrench and optionals</li>
-<li>  [rtm-ros-robot-interface.l] Use [mm] and [deg/s]
-instead of [m] and [rad/s] for vel, pos, and zmp.</li>
-<li>  [rtm-ros-robot-interface.l] Use [deg] instead of [rad]
-for jpos argument and remove jvs arg.</li>
-<li>  [rtm-ros-robot-interface.l] Use tm as [ms],
-previously [s].</li>
-</ul>
-</li>
-<li>  [tm-ros-robot-interface.l] Update :reset-force-moment-offset
-to use :off force/moment vector
-(<a href="https://github.com/start-jsk/rtmros_common/issues/983">#983</a>)</li>
-<li>  [tm-ros-robot-interface.l] Added a missing keyword in
-def-set-get-method for TorqueControllerService.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/972">#972</a>)</li>
-<li>  [tm-ros-robot-interface.l] Add euslisp interface for torque
-controller
-(<a href="https://github.com/start-jsk/rtmros_common/issues/965">#965</a>)</li>
-<li>  [datalogger-log-parser.l] Modify unit of cogvel [m] -&gt;
-[mm] for euslisp
-(<a href="https://github.com/start-jsk/rtmros_common/issues/960">#960</a>)</li>
-<li>  [rtm-ros-robot-interface.l] Add get-go-pos-footsteps-sequence
-in rtm-ros-robot-interface.l and add test
-(<a href="https://github.com/start-jsk/rtmros_common/issues/965">#965</a>)</li>
-<li>  [rtm-ros-robot-interface.l] Update frame of wrench.
-Previously, wrench frame is mismatch with documentation string.
-Previous : local -&gt; new : world.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/963">#963</a>)</li>
-<li>  [rtm-ros-robot-interface.l] Add eefm force moment distribution
-weight parameter.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/958">#958</a>)</li>
-<li>  [rtm-ros-robot-interface.l] add Eus interface of
-SequencePlayserService_setJointAnglesSequenceFull and add test
-in test/hrpsys-samples/samplerobot-sequence-player.l
-(<a href="https://github.com/start-jsk/rtmros_common/issues/954">#954</a>)</li>
-<li>  [datalogger-log-parser.l] Add sh reference force and support
-both rpy and 3x3 matrix for WAIST
-log(<a href="https://github.com/start-jsk/rtmros_common/issues/956">#956</a>)</li>
-<li>  [rtm-ros-robot-interface.l] update rfu interface for idl
-changed in <a href="https://github.com/fkanehiro/hrpsys-base/pull/1005">https://github.com/fkanehiro/hrpsys-base/pull/1005</a>
-(<a href="https://github.com/start-jsk/rtmros_common/issues/952">#952</a>)</li>
-<li>
-<p>[datalogger-log-parser.l] Use joint-list length for datalogger
-joint angle conversion.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/953">#953</a>)</p>
-
-<ul>
-<li>  Add simulation actual root coords reading and check for
-existance of RobotHardware0_servoState in datalogger. Fix
-setting of simulators' data parser names.</li>
-</ul>
-
-<p>* Use joint-list length for datalogger joint angle conversion.</p>
-</li>
-<li><p>[rtm-ros-robot-interface.l] make directory for log files
-(<a href="https://github.com/start-jsk/rtmros_common/issues/951">#951</a>)</p></li>
-</ul>
-</li>
-<li><p>[scripts/default_robot_ros_bridge.launch.in] Add nameserver
-argument for ros_bridge.launch
-(<a href="https://github.com/start-jsk/rtmros_common/issues/950">#950</a>)</p></li>
-<li><p>[test/hrpsys-samples/samplerobot-stabilizer.l] Update loadPattern
-sample because add-optional-data-from-rs-list is included in
-dump-seq-pattern-file
-(<a href="https://github.com/start-jsk/rtmros_common/issues/959">#959</a>)</p></li>
-<li><p>Contributors: Ryo Koyama, Kei Okada, Noriaki Takasugi, Ryo Terasawa,
-Shunichi Nozawa, Yohei Kakiuchi, Yoshimaru Tanaka, Iori Kumagai,
-Iori Yanokura, Juntaro Tamura</p></li>
-</ul>
-
-<h2 id="1-3-2-2016-04-26">1.3.2 (2016-04-26)</h2>
-
-<ul>
-<li>  [fix] getFootStepParam interface according to upstream change.
-Remove rleg_coords and lleg_coords.</li>
-<li>  [fix] HrpsysSeqStateROSBridgeImpl.cpp: sensor-&gt;localR is world
-coords</li>
-<li>  [fix] Modified HrpsysSeqStateROSBridgeImpl to enable virtual force</li>
-<li>  [fix] [rtm-ros-robot-interface.l] add time constant prameter
-according to upstream idl update</li>
-<li>  [fix] [hrpsys_ros_bridge] Fix genjava problem by adding
-message_generation as build_depend</li>
-<li>  [fix] getFootStepParam interface according to upstream change.
-Remove rleg_coords and lleg_coords.</li>
-<li>  [fix] [hrpsys_ros_bridge]change D if D from hrpsys is empty</li>
-<li>  [feat] [hrpsys_ros_bridge/test/test-samplerobot.py] add test
-programs to check frame_id of off_xxsensor and
-ref_xxsensor (#940)</li>
-<li>  [feat] Set /robot/type param according to lower-case robot name
-such as samplerobot.</li>
-<li>  [feat] [hrpsys_ros_bridge/test/test-samplerobot.*] add a test
-program for init of hcf</li>
-<li>  [feat] fix collision visualization, color of sphere will be purple
-if collision occur</li>
-<li>  [feat] .travis.yml : add test when old hrpsys-ros-bridge
-exists (#929)</li>
-<li>  [feat] [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Add check for param existence for def-set-get-param-method to
-neglect idl mismatch error. Fix indent. (#933)</li>
-<li>  [feat] [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Add reference force updater euslisp methods.</li>
-<li>  [feat] [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Add object turnaround detector moment version interface.l</li>
-<li>  [feat] Add define controller
-<a href="https://github.com/start-jsk/rtmros_common/issues/887">#887</a>
-</li>
-<li>  [feat] Add leg limb controller setting.</li>
-<li>  [feat] Add method to define joint trajectory controller by
-default setting.</li>
-<li>  [feat] Add gopos overwrite and graspless manip mode to all demos</li>
-<li>  [feat] Add example for graspless manip mode and gopos overwrite.</li>
-<li>  [feat] Add euslisp interface for graspless manip mode.</li>
-<li>  [feat] add a set-default-step-time-with-the-same-swing-time method</li>
-<li>  [feat] add time constant prameter according to upstream idl update</li>
-<li>  [feat] Add HrpsysSeqStateROSBridge tf rate test</li>
-<li>  [feat] enable virtual force in HrpsysSeqStateROSBridgeImpl</li>
-<li>  [feat] Enable to set subscription_type for DataPorts from
-hrpsys_ros_bridge.launch argument. Use new by default to keep
-backward compatibility.</li>
-<li>  [feat] Add loading of optionalData from seq pattern file.</li>
-<li>  [improve] add more mesage to prevent confusion</li>
-<li>  [improve] Add setting for ReferenceForceUpdater</li>
-<li>  [improve] Reset object turnaround detector's detector total wrench
-mode as TOTAL_FORCE in force estimation.</li>
-<li>  [improve] Enable to set push_policy and push_rate for DataPorts
-from hrpsys_ros_bridge.launch argument. Use all and 50.0 by
-default to keep backward compatibility.</li>
-<li>  [improve] Rename tf extract script for test and add comments for
-that</li>
-<li>  [improve]
-add arguments(SIMULATOR_NAME_[ANGLE,VELOCITY,TORQUE]) to
-hrpsys_ros_bridge.launch, for connecting rtc components other than
-RobotHardware</li>
-<li>  [improve] add time constant prameter according to u</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -4234,6 +3400,122 @@ RobotHardware</li>
         
           <ul>
             
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/hrpsys-samples/test_samplerobot_euslisp_unittests.launch" target="_blank">test/hrpsys-samples/test_samplerobot_euslisp_unittests.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> =*- mode: xml -*- </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>NOSIM</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>GUI</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>NOSIM</strong> <em>&#91;default: $(arg NOSIM)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>GUI</strong> <em>&#91;default: $(arg GUI)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: $(arg RUN_RVIZ)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>corbaport</strong> <em>&#91;default: 2809&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_UNSTABLE_RTC</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_EMERGENCYSTOPPER</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_REFERENCEFORCEUPDATER</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_OBJECTCONTACTTURNAROUNDDETECTOR</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/test-samplerobot-hcf.launch" target="_blank">test/test-samplerobot-hcf.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>corbaport</strong> <em>&#91;default: 2809&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>GUI</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_UNSTABLE_RTC</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/test-compile-robot.launch" target="_blank">test/test-compile-robot.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/robot_pose_ekf.launch" target="_blank">launch/robot_pose_ekf.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>base_link</strong> <em>&#91;default: BODY&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/samplerobot_startup-grxui.launch" target="_blank">launch/samplerobot_startup-grxui.launch</a>
                 <ul class="list-unstyled">
                   
@@ -4246,60 +3528,6 @@ RobotHardware</li>
                           <li><strong>KILL_SERVERS</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
-                        
-                      
-                        
-                          <li><strong>KILL_SERVERS</strong> <em>&#91;default: $(arg KILL_SERVERS)&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/robot_monitor.launch" target="_blank">launch/robot_monitor.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>check_core_temps</strong> <em>&#91;default: False&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>check_ipmi_tool</strong> <em>&#91;default: False&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>check_nfs</strong> <em>&#91;default: False&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enforce_clock_speed</strong> <em>&#91;default: False&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>num_cores</strong> <em>&#91;default: 4&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/samplerobot-grxui.launch" target="_blank">launch/samplerobot-grxui.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>KILL_SERVERS</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -4539,7 +3767,7 @@ RobotHardware</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/robot_pose_ekf.launch" target="_blank">launch/robot_pose_ekf.launch</a>
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/samplerobot-grxui.launch" target="_blank">launch/samplerobot-grxui.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -4548,7 +3776,44 @@ RobotHardware</li>
                     <ul>
                       
                         
-                          <li><strong>base_link</strong> <em>&#91;default: BODY&#93; </em></li>
+                          <li><strong>KILL_SERVERS</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>KILL_SERVERS</strong> <em>&#91;default: $(arg KILL_SERVERS)&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/robot_monitor.launch" target="_blank">launch/robot_monitor.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>check_core_temps</strong> <em>&#91;default: False&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>check_ipmi_tool</strong> <em>&#91;default: False&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>check_nfs</strong> <em>&#91;default: False&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enforce_clock_speed</strong> <em>&#91;default: False&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>num_cores</strong> <em>&#91;default: 4&#93; </em></li>
                         
                       
                     </ul>
@@ -4575,105 +3840,6 @@ RobotHardware</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/hrpsys-samples/test_samplerobot_euslisp_unittests.launch" target="_blank">test/hrpsys-samples/test_samplerobot_euslisp_unittests.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> =*- mode: xml -*- </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>NOSIM</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>GUI</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>NOSIM</strong> <em>&#91;default: $(arg NOSIM)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>GUI</strong> <em>&#91;default: $(arg GUI)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: $(arg RUN_RVIZ)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>corbaport</strong> <em>&#91;default: 2809&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_UNSTABLE_RTC</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_EMERGENCYSTOPPER</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_REFERENCEFORCEUPDATER</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_OBJECTCONTACTTURNAROUNDDETECTOR</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/test-compile-robot.launch" target="_blank">test/test-compile-robot.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/test-samplerobot-hcf.launch" target="_blank">test/test-samplerobot-hcf.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>corbaport</strong> <em>&#91;default: 2809&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>GUI</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_UNSTABLE_RTC</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
           </ul>
         
       </div>
@@ -4687,13 +3853,13 @@ RobotHardware</li>
         
           <ul>
             
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/MotorStates.msg" target="_blank">msg/MotorStates.msg</a></li>
-            
               <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/ContactState.msg" target="_blank">msg/ContactState.msg</a></li>
             
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/ContactStatesStamped.msg" target="_blank">msg/ContactStatesStamped.msg</a></li>
-            
               <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/ContactStateStamped.msg" target="_blank">msg/ContactStateStamped.msg</a></li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/MotorStates.msg" target="_blank">msg/MotorStates.msg</a></li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/ContactStatesStamped.msg" target="_blank">msg/ContactStatesStamped.msg</a></li>
             
           </ul>
         
@@ -5082,7 +4248,7 @@ rtmros_common
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-05-14
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-05-13
         </span>
       </td>
     </tr>
@@ -5264,422 +4430,7 @@ Publish ROS topics by reading RTC's data ports. </li>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-hrpsys_ros_bridge">Changelog for package hrpsys_ros_bridge</h1>
-
-<h2 id="1-4-2-2017-12-22">1.4.2 (2017-12-22)</h2>
-
-<ul>
-<li>  add test to check
-<a href="https://github.com/start-jsk/rtmros_common/issues/1036">#1036</a>
-situation
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1038">#1038</a>)</li>
-<li>  duration == 0.0 results unexpected behavior, so force set 0.001 when
-duration == 0 s set
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1037">#1037</a> )</li>
-<li>  Contributors: Kei Okada</li>
-</ul>
-
-<h2 id="1-4-1-2017-10-25">1.4.1 (2017-10-25)</h2>
-
-<ul>
-<li>  Update of sensor_ros_bridge_connect.py
-
-<ul>
-<li>  Connect ReferenceForceUpdater's ref_force
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1033">#1033</a>)
-*
-[hrpsys_ros_bridge/scripts/sensor_ros_bridge_connect.py]
-connect reference force port to ReferenceForceUpdater or
-EmergencyStopper if exists.</li>
-<li>  Add wait for rmfo and vs
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1029">#1029</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge, sensor_ros_bridge_connect.py] add
-wait for initalizinig all components</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>  HrpsysSeqStateROSBridge
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1027">#1027</a>)
-
-<ul>
-<li>  [HrpsysSeqStateROSBridge] fix for using virtual force sensor</li>
-</ul>
-</li>
-<li>  Update rtm-ros-robot-interface.l
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1030">#1030</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Add
-documentation string for new arguments
-(set-ref-force-linear-p, return-value-mode)</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Add
-argument to set linear interpolation during increasing force</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Enable
-to set return value mode</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Enable
-to get fric coefficient wrench add update print messages</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Update
-otd checking loop for moment. Exit from do-until-key loop
-immediately when otd detection. Fix valiables for set ref force</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Use
-euslisp symbol as detector total wrench parameter</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Enable
-to access detector total wrench as euslisp symbol.</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Update
-otd checking loop. Exit from do-until-key loop immediately when
-otd detection.</li>
-</ul>
-</li>
-<li>  Contributors: MasakiMurooka, Shunichi Nozawa, YoheiKakiuchi</li>
-</ul>
-
-<h2 id="1-4-0-2017-08-09">1.4.0 (2017-08-09)</h2>
-
-<ul>
-<li>  display error message when body-&gt;sensor(j, i) is null
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1014">#1014</a>)</li>
-<li>  sensor_ros_bridge_connect.py : add more debug message
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1015">#1015</a>)</li>
-<li>  Update AutoBalancer and ReferenceForceUpdater euslisp method symbols
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1026">#1026</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Supprot :FootOriginExtMoment for RFU methods.</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Support UseForceMode setting as euslisp symbol
-in :set-auto-balancer-param.</li>
-</ul>
-</li>
-<li>  fix code to run both Indido and Kinetic
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1025">#1025</a>)
-
-<ul>
-<li>  /test/test-samplerobot-hcf.launch: increase time-limit to 600</li>
-<li>  test/{test-samplerobot.py,test-pa10.py} support both
-pr2_controllers_msgs and controllr_msgs</li>
-<li>  src/hrpsys_ros_bridge/hrpsys_dashboard.py: fix for qt5</li>
-<li>  add USE_PR2_CONTROLLERS_MSGS definition</li>
-<li>  CMakeLists.txt : we do not use pr2_msgs on build time</li>
-<li>  CMakeLists.txt : remove code to download wet
-pr2_controllers_msgs for groovy</li>
-</ul>
-</li>
-<li>  Support stride parameter with different length
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1022">#1022</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Support stride_parameter of different length</li>
-<li>  [hrpsys_ros_bridge/test/hrpsys-samples/samplerobot-auto-balancer.l]
-Add test to check stride parameter 4 and 6</li>
-</ul>
-</li>
-<li>  [HrpsysSeqStateROSBridge] fix stamp of joint_state. add stamp
-after reading m_rsangle
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1019">#1019</a>)
-
-<ul>
-<li>  [HrpsysSeqStateROSBridge] fix stamp of joint_state. add stamp
-after reading m_rsangle</li>
-</ul>
-</li>
-<li>  [HrpsysSeqStateROSBridge] remove subtraction magic number
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1013">#1013</a>)
-
-<ul>
-<li>  [HrpsysSeqStateROSBridge] remove subtraction magic number</li>
-</ul>
-</li>
-<li>  Support argumen t for setting duration of calibration. For
-:remove-xx methods, 8.0 by default[s]. For :reset-xx methods,
-0.1[s] by default for compatibility
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1011">#1011</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Support argument for setting duration of calibration. For
-:remove-xx methods, 8.0 by default[s]. For :reset-xx methods,
-0.1[s] by default for compatibility</li>
-</ul>
-</li>
-<li>  Add new methods for :remove-force-sensor-offset using RMFO
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1010">#1010</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Add
-new methods for :remove-force-sensor-offset using RMFO. Add
-warning message for deprecated remove-force methods.</li>
-</ul>
-</li>
-<li>  Update euslisp hrpsysbase samples
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1009">#1009</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/test/hrpsys-samples] Add README for
-Euslisp hrpsys example basically copied from ros wiki
-(<a href="http://wiki.ros.org/rtmros_common/Tutorials/WorkingWithEusLisp">http://wiki.ros.org/rtmros_common/Tutorials/WorkingWithEusLisp</a>)</li>
-<li>  [hrpsys_ros_bridge/test/hrpsys-samples/samplerobot-carry-object.l]
-Update carry demo euslisp sample.</li>
-<li>  [hrpsys_ros_bridge/test/hrpsys-samples/samplerobot-stabilizer.l]
-Update stabilizer euslisp sample according to hrpsys-base
-stabilizer sample update.</li>
-</ul>
-</li>
-<li>  Fix bug of sample4leg robot end-coords setting for arms.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1008">#1008</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/models/sample4legrobot.yaml] Fix bug of
-sample4legrobot end-coords setting for arms.</li>
-</ul>
-</li>
-<li>  Update project generator and refforce
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1007">#1007</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp] Update README for
-openhrp-project-generator</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Fix
-orientation for openhrp-project-generator</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Update
-for object turnaround detection to use initial ref forces</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Update
-dump function for openhrp project generator. Use
-openhrp-project-generator in openhrp3 package instead of
-_gen_project.launch</li>
-</ul>
-</li>
-<li>  Add forgotten update for robot.launch
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1004">https://github.com/start-jsk/rtmros_common/pull/1004</a>)
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1005">#1005</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/scripts/default_robot.launch.in] Add
-forgotten update in
-<a href="https://github.com/start-jsk/rtmros_common/pull/1004">https://github.com/start-jsk/rtmros_common/pull/1004</a>. Add
-USE_XXX of under-development RTCs for robot.launch such as
-samplerobot.launch to pass arguments to
-robot_ros_bridge.launch</li>
-</ul>
-</li>
-<li>  set USE_UNSTABLE_RTC as not all unstable rtc defiend in
-hrpsys_config.py, just for basic walking test, other latest
-development rtc is passed by arg
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1004">#1004</a>)
-
-<ul>
-<li>  set USE_UNSTABLE_RTC as not getUnstableRTC defined in
-hrpsys_config.py, it is for a basic walking test, other latest
-development rtc is passed by arg from
-test_samplerobot_euslisp_unittests.launch</li>
-<li>  [hrpsys_ros_bridge/launch/hrpsys_ros_bridge.launch,hrpsys_ros_bridge/scripts/default_robot_ros_bridge.launch.in,hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l,hrpsys_tools/launch/hrpsys.launch]
-Update for ObjectTurnaroundDetector RTC. add
-USE_REFERENCEFORCEUDPATER
-and USE_OBJECTCONTACTTURNAROUNDDETECTOR.</li>
-</ul>
-</li>
-<li>  Contributors: Kei Okada, Shunichi Nozawa, Yohei Kakiuchi</li>
-</ul>
-
-<h2 id="1-3-3-2017-02-12">1.3.3 (2017-02-12)</h2>
-
-<ul>
-<li>  HrpsysSeqStateROSBridge.cpp
-
-<ul>
-<li>  HrpsysSeqStateROSBridge occurs error if number of force sensor
-is different with size of contact states. fix number of force
-sensor
-(<a href="https://github.com/start-jsk/rtmros_common/issues/982">#982</a>)</li>
-<li>  Revert "[HrpsysSeqStateROSBridge] fix number of force sensor"
-<a href="https://github.com/start-jsk/rtmros_common/issues/984">#984</a>
-</li>
-<li>  Separate offset-removed force sensor data ports from rsforce,
-which is actual and non-offset-removed data port. Currently
-rsforce ports -&gt; rsforce ports + offforce ports.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/964">#964</a>)</li>
-<li>  Fixed mistake of sensor_link_name, when robot has only virturl
-force sonsors
-(<a href="https://github.com/start-jsk/rtmros_common/issues/945">#945</a>)</li>
-</ul>
-</li>
-<li>  HrpsysJointTrajectoryBridge.cpp
-
-<ul>
-<li>  publish feedback for joint_trajectory_actions
-(<a href="https://github.com/start-jsk/rtmros_common/issues/966">#966</a>)</li>
-</ul>
-</li>
-<li>  hrpsys_ros_bridge/launch/hrpsys_ros_bridge.launch
-
-<ul>
-<li>  Add argument to change buffer length of rtmlaunch connection.
-Set 8 by default (default setting in openrtm).
-(<a href="https://github.com/start-jsk/rtmros_common/issues/980">#980</a>)</li>
-<li>  fix model filename. Enable cache in ModelLoader, filename should
-be same as in .conf file.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/978">#978</a>)</li>
-</ul>
-</li>
-<li>
-<p>euslisp</p>
-
-<ul>
-<li>  [rtm-ros-robot-interface.l] refactor torque-controller
-interface
-(<a href="https://github.com/start-jsk/rtmros_common/issues/994">#994</a>)</li>
-<li>  Update sequencefull unit system and arguments
-(<a href="https://github.com/start-jsk/rtmros_common/issues/988">#988</a>)
-
-<ul>
-<li>  changed arguments of angle-vector-sequence-full see
-<a href="https://github.com/start-jsk/rtmros_common/issues/985">#985</a>
-</li>
-<li>  [hrpsys-samples/samplerobot-sequence-player.l] Add test
-for angle-vector-sequence-full (check validity)</li>
-<li>  [rtm-ros-robot-interface.l] Use root-coords and zmp in the
-abs frame and convert them inside the
-:angle-vector-sequence-full</li>
-<li>  [rtm-ros-robot-interface.l] Introduce fsensor length for
-wrench and optionals</li>
-<li>  [rtm-ros-robot-interface.l] Use [mm] and [deg/s]
-instead of [m] and [rad/s] for vel, pos, and zmp.</li>
-<li>  [rtm-ros-robot-interface.l] Use [deg] instead of [rad]
-for jpos argument and remove jvs arg.</li>
-<li>  [rtm-ros-robot-interface.l] Use tm as [ms],
-previously [s].</li>
-</ul>
-</li>
-<li>  [tm-ros-robot-interface.l] Update :reset-force-moment-offset
-to use :off force/moment vector
-(<a href="https://github.com/start-jsk/rtmros_common/issues/983">#983</a>)</li>
-<li>  [tm-ros-robot-interface.l] Added a missing keyword in
-def-set-get-method for TorqueControllerService.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/972">#972</a>)</li>
-<li>  [tm-ros-robot-interface.l] Add euslisp interface for torque
-controller
-(<a href="https://github.com/start-jsk/rtmros_common/issues/965">#965</a>)</li>
-<li>  [datalogger-log-parser.l] Modify unit of cogvel [m] -&gt;
-[mm] for euslisp
-(<a href="https://github.com/start-jsk/rtmros_common/issues/960">#960</a>)</li>
-<li>  [rtm-ros-robot-interface.l] Add get-go-pos-footsteps-sequence
-in rtm-ros-robot-interface.l and add test
-(<a href="https://github.com/start-jsk/rtmros_common/issues/965">#965</a>)</li>
-<li>  [rtm-ros-robot-interface.l] Update frame of wrench.
-Previously, wrench frame is mismatch with documentation string.
-Previous : local -&gt; new : world.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/963">#963</a>)</li>
-<li>  [rtm-ros-robot-interface.l] Add eefm force moment distribution
-weight parameter.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/958">#958</a>)</li>
-<li>  [rtm-ros-robot-interface.l] add Eus interface of
-SequencePlayserService_setJointAnglesSequenceFull and add test
-in test/hrpsys-samples/samplerobot-sequence-player.l
-(<a href="https://github.com/start-jsk/rtmros_common/issues/954">#954</a>)</li>
-<li>  [datalogger-log-parser.l] Add sh reference force and support
-both rpy and 3x3 matrix for WAIST
-log(<a href="https://github.com/start-jsk/rtmros_common/issues/956">#956</a>)</li>
-<li>  [rtm-ros-robot-interface.l] update rfu interface for idl
-changed in <a href="https://github.com/fkanehiro/hrpsys-base/pull/1005">https://github.com/fkanehiro/hrpsys-base/pull/1005</a>
-(<a href="https://github.com/start-jsk/rtmros_common/issues/952">#952</a>)</li>
-<li>
-<p>[datalogger-log-parser.l] Use joint-list length for datalogger
-joint angle conversion.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/953">#953</a>)</p>
-
-<ul>
-<li>  Add simulation actual root coords reading and check for
-existance of RobotHardware0_servoState in datalogger. Fix
-setting of simulators' data parser names.</li>
-</ul>
-
-<p>* Use joint-list length for datalogger joint angle conversion.</p>
-</li>
-<li><p>[rtm-ros-robot-interface.l] make directory for log files
-(<a href="https://github.com/start-jsk/rtmros_common/issues/951">#951</a>)</p></li>
-</ul>
-</li>
-<li><p>[scripts/default_robot_ros_bridge.launch.in] Add nameserver
-argument for ros_bridge.launch
-(<a href="https://github.com/start-jsk/rtmros_common/issues/950">#950</a>)</p></li>
-<li><p>[test/hrpsys-samples/samplerobot-stabilizer.l] Update loadPattern
-sample because add-optional-data-from-rs-list is included in
-dump-seq-pattern-file
-(<a href="https://github.com/start-jsk/rtmros_common/issues/959">#959</a>)</p></li>
-<li><p>Contributors: Ryo Koyama, Kei Okada, Noriaki Takasugi, Ryo Terasawa,
-Shunichi Nozawa, Yohei Kakiuchi, Yoshimaru Tanaka, Iori Kumagai,
-Iori Yanokura, Juntaro Tamura</p></li>
-</ul>
-
-<h2 id="1-3-2-2016-04-26">1.3.2 (2016-04-26)</h2>
-
-<ul>
-<li>  [fix] getFootStepParam interface according to upstream change.
-Remove rleg_coords and lleg_coords.</li>
-<li>  [fix] HrpsysSeqStateROSBridgeImpl.cpp: sensor-&gt;localR is world
-coords</li>
-<li>  [fix] Modified HrpsysSeqStateROSBridgeImpl to enable virtual force</li>
-<li>  [fix] [rtm-ros-robot-interface.l] add time constant prameter
-according to upstream idl update</li>
-<li>  [fix] [hrpsys_ros_bridge] Fix genjava problem by adding
-message_generation as build_depend</li>
-<li>  [fix] getFootStepParam interface according to upstream change.
-Remove rleg_coords and lleg_coords.</li>
-<li>  [fix] [hrpsys_ros_bridge]change D if D from hrpsys is empty</li>
-<li>  [feat] [hrpsys_ros_bridge/test/test-samplerobot.py] add test
-programs to check frame_id of off_xxsensor and
-ref_xxsensor (#940)</li>
-<li>  [feat] Set /robot/type param according to lower-case robot name
-such as samplerobot.</li>
-<li>  [feat] [hrpsys_ros_bridge/test/test-samplerobot.*] add a test
-program for init of hcf</li>
-<li>  [feat] fix collision visualization, color of sphere will be purple
-if collision occur</li>
-<li>  [feat] .travis.yml : add test when old hrpsys-ros-bridge
-exists (#929)</li>
-<li>  [feat] [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Add check for param existence for def-set-get-param-method to
-neglect idl mismatch error. Fix indent. (#933)</li>
-<li>  [feat] [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Add reference force updater euslisp methods.</li>
-<li>  [feat] [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Add object turnaround detector moment version interface.l</li>
-<li>  [feat] Add define controller
-<a href="https://github.com/start-jsk/rtmros_common/issues/887">#887</a>
-</li>
-<li>  [feat] Add leg limb controller setting.</li>
-<li>  [feat] Add method to define joint trajectory controller by
-default setting.</li>
-<li>  [feat] Add gopos overwrite and graspless manip mode to all demos</li>
-<li>  [feat] Add example for graspless manip mode and gopos overwrite.</li>
-<li>  [feat] Add euslisp interface for graspless manip mode.</li>
-<li>  [feat] add a set-default-step-time-with-the-same-swing-time method</li>
-<li>  [feat] add time constant prameter according to upstream idl update</li>
-<li>  [feat] Add HrpsysSeqStateROSBridge tf rate test</li>
-<li>  [feat] enable virtual force in HrpsysSeqStateROSBridgeImpl</li>
-<li>  [feat] Enable to set subscription_type for DataPorts from
-hrpsys_ros_bridge.launch argument. Use new by default to keep
-backward compatibility.</li>
-<li>  [feat] Add loading of optionalData from seq pattern file.</li>
-<li>  [improve] add more mesage to prevent confusion</li>
-<li>  [improve] Add setting for ReferenceForceUpdater</li>
-<li>  [improve] Reset object turnaround detector's detector total wrench
-mode as TOTAL_FORCE in force estimation.</li>
-<li>  [improve] Enable to set push_policy and push_rate for DataPorts
-from hrpsys_ros_bridge.launch argument. Use all and 50.0 by
-default to keep backward compatibility.</li>
-<li>  [improve] Rename tf extract script for test and add comments for
-that</li>
-<li>  [improve]
-add arguments(SIMULATOR_NAME_[ANGLE,VELOCITY,TORQUE]) to
-hrpsys_ros_bridge.launch, for connecting rtc components other than
-RobotHardware</li>
-<li>  [improve] add time constant prameter according to u</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -6510,6 +5261,122 @@ RobotHardware</li>
         
           <ul>
             
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/hrpsys-samples/test_samplerobot_euslisp_unittests.launch" target="_blank">test/hrpsys-samples/test_samplerobot_euslisp_unittests.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> =*- mode: xml -*- </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>NOSIM</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>GUI</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>NOSIM</strong> <em>&#91;default: $(arg NOSIM)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>GUI</strong> <em>&#91;default: $(arg GUI)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: $(arg RUN_RVIZ)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>corbaport</strong> <em>&#91;default: 2809&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_UNSTABLE_RTC</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_EMERGENCYSTOPPER</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_REFERENCEFORCEUPDATER</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_OBJECTCONTACTTURNAROUNDDETECTOR</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/test-samplerobot-hcf.launch" target="_blank">test/test-samplerobot-hcf.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>corbaport</strong> <em>&#91;default: 2809&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>GUI</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_UNSTABLE_RTC</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/test-compile-robot.launch" target="_blank">test/test-compile-robot.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/robot_pose_ekf.launch" target="_blank">launch/robot_pose_ekf.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>base_link</strong> <em>&#91;default: BODY&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/samplerobot_startup-grxui.launch" target="_blank">launch/samplerobot_startup-grxui.launch</a>
                 <ul class="list-unstyled">
                   
@@ -6522,60 +5389,6 @@ RobotHardware</li>
                           <li><strong>KILL_SERVERS</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
-                        
-                      
-                        
-                          <li><strong>KILL_SERVERS</strong> <em>&#91;default: $(arg KILL_SERVERS)&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/robot_monitor.launch" target="_blank">launch/robot_monitor.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>check_core_temps</strong> <em>&#91;default: False&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>check_ipmi_tool</strong> <em>&#91;default: False&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>check_nfs</strong> <em>&#91;default: False&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enforce_clock_speed</strong> <em>&#91;default: False&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>num_cores</strong> <em>&#91;default: 4&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/samplerobot-grxui.launch" target="_blank">launch/samplerobot-grxui.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>KILL_SERVERS</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -6815,7 +5628,7 @@ RobotHardware</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/robot_pose_ekf.launch" target="_blank">launch/robot_pose_ekf.launch</a>
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/samplerobot-grxui.launch" target="_blank">launch/samplerobot-grxui.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -6824,7 +5637,44 @@ RobotHardware</li>
                     <ul>
                       
                         
-                          <li><strong>base_link</strong> <em>&#91;default: BODY&#93; </em></li>
+                          <li><strong>KILL_SERVERS</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>KILL_SERVERS</strong> <em>&#91;default: $(arg KILL_SERVERS)&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/robot_monitor.launch" target="_blank">launch/robot_monitor.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>check_core_temps</strong> <em>&#91;default: False&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>check_ipmi_tool</strong> <em>&#91;default: False&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>check_nfs</strong> <em>&#91;default: False&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enforce_clock_speed</strong> <em>&#91;default: False&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>num_cores</strong> <em>&#91;default: 4&#93; </em></li>
                         
                       
                     </ul>
@@ -6851,105 +5701,6 @@ RobotHardware</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/hrpsys-samples/test_samplerobot_euslisp_unittests.launch" target="_blank">test/hrpsys-samples/test_samplerobot_euslisp_unittests.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> =*- mode: xml -*- </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>NOSIM</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>GUI</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>NOSIM</strong> <em>&#91;default: $(arg NOSIM)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>GUI</strong> <em>&#91;default: $(arg GUI)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: $(arg RUN_RVIZ)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>corbaport</strong> <em>&#91;default: 2809&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_UNSTABLE_RTC</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_EMERGENCYSTOPPER</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_REFERENCEFORCEUPDATER</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_OBJECTCONTACTTURNAROUNDDETECTOR</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/test-compile-robot.launch" target="_blank">test/test-compile-robot.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/test-samplerobot-hcf.launch" target="_blank">test/test-samplerobot-hcf.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>corbaport</strong> <em>&#91;default: 2809&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>GUI</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_UNSTABLE_RTC</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
           </ul>
         
       </div>
@@ -6963,13 +5714,13 @@ RobotHardware</li>
         
           <ul>
             
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/MotorStates.msg" target="_blank">msg/MotorStates.msg</a></li>
-            
               <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/ContactState.msg" target="_blank">msg/ContactState.msg</a></li>
             
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/ContactStatesStamped.msg" target="_blank">msg/ContactStatesStamped.msg</a></li>
-            
               <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/ContactStateStamped.msg" target="_blank">msg/ContactStateStamped.msg</a></li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/MotorStates.msg" target="_blank">msg/MotorStates.msg</a></li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/ContactStatesStamped.msg" target="_blank">msg/ContactStatesStamped.msg</a></li>
             
           </ul>
         
@@ -7350,7 +6101,7 @@ rtmros_common
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-05-14
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-05-13
         </span>
       </td>
     </tr>
@@ -7532,422 +6283,7 @@ Publish ROS topics by reading RTC's data ports. </li>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-hrpsys_ros_bridge">Changelog for package hrpsys_ros_bridge</h1>
-
-<h2 id="1-4-2-2017-12-22">1.4.2 (2017-12-22)</h2>
-
-<ul>
-<li>  add test to check
-<a href="https://github.com/start-jsk/rtmros_common/issues/1036">#1036</a>
-situation
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1038">#1038</a>)</li>
-<li>  duration == 0.0 results unexpected behavior, so force set 0.001 when
-duration == 0 s set
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1037">#1037</a> )</li>
-<li>  Contributors: Kei Okada</li>
-</ul>
-
-<h2 id="1-4-1-2017-10-25">1.4.1 (2017-10-25)</h2>
-
-<ul>
-<li>  Update of sensor_ros_bridge_connect.py
-
-<ul>
-<li>  Connect ReferenceForceUpdater's ref_force
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1033">#1033</a>)
-*
-[hrpsys_ros_bridge/scripts/sensor_ros_bridge_connect.py]
-connect reference force port to ReferenceForceUpdater or
-EmergencyStopper if exists.</li>
-<li>  Add wait for rmfo and vs
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1029">#1029</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge, sensor_ros_bridge_connect.py] add
-wait for initalizinig all components</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>  HrpsysSeqStateROSBridge
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1027">#1027</a>)
-
-<ul>
-<li>  [HrpsysSeqStateROSBridge] fix for using virtual force sensor</li>
-</ul>
-</li>
-<li>  Update rtm-ros-robot-interface.l
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1030">#1030</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Add
-documentation string for new arguments
-(set-ref-force-linear-p, return-value-mode)</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Add
-argument to set linear interpolation during increasing force</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Enable
-to set return value mode</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Enable
-to get fric coefficient wrench add update print messages</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Update
-otd checking loop for moment. Exit from do-until-key loop
-immediately when otd detection. Fix valiables for set ref force</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Use
-euslisp symbol as detector total wrench parameter</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Enable
-to access detector total wrench as euslisp symbol.</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Update
-otd checking loop. Exit from do-until-key loop immediately when
-otd detection.</li>
-</ul>
-</li>
-<li>  Contributors: MasakiMurooka, Shunichi Nozawa, YoheiKakiuchi</li>
-</ul>
-
-<h2 id="1-4-0-2017-08-09">1.4.0 (2017-08-09)</h2>
-
-<ul>
-<li>  display error message when body-&gt;sensor(j, i) is null
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1014">#1014</a>)</li>
-<li>  sensor_ros_bridge_connect.py : add more debug message
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1015">#1015</a>)</li>
-<li>  Update AutoBalancer and ReferenceForceUpdater euslisp method symbols
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1026">#1026</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Supprot :FootOriginExtMoment for RFU methods.</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Support UseForceMode setting as euslisp symbol
-in :set-auto-balancer-param.</li>
-</ul>
-</li>
-<li>  fix code to run both Indido and Kinetic
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1025">#1025</a>)
-
-<ul>
-<li>  /test/test-samplerobot-hcf.launch: increase time-limit to 600</li>
-<li>  test/{test-samplerobot.py,test-pa10.py} support both
-pr2_controllers_msgs and controllr_msgs</li>
-<li>  src/hrpsys_ros_bridge/hrpsys_dashboard.py: fix for qt5</li>
-<li>  add USE_PR2_CONTROLLERS_MSGS definition</li>
-<li>  CMakeLists.txt : we do not use pr2_msgs on build time</li>
-<li>  CMakeLists.txt : remove code to download wet
-pr2_controllers_msgs for groovy</li>
-</ul>
-</li>
-<li>  Support stride parameter with different length
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1022">#1022</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Support stride_parameter of different length</li>
-<li>  [hrpsys_ros_bridge/test/hrpsys-samples/samplerobot-auto-balancer.l]
-Add test to check stride parameter 4 and 6</li>
-</ul>
-</li>
-<li>  [HrpsysSeqStateROSBridge] fix stamp of joint_state. add stamp
-after reading m_rsangle
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1019">#1019</a>)
-
-<ul>
-<li>  [HrpsysSeqStateROSBridge] fix stamp of joint_state. add stamp
-after reading m_rsangle</li>
-</ul>
-</li>
-<li>  [HrpsysSeqStateROSBridge] remove subtraction magic number
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1013">#1013</a>)
-
-<ul>
-<li>  [HrpsysSeqStateROSBridge] remove subtraction magic number</li>
-</ul>
-</li>
-<li>  Support argumen t for setting duration of calibration. For
-:remove-xx methods, 8.0 by default[s]. For :reset-xx methods,
-0.1[s] by default for compatibility
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1011">#1011</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Support argument for setting duration of calibration. For
-:remove-xx methods, 8.0 by default[s]. For :reset-xx methods,
-0.1[s] by default for compatibility</li>
-</ul>
-</li>
-<li>  Add new methods for :remove-force-sensor-offset using RMFO
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1010">#1010</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Add
-new methods for :remove-force-sensor-offset using RMFO. Add
-warning message for deprecated remove-force methods.</li>
-</ul>
-</li>
-<li>  Update euslisp hrpsysbase samples
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1009">#1009</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/test/hrpsys-samples] Add README for
-Euslisp hrpsys example basically copied from ros wiki
-(<a href="http://wiki.ros.org/rtmros_common/Tutorials/WorkingWithEusLisp">http://wiki.ros.org/rtmros_common/Tutorials/WorkingWithEusLisp</a>)</li>
-<li>  [hrpsys_ros_bridge/test/hrpsys-samples/samplerobot-carry-object.l]
-Update carry demo euslisp sample.</li>
-<li>  [hrpsys_ros_bridge/test/hrpsys-samples/samplerobot-stabilizer.l]
-Update stabilizer euslisp sample according to hrpsys-base
-stabilizer sample update.</li>
-</ul>
-</li>
-<li>  Fix bug of sample4leg robot end-coords setting for arms.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1008">#1008</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/models/sample4legrobot.yaml] Fix bug of
-sample4legrobot end-coords setting for arms.</li>
-</ul>
-</li>
-<li>  Update project generator and refforce
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1007">#1007</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/euslisp] Update README for
-openhrp-project-generator</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Fix
-orientation for openhrp-project-generator</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Update
-for object turnaround detection to use initial ref forces</li>
-<li>  [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l] Update
-dump function for openhrp project generator. Use
-openhrp-project-generator in openhrp3 package instead of
-_gen_project.launch</li>
-</ul>
-</li>
-<li>  Add forgotten update for robot.launch
-(<a href="https://github.com/start-jsk/rtmros_common/pull/1004">https://github.com/start-jsk/rtmros_common/pull/1004</a>)
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1005">#1005</a>)
-
-<ul>
-<li>  [hrpsys_ros_bridge/scripts/default_robot.launch.in] Add
-forgotten update in
-<a href="https://github.com/start-jsk/rtmros_common/pull/1004">https://github.com/start-jsk/rtmros_common/pull/1004</a>. Add
-USE_XXX of under-development RTCs for robot.launch such as
-samplerobot.launch to pass arguments to
-robot_ros_bridge.launch</li>
-</ul>
-</li>
-<li>  set USE_UNSTABLE_RTC as not all unstable rtc defiend in
-hrpsys_config.py, just for basic walking test, other latest
-development rtc is passed by arg
-(<a href="https://github.com/start-jsk/rtmros_common/issues/1004">#1004</a>)
-
-<ul>
-<li>  set USE_UNSTABLE_RTC as not getUnstableRTC defined in
-hrpsys_config.py, it is for a basic walking test, other latest
-development rtc is passed by arg from
-test_samplerobot_euslisp_unittests.launch</li>
-<li>  [hrpsys_ros_bridge/launch/hrpsys_ros_bridge.launch,hrpsys_ros_bridge/scripts/default_robot_ros_bridge.launch.in,hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l,hrpsys_tools/launch/hrpsys.launch]
-Update for ObjectTurnaroundDetector RTC. add
-USE_REFERENCEFORCEUDPATER
-and USE_OBJECTCONTACTTURNAROUNDDETECTOR.</li>
-</ul>
-</li>
-<li>  Contributors: Kei Okada, Shunichi Nozawa, Yohei Kakiuchi</li>
-</ul>
-
-<h2 id="1-3-3-2017-02-12">1.3.3 (2017-02-12)</h2>
-
-<ul>
-<li>  HrpsysSeqStateROSBridge.cpp
-
-<ul>
-<li>  HrpsysSeqStateROSBridge occurs error if number of force sensor
-is different with size of contact states. fix number of force
-sensor
-(<a href="https://github.com/start-jsk/rtmros_common/issues/982">#982</a>)</li>
-<li>  Revert "[HrpsysSeqStateROSBridge] fix number of force sensor"
-<a href="https://github.com/start-jsk/rtmros_common/issues/984">#984</a>
-</li>
-<li>  Separate offset-removed force sensor data ports from rsforce,
-which is actual and non-offset-removed data port. Currently
-rsforce ports -&gt; rsforce ports + offforce ports.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/964">#964</a>)</li>
-<li>  Fixed mistake of sensor_link_name, when robot has only virturl
-force sonsors
-(<a href="https://github.com/start-jsk/rtmros_common/issues/945">#945</a>)</li>
-</ul>
-</li>
-<li>  HrpsysJointTrajectoryBridge.cpp
-
-<ul>
-<li>  publish feedback for joint_trajectory_actions
-(<a href="https://github.com/start-jsk/rtmros_common/issues/966">#966</a>)</li>
-</ul>
-</li>
-<li>  hrpsys_ros_bridge/launch/hrpsys_ros_bridge.launch
-
-<ul>
-<li>  Add argument to change buffer length of rtmlaunch connection.
-Set 8 by default (default setting in openrtm).
-(<a href="https://github.com/start-jsk/rtmros_common/issues/980">#980</a>)</li>
-<li>  fix model filename. Enable cache in ModelLoader, filename should
-be same as in .conf file.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/978">#978</a>)</li>
-</ul>
-</li>
-<li>
-<p>euslisp</p>
-
-<ul>
-<li>  [rtm-ros-robot-interface.l] refactor torque-controller
-interface
-(<a href="https://github.com/start-jsk/rtmros_common/issues/994">#994</a>)</li>
-<li>  Update sequencefull unit system and arguments
-(<a href="https://github.com/start-jsk/rtmros_common/issues/988">#988</a>)
-
-<ul>
-<li>  changed arguments of angle-vector-sequence-full see
-<a href="https://github.com/start-jsk/rtmros_common/issues/985">#985</a>
-</li>
-<li>  [hrpsys-samples/samplerobot-sequence-player.l] Add test
-for angle-vector-sequence-full (check validity)</li>
-<li>  [rtm-ros-robot-interface.l] Use root-coords and zmp in the
-abs frame and convert them inside the
-:angle-vector-sequence-full</li>
-<li>  [rtm-ros-robot-interface.l] Introduce fsensor length for
-wrench and optionals</li>
-<li>  [rtm-ros-robot-interface.l] Use [mm] and [deg/s]
-instead of [m] and [rad/s] for vel, pos, and zmp.</li>
-<li>  [rtm-ros-robot-interface.l] Use [deg] instead of [rad]
-for jpos argument and remove jvs arg.</li>
-<li>  [rtm-ros-robot-interface.l] Use tm as [ms],
-previously [s].</li>
-</ul>
-</li>
-<li>  [tm-ros-robot-interface.l] Update :reset-force-moment-offset
-to use :off force/moment vector
-(<a href="https://github.com/start-jsk/rtmros_common/issues/983">#983</a>)</li>
-<li>  [tm-ros-robot-interface.l] Added a missing keyword in
-def-set-get-method for TorqueControllerService.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/972">#972</a>)</li>
-<li>  [tm-ros-robot-interface.l] Add euslisp interface for torque
-controller
-(<a href="https://github.com/start-jsk/rtmros_common/issues/965">#965</a>)</li>
-<li>  [datalogger-log-parser.l] Modify unit of cogvel [m] -&gt;
-[mm] for euslisp
-(<a href="https://github.com/start-jsk/rtmros_common/issues/960">#960</a>)</li>
-<li>  [rtm-ros-robot-interface.l] Add get-go-pos-footsteps-sequence
-in rtm-ros-robot-interface.l and add test
-(<a href="https://github.com/start-jsk/rtmros_common/issues/965">#965</a>)</li>
-<li>  [rtm-ros-robot-interface.l] Update frame of wrench.
-Previously, wrench frame is mismatch with documentation string.
-Previous : local -&gt; new : world.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/963">#963</a>)</li>
-<li>  [rtm-ros-robot-interface.l] Add eefm force moment distribution
-weight parameter.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/958">#958</a>)</li>
-<li>  [rtm-ros-robot-interface.l] add Eus interface of
-SequencePlayserService_setJointAnglesSequenceFull and add test
-in test/hrpsys-samples/samplerobot-sequence-player.l
-(<a href="https://github.com/start-jsk/rtmros_common/issues/954">#954</a>)</li>
-<li>  [datalogger-log-parser.l] Add sh reference force and support
-both rpy and 3x3 matrix for WAIST
-log(<a href="https://github.com/start-jsk/rtmros_common/issues/956">#956</a>)</li>
-<li>  [rtm-ros-robot-interface.l] update rfu interface for idl
-changed in <a href="https://github.com/fkanehiro/hrpsys-base/pull/1005">https://github.com/fkanehiro/hrpsys-base/pull/1005</a>
-(<a href="https://github.com/start-jsk/rtmros_common/issues/952">#952</a>)</li>
-<li>
-<p>[datalogger-log-parser.l] Use joint-list length for datalogger
-joint angle conversion.
-(<a href="https://github.com/start-jsk/rtmros_common/issues/953">#953</a>)</p>
-
-<ul>
-<li>  Add simulation actual root coords reading and check for
-existance of RobotHardware0_servoState in datalogger. Fix
-setting of simulators' data parser names.</li>
-</ul>
-
-<p>* Use joint-list length for datalogger joint angle conversion.</p>
-</li>
-<li><p>[rtm-ros-robot-interface.l] make directory for log files
-(<a href="https://github.com/start-jsk/rtmros_common/issues/951">#951</a>)</p></li>
-</ul>
-</li>
-<li><p>[scripts/default_robot_ros_bridge.launch.in] Add nameserver
-argument for ros_bridge.launch
-(<a href="https://github.com/start-jsk/rtmros_common/issues/950">#950</a>)</p></li>
-<li><p>[test/hrpsys-samples/samplerobot-stabilizer.l] Update loadPattern
-sample because add-optional-data-from-rs-list is included in
-dump-seq-pattern-file
-(<a href="https://github.com/start-jsk/rtmros_common/issues/959">#959</a>)</p></li>
-<li><p>Contributors: Ryo Koyama, Kei Okada, Noriaki Takasugi, Ryo Terasawa,
-Shunichi Nozawa, Yohei Kakiuchi, Yoshimaru Tanaka, Iori Kumagai,
-Iori Yanokura, Juntaro Tamura</p></li>
-</ul>
-
-<h2 id="1-3-2-2016-04-26">1.3.2 (2016-04-26)</h2>
-
-<ul>
-<li>  [fix] getFootStepParam interface according to upstream change.
-Remove rleg_coords and lleg_coords.</li>
-<li>  [fix] HrpsysSeqStateROSBridgeImpl.cpp: sensor-&gt;localR is world
-coords</li>
-<li>  [fix] Modified HrpsysSeqStateROSBridgeImpl to enable virtual force</li>
-<li>  [fix] [rtm-ros-robot-interface.l] add time constant prameter
-according to upstream idl update</li>
-<li>  [fix] [hrpsys_ros_bridge] Fix genjava problem by adding
-message_generation as build_depend</li>
-<li>  [fix] getFootStepParam interface according to upstream change.
-Remove rleg_coords and lleg_coords.</li>
-<li>  [fix] [hrpsys_ros_bridge]change D if D from hrpsys is empty</li>
-<li>  [feat] [hrpsys_ros_bridge/test/test-samplerobot.py] add test
-programs to check frame_id of off_xxsensor and
-ref_xxsensor (#940)</li>
-<li>  [feat] Set /robot/type param according to lower-case robot name
-such as samplerobot.</li>
-<li>  [feat] [hrpsys_ros_bridge/test/test-samplerobot.*] add a test
-program for init of hcf</li>
-<li>  [feat] fix collision visualization, color of sphere will be purple
-if collision occur</li>
-<li>  [feat] .travis.yml : add test when old hrpsys-ros-bridge
-exists (#929)</li>
-<li>  [feat] [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Add check for param existence for def-set-get-param-method to
-neglect idl mismatch error. Fix indent. (#933)</li>
-<li>  [feat] [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Add reference force updater euslisp methods.</li>
-<li>  [feat] [hrpsys_ros_bridge/euslisp/rtm-ros-robot-interface.l]
-Add object turnaround detector moment version interface.l</li>
-<li>  [feat] Add define controller
-<a href="https://github.com/start-jsk/rtmros_common/issues/887">#887</a>
-</li>
-<li>  [feat] Add leg limb controller setting.</li>
-<li>  [feat] Add method to define joint trajectory controller by
-default setting.</li>
-<li>  [feat] Add gopos overwrite and graspless manip mode to all demos</li>
-<li>  [feat] Add example for graspless manip mode and gopos overwrite.</li>
-<li>  [feat] Add euslisp interface for graspless manip mode.</li>
-<li>  [feat] add a set-default-step-time-with-the-same-swing-time method</li>
-<li>  [feat] add time constant prameter according to upstream idl update</li>
-<li>  [feat] Add HrpsysSeqStateROSBridge tf rate test</li>
-<li>  [feat] enable virtual force in HrpsysSeqStateROSBridgeImpl</li>
-<li>  [feat] Enable to set subscription_type for DataPorts from
-hrpsys_ros_bridge.launch argument. Use new by default to keep
-backward compatibility.</li>
-<li>  [feat] Add loading of optionalData from seq pattern file.</li>
-<li>  [improve] add more mesage to prevent confusion</li>
-<li>  [improve] Add setting for ReferenceForceUpdater</li>
-<li>  [improve] Reset object turnaround detector's detector total wrench
-mode as TOTAL_FORCE in force estimation.</li>
-<li>  [improve] Enable to set push_policy and push_rate for DataPorts
-from hrpsys_ros_bridge.launch argument. Use all and 50.0 by
-default to keep backward compatibility.</li>
-<li>  [improve] Rename tf extract script for test and add comments for
-that</li>
-<li>  [improve]
-add arguments(SIMULATOR_NAME_[ANGLE,VELOCITY,TORQUE]) to
-hrpsys_ros_bridge.launch, for connecting rtc components other than
-RobotHardware</li>
-<li>  [improve] add time constant prameter according to u</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -8820,6 +7156,122 @@ RobotHardware</li>
         
           <ul>
             
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/hrpsys-samples/test_samplerobot_euslisp_unittests.launch" target="_blank">test/hrpsys-samples/test_samplerobot_euslisp_unittests.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> =*- mode: xml -*- </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>NOSIM</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>GUI</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>NOSIM</strong> <em>&#91;default: $(arg NOSIM)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>GUI</strong> <em>&#91;default: $(arg GUI)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: $(arg RUN_RVIZ)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>corbaport</strong> <em>&#91;default: 2809&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_UNSTABLE_RTC</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_EMERGENCYSTOPPER</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_REFERENCEFORCEUPDATER</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_OBJECTCONTACTTURNAROUNDDETECTOR</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/test-samplerobot-hcf.launch" target="_blank">test/test-samplerobot-hcf.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>corbaport</strong> <em>&#91;default: 2809&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>GUI</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>USE_UNSTABLE_RTC</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/test-compile-robot.launch" target="_blank">test/test-compile-robot.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/robot_pose_ekf.launch" target="_blank">launch/robot_pose_ekf.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>base_link</strong> <em>&#91;default: BODY&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/samplerobot_startup-grxui.launch" target="_blank">launch/samplerobot_startup-grxui.launch</a>
                 <ul class="list-unstyled">
                   
@@ -8832,60 +7284,6 @@ RobotHardware</li>
                           <li><strong>KILL_SERVERS</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
-                        
-                      
-                        
-                          <li><strong>KILL_SERVERS</strong> <em>&#91;default: $(arg KILL_SERVERS)&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/robot_monitor.launch" target="_blank">launch/robot_monitor.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>check_core_temps</strong> <em>&#91;default: False&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>check_ipmi_tool</strong> <em>&#91;default: False&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>check_nfs</strong> <em>&#91;default: False&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enforce_clock_speed</strong> <em>&#91;default: False&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>num_cores</strong> <em>&#91;default: 4&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/samplerobot-grxui.launch" target="_blank">launch/samplerobot-grxui.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>KILL_SERVERS</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -9125,7 +7523,7 @@ RobotHardware</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/robot_pose_ekf.launch" target="_blank">launch/robot_pose_ekf.launch</a>
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/samplerobot-grxui.launch" target="_blank">launch/samplerobot-grxui.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -9134,7 +7532,44 @@ RobotHardware</li>
                     <ul>
                       
                         
-                          <li><strong>base_link</strong> <em>&#91;default: BODY&#93; </em></li>
+                          <li><strong>KILL_SERVERS</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>KILL_SERVERS</strong> <em>&#91;default: $(arg KILL_SERVERS)&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/launch/robot_monitor.launch" target="_blank">launch/robot_monitor.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>check_core_temps</strong> <em>&#91;default: False&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>check_ipmi_tool</strong> <em>&#91;default: False&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>check_nfs</strong> <em>&#91;default: False&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enforce_clock_speed</strong> <em>&#91;default: False&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>num_cores</strong> <em>&#91;default: 4&#93; </em></li>
                         
                       
                     </ul>
@@ -9161,105 +7596,6 @@ RobotHardware</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/hrpsys-samples/test_samplerobot_euslisp_unittests.launch" target="_blank">test/hrpsys-samples/test_samplerobot_euslisp_unittests.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> =*- mode: xml -*- </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>NOSIM</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>GUI</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>NOSIM</strong> <em>&#91;default: $(arg NOSIM)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>GUI</strong> <em>&#91;default: $(arg GUI)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: $(arg RUN_RVIZ)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>corbaport</strong> <em>&#91;default: 2809&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_UNSTABLE_RTC</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_EMERGENCYSTOPPER</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_REFERENCEFORCEUPDATER</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_OBJECTCONTACTTURNAROUNDDETECTOR</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/test-compile-robot.launch" target="_blank">test/test-compile-robot.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/test/test-samplerobot-hcf.launch" target="_blank">test/test-samplerobot-hcf.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>corbaport</strong> <em>&#91;default: 2809&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>GUI</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>RUN_RVIZ</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>USE_UNSTABLE_RTC</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
           </ul>
         
       </div>
@@ -9273,13 +7609,13 @@ RobotHardware</li>
         
           <ul>
             
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/MotorStates.msg" target="_blank">msg/MotorStates.msg</a></li>
-            
               <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/ContactState.msg" target="_blank">msg/ContactState.msg</a></li>
             
-              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/ContactStatesStamped.msg" target="_blank">msg/ContactStatesStamped.msg</a></li>
-            
               <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/ContactStateStamped.msg" target="_blank">msg/ContactStateStamped.msg</a></li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/MotorStates.msg" target="_blank">msg/MotorStates.msg</a></li>
+            
+              <li><a href="https://github.com/start-jsk/rtmros_common/blob/master/hrpsys_ros_bridge/msg/ContactStatesStamped.msg" target="_blank">msg/ContactStatesStamped.msg</a></li>
             
           </ul>
         
@@ -9444,7 +7780,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

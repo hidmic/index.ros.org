@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -716,7 +712,7 @@ used to integrate a robot system with the RoboCup Logistics League
         
           <ul>
             
-              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_production_standalone_rqt.launch" target="_blank">launch/rosplan_production_standalone_rqt.launch</a>
+              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_rcll_interface.launch" target="_blank">launch/rosplan_rcll_interface.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -728,6 +724,16 @@ used to integrate a robot system with the RoboCup Logistics League
                           <li><strong>num_robots</strong> <em>&#91;default: $(optenv NUM_ROBOTS 1)&#93; </em></li>
                         
                       
+                        
+                          <li><strong>override_action_mapping</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>disable_refbox_interface</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>disable_navgraph_interface</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                     </ul>
@@ -934,67 +940,6 @@ used to integrate a robot system with the RoboCup Logistics League
                 </ul>
               </li>
             
-              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_planning_system.launch" target="_blank">launch/rosplan_planning_system.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>pddl_domain_path</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>data_path</strong> <em>&#91;default: $(find rcll_ros)/data/&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>problem_path</strong> <em>&#91;default: $(find rcll_ros)/data/problem.pddl&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>strl_file_path</strong> <em>&#91;default: $(find rcll_ros)/data/plan.strl&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>mongodb_host</strong> <em>&#91;default: localhost&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>mongodb_port</strong> <em>&#91;default: 27018&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>database_path</strong> <em>&#91;default: $(find rosplan_knowledge_base)/common/mongoDB/&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>max_dispatch_attempts</strong> <em>&#91;default: 2&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>planner_command</strong> <em>&#91;default: $(find rosplan_planning_system)/common/bin/popf DOMAIN PROBLEM&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>planner_command</strong> <em>&#91;default: timeout $(arg popf_timeout) $(find rosplan_planning_system)/common/bin/popf -n DOMAIN PROBLEM&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>popf_anytime</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>popf_timeout</strong> <em>&#91;default: 30&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_production.launch" target="_blank">launch/rosplan_production.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1092,7 +1037,7 @@ used to integrate a robot system with the RoboCup Logistics League
                 </ul>
               </li>
             
-              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_visitall_standalone.launch" target="_blank">launch/rosplan_visitall_standalone.launch</a>
+              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_production_standalone_rqt.launch" target="_blank">launch/rosplan_production_standalone_rqt.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1104,37 +1049,6 @@ used to integrate a robot system with the RoboCup Logistics League
                           <li><strong>num_robots</strong> <em>&#91;default: $(optenv NUM_ROBOTS 1)&#93; </em></li>
                         
                       
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_rcll_interface.launch" target="_blank">launch/rosplan_rcll_interface.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>num_robots</strong> <em>&#91;default: $(optenv NUM_ROBOTS 1)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>override_action_mapping</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>disable_refbox_interface</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>disable_navgraph_interface</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                     </ul>
@@ -1156,6 +1070,88 @@ used to integrate a robot system with the RoboCup Logistics League
                       
                         
                       
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_visitall_standalone.launch" target="_blank">launch/rosplan_visitall_standalone.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>num_robots</strong> <em>&#91;default: $(optenv NUM_ROBOTS 1)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_planning_system.launch" target="_blank">launch/rosplan_planning_system.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>pddl_domain_path</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>data_path</strong> <em>&#91;default: $(find rcll_ros)/data/&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>problem_path</strong> <em>&#91;default: $(find rcll_ros)/data/problem.pddl&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>strl_file_path</strong> <em>&#91;default: $(find rcll_ros)/data/plan.strl&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mongodb_host</strong> <em>&#91;default: localhost&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mongodb_port</strong> <em>&#91;default: 27018&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>database_path</strong> <em>&#91;default: $(find rosplan_knowledge_base)/common/mongoDB/&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>max_dispatch_attempts</strong> <em>&#91;default: 2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>planner_command</strong> <em>&#91;default: $(find rosplan_planning_system)/common/bin/popf DOMAIN PROBLEM&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>planner_command</strong> <em>&#91;default: timeout $(arg popf_timeout) $(find rosplan_planning_system)/common/bin/popf -n DOMAIN PROBLEM&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>popf_anytime</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>popf_timeout</strong> <em>&#91;default: 30&#93; </em></li>
                         
                       
                     </ul>
@@ -1776,7 +1772,7 @@ used to integrate a robot system with the RoboCup Logistics League
         
           <ul>
             
-              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_production_standalone_rqt.launch" target="_blank">launch/rosplan_production_standalone_rqt.launch</a>
+              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_rcll_interface.launch" target="_blank">launch/rosplan_rcll_interface.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1788,6 +1784,16 @@ used to integrate a robot system with the RoboCup Logistics League
                           <li><strong>num_robots</strong> <em>&#91;default: $(optenv NUM_ROBOTS 1)&#93; </em></li>
                         
                       
+                        
+                          <li><strong>override_action_mapping</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>disable_refbox_interface</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>disable_navgraph_interface</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                     </ul>
@@ -1994,67 +2000,6 @@ used to integrate a robot system with the RoboCup Logistics League
                 </ul>
               </li>
             
-              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_planning_system.launch" target="_blank">launch/rosplan_planning_system.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>pddl_domain_path</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>data_path</strong> <em>&#91;default: $(find rcll_ros)/data/&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>problem_path</strong> <em>&#91;default: $(find rcll_ros)/data/problem.pddl&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>strl_file_path</strong> <em>&#91;default: $(find rcll_ros)/data/plan.strl&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>mongodb_host</strong> <em>&#91;default: localhost&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>mongodb_port</strong> <em>&#91;default: 27018&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>database_path</strong> <em>&#91;default: $(find rosplan_knowledge_base)/common/mongoDB/&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>max_dispatch_attempts</strong> <em>&#91;default: 2&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>planner_command</strong> <em>&#91;default: $(find rosplan_planning_system)/common/bin/popf DOMAIN PROBLEM&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>planner_command</strong> <em>&#91;default: timeout $(arg popf_timeout) $(find rosplan_planning_system)/common/bin/popf -n DOMAIN PROBLEM&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>popf_anytime</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>popf_timeout</strong> <em>&#91;default: 30&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_production.launch" target="_blank">launch/rosplan_production.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2152,7 +2097,7 @@ used to integrate a robot system with the RoboCup Logistics League
                 </ul>
               </li>
             
-              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_visitall_standalone.launch" target="_blank">launch/rosplan_visitall_standalone.launch</a>
+              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_production_standalone_rqt.launch" target="_blank">launch/rosplan_production_standalone_rqt.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2164,37 +2109,6 @@ used to integrate a robot system with the RoboCup Logistics League
                           <li><strong>num_robots</strong> <em>&#91;default: $(optenv NUM_ROBOTS 1)&#93; </em></li>
                         
                       
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_rcll_interface.launch" target="_blank">launch/rosplan_rcll_interface.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>num_robots</strong> <em>&#91;default: $(optenv NUM_ROBOTS 1)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>override_action_mapping</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>disable_refbox_interface</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>disable_navgraph_interface</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                     </ul>
@@ -2216,6 +2130,88 @@ used to integrate a robot system with the RoboCup Logistics League
                       
                         
                       
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_visitall_standalone.launch" target="_blank">launch/rosplan_visitall_standalone.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>num_robots</strong> <em>&#91;default: $(optenv NUM_ROBOTS 1)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_planning_system.launch" target="_blank">launch/rosplan_planning_system.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>pddl_domain_path</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>data_path</strong> <em>&#91;default: $(find rcll_ros)/data/&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>problem_path</strong> <em>&#91;default: $(find rcll_ros)/data/problem.pddl&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>strl_file_path</strong> <em>&#91;default: $(find rcll_ros)/data/plan.strl&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mongodb_host</strong> <em>&#91;default: localhost&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mongodb_port</strong> <em>&#91;default: 27018&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>database_path</strong> <em>&#91;default: $(find rosplan_knowledge_base)/common/mongoDB/&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>max_dispatch_attempts</strong> <em>&#91;default: 2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>planner_command</strong> <em>&#91;default: $(find rosplan_planning_system)/common/bin/popf DOMAIN PROBLEM&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>planner_command</strong> <em>&#91;default: timeout $(arg popf_timeout) $(find rosplan_planning_system)/common/bin/popf -n DOMAIN PROBLEM&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>popf_anytime</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>popf_timeout</strong> <em>&#91;default: 30&#93; </em></li>
                         
                       
                     </ul>
@@ -2844,7 +2840,7 @@ used to integrate a robot system with the RoboCup Logistics League
         
           <ul>
             
-              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_production_standalone_rqt.launch" target="_blank">launch/rosplan_production_standalone_rqt.launch</a>
+              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_rcll_interface.launch" target="_blank">launch/rosplan_rcll_interface.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2856,6 +2852,16 @@ used to integrate a robot system with the RoboCup Logistics League
                           <li><strong>num_robots</strong> <em>&#91;default: $(optenv NUM_ROBOTS 1)&#93; </em></li>
                         
                       
+                        
+                          <li><strong>override_action_mapping</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>disable_refbox_interface</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>disable_navgraph_interface</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                     </ul>
@@ -3062,67 +3068,6 @@ used to integrate a robot system with the RoboCup Logistics League
                 </ul>
               </li>
             
-              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_planning_system.launch" target="_blank">launch/rosplan_planning_system.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>pddl_domain_path</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>data_path</strong> <em>&#91;default: $(find rcll_ros)/data/&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>problem_path</strong> <em>&#91;default: $(find rcll_ros)/data/problem.pddl&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>strl_file_path</strong> <em>&#91;default: $(find rcll_ros)/data/plan.strl&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>mongodb_host</strong> <em>&#91;default: localhost&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>mongodb_port</strong> <em>&#91;default: 27018&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>database_path</strong> <em>&#91;default: $(find rosplan_knowledge_base)/common/mongoDB/&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>max_dispatch_attempts</strong> <em>&#91;default: 2&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>planner_command</strong> <em>&#91;default: $(find rosplan_planning_system)/common/bin/popf DOMAIN PROBLEM&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>planner_command</strong> <em>&#91;default: timeout $(arg popf_timeout) $(find rosplan_planning_system)/common/bin/popf -n DOMAIN PROBLEM&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>popf_anytime</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>popf_timeout</strong> <em>&#91;default: 30&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_production.launch" target="_blank">launch/rosplan_production.launch</a>
                 <ul class="list-unstyled">
                   
@@ -3220,7 +3165,7 @@ used to integrate a robot system with the RoboCup Logistics League
                 </ul>
               </li>
             
-              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_visitall_standalone.launch" target="_blank">launch/rosplan_visitall_standalone.launch</a>
+              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_production_standalone_rqt.launch" target="_blank">launch/rosplan_production_standalone_rqt.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3232,37 +3177,6 @@ used to integrate a robot system with the RoboCup Logistics League
                           <li><strong>num_robots</strong> <em>&#91;default: $(optenv NUM_ROBOTS 1)&#93; </em></li>
                         
                       
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_rcll_interface.launch" target="_blank">launch/rosplan_rcll_interface.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>num_robots</strong> <em>&#91;default: $(optenv NUM_ROBOTS 1)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>override_action_mapping</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>disable_refbox_interface</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>disable_navgraph_interface</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                     </ul>
@@ -3284,6 +3198,88 @@ used to integrate a robot system with the RoboCup Logistics League
                       
                         
                       
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_visitall_standalone.launch" target="_blank">launch/rosplan_visitall_standalone.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>num_robots</strong> <em>&#91;default: $(optenv NUM_ROBOTS 1)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/timn/ros-rcll_ros/blob/master/./launch/rosplan_planning_system.launch" target="_blank">launch/rosplan_planning_system.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>pddl_domain_path</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>data_path</strong> <em>&#91;default: $(find rcll_ros)/data/&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>problem_path</strong> <em>&#91;default: $(find rcll_ros)/data/problem.pddl&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>strl_file_path</strong> <em>&#91;default: $(find rcll_ros)/data/plan.strl&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mongodb_host</strong> <em>&#91;default: localhost&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mongodb_port</strong> <em>&#91;default: 27018&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>database_path</strong> <em>&#91;default: $(find rosplan_knowledge_base)/common/mongoDB/&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>max_dispatch_attempts</strong> <em>&#91;default: 2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>planner_command</strong> <em>&#91;default: $(find rosplan_planning_system)/common/bin/popf DOMAIN PROBLEM&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>planner_command</strong> <em>&#91;default: timeout $(arg popf_timeout) $(find rosplan_planning_system)/common/bin/popf -n DOMAIN PROBLEM&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>popf_anytime</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>popf_timeout</strong> <em>&#91;default: 30&#93; </em></li>
                         
                       
                     </ul>
@@ -3464,7 +3460,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

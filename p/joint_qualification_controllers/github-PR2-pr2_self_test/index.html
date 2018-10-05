@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -572,46 +568,7 @@ pr2_self_test_msgs
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-joint_qualification_controllers">Changelog for package joint_qualification_controllers</h1>
-
-<h2 id="1-0-1-2014-09-16">1.0.1 (2014-09-16)</h2>
-
-<ul>
-<li>  Added install targets</li>
-<li>  Removed unneceesary packagexml and cmake</li>
-<li>  Added include statement in CMakeList</li>
-<li>  Removed manifest.xml</li>
-<li>  joint_qualification_controllers catkinized and compiles in hydro</li>
-<li>  Clean up.</li>
-<li>  Export HysteresisController2 plugin</li>
-<li>  Implementation of new Hysteresis Controller. Needs testing.</li>
-<li>  Start work on repeat hysteresis controller.</li>
-<li>  Removing unnecessary msg/srv exports in manifest</li>
-<li>  Doc updates on all controllers</li>
-<li>  Fix spelling of qualification for controller plugin list</li>
-<li>  CB test controller now checks for proper configuration for lift/flex
-tests</li>
-<li>  Joint qualification controllers now loading using correct class name</li>
-<li>  Typo in CB check controller</li>
-<li>  Joint qualification controllers now use pluginlib 1.1x series
-declare macro.
-<a href="https://github.com/PR2/pr2_self_test/issues/4053">#4053</a>
-</li>
-<li>  Cleanup of pr2_self_test stack before 0.1 release</li>
-<li>  Added platform tags for Ubuntu 9.04, 9.10, and 10.04.</li>
-<li>  Added URDF dependency to joint_qual_controllers, fixed INFO
-publishing</li>
-<li>  Correct tolerance on CB bar adjustment</li>
-<li>  CB controller now looks for tolerances for CB adjustments.
-<a href="https://github.com/PR2/pr2_self_test/issues/4224">#4224</a>
-</li>
-<li>  Fixed syntax error in CB controller</li>
-<li>  Correct number of flex positions in CB test controller</li>
-<li>  Adding dependency on realtime tools to
-joint_qualification_controllers</li>
-<li>  Moving joint_qualification_controllers to pr2_self_test</li>
-<li>  Contributors: TheDash, ahendrix, gerkey, watts</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -966,29 +923,29 @@ joint_qualification_controllers</li>
         
           <ul>
             
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/HysteresisData2.msg" target="_blank">msg/HysteresisData2.msg</a></li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/HysteresisRun.msg" target="_blank">msg/HysteresisRun.msg</a></li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/ActuatorData.msg" target="_blank">msg/ActuatorData.msg</a></li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/HysteresisData.msg" target="_blank">msg/HysteresisData.msg</a></li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/CBPositionData.msg" target="_blank">msg/CBPositionData.msg</a></li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/RobotData.msg" target="_blank">msg/RobotData.msg</a></li>
+            
               <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/CounterbalanceTestData.msg" target="_blank">msg/CounterbalanceTestData.msg</a></li>
             
               <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/WristDiffData.msg" target="_blank">msg/WristDiffData.msg</a></li>
             
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/JointPositionData.msg" target="_blank">msg/JointPositionData.msg</a></li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/ActuatorData.msg" target="_blank">msg/ActuatorData.msg</a></li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/HysteresisRun.msg" target="_blank">msg/HysteresisRun.msg</a></li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/CBPositionData.msg" target="_blank">msg/CBPositionData.msg</a></li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/WristRollTurn.msg" target="_blank">msg/WristRollTurn.msg</a></li>
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/JointData.msg" target="_blank">msg/JointData.msg</a></li>
             
               <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/CBRunData.msg" target="_blank">msg/CBRunData.msg</a></li>
             
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/HysteresisData2.msg" target="_blank">msg/HysteresisData2.msg</a></li>
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/JointPositionData.msg" target="_blank">msg/JointPositionData.msg</a></li>
             
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/JointData.msg" target="_blank">msg/JointData.msg</a></li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/RobotData.msg" target="_blank">msg/RobotData.msg</a></li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/HysteresisData.msg" target="_blank">msg/HysteresisData.msg</a></li>
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/WristRollTurn.msg" target="_blank">msg/WristRollTurn.msg</a></li>
             
           </ul>
         
@@ -1452,46 +1409,7 @@ pr2_self_test_msgs
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-joint_qualification_controllers">Changelog for package joint_qualification_controllers</h1>
-
-<h2 id="1-0-1-2014-09-16">1.0.1 (2014-09-16)</h2>
-
-<ul>
-<li>  Added install targets</li>
-<li>  Removed unneceesary packagexml and cmake</li>
-<li>  Added include statement in CMakeList</li>
-<li>  Removed manifest.xml</li>
-<li>  joint_qualification_controllers catkinized and compiles in hydro</li>
-<li>  Clean up.</li>
-<li>  Export HysteresisController2 plugin</li>
-<li>  Implementation of new Hysteresis Controller. Needs testing.</li>
-<li>  Start work on repeat hysteresis controller.</li>
-<li>  Removing unnecessary msg/srv exports in manifest</li>
-<li>  Doc updates on all controllers</li>
-<li>  Fix spelling of qualification for controller plugin list</li>
-<li>  CB test controller now checks for proper configuration for lift/flex
-tests</li>
-<li>  Joint qualification controllers now loading using correct class name</li>
-<li>  Typo in CB check controller</li>
-<li>  Joint qualification controllers now use pluginlib 1.1x series
-declare macro.
-<a href="https://github.com/PR2/pr2_self_test/issues/4053">#4053</a>
-</li>
-<li>  Cleanup of pr2_self_test stack before 0.1 release</li>
-<li>  Added platform tags for Ubuntu 9.04, 9.10, and 10.04.</li>
-<li>  Added URDF dependency to joint_qual_controllers, fixed INFO
-publishing</li>
-<li>  Correct tolerance on CB bar adjustment</li>
-<li>  CB controller now looks for tolerances for CB adjustments.
-<a href="https://github.com/PR2/pr2_self_test/issues/4224">#4224</a>
-</li>
-<li>  Fixed syntax error in CB controller</li>
-<li>  Correct number of flex positions in CB test controller</li>
-<li>  Adding dependency on realtime tools to
-joint_qualification_controllers</li>
-<li>  Moving joint_qualification_controllers to pr2_self_test</li>
-<li>  Contributors: TheDash, ahendrix, gerkey, watts</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1846,29 +1764,29 @@ joint_qualification_controllers</li>
         
           <ul>
             
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/HysteresisData2.msg" target="_blank">msg/HysteresisData2.msg</a></li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/HysteresisRun.msg" target="_blank">msg/HysteresisRun.msg</a></li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/ActuatorData.msg" target="_blank">msg/ActuatorData.msg</a></li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/HysteresisData.msg" target="_blank">msg/HysteresisData.msg</a></li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/CBPositionData.msg" target="_blank">msg/CBPositionData.msg</a></li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/RobotData.msg" target="_blank">msg/RobotData.msg</a></li>
+            
               <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/CounterbalanceTestData.msg" target="_blank">msg/CounterbalanceTestData.msg</a></li>
             
               <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/WristDiffData.msg" target="_blank">msg/WristDiffData.msg</a></li>
             
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/JointPositionData.msg" target="_blank">msg/JointPositionData.msg</a></li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/ActuatorData.msg" target="_blank">msg/ActuatorData.msg</a></li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/HysteresisRun.msg" target="_blank">msg/HysteresisRun.msg</a></li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/CBPositionData.msg" target="_blank">msg/CBPositionData.msg</a></li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/WristRollTurn.msg" target="_blank">msg/WristRollTurn.msg</a></li>
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/JointData.msg" target="_blank">msg/JointData.msg</a></li>
             
               <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/CBRunData.msg" target="_blank">msg/CBRunData.msg</a></li>
             
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/HysteresisData2.msg" target="_blank">msg/HysteresisData2.msg</a></li>
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/JointPositionData.msg" target="_blank">msg/JointPositionData.msg</a></li>
             
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/JointData.msg" target="_blank">msg/JointData.msg</a></li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/RobotData.msg" target="_blank">msg/RobotData.msg</a></li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/HysteresisData.msg" target="_blank">msg/HysteresisData.msg</a></li>
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/WristRollTurn.msg" target="_blank">msg/WristRollTurn.msg</a></li>
             
           </ul>
         
@@ -2348,46 +2266,7 @@ pr2_self_test_msgs
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-joint_qualification_controllers">Changelog for package joint_qualification_controllers</h1>
-
-<h2 id="1-0-1-2014-09-16">1.0.1 (2014-09-16)</h2>
-
-<ul>
-<li>  Added install targets</li>
-<li>  Removed unneceesary packagexml and cmake</li>
-<li>  Added include statement in CMakeList</li>
-<li>  Removed manifest.xml</li>
-<li>  joint_qualification_controllers catkinized and compiles in hydro</li>
-<li>  Clean up.</li>
-<li>  Export HysteresisController2 plugin</li>
-<li>  Implementation of new Hysteresis Controller. Needs testing.</li>
-<li>  Start work on repeat hysteresis controller.</li>
-<li>  Removing unnecessary msg/srv exports in manifest</li>
-<li>  Doc updates on all controllers</li>
-<li>  Fix spelling of qualification for controller plugin list</li>
-<li>  CB test controller now checks for proper configuration for lift/flex
-tests</li>
-<li>  Joint qualification controllers now loading using correct class name</li>
-<li>  Typo in CB check controller</li>
-<li>  Joint qualification controllers now use pluginlib 1.1x series
-declare macro.
-<a href="https://github.com/PR2/pr2_self_test/issues/4053">#4053</a>
-</li>
-<li>  Cleanup of pr2_self_test stack before 0.1 release</li>
-<li>  Added platform tags for Ubuntu 9.04, 9.10, and 10.04.</li>
-<li>  Added URDF dependency to joint_qual_controllers, fixed INFO
-publishing</li>
-<li>  Correct tolerance on CB bar adjustment</li>
-<li>  CB controller now looks for tolerances for CB adjustments.
-<a href="https://github.com/PR2/pr2_self_test/issues/4224">#4224</a>
-</li>
-<li>  Fixed syntax error in CB controller</li>
-<li>  Correct number of flex positions in CB test controller</li>
-<li>  Adding dependency on realtime tools to
-joint_qualification_controllers</li>
-<li>  Moving joint_qualification_controllers to pr2_self_test</li>
-<li>  Contributors: TheDash, ahendrix, gerkey, watts</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2742,29 +2621,29 @@ joint_qualification_controllers</li>
         
           <ul>
             
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/HysteresisData2.msg" target="_blank">msg/HysteresisData2.msg</a></li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/HysteresisRun.msg" target="_blank">msg/HysteresisRun.msg</a></li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/ActuatorData.msg" target="_blank">msg/ActuatorData.msg</a></li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/HysteresisData.msg" target="_blank">msg/HysteresisData.msg</a></li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/CBPositionData.msg" target="_blank">msg/CBPositionData.msg</a></li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/RobotData.msg" target="_blank">msg/RobotData.msg</a></li>
+            
               <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/CounterbalanceTestData.msg" target="_blank">msg/CounterbalanceTestData.msg</a></li>
             
               <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/WristDiffData.msg" target="_blank">msg/WristDiffData.msg</a></li>
             
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/JointPositionData.msg" target="_blank">msg/JointPositionData.msg</a></li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/ActuatorData.msg" target="_blank">msg/ActuatorData.msg</a></li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/HysteresisRun.msg" target="_blank">msg/HysteresisRun.msg</a></li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/CBPositionData.msg" target="_blank">msg/CBPositionData.msg</a></li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/WristRollTurn.msg" target="_blank">msg/WristRollTurn.msg</a></li>
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/JointData.msg" target="_blank">msg/JointData.msg</a></li>
             
               <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/CBRunData.msg" target="_blank">msg/CBRunData.msg</a></li>
             
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/HysteresisData2.msg" target="_blank">msg/HysteresisData2.msg</a></li>
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/JointPositionData.msg" target="_blank">msg/JointPositionData.msg</a></li>
             
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/JointData.msg" target="_blank">msg/JointData.msg</a></li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/RobotData.msg" target="_blank">msg/RobotData.msg</a></li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/HysteresisData.msg" target="_blank">msg/HysteresisData.msg</a></li>
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/joint_qualification_controllers/msg/WristRollTurn.msg" target="_blank">msg/WristRollTurn.msg</a></li>
             
           </ul>
         
@@ -2924,7 +2803,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

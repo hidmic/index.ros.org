@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -583,42 +579,7 @@ sick_tim
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-sick_tim">Changelog for package sick_tim</h1>
-
-<h2 id="0-0-13-2018-05-25">0.0.13 (2018-05-25)</h2>
-
-<ul>
-<li>  First release into melodic</li>
-<li>  Fix mrs1000 frame_id parameter
-(<a href="https://github.com/uos/sick_tim/issues/61">#61</a>) If frame_id
-parameter was defined to something other than "laser", the node
-would not publish the /scan topic and the /cloud header.frame_id
-would always be "laser" even if a different one was defined. This
-fixes both issues.</li>
-<li>  Add min/max angle and range parameters to URDF macros
-(<a href="https://github.com/uos/sick_tim/issues/60">#60</a>)</li>
-<li>  catkin test-flag around roslaunch_add_file_check
-(<a href="https://github.com/uos/sick_tim/issues/59">#59</a>) Eval
-CATKIN_ENABLE_TESTING prior to call roslaunch_add_file_check to
-ensure the function is defined.</li>
-<li>  Contributors: Jacob Perron, Jeremie Deray, Patrick Hussey</li>
-</ul>
-
-<h2 id="0-0-12-2018-01-31">0.0.12 (2018-01-31)</h2>
-
-<ul>
-<li>  Fix memory leak (<a href="https://github.com/uos/sick_tim/issues/56">#56</a>)
-s should be deleted before returning.</li>
-<li>  mrs1000: Make output REP-117 compliant (invalid = +inf) This is a
-port of e964fb4c to the MRS-1000.</li>
-<li>  sick mrs1000 driver
-(<a href="https://github.com/uos/sick_tim/issues/55">#55</a>) This commit adds
-SICK MRS-1000 support. The initialization of the device has to be
-different, due to that I have made the methods for initialization
-virtual and now the mrs1000 driver runs different init code. Also
-the support for PointCloud2 is new.</li>
-<li>  Contributors: Sebastian P</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -864,20 +825,7 @@ the support for PointCloud2 is new.</li>
         
           <ul>
             
-              <li><a href="https://github.com/uos/sick_tim/blob/melodic/./launch/sick_tim310_1130000m01.launch" target="_blank">launch/sick_tim310_1130000m01.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/sick_tim/blob/melodic/./launch/sick_tim551_2050001.launch" target="_blank">launch/sick_tim551_2050001.launch</a>
+              <li><a href="https://github.com/uos/sick_tim/blob/melodic/./launch/sick_mrs1000.launch" target="_blank">launch/sick_mrs1000.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -903,19 +851,6 @@ the support for PointCloud2 is new.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/uos/sick_tim/blob/melodic/./launch/sick_mrs1000.launch" target="_blank">launch/sick_mrs1000.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/uos/sick_tim/blob/melodic/./launch/sick_tim571_2050101.launch" target="_blank">launch/sick_tim571_2050101.launch</a>
                 <ul class="list-unstyled">
                   
@@ -929,7 +864,33 @@ the support for PointCloud2 is new.</li>
                 </ul>
               </li>
             
+              <li><a href="https://github.com/uos/sick_tim/blob/melodic/./launch/sick_tim310_1130000m01.launch" target="_blank">launch/sick_tim310_1130000m01.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/uos/sick_tim/blob/melodic/./launch/sick_tim310s01.launch" target="_blank">launch/sick_tim310s01.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/sick_tim/blob/melodic/./launch/sick_tim551_2050001.launch" target="_blank">launch/sick_tim551_2050001.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1441,42 +1402,7 @@ sick_tim
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-sick_tim">Changelog for package sick_tim</h1>
-
-<h2 id="0-0-13-2018-05-25">0.0.13 (2018-05-25)</h2>
-
-<ul>
-<li>  First release into melodic</li>
-<li>  Fix mrs1000 frame_id parameter
-(<a href="https://github.com/uos/sick_tim/issues/61">#61</a>) If frame_id
-parameter was defined to something other than "laser", the node
-would not publish the /scan topic and the /cloud header.frame_id
-would always be "laser" even if a different one was defined. This
-fixes both issues.</li>
-<li>  Add min/max angle and range parameters to URDF macros
-(<a href="https://github.com/uos/sick_tim/issues/60">#60</a>)</li>
-<li>  catkin test-flag around roslaunch_add_file_check
-(<a href="https://github.com/uos/sick_tim/issues/59">#59</a>) Eval
-CATKIN_ENABLE_TESTING prior to call roslaunch_add_file_check to
-ensure the function is defined.</li>
-<li>  Contributors: Jacob Perron, Jeremie Deray, Patrick Hussey</li>
-</ul>
-
-<h2 id="0-0-12-2018-01-31">0.0.12 (2018-01-31)</h2>
-
-<ul>
-<li>  Fix memory leak (<a href="https://github.com/uos/sick_tim/issues/56">#56</a>)
-s should be deleted before returning.</li>
-<li>  mrs1000: Make output REP-117 compliant (invalid = +inf) This is a
-port of e964fb4c to the MRS-1000.</li>
-<li>  sick mrs1000 driver
-(<a href="https://github.com/uos/sick_tim/issues/55">#55</a>) This commit adds
-SICK MRS-1000 support. The initialization of the device has to be
-different, due to that I have made the methods for initialization
-virtual and now the mrs1000 driver runs different init code. Also
-the support for PointCloud2 is new.</li>
-<li>  Contributors: Sebastian P</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1722,20 +1648,7 @@ the support for PointCloud2 is new.</li>
         
           <ul>
             
-              <li><a href="https://github.com/uos/sick_tim/blob/lunar/./launch/sick_tim310_1130000m01.launch" target="_blank">launch/sick_tim310_1130000m01.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/sick_tim/blob/lunar/./launch/sick_tim551_2050001.launch" target="_blank">launch/sick_tim551_2050001.launch</a>
+              <li><a href="https://github.com/uos/sick_tim/blob/lunar/./launch/sick_mrs1000.launch" target="_blank">launch/sick_mrs1000.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1761,19 +1674,6 @@ the support for PointCloud2 is new.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/uos/sick_tim/blob/lunar/./launch/sick_mrs1000.launch" target="_blank">launch/sick_mrs1000.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/uos/sick_tim/blob/lunar/./launch/sick_tim571_2050101.launch" target="_blank">launch/sick_tim571_2050101.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1787,7 +1687,33 @@ the support for PointCloud2 is new.</li>
                 </ul>
               </li>
             
+              <li><a href="https://github.com/uos/sick_tim/blob/lunar/./launch/sick_tim310_1130000m01.launch" target="_blank">launch/sick_tim310_1130000m01.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/uos/sick_tim/blob/lunar/./launch/sick_tim310s01.launch" target="_blank">launch/sick_tim310s01.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/sick_tim/blob/lunar/./launch/sick_tim551_2050001.launch" target="_blank">launch/sick_tim551_2050001.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2299,42 +2225,7 @@ sick_tim
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-sick_tim">Changelog for package sick_tim</h1>
-
-<h2 id="0-0-13-2018-05-25">0.0.13 (2018-05-25)</h2>
-
-<ul>
-<li>  First release into melodic</li>
-<li>  Fix mrs1000 frame_id parameter
-(<a href="https://github.com/uos/sick_tim/issues/61">#61</a>) If frame_id
-parameter was defined to something other than "laser", the node
-would not publish the /scan topic and the /cloud header.frame_id
-would always be "laser" even if a different one was defined. This
-fixes both issues.</li>
-<li>  Add min/max angle and range parameters to URDF macros
-(<a href="https://github.com/uos/sick_tim/issues/60">#60</a>)</li>
-<li>  catkin test-flag around roslaunch_add_file_check
-(<a href="https://github.com/uos/sick_tim/issues/59">#59</a>) Eval
-CATKIN_ENABLE_TESTING prior to call roslaunch_add_file_check to
-ensure the function is defined.</li>
-<li>  Contributors: Jacob Perron, Jeremie Deray, Patrick Hussey</li>
-</ul>
-
-<h2 id="0-0-12-2018-01-31">0.0.12 (2018-01-31)</h2>
-
-<ul>
-<li>  Fix memory leak (<a href="https://github.com/uos/sick_tim/issues/56">#56</a>)
-s should be deleted before returning.</li>
-<li>  mrs1000: Make output REP-117 compliant (invalid = +inf) This is a
-port of e964fb4c to the MRS-1000.</li>
-<li>  sick mrs1000 driver
-(<a href="https://github.com/uos/sick_tim/issues/55">#55</a>) This commit adds
-SICK MRS-1000 support. The initialization of the device has to be
-different, due to that I have made the methods for initialization
-virtual and now the mrs1000 driver runs different init code. Also
-the support for PointCloud2 is new.</li>
-<li>  Contributors: Sebastian P</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2580,20 +2471,7 @@ the support for PointCloud2 is new.</li>
         
           <ul>
             
-              <li><a href="https://github.com/uos/sick_tim/blob/kinetic/./launch/sick_tim310_1130000m01.launch" target="_blank">launch/sick_tim310_1130000m01.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/sick_tim/blob/kinetic/./launch/sick_tim551_2050001.launch" target="_blank">launch/sick_tim551_2050001.launch</a>
+              <li><a href="https://github.com/uos/sick_tim/blob/kinetic/./launch/sick_mrs1000.launch" target="_blank">launch/sick_mrs1000.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2619,19 +2497,6 @@ the support for PointCloud2 is new.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/uos/sick_tim/blob/kinetic/./launch/sick_mrs1000.launch" target="_blank">launch/sick_mrs1000.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/uos/sick_tim/blob/kinetic/./launch/sick_tim571_2050101.launch" target="_blank">launch/sick_tim571_2050101.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2645,7 +2510,33 @@ the support for PointCloud2 is new.</li>
                 </ul>
               </li>
             
+              <li><a href="https://github.com/uos/sick_tim/blob/kinetic/./launch/sick_tim310_1130000m01.launch" target="_blank">launch/sick_tim310_1130000m01.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/uos/sick_tim/blob/kinetic/./launch/sick_tim310s01.launch" target="_blank">launch/sick_tim310s01.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/sick_tim/blob/kinetic/./launch/sick_tim551_2050001.launch" target="_blank">launch/sick_tim551_2050001.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3157,42 +3048,7 @@ sick_tim
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-sick_tim">Changelog for package sick_tim</h1>
-
-<h2 id="0-0-13-2018-05-25">0.0.13 (2018-05-25)</h2>
-
-<ul>
-<li>  First release into melodic</li>
-<li>  Fix mrs1000 frame_id parameter
-(<a href="https://github.com/uos/sick_tim/issues/61">#61</a>) If frame_id
-parameter was defined to something other than "laser", the node
-would not publish the /scan topic and the /cloud header.frame_id
-would always be "laser" even if a different one was defined. This
-fixes both issues.</li>
-<li>  Add min/max angle and range parameters to URDF macros
-(<a href="https://github.com/uos/sick_tim/issues/60">#60</a>)</li>
-<li>  catkin test-flag around roslaunch_add_file_check
-(<a href="https://github.com/uos/sick_tim/issues/59">#59</a>) Eval
-CATKIN_ENABLE_TESTING prior to call roslaunch_add_file_check to
-ensure the function is defined.</li>
-<li>  Contributors: Jacob Perron, Jeremie Deray, Patrick Hussey</li>
-</ul>
-
-<h2 id="0-0-12-2018-01-31">0.0.12 (2018-01-31)</h2>
-
-<ul>
-<li>  Fix memory leak (<a href="https://github.com/uos/sick_tim/issues/56">#56</a>)
-s should be deleted before returning.</li>
-<li>  mrs1000: Make output REP-117 compliant (invalid = +inf) This is a
-port of e964fb4c to the MRS-1000.</li>
-<li>  sick mrs1000 driver
-(<a href="https://github.com/uos/sick_tim/issues/55">#55</a>) This commit adds
-SICK MRS-1000 support. The initialization of the device has to be
-different, due to that I have made the methods for initialization
-virtual and now the mrs1000 driver runs different init code. Also
-the support for PointCloud2 is new.</li>
-<li>  Contributors: Sebastian P</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3475,20 +3331,7 @@ the support for PointCloud2 is new.</li>
         
           <ul>
             
-              <li><a href="https://github.com/uos/sick_tim/blob/indigo/./launch/sick_tim310_1130000m01.launch" target="_blank">launch/sick_tim310_1130000m01.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/sick_tim/blob/indigo/./launch/sick_tim551_2050001.launch" target="_blank">launch/sick_tim551_2050001.launch</a>
+              <li><a href="https://github.com/uos/sick_tim/blob/indigo/./launch/sick_mrs1000.launch" target="_blank">launch/sick_mrs1000.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3514,19 +3357,6 @@ the support for PointCloud2 is new.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/uos/sick_tim/blob/indigo/./launch/sick_mrs1000.launch" target="_blank">launch/sick_mrs1000.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/uos/sick_tim/blob/indigo/./launch/sick_tim571_2050101.launch" target="_blank">launch/sick_tim571_2050101.launch</a>
                 <ul class="list-unstyled">
                   
@@ -3540,7 +3370,33 @@ the support for PointCloud2 is new.</li>
                 </ul>
               </li>
             
+              <li><a href="https://github.com/uos/sick_tim/blob/indigo/./launch/sick_tim310_1130000m01.launch" target="_blank">launch/sick_tim310_1130000m01.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/uos/sick_tim/blob/indigo/./launch/sick_tim310s01.launch" target="_blank">launch/sick_tim310s01.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/sick_tim/blob/indigo/./launch/sick_tim551_2050001.launch" target="_blank">launch/sick_tim551_2050001.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3994,48 +3850,7 @@ sick_tim
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-sick_tim">Changelog for package sick_tim</h1>
-
-<h2 id="0-0-10-2017-01-07">0.0.10 (2017-01-07)</h2>
-
-<ul>
-<li>  Automatically reboot scanner if it reports an error code.
-(<a href="https://github.com/uos/sick_tim/issues/44">#44</a>)</li>
-<li>  Update strtok logic. Fixes
-<a href="https://github.com/uos/sick_tim/issues/42">#42</a>
-(<a href="https://github.com/uos/sick_tim/issues/43">#43</a>)</li>
-<li>  Contributors: Derek King, Jochen Sprickerhof, Martin Guenther</li>
-</ul>
-
-<h2 id="0-0-9-2016-09-09">0.0.9 (2016-09-09)</h2>
-
-<ul>
-<li>  timestamp diagnostics must take into account time_offset
-(<a href="https://github.com/uos/sick_tim/issues/41">#41</a>)</li>
-<li>  Choose one of multiple connected scanners</li>
-<li>  Contributors: Christian Reinhard, procopiostein</li>
-</ul>
-
-<h2 id="0-0-8-2016-04-25">0.0.8 (2016-04-25)</h2>
-
-<ul>
-<li>  First release into kinetic</li>
-<li>  Remove dependency on driver_base The driver_base package is
-end-of-life, and we only needed it because of one enum.</li>
-<li>  Contributors: Martin Guenther</li>
-</ul>
-
-<h2 id="0-0-7-2016-04-15">0.0.7 (2016-04-15)</h2>
-
-<ul>
-<li>  Check for firmware versions without range output Closes
-<a href="https://github.com/uos/sick_tim/issues/36">#36</a> .</li>
-<li>  Use intensity param in TiM 551/571 parser Also print a warning when
-the intensity param is set, but RSSI is not enabled on the scanner.
-See <a href="https://github.com/uos/sick_tim/issues/32">#32</a>.</li>
-<li>  Other minor changes</li>
-<li>  Contributors: Martin G</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -4221,32 +4036,6 @@ See <a href="https://github.com/uos/sick_tim/issues/32">#32</a>.</li>
         
           <ul>
             
-              <li><a href="https://github.com/uos/sick_tim/blob/jade/./launch/sick_tim310_1130000m01.launch" target="_blank">launch/sick_tim310_1130000m01.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/sick_tim/blob/jade/./launch/sick_tim551_2050001.launch" target="_blank">launch/sick_tim551_2050001.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/uos/sick_tim/blob/jade/./launch/sick_tim310.launch" target="_blank">launch/sick_tim310.launch</a>
                 <ul class="list-unstyled">
                   
@@ -4273,7 +4062,33 @@ See <a href="https://github.com/uos/sick_tim/issues/32">#32</a>.</li>
                 </ul>
               </li>
             
+              <li><a href="https://github.com/uos/sick_tim/blob/jade/./launch/sick_tim310_1130000m01.launch" target="_blank">launch/sick_tim310_1130000m01.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/uos/sick_tim/blob/jade/./launch/sick_tim310s01.launch" target="_blank">launch/sick_tim310s01.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/sick_tim/blob/jade/./launch/sick_tim551_2050001.launch" target="_blank">launch/sick_tim551_2050001.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -4715,17 +4530,7 @@ sick_tim
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-sick_tim">Changelog for package sick_tim</h1>
-
-<h2 id="0-0-5-2015-05-06">0.0.5 (2015-05-06)</h2>
-
-<ul>
-<li>  Auto retry USB and TCP connections due to any reason; see
-<a href="https://github.com/uos/sick_tim/issues/25">#25</a>
-</li>
-<li>  Parameterized TCP timeout</li>
-<li>  Contributors: Chad Rockey, Martin G</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -4968,32 +4773,6 @@ sick_tim
         
           <ul>
             
-              <li><a href="https://github.com/uos/sick_tim/blob/hydro_catkin/./launch/sick_tim310_1130000m01.launch" target="_blank">launch/sick_tim310_1130000m01.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/uos/sick_tim/blob/hydro_catkin/./launch/sick_tim551_2050001.launch" target="_blank">launch/sick_tim551_2050001.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/uos/sick_tim/blob/hydro_catkin/./launch/sick_tim310.launch" target="_blank">launch/sick_tim310.launch</a>
                 <ul class="list-unstyled">
                   
@@ -5020,7 +4799,33 @@ sick_tim
                 </ul>
               </li>
             
+              <li><a href="https://github.com/uos/sick_tim/blob/hydro_catkin/./launch/sick_tim310_1130000m01.launch" target="_blank">launch/sick_tim310_1130000m01.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/uos/sick_tim/blob/hydro_catkin/./launch/sick_tim310s01.launch" target="_blank">launch/sick_tim310s01.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/uos/sick_tim/blob/hydro_catkin/./launch/sick_tim551_2050001.launch" target="_blank">launch/sick_tim551_2050001.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -5199,7 +5004,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

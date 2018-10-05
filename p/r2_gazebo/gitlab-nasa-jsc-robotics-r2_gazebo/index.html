@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -812,6 +808,21 @@ r2_gazebo
         
           <ul>
             
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/iss_half_world.launch" target="_blank">launch/iss_half_world.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_full_ros_control.launch" target="_blank">launch/r2c_full_ros_control.launch</a>
                 <ul class="list-unstyled">
                   
@@ -883,7 +894,7 @@ r2_gazebo
                 </ul>
               </li>
             
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_upperbody.launch" target="_blank">launch/r2c_upperbody.launch</a>
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/table_world.launch" target="_blank">launch/table_world.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -892,7 +903,96 @@ r2_gazebo
                     <ul>
                       
                         
-                          <li><strong>world</strong> <em>&#91;default: $(find r2_gazebo)/worlds/empty_no_gravity.world&#93; </em></li>
+                          <li><strong>use_sim_time</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>headless</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_full_rviz.launch" target="_blank">launch/r2c_full_rviz.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>joint_states</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>config</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/iss_quarter_world.launch" target="_blank">launch/iss_quarter_world.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_upperbody_ros_control.launch" target="_blank">launch/r2c_upperbody_ros_control.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>world</strong> <em>&#91;default: $(find r2_gazebo)/worlds/table.world&#93; </em></li>
                         
                       
                         
@@ -900,11 +1000,11 @@ r2_gazebo
                         
                       
                         
-                          <li><strong>gui</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
                         
                       
                         
-                          <li><strong>headless</strong> <em>&#91;default: true&#93; </em></li>
+                          <li><strong>headless</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -917,14 +1017,6 @@ r2_gazebo
                       
                         
                           <li><strong>octomap</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>robodyn</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ros_control</strong> <em>&#91;default: true&#93; </em></li>
                         
                       
                         
@@ -1005,6 +1097,84 @@ r2_gazebo
                 </ul>
               </li>
             
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_upperbody.launch" target="_blank">launch/r2c_upperbody.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>world</strong> <em>&#91;default: $(find r2_gazebo)/worlds/empty_no_gravity.world&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_sim_time</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>headless</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>octomap</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>robodyn</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ros_control</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_legs_rviz.launch" target="_blank">launch/r2c_legs_rviz.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>model</strong>  </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_full_iss_quarter.launch" target="_blank">launch/r2c_full_iss_quarter.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1070,7 +1240,7 @@ r2_gazebo
                 </ul>
               </li>
             
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/table_world.launch" target="_blank">launch/table_world.launch</a>
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/iss_world.launch" target="_blank">launch/iss_world.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1115,7 +1285,7 @@ r2_gazebo
                 </ul>
               </li>
             
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_upperbody_ros_control.launch" target="_blank">launch/r2c_upperbody_ros_control.launch</a>
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2b_upperbody.launch" target="_blank">launch/r2b_upperbody.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1124,7 +1294,7 @@ r2_gazebo
                     <ul>
                       
                         
-                          <li><strong>world</strong> <em>&#91;default: $(find r2_gazebo)/worlds/table.world&#93; </em></li>
+                          <li><strong>world</strong> <em>&#91;default: $(find r2_gazebo)/worlds/empty.world&#93; </em></li>
                         
                       
                         
@@ -1149,6 +1319,14 @@ r2_gazebo
                       
                         
                           <li><strong>octomap</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>robodyn</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ros_control</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -1229,7 +1407,7 @@ r2_gazebo
                 </ul>
               </li>
             
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/iss_world.launch" target="_blank">launch/iss_world.launch</a>
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_upperbody_rviz.launch" target="_blank">launch/r2c_upperbody_rviz.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1238,7 +1416,7 @@ r2_gazebo
                     <ul>
                       
                         
-                          <li><strong>use_sim_time</strong> <em>&#91;default: true&#93; </em></li>
+                          <li><strong>joint_states</strong> <em>&#91;default: true&#93; </em></li>
                         
                       
                         
@@ -1246,41 +1424,10 @@ r2_gazebo
                         
                       
                         
-                          <li><strong>headless</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>config</strong> <em>&#91;default: true&#93; </em></li>
                         
                       
                         
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/iss_half_world.launch" target="_blank">launch/iss_half_world.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
                       
                         
                       
@@ -1354,52 +1501,6 @@ r2_gazebo
                 </ul>
               </li>
             
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_upperbody_rviz.launch" target="_blank">launch/r2c_upperbody_rviz.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>joint_states</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>config</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_legs_rviz.launch" target="_blank">launch/r2c_legs_rviz.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>model</strong>  </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2b_upperbody_rviz.launch" target="_blank">launch/r2b_upperbody_rviz.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1439,67 +1540,6 @@ r2_gazebo
                       
                         
                           <li><strong>world</strong> <em>&#91;default: $(find r2_gazebo)/worlds/table.world&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_sim_time</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>headless</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>octomap</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>robodyn</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ros_control</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2b_upperbody.launch" target="_blank">launch/r2b_upperbody.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>world</strong> <em>&#91;default: $(find r2_gazebo)/worlds/empty.world&#93; </em></li>
                         
                       
                         
@@ -1605,50 +1645,6 @@ r2_gazebo
                       
                         
                       
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/iss_quarter_world.launch" target="_blank">launch/iss_quarter_world.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_full_rviz.launch" target="_blank">launch/r2c_full_rviz.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>joint_states</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>config</strong> <em>&#91;default: true&#93; </em></li>
                         
                       
                         
@@ -2400,6 +2396,21 @@ r2_gazebo
         
           <ul>
             
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/iss_half_world.launch" target="_blank">launch/iss_half_world.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_full_ros_control.launch" target="_blank">launch/r2c_full_ros_control.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2471,7 +2482,7 @@ r2_gazebo
                 </ul>
               </li>
             
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_upperbody.launch" target="_blank">launch/r2c_upperbody.launch</a>
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/table_world.launch" target="_blank">launch/table_world.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2480,7 +2491,96 @@ r2_gazebo
                     <ul>
                       
                         
-                          <li><strong>world</strong> <em>&#91;default: $(find r2_gazebo)/worlds/empty_no_gravity.world&#93; </em></li>
+                          <li><strong>use_sim_time</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>headless</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_full_rviz.launch" target="_blank">launch/r2c_full_rviz.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>joint_states</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>config</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/iss_quarter_world.launch" target="_blank">launch/iss_quarter_world.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_upperbody_ros_control.launch" target="_blank">launch/r2c_upperbody_ros_control.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>world</strong> <em>&#91;default: $(find r2_gazebo)/worlds/table.world&#93; </em></li>
                         
                       
                         
@@ -2488,11 +2588,11 @@ r2_gazebo
                         
                       
                         
-                          <li><strong>gui</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
                         
                       
                         
-                          <li><strong>headless</strong> <em>&#91;default: true&#93; </em></li>
+                          <li><strong>headless</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -2505,14 +2605,6 @@ r2_gazebo
                       
                         
                           <li><strong>octomap</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>robodyn</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ros_control</strong> <em>&#91;default: true&#93; </em></li>
                         
                       
                         
@@ -2593,6 +2685,84 @@ r2_gazebo
                 </ul>
               </li>
             
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_upperbody.launch" target="_blank">launch/r2c_upperbody.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>world</strong> <em>&#91;default: $(find r2_gazebo)/worlds/empty_no_gravity.world&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_sim_time</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>headless</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>octomap</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>robodyn</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ros_control</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_legs_rviz.launch" target="_blank">launch/r2c_legs_rviz.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>model</strong>  </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_full_iss_quarter.launch" target="_blank">launch/r2c_full_iss_quarter.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2658,7 +2828,7 @@ r2_gazebo
                 </ul>
               </li>
             
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/table_world.launch" target="_blank">launch/table_world.launch</a>
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/iss_world.launch" target="_blank">launch/iss_world.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2703,7 +2873,7 @@ r2_gazebo
                 </ul>
               </li>
             
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_upperbody_ros_control.launch" target="_blank">launch/r2c_upperbody_ros_control.launch</a>
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2b_upperbody.launch" target="_blank">launch/r2b_upperbody.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2712,7 +2882,7 @@ r2_gazebo
                     <ul>
                       
                         
-                          <li><strong>world</strong> <em>&#91;default: $(find r2_gazebo)/worlds/table.world&#93; </em></li>
+                          <li><strong>world</strong> <em>&#91;default: $(find r2_gazebo)/worlds/empty.world&#93; </em></li>
                         
                       
                         
@@ -2737,6 +2907,14 @@ r2_gazebo
                       
                         
                           <li><strong>octomap</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>robodyn</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ros_control</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -2817,7 +2995,7 @@ r2_gazebo
                 </ul>
               </li>
             
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/iss_world.launch" target="_blank">launch/iss_world.launch</a>
+              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_upperbody_rviz.launch" target="_blank">launch/r2c_upperbody_rviz.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2826,7 +3004,7 @@ r2_gazebo
                     <ul>
                       
                         
-                          <li><strong>use_sim_time</strong> <em>&#91;default: true&#93; </em></li>
+                          <li><strong>joint_states</strong> <em>&#91;default: true&#93; </em></li>
                         
                       
                         
@@ -2834,41 +3012,10 @@ r2_gazebo
                         
                       
                         
-                          <li><strong>headless</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>config</strong> <em>&#91;default: true&#93; </em></li>
                         
                       
                         
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/iss_half_world.launch" target="_blank">launch/iss_half_world.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
                       
                         
                       
@@ -2942,52 +3089,6 @@ r2_gazebo
                 </ul>
               </li>
             
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_upperbody_rviz.launch" target="_blank">launch/r2c_upperbody_rviz.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>joint_states</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>config</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_legs_rviz.launch" target="_blank">launch/r2c_legs_rviz.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>model</strong>  </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2b_upperbody_rviz.launch" target="_blank">launch/r2b_upperbody_rviz.launch</a>
                 <ul class="list-unstyled">
                   
@@ -3027,67 +3128,6 @@ r2_gazebo
                       
                         
                           <li><strong>world</strong> <em>&#91;default: $(find r2_gazebo)/worlds/table.world&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_sim_time</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>headless</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>octomap</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>robodyn</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ros_control</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2b_upperbody.launch" target="_blank">launch/r2b_upperbody.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>world</strong> <em>&#91;default: $(find r2_gazebo)/worlds/empty.world&#93; </em></li>
                         
                       
                         
@@ -3193,50 +3233,6 @@ r2_gazebo
                       
                         
                       
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/iss_quarter_world.launch" target="_blank">launch/iss_quarter_world.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://gitlab.com/nasa-jsc-robotics/r2_gazebo.git/./launch/r2c_full_rviz.launch" target="_blank">launch/r2c_full_rviz.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>joint_states</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>config</strong> <em>&#91;default: true&#93; </em></li>
                         
                       
                         
@@ -3437,7 +3433,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -930,6 +926,68 @@ wheeled_robin_node
         
           <ul>
             
+              <li><a href="https://github.com/robinJKU/wheeled_robin/blob/hydro-devel/wheeled_robin_bringup/launch/paired_public.launch" target="_blank">launch/paired_public.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>base</strong> <em>&#91;default: $(optenv TURTLEBOT_BASE wheeled_robin)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>3d_sensor</strong> <em>&#91;default: $(optenv TURTLEBOT_3D_SENSOR kinect)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/robinJKU/wheeled_robin/blob/hydro-devel/wheeled_robin_bringup/launch/minimal_fake.launch" target="_blank">launch/minimal_fake.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>base</strong> <em>&#91;default: $(optenv TURTLEBOT_BASE wheeled_robin)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>stacks</strong> <em>&#91;default: $(optenv TURTLEBOT_STACKS hexagons)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>3d_sensor</strong> <em>&#91;default: $(optenv TURTLEBOT_3D_SENSOR kinect)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>simulation</strong> <em>&#91;default: $(optenv TURTLEBOT_SIMULATION false)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/robinJKU/wheeled_robin/blob/hydro-devel/wheeled_robin_bringup/launch/minimal_with_appmanager.launch" target="_blank">launch/minimal_with_appmanager.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1101,89 +1159,13 @@ wheeled_robin_node
                 </ul>
               </li>
             
-              <li><a href="https://github.com/robinJKU/wheeled_robin/blob/hydro-devel/wheeled_robin_bringup/launch/paired_public.launch" target="_blank">launch/paired_public.launch</a>
+              <li><a href="https://github.com/robinJKU/wheeled_robin/blob/hydro-devel/wheeled_robin_bringup/launch/includes/mobile_base_fake.launch.xml" target="_blank">launch/includes/mobile_base_fake.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
-                      
-                        
-                          <li><strong>base</strong> <em>&#91;default: $(optenv TURTLEBOT_BASE wheeled_robin)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>3d_sensor</strong> <em>&#91;default: $(optenv TURTLEBOT_3D_SENSOR kinect)&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/robinJKU/wheeled_robin/blob/hydro-devel/wheeled_robin_bringup/launch/minimal_fake.launch" target="_blank">launch/minimal_fake.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>base</strong> <em>&#91;default: $(optenv TURTLEBOT_BASE wheeled_robin)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>stacks</strong> <em>&#91;default: $(optenv TURTLEBOT_STACKS hexagons)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>3d_sensor</strong> <em>&#91;default: $(optenv TURTLEBOT_3D_SENSOR kinect)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>simulation</strong> <em>&#91;default: $(optenv TURTLEBOT_SIMULATION false)&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/robinJKU/wheeled_robin/blob/hydro-devel/wheeled_robin_bringup/launch/includes/description.launch.xml" target="_blank">launch/includes/description.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em>
-  Robot description only (used in private and paired master).
- </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>base</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>3d_sensor</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>urdf_file</strong> <em>&#91;default: $(find xacro)/xacro.py '$(find wheeled_robin_description)/robots/$(arg base)_$(arg 3d_sensor).urdf.xacro'&#93; </em></li>
-                        
                       
                     </ul>
                   </li>
@@ -1191,19 +1173,6 @@ wheeled_robin_node
               </li>
             
               <li><a href="https://github.com/robinJKU/wheeled_robin/blob/hydro-devel/wheeled_robin_bringup/launch/includes/zeroconf.launch.xml" target="_blank">launch/includes/zeroconf.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/robinJKU/wheeled_robin/blob/hydro-devel/wheeled_robin_bringup/launch/includes/mobile_base.launch.xml" target="_blank">launch/includes/mobile_base.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1243,13 +1212,40 @@ wheeled_robin_node
                 </ul>
               </li>
             
-              <li><a href="https://github.com/robinJKU/wheeled_robin/blob/hydro-devel/wheeled_robin_bringup/launch/includes/mobile_base_fake.launch.xml" target="_blank">launch/includes/mobile_base_fake.launch.xml</a>
+              <li><a href="https://github.com/robinJKU/wheeled_robin/blob/hydro-devel/wheeled_robin_bringup/launch/includes/mobile_base.launch.xml" target="_blank">launch/includes/mobile_base.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/robinJKU/wheeled_robin/blob/hydro-devel/wheeled_robin_bringup/launch/includes/description.launch.xml" target="_blank">launch/includes/description.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em>
+  Robot description only (used in private and paired master).
+ </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>base</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>3d_sensor</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>urdf_file</strong> <em>&#91;default: $(find xacro)/xacro.py '$(find wheeled_robin_description)/robots/$(arg base)_$(arg 3d_sensor).urdf.xacro'&#93; </em></li>
+                        
                       
                     </ul>
                   </li>
@@ -1422,7 +1418,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

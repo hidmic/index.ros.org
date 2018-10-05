@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -553,50 +549,7 @@ people_velocity_tracker
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-face_detector">Changelog for package face_detector</h1>
-
-<h2 id="1-0-9-2015-09-01">1.0.9 (2015-09-01)</h2>
-
-<ul>
-<li>  Install missing param directory: face_detector.rgbd.launch fails
-due to the param folder.</li>
-<li>  Contributors: Isaac I.Y. Saito</li>
-</ul>
-
-<h2 id="1-0-8-2014-12-10">1.0.8 (2014-12-10)</h2>
-
-<ul>
-<li>  cleanup formatting with astyle (supersedes
-<a href="https://github.com/wg-perception/people/issues/18">#18</a>)</li>
-<li>  centrally reference cascade from standalone opencv (addresses
-<a href="https://github.com/wg-perception/people/issues/15">#15</a>)</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
-
-<h2 id="1-0-3-2014-03-01">1.0.3 (2014-03-01)</h2>
-
-<ul>
-<li>  fix message generation</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
-
-<h2 id="1-0-2-2014-02-28">1.0.2 (2014-02-28)</h2>
-
-<ul>
-<li>  update to properly generate messages</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
-
-<h2 id="1-0-1-2014-02-27">1.0.1 (2014-02-27)</h2>
-
-<ul>
-<li>  update some remappings to deal with the changed openni message api</li>
-<li>  convert 16FC1 depth images to 32FC1 and scale to get meters</li>
-<li>  switch constants to defines to get rid of linker issues for catkin
-switch</li>
-<li>  catkinizing</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1063,7 +1016,7 @@ switch</li>
         
           <ul>
             
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/launch/face_detector_action.wide.launch" target="_blank">launch/face_detector_action.wide.launch</a>
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/launch/face_detector_common.launch" target="_blank">launch/face_detector_common.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1072,7 +1025,80 @@ switch</li>
                     <ul>
                       
                         
-                          <li><strong>camera</strong> <em>&#91;default: wide_stereo&#93; </em></li>
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb_ns</strong> <em>&#91;default: rgb&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>image_topic</strong> <em>&#91;default: image_rect_color&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_ns</strong> <em>&#91;default: depth_registered&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_topic</strong> <em>&#91;default: image_rect_raw&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>classifier_name</strong> <em>&#91;default: frontalface&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>paramfile_classifier</strong> <em>&#91;default: $(find face_detector)/param/classifier.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>classifier_reliability</strong> <em>&#91;default: 0.9&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>do_continuous</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>do_publish_faces_of_unknown_size</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>do_display</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_rgbd</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>approximate_sync</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>nodename</strong> <em>&#91;default: facedetector&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/launch/face_detector.narrow.launch" target="_blank">launch/face_detector.narrow.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: narrow_stereo&#93; </em></li>
                         
                       
                         
@@ -1080,19 +1106,38 @@ switch</li>
                         
                       
                         
-                          <li><strong>fixed_frame</strong> <em>&#91;default: wide_stereo_optical_frame&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_rgbd</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>approximate_sync</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>fixed_frame</strong> <em>&#91;default: narrow_stereo_optical_frame&#93; </em></li>
                         
                       
                         
                       
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/launch/face_detector_action.rgbd.launch" target="_blank">launch/face_detector_action.rgbd.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>image_topic</strong> <em>&#91;default: image_rect&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
                         
                       
                         
@@ -1177,110 +1222,6 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/launch/face_detector.narrow.launch" target="_blank">launch/face_detector.narrow.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: narrow_stereo&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>image_topic</strong> <em>&#91;default: image_rect&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>fixed_frame</strong> <em>&#91;default: narrow_stereo_optical_frame&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/launch/face_detector_common.launch" target="_blank">launch/face_detector_common.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb_ns</strong> <em>&#91;default: rgb&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>image_topic</strong> <em>&#91;default: image_rect_color&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_ns</strong> <em>&#91;default: depth_registered&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_topic</strong> <em>&#91;default: image_rect_raw&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>classifier_name</strong> <em>&#91;default: frontalface&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>paramfile_classifier</strong> <em>&#91;default: $(find face_detector)/param/classifier.yaml&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>classifier_reliability</strong> <em>&#91;default: 0.9&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>do_continuous</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>do_publish_faces_of_unknown_size</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>do_display</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_rgbd</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>approximate_sync</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>nodename</strong> <em>&#91;default: facedetector&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/launch/face_detector.wide.launch" target="_blank">launch/face_detector.wide.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1340,7 +1281,7 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/launch/face_detector_action.rgbd.launch" target="_blank">launch/face_detector_action.rgbd.launch</a>
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/launch/face_detector_action.wide.launch" target="_blank">launch/face_detector_action.wide.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1349,7 +1290,7 @@ switch</li>
                     <ul>
                       
                         
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                          <li><strong>camera</strong> <em>&#91;default: wide_stereo&#93; </em></li>
                         
                       
                         
@@ -1357,7 +1298,15 @@ switch</li>
                         
                       
                         
-                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
+                          <li><strong>fixed_frame</strong> <em>&#91;default: wide_stereo_optical_frame&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_rgbd</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>approximate_sync</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -1368,76 +1317,8 @@ switch</li>
                       
                         
                       
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/action-wide_false_rtest.xml" target="_blank">test/action-wide_false_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
                         
                       
-                        
-                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_action_wide_false&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/wide-stereo_true_rtest.xml" target="_blank">test/wide-stereo_true_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_wide_stereo_true&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/action-rgbd_true_rtest.xml" target="_blank">test/action-rgbd_true_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_action_rgbd_true&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/wide-stereo_false_rtest.xml" target="_blank">test/wide-stereo_false_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                        
-                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_wide_stereo_false&#93; </em></li>
                         
                       
                     </ul>
@@ -1486,58 +1367,6 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/rgbd_false_rtest.xml" target="_blank">test/rgbd_false_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                        
-                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_rgbd_false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>topicname_hztest</strong> <em>&#91;default: /face_detector/faces_cloud&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/action-rgbd_false_rtest.xml" target="_blank">test/action-rgbd_false_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                        
-                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_action_rgbd_false&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/narrow-stereo_true_rtest.xml" target="_blank">test/narrow-stereo_true_rtest.xml</a>
                 <ul class="list-unstyled">
                   
@@ -1548,6 +1377,25 @@ switch</li>
                       
                         
                           <li><strong>testnode_name</strong> <em>&#91;default: hztest_narrow_stereo_true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/wide-stereo_false_rtest.xml" target="_blank">test/wide-stereo_false_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_wide_stereo_false&#93; </em></li>
                         
                       
                     </ul>
@@ -1606,6 +1454,111 @@ switch</li>
                       
                         
                           <li><strong>testnode_name</strong> <em>&#91;default: hztest_narrow_stereo_false&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/action-rgbd_true_rtest.xml" target="_blank">test/action-rgbd_true_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_action_rgbd_true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/action-wide_false_rtest.xml" target="_blank">test/action-wide_false_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_action_wide_false&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/wide-stereo_true_rtest.xml" target="_blank">test/wide-stereo_true_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_wide_stereo_true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/rgbd_false_rtest.xml" target="_blank">test/rgbd_false_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_rgbd_false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>topicname_hztest</strong> <em>&#91;default: /face_detector/faces_cloud&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/action-rgbd_false_rtest.xml" target="_blank">test/action-rgbd_false_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_action_rgbd_false&#93; </em></li>
                         
                       
                     </ul>
@@ -2098,50 +2051,7 @@ people_velocity_tracker
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-face_detector">Changelog for package face_detector</h1>
-
-<h2 id="1-0-9-2015-09-01">1.0.9 (2015-09-01)</h2>
-
-<ul>
-<li>  Install missing param directory: face_detector.rgbd.launch fails
-due to the param folder.</li>
-<li>  Contributors: Isaac I.Y. Saito</li>
-</ul>
-
-<h2 id="1-0-8-2014-12-10">1.0.8 (2014-12-10)</h2>
-
-<ul>
-<li>  cleanup formatting with astyle (supersedes
-<a href="https://github.com/wg-perception/people/issues/18">#18</a>)</li>
-<li>  centrally reference cascade from standalone opencv (addresses
-<a href="https://github.com/wg-perception/people/issues/15">#15</a>)</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
-
-<h2 id="1-0-3-2014-03-01">1.0.3 (2014-03-01)</h2>
-
-<ul>
-<li>  fix message generation</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
-
-<h2 id="1-0-2-2014-02-28">1.0.2 (2014-02-28)</h2>
-
-<ul>
-<li>  update to properly generate messages</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
-
-<h2 id="1-0-1-2014-02-27">1.0.1 (2014-02-27)</h2>
-
-<ul>
-<li>  update some remappings to deal with the changed openni message api</li>
-<li>  convert 16FC1 depth images to 32FC1 and scale to get meters</li>
-<li>  switch constants to defines to get rid of linker issues for catkin
-switch</li>
-<li>  catkinizing</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2608,7 +2518,7 @@ switch</li>
         
           <ul>
             
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/launch/face_detector_action.wide.launch" target="_blank">launch/face_detector_action.wide.launch</a>
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/launch/face_detector_common.launch" target="_blank">launch/face_detector_common.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2617,7 +2527,80 @@ switch</li>
                     <ul>
                       
                         
-                          <li><strong>camera</strong> <em>&#91;default: wide_stereo&#93; </em></li>
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb_ns</strong> <em>&#91;default: rgb&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>image_topic</strong> <em>&#91;default: image_rect_color&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_ns</strong> <em>&#91;default: depth_registered&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_topic</strong> <em>&#91;default: image_rect_raw&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>classifier_name</strong> <em>&#91;default: frontalface&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>paramfile_classifier</strong> <em>&#91;default: $(find face_detector)/param/classifier.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>classifier_reliability</strong> <em>&#91;default: 0.9&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>do_continuous</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>do_publish_faces_of_unknown_size</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>do_display</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_rgbd</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>approximate_sync</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>nodename</strong> <em>&#91;default: facedetector&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/launch/face_detector.narrow.launch" target="_blank">launch/face_detector.narrow.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: narrow_stereo&#93; </em></li>
                         
                       
                         
@@ -2625,19 +2608,38 @@ switch</li>
                         
                       
                         
-                          <li><strong>fixed_frame</strong> <em>&#91;default: wide_stereo_optical_frame&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_rgbd</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>approximate_sync</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>fixed_frame</strong> <em>&#91;default: narrow_stereo_optical_frame&#93; </em></li>
                         
                       
                         
                       
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/launch/face_detector_action.rgbd.launch" target="_blank">launch/face_detector_action.rgbd.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>image_topic</strong> <em>&#91;default: image_rect&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
                         
                       
                         
@@ -2722,110 +2724,6 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/launch/face_detector.narrow.launch" target="_blank">launch/face_detector.narrow.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: narrow_stereo&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>image_topic</strong> <em>&#91;default: image_rect&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>fixed_frame</strong> <em>&#91;default: narrow_stereo_optical_frame&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/launch/face_detector_common.launch" target="_blank">launch/face_detector_common.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb_ns</strong> <em>&#91;default: rgb&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>image_topic</strong> <em>&#91;default: image_rect_color&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_ns</strong> <em>&#91;default: depth_registered&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_topic</strong> <em>&#91;default: image_rect_raw&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>classifier_name</strong> <em>&#91;default: frontalface&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>paramfile_classifier</strong> <em>&#91;default: $(find face_detector)/param/classifier.yaml&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>classifier_reliability</strong> <em>&#91;default: 0.9&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>do_continuous</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>do_publish_faces_of_unknown_size</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>do_display</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_rgbd</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>approximate_sync</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>nodename</strong> <em>&#91;default: facedetector&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/launch/face_detector.wide.launch" target="_blank">launch/face_detector.wide.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2885,7 +2783,7 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/launch/face_detector_action.rgbd.launch" target="_blank">launch/face_detector_action.rgbd.launch</a>
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/launch/face_detector_action.wide.launch" target="_blank">launch/face_detector_action.wide.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2894,7 +2792,7 @@ switch</li>
                     <ul>
                       
                         
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                          <li><strong>camera</strong> <em>&#91;default: wide_stereo&#93; </em></li>
                         
                       
                         
@@ -2902,7 +2800,15 @@ switch</li>
                         
                       
                         
-                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
+                          <li><strong>fixed_frame</strong> <em>&#91;default: wide_stereo_optical_frame&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_rgbd</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>approximate_sync</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -2913,76 +2819,8 @@ switch</li>
                       
                         
                       
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/action-wide_false_rtest.xml" target="_blank">test/action-wide_false_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
                         
                       
-                        
-                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_action_wide_false&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/wide-stereo_true_rtest.xml" target="_blank">test/wide-stereo_true_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_wide_stereo_true&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/action-rgbd_true_rtest.xml" target="_blank">test/action-rgbd_true_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_action_rgbd_true&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/wide-stereo_false_rtest.xml" target="_blank">test/wide-stereo_false_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                        
-                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_wide_stereo_false&#93; </em></li>
                         
                       
                     </ul>
@@ -3031,58 +2869,6 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/rgbd_false_rtest.xml" target="_blank">test/rgbd_false_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                        
-                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_rgbd_false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>topicname_hztest</strong> <em>&#91;default: /face_detector/faces_cloud&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/action-rgbd_false_rtest.xml" target="_blank">test/action-rgbd_false_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                        
-                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_action_rgbd_false&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/narrow-stereo_true_rtest.xml" target="_blank">test/narrow-stereo_true_rtest.xml</a>
                 <ul class="list-unstyled">
                   
@@ -3093,6 +2879,25 @@ switch</li>
                       
                         
                           <li><strong>testnode_name</strong> <em>&#91;default: hztest_narrow_stereo_true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/wide-stereo_false_rtest.xml" target="_blank">test/wide-stereo_false_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_wide_stereo_false&#93; </em></li>
                         
                       
                     </ul>
@@ -3151,6 +2956,111 @@ switch</li>
                       
                         
                           <li><strong>testnode_name</strong> <em>&#91;default: hztest_narrow_stereo_false&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/action-rgbd_true_rtest.xml" target="_blank">test/action-rgbd_true_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_action_rgbd_true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/action-wide_false_rtest.xml" target="_blank">test/action-wide_false_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_action_wide_false&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/wide-stereo_true_rtest.xml" target="_blank">test/wide-stereo_true_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_wide_stereo_true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/rgbd_false_rtest.xml" target="_blank">test/rgbd_false_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_rgbd_false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>topicname_hztest</strong> <em>&#91;default: /face_detector/faces_cloud&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/kinetic/face_detector/test/action-rgbd_false_rtest.xml" target="_blank">test/action-rgbd_false_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                          <li><strong>testnode_name</strong> <em>&#91;default: hztest_action_rgbd_false&#93; </em></li>
                         
                       
                     </ul>
@@ -3643,50 +3553,7 @@ people_velocity_tracker
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-face_detector">Changelog for package face_detector</h1>
-
-<h2 id="1-0-9-2015-09-01">1.0.9 (2015-09-01)</h2>
-
-<ul>
-<li>  Install missing param directory: face_detector.rgbd.launch fails
-due to the param folder.</li>
-<li>  Contributors: Isaac I.Y. Saito</li>
-</ul>
-
-<h2 id="1-0-8-2014-12-10">1.0.8 (2014-12-10)</h2>
-
-<ul>
-<li>  cleanup formatting with astyle (supersedes
-<a href="https://github.com/wg-perception/people/issues/18">#18</a>)</li>
-<li>  centrally reference cascade from standalone opencv (addresses
-<a href="https://github.com/wg-perception/people/issues/15">#15</a>)</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
-
-<h2 id="1-0-3-2014-03-01">1.0.3 (2014-03-01)</h2>
-
-<ul>
-<li>  fix message generation</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
-
-<h2 id="1-0-2-2014-02-28">1.0.2 (2014-02-28)</h2>
-
-<ul>
-<li>  update to properly generate messages</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
-
-<h2 id="1-0-1-2014-02-27">1.0.1 (2014-02-27)</h2>
-
-<ul>
-<li>  update some remappings to deal with the changed openni message api</li>
-<li>  convert 16FC1 depth images to 32FC1 and scale to get meters</li>
-<li>  switch constants to defines to get rid of linker issues for catkin
-switch</li>
-<li>  catkinizing</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -4196,7 +4063,7 @@ switch</li>
         
           <ul>
             
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector_action.wide.launch" target="_blank">launch/face_detector_action.wide.launch</a>
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector_common.launch" target="_blank">launch/face_detector_common.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -4205,7 +4072,80 @@ switch</li>
                     <ul>
                       
                         
-                          <li><strong>camera</strong> <em>&#91;default: wide_stereo&#93; </em></li>
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb_ns</strong> <em>&#91;default: rgb&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>image_topic</strong> <em>&#91;default: image_rect_color&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_ns</strong> <em>&#91;default: depth_registered&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_topic</strong> <em>&#91;default: image_rect_raw&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>classifier_name</strong> <em>&#91;default: frontalface&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>paramfile_classifier</strong> <em>&#91;default: $(find face_detector)/param/classifier.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>classifier_reliability</strong> <em>&#91;default: 0.9&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>do_continuous</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>do_publish_faces_of_unknown_size</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>do_display</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_rgbd</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>approximate_sync</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>nodename</strong> <em>&#91;default: facedetector&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector.narrow.launch" target="_blank">launch/face_detector.narrow.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: narrow_stereo&#93; </em></li>
                         
                       
                         
@@ -4213,19 +4153,38 @@ switch</li>
                         
                       
                         
-                          <li><strong>fixed_frame</strong> <em>&#91;default: wide_stereo_optical_frame&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_rgbd</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>approximate_sync</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>fixed_frame</strong> <em>&#91;default: narrow_stereo_optical_frame&#93; </em></li>
                         
                       
                         
                       
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector_action.rgbd.launch" target="_blank">launch/face_detector_action.rgbd.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>image_topic</strong> <em>&#91;default: image_rect&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
                         
                       
                         
@@ -4310,110 +4269,6 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector.narrow.launch" target="_blank">launch/face_detector.narrow.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: narrow_stereo&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>image_topic</strong> <em>&#91;default: image_rect&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>fixed_frame</strong> <em>&#91;default: narrow_stereo_optical_frame&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector_common.launch" target="_blank">launch/face_detector_common.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb_ns</strong> <em>&#91;default: rgb&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>image_topic</strong> <em>&#91;default: image_rect_color&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_ns</strong> <em>&#91;default: depth_registered&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_topic</strong> <em>&#91;default: image_rect_raw&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>classifier_name</strong> <em>&#91;default: frontalface&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>paramfile_classifier</strong> <em>&#91;default: $(find face_detector)/param/classifier.yaml&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>classifier_reliability</strong> <em>&#91;default: 0.9&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>do_continuous</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>do_publish_faces_of_unknown_size</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>do_display</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_rgbd</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>approximate_sync</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>nodename</strong> <em>&#91;default: facedetector&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector.wide.launch" target="_blank">launch/face_detector.wide.launch</a>
                 <ul class="list-unstyled">
                   
@@ -4473,7 +4328,7 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector_action.rgbd.launch" target="_blank">launch/face_detector_action.rgbd.launch</a>
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector_action.wide.launch" target="_blank">launch/face_detector_action.wide.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -4482,7 +4337,7 @@ switch</li>
                     <ul>
                       
                         
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                          <li><strong>camera</strong> <em>&#91;default: wide_stereo&#93; </em></li>
                         
                       
                         
@@ -4490,7 +4345,15 @@ switch</li>
                         
                       
                         
-                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
+                          <li><strong>fixed_frame</strong> <em>&#91;default: wide_stereo_optical_frame&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_rgbd</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>approximate_sync</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -4500,6 +4363,96 @@ switch</li>
                         
                       
                         
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/common_rtest.xml" target="_blank">test/common_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>expected_success</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/narrow-stereo_true_rtest.xml" target="_blank">test/narrow-stereo_true_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/wide-stereo_false_rtest.xml" target="_blank">test/wide-stereo_false_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/rgbd_true_rtest.xml" target="_blank">test/rgbd_true_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/narrow-stereo_false_rtest.xml" target="_blank">test/narrow-stereo_false_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/action-rgbd_true_rtest.xml" target="_blank">test/action-rgbd_true_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
                       
                     </ul>
                   </li>
@@ -4534,51 +4487,6 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/action-rgbd_true_rtest.xml" target="_blank">test/action-rgbd_true_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/wide-stereo_false_rtest.xml" target="_blank">test/wide-stereo_false_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/common_rtest.xml" target="_blank">test/common_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>expected_success</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/rgbd_false_rtest.xml" target="_blank">test/rgbd_false_rtest.xml</a>
                 <ul class="list-unstyled">
                   
@@ -4595,47 +4503,6 @@ switch</li>
               </li>
             
               <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/action-rgbd_false_rtest.xml" target="_blank">test/action-rgbd_false_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/narrow-stereo_true_rtest.xml" target="_blank">test/narrow-stereo_true_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/rgbd_true_rtest.xml" target="_blank">test/rgbd_true_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/narrow-stereo_false_rtest.xml" target="_blank">test/narrow-stereo_false_rtest.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -5129,50 +4996,7 @@ people_velocity_tracker
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-face_detector">Changelog for package face_detector</h1>
-
-<h2 id="1-0-9-2015-09-01">1.0.9 (2015-09-01)</h2>
-
-<ul>
-<li>  Install missing param directory: face_detector.rgbd.launch fails
-due to the param folder.</li>
-<li>  Contributors: Isaac I.Y. Saito</li>
-</ul>
-
-<h2 id="1-0-8-2014-12-10">1.0.8 (2014-12-10)</h2>
-
-<ul>
-<li>  cleanup formatting with astyle (supersedes
-<a href="https://github.com/wg-perception/people/issues/18">#18</a>)</li>
-<li>  centrally reference cascade from standalone opencv (addresses
-<a href="https://github.com/wg-perception/people/issues/15">#15</a>)</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
-
-<h2 id="1-0-3-2014-03-01">1.0.3 (2014-03-01)</h2>
-
-<ul>
-<li>  fix message generation</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
-
-<h2 id="1-0-2-2014-02-28">1.0.2 (2014-02-28)</h2>
-
-<ul>
-<li>  update to properly generate messages</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
-
-<h2 id="1-0-1-2014-02-27">1.0.1 (2014-02-27)</h2>
-
-<ul>
-<li>  update some remappings to deal with the changed openni message api</li>
-<li>  convert 16FC1 depth images to 32FC1 and scale to get meters</li>
-<li>  switch constants to defines to get rid of linker issues for catkin
-switch</li>
-<li>  catkinizing</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -5738,7 +5562,7 @@ switch</li>
         
           <ul>
             
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector_action.wide.launch" target="_blank">launch/face_detector_action.wide.launch</a>
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector_common.launch" target="_blank">launch/face_detector_common.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -5747,7 +5571,80 @@ switch</li>
                     <ul>
                       
                         
-                          <li><strong>camera</strong> <em>&#91;default: wide_stereo&#93; </em></li>
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb_ns</strong> <em>&#91;default: rgb&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>image_topic</strong> <em>&#91;default: image_rect_color&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_ns</strong> <em>&#91;default: depth_registered&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_topic</strong> <em>&#91;default: image_rect_raw&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>classifier_name</strong> <em>&#91;default: frontalface&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>paramfile_classifier</strong> <em>&#91;default: $(find face_detector)/param/classifier.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>classifier_reliability</strong> <em>&#91;default: 0.9&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>do_continuous</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>do_publish_faces_of_unknown_size</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>do_display</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_rgbd</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>approximate_sync</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>nodename</strong> <em>&#91;default: facedetector&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector.narrow.launch" target="_blank">launch/face_detector.narrow.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: narrow_stereo&#93; </em></li>
                         
                       
                         
@@ -5755,19 +5652,38 @@ switch</li>
                         
                       
                         
-                          <li><strong>fixed_frame</strong> <em>&#91;default: wide_stereo_optical_frame&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_rgbd</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>approximate_sync</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>fixed_frame</strong> <em>&#91;default: narrow_stereo_optical_frame&#93; </em></li>
                         
                       
                         
                       
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector_action.rgbd.launch" target="_blank">launch/face_detector_action.rgbd.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>image_topic</strong> <em>&#91;default: image_rect&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
                         
                       
                         
@@ -5852,110 +5768,6 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector.narrow.launch" target="_blank">launch/face_detector.narrow.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: narrow_stereo&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>image_topic</strong> <em>&#91;default: image_rect&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>fixed_frame</strong> <em>&#91;default: narrow_stereo_optical_frame&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector_common.launch" target="_blank">launch/face_detector_common.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb_ns</strong> <em>&#91;default: rgb&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>image_topic</strong> <em>&#91;default: image_rect_color&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_ns</strong> <em>&#91;default: depth_registered&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_topic</strong> <em>&#91;default: image_rect_raw&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>classifier_name</strong> <em>&#91;default: frontalface&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>paramfile_classifier</strong> <em>&#91;default: $(find face_detector)/param/classifier.yaml&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>classifier_reliability</strong> <em>&#91;default: 0.9&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>do_continuous</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>do_publish_faces_of_unknown_size</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>do_display</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_rgbd</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>approximate_sync</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>nodename</strong> <em>&#91;default: facedetector&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector.wide.launch" target="_blank">launch/face_detector.wide.launch</a>
                 <ul class="list-unstyled">
                   
@@ -6015,7 +5827,7 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector_action.rgbd.launch" target="_blank">launch/face_detector_action.rgbd.launch</a>
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector_action.wide.launch" target="_blank">launch/face_detector_action.wide.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -6024,7 +5836,7 @@ switch</li>
                     <ul>
                       
                         
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                          <li><strong>camera</strong> <em>&#91;default: wide_stereo&#93; </em></li>
                         
                       
                         
@@ -6032,7 +5844,15 @@ switch</li>
                         
                       
                         
-                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
+                          <li><strong>fixed_frame</strong> <em>&#91;default: wide_stereo_optical_frame&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_rgbd</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>approximate_sync</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -6042,6 +5862,96 @@ switch</li>
                         
                       
                         
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/common_rtest.xml" target="_blank">test/common_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>expected_success</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/narrow-stereo_true_rtest.xml" target="_blank">test/narrow-stereo_true_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/wide-stereo_false_rtest.xml" target="_blank">test/wide-stereo_false_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/rgbd_true_rtest.xml" target="_blank">test/rgbd_true_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/narrow-stereo_false_rtest.xml" target="_blank">test/narrow-stereo_false_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/action-rgbd_true_rtest.xml" target="_blank">test/action-rgbd_true_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
                       
                     </ul>
                   </li>
@@ -6076,51 +5986,6 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/action-rgbd_true_rtest.xml" target="_blank">test/action-rgbd_true_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/wide-stereo_false_rtest.xml" target="_blank">test/wide-stereo_false_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/common_rtest.xml" target="_blank">test/common_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>expected_success</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/rgbd_false_rtest.xml" target="_blank">test/rgbd_false_rtest.xml</a>
                 <ul class="list-unstyled">
                   
@@ -6137,47 +6002,6 @@ switch</li>
               </li>
             
               <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/action-rgbd_false_rtest.xml" target="_blank">test/action-rgbd_false_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/narrow-stereo_true_rtest.xml" target="_blank">test/narrow-stereo_true_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/rgbd_true_rtest.xml" target="_blank">test/rgbd_true_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/narrow-stereo_false_rtest.xml" target="_blank">test/narrow-stereo_false_rtest.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -6679,50 +6503,7 @@ people_velocity_tracker
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-face_detector">Changelog for package face_detector</h1>
-
-<h2 id="1-0-9-2015-09-01">1.0.9 (2015-09-01)</h2>
-
-<ul>
-<li>  Install missing param directory: face_detector.rgbd.launch fails
-due to the param folder.</li>
-<li>  Contributors: Isaac I.Y. Saito</li>
-</ul>
-
-<h2 id="1-0-8-2014-12-10">1.0.8 (2014-12-10)</h2>
-
-<ul>
-<li>  cleanup formatting with astyle (supersedes
-<a href="https://github.com/wg-perception/people/issues/18">#18</a>)</li>
-<li>  centrally reference cascade from standalone opencv (addresses
-<a href="https://github.com/wg-perception/people/issues/15">#15</a>)</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
-
-<h2 id="1-0-3-2014-03-01">1.0.3 (2014-03-01)</h2>
-
-<ul>
-<li>  fix message generation</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
-
-<h2 id="1-0-2-2014-02-28">1.0.2 (2014-02-28)</h2>
-
-<ul>
-<li>  update to properly generate messages</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
-
-<h2 id="1-0-1-2014-02-27">1.0.1 (2014-02-27)</h2>
-
-<ul>
-<li>  update some remappings to deal with the changed openni message api</li>
-<li>  convert 16FC1 depth images to 32FC1 and scale to get meters</li>
-<li>  switch constants to defines to get rid of linker issues for catkin
-switch</li>
-<li>  catkinizing</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -7246,7 +7027,7 @@ switch</li>
         
           <ul>
             
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector_action.wide.launch" target="_blank">launch/face_detector_action.wide.launch</a>
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector_common.launch" target="_blank">launch/face_detector_common.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -7255,7 +7036,80 @@ switch</li>
                     <ul>
                       
                         
-                          <li><strong>camera</strong> <em>&#91;default: wide_stereo&#93; </em></li>
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb_ns</strong> <em>&#91;default: rgb&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>image_topic</strong> <em>&#91;default: image_rect_color&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_ns</strong> <em>&#91;default: depth_registered&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_topic</strong> <em>&#91;default: image_rect_raw&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>classifier_name</strong> <em>&#91;default: frontalface&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>paramfile_classifier</strong> <em>&#91;default: $(find face_detector)/param/classifier.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>classifier_reliability</strong> <em>&#91;default: 0.9&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>do_continuous</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>do_publish_faces_of_unknown_size</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>do_display</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_rgbd</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>approximate_sync</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>nodename</strong> <em>&#91;default: facedetector&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector.narrow.launch" target="_blank">launch/face_detector.narrow.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: narrow_stereo&#93; </em></li>
                         
                       
                         
@@ -7263,19 +7117,38 @@ switch</li>
                         
                       
                         
-                          <li><strong>fixed_frame</strong> <em>&#91;default: wide_stereo_optical_frame&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_rgbd</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>approximate_sync</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>fixed_frame</strong> <em>&#91;default: narrow_stereo_optical_frame&#93; </em></li>
                         
                       
                         
                       
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector_action.rgbd.launch" target="_blank">launch/face_detector_action.rgbd.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>image_topic</strong> <em>&#91;default: image_rect&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
                         
                       
                         
@@ -7360,110 +7233,6 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector.narrow.launch" target="_blank">launch/face_detector.narrow.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: narrow_stereo&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>image_topic</strong> <em>&#91;default: image_rect&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>fixed_frame</strong> <em>&#91;default: narrow_stereo_optical_frame&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector_common.launch" target="_blank">launch/face_detector_common.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb_ns</strong> <em>&#91;default: rgb&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>image_topic</strong> <em>&#91;default: image_rect_color&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_ns</strong> <em>&#91;default: depth_registered&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_topic</strong> <em>&#91;default: image_rect_raw&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>classifier_name</strong> <em>&#91;default: frontalface&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>paramfile_classifier</strong> <em>&#91;default: $(find face_detector)/param/classifier.yaml&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>classifier_reliability</strong> <em>&#91;default: 0.9&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>do_continuous</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>do_publish_faces_of_unknown_size</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>do_display</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>use_rgbd</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>approximate_sync</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>nodename</strong> <em>&#91;default: facedetector&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector.wide.launch" target="_blank">launch/face_detector.wide.launch</a>
                 <ul class="list-unstyled">
                   
@@ -7523,7 +7292,7 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector_action.rgbd.launch" target="_blank">launch/face_detector_action.rgbd.launch</a>
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/launch/face_detector_action.wide.launch" target="_blank">launch/face_detector_action.wide.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -7532,7 +7301,7 @@ switch</li>
                     <ul>
                       
                         
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                          <li><strong>camera</strong> <em>&#91;default: wide_stereo&#93; </em></li>
                         
                       
                         
@@ -7540,7 +7309,15 @@ switch</li>
                         
                       
                         
-                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
+                          <li><strong>fixed_frame</strong> <em>&#91;default: wide_stereo_optical_frame&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_rgbd</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>approximate_sync</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -7550,6 +7327,96 @@ switch</li>
                         
                       
                         
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/common_rtest.xml" target="_blank">test/common_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>expected_success</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/narrow-stereo_true_rtest.xml" target="_blank">test/narrow-stereo_true_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/wide-stereo_false_rtest.xml" target="_blank">test/wide-stereo_false_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/rgbd_true_rtest.xml" target="_blank">test/rgbd_true_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/narrow-stereo_false_rtest.xml" target="_blank">test/narrow-stereo_false_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/action-rgbd_true_rtest.xml" target="_blank">test/action-rgbd_true_rtest.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
                       
                     </ul>
                   </li>
@@ -7584,51 +7451,6 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/action-rgbd_true_rtest.xml" target="_blank">test/action-rgbd_true_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/wide-stereo_false_rtest.xml" target="_blank">test/wide-stereo_false_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/common_rtest.xml" target="_blank">test/common_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>expected_success</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/rgbd_false_rtest.xml" target="_blank">test/rgbd_false_rtest.xml</a>
                 <ul class="list-unstyled">
                   
@@ -7645,47 +7467,6 @@ switch</li>
               </li>
             
               <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/action-rgbd_false_rtest.xml" target="_blank">test/action-rgbd_false_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/narrow-stereo_true_rtest.xml" target="_blank">test/narrow-stereo_true_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/rgbd_true_rtest.xml" target="_blank">test/rgbd_true_rtest.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/wg-perception/people/blob/indigo-devel/face_detector/test/narrow-stereo_false_rtest.xml" target="_blank">test/narrow-stereo_false_rtest.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -8187,32 +7968,7 @@ social_navigation_layers
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-face_detector">Changelog for package face_detector</h1>
-
-<h2 id="1-0-3-2014-03-01">1.0.3 (2014-03-01)</h2>
-
-<ul>
-<li>  fix message generation</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
-
-<h2 id="1-0-2-2014-02-28">1.0.2 (2014-02-28)</h2>
-
-<ul>
-<li>  update to properly generate messages</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
-
-<h2 id="1-0-1-2014-02-27">1.0.1 (2014-02-27)</h2>
-
-<ul>
-<li>  update some remappings to deal with the changed openni message api</li>
-<li>  convert 16FC1 depth images to 32FC1 and scale to get meters</li>
-<li>  switch constants to defines to get rid of linker issues for catkin
-switch</li>
-<li>  catkinizing</li>
-<li>  Contributors: Dan Lazewatsky</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -8778,7 +8534,7 @@ switch</li>
         
           <ul>
             
-              <li><a href="https://github.com/wg-perception/people/blob/hydro-devel/face_detector/launch/face_detector_action.wide.launch" target="_blank">launch/face_detector_action.wide.launch</a>
+              <li><a href="https://github.com/wg-perception/people/blob/hydro-devel/face_detector/launch/face_detector.narrow.launch" target="_blank">launch/face_detector.narrow.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -8787,7 +8543,7 @@ switch</li>
                     <ul>
                       
                         
-                          <li><strong>camera</strong> <em>&#91;default: wide_stereo&#93; </em></li>
+                          <li><strong>camera</strong> <em>&#91;default: narrow_stereo&#93; </em></li>
                         
                       
                         
@@ -8795,7 +8551,32 @@ switch</li>
                         
                       
                         
-                          <li><strong>fixed_frame</strong> <em>&#91;default: wide_stereo_optical_frame&#93; </em></li>
+                          <li><strong>fixed_frame</strong> <em>&#91;default: narrow_stereo_optical_frame&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/wg-perception/people/blob/hydro-devel/face_detector/launch/face_detector_action.rgbd.launch" target="_blank">launch/face_detector_action.rgbd.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>image_topic</strong> <em>&#91;default: image_rect&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
                         
                       
                     </ul>
@@ -8836,31 +8617,6 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/hydro-devel/face_detector/launch/face_detector.narrow.launch" target="_blank">launch/face_detector.narrow.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>camera</strong> <em>&#91;default: narrow_stereo&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>image_topic</strong> <em>&#91;default: image_rect&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>fixed_frame</strong> <em>&#91;default: narrow_stereo_optical_frame&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/wg-perception/people/blob/hydro-devel/face_detector/launch/face_detector.wide.launch" target="_blank">launch/face_detector.wide.launch</a>
                 <ul class="list-unstyled">
                   
@@ -8886,7 +8642,7 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/hydro-devel/face_detector/launch/face_detector_action.rgbd.launch" target="_blank">launch/face_detector_action.rgbd.launch</a>
+              <li><a href="https://github.com/wg-perception/people/blob/hydro-devel/face_detector/launch/face_detector_action.wide.launch" target="_blank">launch/face_detector_action.wide.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -8895,7 +8651,7 @@ switch</li>
                     <ul>
                       
                         
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                          <li><strong>camera</strong> <em>&#91;default: wide_stereo&#93; </em></li>
                         
                       
                         
@@ -8903,7 +8659,7 @@ switch</li>
                         
                       
                         
-                          <li><strong>fixed_frame</strong> <em>&#91;default: camera_rgb_optical_frame&#93; </em></li>
+                          <li><strong>fixed_frame</strong> <em>&#91;default: wide_stereo_optical_frame&#93; </em></li>
                         
                       
                     </ul>
@@ -8911,7 +8667,7 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/hydro-devel/face_detector/test/face_detector_true_rtest.xml" target="_blank">test/face_detector_true_rtest.xml</a>
+              <li><a href="https://github.com/wg-perception/people/blob/hydro-devel/face_detector/test/face_detector_false_rtest.xml" target="_blank">test/face_detector_false_rtest.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -8924,7 +8680,7 @@ switch</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/wg-perception/people/blob/hydro-devel/face_detector/test/face_detector_false_rtest.xml" target="_blank">test/face_detector_false_rtest.xml</a>
+              <li><a href="https://github.com/wg-perception/people/blob/hydro-devel/face_detector/test/face_detector_true_rtest.xml" target="_blank">test/face_detector_true_rtest.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -9102,7 +8858,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

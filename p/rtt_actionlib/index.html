@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -867,29 +863,29 @@ interface to a given compnent, you could do something similar to the following:<
 <p>Second, the ports need to be connected to ROS topics. This can either be done
 in C++ with hard-coded action topic names, or with the "actionlib" RTT service
 similarly to the following:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Imports</span>
-<span class="k">import</span><span class="p">(</span><span class="s">"rtt_ros"</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">## Imports
+</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_ros"</span><span class="p">);</span>
 <span class="n">ros</span><span class="o">.</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_actionlib"</span><span class="p">);</span>
 
-<span class="c">## Load some application-specific component</span>
-<span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
+<span class="c1">## Load some application-specific component
+</span><span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
 
-<span class="c">## Load the actionlib service</span>
-<span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"actionlib"</span><span class="p">)</span>
+<span class="c1">## Load the actionlib service
+</span><span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"actionlib"</span><span class="p">)</span>
 
-<span class="c">## Connect an actionlib interface to the task's root service</span>
-<span class="c">## This requires that the following ports exist with directions (server/client):</span>
-<span class="c">##  some_component_name._action_goal (in/out)</span>
-<span class="c">##  some_component_name._action_cancel (in/out)</span>
-<span class="c">##  some_component_name._action_status (out/in)</span>
-<span class="c">##  some_component_name._action_result (out/in)</span>
-<span class="c">##  some_component_name._action_feedback (out/in)</span>
-<span class="c">## These ports can be created by the RTTActionServer or RTTActionClient.</span>
-
+<span class="c1">## Connect an actionlib interface to the task's root service
+## This requires that the following ports exist with directions (server/client):
+##  some_component_name._action_goal (in/out)
+##  some_component_name._action_cancel (in/out)
+##  some_component_name._action_status (out/in)
+##  some_component_name._action_result (out/in)
+##  some_component_name._action_feedback (out/in)
+## These ports can be created by the RTTActionServer or RTTActionClient.
+</span>
 <span class="n">some_component_name</span><span class="o">.</span><span class="n">actionlib</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">"/some/ros/namespace/my_action"</span><span class="p">)</span>
 
-<span class="c">## Alternatively, connect an actionlib interface to a provided sub-service:</span>
-
+<span class="c1">## Alternatively, connect an actionlib interface to a provided sub-service:
+</span>
 <span class="n">some_component_name</span><span class="o">.</span><span class="n">actionlib</span><span class="o">.</span><span class="n">connectSub</span><span class="p">(</span>
   <span class="s">"some_prov.ided_service"</span><span class="p">,</span>
   <span class="s">"/some/ros/namespace/my_other_action"</span><span class="p">)</span>
@@ -1005,34 +1001,7 @@ types can be bound to an actionlib service</li>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-rtt_actionlib">Changelog for package rtt_actionlib</h1>
-
-<h2 id="2-9-1-2017-11-16">2.9.1 (2017-11-16)</h2>
-
-<h2 id="2-9-0-2017-05-02">2.9.0 (2017-05-02)</h2>
-
-<ul>
-<li>  Added deprecation warning for header rtt_roscomm/rtt_rostopic.h
-and updated some include directives within rtt_ros_integration</li>
-<li>  Added individual changelogs and bumped versions to 2.9.0</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="2-8-6-2017-11-15">2.8.6 (2017-11-15)</h2>
-
-<h2 id="2-8-5-2017-03-28">2.8.5 (2017-03-28)</h2>
-
-<h2 id="2-8-4-2016-11-26">2.8.4 (2016-11-26)</h2>
-
-<h2 id="2-8-3-2016-07-20">2.8.3 (2016-07-20)</h2>
-
-<h2 id="2-8-2-2015-06-12">2.8.2 (2015-06-12)</h2>
-
-<ul>
-<li>  see
-<a href="../rtt_ros_integration/CHANGELOG.rst">rtt_ros_integratoin/CHANGELOG.rst</a>
-</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2055,29 +2024,29 @@ interface to a given compnent, you could do something similar to the following:<
 <p>Second, the ports need to be connected to ROS topics. This can either be done
 in C++ with hard-coded action topic names, or with the "actionlib" RTT service
 similarly to the following:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Imports</span>
-<span class="k">import</span><span class="p">(</span><span class="s">"rtt_ros"</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">## Imports
+</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_ros"</span><span class="p">);</span>
 <span class="n">ros</span><span class="o">.</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_actionlib"</span><span class="p">);</span>
 
-<span class="c">## Load some application-specific component</span>
-<span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
+<span class="c1">## Load some application-specific component
+</span><span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
 
-<span class="c">## Load the actionlib service</span>
-<span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"actionlib"</span><span class="p">)</span>
+<span class="c1">## Load the actionlib service
+</span><span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"actionlib"</span><span class="p">)</span>
 
-<span class="c">## Connect an actionlib interface to the task's root service</span>
-<span class="c">## This requires that the following ports exist with directions (server/client):</span>
-<span class="c">##  some_component_name._action_goal (in/out)</span>
-<span class="c">##  some_component_name._action_cancel (in/out)</span>
-<span class="c">##  some_component_name._action_status (out/in)</span>
-<span class="c">##  some_component_name._action_result (out/in)</span>
-<span class="c">##  some_component_name._action_feedback (out/in)</span>
-<span class="c">## These ports can be created by the RTTActionServer or RTTActionClient.</span>
-
+<span class="c1">## Connect an actionlib interface to the task's root service
+## This requires that the following ports exist with directions (server/client):
+##  some_component_name._action_goal (in/out)
+##  some_component_name._action_cancel (in/out)
+##  some_component_name._action_status (out/in)
+##  some_component_name._action_result (out/in)
+##  some_component_name._action_feedback (out/in)
+## These ports can be created by the RTTActionServer or RTTActionClient.
+</span>
 <span class="n">some_component_name</span><span class="o">.</span><span class="n">actionlib</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">"/some/ros/namespace/my_action"</span><span class="p">)</span>
 
-<span class="c">## Alternatively, connect an actionlib interface to a provided sub-service:</span>
-
+<span class="c1">## Alternatively, connect an actionlib interface to a provided sub-service:
+</span>
 <span class="n">some_component_name</span><span class="o">.</span><span class="n">actionlib</span><span class="o">.</span><span class="n">connectSub</span><span class="p">(</span>
   <span class="s">"some_prov.ided_service"</span><span class="p">,</span>
   <span class="s">"/some/ros/namespace/my_other_action"</span><span class="p">)</span>
@@ -2193,34 +2162,7 @@ types can be bound to an actionlib service</li>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-rtt_actionlib">Changelog for package rtt_actionlib</h1>
-
-<h2 id="2-9-1-2017-11-16">2.9.1 (2017-11-16)</h2>
-
-<h2 id="2-9-0-2017-05-02">2.9.0 (2017-05-02)</h2>
-
-<ul>
-<li>  Added deprecation warning for header rtt_roscomm/rtt_rostopic.h
-and updated some include directives within rtt_ros_integration</li>
-<li>  Added individual changelogs and bumped versions to 2.9.0</li>
-<li>  Contributors: Johannes Meyer</li>
-</ul>
-
-<h2 id="2-8-6-2017-11-15">2.8.6 (2017-11-15)</h2>
-
-<h2 id="2-8-5-2017-03-28">2.8.5 (2017-03-28)</h2>
-
-<h2 id="2-8-4-2016-11-26">2.8.4 (2016-11-26)</h2>
-
-<h2 id="2-8-3-2016-07-20">2.8.3 (2016-07-20)</h2>
-
-<h2 id="2-8-2-2015-06-12">2.8.2 (2015-06-12)</h2>
-
-<ul>
-<li>  see
-<a href="../rtt_ros_integration/CHANGELOG.rst">rtt_ros_integratoin/CHANGELOG.rst</a>
-</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3235,29 +3177,29 @@ interface to a given compnent, you could do something similar to the following:<
 <p>Second, the ports need to be connected to ROS topics. This can either be done
 in C++ with hard-coded action topic names, or with the "actionlib" RTT service
 similarly to the following:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Imports</span>
-<span class="k">import</span><span class="p">(</span><span class="s">"rtt_ros"</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">## Imports
+</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_ros"</span><span class="p">);</span>
 <span class="n">ros</span><span class="o">.</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_actionlib"</span><span class="p">);</span>
 
-<span class="c">## Load some application-specific component</span>
-<span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
+<span class="c1">## Load some application-specific component
+</span><span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
 
-<span class="c">## Load the actionlib service</span>
-<span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"actionlib"</span><span class="p">)</span>
+<span class="c1">## Load the actionlib service
+</span><span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"actionlib"</span><span class="p">)</span>
 
-<span class="c">## Connect an actionlib interface to the task's root service</span>
-<span class="c">## This requires that the following ports exist with directions (server/client):</span>
-<span class="c">##  some_component_name._action_goal (in/out)</span>
-<span class="c">##  some_component_name._action_cancel (in/out)</span>
-<span class="c">##  some_component_name._action_status (out/in)</span>
-<span class="c">##  some_component_name._action_result (out/in)</span>
-<span class="c">##  some_component_name._action_feedback (out/in)</span>
-<span class="c">## These ports can be created by the RTTActionServer or RTTActionClient.</span>
-
+<span class="c1">## Connect an actionlib interface to the task's root service
+## This requires that the following ports exist with directions (server/client):
+##  some_component_name._action_goal (in/out)
+##  some_component_name._action_cancel (in/out)
+##  some_component_name._action_status (out/in)
+##  some_component_name._action_result (out/in)
+##  some_component_name._action_feedback (out/in)
+## These ports can be created by the RTTActionServer or RTTActionClient.
+</span>
 <span class="n">some_component_name</span><span class="o">.</span><span class="n">actionlib</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">"/some/ros/namespace/my_action"</span><span class="p">)</span>
 
-<span class="c">## Alternatively, connect an actionlib interface to a provided sub-service:</span>
-
+<span class="c1">## Alternatively, connect an actionlib interface to a provided sub-service:
+</span>
 <span class="n">some_component_name</span><span class="o">.</span><span class="n">actionlib</span><span class="o">.</span><span class="n">connectSub</span><span class="p">(</span>
   <span class="s">"some_prov.ided_service"</span><span class="p">,</span>
   <span class="s">"/some/ros/namespace/my_other_action"</span><span class="p">)</span>
@@ -3289,23 +3231,7 @@ types can be bound to an actionlib service</li>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-rtt_actionlib">Changelog for package rtt_actionlib</h1>
-
-<h2 id="2-8-6-2017-11-15">2.8.6 (2017-11-15)</h2>
-
-<h2 id="2-8-5-2017-03-28">2.8.5 (2017-03-28)</h2>
-
-<h2 id="2-8-4-2016-11-26">2.8.4 (2016-11-26)</h2>
-
-<h2 id="2-8-3-2016-07-20">2.8.3 (2016-07-20)</h2>
-
-<h2 id="2-8-2-2015-06-12">2.8.2 (2015-06-12)</h2>
-
-<ul>
-<li>  see
-<a href="../rtt_ros_integration/CHANGELOG.rst">rtt_ros_integratoin/CHANGELOG.rst</a>
-</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -4328,29 +4254,29 @@ interface to a given compnent, you could do something similar to the following:<
 <p>Second, the ports need to be connected to ROS topics. This can either be done
 in C++ with hard-coded action topic names, or with the "actionlib" RTT service
 similarly to the following:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Imports</span>
-<span class="k">import</span><span class="p">(</span><span class="s">"rtt_ros"</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">## Imports
+</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_ros"</span><span class="p">);</span>
 <span class="n">ros</span><span class="o">.</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_actionlib"</span><span class="p">);</span>
 
-<span class="c">## Load some application-specific component</span>
-<span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
+<span class="c1">## Load some application-specific component
+</span><span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
 
-<span class="c">## Load the actionlib service</span>
-<span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"actionlib"</span><span class="p">)</span>
+<span class="c1">## Load the actionlib service
+</span><span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"actionlib"</span><span class="p">)</span>
 
-<span class="c">## Connect an actionlib interface to the task's root service</span>
-<span class="c">## This requires that the following ports exist with directions (server/client):</span>
-<span class="c">##  some_component_name._action_goal (in/out)</span>
-<span class="c">##  some_component_name._action_cancel (in/out)</span>
-<span class="c">##  some_component_name._action_status (out/in)</span>
-<span class="c">##  some_component_name._action_result (out/in)</span>
-<span class="c">##  some_component_name._action_feedback (out/in)</span>
-<span class="c">## These ports can be created by the RTTActionServer or RTTActionClient.</span>
-
+<span class="c1">## Connect an actionlib interface to the task's root service
+## This requires that the following ports exist with directions (server/client):
+##  some_component_name._action_goal (in/out)
+##  some_component_name._action_cancel (in/out)
+##  some_component_name._action_status (out/in)
+##  some_component_name._action_result (out/in)
+##  some_component_name._action_feedback (out/in)
+## These ports can be created by the RTTActionServer or RTTActionClient.
+</span>
 <span class="n">some_component_name</span><span class="o">.</span><span class="n">actionlib</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">"/some/ros/namespace/my_action"</span><span class="p">)</span>
 
-<span class="c">## Alternatively, connect an actionlib interface to a provided sub-service:</span>
-
+<span class="c1">## Alternatively, connect an actionlib interface to a provided sub-service:
+</span>
 <span class="n">some_component_name</span><span class="o">.</span><span class="n">actionlib</span><span class="o">.</span><span class="n">connectSub</span><span class="p">(</span>
   <span class="s">"some_prov.ided_service"</span><span class="p">,</span>
   <span class="s">"/some/ros/namespace/my_other_action"</span><span class="p">)</span>
@@ -4382,23 +4308,7 @@ types can be bound to an actionlib service</li>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-rtt_actionlib">Changelog for package rtt_actionlib</h1>
-
-<h2 id="2-8-6-2017-11-15">2.8.6 (2017-11-15)</h2>
-
-<h2 id="2-8-5-2017-03-28">2.8.5 (2017-03-28)</h2>
-
-<h2 id="2-8-4-2016-11-26">2.8.4 (2016-11-26)</h2>
-
-<h2 id="2-8-3-2016-07-20">2.8.3 (2016-07-20)</h2>
-
-<h2 id="2-8-2-2015-06-12">2.8.2 (2015-06-12)</h2>
-
-<ul>
-<li>  see
-<a href="../rtt_ros_integration/CHANGELOG.rst">rtt_ros_integratoin/CHANGELOG.rst</a>
-</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -5413,29 +5323,29 @@ interface to a given compnent, you could do something similar to the following:<
 <p>Second, the ports need to be connected to ROS topics. This can either be done
 in C++ with hard-coded action topic names, or with the "actionlib" RTT service
 similarly to the following:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Imports</span>
-<span class="k">import</span><span class="p">(</span><span class="s">"rtt_ros"</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">## Imports
+</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_ros"</span><span class="p">);</span>
 <span class="n">ros</span><span class="o">.</span><span class="k">import</span><span class="p">(</span><span class="s">"rtt_actionlib"</span><span class="p">);</span>
 
-<span class="c">## Load some application-specific component</span>
-<span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
+<span class="c1">## Load some application-specific component
+</span><span class="n">loadComponent</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"some_component_package::SomeComponent"</span><span class="p">)</span>
 
-<span class="c">## Load the actionlib service</span>
-<span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"actionlib"</span><span class="p">)</span>
+<span class="c1">## Load the actionlib service
+</span><span class="n">loadService</span><span class="p">(</span><span class="s">"some_component_name"</span><span class="p">,</span><span class="s">"actionlib"</span><span class="p">)</span>
 
-<span class="c">## Connect an actionlib interface to the task's root service</span>
-<span class="c">## This requires that the following ports exist with directions (server/client):</span>
-<span class="c">##  some_component_name._action_goal (in/out)</span>
-<span class="c">##  some_component_name._action_cancel (in/out)</span>
-<span class="c">##  some_component_name._action_status (out/in)</span>
-<span class="c">##  some_component_name._action_result (out/in)</span>
-<span class="c">##  some_component_name._action_feedback (out/in)</span>
-<span class="c">## These ports can be created by the RTTActionServer or RTTActionClient.</span>
-
+<span class="c1">## Connect an actionlib interface to the task's root service
+## This requires that the following ports exist with directions (server/client):
+##  some_component_name._action_goal (in/out)
+##  some_component_name._action_cancel (in/out)
+##  some_component_name._action_status (out/in)
+##  some_component_name._action_result (out/in)
+##  some_component_name._action_feedback (out/in)
+## These ports can be created by the RTTActionServer or RTTActionClient.
+</span>
 <span class="n">some_component_name</span><span class="o">.</span><span class="n">actionlib</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">"/some/ros/namespace/my_action"</span><span class="p">)</span>
 
-<span class="c">## Alternatively, connect an actionlib interface to a provided sub-service:</span>
-
+<span class="c1">## Alternatively, connect an actionlib interface to a provided sub-service:
+</span>
 <span class="n">some_component_name</span><span class="o">.</span><span class="n">actionlib</span><span class="o">.</span><span class="n">connectSub</span><span class="p">(</span>
   <span class="s">"some_prov.ided_service"</span><span class="p">,</span>
   <span class="s">"/some/ros/namespace/my_other_action"</span><span class="p">)</span>
@@ -5927,7 +5837,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

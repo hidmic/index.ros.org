@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -469,7 +465,7 @@ dynamixel_tutorials
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-02-21
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-02-20
         </span>
       </td>
     </tr>
@@ -573,52 +569,7 @@ dynamixel_tutorials
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-dynamixel_driver">Changelog for package dynamixel_driver</h1>
-
-<h2 id="0-4-1-2017-01-19">0.4.1 (2017-01-19)</h2>
-
-<ul>
-<li>  Don't set return delay time if value is invalid</li>
-<li>  Fix typo valie -&gt; valid</li>
-<li>  Add EX-106, rename EX-106+ accordingly (Fixes
-<a href="https://github.com/arebgun/dynamixel_motor/issues/60">#60</a>)</li>
-<li>  Merge pull request
-<a href="https://github.com/arebgun/dynamixel_motor/issues/49">#49</a> from
-anuragmakineni/master remove Serial set/get functions from
-dynamixel_io</li>
-<li>  Update dynamixel_io.py In set_p_gain, set_i_gain, set_d_gain,
-small spelling mistake. Instead of 'slope', it should be
-p/i/d_gain, since slope is not defined for the given function.</li>
-<li>  remove deprecated functions from dynamixel_io</li>
-<li>  bug fixes for issue
-<a href="https://github.com/arebgun/dynamixel_motor/issues/33">#33</a> and
-warnnings on queue_size</li>
-<li>  Adds couple of methods for LED status fetching and changing.</li>
-<li>  Catch occurancies when error_code is parsed as float</li>
-<li>  added in a queue size as none to remove warning messages</li>
-<li>  Readback echo for simple one-wire (TTL) converters</li>
-<li>  Support for reading current, setting acceleration, torque control
-mode (mainly MX series). Available features specified for
-each model.</li>
-<li>  New model MX-12W</li>
-<li>  fix typo ;; min -&gt; max</li>
-<li>  Fix bug in velocity conversion The factor for the velocity
-conversion from raw to radsec and the other way round is
-model-specific and does not depend on the maximum motor speed.
-Therefore, a conversion factor is added to the motor data and
-employed for all velocity conversions. The set motor velocity and
-the motor velocity in the servo state does now correspond with the
-real servo speed in radians per second.</li>
-<li>  Contributors: Andreas Wachaja, Antons Rebguns, Anurag Makineni,
-Gabrielius Mickevicius, Nicolas Alt, Russell Toris, Stefan
-Kohlbrecher, Yam Geva, Zilvinas, nozawa, parijat10, pazeshun</li>
-</ul>
-
-<h2 id="0-4-0-2013-07-26">0.4.0 (2013-07-26)</h2>
-
-<ul>
-<li>  stack is now catkin compatible</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1159,7 +1110,7 @@ dynamixel_tutorials
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-02-21
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-02-20
         </span>
       </td>
     </tr>
@@ -1263,52 +1214,7 @@ dynamixel_tutorials
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-dynamixel_driver">Changelog for package dynamixel_driver</h1>
-
-<h2 id="0-4-1-2017-01-19">0.4.1 (2017-01-19)</h2>
-
-<ul>
-<li>  Don't set return delay time if value is invalid</li>
-<li>  Fix typo valie -&gt; valid</li>
-<li>  Add EX-106, rename EX-106+ accordingly (Fixes
-<a href="https://github.com/arebgun/dynamixel_motor/issues/60">#60</a>)</li>
-<li>  Merge pull request
-<a href="https://github.com/arebgun/dynamixel_motor/issues/49">#49</a> from
-anuragmakineni/master remove Serial set/get functions from
-dynamixel_io</li>
-<li>  Update dynamixel_io.py In set_p_gain, set_i_gain, set_d_gain,
-small spelling mistake. Instead of 'slope', it should be
-p/i/d_gain, since slope is not defined for the given function.</li>
-<li>  remove deprecated functions from dynamixel_io</li>
-<li>  bug fixes for issue
-<a href="https://github.com/arebgun/dynamixel_motor/issues/33">#33</a> and
-warnnings on queue_size</li>
-<li>  Adds couple of methods for LED status fetching and changing.</li>
-<li>  Catch occurancies when error_code is parsed as float</li>
-<li>  added in a queue size as none to remove warning messages</li>
-<li>  Readback echo for simple one-wire (TTL) converters</li>
-<li>  Support for reading current, setting acceleration, torque control
-mode (mainly MX series). Available features specified for
-each model.</li>
-<li>  New model MX-12W</li>
-<li>  fix typo ;; min -&gt; max</li>
-<li>  Fix bug in velocity conversion The factor for the velocity
-conversion from raw to radsec and the other way round is
-model-specific and does not depend on the maximum motor speed.
-Therefore, a conversion factor is added to the motor data and
-employed for all velocity conversions. The set motor velocity and
-the motor velocity in the servo state does now correspond with the
-real servo speed in radians per second.</li>
-<li>  Contributors: Andreas Wachaja, Antons Rebguns, Anurag Makineni,
-Gabrielius Mickevicius, Nicolas Alt, Russell Toris, Stefan
-Kohlbrecher, Yam Geva, Zilvinas, nozawa, parijat10, pazeshun</li>
-</ul>
-
-<h2 id="0-4-0-2013-07-26">0.4.0 (2013-07-26)</h2>
-
-<ul>
-<li>  stack is now catkin compatible</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1871,7 +1777,7 @@ dynamixel_tutorials
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-02-21
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-02-20
         </span>
       </td>
     </tr>
@@ -1975,52 +1881,7 @@ dynamixel_tutorials
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-dynamixel_driver">Changelog for package dynamixel_driver</h1>
-
-<h2 id="0-4-1-2017-01-19">0.4.1 (2017-01-19)</h2>
-
-<ul>
-<li>  Don't set return delay time if value is invalid</li>
-<li>  Fix typo valie -&gt; valid</li>
-<li>  Add EX-106, rename EX-106+ accordingly (Fixes
-<a href="https://github.com/arebgun/dynamixel_motor/issues/60">#60</a>)</li>
-<li>  Merge pull request
-<a href="https://github.com/arebgun/dynamixel_motor/issues/49">#49</a> from
-anuragmakineni/master remove Serial set/get functions from
-dynamixel_io</li>
-<li>  Update dynamixel_io.py In set_p_gain, set_i_gain, set_d_gain,
-small spelling mistake. Instead of 'slope', it should be
-p/i/d_gain, since slope is not defined for the given function.</li>
-<li>  remove deprecated functions from dynamixel_io</li>
-<li>  bug fixes for issue
-<a href="https://github.com/arebgun/dynamixel_motor/issues/33">#33</a> and
-warnnings on queue_size</li>
-<li>  Adds couple of methods for LED status fetching and changing.</li>
-<li>  Catch occurancies when error_code is parsed as float</li>
-<li>  added in a queue size as none to remove warning messages</li>
-<li>  Readback echo for simple one-wire (TTL) converters</li>
-<li>  Support for reading current, setting acceleration, torque control
-mode (mainly MX series). Available features specified for
-each model.</li>
-<li>  New model MX-12W</li>
-<li>  fix typo ;; min -&gt; max</li>
-<li>  Fix bug in velocity conversion The factor for the velocity
-conversion from raw to radsec and the other way round is
-model-specific and does not depend on the maximum motor speed.
-Therefore, a conversion factor is added to the motor data and
-employed for all velocity conversions. The set motor velocity and
-the motor velocity in the servo state does now correspond with the
-real servo speed in radians per second.</li>
-<li>  Contributors: Andreas Wachaja, Antons Rebguns, Anurag Makineni,
-Gabrielius Mickevicius, Nicolas Alt, Russell Toris, Stefan
-Kohlbrecher, Yam Geva, Zilvinas, nozawa, parijat10, pazeshun</li>
-</ul>
-
-<h2 id="0-4-0-2013-07-26">0.4.0 (2013-07-26)</h2>
-
-<ul>
-<li>  stack is now catkin compatible</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2561,7 +2422,7 @@ dynamixel_tutorials
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-02-21
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-02-20
         </span>
       </td>
     </tr>
@@ -2665,52 +2526,7 @@ dynamixel_tutorials
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-dynamixel_driver">Changelog for package dynamixel_driver</h1>
-
-<h2 id="0-4-1-2017-01-19">0.4.1 (2017-01-19)</h2>
-
-<ul>
-<li>  Don't set return delay time if value is invalid</li>
-<li>  Fix typo valie -&gt; valid</li>
-<li>  Add EX-106, rename EX-106+ accordingly (Fixes
-<a href="https://github.com/arebgun/dynamixel_motor/issues/60">#60</a>)</li>
-<li>  Merge pull request
-<a href="https://github.com/arebgun/dynamixel_motor/issues/49">#49</a> from
-anuragmakineni/master remove Serial set/get functions from
-dynamixel_io</li>
-<li>  Update dynamixel_io.py In set_p_gain, set_i_gain, set_d_gain,
-small spelling mistake. Instead of 'slope', it should be
-p/i/d_gain, since slope is not defined for the given function.</li>
-<li>  remove deprecated functions from dynamixel_io</li>
-<li>  bug fixes for issue
-<a href="https://github.com/arebgun/dynamixel_motor/issues/33">#33</a> and
-warnnings on queue_size</li>
-<li>  Adds couple of methods for LED status fetching and changing.</li>
-<li>  Catch occurancies when error_code is parsed as float</li>
-<li>  added in a queue size as none to remove warning messages</li>
-<li>  Readback echo for simple one-wire (TTL) converters</li>
-<li>  Support for reading current, setting acceleration, torque control
-mode (mainly MX series). Available features specified for
-each model.</li>
-<li>  New model MX-12W</li>
-<li>  fix typo ;; min -&gt; max</li>
-<li>  Fix bug in velocity conversion The factor for the velocity
-conversion from raw to radsec and the other way round is
-model-specific and does not depend on the maximum motor speed.
-Therefore, a conversion factor is added to the motor data and
-employed for all velocity conversions. The set motor velocity and
-the motor velocity in the servo state does now correspond with the
-real servo speed in radians per second.</li>
-<li>  Contributors: Andreas Wachaja, Antons Rebguns, Anurag Makineni,
-Gabrielius Mickevicius, Nicolas Alt, Russell Toris, Stefan
-Kohlbrecher, Yam Geva, Zilvinas, nozawa, parijat10, pazeshun</li>
-</ul>
-
-<h2 id="0-4-0-2013-07-26">0.4.0 (2013-07-26)</h2>
-
-<ul>
-<li>  stack is now catkin compatible</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3050,7 +2866,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

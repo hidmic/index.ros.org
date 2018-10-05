@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -547,124 +543,7 @@ fetch_gazebo_demo
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-fetch_gazebo">Changelog for package fetch_gazebo</h1>
-
-<h2 id="0-7-1-2016-02-27">0.7.1 (2016-02-27)</h2>
-
-<ul>
-<li>  robot launch files publish base_scan_raw</li>
-<li>  working version of the merged demos</li>
-<li>  Contributors: Di Sun, Andrew Vaziri</li>
-</ul>
-
-<h2 id="0-7-0-2015-11-04">0.7.0 (2015-11-04)</h2>
-
-<ul>
-<li>  add run depend on gazebo_plugins</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="0-6-2-2015-09-13">0.6.2 (2015-09-13)</h2>
-
-<ul>
-<li>  Fixed number of samples for the laser scanner Real laser scan has
-662 samples</li>
-<li>  Update test_zone.sdf, had two &lt;/world&gt; tag</li>
-<li>  Contributors: Alex Henning, Kei Okada</li>
-</ul>
-
-<h2 id="0-6-1-2015-06-28">0.6.1 (2015-06-28)</h2>
-
-<ul>
-<li>  add headless argument to launch files</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="0-6-0-2015-06-24">0.6.0 (2015-06-24)</h2>
-
-<ul>
-<li>  add check to prevent running prepare script on a real robot</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="0-5-1-2015-06-23">0.5.1 (2015-06-23)</h2>
-
-<ul>
-<li>  forget install models</li>
-<li>  Contributors: Kei Okada</li>
-</ul>
-
-<h2 id="0-5-0-2015-06-13">0.5.0 (2015-06-13)</h2>
-
-<ul>
-<li>  apply filter to velocity</li>
-<li>
-<p>implement servo loop</p>
-
-<ul>
-<li>  position wraps velocity controller</li>
-<li>  velocity limits are now loaded for continuous joints</li>
-</ul>
-
-<p>* retuned all but base motors</p>
-</li>
-<li><p>Contributors: Michael Ferguson</p></li>
-</ul>
-
-<h2 id="0-4-4-2015-06-12">0.4.4 (2015-06-12)</h2>
-
-<ul>
-<li>  use centering controller for gripper</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="0-4-3-2015-06-10">0.4.3 (2015-06-10)</h2>
-
-<ul>
-<li>  base_link collision mesh is updated, fix laser min range</li>
-<li>  Change retrieval of effort limits/continuous state from parameters
-to URDF</li>
-<li>  Contributors: Michael Ferguson, Michael Hwang</li>
-</ul>
-
-<h2 id="0-4-2-2015-06-06">0.4.2 (2015-06-06)</h2>
-
-<ul>
-<li>  fix install</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="0-4-1-2015-06-05">0.4.1 (2015-06-05)</h2>
-
-<h2 id="0-4-0-2015-06-05">0.4.0 (2015-06-05)</h2>
-
-<ul>
-<li>  split demos into separate package</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="0-3-2-2015-06-04">0.3.2 (2015-06-04)</h2>
-
-<ul>
-<li>  add depend on angles</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="0-3-1-2015-06-03">0.3.1 (2015-06-03)</h2>
-
-<ul>
-<li>  add simulation model for freight</li>
-<li>  add navigation configuration for simulated env</li>
-<li>  update for timer-based base controller</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="0-3-0-2015-06-03">0.3.0 (2015-06-03)</h2>
-
-<ul>
-<li>  init from preview repo</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1074,7 +953,7 @@ to URDF</li>
         
           <ul>
             
-              <li><a href="https://github.com/fetchrobotics/fetch_gazebo/blob/gazebo2/fetch_gazebo/launch/pickplace_playground.launch" target="_blank">launch/pickplace_playground.launch</a>
+              <li><a href="https://github.com/fetchrobotics/fetch_gazebo/blob/gazebo2/fetch_gazebo/launch/simulation.launch" target="_blank">launch/simulation.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1096,8 +975,6 @@ to URDF</li>
                       
                         
                           <li><strong>headless</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
                         
                       
                         
@@ -1156,7 +1033,7 @@ to URDF</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/fetchrobotics/fetch_gazebo/blob/gazebo2/fetch_gazebo/launch/simulation.launch" target="_blank">launch/simulation.launch</a>
+              <li><a href="https://github.com/fetchrobotics/fetch_gazebo/blob/gazebo2/fetch_gazebo/launch/pickplace_playground.launch" target="_blank">launch/pickplace_playground.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1185,23 +1062,6 @@ to URDF</li>
                         
                       
                         
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/fetchrobotics/fetch_gazebo/blob/gazebo2/fetch_gazebo/launch/include/head_camera.launch.xml" target="_blank">launch/include/head_camera.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
                       
                         
                       
@@ -1265,6 +1125,25 @@ to URDF</li>
                       
                         
                           <li><strong>yaw</strong> <em>&#91;default: 0.0&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/fetchrobotics/fetch_gazebo/blob/gazebo2/fetch_gazebo/launch/include/head_camera.launch.xml" target="_blank">launch/include/head_camera.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                      
                         
                       
                     </ul>
@@ -1745,132 +1624,7 @@ fetch_gazebo_demo
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-fetch_gazebo">Changelog for package fetch_gazebo</h1>
-
-<h2 id="0-8-0-2016-12-27">0.8.0 (2016-12-27)</h2>
-
-<ul>
-<li>  update rosdeps for gazebo5</li>
-<li>  add arg z/yaw for spawning robot</li>
-<li>  Contributors: Michael Ferguson, Yuki Furuta</li>
-</ul>
-
-<h2 id="0-7-1-2016-02-27">0.7.1 (2016-02-27)</h2>
-
-<ul>
-<li>  robot launch files publish base_scan_raw</li>
-<li>  working version of the merged demos</li>
-<li>  Contributors: Di Sun, Andrew Vaziri</li>
-</ul>
-
-<h2 id="0-7-0-2015-11-04">0.7.0 (2015-11-04)</h2>
-
-<ul>
-<li>  add run depend on gazebo_plugins</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="0-6-2-2015-09-13">0.6.2 (2015-09-13)</h2>
-
-<ul>
-<li>  Fixed number of samples for the laser scanner Real laser scan has
-662 samples</li>
-<li>  Update test_zone.sdf, had two &lt;/world&gt; tag</li>
-<li>  Contributors: Alex Henning, Kei Okada</li>
-</ul>
-
-<h2 id="0-6-1-2015-06-28">0.6.1 (2015-06-28)</h2>
-
-<ul>
-<li>  add headless argument to launch files</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="0-6-0-2015-06-24">0.6.0 (2015-06-24)</h2>
-
-<ul>
-<li>  add check to prevent running prepare script on a real robot</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="0-5-1-2015-06-23">0.5.1 (2015-06-23)</h2>
-
-<ul>
-<li>  forget install models</li>
-<li>  Contributors: Kei Okada</li>
-</ul>
-
-<h2 id="0-5-0-2015-06-13">0.5.0 (2015-06-13)</h2>
-
-<ul>
-<li>  apply filter to velocity</li>
-<li>
-<p>implement servo loop</p>
-
-<ul>
-<li>  position wraps velocity controller</li>
-<li>  velocity limits are now loaded for continuous joints</li>
-</ul>
-
-<p>* retuned all but base motors</p>
-</li>
-<li><p>Contributors: Michael Ferguson</p></li>
-</ul>
-
-<h2 id="0-4-4-2015-06-12">0.4.4 (2015-06-12)</h2>
-
-<ul>
-<li>  use centering controller for gripper</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="0-4-3-2015-06-10">0.4.3 (2015-06-10)</h2>
-
-<ul>
-<li>  base_link collision mesh is updated, fix laser min range</li>
-<li>  Change retrieval of effort limits/continuous state from parameters
-to URDF</li>
-<li>  Contributors: Michael Ferguson, Michael Hwang</li>
-</ul>
-
-<h2 id="0-4-2-2015-06-06">0.4.2 (2015-06-06)</h2>
-
-<ul>
-<li>  fix install</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="0-4-1-2015-06-05">0.4.1 (2015-06-05)</h2>
-
-<h2 id="0-4-0-2015-06-05">0.4.0 (2015-06-05)</h2>
-
-<ul>
-<li>  split demos into separate package</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="0-3-2-2015-06-04">0.3.2 (2015-06-04)</h2>
-
-<ul>
-<li>  add depend on angles</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="0-3-1-2015-06-03">0.3.1 (2015-06-03)</h2>
-
-<ul>
-<li>  add simulation model for freight</li>
-<li>  add navigation configuration for simulated env</li>
-<li>  update for timer-based base controller</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
-
-<h2 id="0-3-0-2015-06-03">0.3.0 (2015-06-03)</h2>
-
-<ul>
-<li>  init from preview repo</li>
-<li>  Contributors: Michael Ferguson</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2299,7 +2053,7 @@ to URDF</li>
         
           <ul>
             
-              <li><a href="https://github.com/fetchrobotics/fetch_gazebo/blob/gazebo5/fetch_gazebo/launch/pickplace_playground.launch" target="_blank">launch/pickplace_playground.launch</a>
+              <li><a href="https://github.com/fetchrobotics/fetch_gazebo/blob/gazebo5/fetch_gazebo/launch/simulation.launch" target="_blank">launch/simulation.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2321,8 +2075,6 @@ to URDF</li>
                       
                         
                           <li><strong>headless</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
                         
                       
                         
@@ -2381,7 +2133,7 @@ to URDF</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/fetchrobotics/fetch_gazebo/blob/gazebo5/fetch_gazebo/launch/simulation.launch" target="_blank">launch/simulation.launch</a>
+              <li><a href="https://github.com/fetchrobotics/fetch_gazebo/blob/gazebo5/fetch_gazebo/launch/pickplace_playground.launch" target="_blank">launch/pickplace_playground.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2410,23 +2162,6 @@ to URDF</li>
                         
                       
                         
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/fetchrobotics/fetch_gazebo/blob/gazebo5/fetch_gazebo/launch/include/head_camera.launch.xml" target="_blank">launch/include/head_camera.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
                       
                         
                       
@@ -2490,6 +2225,25 @@ to URDF</li>
                       
                         
                           <li><strong>yaw</strong> <em>&#91;default: 0.0&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/fetchrobotics/fetch_gazebo/blob/gazebo5/fetch_gazebo/launch/include/head_camera.launch.xml" target="_blank">launch/include/head_camera.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                      
                         
                       
                     </ul>
@@ -2699,7 +2453,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

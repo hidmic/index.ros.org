@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -721,81 +717,7 @@ utexas_gdc
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-bwi_gazebo_entities">Changelog for package bwi_gazebo_entities</h1>
-
-<h2 id="0-3-12-2016-09-14">0.3.12 (2016-09-14)</h2>
-
-<h2 id="0-3-11-2016-08-27">0.3.11 (2016-08-27)</h2>
-
-<h2 id="0-3-10-2016-08-15">0.3.10 (2016-08-15)</h2>
-
-<h2 id="0-3-9-2016-08-05">0.3.9 (2016-08-05)</h2>
-
-<h2 id="0-3-8-2016-06-06">0.3.8 (2016-06-06)</h2>
-
-<ul>
-<li>  merged with yuqian branch.</li>
-<li>  Contributors: Piyush Khandelwal</li>
-</ul>
-
-<h2 id="0-3-7-2015-09-22">0.3.7 (2015-09-22)</h2>
-
-<h2 id="0-3-6-2015-08-25">0.3.6 (2015-08-25)</h2>
-
-<h2 id="0-3-5-2015-08-22">0.3.5 (2015-08-22)</h2>
-
-<h2 id="0-3-4-2015-08-19">0.3.4 (2015-08-19)</h2>
-
-<h2 id="0-3-3-2015-08-05">0.3.3 (2015-08-05)</h2>
-
-<ul>
-<li>  allow setting yaw for controllable person. also run atrium
-simulation in real time.</li>
-<li>  changed position of camera, camera fov, and color of person in
-gazebo</li>
-<li>  Contributors: Piyush Khandelwal</li>
-</ul>
-
-<h2 id="0-3-2-2015-03-24">0.3.2 (2015-03-24)</h2>
-
-<h2 id="0-3-1-2015-03-16">0.3.1 (2015-03-16)</h2>
-
-<h2 id="0-3-0-2015-03-15">0.3.0 (2015-03-15)</h2>
-
-<ul>
-<li>  Fixed catkin lint errors.</li>
-<li>  Contributors: Jack O'Quin</li>
-</ul>
-
-<h2 id="0-2-4-2014-04-29">0.2.4 (2014-04-29)</h2>
-
-<ul>
-<li>  cleaned up most catkin_lint warnings. closes
-<a href="https://github.com/utexas-bwi/bwi_common/issues/6">#6</a>
-</li>
-<li>  it is now necessary to specify noise for a sensor, otherwise the
-camera plugin does not work. closes
-<a href="https://github.com/utexas-bwi/bwi_common/issues/4">#4</a>
-</li>
-<li>  Contributors: Piyush Khandelwal</li>
-</ul>
-
-<h2 id="0-2-3-2014-04-24">0.2.3 (2014-04-24)</h2>
-
-<h2 id="0-2-2-2014-04-19">0.2.2 (2014-04-19)</h2>
-
-<h2 id="0-2-1-2014-04-18">0.2.1 (2014-04-18)</h2>
-
-<h2 id="0-2-0-2014-04-16">0.2.0 (2014-04-16)</h2>
-
-<ul>
-<li>  Initial release to Hydro.</li>
-<li>  Changed person color to black for easy visualization.</li>
-<li>  Added a vizualizer for gazebo.</li>
-<li>  Now passes catkin_lint checks.</li>
-<li>  Moved common research components from bwi_experimental to
-bwi_common repository in preparation of release.</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -873,6 +795,39 @@ bwi_common repository in preparation of release.</li>
         
           <ul>
             
+              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/led_study_kinetic/bwi_gazebo_entities/launch/ball.launch" target="_blank">launch/ball.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>ballid</strong> <em>&#91;default: ballid&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>world</strong> <em>&#91;default: gazebo&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>x</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>y</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>urdf_file</strong> <em>&#91;default: $(find bwi_gazebo_entities)/entities/ball.urdf.xacro&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/utexas-bwi/bwi_common/blob/led_study_kinetic/bwi_gazebo_entities/launch/gazebo_camera.launch" target="_blank">launch/gazebo_camera.launch</a>
                 <ul class="list-unstyled">
                   
@@ -940,39 +895,6 @@ bwi_common repository in preparation of release.</li>
                       
                         
                           <li><strong>urdf_file</strong> <em>&#91;default: $(find bwi_gazebo_entities)/persons/controllable_person.urdf.xacro&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/led_study_kinetic/bwi_gazebo_entities/launch/ball.launch" target="_blank">launch/ball.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>ballid</strong> <em>&#91;default: ballid&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>world</strong> <em>&#91;default: gazebo&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>x</strong> <em>&#91;default: 0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>y</strong> <em>&#91;default: 0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>urdf_file</strong> <em>&#91;default: $(find bwi_gazebo_entities)/entities/ball.urdf.xacro&#93; </em></li>
                         
                       
                     </ul>
@@ -1566,81 +1488,7 @@ utexas_gdc
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-bwi_gazebo_entities">Changelog for package bwi_gazebo_entities</h1>
-
-<h2 id="0-3-12-2016-09-14">0.3.12 (2016-09-14)</h2>
-
-<h2 id="0-3-11-2016-08-27">0.3.11 (2016-08-27)</h2>
-
-<h2 id="0-3-10-2016-08-15">0.3.10 (2016-08-15)</h2>
-
-<h2 id="0-3-9-2016-08-05">0.3.9 (2016-08-05)</h2>
-
-<h2 id="0-3-8-2016-06-06">0.3.8 (2016-06-06)</h2>
-
-<ul>
-<li>  merged with yuqian branch.</li>
-<li>  Contributors: Piyush Khandelwal</li>
-</ul>
-
-<h2 id="0-3-7-2015-09-22">0.3.7 (2015-09-22)</h2>
-
-<h2 id="0-3-6-2015-08-25">0.3.6 (2015-08-25)</h2>
-
-<h2 id="0-3-5-2015-08-22">0.3.5 (2015-08-22)</h2>
-
-<h2 id="0-3-4-2015-08-19">0.3.4 (2015-08-19)</h2>
-
-<h2 id="0-3-3-2015-08-05">0.3.3 (2015-08-05)</h2>
-
-<ul>
-<li>  allow setting yaw for controllable person. also run atrium
-simulation in real time.</li>
-<li>  changed position of camera, camera fov, and color of person in
-gazebo</li>
-<li>  Contributors: Piyush Khandelwal</li>
-</ul>
-
-<h2 id="0-3-2-2015-03-24">0.3.2 (2015-03-24)</h2>
-
-<h2 id="0-3-1-2015-03-16">0.3.1 (2015-03-16)</h2>
-
-<h2 id="0-3-0-2015-03-15">0.3.0 (2015-03-15)</h2>
-
-<ul>
-<li>  Fixed catkin lint errors.</li>
-<li>  Contributors: Jack O'Quin</li>
-</ul>
-
-<h2 id="0-2-4-2014-04-29">0.2.4 (2014-04-29)</h2>
-
-<ul>
-<li>  cleaned up most catkin_lint warnings. closes
-<a href="https://github.com/utexas-bwi/bwi_common/issues/6">#6</a>
-</li>
-<li>  it is now necessary to specify noise for a sensor, otherwise the
-camera plugin does not work. closes
-<a href="https://github.com/utexas-bwi/bwi_common/issues/4">#4</a>
-</li>
-<li>  Contributors: Piyush Khandelwal</li>
-</ul>
-
-<h2 id="0-2-3-2014-04-24">0.2.3 (2014-04-24)</h2>
-
-<h2 id="0-2-2-2014-04-19">0.2.2 (2014-04-19)</h2>
-
-<h2 id="0-2-1-2014-04-18">0.2.1 (2014-04-18)</h2>
-
-<h2 id="0-2-0-2014-04-16">0.2.0 (2014-04-16)</h2>
-
-<ul>
-<li>  Initial release to Hydro.</li>
-<li>  Changed person color to black for easy visualization.</li>
-<li>  Added a vizualizer for gazebo.</li>
-<li>  Now passes catkin_lint checks.</li>
-<li>  Moved common research components from bwi_experimental to
-bwi_common repository in preparation of release.</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1718,6 +1566,39 @@ bwi_common repository in preparation of release.</li>
         
           <ul>
             
+              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/indigo/bwi_gazebo_entities/launch/ball.launch" target="_blank">launch/ball.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>ballid</strong> <em>&#91;default: ballid&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>world</strong> <em>&#91;default: gazebo&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>x</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>y</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>urdf_file</strong> <em>&#91;default: $(find bwi_gazebo_entities)/entities/ball.urdf.xacro&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/utexas-bwi/bwi_common/blob/indigo/bwi_gazebo_entities/launch/gazebo_camera.launch" target="_blank">launch/gazebo_camera.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1785,39 +1666,6 @@ bwi_common repository in preparation of release.</li>
                       
                         
                           <li><strong>urdf_file</strong> <em>&#91;default: $(find bwi_gazebo_entities)/persons/controllable_person.urdf.xacro&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/indigo/bwi_gazebo_entities/launch/ball.launch" target="_blank">launch/ball.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>ballid</strong> <em>&#91;default: ballid&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>world</strong> <em>&#91;default: gazebo&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>x</strong> <em>&#91;default: 0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>y</strong> <em>&#91;default: 0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>urdf_file</strong> <em>&#91;default: $(find bwi_gazebo_entities)/entities/ball.urdf.xacro&#93; </em></li>
                         
                       
                     </ul>
@@ -2014,7 +1862,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -669,58 +665,7 @@ utest/utest --path ../examples/data/
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-libpointmatcher">Changelog for package libpointmatcher</h1>
-
-<h2 id="1-2-3-2015-05-15">1.2.3 (2015-05-15)</h2>
-
-<ul>
-<li>  Support including other versions of YAML in compilation units that
-also include the YAML version packed with libpointmatcher (PR #80)</li>
-<li>  Changed immutability concept for SupportLabel to support MSVC
-2012 (#78)</li>
-<li>  Fixed build system related bugs (#79, #70, ..).</li>
-<li>  updated build_map example, added better error message, added better
-information prints</li>
-<li>  cleaned CMakeList and added missing dependencies for external
-projetcs</li>
-<li>  avoid possibility of building dynamic library on MacOS</li>
-<li>  updated Mac build instructions</li>
-<li>  Tim3xx laser support on Simple Noise filter (#64)</li>
-<li>  Modified default covariance return in
-PointToPlaneWithCovErrorMinimizer (#59)</li>
-<li>  update usage text and retab</li>
-<li>  Removed compilation warnings</li>
-<li>  add unit test for ICPSequence</li>
-<li>  added application of reference data points filters for ICPSequence
-objects (#56)</li>
-<li>  Merge branch 'master' of github.com:ethz-asl/libpointmatcher</li>
-<li>  fix problem with libnabo linking (#54)</li>
-<li>  Adapted the code to handle 2D point clouds and decided to split the
-initial/icp/complete transformation matrices in 3 different files.
-It should be easier to post process the transformations.</li>
-<li>  Changed matrix for matrices as output suffix</li>
-<li>  Changed the ICP example (pmicp) to accept initial
-translation/rotation input and allow to output the transformation
-matrices</li>
-<li>  CutBelowLevelDataPointsFilter (PR #48)</li>
-<li>  split unit tests (PR #47)</li>
-<li>  Delete roadmap.txt</li>
-<li>  change year to 2014</li>
-<li>  correct bug in DataPoints operator==</li>
-<li>  add a method to remove features or descriptors</li>
-<li>  add empty function for removing features and descriptors</li>
-<li>  add functions to DataPoints avoiding error on rows and cols</li>
-<li>  fill missing documentation</li>
-<li>  resolve warning from unsigned to int in IO.cpp</li>
-<li>  add extra empty line in utest</li>
-<li>  add extra unit tests and resolve remaining bugs</li>
-<li>  Refactored how to load PLY files</li>
-<li>  Allow 2D descriptors (##45)</li>
-<li>  Allow saving 2D descriptors coming from a 2Dmap, that are converted
-to 3D when writing to the file but needed after if we want to load
-the map as 2D.</li>
-<li>  Contributors: Francis Colas, Francisco J Perez Grau, Fran</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1520,58 +1465,7 @@ utest/utest --path ../examples/data/
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-libpointmatcher">Changelog for package libpointmatcher</h1>
-
-<h2 id="1-2-3-2015-05-15">1.2.3 (2015-05-15)</h2>
-
-<ul>
-<li>  Support including other versions of YAML in compilation units that
-also include the YAML version packed with libpointmatcher (PR #80)</li>
-<li>  Changed immutability concept for SupportLabel to support MSVC
-2012 (#78)</li>
-<li>  Fixed build system related bugs (#79, #70, ..).</li>
-<li>  updated build_map example, added better error message, added better
-information prints</li>
-<li>  cleaned CMakeList and added missing dependencies for external
-projetcs</li>
-<li>  avoid possibility of building dynamic library on MacOS</li>
-<li>  updated Mac build instructions</li>
-<li>  Tim3xx laser support on Simple Noise filter (#64)</li>
-<li>  Modified default covariance return in
-PointToPlaneWithCovErrorMinimizer (#59)</li>
-<li>  update usage text and retab</li>
-<li>  Removed compilation warnings</li>
-<li>  add unit test for ICPSequence</li>
-<li>  added application of reference data points filters for ICPSequence
-objects (#56)</li>
-<li>  Merge branch 'master' of github.com:ethz-asl/libpointmatcher</li>
-<li>  fix problem with libnabo linking (#54)</li>
-<li>  Adapted the code to handle 2D point clouds and decided to split the
-initial/icp/complete transformation matrices in 3 different files.
-It should be easier to post process the transformations.</li>
-<li>  Changed matrix for matrices as output suffix</li>
-<li>  Changed the ICP example (pmicp) to accept initial
-translation/rotation input and allow to output the transformation
-matrices</li>
-<li>  CutBelowLevelDataPointsFilter (PR #48)</li>
-<li>  split unit tests (PR #47)</li>
-<li>  Delete roadmap.txt</li>
-<li>  change year to 2014</li>
-<li>  correct bug in DataPoints operator==</li>
-<li>  add a method to remove features or descriptors</li>
-<li>  add empty function for removing features and descriptors</li>
-<li>  add functions to DataPoints avoiding error on rows and cols</li>
-<li>  fill missing documentation</li>
-<li>  resolve warning from unsigned to int in IO.cpp</li>
-<li>  add extra empty line in utest</li>
-<li>  add extra unit tests and resolve remaining bugs</li>
-<li>  Refactored how to load PLY files</li>
-<li>  Allow 2D descriptors (##45)</li>
-<li>  Allow saving 2D descriptors coming from a 2Dmap, that are converted
-to 3D when writing to the file but needed after if we want to load
-the map as 2D.</li>
-<li>  Contributors: Francis Colas, Francisco J Perez Grau, Fran</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1960,7 +1854,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -561,31 +557,7 @@ multi_jackal_tutorials
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-multi_jackal_tutorials">Changelog for package multi_jackal_tutorials</h1>
-
-<h2 id="0-0-5-2018-02-19">0.0.5 (2018-02-19)</h2>
-
-<h2 id="0-0-4-2018-02-13">0.0.4 (2018-02-13)</h2>
-
-<ul>
-<li>  fixed launch file test</li>
-<li>  Contributors: Nick Sullivan</li>
-</ul>
-
-<h2 id="0-0-3-2018-02-13">0.0.3 (2018-02-13)</h2>
-
-<ul>
-<li>  licensing, URL's, tutorials updated</li>
-<li>  Contributors: Nick Sullivan</li>
-</ul>
-
-<h2 id="0-0-2-2018-02-12">0.0.2 (2018-02-12)</h2>
-
-<h2 id="0-0-1-2018-02-07">0.0.1 (2018-02-07)</h2>
-
-<ul>
-<li>  Contributors: Nick Sullivan</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -751,6 +723,58 @@ multi_jackal_tutorials
       <div class="panel-body">
         
           <ul>
+            
+              <li><a href="https://github.com/NicksSimulationsROS/multi_jackal/blob/ros-kinetic/multi_jackal_tutorials/launch/jackal_with_gps.launch" target="_blank">launch/jackal_with_gps.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> A bit misleading, all the jackal sims have GPS, but this one uses it to 
+     create the map->odom transformation, rather than using a static TF. </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>ns</strong> <em>&#91;default: jackal0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rviz</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>config</strong> <em>&#91;default: base&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>config_id</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
             
               <li><a href="https://github.com/NicksSimulationsROS/multi_jackal/blob/ros-kinetic/multi_jackal_tutorials/launch/two_jackal.launch" target="_blank">launch/two_jackal.launch</a>
                 <ul class="list-unstyled">
@@ -930,58 +954,6 @@ multi_jackal_tutorials
                 </ul>
               </li>
             
-              <li><a href="https://github.com/NicksSimulationsROS/multi_jackal/blob/ros-kinetic/multi_jackal_tutorials/launch/jackal_with_gps.launch" target="_blank">launch/jackal_with_gps.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> A bit misleading, all the jackal sims have GPS, but this one uses it to 
-     create the map->odom transformation, rather than using a static TF. </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>ns</strong> <em>&#91;default: jackal0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rviz</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>config</strong> <em>&#91;default: base&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>config_id</strong> <em>&#91;default: 0&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/NicksSimulationsROS/multi_jackal/blob/ros-kinetic/multi_jackal_tutorials/launch/one_jackal.launch" target="_blank">launch/one_jackal.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1043,6 +1015,36 @@ multi_jackal_tutorials
                 </ul>
               </li>
             
+              <li><a href="https://github.com/NicksSimulationsROS/multi_jackal/blob/ros-kinetic/multi_jackal_tutorials/launch/multimaster/multimaster-jackal.launch" target="_blank">launch/multimaster/multimaster-jackal.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> This is part 2 of a process to simulate robots in seperate ROS masters. 
+     This part is the Jackal.
+     Requires the package 'sync_params'.
+     After running multimaster-gazebo.launch, launch with:
+       roslaunch multi_jackal_tutorials multimaster-jackal.launch ns:=jackal0 -p 11312
+      
+     To view RVIZ from the robots point of view: 
+       ROS_MASTER_URI=http://localhost:11312
+       roslaunch multi_jackal_tutorials rviz.launch
+</em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>ns</strong> <em>&#91;default: jackal0&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/NicksSimulationsROS/multi_jackal/blob/ros-kinetic/multi_jackal_tutorials/launch/multimaster/multimaster-gazebo.launch" target="_blank">launch/multimaster/multimaster-gazebo.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1065,36 +1067,6 @@ multi_jackal_tutorials
                       
                         
                       
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/NicksSimulationsROS/multi_jackal/blob/ros-kinetic/multi_jackal_tutorials/launch/multimaster/multimaster-jackal.launch" target="_blank">launch/multimaster/multimaster-jackal.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> This is part 2 of a process to simulate robots in seperate ROS masters. 
-     This part is the Jackal.
-     Requires the package 'sync_params'.
-     After running multimaster-gazebo.launch, launch with:
-       roslaunch multi_jackal_tutorials multimaster-jackal.launch ns:=jackal0 -p 11312
-      
-     To view RVIZ from the robots point of view: 
-       ROS_MASTER_URI=http://localhost:11312
-       roslaunch multi_jackal_tutorials rviz.launch
-</em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>ns</strong> <em>&#91;default: jackal0&#93; </em></li>
                         
                       
                         
@@ -1303,7 +1275,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

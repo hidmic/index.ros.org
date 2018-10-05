@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -426,7 +422,7 @@ fmi_adapter_examples
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-25
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-27
         </span>
       </td>
     </tr>
@@ -464,7 +460,13 @@ fmi_adapter_examples
           <div class="panel-body">
             
             
-              <em>No additional links.</em>
+              <ul class="list-unstyled">
+                
+                  <li><a href="http://wiki.ros.org/fmi_adapter">Website</a></li>
+                
+                  <li><a href="https://github.com/boschresearch/fmi_adapter">Repository</a></li>
+                
+              </ul>
             
           </div>
           <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
@@ -482,7 +484,11 @@ fmi_adapter_examples
           <div class="panel-body">
             
             
-              <em>No additional authors.</em>
+              <ul class="list-unstyled">
+                
+                  <li>Ralph Lange</li>
+                
+              </ul>
             
           </div>
         </div>
@@ -501,7 +507,7 @@ fmi_adapter_examples
 
 <h1 id="the-fmi_adapter-package">The fmi_adapter package</h1>
 
-<p>fmi_adapter is a small <a href="http://www.ros.org/">ROS</a> package for wrapping <em>functional mockup units (FMUs)</em> for co-simulation of physical models into ROS nodes. FMUs are defined in the <a href="http://fmi-standard.org/">FMI standard</a>. This package currently only supports co-simulation FMUs according to the FMI 2.0 standard.</p>
+<p>fmi_adapter is a small <a href="http://www.ros.org/">ROS</a> package for wrapping <em>functional mockup units (FMUs)</em> for co-simulation of physical models into ROS nodes. FMUs are defined in the <a href="http://fmi-standard.org/">FMI standard</a>. Currently, this package supports co-simulation FMUs according to the FMI 2.0 standard only.</p>
 
 <p>FMUs can be created with a variety of modeling and simulation tools. Examples are <a href="http://www.3ds.com/products-services/catia/products/dymola">Dymola</a>, <a href="https://www.mathworks.com/products/simulink.html">MATLAB/Simulink</a>, <a href="https://www.openmodelica.org/">OpenModelica</a>, <a href="https://www.simulationx.de/">SimulationX</a>, and <a href="http://www.wolfram.com/system-modeler/">Wolfram System Modeler</a>.</p>
 
@@ -509,52 +515,52 @@ fmi_adapter_examples
 
 <h2 id="fmi_adapter-node">fmi_adapter node</h2>
 
-<p>fmi_adapter provides a ROS node (<a href="src/fmi_adapter_node.cpp">fmi_adapter_node.cpp</a>), which takes an FMU and creates input and output topics for each input and output variable of the FMU and runs the FMU's solver with a user-defined rate according to the ROS clock. This approach is illustrated in the following diagram.</p>
+<p>fmi_adapter provides a ROS node (<a href="src/fmi_adapter_node.cpp">fmi_adapter_node.cpp</a>), which takes an FMU and creates subscribers and publishers for the input and output variables of the FMU, respectively. Then, it runs the FMU's solver with a user-definable update period according to the ROS clock. This approach is illustrated in the following diagram.</p>
 
 <p><img src="https://raw.githubusercontent.com/boschresearch/fmi_adapter/master/fmi_adapter//doc/high-level_architecture_with_fmi_adapter_node.png" alt="fmi_adapter in application node"></p>
 
 <p>The fmi_adapter_node also searches for counterparts for each FMU parameter and variable in the <a href="http://wiki.ros.org/Parameter%20Server">ROS parameter server</a> and initializes the FMU correspondingly.</p>
 
 <p>For this purpose, this package provide a launch file with argument <em>fmu_path</em>. Simply call</p>
-<div class="highlight"><pre><code class="language-" data-lang="">roslaunch fmi_adapter fmi_adapter_node.launch fmu_path:=[PathToTheFMUFile]
+<div class="highlight"><pre><code class="language-Bash" data-lang="Bash">roslaunch fmi_adapter fmi_adapter_node.launch fmu_path:=[PathToTheFMUFile]
 
 </code></pre></div>
 <p>Please see the <a href="../fmi_adapter_examples/README.md">README.md</a> of the <a href="../fmi_adapter_examples/">fmi_adapter_examples package</a> for a step-by-step description how to use the fmi_adapter node with a damped pendulum model and FMU.</p>
 
 <h2 id="fmi_adapter-library">fmi_adapter library</h2>
 
-<p>fmi_adapter provides a library with convenience functions based on common ROS types to load an FMU during runtime, retrieve the input, output, and parameter names,  set timestamped input values, run the FMU's numeric solver, and query the resulting output. These functions are provided by the class <a href="include/fmi_adapter/FMIAdapter.h">FMIAdapter</a>. Instances of this class may be integrated in application-specific ROS nodes or library as illustrated in the following architecture diagram.</p>
+<p>fmi_adapter provides a library with convenience functions based on common ROS types to load an FMU during runtime, to retrieve the input, output, and parameter names, to set timestamped input values, to run the FMU's numeric solver, and to query the resulting output. These functions are provided by the class <a href="include/fmi_adapter/FMIAdapter.h">FMIAdapter</a>. Instances of this class may be integrated in application-specific ROS nodes or libraries as illustrated in the following architecture diagram.</p>
 
 <p><img src="https://raw.githubusercontent.com/boschresearch/fmi_adapter/master/fmi_adapter//doc/high-level_architecture_with_application_node.png" alt="fmi_adapter in application node"></p>
 
-<p>For parsing the XML description of an FMU and for running the FMU's solver, fmi_adapter uses the C library <a href="http://www.jmodelica.org/FMILibrary">FMI Library</a>. This library is downloaded, compiled and linked in CMakeLists.txt of this package using cmake's <em>externalproject_add</em> command.</p>
+<p>For parsing the XML description of an FMU and for running the FMU's solver, fmi_adapter uses the C library <a href="http://www.jmodelica.org/FMILibrary">FMI Library</a>. This library is downloaded, compiled and linked in the CMakeLists.txt of this package using cmake's <em>externalproject_add</em> command.</p>
 
 <h2 id="running-an-fmu-inside-a-ros-node-or-library">Running an FMU inside a ROS node or library</h2>
 
 <p>In the following, we give some code snippets how to load and run an FMU file from an application-specific ROS node or library.</p>
 
 <p><strong>Step 1:</strong> Include the FMIAdapter.h from the fmi_adapter package in your C++ code.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">#include "fmi_adapter/FMIAdapter.h"
+<div class="highlight"><pre><code class="language-C++" data-lang="C++">#include "fmi_adapter/FMIAdapter.h"
 
 </code></pre></div>
-<p><strong>Step 2:</strong> Instantiate the adapter class with the path to the FMU file and the desired simulation step size.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">ros::Duration fmuStepSize(0.001);
-fmi_adapter::FMIAdapter adapter(fmuPath, fmuStepSize);
+<p><strong>Step 2:</strong> Instantiate the adapter class with the path to the FMU file and the desired simulation step size. If the step-size argument is omitted, the default step size specified in the FMU file will be used.</p>
+<div class="highlight"><pre><code class="language-C++" data-lang="C++">ros::Duration stepSize(0.001);
+fmi_adapter::FMIAdapter adapter(fmuPath, stepSize);
 
 </code></pre></div>
 <p><strong>Step 3:</strong> Create subscribers or timers to set the FMU's input values. For example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">ros::Subscriber subscriber =
+<div class="highlight"><pre><code class="language-C++" data-lang="C++">ros::Subscriber subscriber =
     nHandle.subscribe&lt;std_msgs::Float64&gt;("angle_x", 1000, [&amp;adapter](const std_msgs::Float64::ConstPtr&amp; msg) {
       adapter.setInputValue("angleX", ros::Time::now(), msg-&gt;data);
     });
 
 </code></pre></div>
-<p>Here, <code>angle_x</code> is the topic name whereas <code>angleX</code> is the corresponding input variable of the FMU.</p>
+<p>In this example, <code>angle_x</code> is the topic name whereas <code>angleX</code> is the corresponding input variable of the FMU.</p>
 
 <p>Use <code>adapter.getInputVariableNames()</code> to get a list of all input variables.</p>
 
 <p><strong>Step 4:</strong> Create a timer or subscriber that triggers the simulation of the FMU using <code>adapter.doStepsUntil(..)</code>. For example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">ros::Timer timer = nHandle.createTimer(ros::Duration(0.01), [&amp;](const ros::TimerEvent&amp; event) {
+<div class="highlight"><pre><code class="language-C++" data-lang="C++">ros::Timer timer = nHandle.createTimer(ros::Duration(0.01), [&amp;](const ros::TimerEvent&amp; event) {
     adapter.doStepsUntil(event.current_expected);
     double y = adapter.getOutputValue("angleY");
     // ... e.g., publish y on a topic ...
@@ -563,15 +569,15 @@ fmi_adapter::FMIAdapter adapter(fmuPath, fmuStepSize);
 </code></pre></div>
 <p>Use <code>adapter.getOutputVariableNames()</code> to get a list of all output variables.</p>
 
-<p><strong>Step 5:</strong> Sets parameters and initial values of the FMU:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">adapter.setInitialValue("dampingParam", 0.21);
+<p><strong>Step 5:</strong> Set parameters and initial values of the FMU:</p>
+<div class="highlight"><pre><code class="language-C++" data-lang="C++">adapter.setInitialValue("dampingParam", 0.21);
 adapter.setInitialValue("angleX", 1.3);
 
 </code></pre></div>
-<p>The function <code>adapter.initializeFromROSParameters(nHandle)</code> may be used to initialize all parameters from the corresponding ROS parameters. Please note that all characters in the FMU parameter names that are not supported by ROS are replaced by an '_', cf. <code>FMIAdapter::rosifyName(name)</code>.</p>
+<p>The function <code>adapter.initializeFromROSParameters(nodeHandle)</code> may be used to initialize all parameters from the corresponding ROS parameters. Please note that all characters in the FMU parameter names that are not supported by ROS are replaced by an '_', cf. <code>FMIAdapter::rosifyName(name)</code>.</p>
 
 <p><strong>Step 6:</strong> Just before starting the spin thread, exit the FMU's initialization mode and set the ROS time that refers to the FMU's internal timepoint 0.0.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">adapter.exitInitializationMode(ros::Time::now());
+<div class="highlight"><pre><code class="language-C++" data-lang="C++">adapter.exitInitializationMode(ros::Time::now());
 ros::spin();
 
 </code></pre></div>
@@ -591,19 +597,7 @@ ros::spin();
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-fmi_adapter">Changelog for package fmi_adapter</h1>
-
-<h2 id="1-0-1-2018-07-16">1.0.1 (2018-07-16)</h2>
-
-<ul>
-<li>  Throwing runtime_error in case of failed fmi2 function call.</li>
-</ul>
-
-<h2 id="1-0-0-2018-07-13">1.0.0 (2018-07-13)</h2>
-
-<ul>
-<li>  Initial version.</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -961,7 +955,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

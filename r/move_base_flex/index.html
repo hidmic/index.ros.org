@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -171,7 +167,7 @@
       <input type="radio" name="options" id="bouncy-radio" autocomplete="off"> bouncy
     </label>
   
-    <label id="melodic-option" class="distro-button btn btn-xs btn-default" href="#melodic" data="melodic">
+    <label id="melodic-option" class="distro-button btn btn-xs btn-primary" href="#melodic" data="melodic">
       <input type="radio" name="options" id="melodic-radio" autocomplete="off"> melodic
     </label>
   
@@ -183,7 +179,7 @@
       <input type="radio" name="options" id="kinetic-radio" autocomplete="off"> kinetic
     </label>
   
-    <label id="indigo-option" class="distro-button btn btn-xs btn-default" href="#indigo" data="indigo">
+    <label id="indigo-option" class="distro-button btn btn-xs btn-primary" href="#indigo" data="indigo">
       <input type="radio" name="options" id="indigo-radio" autocomplete="off"> indigo
     </label>
   
@@ -293,7 +289,167 @@
   <div class="distro distro-melodic">
     <div class="container-fluid">
       
-        <div class="alert alert-warning" role="alert">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+        
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+
+  <table class="table table-condensed">
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/magazino/move_base_flex.git">https://github.com/magazino/move_base_flex.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">melodic</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-10-03
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mbf_abstract_core/github-magazino-move_base_flex">mbf_abstract_core</a></td>
+                    <td>0.2.1</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mbf_abstract_nav/github-magazino-move_base_flex">mbf_abstract_nav</a></td>
+                    <td>0.2.1</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mbf_costmap_core/github-magazino-move_base_flex">mbf_costmap_core</a></td>
+                    <td>0.2.1</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mbf_costmap_nav/github-magazino-move_base_flex">mbf_costmap_nav</a></td>
+                    <td>0.2.1</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mbf_msgs/github-magazino-move_base_flex">mbf_msgs</a></td>
+                    <td>0.2.1</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mbf_simple_nav/github-magazino-move_base_flex">mbf_simple_nav</a></td>
+                    <td>0.2.1</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mbf_utility/github-magazino-move_base_flex">mbf_utility</a></td>
+                    <td>0.2.1</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/move_base_flex/github-magazino-move_base_flex">move_base_flex</a></td>
+                    <td>0.2.1</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="rendered-markdown">
+<h1 id="move-base-flex-a-highly-flexible-navigation-framework">Move Base Flex: A Highly Flexible Navigation Framework:</h1>
+
+<p>This repository contains Move Base Flex (MBF), a backwards-compatible replacement for move_base. MBF can use existing plugins for move_base, and provides an enhanced version of the same ROS interface. It exposes action servers for planning, controlling and recovering, providing detailed information of the current state and the plugin's feedback. An external executive logic can use MBF and its actions to perform smart and flexible navigation strategies. For example, at <a href="https://www.magazino.eu/?lang=en">Magazino</a> we have successfully deployed MBF at customer facilities to control TORU robots in highly dynamical environments. Furthermore, MBF enables the use of other map representations, e.g. meshes. The core features are:</p>
+
+<ul>
+<li>Fully backwards-compatible with current ROS navigation.</li>
+<li>Actions for the submodules planning, controlling and recovering, and services to query the costmaps are provided. This interface allows external executives, e.g. SMACH, or Behavior Trees, to run highly flexible and complex navigation strategies.</li>
+<li>Comprehensive result and feedback information on all actions, including error codes and messages from the loaded plugins. For users still relying on a unique navigation interface, we have extended move_base action with detailed result and feedback information (though we still provide the current one).</li>
+<li>Separation between an abstract navigation framework and concrete implementations, allowing faster development of new applications, e.g. 3D navigation.</li>
+<li>Load multiple planners and controllers, selectable at runtime by setting one of the loaded plugin names in the action goal. </li>
+<li>Concurrency: Parallel planning, recovering, controlling by selecting different concurrency slots when defining the action goal. Only different plugins instances can run in parallel.</li>
+</ul>
+
+<p>Please see also the <a href="https://wiki.ros.org/move_base_flex">Move Base Flex Documentation and Tutorials</a> in the ROS wiki.</p>
+
+<h2 id="concepts-architecture">Concepts &amp; Architecture</h2>
+
+<p>We have created Move Base Flex for a larger target group besides the standard developers and users of move_base and 2D navigation based on costmaps, as well as addressed move_base's limitations. Since robot navigation can be separated into planning and controlling in many cases, even for outdoor scenarios without the benefits of flat terrain, we designed MBF based on abstract planner-, controller- and recovery behavior-execution classes. To accomplish this goal, we created abstract base classes for the nav core BaseLocalPlanner, BaseGlobalPlanner and RecoveryBehavior plugin interfaces, extending the API to provide a richer and more expressive interface without breaking the current move_base plugin API. The new abstract interfaces allow plugins to return valuable information in each execution cycle, e.g. why a valid plan or a velocity command could not be computed. This information is then passed to the external executive logic through MBF planning, navigation or recovering actions’ feedback and result. The planner, controller and recovery behavior execution is implemented in the abstract execution classes without binding the software implementation to 2D costmaps. In our framework, MoveBase is just a particular implementation of a navigation system: its execution classes implement the abstract ones, bind the system to the costmaps. Thereby, the system can easily be used for other approaches, e.g. navigation on meshes or 3D occupancy grid maps. However, we provide a SimpleNavigationServer class without a binding to costmaps.</p>
+
+<p>MBF architecture:
+<img src="https://raw.githubusercontent.com/magazino/move_base_flex/melodic//doc/images/move_base_flex.png" alt="MBF architecture"></p>
+
+<h2 id="future-work">Future Work</h2>
+
+<p>MBF is an ongoing project; some of the improvements we we have planned for the near future are:</p>
+
+<ul>
+<li>Auto select the active controller when having concurrently running controllers</li>
+<li>Add Ackermann steering API</li>
+<li>Multi Goal API + Action</li>
+<li>Add new navigation server and core packages using <a href="https://wiki.ros.org/grid_map">grid_map</a>.</li>
+<li>Add pause/resume interface for the controller, for example to recover from a bumper, or an emergency stop button hit</li>
+<li>Constraints-based goal (see issue #8)</li>
+</ul>
+
+<p>But of course your are welcome to propose new fancy features and help make them a reality! Pull Requests are always welcome!</p>
+</div></body></html>
+
+            
+          </div>
+        </div>
+
+        
+        
       
     </div>
   </div>
@@ -325,7 +481,7 @@
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-24
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-10-03
         </span>
       </td>
     </tr>
@@ -368,42 +524,42 @@
                 
                   <tr>
                     <td><a href="/p/mbf_abstract_core/github-magazino-move_base_flex">mbf_abstract_core</a></td>
-                    <td>0.2.0</td>
+                    <td>0.2.1</td>
                   </tr>
                 
                   <tr>
                     <td><a href="/p/mbf_abstract_nav/github-magazino-move_base_flex">mbf_abstract_nav</a></td>
-                    <td>0.2.0</td>
+                    <td>0.2.1</td>
                   </tr>
                 
                   <tr>
                     <td><a href="/p/mbf_costmap_core/github-magazino-move_base_flex">mbf_costmap_core</a></td>
-                    <td>0.2.0</td>
+                    <td>0.2.1</td>
                   </tr>
                 
                   <tr>
                     <td><a href="/p/mbf_costmap_nav/github-magazino-move_base_flex">mbf_costmap_nav</a></td>
-                    <td>0.2.0</td>
+                    <td>0.2.1</td>
                   </tr>
                 
                   <tr>
                     <td><a href="/p/mbf_msgs/github-magazino-move_base_flex">mbf_msgs</a></td>
-                    <td>0.2.0</td>
+                    <td>0.2.1</td>
                   </tr>
                 
                   <tr>
                     <td><a href="/p/mbf_simple_nav/github-magazino-move_base_flex">mbf_simple_nav</a></td>
-                    <td>0.2.0</td>
+                    <td>0.2.1</td>
                   </tr>
                 
                   <tr>
                     <td><a href="/p/mbf_utility/github-magazino-move_base_flex">mbf_utility</a></td>
-                    <td>0.2.0</td>
+                    <td>0.2.1</td>
                   </tr>
                 
                   <tr>
                     <td><a href="/p/move_base_flex/github-magazino-move_base_flex">move_base_flex</a></td>
-                    <td>0.2.0</td>
+                    <td>0.2.1</td>
                   </tr>
                 
                 </tbody>
@@ -427,9 +583,11 @@
 <li>Actions for the submodules planning, controlling and recovering, and services to query the costmaps are provided. This interface allows external executives, e.g. SMACH, or Behavior Trees, to run highly flexible and complex navigation strategies.</li>
 <li>Comprehensive result and feedback information on all actions, including error codes and messages from the loaded plugins. For users still relying on a unique navigation interface, we have extended move_base action with detailed result and feedback information (though we still provide the current one).</li>
 <li>Separation between an abstract navigation framework and concrete implementations, allowing faster development of new applications, e.g. 3D navigation.</li>
+<li>Load multiple planners and controllers, selectable at runtime by setting one of the loaded plugin names in the action goal. </li>
+<li>Concurrency: Parallel planning, recovering, controlling by selecting different concurrency slots when defining the action goal. Only different plugins instances can run in parallel.</li>
 </ul>
 
-<p>Please see the <a href="wiki.ros.org/move_base_flex">Move Base Flex documentation</a> in the ROS wiki.</p>
+<p>Please see also the <a href="https://wiki.ros.org/move_base_flex">Move Base Flex Documentation and Tutorials</a> in the ROS wiki.</p>
 
 <h2 id="concepts-architecture">Concepts &amp; Architecture</h2>
 
@@ -443,17 +601,15 @@
 <p>MBF is an ongoing project; some of the improvements we we have planned for the near future are:</p>
 
 <ul>
-<li>Replace costmap_2d by grid_map in the MoveBase implementation.</li>
-<li>Allow multiple planners and controllers, selectable at runtime</li>
+<li>Auto select the active controller when having concurrently running controllers</li>
+<li>Add Ackermann steering API</li>
+<li>Multi Goal API + Action</li>
+<li>Add new navigation server and core packages using <a href="https://wiki.ros.org/grid_map">grid_map</a>.</li>
 <li>Add pause/resume interface for the controller, for example to recover from a bumper, or an emergency stop button hit</li>
-</ul>
-
-<p>But of course your are welcome to propose new fancy features and help make them a reality! Some possibilites:</p>
-
-<ul>
-<li>Concurrently running recovery behaviors</li>
 <li>Constraints-based goal (see issue #8)</li>
 </ul>
+
+<p>But of course your are welcome to propose new fancy features and help make them a reality! Pull Requests are always welcome!</p>
 </div></body></html>
 
             
@@ -493,7 +649,7 @@
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-11
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-10-03
         </span>
       </td>
     </tr>
@@ -536,42 +692,42 @@
                 
                   <tr>
                     <td><a href="/p/mbf_abstract_core/github-magazino-move_base_flex">mbf_abstract_core</a></td>
-                    <td>0.2.0</td>
+                    <td>0.2.1</td>
                   </tr>
                 
                   <tr>
                     <td><a href="/p/mbf_abstract_nav/github-magazino-move_base_flex">mbf_abstract_nav</a></td>
-                    <td>0.2.0</td>
+                    <td>0.2.1</td>
                   </tr>
                 
                   <tr>
                     <td><a href="/p/mbf_costmap_core/github-magazino-move_base_flex">mbf_costmap_core</a></td>
-                    <td>0.2.0</td>
+                    <td>0.2.1</td>
                   </tr>
                 
                   <tr>
                     <td><a href="/p/mbf_costmap_nav/github-magazino-move_base_flex">mbf_costmap_nav</a></td>
-                    <td>0.2.0</td>
+                    <td>0.2.1</td>
                   </tr>
                 
                   <tr>
                     <td><a href="/p/mbf_msgs/github-magazino-move_base_flex">mbf_msgs</a></td>
-                    <td>0.2.0</td>
+                    <td>0.2.1</td>
                   </tr>
                 
                   <tr>
                     <td><a href="/p/mbf_simple_nav/github-magazino-move_base_flex">mbf_simple_nav</a></td>
-                    <td>0.2.0</td>
+                    <td>0.2.1</td>
                   </tr>
                 
                   <tr>
                     <td><a href="/p/mbf_utility/github-magazino-move_base_flex">mbf_utility</a></td>
-                    <td>0.2.0</td>
+                    <td>0.2.1</td>
                   </tr>
                 
                   <tr>
                     <td><a href="/p/move_base_flex/github-magazino-move_base_flex">move_base_flex</a></td>
-                    <td>0.2.0</td>
+                    <td>0.2.1</td>
                   </tr>
                 
                 </tbody>
@@ -595,9 +751,11 @@
 <li>Actions for the submodules planning, controlling and recovering, and services to query the costmaps are provided. This interface allows external executives, e.g. SMACH, or Behavior Trees, to run highly flexible and complex navigation strategies.</li>
 <li>Comprehensive result and feedback information on all actions, including error codes and messages from the loaded plugins. For users still relying on a unique navigation interface, we have extended move_base action with detailed result and feedback information (though we still provide the current one).</li>
 <li>Separation between an abstract navigation framework and concrete implementations, allowing faster development of new applications, e.g. 3D navigation.</li>
+<li>Load multiple planners and controllers, selectable at runtime by setting one of the loaded plugin names in the action goal. </li>
+<li>Concurrency: Parallel planning, recovering, controlling by selecting different concurrency slots when defining the action goal. Only different plugins instances can run in parallel.</li>
 </ul>
 
-<p>Please see the <a href="wiki.ros.org/move_base_flex">Move Base Flex documentation</a> in the ROS wiki.</p>
+<p>Please see also the <a href="https://wiki.ros.org/move_base_flex">Move Base Flex Documentation and Tutorials</a> in the ROS wiki.</p>
 
 <h2 id="concepts-architecture">Concepts &amp; Architecture</h2>
 
@@ -611,17 +769,15 @@
 <p>MBF is an ongoing project; some of the improvements we we have planned for the near future are:</p>
 
 <ul>
-<li>Replace costmap_2d by grid_map in the MoveBase implementation.</li>
-<li>Allow multiple planners and controllers, selectable at runtime</li>
+<li>Auto select the active controller when having concurrently running controllers</li>
+<li>Add Ackermann steering API</li>
+<li>Multi Goal API + Action</li>
+<li>Add new navigation server and core packages using <a href="https://wiki.ros.org/grid_map">grid_map</a>.</li>
 <li>Add pause/resume interface for the controller, for example to recover from a bumper, or an emergency stop button hit</li>
-</ul>
-
-<p>But of course your are welcome to propose new fancy features and help make them a reality! Some possibilites:</p>
-
-<ul>
-<li>Concurrently running recovery behaviors</li>
 <li>Constraints-based goal (see issue #8)</li>
 </ul>
+
+<p>But of course your are welcome to propose new fancy features and help make them a reality! Pull Requests are always welcome!</p>
 </div></body></html>
 
             
@@ -637,7 +793,167 @@
   <div class="distro distro-indigo">
     <div class="container-fluid">
       
-        <div class="alert alert-warning" role="alert">No version for distro <strong>indigo</strong>. Known supported distros are highlighted in the buttons above.</div>
+        
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+
+  <table class="table table-condensed">
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/magazino/move_base_flex.git">https://github.com/magazino/move_base_flex.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">indigo</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-10-03
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mbf_abstract_core/github-magazino-move_base_flex">mbf_abstract_core</a></td>
+                    <td>0.2.1</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mbf_abstract_nav/github-magazino-move_base_flex">mbf_abstract_nav</a></td>
+                    <td>0.2.1</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mbf_costmap_core/github-magazino-move_base_flex">mbf_costmap_core</a></td>
+                    <td>0.2.1</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mbf_costmap_nav/github-magazino-move_base_flex">mbf_costmap_nav</a></td>
+                    <td>0.2.1</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mbf_msgs/github-magazino-move_base_flex">mbf_msgs</a></td>
+                    <td>0.2.1</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mbf_simple_nav/github-magazino-move_base_flex">mbf_simple_nav</a></td>
+                    <td>0.2.1</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mbf_utility/github-magazino-move_base_flex">mbf_utility</a></td>
+                    <td>0.2.1</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/move_base_flex/github-magazino-move_base_flex">move_base_flex</a></td>
+                    <td>0.2.1</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="rendered-markdown">
+<h1 id="move-base-flex-a-highly-flexible-navigation-framework">Move Base Flex: A Highly Flexible Navigation Framework:</h1>
+
+<p>This repository contains Move Base Flex (MBF), a backwards-compatible replacement for move_base. MBF can use existing plugins for move_base, and provides an enhanced version of the same ROS interface. It exposes action servers for planning, controlling and recovering, providing detailed information of the current state and the plugin's feedback. An external executive logic can use MBF and its actions to perform smart and flexible navigation strategies. For example, at <a href="https://www.magazino.eu/?lang=en">Magazino</a> we have successfully deployed MBF at customer facilities to control TORU robots in highly dynamical environments. Furthermore, MBF enables the use of other map representations, e.g. meshes. The core features are:</p>
+
+<ul>
+<li>Fully backwards-compatible with current ROS navigation.</li>
+<li>Actions for the submodules planning, controlling and recovering, and services to query the costmaps are provided. This interface allows external executives, e.g. SMACH, or Behavior Trees, to run highly flexible and complex navigation strategies.</li>
+<li>Comprehensive result and feedback information on all actions, including error codes and messages from the loaded plugins. For users still relying on a unique navigation interface, we have extended move_base action with detailed result and feedback information (though we still provide the current one).</li>
+<li>Separation between an abstract navigation framework and concrete implementations, allowing faster development of new applications, e.g. 3D navigation.</li>
+<li>Load multiple planners and controllers, selectable at runtime by setting one of the loaded plugin names in the action goal. </li>
+<li>Concurrency: Parallel planning, recovering, controlling by selecting different concurrency slots when defining the action goal. Only different plugins instances can run in parallel.</li>
+</ul>
+
+<p>Please see also the <a href="https://wiki.ros.org/move_base_flex">Move Base Flex Documentation and Tutorials</a> in the ROS wiki.</p>
+
+<h2 id="concepts-architecture">Concepts &amp; Architecture</h2>
+
+<p>We have created Move Base Flex for a larger target group besides the standard developers and users of move_base and 2D navigation based on costmaps, as well as addressed move_base's limitations. Since robot navigation can be separated into planning and controlling in many cases, even for outdoor scenarios without the benefits of flat terrain, we designed MBF based on abstract planner-, controller- and recovery behavior-execution classes. To accomplish this goal, we created abstract base classes for the nav core BaseLocalPlanner, BaseGlobalPlanner and RecoveryBehavior plugin interfaces, extending the API to provide a richer and more expressive interface without breaking the current move_base plugin API. The new abstract interfaces allow plugins to return valuable information in each execution cycle, e.g. why a valid plan or a velocity command could not be computed. This information is then passed to the external executive logic through MBF planning, navigation or recovering actions’ feedback and result. The planner, controller and recovery behavior execution is implemented in the abstract execution classes without binding the software implementation to 2D costmaps. In our framework, MoveBase is just a particular implementation of a navigation system: its execution classes implement the abstract ones, bind the system to the costmaps. Thereby, the system can easily be used for other approaches, e.g. navigation on meshes or 3D occupancy grid maps. However, we provide a SimpleNavigationServer class without a binding to costmaps.</p>
+
+<p>MBF architecture:
+<img src="https://raw.githubusercontent.com/magazino/move_base_flex/indigo//doc/images/move_base_flex.png" alt="MBF architecture"></p>
+
+<h2 id="future-work">Future Work</h2>
+
+<p>MBF is an ongoing project; some of the improvements we we have planned for the near future are:</p>
+
+<ul>
+<li>Auto select the active controller when having concurrently running controllers</li>
+<li>Add Ackermann steering API</li>
+<li>Multi Goal API + Action</li>
+<li>Add new navigation server and core packages using <a href="https://wiki.ros.org/grid_map">grid_map</a>.</li>
+<li>Add pause/resume interface for the controller, for example to recover from a bumper, or an emergency stop button hit</li>
+<li>Constraints-based goal (see issue #8)</li>
+</ul>
+
+<p>But of course your are welcome to propose new fancy features and help make them a reality! Pull Requests are always welcome!</p>
+</div></body></html>
+
+            
+          </div>
+        </div>
+
+        
+        
       
     </div>
   </div>
@@ -687,7 +1003,7 @@
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

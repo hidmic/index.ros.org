@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -414,16 +410,16 @@ this is much more robust than publishing messages over topics asynchronously.</p
 <span class="kn">from</span> <span class="nn">moveit_python</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">"moveit_py"</span><span class="p">)</span>
-<span class="c"># create a planning scene interface, provide name of root link</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">PlanningSceneInterface</span><span class="p">(</span><span class="s">"base_link"</span><span class="p">)</span>
+<span class="c1"># create a planning scene interface, provide name of root link
+</span><span class="n">p</span> <span class="o">=</span> <span class="n">PlanningSceneInterface</span><span class="p">(</span><span class="s">"base_link"</span><span class="p">)</span>
 
-<span class="c"># add a cube of 0.1m size, at [1, 0, 0.5] in the base_link frame</span>
-<span class="n">p</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="c1"># add a cube of 0.1m size, at [1, 0, 0.5] in the base_link frame
+</span><span class="n">p</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
 
-<span class="c"># do something</span>
-
-<span class="c"># remove the cube</span>
-<span class="n">p</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">)</span>
+<span class="c1"># do something
+</span>
+<span class="c1"># remove the cube
+</span><span class="n">p</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">)</span>
 
 </code></pre></div>
 <p>If for some reason you would prefer to not use the service, simply set
@@ -441,18 +437,18 @@ your script and MoveIt.</p>
 <span class="kn">from</span> <span class="nn">moveit_msgs.msg</span> <span class="kn">import</span> <span class="n">Grasp</span><span class="p">,</span> <span class="n">PlaceLocation</span>
 
 <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">"moveit_py"</span><span class="p">)</span>
-<span class="c"># provide arm group and gripper group names</span>
-<span class="c"># also takes a third parameter "plan_only" which defaults to False</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">PickPlaceInterface</span><span class="p">(</span><span class="s">"arm"</span><span class="p">,</span> <span class="s">"gripper"</span><span class="p">)</span>
+<span class="c1"># provide arm group and gripper group names
+# also takes a third parameter "plan_only" which defaults to False
+</span><span class="n">p</span> <span class="o">=</span> <span class="n">PickPlaceInterface</span><span class="p">(</span><span class="s">"arm"</span><span class="p">,</span> <span class="s">"gripper"</span><span class="p">)</span>
 
 <span class="n">g</span> <span class="o">=</span> <span class="n">Grasp</span><span class="p">()</span>
-<span class="c"># fill in g</span>
-<span class="c"># setup object named object_name using PlanningSceneInterface</span>
-<span class="n">p</span><span class="o">.</span><span class="n">pickup</span><span class="p">(</span><span class="s">"object_name"</span><span class="p">,</span> <span class="p">[</span><span class="n">g</span><span class="p">,</span> <span class="p">],</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
+<span class="c1"># fill in g
+# setup object named object_name using PlanningSceneInterface
+</span><span class="n">p</span><span class="o">.</span><span class="n">pickup</span><span class="p">(</span><span class="s">"object_name"</span><span class="p">,</span> <span class="p">[</span><span class="n">g</span><span class="p">,</span> <span class="p">],</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
 
 <span class="n">l</span> <span class="o">=</span> <span class="n">PlaceLocation</span><span class="p">()</span>
-<span class="c"># fill in l</span>
-<span class="n">p</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="s">"object_name"</span> <span class="p">[</span><span class="n">l</span><span class="p">,</span> <span class="p">],</span> <span class="n">goal_is_eef</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
+<span class="c1"># fill in l
+</span><span class="n">p</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="s">"object_name"</span> <span class="p">[</span><span class="n">l</span><span class="p">,</span> <span class="p">],</span> <span class="n">goal_is_eef</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
 
 </code></pre></div>
 <h2 id="migration-from-moveit_utils">Migration from moveit_utils</h2>
@@ -608,16 +604,16 @@ this is much more robust than publishing messages over topics asynchronously.</p
 <span class="kn">from</span> <span class="nn">moveit_python</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">"moveit_py"</span><span class="p">)</span>
-<span class="c"># create a planning scene interface, provide name of root link</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">PlanningSceneInterface</span><span class="p">(</span><span class="s">"base_link"</span><span class="p">)</span>
+<span class="c1"># create a planning scene interface, provide name of root link
+</span><span class="n">p</span> <span class="o">=</span> <span class="n">PlanningSceneInterface</span><span class="p">(</span><span class="s">"base_link"</span><span class="p">)</span>
 
-<span class="c"># add a cube of 0.1m size, at [1, 0, 0.5] in the base_link frame</span>
-<span class="n">p</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="c1"># add a cube of 0.1m size, at [1, 0, 0.5] in the base_link frame
+</span><span class="n">p</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
 
-<span class="c"># do something</span>
-
-<span class="c"># remove the cube</span>
-<span class="n">p</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">)</span>
+<span class="c1"># do something
+</span>
+<span class="c1"># remove the cube
+</span><span class="n">p</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">)</span>
 
 </code></pre></div>
 <p>If for some reason you would prefer to not use the service, simply set
@@ -635,18 +631,18 @@ your script and MoveIt.</p>
 <span class="kn">from</span> <span class="nn">moveit_msgs.msg</span> <span class="kn">import</span> <span class="n">Grasp</span><span class="p">,</span> <span class="n">PlaceLocation</span>
 
 <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">"moveit_py"</span><span class="p">)</span>
-<span class="c"># provide arm group and gripper group names</span>
-<span class="c"># also takes a third parameter "plan_only" which defaults to False</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">PickPlaceInterface</span><span class="p">(</span><span class="s">"arm"</span><span class="p">,</span> <span class="s">"gripper"</span><span class="p">)</span>
+<span class="c1"># provide arm group and gripper group names
+# also takes a third parameter "plan_only" which defaults to False
+</span><span class="n">p</span> <span class="o">=</span> <span class="n">PickPlaceInterface</span><span class="p">(</span><span class="s">"arm"</span><span class="p">,</span> <span class="s">"gripper"</span><span class="p">)</span>
 
 <span class="n">g</span> <span class="o">=</span> <span class="n">Grasp</span><span class="p">()</span>
-<span class="c"># fill in g</span>
-<span class="c"># setup object named object_name using PlanningSceneInterface</span>
-<span class="n">p</span><span class="o">.</span><span class="n">pickup</span><span class="p">(</span><span class="s">"object_name"</span><span class="p">,</span> <span class="p">[</span><span class="n">g</span><span class="p">,</span> <span class="p">],</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
+<span class="c1"># fill in g
+# setup object named object_name using PlanningSceneInterface
+</span><span class="n">p</span><span class="o">.</span><span class="n">pickup</span><span class="p">(</span><span class="s">"object_name"</span><span class="p">,</span> <span class="p">[</span><span class="n">g</span><span class="p">,</span> <span class="p">],</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
 
 <span class="n">l</span> <span class="o">=</span> <span class="n">PlaceLocation</span><span class="p">()</span>
-<span class="c"># fill in l</span>
-<span class="n">p</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="s">"object_name"</span> <span class="p">[</span><span class="n">l</span><span class="p">,</span> <span class="p">],</span> <span class="n">goal_is_eef</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
+<span class="c1"># fill in l
+</span><span class="n">p</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="s">"object_name"</span> <span class="p">[</span><span class="n">l</span><span class="p">,</span> <span class="p">],</span> <span class="n">goal_is_eef</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
 
 </code></pre></div>
 <h2 id="migration-from-moveit_utils">Migration from moveit_utils</h2>
@@ -802,16 +798,16 @@ this is much more robust than publishing messages over topics asynchronously.</p
 <span class="kn">from</span> <span class="nn">moveit_python</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">"moveit_py"</span><span class="p">)</span>
-<span class="c"># create a planning scene interface, provide name of root link</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">PlanningSceneInterface</span><span class="p">(</span><span class="s">"base_link"</span><span class="p">)</span>
+<span class="c1"># create a planning scene interface, provide name of root link
+</span><span class="n">p</span> <span class="o">=</span> <span class="n">PlanningSceneInterface</span><span class="p">(</span><span class="s">"base_link"</span><span class="p">)</span>
 
-<span class="c"># add a cube of 0.1m size, at [1, 0, 0.5] in the base_link frame</span>
-<span class="n">p</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="c1"># add a cube of 0.1m size, at [1, 0, 0.5] in the base_link frame
+</span><span class="n">p</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
 
-<span class="c"># do something</span>
-
-<span class="c"># remove the cube</span>
-<span class="n">p</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">)</span>
+<span class="c1"># do something
+</span>
+<span class="c1"># remove the cube
+</span><span class="n">p</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">)</span>
 
 </code></pre></div>
 <p>If for some reason you would prefer to not use the service, simply set
@@ -829,18 +825,18 @@ your script and MoveIt.</p>
 <span class="kn">from</span> <span class="nn">moveit_msgs.msg</span> <span class="kn">import</span> <span class="n">Grasp</span><span class="p">,</span> <span class="n">PlaceLocation</span>
 
 <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">"moveit_py"</span><span class="p">)</span>
-<span class="c"># provide arm group and gripper group names</span>
-<span class="c"># also takes a third parameter "plan_only" which defaults to False</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">PickPlaceInterface</span><span class="p">(</span><span class="s">"arm"</span><span class="p">,</span> <span class="s">"gripper"</span><span class="p">)</span>
+<span class="c1"># provide arm group and gripper group names
+# also takes a third parameter "plan_only" which defaults to False
+</span><span class="n">p</span> <span class="o">=</span> <span class="n">PickPlaceInterface</span><span class="p">(</span><span class="s">"arm"</span><span class="p">,</span> <span class="s">"gripper"</span><span class="p">)</span>
 
 <span class="n">g</span> <span class="o">=</span> <span class="n">Grasp</span><span class="p">()</span>
-<span class="c"># fill in g</span>
-<span class="c"># setup object named object_name using PlanningSceneInterface</span>
-<span class="n">p</span><span class="o">.</span><span class="n">pickup</span><span class="p">(</span><span class="s">"object_name"</span><span class="p">,</span> <span class="p">[</span><span class="n">g</span><span class="p">,</span> <span class="p">],</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
+<span class="c1"># fill in g
+# setup object named object_name using PlanningSceneInterface
+</span><span class="n">p</span><span class="o">.</span><span class="n">pickup</span><span class="p">(</span><span class="s">"object_name"</span><span class="p">,</span> <span class="p">[</span><span class="n">g</span><span class="p">,</span> <span class="p">],</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
 
 <span class="n">l</span> <span class="o">=</span> <span class="n">PlaceLocation</span><span class="p">()</span>
-<span class="c"># fill in l</span>
-<span class="n">p</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="s">"object_name"</span> <span class="p">[</span><span class="n">l</span><span class="p">,</span> <span class="p">],</span> <span class="n">goal_is_eef</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
+<span class="c1"># fill in l
+</span><span class="n">p</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="s">"object_name"</span> <span class="p">[</span><span class="n">l</span><span class="p">,</span> <span class="p">],</span> <span class="n">goal_is_eef</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
 
 </code></pre></div>
 <h2 id="migration-from-moveit_utils">Migration from moveit_utils</h2>
@@ -996,16 +992,16 @@ this is much more robust than publishing messages over topics asynchronously.</p
 <span class="kn">from</span> <span class="nn">moveit_python</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">"moveit_py"</span><span class="p">)</span>
-<span class="c"># create a planning scene interface, provide name of root link</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">PlanningSceneInterface</span><span class="p">(</span><span class="s">"base_link"</span><span class="p">)</span>
+<span class="c1"># create a planning scene interface, provide name of root link
+</span><span class="n">p</span> <span class="o">=</span> <span class="n">PlanningSceneInterface</span><span class="p">(</span><span class="s">"base_link"</span><span class="p">)</span>
 
-<span class="c"># add a cube of 0.1m size, at [1, 0, 0.5] in the base_link frame</span>
-<span class="n">p</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="c1"># add a cube of 0.1m size, at [1, 0, 0.5] in the base_link frame
+</span><span class="n">p</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
 
-<span class="c"># do something</span>
-
-<span class="c"># remove the cube</span>
-<span class="n">p</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">)</span>
+<span class="c1"># do something
+</span>
+<span class="c1"># remove the cube
+</span><span class="n">p</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">)</span>
 
 </code></pre></div>
 <p>If for some reason you would prefer to not use the service, simply set
@@ -1023,18 +1019,18 @@ your script and MoveIt.</p>
 <span class="kn">from</span> <span class="nn">moveit_msgs.msg</span> <span class="kn">import</span> <span class="n">Grasp</span><span class="p">,</span> <span class="n">PlaceLocation</span>
 
 <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">"moveit_py"</span><span class="p">)</span>
-<span class="c"># provide arm group and gripper group names</span>
-<span class="c"># also takes a third parameter "plan_only" which defaults to False</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">PickPlaceInterface</span><span class="p">(</span><span class="s">"arm"</span><span class="p">,</span> <span class="s">"gripper"</span><span class="p">)</span>
+<span class="c1"># provide arm group and gripper group names
+# also takes a third parameter "plan_only" which defaults to False
+</span><span class="n">p</span> <span class="o">=</span> <span class="n">PickPlaceInterface</span><span class="p">(</span><span class="s">"arm"</span><span class="p">,</span> <span class="s">"gripper"</span><span class="p">)</span>
 
 <span class="n">g</span> <span class="o">=</span> <span class="n">Grasp</span><span class="p">()</span>
-<span class="c"># fill in g</span>
-<span class="c"># setup object named object_name using PlanningSceneInterface</span>
-<span class="n">p</span><span class="o">.</span><span class="n">pickup</span><span class="p">(</span><span class="s">"object_name"</span><span class="p">,</span> <span class="p">[</span><span class="n">g</span><span class="p">,</span> <span class="p">],</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
+<span class="c1"># fill in g
+# setup object named object_name using PlanningSceneInterface
+</span><span class="n">p</span><span class="o">.</span><span class="n">pickup</span><span class="p">(</span><span class="s">"object_name"</span><span class="p">,</span> <span class="p">[</span><span class="n">g</span><span class="p">,</span> <span class="p">],</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
 
 <span class="n">l</span> <span class="o">=</span> <span class="n">PlaceLocation</span><span class="p">()</span>
-<span class="c"># fill in l</span>
-<span class="n">p</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="s">"object_name"</span> <span class="p">[</span><span class="n">l</span><span class="p">,</span> <span class="p">],</span> <span class="n">goal_is_eef</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
+<span class="c1"># fill in l
+</span><span class="n">p</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="s">"object_name"</span> <span class="p">[</span><span class="n">l</span><span class="p">,</span> <span class="p">],</span> <span class="n">goal_is_eef</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
 
 </code></pre></div>
 <h2 id="migration-from-moveit_utils">Migration from moveit_utils</h2>
@@ -1198,16 +1194,16 @@ this is much more robust than publishing messages over topics asynchronously.</p
 <span class="kn">from</span> <span class="nn">moveit_python</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">"moveit_py"</span><span class="p">)</span>
-<span class="c"># create a planning scene interface, provide name of root link</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">PlanningSceneInterface</span><span class="p">(</span><span class="s">"base_link"</span><span class="p">)</span>
+<span class="c1"># create a planning scene interface, provide name of root link
+</span><span class="n">p</span> <span class="o">=</span> <span class="n">PlanningSceneInterface</span><span class="p">(</span><span class="s">"base_link"</span><span class="p">)</span>
 
-<span class="c"># add a cube of 0.1m size, at [1, 0, 0.5] in the base_link frame</span>
-<span class="n">p</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="c1"># add a cube of 0.1m size, at [1, 0, 0.5] in the base_link frame
+</span><span class="n">p</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
 
-<span class="c"># do something</span>
-
-<span class="c"># remove the cube</span>
-<span class="n">p</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">)</span>
+<span class="c1"># do something
+</span>
+<span class="c1"># remove the cube
+</span><span class="n">p</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">)</span>
 
 </code></pre></div>
 <p>If for some reason you would prefer to not use the service, simply set
@@ -1225,18 +1221,18 @@ your script and MoveIt.</p>
 <span class="kn">from</span> <span class="nn">moveit_msgs.msg</span> <span class="kn">import</span> <span class="n">Grasp</span><span class="p">,</span> <span class="n">PlaceLocation</span>
 
 <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">"moveit_py"</span><span class="p">)</span>
-<span class="c"># provide arm group and gripper group names</span>
-<span class="c"># also takes a third parameter "plan_only" which defaults to False</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">PickPlaceInterface</span><span class="p">(</span><span class="s">"arm"</span><span class="p">,</span> <span class="s">"gripper"</span><span class="p">)</span>
+<span class="c1"># provide arm group and gripper group names
+# also takes a third parameter "plan_only" which defaults to False
+</span><span class="n">p</span> <span class="o">=</span> <span class="n">PickPlaceInterface</span><span class="p">(</span><span class="s">"arm"</span><span class="p">,</span> <span class="s">"gripper"</span><span class="p">)</span>
 
 <span class="n">g</span> <span class="o">=</span> <span class="n">Grasp</span><span class="p">()</span>
-<span class="c"># fill in g</span>
-<span class="c"># setup object named object_name using PlanningSceneInterface</span>
-<span class="n">p</span><span class="o">.</span><span class="n">pickup</span><span class="p">(</span><span class="s">"object_name"</span><span class="p">,</span> <span class="p">[</span><span class="n">g</span><span class="p">,</span> <span class="p">],</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
+<span class="c1"># fill in g
+# setup object named object_name using PlanningSceneInterface
+</span><span class="n">p</span><span class="o">.</span><span class="n">pickup</span><span class="p">(</span><span class="s">"object_name"</span><span class="p">,</span> <span class="p">[</span><span class="n">g</span><span class="p">,</span> <span class="p">],</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
 
 <span class="n">l</span> <span class="o">=</span> <span class="n">PlaceLocation</span><span class="p">()</span>
-<span class="c"># fill in l</span>
-<span class="n">p</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="s">"object_name"</span> <span class="p">[</span><span class="n">l</span><span class="p">,</span> <span class="p">],</span> <span class="n">goal_is_eef</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
+<span class="c1"># fill in l
+</span><span class="n">p</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="s">"object_name"</span> <span class="p">[</span><span class="n">l</span><span class="p">,</span> <span class="p">],</span> <span class="n">goal_is_eef</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
 
 </code></pre></div>
 <h2 id="migration-from-moveit_utils">Migration from moveit_utils</h2>
@@ -1392,16 +1388,16 @@ this is much more robust than publishing messages over topics asynchronously.</p
 <span class="kn">from</span> <span class="nn">moveit_python</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">"moveit_py"</span><span class="p">)</span>
-<span class="c"># create a planning scene interface, provide name of root link</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">PlanningSceneInterface</span><span class="p">(</span><span class="s">"base_link"</span><span class="p">)</span>
+<span class="c1"># create a planning scene interface, provide name of root link
+</span><span class="n">p</span> <span class="o">=</span> <span class="n">PlanningSceneInterface</span><span class="p">(</span><span class="s">"base_link"</span><span class="p">)</span>
 
-<span class="c"># add a cube of 0.1m size, at [1, 0, 0.5] in the base_link frame</span>
-<span class="n">p</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="c1"># add a cube of 0.1m size, at [1, 0, 0.5] in the base_link frame
+</span><span class="n">p</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
 
-<span class="c"># do something</span>
-
-<span class="c"># remove the cube</span>
-<span class="n">p</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">)</span>
+<span class="c1"># do something
+</span>
+<span class="c1"># remove the cube
+</span><span class="n">p</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">"my_cube"</span><span class="p">)</span>
 
 </code></pre></div>
 <p>If for some reason you would prefer to not use the service, simply set
@@ -1419,18 +1415,18 @@ your script and MoveIt.</p>
 <span class="kn">from</span> <span class="nn">moveit_msgs.msg</span> <span class="kn">import</span> <span class="n">Grasp</span><span class="p">,</span> <span class="n">PlaceLocation</span>
 
 <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">"moveit_py"</span><span class="p">)</span>
-<span class="c"># provide arm group and gripper group names</span>
-<span class="c"># also takes a third parameter "plan_only" which defaults to False</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">PickPlaceInterface</span><span class="p">(</span><span class="s">"arm"</span><span class="p">,</span> <span class="s">"gripper"</span><span class="p">)</span>
+<span class="c1"># provide arm group and gripper group names
+# also takes a third parameter "plan_only" which defaults to False
+</span><span class="n">p</span> <span class="o">=</span> <span class="n">PickPlaceInterface</span><span class="p">(</span><span class="s">"arm"</span><span class="p">,</span> <span class="s">"gripper"</span><span class="p">)</span>
 
 <span class="n">g</span> <span class="o">=</span> <span class="n">Grasp</span><span class="p">()</span>
-<span class="c"># fill in g</span>
-<span class="c"># setup object named object_name using PlanningSceneInterface</span>
-<span class="n">p</span><span class="o">.</span><span class="n">pickup</span><span class="p">(</span><span class="s">"object_name"</span><span class="p">,</span> <span class="p">[</span><span class="n">g</span><span class="p">,</span> <span class="p">],</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
+<span class="c1"># fill in g
+# setup object named object_name using PlanningSceneInterface
+</span><span class="n">p</span><span class="o">.</span><span class="n">pickup</span><span class="p">(</span><span class="s">"object_name"</span><span class="p">,</span> <span class="p">[</span><span class="n">g</span><span class="p">,</span> <span class="p">],</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
 
 <span class="n">l</span> <span class="o">=</span> <span class="n">PlaceLocation</span><span class="p">()</span>
-<span class="c"># fill in l</span>
-<span class="n">p</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="s">"object_name"</span> <span class="p">[</span><span class="n">l</span><span class="p">,</span> <span class="p">],</span> <span class="n">goal_is_eef</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
+<span class="c1"># fill in l
+</span><span class="n">p</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="s">"object_name"</span> <span class="p">[</span><span class="n">l</span><span class="p">,</span> <span class="p">],</span> <span class="n">goal_is_eef</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">support_name</span> <span class="o">=</span> <span class="s">"supporting_surface"</span><span class="p">)</span>
 
 </code></pre></div>
 <h2 id="migration-from-moveit_utils">Migration from moveit_utils</h2>
@@ -1483,7 +1479,7 @@ your script and MoveIt.</p>
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

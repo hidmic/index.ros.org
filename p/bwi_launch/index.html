@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -551,56 +547,7 @@ bwi_launch
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-bwi_launch">Changelog for package bwi_launch</h1>
-
-<h2 id="0-3-3-2015-08-06">0.3.3 (2015-08-06)</h2>
-
-<h2 id="0-3-2-2015-08-06">0.3.2 (2015-08-06)</h2>
-
-<ul>
-<li>  removed segbot_v2.arm.launch as mico driver is not yet released.
-Launch file moved to segbot_arm_launch experimental package.</li>
-<li>  included bwi_logging/launch/record.launch into segbot_v2.launch</li>
-<li>  added main, all-in-one launch file for the segbot_v2 with arm</li>
-<li>  parameterized the single robot launch file being launched by the
-multi_robot_launcher</li>
-<li>  now use default level on all launch file, in addition use
-multi_robot_launcher which can launch multiple robots in a
-scripted manner.</li>
-<li>  Contributors: Jivko Sinapov, Piyush Khandelwal, Shiqi Zhang</li>
-</ul>
-
-<h2 id="0-3-1-2015-03-31">0.3.1 (2015-03-31)</h2>
-
-<ul>
-<li>  updated launch files to account for upcoming amcl.launch change.</li>
-<li>  updated launch file to automatically start the planner/reasoner in
-simulation mode.</li>
-<li>  Contributors: Piyush Khandelwal</li>
-</ul>
-
-<h2 id="0-3-0-2015-03-24">0.3.0 (2015-03-24)</h2>
-
-<ul>
-<li>  bwi_launch: add build dependencies for launch checking references
-(<a href="https://github.com/utexas-bwi/bwi/issues/16">#16</a>) do not depend
-on segbot_gazebo twice</li>
-<li>  bwi_launch: dependency and launch file cleanup partial fix for
-<a href="https://github.com/utexas-bwi/bwi/issues/16">#16</a>
-</li>
-<li>  added launch files for segbot v1 and v2 to bwi_launch</li>
-<li>  Contributors: Jack O'Quin, Piyush Khandelwal</li>
-</ul>
-
-<h2 id="0-2-1-2014-05-14">0.2.1 (2014-05-14)</h2>
-
-<h2 id="0-2-0-2014-04-24">0.2.0 (2014-04-24)</h2>
-
-<ul>
-<li>  release to Hydro</li>
-<li>  make a separate bwi_launch package</li>
-<li>  Contributors: Jack O'Quin</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -678,7 +625,55 @@ on segbot_gazebo twice</li>
         
           <ul>
             
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/kinetic/bwi_launch/launch/segbot_v1.launch" target="_blank">launch/segbot_v1.launch</a>
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/kinetic/bwi_launch/launch/simulation.launch" target="_blank">launch/simulation.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/simulation/multimap2/combined.yaml&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/kinetic/bwi_launch/launch/simulation_v3.launch" target="_blank">launch/simulation_v3.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/simulation/multimap2/combined.yaml&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/kinetic/bwi_launch/launch/segbot_v2.launch" target="_blank">launch/segbot_v2.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -700,6 +695,68 @@ on segbot_gazebo twice</li>
                       
                         
                       
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/kinetic/bwi_launch/launch/segbot_v4.launch" target="_blank">launch/segbot_v4.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>localization_scan_topic</strong> <em>&#91;default: scan_filtered&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/real/multimap/multimap.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rviz</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/kinetic/bwi_launch/launch/segbot_ns_kr.launch" target="_blank">launch/segbot_ns_kr.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>ns</strong> <em>&#91;default: marvin&#93; </em></li>
                         
                       
                         
@@ -777,17 +834,13 @@ on segbot_gazebo twice</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/kinetic/bwi_launch/launch/segbot_v4.launch" target="_blank">launch/segbot_v4.launch</a>
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/kinetic/bwi_launch/launch/segbot_v1.launch" target="_blank">launch/segbot_v1.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
-                      
-                        
-                          <li><strong>localization_scan_topic</strong> <em>&#91;default: scan_filtered&#93; </em></li>
-                        
                       
                         
                           <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/real/multimap/multimap.yaml&#93; </em></li>
@@ -799,12 +852,6 @@ on segbot_gazebo twice</li>
                       
                         
                           <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
                         
                       
                         
@@ -855,7 +902,7 @@ on segbot_gazebo twice</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/kinetic/bwi_launch/launch/simulation_v3.launch" target="_blank">launch/simulation_v3.launch</a>
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/kinetic/bwi_launch/launch/includes/simulation_ns.launch.xml" target="_blank">launch/includes/simulation_ns.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -864,7 +911,59 @@ on segbot_gazebo twice</li>
                     <ul>
                       
                         
-                          <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/simulation/multimap2/combined.yaml&#93; </em></li>
+                          <li><strong>ns</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>x</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>y</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>yaw</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>robot_configuration</strong> <em>&#91;default: $(find segbot_bringup)/launch/includes/auxiliary.segbot_v2.launch.xml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>localization_scan_topic</strong> <em>&#91;default: scan_filtered&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>move_base_config</strong> <em>&#91;default: segbotv2&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>localization_scan_topic</strong> <em>&#91;default: $(arg localization_scan_topic)&#93; </em></li>
+                        
+                      
                         
                       
                         
@@ -882,7 +981,7 @@ on segbot_gazebo twice</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/kinetic/bwi_launch/launch/simulation.launch" target="_blank">launch/simulation.launch</a>
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/kinetic/bwi_launch/launch/includes/segbot.launch.xml" target="_blank">launch/includes/segbot.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -891,47 +990,15 @@ on segbot_gazebo twice</li>
                     <ul>
                       
                         
-                          <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/simulation/multimap2/combined.yaml&#93; </em></li>
+                          <li><strong>laser_max_range</strong> <em>&#91;default: 4.0&#93; </em></li>
                         
                       
                         
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/kinetic/bwi_launch/launch/segbot_ns_kr.launch" target="_blank">launch/segbot_ns_kr.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>ns</strong> <em>&#91;default: marvin&#93; </em></li>
+                          <li><strong>localization_scan_topic</strong> <em>&#91;default: scan_filtered&#93; </em></li>
                         
                       
                         
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/kinetic/bwi_launch/launch/segbot_v2.launch" target="_blank">launch/segbot_v2.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/real/multimap/multimap.yaml&#93; </em></li>
+                          <li><strong>move_base_config</strong> <em>&#91;default: segbotv2&#93; </em></li>
                         
                       
                         
@@ -944,6 +1011,26 @@ on segbot_gazebo twice</li>
                       
                         
                       
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>config</strong> <em>&#91;default: $(arg move_base_config)&#93; </em></li>
                         
                       
                         
@@ -1066,146 +1153,6 @@ on segbot_gazebo twice</li>
                           <li><strong>localization_scan_topic</strong> <em>&#91;default: $(arg localization_scan_topic)&#93; </em></li>
                         
                       
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/kinetic/bwi_launch/launch/includes/segbot.launch.xml" target="_blank">launch/includes/segbot.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>laser_max_range</strong> <em>&#91;default: 4.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>localization_scan_topic</strong> <em>&#91;default: scan_filtered&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>move_base_config</strong> <em>&#91;default: segbotv2&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rviz</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><strong>config</strong> <em>&#91;default: $(arg move_base_config)&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/kinetic/bwi_launch/launch/includes/simulation_ns.launch.xml" target="_blank">launch/includes/simulation_ns.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>ns</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>x</strong> <em>&#91;default: 0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>y</strong> <em>&#91;default: 0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>yaw</strong> <em>&#91;default: 0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>robot_configuration</strong> <em>&#91;default: $(find segbot_bringup)/launch/includes/auxiliary.segbot_v2.launch.xml&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>localization_scan_topic</strong> <em>&#91;default: scan_filtered&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>move_base_config</strong> <em>&#91;default: segbotv2&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><strong>localization_scan_topic</strong> <em>&#91;default: $(arg localization_scan_topic)&#93; </em></li>
                         
                       
                         
@@ -1676,56 +1623,7 @@ bwi_launch
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-bwi_launch">Changelog for package bwi_launch</h1>
-
-<h2 id="0-3-3-2015-08-06">0.3.3 (2015-08-06)</h2>
-
-<h2 id="0-3-2-2015-08-06">0.3.2 (2015-08-06)</h2>
-
-<ul>
-<li>  removed segbot_v2.arm.launch as mico driver is not yet released.
-Launch file moved to segbot_arm_launch experimental package.</li>
-<li>  included bwi_logging/launch/record.launch into segbot_v2.launch</li>
-<li>  added main, all-in-one launch file for the segbot_v2 with arm</li>
-<li>  parameterized the single robot launch file being launched by the
-multi_robot_launcher</li>
-<li>  now use default level on all launch file, in addition use
-multi_robot_launcher which can launch multiple robots in a
-scripted manner.</li>
-<li>  Contributors: Jivko Sinapov, Piyush Khandelwal, Shiqi Zhang</li>
-</ul>
-
-<h2 id="0-3-1-2015-03-31">0.3.1 (2015-03-31)</h2>
-
-<ul>
-<li>  updated launch files to account for upcoming amcl.launch change.</li>
-<li>  updated launch file to automatically start the planner/reasoner in
-simulation mode.</li>
-<li>  Contributors: Piyush Khandelwal</li>
-</ul>
-
-<h2 id="0-3-0-2015-03-24">0.3.0 (2015-03-24)</h2>
-
-<ul>
-<li>  bwi_launch: add build dependencies for launch checking references
-(<a href="https://github.com/utexas-bwi/bwi/issues/16">#16</a>) do not depend
-on segbot_gazebo twice</li>
-<li>  bwi_launch: dependency and launch file cleanup partial fix for
-<a href="https://github.com/utexas-bwi/bwi/issues/16">#16</a>
-</li>
-<li>  added launch files for segbot v1 and v2 to bwi_launch</li>
-<li>  Contributors: Jack O'Quin, Piyush Khandelwal</li>
-</ul>
-
-<h2 id="0-2-1-2014-05-14">0.2.1 (2014-05-14)</h2>
-
-<h2 id="0-2-0-2014-04-24">0.2.0 (2014-04-24)</h2>
-
-<ul>
-<li>  release to Hydro</li>
-<li>  make a separate bwi_launch package</li>
-<li>  Contributors: Jack O'Quin</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1803,7 +1701,7 @@ on segbot_gazebo twice</li>
         
           <ul>
             
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/indigo/bwi_launch/launch/segbot_v1.launch" target="_blank">launch/segbot_v1.launch</a>
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/indigo/bwi_launch/launch/simulation.launch" target="_blank">launch/simulation.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1812,70 +1710,7 @@ on segbot_gazebo twice</li>
                     <ul>
                       
                         
-                          <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/real/multimap/multimap.yaml&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/indigo/bwi_launch/launch/multi_robot_simulation.launch" target="_blank">launch/multi_robot_simulation.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/simulation/multimap/test.yaml&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/indigo/bwi_launch/launch/segbot_v4.launch" target="_blank">launch/segbot_v4.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>localization_scan_topic</strong> <em>&#91;default: hokuyo/scan&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/real/multimap/multimap.yaml&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/indigo/bwi_launch/launch/segbot_v3.launch" target="_blank">launch/segbot_v3.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/real/multimap/multimap.yaml&#93; </em></li>
-                        
-                      
+                          <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/simulation/multimap2/combined.yaml&#93; </em></li>
                         
                       
                         
@@ -1914,7 +1749,7 @@ on segbot_gazebo twice</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/indigo/bwi_launch/launch/simulation.launch" target="_blank">launch/simulation.launch</a>
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/indigo/bwi_launch/launch/segbot_v2.launch" target="_blank">launch/segbot_v2.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1923,7 +1758,32 @@ on segbot_gazebo twice</li>
                     <ul>
                       
                         
-                          <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/simulation/multimap2/combined.yaml&#93; </em></li>
+                          <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/real/multimap/multimap.yaml&#93; </em></li>
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/indigo/bwi_launch/launch/segbot_v4.launch" target="_blank">launch/segbot_v4.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>localization_scan_topic</strong> <em>&#91;default: hokuyo/scan&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/real/multimap/multimap.yaml&#93; </em></li>
+                        
+                      
                         
                       
                         
@@ -1954,7 +1814,24 @@ on segbot_gazebo twice</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/indigo/bwi_launch/launch/segbot_v2.launch" target="_blank">launch/segbot_v2.launch</a>
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/indigo/bwi_launch/launch/multi_robot_simulation.launch" target="_blank">launch/multi_robot_simulation.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/simulation/multimap/test.yaml&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/indigo/bwi_launch/launch/segbot_v1.launch" target="_blank">launch/segbot_v1.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1964,6 +1841,159 @@ on segbot_gazebo twice</li>
                       
                         
                           <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/real/multimap/multimap.yaml&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/indigo/bwi_launch/launch/segbot_v3.launch" target="_blank">launch/segbot_v3.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/real/multimap/multimap.yaml&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/indigo/bwi_launch/launch/includes/simulation_ns.launch.xml" target="_blank">launch/includes/simulation_ns.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>ns</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>x</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>y</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>yaw</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>robot_configuration</strong> <em>&#91;default: $(find segbot_bringup)/launch/includes/auxiliary.segbot_v2.launch.xml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>localization_scan_topic</strong> <em>&#91;default: scan_filtered&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>move_base_config</strong> <em>&#91;default: segbotv2&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>localization_scan_topic</strong> <em>&#91;default: $(arg localization_scan_topic)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/indigo/bwi_launch/launch/includes/segbot.launch.xml" target="_blank">launch/includes/segbot.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>laser_max_range</strong> <em>&#91;default: 4.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>localization_scan_topic</strong> <em>&#91;default: scan_filtered&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>move_base_config</strong> <em>&#91;default: segbotv2&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>config</strong> <em>&#91;default: $(arg move_base_config)&#93; </em></li>
+                        
+                      
                         
                       
                         
@@ -2076,138 +2106,6 @@ on segbot_gazebo twice</li>
                           <li><strong>localization_scan_topic</strong> <em>&#91;default: $(arg localization_scan_topic)&#93; </em></li>
                         
                       
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/indigo/bwi_launch/launch/includes/segbot.launch.xml" target="_blank">launch/includes/segbot.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>laser_max_range</strong> <em>&#91;default: 4.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>localization_scan_topic</strong> <em>&#91;default: scan_filtered&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>move_base_config</strong> <em>&#91;default: segbotv2&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><strong>config</strong> <em>&#91;default: $(arg move_base_config)&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/indigo/bwi_launch/launch/includes/simulation_ns.launch.xml" target="_blank">launch/includes/simulation_ns.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>ns</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>x</strong> <em>&#91;default: 0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>y</strong> <em>&#91;default: 0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>yaw</strong> <em>&#91;default: 0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>robot_configuration</strong> <em>&#91;default: $(find segbot_bringup)/launch/includes/auxiliary.segbot_v2.launch.xml&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>localization_scan_topic</strong> <em>&#91;default: scan_filtered&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>move_base_config</strong> <em>&#91;default: segbotv2&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><strong>localization_scan_topic</strong> <em>&#91;default: $(arg localization_scan_topic)&#93; </em></li>
                         
                       
                         
@@ -2694,39 +2592,7 @@ bwi_launch
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-bwi_launch">Changelog for package bwi_launch</h1>
-
-<h2 id="0-3-1-2015-03-31">0.3.1 (2015-03-31)</h2>
-
-<ul>
-<li>  updated launch files to account for upcoming amcl.launch change.</li>
-<li>  updated launch file to automatically start the planner/reasoner in
-simulation mode.</li>
-<li>  Contributors: Piyush Khandelwal</li>
-</ul>
-
-<h2 id="0-3-0-2015-03-24">0.3.0 (2015-03-24)</h2>
-
-<ul>
-<li>  bwi_launch: add build dependencies for launch checking references
-(<a href="https://github.com/utexas-bwi/bwi/issues/16">#16</a>) do not depend
-on segbot_gazebo twice</li>
-<li>  bwi_launch: dependency and launch file cleanup partial fix for
-<a href="https://github.com/utexas-bwi/bwi/issues/16">#16</a>
-</li>
-<li>  added launch files for segbot v1 and v2 to bwi_launch</li>
-<li>  Contributors: Jack O'Quin, Piyush Khandelwal</li>
-</ul>
-
-<h2 id="0-2-1-2014-05-14">0.2.1 (2014-05-14)</h2>
-
-<h2 id="0-2-0-2014-04-24">0.2.0 (2014-04-24)</h2>
-
-<ul>
-<li>  release to Hydro</li>
-<li>  make a separate bwi_launch package</li>
-<li>  Contributors: Jack O'Quin</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3013,7 +2879,26 @@ on segbot_gazebo twice</li>
         
           <ul>
             
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/hydro_devel/bwi_launch/launch/segbot_v1.launch" target="_blank">launch/segbot_v1.launch</a>
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/hydro_devel/bwi_launch/launch/simulation.launch" target="_blank">launch/simulation.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/simulation/multimap/test.yaml&#93; </em></li>
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/hydro_devel/bwi_launch/launch/segbot_v2.launch" target="_blank">launch/segbot_v2.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3023,6 +2908,27 @@ on segbot_gazebo twice</li>
                       
                         
                           <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/real/multimap/multimap.yaml&#93; </em></li>
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/hydro_devel/bwi_launch/launch/segbot_ns_kr.launch" target="_blank">launch/segbot_ns_kr.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>ns</strong> <em>&#91;default: marvin&#93; </em></li>
+                        
+                      
                         
                       
                     </ul>
@@ -3063,45 +2969,7 @@ on segbot_gazebo twice</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/hydro_devel/bwi_launch/launch/simulation.launch" target="_blank">launch/simulation.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/simulation/multimap/test.yaml&#93; </em></li>
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/hydro_devel/bwi_launch/launch/segbot_ns_kr.launch" target="_blank">launch/segbot_ns_kr.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>ns</strong> <em>&#91;default: marvin&#93; </em></li>
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/hydro_devel/bwi_launch/launch/segbot_v2.launch" target="_blank">launch/segbot_v2.launch</a>
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/hydro_devel/bwi_launch/launch/segbot_v1.launch" target="_blank">launch/segbot_v1.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3113,14 +2981,12 @@ on segbot_gazebo twice</li>
                           <li><strong>multimap_file</strong> <em>&#91;default: $(find utexas_gdc)/maps/real/multimap/multimap.yaml&#93; </em></li>
                         
                       
-                        
-                      
                     </ul>
                   </li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/hydro_devel/bwi_launch/launch/includes/segbot_ns.launch.xml" target="_blank">launch/includes/segbot_ns.launch.xml</a>
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/hydro_devel/bwi_launch/launch/includes/simulation_ns.launch.xml" target="_blank">launch/includes/simulation_ns.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3131,41 +2997,6 @@ on segbot_gazebo twice</li>
                         
                           <li><strong>ns</strong>  </em></li>
                         
-                      
-                        
-                          <li><strong>laser_max_range</strong> <em>&#91;default: 4.0&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/hydro_devel/bwi_launch/launch/includes/simulation.launch.xml" target="_blank">launch/includes/simulation.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
                       
                         
                           <li><strong>x</strong> <em>&#91;default: 0&#93; </em></li>
@@ -3255,7 +3086,7 @@ on segbot_gazebo twice</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/utexas-bwi/bwi/blob/hydro_devel/bwi_launch/launch/includes/simulation_ns.launch.xml" target="_blank">launch/includes/simulation_ns.launch.xml</a>
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/hydro_devel/bwi_launch/launch/includes/segbot_ns.launch.xml" target="_blank">launch/includes/segbot_ns.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3266,6 +3097,41 @@ on segbot_gazebo twice</li>
                         
                           <li><strong>ns</strong>  </em></li>
                         
+                      
+                        
+                          <li><strong>laser_max_range</strong> <em>&#91;default: 4.0&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/utexas-bwi/bwi/blob/hydro_devel/bwi_launch/launch/includes/simulation.launch.xml" target="_blank">launch/includes/simulation.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
                       
                         
                           <li><strong>x</strong> <em>&#91;default: 0&#93; </em></li>
@@ -3486,7 +3352,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

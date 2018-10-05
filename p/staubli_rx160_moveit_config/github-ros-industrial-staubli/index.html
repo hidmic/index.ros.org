@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -820,27 +816,6 @@ staubli_rx160_support
         
           <ul>
             
-              <li><a href="https://github.com/ros-industrial/staubli/blob/indigo-devel/staubli_rx160_moveit_config/launch/planning_context.launch" target="_blank">launch/planning_context.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>load_robot_description</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>robot_description</strong> <em>&#91;default: robot_description&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ros-industrial/staubli/blob/indigo-devel/staubli_rx160_moveit_config/launch/run_benchmark_ompl.launch" target="_blank">launch/run_benchmark_ompl.launch</a>
                 <ul class="list-unstyled">
                   
@@ -872,70 +847,6 @@ staubli_rx160_support
                       
                         
                           <li><strong>moveit_warehouse_database_path</strong>  </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/staubli/blob/indigo-devel/staubli_rx160_moveit_config/launch/demo.launch" target="_blank">launch/demo.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>db</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/staubli/blob/indigo-devel/staubli_rx160_moveit_config/launch/moveit_rviz.launch" target="_blank">launch/moveit_rviz.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><strong>config</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
                         
                       
                     </ul>
@@ -1042,7 +953,7 @@ staubli_rx160_support
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/staubli/blob/indigo-devel/staubli_rx160_moveit_config/launch/sensor_manager.launch.xml" target="_blank">launch/sensor_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/staubli/blob/indigo-devel/staubli_rx160_moveit_config/launch/planning_context.launch" target="_blank">launch/planning_context.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1051,7 +962,11 @@ staubli_rx160_support
                     <ul>
                       
                         
-                          <li><strong>moveit_sensor_manager</strong> <em>&#91;default: staubli_rx160&#93; </em></li>
+                          <li><strong>load_robot_description</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>robot_description</strong> <em>&#91;default: robot_description&#93; </em></li>
                         
                       
                     </ul>
@@ -1059,13 +974,64 @@ staubli_rx160_support
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/staubli/blob/indigo-devel/staubli_rx160_moveit_config/launch/staubli_rx160_moveit_sensor_manager.launch.xml" target="_blank">launch/staubli_rx160_moveit_sensor_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/staubli/blob/indigo-devel/staubli_rx160_moveit_config/launch/moveit_rviz.launch" target="_blank">launch/moveit_rviz.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>config</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/staubli/blob/indigo-devel/staubli_rx160_moveit_config/launch/demo.launch" target="_blank">launch/demo.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>db</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
                       
                     </ul>
                   </li>
@@ -1114,7 +1080,41 @@ staubli_rx160_support
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/staubli/blob/indigo-devel/staubli_rx160_moveit_config/launch/staubli_rx160_moveit_controller_manager.launch.xml" target="_blank">launch/staubli_rx160_moveit_controller_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/staubli/blob/indigo-devel/staubli_rx160_moveit_config/launch/planning_pipeline.launch.xml" target="_blank">launch/planning_pipeline.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>pipeline</strong> <em>&#91;default: ompl&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/staubli/blob/indigo-devel/staubli_rx160_moveit_config/launch/sensor_manager.launch.xml" target="_blank">launch/sensor_manager.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>moveit_sensor_manager</strong> <em>&#91;default: staubli_rx160&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/staubli/blob/indigo-devel/staubli_rx160_moveit_config/launch/fake_moveit_controller_manager.launch.xml" target="_blank">launch/fake_moveit_controller_manager.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1127,7 +1127,7 @@ staubli_rx160_support
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/staubli/blob/indigo-devel/staubli_rx160_moveit_config/launch/fake_moveit_controller_manager.launch.xml" target="_blank">launch/fake_moveit_controller_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/staubli/blob/indigo-devel/staubli_rx160_moveit_config/launch/staubli_rx160_moveit_sensor_manager.launch.xml" target="_blank">launch/staubli_rx160_moveit_sensor_manager.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1159,17 +1159,13 @@ staubli_rx160_support
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/staubli/blob/indigo-devel/staubli_rx160_moveit_config/launch/planning_pipeline.launch.xml" target="_blank">launch/planning_pipeline.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/staubli/blob/indigo-devel/staubli_rx160_moveit_config/launch/staubli_rx160_moveit_controller_manager.launch.xml" target="_blank">launch/staubli_rx160_moveit_controller_manager.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
-                      
-                        
-                          <li><strong>pipeline</strong> <em>&#91;default: ompl&#93; </em></li>
-                        
                       
                     </ul>
                   </li>
@@ -1901,27 +1897,6 @@ staubli_rx160_support
         
           <ul>
             
-              <li><a href="https://github.com/ros-industrial/staubli/blob/hydro-devel/staubli_rx160_moveit_config/launch/planning_context.launch" target="_blank">launch/planning_context.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>load_robot_description</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>robot_description</strong> <em>&#91;default: robot_description&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ros-industrial/staubli/blob/hydro-devel/staubli_rx160_moveit_config/launch/run_benchmark_ompl.launch" target="_blank">launch/run_benchmark_ompl.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1953,70 +1928,6 @@ staubli_rx160_support
                       
                         
                           <li><strong>moveit_warehouse_database_path</strong>  </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/staubli/blob/hydro-devel/staubli_rx160_moveit_config/launch/demo.launch" target="_blank">launch/demo.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>db</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/staubli/blob/hydro-devel/staubli_rx160_moveit_config/launch/moveit_rviz.launch" target="_blank">launch/moveit_rviz.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><strong>config</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
                         
                       
                     </ul>
@@ -2123,7 +2034,7 @@ staubli_rx160_support
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/staubli/blob/hydro-devel/staubli_rx160_moveit_config/launch/sensor_manager.launch.xml" target="_blank">launch/sensor_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/staubli/blob/hydro-devel/staubli_rx160_moveit_config/launch/planning_context.launch" target="_blank">launch/planning_context.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2132,7 +2043,11 @@ staubli_rx160_support
                     <ul>
                       
                         
-                          <li><strong>moveit_sensor_manager</strong> <em>&#91;default: staubli_rx160&#93; </em></li>
+                          <li><strong>load_robot_description</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>robot_description</strong> <em>&#91;default: robot_description&#93; </em></li>
                         
                       
                     </ul>
@@ -2140,13 +2055,64 @@ staubli_rx160_support
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/staubli/blob/hydro-devel/staubli_rx160_moveit_config/launch/staubli_rx160_moveit_sensor_manager.launch.xml" target="_blank">launch/staubli_rx160_moveit_sensor_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/staubli/blob/hydro-devel/staubli_rx160_moveit_config/launch/moveit_rviz.launch" target="_blank">launch/moveit_rviz.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>config</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/staubli/blob/hydro-devel/staubli_rx160_moveit_config/launch/demo.launch" target="_blank">launch/demo.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>db</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
                       
                     </ul>
                   </li>
@@ -2195,7 +2161,41 @@ staubli_rx160_support
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/staubli/blob/hydro-devel/staubli_rx160_moveit_config/launch/staubli_rx160_moveit_controller_manager.launch.xml" target="_blank">launch/staubli_rx160_moveit_controller_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/staubli/blob/hydro-devel/staubli_rx160_moveit_config/launch/planning_pipeline.launch.xml" target="_blank">launch/planning_pipeline.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>pipeline</strong> <em>&#91;default: ompl&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/staubli/blob/hydro-devel/staubli_rx160_moveit_config/launch/sensor_manager.launch.xml" target="_blank">launch/sensor_manager.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>moveit_sensor_manager</strong> <em>&#91;default: staubli_rx160&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/staubli/blob/hydro-devel/staubli_rx160_moveit_config/launch/fake_moveit_controller_manager.launch.xml" target="_blank">launch/fake_moveit_controller_manager.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2208,7 +2208,7 @@ staubli_rx160_support
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/staubli/blob/hydro-devel/staubli_rx160_moveit_config/launch/fake_moveit_controller_manager.launch.xml" target="_blank">launch/fake_moveit_controller_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/staubli/blob/hydro-devel/staubli_rx160_moveit_config/launch/staubli_rx160_moveit_sensor_manager.launch.xml" target="_blank">launch/staubli_rx160_moveit_sensor_manager.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2240,17 +2240,13 @@ staubli_rx160_support
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/staubli/blob/hydro-devel/staubli_rx160_moveit_config/launch/planning_pipeline.launch.xml" target="_blank">launch/planning_pipeline.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/staubli/blob/hydro-devel/staubli_rx160_moveit_config/launch/staubli_rx160_moveit_controller_manager.launch.xml" target="_blank">launch/staubli_rx160_moveit_controller_manager.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
-                      
-                        
-                          <li><strong>pipeline</strong> <em>&#91;default: ompl&#93; </em></li>
-                        
                       
                     </ul>
                   </li>
@@ -2422,7 +2418,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

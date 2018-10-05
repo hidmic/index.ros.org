@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -569,42 +565,7 @@ naoqi_tools
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-pepper_navigation">Changelog for package pepper_navigation</h1>
-
-<h2 id="0-0-2-2015-03-31">0.0.2 (2015-03-31)</h2>
-
-<ul>
-<li>  fix install rules</li>
-<li>  call catkin macro in the right order</li>
-<li>  use the proper name for naoqi_sensors</li>
-<li>  Contributors: Vincent Rabaud</li>
-</ul>
-
-<h2 id="0-0-1-2015-03-31">0.0.1 (2015-03-31)</h2>
-
-<ul>
-<li>  POD: Use PoseWithConfidenceStamped messages.</li>
-<li>  RVIZ: Add naoqi_rviz plugins and pod display plugin.</li>
-<li>  BLINDZONES: Fix multiple arrays issues.</li>
-<li>  NAVIGATION: Add Tracker node.</li>
-<li>  NAVIGATION: Add naoqi prefix to node names.</li>
-<li>  NAVIGATETO: Transform points in /base_footprint frame.</li>
-<li>  NAVIGATION: Send navigateTo on /initialpose messages.</li>
-<li>  remove duplicate moveto node</li>
-<li>  NAVIGATION: Add move to listener to send moveTo via rviz.</li>
-<li>  POD: Publish pod confidence only only if position is published.</li>
-<li>  NAVIGATION: Fix setup.py.</li>
-<li>  NAVIGATION: Fix occupancy maps and and grid cells.</li>
-<li>  NAVIGATION: Fix safe map display.</li>
-<li>  NAVIGATION: Add secure map display.</li>
-<li>  NAVIGATION: Fix navigation_sensors to display colored point cloud.</li>
-<li>  NAVIGATION: Set robot data in base_footprint frame.</li>
-<li>  Add navigation sensors displaying blind zones data.</li>
-<li>  NAVIGATION: Fix blind zones display.</li>
-<li>  NAVIGATION: Stop nodes when they are not subscribed.</li>
-<li>  NAVIGATION: Add navigation package.</li>
-<li>  Contributors: Karsten Knese, lsouchet</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -826,6 +787,52 @@ naoqi_tools
                 </ul>
               </li>
             
+              <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/exploration.launch" target="_blank">launch/exploration.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>radius</strong> <em>&#91;default: 5&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/navigation.launch" target="_blank">launch/navigation.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/rviz_pepper.launch" target="_blank">launch/rviz_pepper.launch</a>
                 <ul class="list-unstyled">
                   
@@ -857,52 +864,6 @@ naoqi_tools
                       
                         
                           <li><strong>path_to_map</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/navigation.launch" target="_blank">launch/navigation.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/exploration.launch" target="_blank">launch/exploration.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>radius</strong> <em>&#91;default: 5&#93; </em></li>
                         
                       
                     </ul>
@@ -1376,42 +1337,7 @@ naoqi_tools
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-pepper_navigation">Changelog for package pepper_navigation</h1>
-
-<h2 id="0-0-2-2015-03-31">0.0.2 (2015-03-31)</h2>
-
-<ul>
-<li>  fix install rules</li>
-<li>  call catkin macro in the right order</li>
-<li>  use the proper name for naoqi_sensors</li>
-<li>  Contributors: Vincent Rabaud</li>
-</ul>
-
-<h2 id="0-0-1-2015-03-31">0.0.1 (2015-03-31)</h2>
-
-<ul>
-<li>  POD: Use PoseWithConfidenceStamped messages.</li>
-<li>  RVIZ: Add naoqi_rviz plugins and pod display plugin.</li>
-<li>  BLINDZONES: Fix multiple arrays issues.</li>
-<li>  NAVIGATION: Add Tracker node.</li>
-<li>  NAVIGATION: Add naoqi prefix to node names.</li>
-<li>  NAVIGATETO: Transform points in /base_footprint frame.</li>
-<li>  NAVIGATION: Send navigateTo on /initialpose messages.</li>
-<li>  remove duplicate moveto node</li>
-<li>  NAVIGATION: Add move to listener to send moveTo via rviz.</li>
-<li>  POD: Publish pod confidence only only if position is published.</li>
-<li>  NAVIGATION: Fix setup.py.</li>
-<li>  NAVIGATION: Fix occupancy maps and and grid cells.</li>
-<li>  NAVIGATION: Fix safe map display.</li>
-<li>  NAVIGATION: Add secure map display.</li>
-<li>  NAVIGATION: Fix navigation_sensors to display colored point cloud.</li>
-<li>  NAVIGATION: Set robot data in base_footprint frame.</li>
-<li>  Add navigation sensors displaying blind zones data.</li>
-<li>  NAVIGATION: Fix blind zones display.</li>
-<li>  NAVIGATION: Stop nodes when they are not subscribed.</li>
-<li>  NAVIGATION: Add navigation package.</li>
-<li>  Contributors: Karsten Knese, lsouchet</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1633,6 +1559,52 @@ naoqi_tools
                 </ul>
               </li>
             
+              <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/exploration.launch" target="_blank">launch/exploration.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>radius</strong> <em>&#91;default: 5&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/navigation.launch" target="_blank">launch/navigation.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/rviz_pepper.launch" target="_blank">launch/rviz_pepper.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1664,52 +1636,6 @@ naoqi_tools
                       
                         
                           <li><strong>path_to_map</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/navigation.launch" target="_blank">launch/navigation.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/exploration.launch" target="_blank">launch/exploration.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>radius</strong> <em>&#91;default: 5&#93; </em></li>
                         
                       
                     </ul>
@@ -2191,42 +2117,7 @@ naoqi_tools
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-pepper_navigation">Changelog for package pepper_navigation</h1>
-
-<h2 id="0-0-2-2015-03-31">0.0.2 (2015-03-31)</h2>
-
-<ul>
-<li>  fix install rules</li>
-<li>  call catkin macro in the right order</li>
-<li>  use the proper name for naoqi_sensors</li>
-<li>  Contributors: Vincent Rabaud</li>
-</ul>
-
-<h2 id="0-0-1-2015-03-31">0.0.1 (2015-03-31)</h2>
-
-<ul>
-<li>  POD: Use PoseWithConfidenceStamped messages.</li>
-<li>  RVIZ: Add naoqi_rviz plugins and pod display plugin.</li>
-<li>  BLINDZONES: Fix multiple arrays issues.</li>
-<li>  NAVIGATION: Add Tracker node.</li>
-<li>  NAVIGATION: Add naoqi prefix to node names.</li>
-<li>  NAVIGATETO: Transform points in /base_footprint frame.</li>
-<li>  NAVIGATION: Send navigateTo on /initialpose messages.</li>
-<li>  remove duplicate moveto node</li>
-<li>  NAVIGATION: Add move to listener to send moveTo via rviz.</li>
-<li>  POD: Publish pod confidence only only if position is published.</li>
-<li>  NAVIGATION: Fix setup.py.</li>
-<li>  NAVIGATION: Fix occupancy maps and and grid cells.</li>
-<li>  NAVIGATION: Fix safe map display.</li>
-<li>  NAVIGATION: Add secure map display.</li>
-<li>  NAVIGATION: Fix navigation_sensors to display colored point cloud.</li>
-<li>  NAVIGATION: Set robot data in base_footprint frame.</li>
-<li>  Add navigation sensors displaying blind zones data.</li>
-<li>  NAVIGATION: Fix blind zones display.</li>
-<li>  NAVIGATION: Stop nodes when they are not subscribed.</li>
-<li>  NAVIGATION: Add navigation package.</li>
-<li>  Contributors: Karsten Knese, lsouchet</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2448,6 +2339,52 @@ naoqi_tools
                 </ul>
               </li>
             
+              <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/exploration.launch" target="_blank">launch/exploration.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>radius</strong> <em>&#91;default: 5&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/navigation.launch" target="_blank">launch/navigation.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/rviz_pepper.launch" target="_blank">launch/rviz_pepper.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2479,52 +2416,6 @@ naoqi_tools
                       
                         
                           <li><strong>path_to_map</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/navigation.launch" target="_blank">launch/navigation.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/exploration.launch" target="_blank">launch/exploration.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>radius</strong> <em>&#91;default: 5&#93; </em></li>
                         
                       
                     </ul>
@@ -2998,42 +2889,7 @@ naoqi_tools
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-pepper_navigation">Changelog for package pepper_navigation</h1>
-
-<h2 id="0-0-2-2015-03-31">0.0.2 (2015-03-31)</h2>
-
-<ul>
-<li>  fix install rules</li>
-<li>  call catkin macro in the right order</li>
-<li>  use the proper name for naoqi_sensors</li>
-<li>  Contributors: Vincent Rabaud</li>
-</ul>
-
-<h2 id="0-0-1-2015-03-31">0.0.1 (2015-03-31)</h2>
-
-<ul>
-<li>  POD: Use PoseWithConfidenceStamped messages.</li>
-<li>  RVIZ: Add naoqi_rviz plugins and pod display plugin.</li>
-<li>  BLINDZONES: Fix multiple arrays issues.</li>
-<li>  NAVIGATION: Add Tracker node.</li>
-<li>  NAVIGATION: Add naoqi prefix to node names.</li>
-<li>  NAVIGATETO: Transform points in /base_footprint frame.</li>
-<li>  NAVIGATION: Send navigateTo on /initialpose messages.</li>
-<li>  remove duplicate moveto node</li>
-<li>  NAVIGATION: Add move to listener to send moveTo via rviz.</li>
-<li>  POD: Publish pod confidence only only if position is published.</li>
-<li>  NAVIGATION: Fix setup.py.</li>
-<li>  NAVIGATION: Fix occupancy maps and and grid cells.</li>
-<li>  NAVIGATION: Fix safe map display.</li>
-<li>  NAVIGATION: Add secure map display.</li>
-<li>  NAVIGATION: Fix navigation_sensors to display colored point cloud.</li>
-<li>  NAVIGATION: Set robot data in base_footprint frame.</li>
-<li>  Add navigation sensors displaying blind zones data.</li>
-<li>  NAVIGATION: Fix blind zones display.</li>
-<li>  NAVIGATION: Stop nodes when they are not subscribed.</li>
-<li>  NAVIGATION: Add navigation package.</li>
-<li>  Contributors: Karsten Knese, lsouchet</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3255,6 +3111,52 @@ naoqi_tools
                 </ul>
               </li>
             
+              <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/exploration.launch" target="_blank">launch/exploration.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>radius</strong> <em>&#91;default: 5&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/navigation.launch" target="_blank">launch/navigation.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/rviz_pepper.launch" target="_blank">launch/rviz_pepper.launch</a>
                 <ul class="list-unstyled">
                   
@@ -3286,52 +3188,6 @@ naoqi_tools
                       
                         
                           <li><strong>path_to_map</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/navigation.launch" target="_blank">launch/navigation.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-naoqi/naoqi_bridge/blob/master/naoqi_navigation/python/launch/exploration.launch" target="_blank">launch/exploration.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>nao_ip</strong> <em>&#91;default: $(optenv NAO_IP 127.0.0.1)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>nao_port</strong> <em>&#91;default: $(optenv NAO_PORT 9559)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>radius</strong> <em>&#91;default: 5&#93; </em></li>
                         
                       
                     </ul>
@@ -3504,7 +3360,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

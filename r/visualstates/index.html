@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -333,7 +329,7 @@
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-08-26
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-27
         </span>
       </td>
     </tr>
@@ -376,7 +372,7 @@
                 
                   <tr>
                     <td><a href="/p/visualstates/github-JdeRobot-VisualStates">visualstates</a></td>
-                    <td>0.1.1</td>
+                    <td>0.2.1</td>
                   </tr>
                 
                 </tbody>
@@ -396,22 +392,25 @@
 <h2 id="installation">Installation</h2>
 
 <h3 id="install-dependencies">Install Dependencies</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">sudo apt install git
-sudo apt install cmake
+<div class="highlight"><pre><code class="language-" data-lang="">sudo apt install ros-kinetic-desktop
 sudo apt install python-pyqt5
 sudo apt install python-pyqt5.qsci
-sudo apt install python-yaml
-sudo apt install python-sysv-ipc
 
 </code></pre></div>
-<h3 id="build-and-install-the-tool">Build and Install the Tool</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">mkdir build
-cd build
-cmake ..
-make
-sudo make install
+<h3 id="install-visualstates-in-catkin_ws">Install VisualStates in catkin_ws</h3>
+
+<p>The VisualStates tool is distributed as a ROS package. You can directly clone this repository in an active catkin workspace. After copying the repository as ROS package. You can run visualstates following these steps.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">catkin_make
+rosrun visualstates main.py
 
 </code></pre></div>
+<h3 id="to-run-an-example-please-check-the-examples">To run an example please check the examples</h3>
+
+<ul>
+<li><a href="https://github.com/JdeRobot/VisualStates/blob/master/examples/bump_and_go_python/README.md">bump_and_go_python</a></li>
+<li><a href="https://github.com/JdeRobot/VisualStates/blob/master/examples/obstacle_avoidance_cpp/README.md">obstacle_avoidance_cpp</a></li>
+<li><a href="https://github.com/JdeRobot/VisualStates/blob/master/examples/obstacle_avoidance_python/README.md">obstacle_avoidance_python</a></li>
+</ul>
 </div></body></html>
 
             
@@ -477,7 +476,7 @@ sudo make install
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

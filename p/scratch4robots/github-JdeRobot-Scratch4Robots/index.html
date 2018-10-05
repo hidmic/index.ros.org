@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -351,7 +347,7 @@ scratch4robots
     
     
     
-    <a href="#kinetic-assets" data-toggle="tab"><span class="label label-primary">4</span> Assets</a>
+    <a href="#kinetic-assets" data-toggle="tab"><span class="label label-primary">2</span> Assets</a>
   </li>
   <li class="better-tabs">
     
@@ -437,7 +433,7 @@ scratch4robots
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-07-01
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-30
         </span>
       </td>
     </tr>
@@ -518,6 +514,10 @@ scratch4robots
 <html><body><div class="rendered-markdown">
 <h1 id="scratch4robots">Scratch4Robots</h1>
 
+<h2 id="full-installation-video">Full installation video</h2>
+
+<p><a href="https://www.youtube.com/watch?v=5JYuD8N0RBs" title="Scratch4Robots"><img src="http://img.youtube.com/vi/5JYuD8N0RBs/1.jpg" alt="Scratch4Robots"></a></p>
+
 <h2 id="prerequisites">Prerequisites</h2>
 
 <h3 id="scratch-2-0">Scratch 2.0</h3>
@@ -542,6 +542,9 @@ chmod +x adobe-air.sh; sudo ./adobe-air.sh
 </code></pre></div>
 <h2 id="installing">Installing</h2>
 
+<h3 id="install-our-ros-package">Install our ROS package</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">sudo apt-get install ros-kinetic-scratch4robots
+</code></pre></div>
 <h3 id="install-scartch4robots-extension-to-use-in-scratch">Install Scartch4Robots extension to use in Scratch</h3>
 
 <p>In scratch keep pressing shift key while you click on "File" &gt; "Import experimental HTTP extension" and add our extension.
@@ -549,24 +552,10 @@ The extension will be stored in the "extension" directory of your package.</p>
 <div class="highlight"><pre><code class="language-" data-lang="">Note: This step is necessary each time you initialize Scratch
 </code></pre></div>
 <h3 id="download-the-tool-from-git">Download the tool from git</h3>
+
+<p>Here you will find some usefull examples.</p>
 <div class="highlight"><pre><code class="language-" data-lang="">git clone https://github.com/JdeRobot/Scratch4Robots.git
 </code></pre></div>
-<h3 id="with-catkin-workspace">With catkin workspace</h3>
-
-<p>Follow this steps only if you want to work with catkin workspace</p>
-
-<h4 id="prepare-your-workspace">Prepare your workspace</h4>
-
-<p>You have a guide for make your own catkin workspace here:
-<a href="http://wiki.ros.org/catkin/Tutorials/create_a_workspace">http://wiki.ros.org/catkin/Tutorials/create_a_workspace</a></p>
-
-<p>Once you have your catkin workspace:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cd catkin_workspace/src
-git clone https://github.com/JdeRobot/Scratch4Robots.git
-catkin_make
-</code></pre></div>
-<p>Now your package is ready to use.</p>
-
 <h2 id="how-to-use">How to Use</h2>
 
 <h3 id="make-a-scratch-project">Make a scratch project</h3>
@@ -576,11 +565,7 @@ catkin_make
 <h3 id="make-the-translation-from-scratch-to-python">Make the translation from Scratch to python</h3>
 
 <p>Generate the code:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cd Scratch4Robots/src
-./scratch2python.py /your/path/to/myscratchfile.sb2
-</code></pre></div>
-<p>Only if you are working with the tool as ROS package, after source your package:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">rosrun scratch4robots scratch2python.py /your/path/to/myscratchfile.sb2
+<div class="highlight"><pre><code class="language-" data-lang="">rosrun scratch4robots scratch2python /path/to/your/scratchproject.sb2
 </code></pre></div>
 <p>This command will generate the python script on your current work directory</p>
 
@@ -590,8 +575,9 @@ catkin_make
 <div class="highlight"><pre><code class="language-" data-lang="">roslaunch kobuki_gazebo kobuki_empty_world.launch --screen
 </code></pre></div>
 <h3 id="execute-the-generated-code">Execute the generated code</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">cd Scratch4Robots/src
-./myscratchfile.py /path/to/robot_ros.yml
+
+<p>The generated code need a configuration file .yml as parameter, you will find some usefull configuration files in this git repository.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">./myscratchfile.py /path/to/robot_ros.yml
 </code></pre></div>
 <h2 id="running-an-example">Running an example</h2>
 
@@ -719,7 +705,7 @@ catkin_make
         
           <ul>
             
-              <li><a href="https://github.com/JdeRobot/Scratch4Robots/blob/master/./launch/scratch2python.launch" target="_blank">launch/scratch2python.launch</a>
+              <li><a href="https://github.com/JdeRobot/Scratch4Robots/blob/master/./launch/ardrone_testworld.launch" target="_blank">launch/ardrone_testworld.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -728,7 +714,7 @@ catkin_make
                     <ul>
                       
                         
-                          <li><strong>file</strong>  </em></li>
+                      
                         
                       
                     </ul>
@@ -758,40 +744,6 @@ catkin_make
                       
                         
                           <li><strong>verbose</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/JdeRobot/Scratch4Robots/blob/master/./launch/scratch2python_comm.launch" target="_blank">launch/scratch2python_comm.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>file</strong>  </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/JdeRobot/Scratch4Robots/blob/master/./launch/ardrone_testworld.launch" target="_blank">launch/ardrone_testworld.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
                         
                       
                     </ul>
@@ -996,7 +948,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

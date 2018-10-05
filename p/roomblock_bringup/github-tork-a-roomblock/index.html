@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -469,7 +465,7 @@ roomblock_navigation
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-05-10
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-05-09
         </span>
       </td>
     </tr>
@@ -589,49 +585,7 @@ Run the launch file on the terminal in arbitrary host.</p>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-roomblock_bringup">Changelog for package roomblock_bringup</h1>
-
-<h2 id="0-0-1-2017-04-13">0.0.1 (2017-04-13)</h2>
-
-<ul>
-<li>  Add remote operation setting for gmapping launch</li>
-<li>  Change operation mode from full to safe</li>
-<li>  cleanup package.xml/CMakeLists.txt, update run_depends with
-roslaunch_add_file_check</li>
-<li>  Add launch_rviz to teleop_joy launch</li>
-<li>  Add raspi camera module launch</li>
-<li>  Modify device install scripts</li>
-<li>  Append package dependencies</li>
-<li>  Add xbox joypad config and make it default</li>
-<li>  Add scripts for udev.rules</li>
-<li>  Add joypad teleop launch file and config file
-
-<ul>
-<li>We need config file for joypads we usually use</li>
-</ul>
-</li>
-<li>  Add doc/ and README.md</li>
-<li>  Insert robot_pose_ekf to publish odom frame</li>
-<li>  Fix rviz launch arg</li>
-<li>  Fix rviz launch arg</li>
-<li>  Organize roomblock_bringup launch files
-
-<ul>
-<li>change controller from "roomblock" to "roomba"</li>
-</ul>
-</li>
-<li>  delete unused launch file</li>
-<li>  Merge branch 'master' of <a href="https://github.com/longjie/roomblock">https://github.com/longjie/roomblock</a>
-</li>
-<li>  Change the way to launch rplidar_ros</li>
-<li>  Merge branch 'master' of <a href="https://github.com/longjie/roomblock">https://github.com/longjie/roomblock</a>
-Conflicts: roomblock_description/urdf/roomba500.urdf.xacro</li>
-<li>  Change to run amcl</li>
-<li>  Change device name to use symlink</li>
-<li>  Add roomblock_bringup</li>
-<li>  Contributors: Ryosuke Tajima, Tokyo Opensource Robotics Developer
-534</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -974,32 +928,6 @@ Conflicts: roomblock_description/urdf/roomba500.urdf.xacro</li>
         
           <ul>
             
-              <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/theta_libuvc_camera.launch" target="_blank">launch/theta_libuvc_camera.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/theta_usb_cam.launch" target="_blank">launch/theta_usb_cam.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/theta_gscam.launch" target="_blank">launch/theta_gscam.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1012,6 +940,27 @@ Conflicts: roomblock_description/urdf/roomba500.urdf.xacro</li>
                           <li><strong>device</strong> <em>&#91;default: /dev/video0&#93; </em></li>
                         
                       
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/uvc_camera.launch" target="_blank">launch/uvc_camera.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>device</strong> <em>&#91;default: /dev/video0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>camera_name</strong> <em>&#91;default: theta&#93; </em></li>
                         
                       
                     </ul>
@@ -1068,6 +1017,32 @@ Conflicts: roomblock_description/urdf/roomba500.urdf.xacro</li>
                 </ul>
               </li>
             
+              <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/theta_usb_cam.launch" target="_blank">launch/theta_usb_cam.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/theta_libuvc_camera.launch" target="_blank">launch/theta_libuvc_camera.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/teleop_joy.launch" target="_blank">launch/teleop_joy.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1101,21 +1076,13 @@ Conflicts: roomblock_description/urdf/roomba500.urdf.xacro</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/uvc_camera.launch" target="_blank">launch/uvc_camera.launch</a>
+              <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/include/fake_roomba.launch.xml" target="_blank">launch/include/fake_roomba.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
-                      
-                        
-                          <li><strong>device</strong> <em>&#91;default: /dev/video0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>camera_name</strong> <em>&#91;default: theta&#93; </em></li>
-                        
                       
                     </ul>
                   </li>
@@ -1133,19 +1100,6 @@ Conflicts: roomblock_description/urdf/roomba500.urdf.xacro</li>
                         
                           <li><strong>publish_odom_tf</strong> <em>&#91;default: true&#93; </em></li>
                         
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/include/fake_roomba.launch.xml" target="_blank">launch/include/fake_roomba.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
                       
                     </ul>
                   </li>
@@ -1518,7 +1472,7 @@ roomblock_navigation
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-05-10
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-05-09
         </span>
       </td>
     </tr>
@@ -1638,49 +1592,7 @@ Run the launch file on the terminal in arbitrary host.</p>
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-roomblock_bringup">Changelog for package roomblock_bringup</h1>
-
-<h2 id="0-0-1-2017-04-13">0.0.1 (2017-04-13)</h2>
-
-<ul>
-<li>  Add remote operation setting for gmapping launch</li>
-<li>  Change operation mode from full to safe</li>
-<li>  cleanup package.xml/CMakeLists.txt, update run_depends with
-roslaunch_add_file_check</li>
-<li>  Add launch_rviz to teleop_joy launch</li>
-<li>  Add raspi camera module launch</li>
-<li>  Modify device install scripts</li>
-<li>  Append package dependencies</li>
-<li>  Add xbox joypad config and make it default</li>
-<li>  Add scripts for udev.rules</li>
-<li>  Add joypad teleop launch file and config file
-
-<ul>
-<li>We need config file for joypads we usually use</li>
-</ul>
-</li>
-<li>  Add doc/ and README.md</li>
-<li>  Insert robot_pose_ekf to publish odom frame</li>
-<li>  Fix rviz launch arg</li>
-<li>  Fix rviz launch arg</li>
-<li>  Organize roomblock_bringup launch files
-
-<ul>
-<li>change controller from "roomblock" to "roomba"</li>
-</ul>
-</li>
-<li>  delete unused launch file</li>
-<li>  Merge branch 'master' of <a href="https://github.com/longjie/roomblock">https://github.com/longjie/roomblock</a>
-</li>
-<li>  Change the way to launch rplidar_ros</li>
-<li>  Merge branch 'master' of <a href="https://github.com/longjie/roomblock">https://github.com/longjie/roomblock</a>
-Conflicts: roomblock_description/urdf/roomba500.urdf.xacro</li>
-<li>  Change to run amcl</li>
-<li>  Change device name to use symlink</li>
-<li>  Add roomblock_bringup</li>
-<li>  Contributors: Ryosuke Tajima, Tokyo Opensource Robotics Developer
-534</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2023,32 +1935,6 @@ Conflicts: roomblock_description/urdf/roomba500.urdf.xacro</li>
         
           <ul>
             
-              <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/theta_libuvc_camera.launch" target="_blank">launch/theta_libuvc_camera.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/theta_usb_cam.launch" target="_blank">launch/theta_usb_cam.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/theta_gscam.launch" target="_blank">launch/theta_gscam.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2061,6 +1947,27 @@ Conflicts: roomblock_description/urdf/roomba500.urdf.xacro</li>
                           <li><strong>device</strong> <em>&#91;default: /dev/video0&#93; </em></li>
                         
                       
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/uvc_camera.launch" target="_blank">launch/uvc_camera.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>device</strong> <em>&#91;default: /dev/video0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>camera_name</strong> <em>&#91;default: theta&#93; </em></li>
                         
                       
                     </ul>
@@ -2117,6 +2024,32 @@ Conflicts: roomblock_description/urdf/roomba500.urdf.xacro</li>
                 </ul>
               </li>
             
+              <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/theta_usb_cam.launch" target="_blank">launch/theta_usb_cam.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/theta_libuvc_camera.launch" target="_blank">launch/theta_libuvc_camera.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/teleop_joy.launch" target="_blank">launch/teleop_joy.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2150,21 +2083,13 @@ Conflicts: roomblock_description/urdf/roomba500.urdf.xacro</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/uvc_camera.launch" target="_blank">launch/uvc_camera.launch</a>
+              <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/include/fake_roomba.launch.xml" target="_blank">launch/include/fake_roomba.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
-                      
-                        
-                          <li><strong>device</strong> <em>&#91;default: /dev/video0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>camera_name</strong> <em>&#91;default: theta&#93; </em></li>
-                        
                       
                     </ul>
                   </li>
@@ -2182,19 +2107,6 @@ Conflicts: roomblock_description/urdf/roomba500.urdf.xacro</li>
                         
                           <li><strong>publish_odom_tf</strong> <em>&#91;default: true&#93; </em></li>
                         
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/tork-a/roomblock/blob/master/roomblock_bringup/launch/include/fake_roomba.launch.xml" target="_blank">launch/include/fake_roomba.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
                       
                     </ul>
                   </li>
@@ -2390,7 +2302,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -452,18 +448,18 @@ range: 0.20000000298
 <h4 id="wildcard-subscriber">Wildcard Subscriber</h4>
 <div class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">ros_wild</span> <span class="kn">import</span> <span class="n">Subscriber</span>
 
-<span class="c"># subscribe to all Log topics</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">sub</span> <span class="o">=</span> <span class="n">Subscriber</span><span class="p">(</span><span class="s">r"/rosout.*"</span><span class="p">)</span>
+<span class="c1"># subscribe to all Log topics
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">sub</span> <span class="o">=</span> <span class="n">Subscriber</span><span class="p">(</span><span class="s">r"/rosout.*"</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">sub</span><span class="o">.</span><span class="n">subscribed_topics</span>
 <span class="p">[</span><span class="s">'/rosout'</span><span class="p">,</span> <span class="s">'/rosout_agg'</span><span class="p">]</span>
 
-<span class="c"># unsubscribe from all topics</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">sub</span><span class="o">.</span><span class="n">unregister_all</span><span class="p">()</span>
+<span class="c1"># unsubscribe from all topics
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">sub</span><span class="o">.</span><span class="n">unregister_all</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">sub</span><span class="o">.</span><span class="n">subscribed_topics</span>
 <span class="p">[]</span>
 
-<span class="c"># resubscribe to topics</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">sub</span><span class="o">.</span><span class="n">reload_topics</span><span class="p">()</span>
+<span class="c1"># resubscribe to topics
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">sub</span><span class="o">.</span><span class="n">reload_topics</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">sub</span><span class="o">.</span><span class="n">subscribed_topics</span>
 <span class="p">[</span><span class="s">'/rosout'</span><span class="p">,</span> <span class="s">'/rosout_agg'</span><span class="p">]</span>
 
@@ -473,20 +469,20 @@ range: 0.20000000298
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">Bool</span><span class="p">,</span> <span class="n">String</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">callback_bool</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
-<span class="o">&gt;&gt;&gt;</span>     <span class="k">print</span><span class="p">(</span><span class="s">"bool is {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span>     <span class="k">print</span><span class="p">(</span><span class="s">"bool is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">callback_string</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
-<span class="o">&gt;&gt;&gt;</span>     <span class="k">print</span><span class="p">(</span><span class="s">"string is {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span>     <span class="k">print</span><span class="p">(</span><span class="s">"string is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
 
-<span class="c"># subscribe without callback</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">sub</span> <span class="o">=</span> <span class="n">Subscriber</span><span class="p">(</span><span class="s">r".+"</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">"Subscribed topics are {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sub</span><span class="o">.</span><span class="n">subscribed_topics</span><span class="p">))</span>
+<span class="c1"># subscribe without callback
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">sub</span> <span class="o">=</span> <span class="n">Subscriber</span><span class="p">(</span><span class="s">r".+"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">"Subscribed topics are {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">sub</span><span class="o">.</span><span class="n">subscribed_topics</span><span class="p">))</span>
 <span class="n">Subscribed</span> <span class="n">topics</span> <span class="n">are</span> <span class="p">[</span><span class="s">'/bool/01'</span><span class="p">,</span> <span class="s">'/rosout'</span><span class="p">,</span> <span class="s">'rosout_agg'</span><span class="p">,</span> <span class="s">'/string/01'</span><span class="p">]</span>
 
-<span class="c"># register callback</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">sub</span><span class="o">.</span><span class="n">register_callback</span><span class="p">(</span><span class="n">Bool</span><span class="p">,</span> <span class="n">callback_bool</span><span class="p">)</span>
+<span class="c1"># register callback
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">sub</span><span class="o">.</span><span class="n">register_callback</span><span class="p">(</span><span class="n">Bool</span><span class="p">,</span> <span class="n">callback_bool</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">sub</span><span class="o">.</span><span class="n">register_callback</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="n">callback_string</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">"Topics with callback are {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sub</span><span class="o">.</span><span class="n">topics_with_callback</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">"Topics with callback are {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">sub</span><span class="o">.</span><span class="n">topics_with_callback</span><span class="p">))</span>
 <span class="n">Topics</span> <span class="k">with</span> <span class="n">callaback</span> <span class="n">are</span> <span class="p">[</span><span class="s">'/bool/01'</span><span class="p">,</span> <span class="s">'/strings/01'</span><span class="p">]</span>
 
 </code></pre></div>
@@ -497,8 +493,8 @@ range: 0.20000000298
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">ros_wild</span> <span class="kn">import</span> <span class="n">Publisher</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">rosgraph_msgs.msg</span> <span class="kn">import</span> <span class="n">Log</span>
 
-<span class="c"># publish to all topics</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">"test"</span><span class="p">)</span>
+<span class="c1"># publish to all topics
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">"test"</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">pub</span> <span class="o">=</span> <span class="n">Publisher</span><span class="p">(</span><span class="s">".*"</span><span class="p">,</span> <span class="n">queue_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">pub</span><span class="o">.</span><span class="n">published_topics</span>
 <span class="p">[</span><span class="s">'/rosout'</span><span class="p">,</span> <span class="s">'/rosout_agg'</span><span class="p">,</span> <span class="s">'/tf'</span><span class="p">,</span> <span class="o">...</span> <span class="p">]</span>
@@ -578,7 +574,7 @@ range: 0.20000000298
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

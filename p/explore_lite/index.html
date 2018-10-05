@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -526,79 +522,7 @@ multirobot_map_merge
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-explore_lite">Changelog for package explore_lite</h1>
-
-<h2 id="2-1-1-2017-12-16">2.1.1 (2017-12-16)</h2>
-
-<ul>
-<li>
-<p>explore: fix min_frontier_size bug</p>
-
-<ul>
-<li>  min_frontier_size parameter was not used to at all</li>
-</ul>
-
-<p>* adjust min_frontier size filtering according to map resolution</p>
-</li>
-<li><p>fix bugs in CMakeLists.txt
-* install nodes in packages, so they get shipped in
-debian packages. fixes
-<a href="https://github.com/hrnr/m-explore/issues/11">#11</a></p></li>
-<li><p>explore: update documentation</p></li>
-<li><p>Contributors: Jiri Horner</p></li>
-</ul>
-
-<h2 id="2-1-0-2017-10-30">2.1.0 (2017-10-30)</h2>
-
-<ul>
-<li>  explore: get rid of boost</li>
-<li>  explore: rework launchfiles</li>
-<li>  new visualisation of frontiers</li>
-<li>  remove navfn library from dependencies</li>
-<li>
-<p>use frontier seach algorithm from Paul Bovbel</p>
-
-<ul>
-<li>  much better than previous version of search</li>
-</ul>
-
-<p>* <a href="https://github.com/paulbovbel/frontier_exploration.git">https://github.com/paulbovbel/frontier_exploration.git</a></p>
-</li>
-<li>
-<p>fix deadlock in explore</p>
-
-<ul>
-<li>  reworked expore to use timer instead of separate thread for
-replanning</li>
-</ul>
-
-<p>* fix deadlock occuring between makePlan and goal reached callback</p>
-</li>
-<li><p>Contributors: Jiri Horner</p></li>
-</ul>
-
-<h2 id="2-0-0-2017-03-26">2.0.0 (2017-03-26)</h2>
-
-<ul>
-<li>  explore: migrate to package format 2</li>
-<li>  explore: remove internal version of navfn_ros
-* my changes are included in the ros since kinetic</li>
-<li>  Contributors: Jiri Horner</li>
-</ul>
-
-<h2 id="1-0-1-2017-03-25">1.0.1 (2017-03-25)</h2>
-
-<ul>
-<li>  update documentation</li>
-<li>  Contributors: Jiri Horner</li>
-</ul>
-
-<h2 id="1-0-0-2016-05-11">1.0.0 (2016-05-11)</h2>
-
-<ul>
-<li>  initial release</li>
-<li>  Contributors: Jiri Horner, duhadway-bosch, pitzer</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -905,7 +829,7 @@ replanning</li>
         
           <ul>
             
-              <li><a href="https://github.com/hrnr/m-explore/blob/lunar-devel/explore/launch/explore_costmap.launch" target="_blank">launch/explore_costmap.launch</a>
+              <li><a href="https://github.com/hrnr/m-explore/blob/lunar-devel/explore/launch/explore.launch" target="_blank">launch/explore.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -918,7 +842,7 @@ replanning</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/hrnr/m-explore/blob/lunar-devel/explore/launch/explore.launch" target="_blank">launch/explore.launch</a>
+              <li><a href="https://github.com/hrnr/m-explore/blob/lunar-devel/explore/launch/explore_costmap.launch" target="_blank">launch/explore_costmap.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1365,79 +1289,7 @@ multirobot_map_merge
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-explore_lite">Changelog for package explore_lite</h1>
-
-<h2 id="2-1-1-2017-12-16">2.1.1 (2017-12-16)</h2>
-
-<ul>
-<li>
-<p>explore: fix min_frontier_size bug</p>
-
-<ul>
-<li>  min_frontier_size parameter was not used to at all</li>
-</ul>
-
-<p>* adjust min_frontier size filtering according to map resolution</p>
-</li>
-<li><p>fix bugs in CMakeLists.txt
-* install nodes in packages, so they get shipped in
-debian packages. fixes
-<a href="https://github.com/hrnr/m-explore/issues/11">#11</a></p></li>
-<li><p>explore: update documentation</p></li>
-<li><p>Contributors: Jiri Horner</p></li>
-</ul>
-
-<h2 id="2-1-0-2017-10-30">2.1.0 (2017-10-30)</h2>
-
-<ul>
-<li>  explore: get rid of boost</li>
-<li>  explore: rework launchfiles</li>
-<li>  new visualisation of frontiers</li>
-<li>  remove navfn library from dependencies</li>
-<li>
-<p>use frontier seach algorithm from Paul Bovbel</p>
-
-<ul>
-<li>  much better than previous version of search</li>
-</ul>
-
-<p>* <a href="https://github.com/paulbovbel/frontier_exploration.git">https://github.com/paulbovbel/frontier_exploration.git</a></p>
-</li>
-<li>
-<p>fix deadlock in explore</p>
-
-<ul>
-<li>  reworked expore to use timer instead of separate thread for
-replanning</li>
-</ul>
-
-<p>* fix deadlock occuring between makePlan and goal reached callback</p>
-</li>
-<li><p>Contributors: Jiri Horner</p></li>
-</ul>
-
-<h2 id="2-0-0-2017-03-26">2.0.0 (2017-03-26)</h2>
-
-<ul>
-<li>  explore: migrate to package format 2</li>
-<li>  explore: remove internal version of navfn_ros
-* my changes are included in the ros since kinetic</li>
-<li>  Contributors: Jiri Horner</li>
-</ul>
-
-<h2 id="1-0-1-2017-03-25">1.0.1 (2017-03-25)</h2>
-
-<ul>
-<li>  update documentation</li>
-<li>  Contributors: Jiri Horner</li>
-</ul>
-
-<h2 id="1-0-0-2016-05-11">1.0.0 (2016-05-11)</h2>
-
-<ul>
-<li>  initial release</li>
-<li>  Contributors: Jiri Horner, duhadway-bosch, pitzer</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1744,7 +1596,7 @@ replanning</li>
         
           <ul>
             
-              <li><a href="https://github.com/hrnr/m-explore/blob/kinetic-devel/explore/launch/explore_costmap.launch" target="_blank">launch/explore_costmap.launch</a>
+              <li><a href="https://github.com/hrnr/m-explore/blob/kinetic-devel/explore/launch/explore.launch" target="_blank">launch/explore.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1757,7 +1609,7 @@ replanning</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/hrnr/m-explore/blob/kinetic-devel/explore/launch/explore.launch" target="_blank">launch/explore.launch</a>
+              <li><a href="https://github.com/hrnr/m-explore/blob/kinetic-devel/explore/launch/explore_costmap.launch" target="_blank">launch/explore_costmap.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2220,21 +2072,7 @@ multirobot_map_merge
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-explore_lite">Changelog for package explore_lite</h1>
-
-<h2 id="1-0-1-2017-03-25">1.0.1 (2017-03-25)</h2>
-
-<ul>
-<li>  update documentation</li>
-<li>  Contributors: Jiri Horner</li>
-</ul>
-
-<h2 id="1-0-0-2016-05-11">1.0.0 (2016-05-11)</h2>
-
-<ul>
-<li>  initial release</li>
-<li>  Contributors: Jiri Horner, duhadway-bosch, pitzer</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2768,7 +2606,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

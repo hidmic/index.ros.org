@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -554,62 +550,7 @@ turtlebot_stdr
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-turtlebot_simulator">Changelog for package turtlebot_simulator</h1>
-
-<h2 id="2-2-3-2017-09-18">2.2.3 (2017-09-18)</h2>
-
-<ul>
-<li>  Fix changing amcl.launch.xml and gmapping.launch.xml locations under
-turtlebot_navigation</li>
-<li>  Contributors: Mohamed Al Zaiady, Mohamed Elzaiady, Tully Foote,
-mzaiady</li>
-</ul>
-
-<h2 id="2-2-2-2015-09-16">2.2.2 (2015-09-16)</h2>
-
-<h2 id="2-2-1-2015-08-07">2.2.1 (2015-08-07)</h2>
-
-<ul>
-<li>  Enable to run Gazebo w/o GUI.</li>
-<li>  Contributors: Isaac IY Saito</li>
-</ul>
-
-<h2 id="2-2-0-2014-12-30">2.2.0 (2014-12-30)</h2>
-
-<ul>
-<li>  use env hook to configure gazebo world and map fixes
-<a href="https://github.com/turtlebot/turtlebot_simulator/issues/40">#40</a>
-</li>
-<li>  now it uses args to load world. and corridor world is added.
-<a href="https://github.com/turtlebot/turtlebot_simulator/issues/39">#39</a>
-</li>
-<li>  disable create gazebo plugin</li>
-<li>  Add turtlebot_navigation to turtlebot_gazebo depends
-gmapping_demo.launch depends on it.</li>
-<li>  Contributors: Jihoon Lee, Jochen Sprickerhof</li>
-</ul>
-
-<h2 id="2-1-1-2013-10-14">2.1.1 (2013-10-14)</h2>
-
-<ul>
-<li>  Rename cmd_vel_mux as yocs_cmd_vel_mux.</li>
-</ul>
-
-<h2 id="2-1-0-2013-08-30">2.1.0 (2013-08-30)</h2>
-
-<ul>
-<li>  Add navigation demos on Gazebo on a playground world.</li>
-<li>  Add bugtracker and repo info URLs.</li>
-<li>  Add cmd_vel_mux for create and roomba.</li>
-<li>  Do not use robot_pose_ekf for kobuki base.</li>
-</ul>
-
-<h2 id="2-0-0-2013-07-16">2.0.0 (2013-07-16)</h2>
-
-<ul>
-<li>  Migrated to use stand-alone Gazebo installation</li>
-<li>  All packages have been catkinized</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -939,6 +880,27 @@ gmapping_demo.launch depends on it.</li>
         
           <ul>
             
+              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/indigo/turtlebot_gazebo/launch/gmapping_demo.launch" target="_blank">launch/gmapping_demo.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>3d_sensor</strong> <em>&#91;default: $(env TURTLEBOT_3D_SENSOR)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>custom_gmapping_launch_file</strong> <em>&#91;default: $(find turtlebot_navigation)/launch/includes/gmapping/$(arg 3d_sensor)_gmapping.launch.xml&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/indigo/turtlebot_gazebo/launch/turtlebot_world.launch" target="_blank">launch/turtlebot_world.launch</a>
                 <ul class="list-unstyled">
                   
@@ -975,27 +937,6 @@ gmapping_demo.launch depends on it.</li>
                       
                         
                       
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/indigo/turtlebot_gazebo/launch/gmapping_demo.launch" target="_blank">launch/gmapping_demo.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>3d_sensor</strong> <em>&#91;default: $(env TURTLEBOT_3D_SENSOR)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>custom_gmapping_launch_file</strong> <em>&#91;default: $(find turtlebot_navigation)/launch/includes/gmapping/$(arg 3d_sensor)_gmapping.launch.xml&#93; </em></li>
                         
                       
                     </ul>
@@ -1075,7 +1016,7 @@ gmapping_demo.launch depends on it.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/indigo/turtlebot_gazebo/launch/includes/roomba.launch.xml" target="_blank">launch/includes/roomba.launch.xml</a>
+              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/indigo/turtlebot_gazebo/launch/includes/create.launch.xml" target="_blank">launch/includes/create.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1104,7 +1045,7 @@ gmapping_demo.launch depends on it.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/indigo/turtlebot_gazebo/launch/includes/create.launch.xml" target="_blank">launch/includes/create.launch.xml</a>
+              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/indigo/turtlebot_gazebo/launch/includes/roomba.launch.xml" target="_blank">launch/includes/roomba.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1587,62 +1528,7 @@ turtlebot_stdr
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-turtlebot_simulator">Changelog for package turtlebot_simulator</h1>
-
-<h2 id="2-2-3-2017-09-18">2.2.3 (2017-09-18)</h2>
-
-<ul>
-<li>  Fix changing amcl.launch.xml and gmapping.launch.xml locations under
-turtlebot_navigation</li>
-<li>  Contributors: Mohamed Al Zaiady, Mohamed Elzaiady, Tully Foote,
-mzaiady</li>
-</ul>
-
-<h2 id="2-2-2-2015-09-16">2.2.2 (2015-09-16)</h2>
-
-<h2 id="2-2-1-2015-08-07">2.2.1 (2015-08-07)</h2>
-
-<ul>
-<li>  Enable to run Gazebo w/o GUI.</li>
-<li>  Contributors: Isaac IY Saito</li>
-</ul>
-
-<h2 id="2-2-0-2014-12-30">2.2.0 (2014-12-30)</h2>
-
-<ul>
-<li>  use env hook to configure gazebo world and map fixes
-<a href="https://github.com/turtlebot/turtlebot_simulator/issues/40">#40</a>
-</li>
-<li>  now it uses args to load world. and corridor world is added.
-<a href="https://github.com/turtlebot/turtlebot_simulator/issues/39">#39</a>
-</li>
-<li>  disable create gazebo plugin</li>
-<li>  Add turtlebot_navigation to turtlebot_gazebo depends
-gmapping_demo.launch depends on it.</li>
-<li>  Contributors: Jihoon Lee, Jochen Sprickerhof</li>
-</ul>
-
-<h2 id="2-1-1-2013-10-14">2.1.1 (2013-10-14)</h2>
-
-<ul>
-<li>  Rename cmd_vel_mux as yocs_cmd_vel_mux.</li>
-</ul>
-
-<h2 id="2-1-0-2013-08-30">2.1.0 (2013-08-30)</h2>
-
-<ul>
-<li>  Add navigation demos on Gazebo on a playground world.</li>
-<li>  Add bugtracker and repo info URLs.</li>
-<li>  Add cmd_vel_mux for create and roomba.</li>
-<li>  Do not use robot_pose_ekf for kobuki base.</li>
-</ul>
-
-<h2 id="2-0-0-2013-07-16">2.0.0 (2013-07-16)</h2>
-
-<ul>
-<li>  Migrated to use stand-alone Gazebo installation</li>
-<li>  All packages have been catkinized</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2000,6 +1886,27 @@ gmapping_demo.launch depends on it.</li>
         
           <ul>
             
+              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/indigo/turtlebot_gazebo/launch/gmapping_demo.launch" target="_blank">launch/gmapping_demo.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>3d_sensor</strong> <em>&#91;default: $(env TURTLEBOT_3D_SENSOR)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>custom_gmapping_launch_file</strong> <em>&#91;default: $(find turtlebot_navigation)/launch/includes/gmapping/$(arg 3d_sensor)_gmapping.launch.xml&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/indigo/turtlebot_gazebo/launch/turtlebot_world.launch" target="_blank">launch/turtlebot_world.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2036,27 +1943,6 @@ gmapping_demo.launch depends on it.</li>
                       
                         
                       
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/indigo/turtlebot_gazebo/launch/gmapping_demo.launch" target="_blank">launch/gmapping_demo.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>3d_sensor</strong> <em>&#91;default: $(env TURTLEBOT_3D_SENSOR)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>custom_gmapping_launch_file</strong> <em>&#91;default: $(find turtlebot_navigation)/launch/includes/gmapping/$(arg 3d_sensor)_gmapping.launch.xml&#93; </em></li>
                         
                       
                     </ul>
@@ -2136,7 +2022,7 @@ gmapping_demo.launch depends on it.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/indigo/turtlebot_gazebo/launch/includes/roomba.launch.xml" target="_blank">launch/includes/roomba.launch.xml</a>
+              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/indigo/turtlebot_gazebo/launch/includes/create.launch.xml" target="_blank">launch/includes/create.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2165,7 +2051,7 @@ gmapping_demo.launch depends on it.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/indigo/turtlebot_gazebo/launch/includes/create.launch.xml" target="_blank">launch/includes/create.launch.xml</a>
+              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/indigo/turtlebot_gazebo/launch/includes/roomba.launch.xml" target="_blank">launch/includes/roomba.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2648,29 +2534,7 @@ turtlebot_simulator
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-turtlebot_simulator">Changelog for package turtlebot_simulator</h1>
-
-<h2 id="2-1-1-2013-10-14">2.1.1 (2013-10-14)</h2>
-
-<ul>
-<li>  Rename cmd_vel_mux as yocs_cmd_vel_mux.</li>
-</ul>
-
-<h2 id="2-1-0-2013-08-30">2.1.0 (2013-08-30)</h2>
-
-<ul>
-<li>  Add navigation demos on Gazebo on a playground world.</li>
-<li>  Add bugtracker and repo info URLs.</li>
-<li>  Add cmd_vel_mux for create and roomba.</li>
-<li>  Do not use robot_pose_ekf for kobuki base.</li>
-</ul>
-
-<h2 id="2-0-0-2013-07-16">2.0.0 (2013-07-16)</h2>
-
-<ul>
-<li>  Migrated to use stand-alone Gazebo installation</li>
-<li>  All packages have been catkinized</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3048,39 +2912,6 @@ turtlebot_simulator
         
           <ul>
             
-              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/hydro/turtlebot_gazebo/launch/turtlebot_playground.launch" target="_blank">launch/turtlebot_playground.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/hydro/turtlebot_gazebo/launch/gmapping_demo.launch" target="_blank">launch/gmapping_demo.launch</a>
                 <ul class="list-unstyled">
                   
@@ -3094,7 +2925,7 @@ turtlebot_simulator
                 </ul>
               </li>
             
-              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/hydro/turtlebot_gazebo/launch/turtlebot_empty_world.launch" target="_blank">launch/turtlebot_empty_world.launch</a>
+              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/hydro/turtlebot_gazebo/launch/turtlebot_playground.launch" target="_blank">launch/turtlebot_playground.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3162,6 +2993,39 @@ turtlebot_simulator
                 </ul>
               </li>
             
+              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/hydro/turtlebot_gazebo/launch/turtlebot_empty_world.launch" target="_blank">launch/turtlebot_empty_world.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/hydro/turtlebot_gazebo/launch/includes/kobuki.launch.xml" target="_blank">launch/includes/kobuki.launch.xml</a>
                 <ul class="list-unstyled">
                   
@@ -3191,7 +3055,7 @@ turtlebot_simulator
                 </ul>
               </li>
             
-              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/hydro/turtlebot_gazebo/launch/includes/roomba.launch.xml" target="_blank">launch/includes/roomba.launch.xml</a>
+              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/hydro/turtlebot_gazebo/launch/includes/create.launch.xml" target="_blank">launch/includes/create.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3220,7 +3084,7 @@ turtlebot_simulator
                 </ul>
               </li>
             
-              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/hydro/turtlebot_gazebo/launch/includes/create.launch.xml" target="_blank">launch/includes/create.launch.xml</a>
+              <li><a href="https://github.com/turtlebot/turtlebot_simulator/blob/hydro/turtlebot_gazebo/launch/includes/roomba.launch.xml" target="_blank">launch/includes/roomba.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3415,7 +3279,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

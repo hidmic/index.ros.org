@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -571,21 +567,7 @@ tensor_field_nav_core
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-tensor_field_nav_core">Changelog for package tensor_field_nav_core</h1>
-
-<h2 id="0-0-1-2017-05-17">0.0.1 (2017-05-17)</h2>
-
-<ul>
-<li>  Update CMakeLists.txt</li>
-<li>  Update CMakeLists.txt</li>
-<li>  update</li>
-<li>  update</li>
-<li>  update</li>
-<li>  update</li>
-<li>  update</li>
-<li>  fist submit</li>
-<li>  Contributors: Lintao Zheng, zlt1991</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -945,6 +927,49 @@ tensor_field_nav_core
                 </ul>
               </li>
             
+              <li><a href="https://github.com/zlt1991/tensor_field_nav/blob/master/tensor_field_nav_core/launch/turtlebot_simulation.launch" target="_blank">launch/turtlebot_simulation.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>world_file</strong> <em>&#91;default: $(env TURTLEBOT_GAZEBO_WORLD_FILE)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/zlt1991/tensor_field_nav/blob/master/tensor_field_nav_core/launch/empty_world.launch" target="_blank">launch/empty_world.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1010,7 +1035,7 @@ tensor_field_nav_core
                 </ul>
               </li>
             
-              <li><a href="https://github.com/zlt1991/tensor_field_nav/blob/master/tensor_field_nav_core/launch/turtlebot_simulation.launch" target="_blank">launch/turtlebot_simulation.launch</a>
+              <li><a href="https://github.com/zlt1991/tensor_field_nav/blob/master/tensor_field_nav_core/robots/turtlebot/includes/kobuki.launch.xml" target="_blank">robots/turtlebot/includes/kobuki.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1019,33 +1044,19 @@ tensor_field_nav_core
                     <ul>
                       
                         
-                          <li><strong>world_file</strong> <em>&#91;default: $(env TURTLEBOT_GAZEBO_WORLD_FILE)&#93; </em></li>
+                          <li><strong>base</strong>  </em></li>
                         
                       
                         
-                      
+                          <li><strong>stacks</strong>  </em></li>
                         
                       
                         
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                          <li><strong>3d_sensor</strong>  </em></li>
                         
                       
                         
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
+                          <li><strong>urdf_file</strong> <em>&#91;default: $(find xacro)/xacro.py '$(find tensor_field_nav_core)/robots/turtlebot/$(arg base)_$(arg stacks)_$(arg 3d_sensor).urdf.xacro'&#93; </em></li>
                         
                       
                     </ul>
@@ -1053,7 +1064,7 @@ tensor_field_nav_core
                 </ul>
               </li>
             
-              <li><a href="https://github.com/zlt1991/tensor_field_nav/blob/master/tensor_field_nav_core/robots/turtlebot/includes/kobuki.launch.xml" target="_blank">robots/turtlebot/includes/kobuki.launch.xml</a>
+              <li><a href="https://github.com/zlt1991/tensor_field_nav/blob/master/tensor_field_nav_core/robots/turtlebot/includes/create.launch.xml" target="_blank">robots/turtlebot/includes/create.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1104,35 +1115,6 @@ tensor_field_nav_core
                       
                         
                           <li><strong>urdf_file</strong> <em>&#91;default: $(find xacro)/xacro.py '$(find turtlebot_description)/robots/$(arg base)_$(arg stacks)_$(arg 3d_sensor).urdf.xacro'&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/zlt1991/tensor_field_nav/blob/master/tensor_field_nav_core/robots/turtlebot/includes/create.launch.xml" target="_blank">robots/turtlebot/includes/create.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>base</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>stacks</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>3d_sensor</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>urdf_file</strong> <em>&#91;default: $(find xacro)/xacro.py '$(find tensor_field_nav_core)/robots/turtlebot/$(arg base)_$(arg stacks)_$(arg 3d_sensor).urdf.xacro'&#93; </em></li>
                         
                       
                     </ul>
@@ -1329,7 +1311,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

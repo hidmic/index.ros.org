@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -545,190 +541,7 @@ perception_pcl
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-pcl_ros">Changelog for package pcl_ros</h1>
-
-<h2 id="1-6-2-2018-05-20">1.6.2 (2018-05-20)</h2>
-
-<ul>
-<li>  Fix exported includes in Ubuntu Artful</li>
-<li>  Increase limits on CropBox filter parameters</li>
-<li>  Contributors: James Ward, Jiri Horner</li>
-</ul>
-
-<h2 id="1-6-1-2018-05-08">1.6.1 (2018-05-08)</h2>
-
-<ul>
-<li>  Add 1.6.0 section to CHANGELOG.rst</li>
-<li>  Fix the use of Eigen3 in cmake</li>
-<li>  Contributors: Kentaro Wada</li>
-</ul>
-
-<h2 id="1-6-0-2018-04-30">1.6.0 (2018-04-30)</h2>
-
-<ul>
-<li>  Fix build and update maintainers</li>
-<li>  Add message_filters to find_package</li>
-<li>  Remove unnecessary dependency on genmsg</li>
-<li>  Contributors: Paul Bovbel, Kentaro Wada</li>
-</ul>
-
-<h2 id="1-5-4-2018-03-31">1.5.4 (2018-03-31)</h2>
-
-<ul>
-<li>  update to use non deprecated pluginlib macro</li>
-<li>  Fix config path of sample_voxel_grid.launch</li>
-<li>  remove hack now that upstream pcl has been rebuilt</li>
-<li>  Looser hzerror in test for extract_clusters to make it pass on
-Travis</li>
-<li>  Add sample &amp; test for surface/convex_hull</li>
-<li>  Add sample &amp; test for segmentation/extract_clusters.cpp</li>
-<li>  Add sample &amp; test for io/concatenate_data.cpp</li>
-<li>  Add sample &amp; test for features/normal_3d.cpp</li>
-<li>  Organize samples of pcl_ros/features</li>
-<li>  Add test arg to avoid duplicated testing</li>
-<li>  LazyNodelet for features/*</li>
-<li>  LazyNodelet for filters/ProjectInliers</li>
-<li>  Refactor io/PCDReader and io/PCDWriter as child of PCLNodelet</li>
-<li>  LazyNodelet for io/PointCloudConcatenateFieldsSynchronizer</li>
-<li>  LazyNodelet for io/PointCloudConcatenateDataSynchronizer</li>
-<li>  LazyNodelet for segmentation/SegmentDifferences</li>
-<li>  LazyNodelet for segmentation/SACSegmentationFromNormals</li>
-<li>  LazyNodelet for segmentation/SACSegmentation</li>
-<li>  LazyNodelet for segmentation/ExtractPolygonalPrismData</li>
-<li>  LazyNodelet for segmentation/EuclideanClusterExtraction</li>
-<li>  LazyNodelet for surface/MovingLeastSquares</li>
-<li>  LazyNodelet for surface/ConvexHull2D</li>
-<li>  Add missing COMPONENTS of PCL</li>
-<li>  Inherit NodeletLazy for pipeline with less cpu load</li>
-<li>  Set leaf_size 0.02</li>
-<li>  Install samples</li>
-<li>  Add sample and test for pcl/StatisticalOutlierRemoval Conflicts:
-pcl_ros/CMakeLists.txt</li>
-<li>  Add sample and test for pcl/VoxelGrid Conflicts:
-pcl_ros/CMakeLists.txt</li>
-<li>  no need to remove duplicates</li>
-<li>  spourious line change</li>
-<li>  remove now unnecessary build_depend on qtbase5</li>
-<li>  exclude PCL IO libraries exporting Qt flag</li>
-<li>  find only PCL components used instead of all PCL</li>
-<li>  Remove dependency on vtk/libproj-dev
-(<a href="https://github.com/ros-perception/perception_pcl/issues/145">#145</a>)
-* Remove dependency on vtk/libproj-dev These dependencies were
-introduced in
-<a href="https://github.com/ros-perception/perception_pcl/issues/124">#124</a>
-to temporarily fix missing / wrong dependencies in upstream vtk.
-This hack is no longer necessary, since fixed vtk packages have been
-uploaded to packages.ros.org (see
-<a href="https://github.com/ros-perception/perception_pcl/issues/124">#124</a>
-and
-<a href="https://github.com/ros-infrastructure/reprepro-updater/issues/32">ros-infrastructure/reprepro-updater#32</a>).
-* Remove vtk hack from CMakeLists.txt</li>
-<li>  Contributors: Kentaro Wada, Mikael Arguedas</li>
-</ul>
-
-<h2 id="1-5-3-2017-05-03">1.5.3 (2017-05-03)</h2>
-
-<ul>
-<li>  Add dependency on qtbase5-dev for find_package(Qt5Widgets) See
-<a href="https://github.com/ros-perception/perception_pcl/pull/117#issuecomment-298158272">https://github.com/ros-perception/perception_pcl/pull/117#issuecomment-298158272</a>
-for detail.</li>
-<li>  Contributors: Kentaro Wada</li>
-</ul>
-
-<h2 id="1-5-2-2017-04-29">1.5.2 (2017-04-29)</h2>
-
-<ul>
-<li>  Find Qt5Widgets to fix -lQt5::Widgets error</li>
-<li>  Contributors: Kentaro Wada</li>
-</ul>
-
-<h2 id="1-5-1-2017-04-26">1.5.1 (2017-04-26)</h2>
-
-<ul>
-<li>  Add my name as a maintainer</li>
-<li>  Contributors: Kentaro Wada</li>
-</ul>
-
-<h2 id="1-5-0-2017-04-25">1.5.0 (2017-04-25)</h2>
-
-<ul>
-<li>  Fix lib name duplication error in ubunt:zesty</li>
-<li>  Detect automatically the version of PCL in cmake</li>
-<li>  Install xml files declaring nodelets</li>
-<li>  Fix syntax of nodelet manifest file by splitting files for
-each library.</li>
-<li>  Contributors: Kentaro Wada</li>
-</ul>
-
-<h2 id="1-4-0-2016-04-22">1.4.0 (2016-04-22)</h2>
-
-<ul>
-<li>  Fixup libproj-dev rosdep</li>
-<li>  Add build depend on libproj, since it's not provided by vtk right
-now</li>
-<li>  manually remove dependency on vtkproj from PCL_LIBRARIES</li>
-<li>  Remove python-vtk for kinetic-devel, see issue
-<a href="https://github.com/ros-perception/perception_pcl/issues/44">#44</a>
-</li>
-<li>  Contributors: Jackie Kay, Paul Bovbel</li>
-</ul>
-
-<h2 id="1-3-0-2015-06-22">1.3.0 (2015-06-22)</h2>
-
-<ul>
-<li>  cleanup broken library links All removed library names are included
-in \${PCL_LIBRARIES}. However, the plain library names broke
-catkin's overlay mechanism: Where \${PCL_LIBRARIES} could point to
-a local installation of the PCL, e.g. pcd_ros_segmentation might
-still link to the system-wide installed version
-of pcl_segmentation.</li>
-<li>  Fixed test for jade-devel. Progress on
-<a href="https://github.com/ros-perception/perception_pcl/issues/92">#92</a>
-</li>
-<li>  commented out test_tf_message_filter_pcl Until
-<a href="https://github.com/ros/geometry/issues/80">ros/geometry#80</a> has
-been merged the test will fail.</li>
-<li>  fixed indentation and author</li>
-<li>  Adds a test for tf message filters with pcl pointclouds</li>
-<li>
-<p>specialized HasHeader, TimeStamp, FrameId</p>
-
-<ul>
-<li>  HasHeader now returns false</li>
-<li>TimeStamp and FrameId specialed for pcl::PointCloud&lt;T&gt; for
-any point type T These changes allow to use pcl::PointCloud with
-tf::MessageFilter</li>
-</ul>
-</li>
-<li><p>Sync pcl_nodelets.xml from hydro to indigo Fixes to pass catkin
-lint -W1</p></li>
-<li><p>Fixes
-<a href="https://github.com/ros-perception/perception_pcl/issues/87">#87</a>
-for Indigo</p></li>
-<li><p>Fixes
-<a href="https://github.com/ros-perception/perception_pcl/issues/85">#85</a>
-for Indigo</p></li>
-<li><p>Fixes
-<a href="https://github.com/ros-perception/perception_pcl/issues/77">#77</a>
-and
-<a href="https://github.com/ros-perception/perception_pcl/issues/80">#80</a>
-for indigo</p></li>
-<li><p>Added option to save pointclouds in binary and binary compressed
-format</p></li>
-<li><p>Contributors: Brice Rebsamen, Lucid One, Mitchell Wills, v4hn</p></li>
-</ul>
-
-<h2 id="1-2-6-2015-02-04">1.2.6 (2015-02-04)</h2>
-
-<h2 id="1-2-5-2015-01-20">1.2.5 (2015-01-20)</h2>
-
-<h2 id="1-2-4-2015-01-15">1.2.4 (2015-01-15)</h2>
-
-<h2 id="1-2-3-2015-01-10">1.2.3 (2015-01-10)</h2>
-
-<ul>
-<li>  Update common.py Extended filter limits up to </li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1190,6 +1003,20 @@ format</p></li>
                     
                     
                     <tr>
+                      <td><a href="/p/rtabmap_ros/github-introlab-rtabmap_ros#melodic">rtabmap_ros</a></td>
+                      <td><a href="/r/rtabmap_ros/github-introlab-rtabmap_ros">github-introlab-rtabmap_ros</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/rtabmap_ros/github-introlab-rtabmap_ros#melodic-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
                       <td><a href="/p/velodyne_pointcloud/github-ros-drivers-velodyne#melodic">velodyne_pointcloud</a></td>
                       <td><a href="/r/velodyne/github-ros-drivers-velodyne">github-ros-drivers-velodyne</a></td>
                       <td class="text-center">
@@ -1274,6 +1101,20 @@ format</p></li>
                     
                     
                     <tr>
+                      <td><a href="/p/ensenso_camera/github-ensenso-ros_driver#melodic">ensenso_camera</a></td>
+                      <td><a href="/r/ensenso_driver/github-ensenso-ros_driver">github-ensenso-ros_driver</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/ensenso_camera/github-ensenso-ros_driver#melodic-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
                       <td><a href="/p/map_merge_3d/github-hrnr-map-merge#melodic">map_merge_3d</a></td>
                       <td><a href="/r/map_merge/github-hrnr-map-merge">github-hrnr-map-merge</a></td>
                       <td class="text-center">
@@ -1303,7 +1144,7 @@ format</p></li>
         
           <ul>
             
-              <li><a href="https://github.com/ros-perception/perception_pcl/blob/melodic-devel/pcl_ros/tests/test_tf_message_filter_pcl.launch" target="_blank">tests/test_tf_message_filter_pcl.launch</a>
+              <li><a href="https://github.com/ros-perception/perception_pcl/blob/melodic-devel/pcl_ros/samples/pcl_ros/features/sample_normal_3d.launch" target="_blank">samples/pcl_ros/features/sample_normal_3d.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1311,12 +1152,68 @@ format</p></li>
                   <li>
                     <ul>
                       
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-perception/perception_pcl/blob/melodic-devel/pcl_ros/samples/pcl_ros/io/sample_concatenate_data.launch" target="_blank">samples/pcl_ros/io/sample_concatenate_data.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
                     </ul>
                   </li>
                 </ul>
               </li>
             
               <li><a href="https://github.com/ros-perception/perception_pcl/blob/melodic-devel/pcl_ros/samples/pcl_ros/surface/sample_convex_hull.launch" target="_blank">samples/pcl_ros/surface/sample_convex_hull.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-perception/perception_pcl/blob/melodic-devel/pcl_ros/samples/pcl_ros/segmentation/sample_extract_clusters.launch" target="_blank">samples/pcl_ros/segmentation/sample_extract_clusters.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1387,69 +1284,13 @@ format</p></li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-perception/perception_pcl/blob/melodic-devel/pcl_ros/samples/pcl_ros/io/sample_concatenate_data.launch" target="_blank">samples/pcl_ros/io/sample_concatenate_data.launch</a>
+              <li><a href="https://github.com/ros-perception/perception_pcl/blob/melodic-devel/pcl_ros/tests/test_tf_message_filter_pcl.launch" target="_blank">tests/test_tf_message_filter_pcl.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-perception/perception_pcl/blob/melodic-devel/pcl_ros/samples/pcl_ros/segmentation/sample_extract_clusters.launch" target="_blank">samples/pcl_ros/segmentation/sample_extract_clusters.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-perception/perception_pcl/blob/melodic-devel/pcl_ros/samples/pcl_ros/features/sample_normal_3d.launch" target="_blank">samples/pcl_ros/features/sample_normal_3d.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
                       
                     </ul>
                   </li>
@@ -1810,7 +1651,7 @@ perception_pcl
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-04-25
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-04-24
         </span>
       </td>
     </tr>
@@ -1920,165 +1761,7 @@ perception_pcl
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-pcl_ros">Changelog for package pcl_ros</h1>
-
-<h2 id="1-5-4-2018-03-31">1.5.4 (2018-03-31)</h2>
-
-<ul>
-<li>  update to use non deprecated pluginlib macro</li>
-<li>  Fix config path of sample_voxel_grid.launch</li>
-<li>  remove hack now that upstream pcl has been rebuilt</li>
-<li>  Looser hzerror in test for extract_clusters to make it pass on
-Travis</li>
-<li>  Add sample &amp; test for surface/convex_hull</li>
-<li>  Add sample &amp; test for segmentation/extract_clusters.cpp</li>
-<li>  Add sample &amp; test for io/concatenate_data.cpp</li>
-<li>  Add sample &amp; test for features/normal_3d.cpp</li>
-<li>  Organize samples of pcl_ros/features</li>
-<li>  Add test arg to avoid duplicated testing</li>
-<li>  LazyNodelet for features/*</li>
-<li>  LazyNodelet for filters/ProjectInliers</li>
-<li>  Refactor io/PCDReader and io/PCDWriter as child of PCLNodelet</li>
-<li>  LazyNodelet for io/PointCloudConcatenateFieldsSynchronizer</li>
-<li>  LazyNodelet for io/PointCloudConcatenateDataSynchronizer</li>
-<li>  LazyNodelet for segmentation/SegmentDifferences</li>
-<li>  LazyNodelet for segmentation/SACSegmentationFromNormals</li>
-<li>  LazyNodelet for segmentation/SACSegmentation</li>
-<li>  LazyNodelet for segmentation/ExtractPolygonalPrismData</li>
-<li>  LazyNodelet for segmentation/EuclideanClusterExtraction</li>
-<li>  LazyNodelet for surface/MovingLeastSquares</li>
-<li>  LazyNodelet for surface/ConvexHull2D</li>
-<li>  Add missing COMPONENTS of PCL</li>
-<li>  Inherit NodeletLazy for pipeline with less cpu load</li>
-<li>  Set leaf_size 0.02</li>
-<li>  Install samples</li>
-<li>  Add sample and test for pcl/StatisticalOutlierRemoval Conflicts:
-pcl_ros/CMakeLists.txt</li>
-<li>  Add sample and test for pcl/VoxelGrid Conflicts:
-pcl_ros/CMakeLists.txt</li>
-<li>  no need to remove duplicates</li>
-<li>  spourious line change</li>
-<li>  remove now unnecessary build_depend on qtbase5</li>
-<li>  exclude PCL IO libraries exporting Qt flag</li>
-<li>  find only PCL components used instead of all PCL</li>
-<li>  Remove dependency on vtk/libproj-dev
-(<a href="https://github.com/ros-perception/perception_pcl/issues/145">#145</a>)
-* Remove dependency on vtk/libproj-dev These dependencies were
-introduced in
-<a href="https://github.com/ros-perception/perception_pcl/issues/124">#124</a>
-to temporarily fix missing / wrong dependencies in upstream vtk.
-This hack is no longer necessary, since fixed vtk packages have been
-uploaded to packages.ros.org (see
-<a href="https://github.com/ros-perception/perception_pcl/issues/124">#124</a>
-and
-<a href="https://github.com/ros-infrastructure/reprepro-updater/issues/32">ros-infrastructure/reprepro-updater#32</a>).
-* Remove vtk hack from CMakeLists.txt</li>
-<li>  Contributors: Kentaro Wada, Mikael Arguedas</li>
-</ul>
-
-<h2 id="1-5-3-2017-05-03">1.5.3 (2017-05-03)</h2>
-
-<ul>
-<li>  Add dependency on qtbase5-dev for find_package(Qt5Widgets) See
-<a href="https://github.com/ros-perception/perception_pcl/pull/117#issuecomment-298158272">https://github.com/ros-perception/perception_pcl/pull/117#issuecomment-298158272</a>
-for detail.</li>
-<li>  Contributors: Kentaro Wada</li>
-</ul>
-
-<h2 id="1-5-2-2017-04-29">1.5.2 (2017-04-29)</h2>
-
-<ul>
-<li>  Find Qt5Widgets to fix -lQt5::Widgets error</li>
-<li>  Contributors: Kentaro Wada</li>
-</ul>
-
-<h2 id="1-5-1-2017-04-26">1.5.1 (2017-04-26)</h2>
-
-<ul>
-<li>  Add my name as a maintainer</li>
-<li>  Contributors: Kentaro Wada</li>
-</ul>
-
-<h2 id="1-5-0-2017-04-25">1.5.0 (2017-04-25)</h2>
-
-<ul>
-<li>  Fix lib name duplication error in ubunt:zesty</li>
-<li>  Detect automatically the version of PCL in cmake</li>
-<li>  Install xml files declaring nodelets</li>
-<li>  Fix syntax of nodelet manifest file by splitting files for
-each library.</li>
-<li>  Contributors: Kentaro Wada</li>
-</ul>
-
-<h2 id="1-4-0-2016-04-22">1.4.0 (2016-04-22)</h2>
-
-<ul>
-<li>  Fixup libproj-dev rosdep</li>
-<li>  Add build depend on libproj, since it's not provided by vtk right
-now</li>
-<li>  manually remove dependency on vtkproj from PCL_LIBRARIES</li>
-<li>  Remove python-vtk for kinetic-devel, see issue
-<a href="https://github.com/ros-perception/perception_pcl/issues/44">#44</a>
-</li>
-<li>  Contributors: Jackie Kay, Paul Bovbel</li>
-</ul>
-
-<h2 id="1-3-0-2015-06-22">1.3.0 (2015-06-22)</h2>
-
-<ul>
-<li>  cleanup broken library links All removed library names are included
-in \${PCL_LIBRARIES}. However, the plain library names broke
-catkin's overlay mechanism: Where \${PCL_LIBRARIES} could point to
-a local installation of the PCL, e.g. pcd_ros_segmentation might
-still link to the system-wide installed version
-of pcl_segmentation.</li>
-<li>  Fixed test for jade-devel. Progress on
-<a href="https://github.com/ros-perception/perception_pcl/issues/92">#92</a>
-</li>
-<li>  commented out test_tf_message_filter_pcl Until
-<a href="https://github.com/ros/geometry/issues/80">ros/geometry#80</a> has
-been merged the test will fail.</li>
-<li>  fixed indentation and author</li>
-<li>  Adds a test for tf message filters with pcl pointclouds</li>
-<li>
-<p>specialized HasHeader, TimeStamp, FrameId</p>
-
-<ul>
-<li>  HasHeader now returns false</li>
-<li>TimeStamp and FrameId specialed for pcl::PointCloud&lt;T&gt; for
-any point type T These changes allow to use pcl::PointCloud with
-tf::MessageFilter</li>
-</ul>
-</li>
-<li><p>Sync pcl_nodelets.xml from hydro to indigo Fixes to pass catkin
-lint -W1</p></li>
-<li><p>Fixes
-<a href="https://github.com/ros-perception/perception_pcl/issues/87">#87</a>
-for Indigo</p></li>
-<li><p>Fixes
-<a href="https://github.com/ros-perception/perception_pcl/issues/85">#85</a>
-for Indigo</p></li>
-<li><p>Fixes
-<a href="https://github.com/ros-perception/perception_pcl/issues/77">#77</a>
-and
-<a href="https://github.com/ros-perception/perception_pcl/issues/80">#80</a>
-for indigo</p></li>
-<li><p>Added option to save pointclouds in binary and binary compressed
-format</p></li>
-<li><p>Contributors: Brice Rebsamen, Lucid One, Mitchell Wills, v4hn</p></li>
-</ul>
-
-<h2 id="1-2-6-2015-02-04">1.2.6 (2015-02-04)</h2>
-
-<h2 id="1-2-5-2015-01-20">1.2.5 (2015-01-20)</h2>
-
-<h2 id="1-2-4-2015-01-15">1.2.4 (2015-01-15)</h2>
-
-<h2 id="1-2-3-2015-01-10">1.2.3 (2015-01-10)</h2>
-
-<ul>
-<li>  Update common.py Extended filter limits up to </li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2919,7 +2602,7 @@ format</p></li>
         
           <ul>
             
-              <li><a href="https://github.com/ros-perception/perception_pcl/blob/lunar-devel/pcl_ros/tests/test_tf_message_filter_pcl.launch" target="_blank">tests/test_tf_message_filter_pcl.launch</a>
+              <li><a href="https://github.com/ros-perception/perception_pcl/blob/lunar-devel/pcl_ros/samples/pcl_ros/features/sample_normal_3d.launch" target="_blank">samples/pcl_ros/features/sample_normal_3d.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2927,12 +2610,68 @@ format</p></li>
                   <li>
                     <ul>
                       
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-perception/perception_pcl/blob/lunar-devel/pcl_ros/samples/pcl_ros/io/sample_concatenate_data.launch" target="_blank">samples/pcl_ros/io/sample_concatenate_data.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
                     </ul>
                   </li>
                 </ul>
               </li>
             
               <li><a href="https://github.com/ros-perception/perception_pcl/blob/lunar-devel/pcl_ros/samples/pcl_ros/surface/sample_convex_hull.launch" target="_blank">samples/pcl_ros/surface/sample_convex_hull.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-perception/perception_pcl/blob/lunar-devel/pcl_ros/samples/pcl_ros/segmentation/sample_extract_clusters.launch" target="_blank">samples/pcl_ros/segmentation/sample_extract_clusters.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3003,69 +2742,13 @@ format</p></li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-perception/perception_pcl/blob/lunar-devel/pcl_ros/samples/pcl_ros/io/sample_concatenate_data.launch" target="_blank">samples/pcl_ros/io/sample_concatenate_data.launch</a>
+              <li><a href="https://github.com/ros-perception/perception_pcl/blob/lunar-devel/pcl_ros/tests/test_tf_message_filter_pcl.launch" target="_blank">tests/test_tf_message_filter_pcl.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-perception/perception_pcl/blob/lunar-devel/pcl_ros/samples/pcl_ros/segmentation/sample_extract_clusters.launch" target="_blank">samples/pcl_ros/segmentation/sample_extract_clusters.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-perception/perception_pcl/blob/lunar-devel/pcl_ros/samples/pcl_ros/features/sample_normal_3d.launch" target="_blank">samples/pcl_ros/features/sample_normal_3d.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
                       
                     </ul>
                   </li>
@@ -3426,7 +3109,7 @@ perception_pcl
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-05-17
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-05-16
         </span>
       </td>
     </tr>
@@ -3536,180 +3219,7 @@ perception_pcl
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-pcl_ros">Changelog for package pcl_ros</h1>
-
-<h2 id="1-4-4-2018-05-17">1.4.4 (2018-05-17)</h2>
-
-<ul>
-<li>  Use nested foreach for the filtered patterns</li>
-<li>  Filter include dirs that does not exist Close
-<a href="https://github.com/ros-perception/perception_pcl/issues/172">https://github.com/ros-perception/perception_pcl/issues/172</a> Close
-<a href="https://github.com/ros-perception/perception_pcl/issues/206">https://github.com/ros-perception/perception_pcl/issues/206</a>
-</li>
-<li>  Remove dependencies on not existing target</li>
-<li>  Fix use of Eigen3</li>
-<li>  Revert "Increase limits on CropBox filter parameters" This reverts
-commit e007128e41b189092a3311775a28c8ebbd8f13ad.</li>
-<li>  Increase limits on CropBox filter parameters Min and max of CropBox
-filter was +/- 5m. For a pointcloud from a Velodyne, for example,
-this is not enough. Increased to +/- 1000m.</li>
-<li>  Contributors: James Ward, Kentaro Wada</li>
-</ul>
-
-<h2 id="1-4-3-2018-04-08">1.4.3 (2018-04-08)</h2>
-
-<ul>
-<li>  Provide all PCL libraries Related to
-<a href="https://github.com/ros-perception/perception_pcl/pull/184">https://github.com/ros-perception/perception_pcl/pull/184</a>
-</li>
-<li>  Contributors: Kentaro Wada</li>
-</ul>
-
-<h2 id="1-4-2-2018-04-03">1.4.2 (2018-04-03)</h2>
-
-<ul>
-<li>  update to use non deprecated pluginlib macro</li>
-<li>  Fix config path of sample_voxel_grid.launch</li>
-<li>  remove hack now that upstream pcl has been rebuilt</li>
-<li>  Looser hzerror in test for extract_clusters to make it pass on
-Travis</li>
-<li>  Add sample &amp; test for surface/convex_hull</li>
-<li>  Add sample &amp; test for segmentation/extract_clusters.cpp</li>
-<li>  Add sample &amp; test for io/concatenate_data.cpp</li>
-<li>  Add sample &amp; test for features/normal_3d.cpp</li>
-<li>  Organize samples of pcl_ros/features</li>
-<li>  Add test arg to avoid duplicated testing</li>
-<li>  LazyNodelet for features/*</li>
-<li>  LazyNodelet for filters/ProjectInliers</li>
-<li>  Refactor io/PCDReader and io/PCDWriter as child of PCLNodelet</li>
-<li>  LazyNodelet for io/PointCloudConcatenateFieldsSynchronizer</li>
-<li>  LazyNodelet for io/PointCloudConcatenateDataSynchronizer</li>
-<li>  LazyNodelet for segmentation/SegmentDifferences</li>
-<li>  LazyNodelet for segmentation/SACSegmentationFromNormals</li>
-<li>  LazyNodelet for segmentation/SACSegmentation</li>
-<li>  LazyNodelet for segmentation/ExtractPolygonalPrismData</li>
-<li>  LazyNodelet for segmentation/EuclideanClusterExtraction</li>
-<li>  LazyNodelet for surface/MovingLeastSquares</li>
-<li>  LazyNodelet for surface/ConvexHull2D</li>
-<li>  Add missing COMPONENTS of PCL</li>
-<li>  Inherit NodeletLazy for pipeline with less cpu load</li>
-<li>  Set leaf_size 0.02</li>
-<li>  Install samples</li>
-<li>  Add sample and test for pcl/StatisticalOutlierRemoval Conflicts:
-pcl_ros/CMakeLists.txt</li>
-<li>  Add sample and test for pcl/VoxelGrid Conflicts:
-pcl_ros/CMakeLists.txt</li>
-<li>  no need to remove duplicates</li>
-<li>  spourious line change</li>
-<li>  remove now unnecessary build_depend on qtbase5</li>
-<li>  exclude PCL IO libraries exporting Qt flag</li>
-<li>  find only PCL components used instead of all PCL</li>
-<li>  Remove dependency on vtk/libproj-dev
-(<a href="https://github.com/ros-perception/perception_pcl/issues/145">#145</a>)
-* Remove dependency on vtk/libproj-dev These dependencies were
-introduced in
-<a href="https://github.com/ros-perception/perception_pcl/issues/124">#124</a>
-to temporarily fix missing / wrong dependencies in upstream vtk.
-This hack is no longer necessary, since fixed vtk packages have been
-uploaded to packages.ros.org (see
-<a href="https://github.com/ros-perception/perception_pcl/issues/124">#124</a>
-and
-<a href="https://github.com/ros-infrastructure/reprepro-updater/issues/32">ros-infrastructure/reprepro-updater#32</a>).
-* Remove vtk hack from CMakeLists.txt</li>
-<li>  Add dependency on qtbase5-dev for find_package(Qt5Widgets) See
-<a href="https://github.com/ros-perception/perception_pcl/pull/117#issuecomment-298158272">https://github.com/ros-perception/perception_pcl/pull/117#issuecomment-298158272</a>
-for detail.</li>
-<li>  Find Qt5Widgets to fix -lQt5::Widgets error</li>
-<li>  Add myname as a maintainer</li>
-<li>  Fix lib name duplication error</li>
-<li>  Detect automatically the version of PCL</li>
-<li>  Merge pull request
-<a href="https://github.com/ros-perception/perception_pcl/issues/134">#134</a>
-from ros-perception/install_plugins_xml Install xml files
-declaring nodelets</li>
-<li>  Install xml files declaring nodelets
-<a href="https://github.com/ros-perception/perception_pcl/commit/f81cded18b4f6d398b460a36c953fe6620a02bd6#commitcomment-21871201">https://github.com/ros-perception/perception_pcl/commit/f81cded18b4f6d398b460a36c953fe6620a02bd6#commitcomment-21871201</a>
-@scottnothing Thanks!</li>
-<li>  Merge pull request
-<a href="https://github.com/ros-perception/perception_pcl/issues/132">#132</a>
-from wkentaro/fix_syntax_nodelet_manifest Fix syntax of nodelet
-manifest file</li>
-<li>  Fix syntax of nodelet manifest file By splitting files for each
-library. Close
-<a href="https://github.com/ros-perception/perception_pcl/issues/131">#131</a>
-</li>
-<li>  Contributors: Kentaro Wada, Mikael Arguedas, Paul Bovbel</li>
-</ul>
-
-<h2 id="1-4-0-2016-04-22">1.4.0 (2016-04-22)</h2>
-
-<ul>
-<li>  Fixup libproj-dev rosdep</li>
-<li>  Add build depend on libproj, since it's not provided by vtk right
-now</li>
-<li>  manually remove dependency on vtkproj from PCL_LIBRARIES</li>
-<li>  Remove python-vtk for kinetic-devel, see issue
-<a href="https://github.com/ros-perception/perception_pcl/issues/44">#44</a>
-</li>
-<li>  Contributors: Jackie Kay, Paul Bovbel</li>
-</ul>
-
-<h2 id="1-3-0-2015-06-22">1.3.0 (2015-06-22)</h2>
-
-<ul>
-<li>  cleanup broken library links All removed library names are included
-in \${PCL_LIBRARIES}. However, the plain library names broke
-catkin's overlay mechanism: Where \${PCL_LIBRARIES} could point to
-a local installation of the PCL, e.g. pcd_ros_segmentation might
-still link to the system-wide installed version
-of pcl_segmentation.</li>
-<li>  Fixed test for jade-devel. Progress on
-<a href="https://github.com/ros-perception/perception_pcl/issues/92">#92</a>
-</li>
-<li>  commented out test_tf_message_filter_pcl Until
-<a href="https://github.com/ros/geometry/issues/80">ros/geometry#80</a> has
-been merged the test will fail.</li>
-<li>  fixed indentation and author</li>
-<li>  Adds a test for tf message filters with pcl pointclouds</li>
-<li>
-<p>specialized HasHeader, TimeStamp, FrameId</p>
-
-<ul>
-<li>  HasHeader now returns false</li>
-<li>TimeStamp and FrameId specialed for pcl::PointCloud&lt;T&gt; for
-any point type T These changes allow to use pcl::PointCloud with
-tf::MessageFilter</li>
-</ul>
-</li>
-<li><p>Sync pcl_nodelets.xml from hydro to indigo Fixes to pass catkin
-lint -W1</p></li>
-<li><p>Fixes
-<a href="https://github.com/ros-perception/perception_pcl/issues/87">#87</a>
-for Indigo</p></li>
-<li><p>Fixes
-<a href="https://github.com/ros-perception/perception_pcl/issues/85">#85</a>
-for Indigo</p></li>
-<li><p>Fixes
-<a href="https://github.com/ros-perception/perception_pcl/issues/77">#77</a>
-and
-<a href="https://github.com/ros-perception/perception_pcl/issues/80">#80</a>
-for indigo</p></li>
-<li><p>Added option to save pointclouds in binary and binary compressed
-format</p></li>
-<li><p>Contributors: Brice Rebsamen, Lucid One, Mitchell Wills, v4hn</p></li>
-</ul>
-
-<h2 id="1-2-6-2015-02-04">1.2.6 (2015-02-04)</h2>
-
-<h2 id="1-2-5-2015-01-20">1.2.5 (2015-01-20)</h2>
-
-<h2 id="1-2-4-2015-01-15">1.2.4 (2015-01-15)</h2>
-
-<h2 id="1-2-3-2015-01-10">1.2.3 (2015-01-10)</h2>
-
-<ul>
-<li>  Update common.py Extended filter limits up to </li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -5445,7 +4955,7 @@ format</p></li>
         
           <ul>
             
-              <li><a href="https://github.com/ros-perception/perception_pcl/blob/kinetic-devel/pcl_ros/tests/test_tf_message_filter_pcl.launch" target="_blank">tests/test_tf_message_filter_pcl.launch</a>
+              <li><a href="https://github.com/ros-perception/perception_pcl/blob/kinetic-devel/pcl_ros/samples/pcl_ros/features/sample_normal_3d.launch" target="_blank">samples/pcl_ros/features/sample_normal_3d.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -5453,12 +4963,68 @@ format</p></li>
                   <li>
                     <ul>
                       
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-perception/perception_pcl/blob/kinetic-devel/pcl_ros/samples/pcl_ros/io/sample_concatenate_data.launch" target="_blank">samples/pcl_ros/io/sample_concatenate_data.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
                     </ul>
                   </li>
                 </ul>
               </li>
             
               <li><a href="https://github.com/ros-perception/perception_pcl/blob/kinetic-devel/pcl_ros/samples/pcl_ros/surface/sample_convex_hull.launch" target="_blank">samples/pcl_ros/surface/sample_convex_hull.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-perception/perception_pcl/blob/kinetic-devel/pcl_ros/samples/pcl_ros/segmentation/sample_extract_clusters.launch" target="_blank">samples/pcl_ros/segmentation/sample_extract_clusters.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -5529,69 +5095,13 @@ format</p></li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-perception/perception_pcl/blob/kinetic-devel/pcl_ros/samples/pcl_ros/io/sample_concatenate_data.launch" target="_blank">samples/pcl_ros/io/sample_concatenate_data.launch</a>
+              <li><a href="https://github.com/ros-perception/perception_pcl/blob/kinetic-devel/pcl_ros/tests/test_tf_message_filter_pcl.launch" target="_blank">tests/test_tf_message_filter_pcl.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-perception/perception_pcl/blob/kinetic-devel/pcl_ros/samples/pcl_ros/segmentation/sample_extract_clusters.launch" target="_blank">samples/pcl_ros/segmentation/sample_extract_clusters.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-perception/perception_pcl/blob/kinetic-devel/pcl_ros/samples/pcl_ros/features/sample_normal_3d.launch" target="_blank">samples/pcl_ros/features/sample_normal_3d.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
                       
                     </ul>
                   </li>
@@ -6061,63 +5571,7 @@ perception_pcl
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-pcl_ros">Changelog for package pcl_ros</h1>
-
-<h2 id="1-2-9-2018-04-04">1.2.9 (2018-04-04)</h2>
-
-<h2 id="1-2-8-2018-04-03">1.2.8 (2018-04-03)</h2>
-
-<ul>
-<li>  update to use non deprecated pluginlib macro</li>
-<li>  Install xml files declaring nodelets
-<a href="https://github.com/ros-perception/perception_pcl/commit/f81cded18b4f6d398b460a36c953fe6620a02bd6#commitcomment-21871201">https://github.com/ros-perception/perception_pcl/commit/f81cded18b4f6d398b460a36c953fe6620a02bd6#commitcomment-21871201</a>
-@scottnothing Thanks!</li>
-<li>  Fix syntax of nodelet manifest file By splitting files for each
-library. Close
-<a href="https://github.com/ros-perception/perception_pcl/issues/131">#131</a>
-</li>
-<li>  Merge pull request
-<a href="https://github.com/ros-perception/perception_pcl/issues/114">#114</a>
-from dpiet/indigo-devel Fixing typo in a ROS_INFO statement</li>
-<li>  Fixing typo in a ROS_INFO statement Statement was incorrectly
-informing user that PCD would be saved as binary instead of ASCII.</li>
-<li>  Merge cleanup broken library links</li>
-<li>  Contributors: Kentaro Wada, Mikael Arguedas, Paul Bovbel, dpiet,
-v4hn</li>
-</ul>
-
-<h2 id="1-2-7-2015-06-08">1.2.7 (2015-06-08)</h2>
-
-<ul>
-<li>  Sync pcl_nodelets.xml from hydro to indigo Fixes to pass catkin
-lint -W1</li>
-<li>  Fixes
-<a href="https://github.com/ros-perception/perception_pcl/issues/87">#87</a>
-for Indigo</li>
-<li>  Fixes
-<a href="https://github.com/ros-perception/perception_pcl/issues/85">#85</a>
-for Indigo</li>
-<li>  Fixes
-<a href="https://github.com/ros-perception/perception_pcl/issues/77">#77</a>
-and
-<a href="https://github.com/ros-perception/perception_pcl/issues/80">#80</a>
-for indigo</li>
-<li>  Added option to save pointclouds in binary and binary compressed
-format</li>
-<li>  Contributors: Lucid One, Mitchell Wills</li>
-</ul>
-
-<h2 id="1-2-6-2015-02-04">1.2.6 (2015-02-04)</h2>
-
-<h2 id="1-2-5-2015-01-20">1.2.5 (2015-01-20)</h2>
-
-<h2 id="1-2-4-2015-01-15">1.2.4 (2015-01-15)</h2>
-
-<h2 id="1-2-3-2015-01-10">1.2.3 (2015-01-10)</h2>
-
-<ul>
-<li>  Update common.py Extended filter limits up to </li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -8760,64 +8214,7 @@ perception_pcl
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-pcl_ros">Changelog for package pcl_ros</h1>
-
-<h2 id="1-3-0-2015-06-22">1.3.0 (2015-06-22)</h2>
-
-<ul>
-<li>  cleanup broken library links All removed library names are included
-in \${PCL_LIBRARIES}. However, the plain library names broke
-catkin's overlay mechanism: Where \${PCL_LIBRARIES} could point to
-a local installation of the PCL, e.g. pcd_ros_segmentation might
-still link to the system-wide installed version
-of pcl_segmentation.</li>
-<li>  Fixed test for jade-devel. Progress on
-<a href="https://github.com/ros-perception/perception_pcl/issues/92">#92</a>
-</li>
-<li>  commented out test_tf_message_filter_pcl Until
-<a href="https://github.com/ros/geometry/issues/80">ros/geometry#80</a> has
-been merged the test will fail.</li>
-<li>  fixed indentation and author</li>
-<li>  Adds a test for tf message filters with pcl pointclouds</li>
-<li>
-<p>specialized HasHeader, TimeStamp, FrameId</p>
-
-<ul>
-<li>  HasHeader now returns false</li>
-<li>TimeStamp and FrameId specialed for pcl::PointCloud&lt;T&gt; for
-any point type T These changes allow to use pcl::PointCloud with
-tf::MessageFilter</li>
-</ul>
-</li>
-<li><p>Sync pcl_nodelets.xml from hydro to indigo Fixes to pass catkin
-lint -W1</p></li>
-<li><p>Fixes
-<a href="https://github.com/ros-perception/perception_pcl/issues/87">#87</a>
-for Indigo</p></li>
-<li><p>Fixes
-<a href="https://github.com/ros-perception/perception_pcl/issues/85">#85</a>
-for Indigo</p></li>
-<li><p>Fixes
-<a href="https://github.com/ros-perception/perception_pcl/issues/77">#77</a>
-and
-<a href="https://github.com/ros-perception/perception_pcl/issues/80">#80</a>
-for indigo</p></li>
-<li><p>Added option to save pointclouds in binary and binary compressed
-format</p></li>
-<li><p>Contributors: Brice Rebsamen, Lucid One, Mitchell Wills, v4hn</p></li>
-</ul>
-
-<h2 id="1-2-6-2015-02-04">1.2.6 (2015-02-04)</h2>
-
-<h2 id="1-2-5-2015-01-20">1.2.5 (2015-01-20)</h2>
-
-<h2 id="1-2-4-2015-01-15">1.2.4 (2015-01-15)</h2>
-
-<h2 id="1-2-3-2015-01-10">1.2.3 (2015-01-10)</h2>
-
-<ul>
-<li>  Update common.py Extended filter limits up to </li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -10339,20 +9736,7 @@ pointcloud_to_laserscan
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-pcl_ros">Changelog for package pcl_ros</h1>
-
-<h2 id="1-1-11-2015-01-10">1.1.11 (2015-01-10)</h2>
-
-<h2 id="1-1-10-2014-10-25">1.1.10 (2014-10-25)</h2>
-
-<h2 id="1-1-9-2014-09-13">1.1.9 (2014-09-13)</h2>
-
-<ul>
-<li>  Created a nodelet for the CropBox filter</li>
-<li>  Tests no longer exist</li>
-<li>  add nodelet definitions to xml</li>
-<li>  Contributors: Mart</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -11777,11 +11161,11 @@ pointcloud_to_laserscan
             
               <li><a href="https://github.com/ros-perception/perception_pcl/blob/hydro-devel/pcl_ros/msg/PolygonMesh.msg" target="_blank">msg/PolygonMesh.msg</a></li>
             
-              <li><a href="https://github.com/ros-perception/perception_pcl/blob/hydro-devel/pcl_ros/msg/PointIndices.msg" target="_blank">msg/PointIndices.msg</a></li>
+              <li><a href="https://github.com/ros-perception/perception_pcl/blob/hydro-devel/pcl_ros/msg/ModelCoefficients.msg" target="_blank">msg/ModelCoefficients.msg</a></li>
             
               <li><a href="https://github.com/ros-perception/perception_pcl/blob/hydro-devel/pcl_ros/msg/Vertices.msg" target="_blank">msg/Vertices.msg</a></li>
             
-              <li><a href="https://github.com/ros-perception/perception_pcl/blob/hydro-devel/pcl_ros/msg/ModelCoefficients.msg" target="_blank">msg/ModelCoefficients.msg</a></li>
+              <li><a href="https://github.com/ros-perception/perception_pcl/blob/hydro-devel/pcl_ros/msg/PointIndices.msg" target="_blank">msg/PointIndices.msg</a></li>
             
           </ul>
         
@@ -11941,7 +11325,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

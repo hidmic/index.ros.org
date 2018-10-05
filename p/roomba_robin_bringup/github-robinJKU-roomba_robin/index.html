@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -969,6 +965,41 @@ roomba_robin_description
         
           <ul>
             
+              <li><a href="https://github.com/robinJKU/roomba_robin/blob/hydro-devel/roomba_robin_bringup/launch/paired_public.launch" target="_blank">launch/paired_public.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>base</strong> <em>&#91;default: $(optenv TURTLEBOT_BASE kobuki)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>stacks</strong> <em>&#91;default: $(optenv TURTLEBOT_STACKS hexagons)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>3d_sensor</strong> <em>&#91;default: $(optenv TURTLEBOT_3D_SENSOR kinect)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/robinJKU/roomba_robin/blob/hydro-devel/roomba_robin_bringup/launch/minimal_with_appmanager.launch" target="_blank">launch/minimal_with_appmanager.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1097,28 +1128,26 @@ roomba_robin_description
                 </ul>
               </li>
             
-              <li><a href="https://github.com/robinJKU/roomba_robin/blob/hydro-devel/roomba_robin_bringup/launch/paired_public.launch" target="_blank">launch/paired_public.launch</a>
+              <li><a href="https://github.com/robinJKU/roomba_robin/blob/hydro-devel/roomba_robin_bringup/launch/includes/robot.launch.xml" target="_blank">launch/includes/robot.launch.xml</a>
                 <ul class="list-unstyled">
                   
-                    <li><em></em></li>
+                    <li><em>
+  Collection of robot-centric definitions and nodes for the turtlebot. 
+ </em></li>
                   
                   <li>
                     <ul>
                       
                         
-                          <li><strong>base</strong> <em>&#91;default: $(optenv TURTLEBOT_BASE kobuki)&#93; </em></li>
+                          <li><strong>base</strong>  </em></li>
                         
                       
                         
-                          <li><strong>stacks</strong> <em>&#91;default: $(optenv TURTLEBOT_STACKS hexagons)&#93; </em></li>
+                          <li><strong>stacks</strong>  </em></li>
                         
                       
                         
-                          <li><strong>3d_sensor</strong> <em>&#91;default: $(optenv TURTLEBOT_3D_SENSOR kinect)&#93; </em></li>
-                        
-                      
-                        
-                      
+                          <li><strong>3d_sensor</strong>  </em></li>
                         
                       
                         
@@ -1132,20 +1161,26 @@ roomba_robin_description
                 </ul>
               </li>
             
-              <li><a href="https://github.com/robinJKU/roomba_robin/blob/hydro-devel/roomba_robin_bringup/launch/includes/roomba/mobile_base.launch.xml" target="_blank">launch/includes/roomba/mobile_base.launch.xml</a>
+              <li><a href="https://github.com/robinJKU/roomba_robin/blob/hydro-devel/roomba_robin_bringup/launch/includes/mobile_base.launch.xml" target="_blank">launch/includes/mobile_base.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em>
-  Create's implementation of turtlebot's mobile base.
+  The mobile platform base.
   
-  TODO: redirect cmd_vel_mux/output to wherever create base is listening.
+  Selector for the base.
  </em></li>
                   
                   <li>
                     <ul>
                       
                         
+                          <li><strong>base</strong>  </em></li>
+                        
+                      
+                        
                           <li><strong>serialport</strong>  </em></li>
+                        
+                      
                         
                       
                     </ul>
@@ -1184,59 +1219,20 @@ roomba_robin_description
                 </ul>
               </li>
             
-              <li><a href="https://github.com/robinJKU/roomba_robin/blob/hydro-devel/roomba_robin_bringup/launch/includes/mobile_base.launch.xml" target="_blank">launch/includes/mobile_base.launch.xml</a>
+              <li><a href="https://github.com/robinJKU/roomba_robin/blob/hydro-devel/roomba_robin_bringup/launch/includes/roomba/mobile_base.launch.xml" target="_blank">launch/includes/roomba/mobile_base.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em>
-  The mobile platform base.
+  Create's implementation of turtlebot's mobile base.
   
-  Selector for the base.
+  TODO: redirect cmd_vel_mux/output to wherever create base is listening.
  </em></li>
                   
                   <li>
                     <ul>
-                      
-                        
-                          <li><strong>base</strong>  </em></li>
-                        
                       
                         
                           <li><strong>serialport</strong>  </em></li>
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/robinJKU/roomba_robin/blob/hydro-devel/roomba_robin_bringup/launch/includes/robot.launch.xml" target="_blank">launch/includes/robot.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em>
-  Collection of robot-centric definitions and nodes for the turtlebot. 
- </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>base</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>stacks</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>3d_sensor</strong>  </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
                         
                       
                     </ul>
@@ -1409,7 +1405,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

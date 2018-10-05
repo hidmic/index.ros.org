@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -655,51 +651,7 @@ motoman_sia5d_support
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-motoman_sia20d_moveit_config">Changelog for package motoman_sia20d_moveit_config</h1>
-
-<h2 id="0-3-5-2016-07-03">0.3.5 (2016-07-03)</h2>
-
-<ul>
-<li>  No changes</li>
-</ul>
-
-<h2 id="0-3-4-2016-07-03">0.3.4 (2016-07-03)</h2>
-
-<ul>
-<li>  Merge pull request
-<a href="https://github.com/shaun-edwards/motoman/issues/36">#36</a> from
-ros-industrial/hydro Pulling in changes from Hydro(release) branch.</li>
-<li>  sia20d moveit cfg: add missing run_depend on robot simulator. Fix
-<a href="https://github.com/shaun-edwards/motoman/issues/32">#32</a>.</li>
-<li>  Contributors: Shaun Edwards, gavanderhoorn</li>
-</ul>
-
-<h2 id="0-3-3-2014-02-07">0.3.3 (2014-02-07)</h2>
-
-<ul>
-<li>  Path fix for
-industrial_core/<a href="https://github.com/shaun-edwards/motoman/issues/22">#22</a>
-moveit patch</li>
-<li>  Contributors: Shaun Edwards</li>
-</ul>
-
-<h2 id="0-3-2-2014-01-31">0.3.2 (2014-01-31)</h2>
-
-<ul>
-<li>  No changes</li>
-</ul>
-
-<h2 id="0-3-1-2014-01-30">0.3.1 (2014-01-30)</h2>
-
-<ul>
-<li>  Synchronized versions for bloom release</li>
-<li>  Corrected motoman robot name (added motoman prefix)</li>
-<li>  Updated joint limits based on previous arm navigation (acceleration
-limits are not accurate)</li>
-<li>  Created sia20d MoveIt configuration package. Tested in simulation
-and with fs100 controller</li>
-<li>  Contributors: Shaun Edwards</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -777,27 +729,6 @@ and with fs100 controller</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros-industrial/motoman/blob/kinetic-devel/motoman_sia20d_moveit_config/launch/planning_context.launch" target="_blank">launch/planning_context.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>load_robot_description</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>robot_description</strong> <em>&#91;default: robot_description&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ros-industrial/motoman/blob/kinetic-devel/motoman_sia20d_moveit_config/launch/run_benchmark_ompl.launch" target="_blank">launch/run_benchmark_ompl.launch</a>
                 <ul class="list-unstyled">
                   
@@ -812,6 +743,23 @@ and with fs100 controller</li>
                       
                         
                       
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/motoman/blob/kinetic-devel/motoman_sia20d_moveit_config/launch/warehouse.launch" target="_blank">launch/warehouse.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>moveit_warehouse_database_path</strong>  </em></li>
                         
                       
                     </ul>
@@ -843,87 +791,6 @@ and with fs100 controller</li>
                       
                         
                       
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/motoman/blob/kinetic-devel/motoman_sia20d_moveit_config/launch/warehouse.launch" target="_blank">launch/warehouse.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>moveit_warehouse_database_path</strong>  </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/motoman/blob/kinetic-devel/motoman_sia20d_moveit_config/launch/demo.launch" target="_blank">launch/demo.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>db</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/motoman/blob/kinetic-devel/motoman_sia20d_moveit_config/launch/moveit_rviz.launch" target="_blank">launch/moveit_rviz.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><strong>config</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -1034,7 +901,7 @@ and with fs100 controller</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/motoman/blob/kinetic-devel/motoman_sia20d_moveit_config/launch/sensor_manager.launch.xml" target="_blank">launch/sensor_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/motoman/blob/kinetic-devel/motoman_sia20d_moveit_config/launch/planning_context.launch" target="_blank">launch/planning_context.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1043,7 +910,11 @@ and with fs100 controller</li>
                     <ul>
                       
                         
-                          <li><strong>moveit_sensor_manager</strong> <em>&#91;default: motoman_sia20d&#93; </em></li>
+                          <li><strong>load_robot_description</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>robot_description</strong> <em>&#91;default: robot_description&#93; </em></li>
                         
                       
                     </ul>
@@ -1051,7 +922,7 @@ and with fs100 controller</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/motoman/blob/kinetic-devel/motoman_sia20d_moveit_config/launch/motoman_sia20d_moveit_controller_manager.launch.xml" target="_blank">launch/motoman_sia20d_moveit_controller_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/motoman/blob/kinetic-devel/motoman_sia20d_moveit_config/launch/moveit_rviz.launch" target="_blank">launch/moveit_rviz.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1060,7 +931,54 @@ and with fs100 controller</li>
                     <ul>
                       
                         
-                          <li><strong>moveit_controller_manager</strong> <em>&#91;default: moveit_simple_controller_manager/MoveItSimpleControllerManager&#93; </em></li>
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>config</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/motoman/blob/kinetic-devel/motoman_sia20d_moveit_config/launch/demo.launch" target="_blank">launch/demo.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>db</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
                         
                       
                     </ul>
@@ -1089,6 +1007,19 @@ and with fs100 controller</li>
                 </ul>
               </li>
             
+              <li><a href="https://github.com/ros-industrial/motoman/blob/kinetic-devel/motoman_sia20d_moveit_config/launch/motoman_sia20d_moveit_sensor_manager.launch.xml" target="_blank">launch/motoman_sia20d_moveit_sensor_manager.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/ros-industrial/motoman/blob/kinetic-devel/motoman_sia20d_moveit_config/launch/trajectory_execution.launch.xml" target="_blank">launch/trajectory_execution.launch.xml</a>
                 <ul class="list-unstyled">
                   
@@ -1110,13 +1041,51 @@ and with fs100 controller</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/motoman/blob/kinetic-devel/motoman_sia20d_moveit_config/launch/motoman_sia20d_moveit_sensor_manager.launch.xml" target="_blank">launch/motoman_sia20d_moveit_sensor_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/motoman/blob/kinetic-devel/motoman_sia20d_moveit_config/launch/motoman_sia20d_moveit_controller_manager.launch.xml" target="_blank">launch/motoman_sia20d_moveit_controller_manager.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
+                      
+                        
+                          <li><strong>moveit_controller_manager</strong> <em>&#91;default: moveit_simple_controller_manager/MoveItSimpleControllerManager&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/motoman/blob/kinetic-devel/motoman_sia20d_moveit_config/launch/planning_pipeline.launch.xml" target="_blank">launch/planning_pipeline.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>pipeline</strong> <em>&#91;default: ompl&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/motoman/blob/kinetic-devel/motoman_sia20d_moveit_config/launch/sensor_manager.launch.xml" target="_blank">launch/sensor_manager.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>moveit_sensor_manager</strong> <em>&#91;default: motoman_sia20d&#93; </em></li>
+                        
                       
                     </ul>
                   </li>
@@ -1148,23 +1117,6 @@ and with fs100 controller</li>
                       
                         
                       
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/motoman/blob/kinetic-devel/motoman_sia20d_moveit_config/launch/planning_pipeline.launch.xml" target="_blank">launch/planning_pipeline.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>pipeline</strong> <em>&#91;default: ompl&#93; </em></li>
                         
                       
                     </ul>
@@ -1684,51 +1636,7 @@ motoman_sia5d_support
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-motoman_sia20d_moveit_config">Changelog for package motoman_sia20d_moveit_config</h1>
-
-<h2 id="0-3-5-2016-07-03">0.3.5 (2016-07-03)</h2>
-
-<ul>
-<li>  No changes</li>
-</ul>
-
-<h2 id="0-3-4-2016-07-03">0.3.4 (2016-07-03)</h2>
-
-<ul>
-<li>  Merge pull request
-<a href="https://github.com/shaun-edwards/motoman/issues/36">#36</a> from
-ros-industrial/hydro Pulling in changes from Hydro(release) branch.</li>
-<li>  sia20d moveit cfg: add missing run_depend on robot simulator. Fix
-<a href="https://github.com/shaun-edwards/motoman/issues/32">#32</a>.</li>
-<li>  Contributors: Shaun Edwards, gavanderhoorn</li>
-</ul>
-
-<h2 id="0-3-3-2014-02-07">0.3.3 (2014-02-07)</h2>
-
-<ul>
-<li>  Path fix for
-industrial_core/<a href="https://github.com/shaun-edwards/motoman/issues/22">#22</a>
-moveit patch</li>
-<li>  Contributors: Shaun Edwards</li>
-</ul>
-
-<h2 id="0-3-2-2014-01-31">0.3.2 (2014-01-31)</h2>
-
-<ul>
-<li>  No changes</li>
-</ul>
-
-<h2 id="0-3-1-2014-01-30">0.3.1 (2014-01-30)</h2>
-
-<ul>
-<li>  Synchronized versions for bloom release</li>
-<li>  Corrected motoman robot name (added motoman prefix)</li>
-<li>  Updated joint limits based on previous arm navigation (acceleration
-limits are not accurate)</li>
-<li>  Created sia20d MoveIt configuration package. Tested in simulation
-and with fs100 controller</li>
-<li>  Contributors: Shaun Edwards</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1998,27 +1906,6 @@ and with fs100 controller</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros-industrial/motoman/blob/indigo-devel/motoman_sia20d_moveit_config/launch/planning_context.launch" target="_blank">launch/planning_context.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>load_robot_description</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>robot_description</strong> <em>&#91;default: robot_description&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ros-industrial/motoman/blob/indigo-devel/motoman_sia20d_moveit_config/launch/run_benchmark_ompl.launch" target="_blank">launch/run_benchmark_ompl.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2033,6 +1920,23 @@ and with fs100 controller</li>
                       
                         
                       
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/motoman/blob/indigo-devel/motoman_sia20d_moveit_config/launch/warehouse.launch" target="_blank">launch/warehouse.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>moveit_warehouse_database_path</strong>  </em></li>
                         
                       
                     </ul>
@@ -2064,87 +1968,6 @@ and with fs100 controller</li>
                       
                         
                       
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/motoman/blob/indigo-devel/motoman_sia20d_moveit_config/launch/warehouse.launch" target="_blank">launch/warehouse.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>moveit_warehouse_database_path</strong>  </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/motoman/blob/indigo-devel/motoman_sia20d_moveit_config/launch/demo.launch" target="_blank">launch/demo.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>db</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/motoman/blob/indigo-devel/motoman_sia20d_moveit_config/launch/moveit_rviz.launch" target="_blank">launch/moveit_rviz.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><strong>config</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -2255,7 +2078,7 @@ and with fs100 controller</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/motoman/blob/indigo-devel/motoman_sia20d_moveit_config/launch/sensor_manager.launch.xml" target="_blank">launch/sensor_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/motoman/blob/indigo-devel/motoman_sia20d_moveit_config/launch/planning_context.launch" target="_blank">launch/planning_context.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2264,7 +2087,11 @@ and with fs100 controller</li>
                     <ul>
                       
                         
-                          <li><strong>moveit_sensor_manager</strong> <em>&#91;default: motoman_sia20d&#93; </em></li>
+                          <li><strong>load_robot_description</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>robot_description</strong> <em>&#91;default: robot_description&#93; </em></li>
                         
                       
                     </ul>
@@ -2272,7 +2099,7 @@ and with fs100 controller</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/motoman/blob/indigo-devel/motoman_sia20d_moveit_config/launch/motoman_sia20d_moveit_controller_manager.launch.xml" target="_blank">launch/motoman_sia20d_moveit_controller_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/motoman/blob/indigo-devel/motoman_sia20d_moveit_config/launch/moveit_rviz.launch" target="_blank">launch/moveit_rviz.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2281,7 +2108,54 @@ and with fs100 controller</li>
                     <ul>
                       
                         
-                          <li><strong>moveit_controller_manager</strong> <em>&#91;default: moveit_simple_controller_manager/MoveItSimpleControllerManager&#93; </em></li>
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>config</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/motoman/blob/indigo-devel/motoman_sia20d_moveit_config/launch/demo.launch" target="_blank">launch/demo.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>db</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
                         
                       
                     </ul>
@@ -2310,6 +2184,19 @@ and with fs100 controller</li>
                 </ul>
               </li>
             
+              <li><a href="https://github.com/ros-industrial/motoman/blob/indigo-devel/motoman_sia20d_moveit_config/launch/motoman_sia20d_moveit_sensor_manager.launch.xml" target="_blank">launch/motoman_sia20d_moveit_sensor_manager.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/ros-industrial/motoman/blob/indigo-devel/motoman_sia20d_moveit_config/launch/trajectory_execution.launch.xml" target="_blank">launch/trajectory_execution.launch.xml</a>
                 <ul class="list-unstyled">
                   
@@ -2331,13 +2218,51 @@ and with fs100 controller</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/motoman/blob/indigo-devel/motoman_sia20d_moveit_config/launch/motoman_sia20d_moveit_sensor_manager.launch.xml" target="_blank">launch/motoman_sia20d_moveit_sensor_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/motoman/blob/indigo-devel/motoman_sia20d_moveit_config/launch/motoman_sia20d_moveit_controller_manager.launch.xml" target="_blank">launch/motoman_sia20d_moveit_controller_manager.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
+                      
+                        
+                          <li><strong>moveit_controller_manager</strong> <em>&#91;default: moveit_simple_controller_manager/MoveItSimpleControllerManager&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/motoman/blob/indigo-devel/motoman_sia20d_moveit_config/launch/planning_pipeline.launch.xml" target="_blank">launch/planning_pipeline.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>pipeline</strong> <em>&#91;default: ompl&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/motoman/blob/indigo-devel/motoman_sia20d_moveit_config/launch/sensor_manager.launch.xml" target="_blank">launch/sensor_manager.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>moveit_sensor_manager</strong> <em>&#91;default: motoman_sia20d&#93; </em></li>
+                        
                       
                     </ul>
                   </li>
@@ -2369,23 +2294,6 @@ and with fs100 controller</li>
                       
                         
                       
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/motoman/blob/indigo-devel/motoman_sia20d_moveit_config/launch/planning_pipeline.launch.xml" target="_blank">launch/planning_pipeline.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>pipeline</strong> <em>&#91;default: ompl&#93; </em></li>
                         
                       
                     </ul>
@@ -2815,7 +2723,7 @@ motoman_sia5d_support
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-05-03
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-05-02
         </span>
       </td>
     </tr>
@@ -2913,51 +2821,7 @@ motoman_sia5d_support
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-motoman_sia20d_moveit_config">Changelog for package motoman_sia20d_moveit_config</h1>
-
-<h2 id="0-3-5-2016-07-03">0.3.5 (2016-07-03)</h2>
-
-<ul>
-<li>  No changes</li>
-</ul>
-
-<h2 id="0-3-4-2016-07-03">0.3.4 (2016-07-03)</h2>
-
-<ul>
-<li>  Merge pull request
-<a href="https://github.com/shaun-edwards/motoman/issues/36">#36</a> from
-ros-industrial/hydro Pulling in changes from Hydro(release) branch.</li>
-<li>  sia20d moveit cfg: add missing run_depend on robot simulator. Fix
-<a href="https://github.com/shaun-edwards/motoman/issues/32">#32</a>.</li>
-<li>  Contributors: Shaun Edwards, gavanderhoorn</li>
-</ul>
-
-<h2 id="0-3-3-2014-02-07">0.3.3 (2014-02-07)</h2>
-
-<ul>
-<li>  Path fix for
-industrial_core/<a href="https://github.com/shaun-edwards/motoman/issues/22">#22</a>
-moveit patch</li>
-<li>  Contributors: Shaun Edwards</li>
-</ul>
-
-<h2 id="0-3-2-2014-01-31">0.3.2 (2014-01-31)</h2>
-
-<ul>
-<li>  No changes</li>
-</ul>
-
-<h2 id="0-3-1-2014-01-30">0.3.1 (2014-01-30)</h2>
-
-<ul>
-<li>  Synchronized versions for bloom release</li>
-<li>  Corrected motoman robot name (added motoman prefix)</li>
-<li>  Updated joint limits based on previous arm navigation (acceleration
-limits are not accurate)</li>
-<li>  Created sia20d MoveIt configuration package. Tested in simulation
-and with fs100 controller</li>
-<li>  Contributors: Shaun Edwards</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3227,27 +3091,6 @@ and with fs100 controller</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros-industrial/motoman/blob/jade-devel/motoman_sia20d_moveit_config/launch/planning_context.launch" target="_blank">launch/planning_context.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>load_robot_description</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>robot_description</strong> <em>&#91;default: robot_description&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ros-industrial/motoman/blob/jade-devel/motoman_sia20d_moveit_config/launch/run_benchmark_ompl.launch" target="_blank">launch/run_benchmark_ompl.launch</a>
                 <ul class="list-unstyled">
                   
@@ -3262,6 +3105,23 @@ and with fs100 controller</li>
                       
                         
                       
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/motoman/blob/jade-devel/motoman_sia20d_moveit_config/launch/warehouse.launch" target="_blank">launch/warehouse.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>moveit_warehouse_database_path</strong>  </em></li>
                         
                       
                     </ul>
@@ -3293,87 +3153,6 @@ and with fs100 controller</li>
                       
                         
                       
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/motoman/blob/jade-devel/motoman_sia20d_moveit_config/launch/warehouse.launch" target="_blank">launch/warehouse.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>moveit_warehouse_database_path</strong>  </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/motoman/blob/jade-devel/motoman_sia20d_moveit_config/launch/demo.launch" target="_blank">launch/demo.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>db</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/motoman/blob/jade-devel/motoman_sia20d_moveit_config/launch/moveit_rviz.launch" target="_blank">launch/moveit_rviz.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><strong>config</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -3484,7 +3263,7 @@ and with fs100 controller</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/motoman/blob/jade-devel/motoman_sia20d_moveit_config/launch/sensor_manager.launch.xml" target="_blank">launch/sensor_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/motoman/blob/jade-devel/motoman_sia20d_moveit_config/launch/planning_context.launch" target="_blank">launch/planning_context.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3493,7 +3272,11 @@ and with fs100 controller</li>
                     <ul>
                       
                         
-                          <li><strong>moveit_sensor_manager</strong> <em>&#91;default: motoman_sia20d&#93; </em></li>
+                          <li><strong>load_robot_description</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>robot_description</strong> <em>&#91;default: robot_description&#93; </em></li>
                         
                       
                     </ul>
@@ -3501,7 +3284,7 @@ and with fs100 controller</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/motoman/blob/jade-devel/motoman_sia20d_moveit_config/launch/motoman_sia20d_moveit_controller_manager.launch.xml" target="_blank">launch/motoman_sia20d_moveit_controller_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/motoman/blob/jade-devel/motoman_sia20d_moveit_config/launch/moveit_rviz.launch" target="_blank">launch/moveit_rviz.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3510,7 +3293,54 @@ and with fs100 controller</li>
                     <ul>
                       
                         
-                          <li><strong>moveit_controller_manager</strong> <em>&#91;default: moveit_simple_controller_manager/MoveItSimpleControllerManager&#93; </em></li>
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>config</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/motoman/blob/jade-devel/motoman_sia20d_moveit_config/launch/demo.launch" target="_blank">launch/demo.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>db</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
                         
                       
                     </ul>
@@ -3539,6 +3369,19 @@ and with fs100 controller</li>
                 </ul>
               </li>
             
+              <li><a href="https://github.com/ros-industrial/motoman/blob/jade-devel/motoman_sia20d_moveit_config/launch/motoman_sia20d_moveit_sensor_manager.launch.xml" target="_blank">launch/motoman_sia20d_moveit_sensor_manager.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/ros-industrial/motoman/blob/jade-devel/motoman_sia20d_moveit_config/launch/trajectory_execution.launch.xml" target="_blank">launch/trajectory_execution.launch.xml</a>
                 <ul class="list-unstyled">
                   
@@ -3560,13 +3403,51 @@ and with fs100 controller</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/motoman/blob/jade-devel/motoman_sia20d_moveit_config/launch/motoman_sia20d_moveit_sensor_manager.launch.xml" target="_blank">launch/motoman_sia20d_moveit_sensor_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/motoman/blob/jade-devel/motoman_sia20d_moveit_config/launch/motoman_sia20d_moveit_controller_manager.launch.xml" target="_blank">launch/motoman_sia20d_moveit_controller_manager.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
+                      
+                        
+                          <li><strong>moveit_controller_manager</strong> <em>&#91;default: moveit_simple_controller_manager/MoveItSimpleControllerManager&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/motoman/blob/jade-devel/motoman_sia20d_moveit_config/launch/planning_pipeline.launch.xml" target="_blank">launch/planning_pipeline.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>pipeline</strong> <em>&#91;default: ompl&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/motoman/blob/jade-devel/motoman_sia20d_moveit_config/launch/sensor_manager.launch.xml" target="_blank">launch/sensor_manager.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>moveit_sensor_manager</strong> <em>&#91;default: motoman_sia20d&#93; </em></li>
+                        
                       
                     </ul>
                   </li>
@@ -3598,23 +3479,6 @@ and with fs100 controller</li>
                       
                         
                       
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/motoman/blob/jade-devel/motoman_sia20d_moveit_config/launch/planning_pipeline.launch.xml" target="_blank">launch/planning_pipeline.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>pipeline</strong> <em>&#91;default: ompl&#93; </em></li>
                         
                       
                     </ul>
@@ -4012,7 +3876,7 @@ motoman_sia5d_support
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2014-02-08
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2014-02-07
         </span>
       </td>
     </tr>
@@ -4110,34 +3974,7 @@ motoman_sia5d_support
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-motoman_sia20d_moveit_config">Changelog for package motoman_sia20d_moveit_config</h1>
-
-<h2 id="0-3-3-2014-02-07">0.3.3 (2014-02-07)</h2>
-
-<ul>
-<li>  Path fix for
-industrial_core/<a href="https://github.com/shaun-edwards/motoman/issues/22">#22</a>
-moveit patch</li>
-<li>  Contributors: Shaun Edwards</li>
-</ul>
-
-<h2 id="0-3-2-2014-01-31">0.3.2 (2014-01-31)</h2>
-
-<ul>
-<li>  No changes</li>
-</ul>
-
-<h2 id="0-3-1-2014-01-30">0.3.1 (2014-01-30)</h2>
-
-<ul>
-<li>  Synchronized versions for bloom release</li>
-<li>  Corrected motoman robot name (added motoman prefix)</li>
-<li>  Updated joint limits based on previous arm navigation (acceleration
-limits are not accurate)</li>
-<li>  Created sia20d MoveIt configuration package. Tested in simulation
-and with fs100 controller</li>
-<li>  Contributors: Shaun Edwards</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -4387,27 +4224,6 @@ and with fs100 controller</li>
         
           <ul>
             
-              <li><a href="https://github.com/ros-industrial/motoman/blob/hydro/motoman_sia20d_moveit_config/launch/planning_context.launch" target="_blank">launch/planning_context.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>load_robot_description</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>robot_description</strong> <em>&#91;default: robot_description&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/ros-industrial/motoman/blob/hydro/motoman_sia20d_moveit_config/launch/run_benchmark_ompl.launch" target="_blank">launch/run_benchmark_ompl.launch</a>
                 <ul class="list-unstyled">
                   
@@ -4422,6 +4238,23 @@ and with fs100 controller</li>
                       
                         
                       
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/motoman/blob/hydro/motoman_sia20d_moveit_config/launch/warehouse.launch" target="_blank">launch/warehouse.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>moveit_warehouse_database_path</strong>  </em></li>
                         
                       
                     </ul>
@@ -4453,87 +4286,6 @@ and with fs100 controller</li>
                       
                         
                       
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/motoman/blob/hydro/motoman_sia20d_moveit_config/launch/warehouse.launch" target="_blank">launch/warehouse.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>moveit_warehouse_database_path</strong>  </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/motoman/blob/hydro/motoman_sia20d_moveit_config/launch/demo.launch" target="_blank">launch/demo.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>db</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/motoman/blob/hydro/motoman_sia20d_moveit_config/launch/moveit_rviz.launch" target="_blank">launch/moveit_rviz.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><strong>config</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -4644,7 +4396,7 @@ and with fs100 controller</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/motoman/blob/hydro/motoman_sia20d_moveit_config/launch/sensor_manager.launch.xml" target="_blank">launch/sensor_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/motoman/blob/hydro/motoman_sia20d_moveit_config/launch/planning_context.launch" target="_blank">launch/planning_context.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -4653,7 +4405,11 @@ and with fs100 controller</li>
                     <ul>
                       
                         
-                          <li><strong>moveit_sensor_manager</strong> <em>&#91;default: motoman_sia20d&#93; </em></li>
+                          <li><strong>load_robot_description</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>robot_description</strong> <em>&#91;default: robot_description&#93; </em></li>
                         
                       
                     </ul>
@@ -4661,7 +4417,7 @@ and with fs100 controller</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/motoman/blob/hydro/motoman_sia20d_moveit_config/launch/motoman_sia20d_moveit_controller_manager.launch.xml" target="_blank">launch/motoman_sia20d_moveit_controller_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/motoman/blob/hydro/motoman_sia20d_moveit_config/launch/moveit_rviz.launch" target="_blank">launch/moveit_rviz.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -4670,7 +4426,54 @@ and with fs100 controller</li>
                     <ul>
                       
                         
-                          <li><strong>moveit_controller_manager</strong> <em>&#91;default: moveit_simple_controller_manager/MoveItSimpleControllerManager&#93; </em></li>
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>config</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/motoman/blob/hydro/motoman_sia20d_moveit_config/launch/demo.launch" target="_blank">launch/demo.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>db</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
                         
                       
                     </ul>
@@ -4699,6 +4502,19 @@ and with fs100 controller</li>
                 </ul>
               </li>
             
+              <li><a href="https://github.com/ros-industrial/motoman/blob/hydro/motoman_sia20d_moveit_config/launch/motoman_sia20d_moveit_sensor_manager.launch.xml" target="_blank">launch/motoman_sia20d_moveit_sensor_manager.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/ros-industrial/motoman/blob/hydro/motoman_sia20d_moveit_config/launch/trajectory_execution.launch.xml" target="_blank">launch/trajectory_execution.launch.xml</a>
                 <ul class="list-unstyled">
                   
@@ -4720,13 +4536,51 @@ and with fs100 controller</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/ros-industrial/motoman/blob/hydro/motoman_sia20d_moveit_config/launch/motoman_sia20d_moveit_sensor_manager.launch.xml" target="_blank">launch/motoman_sia20d_moveit_sensor_manager.launch.xml</a>
+              <li><a href="https://github.com/ros-industrial/motoman/blob/hydro/motoman_sia20d_moveit_config/launch/motoman_sia20d_moveit_controller_manager.launch.xml" target="_blank">launch/motoman_sia20d_moveit_controller_manager.launch.xml</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
+                      
+                        
+                          <li><strong>moveit_controller_manager</strong> <em>&#91;default: moveit_simple_controller_manager/MoveItSimpleControllerManager&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/motoman/blob/hydro/motoman_sia20d_moveit_config/launch/planning_pipeline.launch.xml" target="_blank">launch/planning_pipeline.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>pipeline</strong> <em>&#91;default: ompl&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/ros-industrial/motoman/blob/hydro/motoman_sia20d_moveit_config/launch/sensor_manager.launch.xml" target="_blank">launch/sensor_manager.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>moveit_sensor_manager</strong> <em>&#91;default: motoman_sia20d&#93; </em></li>
+                        
                       
                     </ul>
                   </li>
@@ -4758,23 +4612,6 @@ and with fs100 controller</li>
                       
                         
                       
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/ros-industrial/motoman/blob/hydro/motoman_sia20d_moveit_config/launch/planning_pipeline.launch.xml" target="_blank">launch/planning_pipeline.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>pipeline</strong> <em>&#91;default: ompl&#93; </em></li>
                         
                       
                     </ul>
@@ -4947,7 +4784,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

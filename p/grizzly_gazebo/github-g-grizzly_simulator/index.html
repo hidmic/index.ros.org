@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -529,37 +525,7 @@ grizzly_simulator
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-grizzly_gazebo">Changelog for package grizzly_gazebo</h1>
-
-<h2 id="0-3-1-2018-06-08">0.3.1 (2018-06-08)</h2>
-
-<ul>
-<li>  Removed un-used args and multimaster. Updated maintainer.</li>
-<li>  Contributors: Tony Baltovski</li>
-</ul>
-
-<h2 id="0-3-0-2018-06-07">0.3.0 (2018-06-07)</h2>
-
-<ul>
-<li>  Upgrading simulation to kinetic</li>
-<li>  Rename control.launch to localization.launch</li>
-<li>  Contributors: Mohamed Elshatshat, Shokoofeh Pourmehr</li>
-</ul>
-
-<h2 id="0-2-0-2014-12-18">0.2.0 (2014-12-18)</h2>
-
-<ul>
-<li>  replace robot_pose_ekf with robot_localization</li>
-<li>  add run dependency to hector_gazebo_plugins</li>
-<li>  Add grizzly_navigation dependency.</li>
-<li>  Contributors: Mike Purvis, Shokoofeh Pourmehr</li>
-</ul>
-
-<h2 id="0-1-0-2013-11-30">0.1.0 (2013-11-30)</h2>
-
-<ul>
-<li>  Launch file for basic simulator config.</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -849,7 +815,7 @@ grizzly_simulator
         
           <ul>
             
-              <li><a href="https://github.com/g/grizzly_simulator/blob/kinetic-devel/grizzly_gazebo/launch/playpen.launch" target="_blank">launch/playpen.launch</a>
+              <li><a href="https://github.com/g/grizzly_simulator/blob/kinetic-devel/grizzly_gazebo/launch/grizzly_playpen.launch" target="_blank">launch/grizzly_playpen.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em>
@@ -879,18 +845,6 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                   
                   <li>
                     <ul>
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
                       
                     </ul>
                   </li>
@@ -949,42 +903,6 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                 </ul>
               </li>
             
-              <li><a href="https://github.com/g/grizzly_simulator/blob/kinetic-devel/grizzly_gazebo/launch/grizzly_playpen.launch" target="_blank">launch/grizzly_playpen.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em>
-Software License Agreement (BSD)
-
-\file      grizzly_playpen.launch
-\authors   Paul Bovbel <pbovbel@clearpathrobotics.com
-\copyright Copyright (c) 2015, Clearpath Robotics, Inc., All rights reserved.
-
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that
-the following conditions are met:
- * Redistributions of source code must retain the above copyright notice, this list of conditions and the
-   following disclaimer.
- * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
-   following disclaimer in the documentation and/or other materials provided with the distribution.
- * Neither the name of Clearpath Robotics nor the names of its contributors may be used to endorse or promote
-   products derived from this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WAR-
-RANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
-PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, IN-
-DIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
-OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/g/grizzly_simulator/blob/kinetic-devel/grizzly_gazebo/launch/spawn_grizzly.launch" target="_blank">launch/spawn_grizzly.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1034,6 +952,54 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                       
                         
                           <li><strong>urdf_extras</strong> <em>&#91;default: $(optenv GRIZZLY_URDF_EXTRAS)&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/g/grizzly_simulator/blob/kinetic-devel/grizzly_gazebo/launch/playpen.launch" target="_blank">launch/playpen.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em>
+Software License Agreement (BSD)
+
+\file      grizzly_playpen.launch
+\authors   Paul Bovbel <pbovbel@clearpathrobotics.com
+\copyright Copyright (c) 2015, Clearpath Robotics, Inc., All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that
+the following conditions are met:
+ * Redistributions of source code must retain the above copyright notice, this list of conditions and the
+   following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+   following disclaimer in the documentation and/or other materials provided with the distribution.
+ * Neither the name of Clearpath Robotics nor the names of its contributors may be used to endorse or promote
+   products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WAR-
+RANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, IN-
+DIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
                         
                       
                     </ul>
@@ -1475,22 +1441,7 @@ grizzly_simulator
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-grizzly_gazebo">Changelog for package grizzly_gazebo</h1>
-
-<h2 id="0-2-0-2014-12-18">0.2.0 (2014-12-18)</h2>
-
-<ul>
-<li>  replace robot_pose_ekf with robot_localization</li>
-<li>  add run dependency to hector_gazebo_plugins</li>
-<li>  Add grizzly_navigation dependency.</li>
-<li>  Contributors: Mike Purvis, Shokoofeh Pourmehr</li>
-</ul>
-
-<h2 id="0-1-0-2013-11-30">0.1.0 (2013-11-30)</h2>
-
-<ul>
-<li>  Launch file for basic simulator config.</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1740,11 +1691,11 @@ grizzly_simulator
         
           <ul>
             
-              <li><a href="https://github.com/g/grizzly_simulator/blob/indigo-devel/grizzly_gazebo/launch/base_gazebo.launch" target="_blank">launch/base_gazebo.launch</a>
+              <li><a href="https://github.com/g/grizzly_simulator/blob/indigo-devel/grizzly_gazebo/launch/grizzly.launch" target="_blank">launch/grizzly.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em>
-Copyright (c) 2012, Clearpath Robotics
+Copyright (c) 2013, Clearpath Robotics
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -1778,6 +1729,10 @@ robot model in Gazebo
                       
                         
                           <li><strong>description</strong>  </em></li>
+                        
+                      
+                        
+                      
                         
                       
                     </ul>
@@ -1832,11 +1787,11 @@ robot model in Gazebo
                 </ul>
               </li>
             
-              <li><a href="https://github.com/g/grizzly_simulator/blob/indigo-devel/grizzly_gazebo/launch/grizzly.launch" target="_blank">launch/grizzly.launch</a>
+              <li><a href="https://github.com/g/grizzly_simulator/blob/indigo-devel/grizzly_gazebo/launch/base_gazebo.launch" target="_blank">launch/base_gazebo.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em>
-Copyright (c) 2013, Clearpath Robotics
+Copyright (c) 2012, Clearpath Robotics
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -1870,10 +1825,6 @@ robot model in Gazebo
                       
                         
                           <li><strong>description</strong>  </em></li>
-                        
-                      
-                        
-                      
                         
                       
                     </ul>
@@ -2331,13 +2282,7 @@ grizzly_simulator
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-grizzly_gazebo">Changelog for package grizzly_gazebo</h1>
-
-<h2 id="0-1-0-2013-11-30">0.1.0 (2013-11-30)</h2>
-
-<ul>
-<li>  Launch file for basic simulator config.</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2567,11 +2512,11 @@ grizzly_simulator
         
           <ul>
             
-              <li><a href="https://github.com/g/grizzly_simulator/blob/hydro-devel/grizzly_gazebo/launch/base_gazebo.launch" target="_blank">launch/base_gazebo.launch</a>
+              <li><a href="https://github.com/g/grizzly_simulator/blob/hydro-devel/grizzly_gazebo/launch/grizzly.launch" target="_blank">launch/grizzly.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em>
-Copyright (c) 2012, Clearpath Robotics
+Copyright (c) 2013, Clearpath Robotics
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -2605,6 +2550,10 @@ robot model in Gazebo
                       
                         
                           <li><strong>description</strong>  </em></li>
+                        
+                      
+                        
+                      
                         
                       
                     </ul>
@@ -2659,11 +2608,11 @@ robot model in Gazebo
                 </ul>
               </li>
             
-              <li><a href="https://github.com/g/grizzly_simulator/blob/hydro-devel/grizzly_gazebo/launch/grizzly.launch" target="_blank">launch/grizzly.launch</a>
+              <li><a href="https://github.com/g/grizzly_simulator/blob/hydro-devel/grizzly_gazebo/launch/base_gazebo.launch" target="_blank">launch/base_gazebo.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em>
-Copyright (c) 2013, Clearpath Robotics
+Copyright (c) 2012, Clearpath Robotics
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -2697,10 +2646,6 @@ robot model in Gazebo
                       
                         
                           <li><strong>description</strong>  </em></li>
-                        
-                      
-                        
-                      
                         
                       
                     </ul>
@@ -2873,7 +2818,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

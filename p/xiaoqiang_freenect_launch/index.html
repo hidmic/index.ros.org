@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -530,7 +526,7 @@ xiaoqiang_server
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-06-14
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-06-13
         </span>
       </td>
     </tr>
@@ -635,32 +631,7 @@ xiaoqiang_server
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-xiaoqiang_freenect_launch">Changelog for package xiaoqiang_freenect_launch</h1>
-
-<h2 id="forthcoming">Forthcoming</h2>
-
-<h2 id="0-0-10-2018-06-09">0.0.10 (2018-06-09)</h2>
-
-<h2 id="0-0-9-2018-06-07">0.0.9 (2018-06-07)</h2>
-
-<h2 id="0-0-8-2018-06-06">0.0.8 (2018-06-06)</h2>
-
-<ul>
-<li>  add xiaoqiang navigation</li>
-<li>  add depth image process</li>
-<li>  Contributors: xiaoqiang</li>
-</ul>
-
-<h2 id="0-0-7-2018-06-01">0.0.7 (2018-06-01)</h2>
-
-<h2 id="0-0-6-2018-05-31">0.0.6 (2018-05-31)</h2>
-
-<h2 id="0-0-5-2018-05-30">0.0.5 (2018-05-30)</h2>
-
-<ul>
-<li>  change email</li>
-<li>  Contributors: xiaoqiang</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -870,6 +841,564 @@ xiaoqiang_server
         
           <ul>
             
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/freenect_tf_prefix.launch" target="_blank">launch/freenect_tf_prefix.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> Entry point for using OpenNI devices </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>tf_prefix</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb_frame_id</strong> <em>&#91;default: $(arg tf_prefix)/$(arg camera)_rgb_optical_frame&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_frame_id</strong> <em>&#91;default: $(arg tf_prefix)/$(arg camera)_depth_optical_frame&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>data_skip</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>device_id</strong> <em>&#91;default: #1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb_camera_info_url</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_camera_info_url</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_registration</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb</strong> <em>&#91;default: rgb&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ir</strong> <em>&#91;default: ir&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth</strong> <em>&#91;default: depth&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_registered</strong> <em>&#91;default: depth_registered&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>projector</strong> <em>&#91;default: projector&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>load_driver</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>publish_tf</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb_processing</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ir_processing</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_processing</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_registered_processing</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>disparity_processing</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>disparity_registered_processing</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>hw_registered_processing</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>sw_registered_processing</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>bond</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn</strong> <em>&#91;default: $(arg bond)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>num_worker_threads</strong> <em>&#91;default: 4&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>libfreenect_debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_rgb_diagnostics</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_ir_diagnostics</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_depth_diagnostics</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>diagnostics_max_frequency</strong> <em>&#91;default: 30.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>diagnostics_min_frequency</strong> <em>&#91;default: 30.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>diagnostics_tolerance</strong> <em>&#91;default: 0.05&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>diagnostics_window_time</strong> <em>&#91;default: 5.0&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/manager.launch" target="_blank">launch/includes/manager.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/processing.launch" target="_blank">launch/includes/processing.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ir</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_registered</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>projector</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/ir.launch" target="_blank">launch/includes/ir.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ir</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/depth.launch" target="_blank">launch/includes/depth.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>points_xyz</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rectify</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>publish_metric</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>publish_metric_rect</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/depth_registered.launch" target="_blank">launch/includes/depth_registered.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>points_xyzrgb</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>publish_metric</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>publish_metric_rect</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>allow_software_registration</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>allow_hardware_registration</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_registered</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>suffix</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/disparity.launch" target="_blank">launch/includes/disparity.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>projector</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/device.launch" target="_blank">launch/includes/device.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>device_id</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb_frame_id</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_frame_id</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb_camera_info_url</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_camera_info_url</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_registration</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ir</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_registered</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>projector</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>data_skip</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>libfreenect_debug</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_rgb_diagnostics</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_ir_diagnostics</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_depth_diagnostics</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>diagnostics_max_frequency</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>diagnostics_min_frequency</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>diagnostics_tolerance</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>diagnostics_window_time</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/kinect-xyz.launch" target="_blank">launch/kinect-xyz.launch</a>
                 <ul class="list-unstyled">
                   
@@ -892,6 +1421,153 @@ xiaoqiang_server
                       
                         
                       
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-registered-xyzrgb.launch" target="_blank">launch/examples/freenect-registered-xyzrgb.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-ns.launch" target="_blank">launch/examples/freenect-ns.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>ns</strong> <em>&#91;default: robot1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>tf_prefix</strong> <em>&#91;default: /robot1_prefix&#93; </em></li>
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-diagnostics.launch" target="_blank">launch/examples/freenect-diagnostics.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-debug.launch" target="_blank">launch/examples/freenect-debug.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-xyz.launch" target="_blank">launch/examples/freenect-xyz.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/kinect_frames2.launch" target="_blank">launch/kinect_frames2.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> Default frames for Kinect/PSDK5 devices
+     Places depth and RGB cameras in the same plane with 2.5cm baseline.
+     Calibration may improve results, but these defaults are reasonably accurate.
+</em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>tf_prefix</strong> <em>&#91;default: &#93; </em></li>
                         
                       
                         
@@ -1158,461 +1834,20 @@ xiaoqiang_server
                 </ul>
               </li>
             
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/kinect_frames2.launch" target="_blank">launch/kinect_frames2.launch</a>
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/kinect_frames.launch" target="_blank">launch/kinect_frames.launch</a>
                 <ul class="list-unstyled">
                   
-                    <li><em> Default frames for Kinect/PSDK5 devices
-     Places depth and RGB cameras in the same plane with 2.5cm baseline.
-     Calibration may improve results, but these defaults are reasonably accurate.
-</em></li>
+                    <li><em></em></li>
                   
                   <li>
                     <ul>
                       
                         
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                          <li><strong>camera</strong> <em>&#91;default: &#93; </em></li>
                         
                       
                         
                           <li><strong>tf_prefix</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/device.launch" target="_blank">launch/includes/device.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>device_id</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb_frame_id</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_frame_id</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb_camera_info_url</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_camera_info_url</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_registration</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ir</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_registered</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>projector</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>data_skip</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>libfreenect_debug</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_rgb_diagnostics</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_ir_diagnostics</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_depth_diagnostics</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>diagnostics_max_frequency</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>diagnostics_min_frequency</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>diagnostics_tolerance</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>diagnostics_window_time</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/processing.launch" target="_blank">launch/includes/processing.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ir</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_registered</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>projector</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/manager.launch" target="_blank">launch/includes/manager.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/ir.launch" target="_blank">launch/includes/ir.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ir</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/disparity.launch" target="_blank">launch/includes/disparity.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>projector</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/depth_registered.launch" target="_blank">launch/includes/depth_registered.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>points_xyzrgb</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>publish_metric</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>publish_metric_rect</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>allow_software_registration</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>allow_hardware_registration</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_registered</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>suffix</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/depth.launch" target="_blank">launch/includes/depth.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>points_xyz</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rectify</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>publish_metric</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>publish_metric_rect</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-ns.launch" target="_blank">launch/examples/freenect-ns.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>ns</strong> <em>&#91;default: robot1&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>tf_prefix</strong> <em>&#91;default: /robot1_prefix&#93; </em></li>
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-debug.launch" target="_blank">launch/examples/freenect-debug.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-registered-xyzrgb.launch" target="_blank">launch/examples/freenect-registered-xyzrgb.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-xyz.launch" target="_blank">launch/examples/freenect-xyz.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-diagnostics.launch" target="_blank">launch/examples/freenect-diagnostics.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
                         
                       
                     </ul>
@@ -1875,120 +2110,44 @@ xiaoqiang_server
                 </ul>
               </li>
             
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/freenect_tf_prefix.launch" target="_blank">launch/freenect_tf_prefix.launch</a>
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/device.launch.xml" target="_blank">launch/includes/device.launch.xml</a>
                 <ul class="list-unstyled">
                   
-                    <li><em> Entry point for using OpenNI devices </em></li>
+                    <li><em> Launch the OpenNI device driver </em></li>
                   
                   <li>
                     <ul>
                       
                         
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                          <li><strong>manager</strong>  </em></li>
                         
                       
                         
-                          <li><strong>tf_prefix</strong> <em>&#91;default: &#93; </em></li>
+                          <li><strong>device_id</strong>  </em></li>
                         
                       
                         
-                          <li><strong>rgb_frame_id</strong> <em>&#91;default: $(arg tf_prefix)/$(arg camera)_rgb_optical_frame&#93; </em></li>
+                          <li><strong>rgb_frame_id</strong>  </em></li>
                         
                       
                         
-                          <li><strong>depth_frame_id</strong> <em>&#91;default: $(arg tf_prefix)/$(arg camera)_depth_optical_frame&#93; </em></li>
+                          <li><strong>depth_frame_id</strong>  </em></li>
                         
                       
                         
-                          <li><strong>data_skip</strong> <em>&#91;default: 0&#93; </em></li>
+                          <li><strong>rgb_camera_info_url</strong>  </em></li>
                         
                       
                         
-                          <li><strong>device_id</strong> <em>&#91;default: #1&#93; </em></li>
+                          <li><strong>depth_camera_info_url</strong>  </em></li>
                         
                       
                         
-                          <li><strong>rgb_camera_info_url</strong> <em>&#91;default: &#93; </em></li>
+                          <li><strong>depth_registration</strong>  </em></li>
                         
                       
                         
-                          <li><strong>depth_camera_info_url</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_registration</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb</strong> <em>&#91;default: rgb&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ir</strong> <em>&#91;default: ir&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth</strong> <em>&#91;default: depth&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_registered</strong> <em>&#91;default: depth_registered&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>projector</strong> <em>&#91;default: projector&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>load_driver</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>publish_tf</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb_processing</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ir_processing</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_processing</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_registered_processing</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>disparity_processing</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>disparity_registered_processing</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>hw_registered_processing</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>sw_registered_processing</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>bond</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: $(arg bond)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>num_worker_threads</strong> <em>&#91;default: 4&#93; </em></li>
+                          <li><strong>data_skip</strong>  </em></li>
                         
                       
                         
@@ -2024,29 +2183,27 @@ xiaoqiang_server
                         
                       
                         
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>motor_processing</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
-                      
+                          <li><strong>audio_processing</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
-                      
+                          <li><strong>rgb_processing</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
-                      
+                          <li><strong>ir_processing</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
-                      
+                          <li><strong>depth_processing</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
-                      
+                          <li><strong>respawn</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -2054,63 +2211,23 @@ xiaoqiang_server
                         
                       
                         
-                      
+                          <li><strong>rgb</strong> <em>&#91;default: rgb&#93; </em></li>
                         
                       
                         
-                      
+                          <li><strong>ir</strong> <em>&#91;default: ir&#93; </em></li>
                         
                       
                         
-                      
+                          <li><strong>depth</strong> <em>&#91;default: depth&#93; </em></li>
                         
                       
                         
-                      
+                          <li><strong>depth_registered</strong> <em>&#91;default: depth_registered&#93; </em></li>
                         
                       
                         
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
+                          <li><strong>projector</strong> <em>&#91;default: projector&#93; </em></li>
                         
                       
                     </ul>
@@ -2118,20 +2235,36 @@ xiaoqiang_server
                 </ul>
               </li>
             
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/kinect_frames.launch" target="_blank">launch/kinect_frames.launch</a>
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/depth.launch.xml" target="_blank">launch/includes/depth.launch.xml</a>
                 <ul class="list-unstyled">
                   
-                    <li><em></em></li>
+                    <li><em> Load processing nodelets for the depth camera </em></li>
                   
                   <li>
                     <ul>
                       
                         
-                          <li><strong>camera</strong> <em>&#91;default: &#93; </em></li>
+                          <li><strong>manager</strong>  </em></li>
                         
                       
                         
-                          <li><strong>tf_prefix</strong> <em>&#91;default: &#93; </em></li>
+                          <li><strong>occupancy_xyz</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rectify</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>depth</strong>  </em></li>
                         
                       
                     </ul>
@@ -2274,6 +2407,43 @@ xiaoqiang_server
                 </ul>
               </li>
             
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/depth2.launch.xml" target="_blank">launch/includes/depth2.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> Load processing nodelets for the depth camera </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>manager</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>occupancy_xyz</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rectify</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>depth</strong>  </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/processing.launch.xml" target="_blank">launch/includes/processing.launch.xml</a>
                 <ul class="list-unstyled">
                   
@@ -2402,205 +2572,6 @@ xiaoqiang_server
                       
                         
                       
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/depth.launch.xml" target="_blank">launch/includes/depth.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> Load processing nodelets for the depth camera </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>occupancy_xyz</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rectify</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><strong>depth</strong>  </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/device.launch.xml" target="_blank">launch/includes/device.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> Launch the OpenNI device driver </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>device_id</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb_frame_id</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_frame_id</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb_camera_info_url</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_camera_info_url</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_registration</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>data_skip</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>libfreenect_debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_rgb_diagnostics</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_ir_diagnostics</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_depth_diagnostics</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>diagnostics_max_frequency</strong> <em>&#91;default: 30.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>diagnostics_min_frequency</strong> <em>&#91;default: 30.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>diagnostics_tolerance</strong> <em>&#91;default: 0.05&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>diagnostics_window_time</strong> <em>&#91;default: 5.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>motor_processing</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>audio_processing</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb_processing</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ir_processing</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_processing</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><strong>rgb</strong> <em>&#91;default: rgb&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ir</strong> <em>&#91;default: ir&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth</strong> <em>&#91;default: depth&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_registered</strong> <em>&#91;default: depth_registered&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>projector</strong> <em>&#91;default: projector&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/melodic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/depth2.launch.xml" target="_blank">launch/includes/depth2.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> Load processing nodelets for the depth camera </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>occupancy_xyz</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rectify</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><strong>depth</strong>  </em></li>
                         
                       
                     </ul>
@@ -3062,7 +3033,7 @@ xiaoqiang_server
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-06-14
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-06-13
         </span>
       </td>
     </tr>
@@ -3167,34 +3138,7 @@ xiaoqiang_server
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-xiaoqiang_freenect_launch">Changelog for package xiaoqiang_freenect_launch</h1>
-
-<h2 id="forthcoming">Forthcoming</h2>
-
-<h2 id="0-0-11-2018-06-14">0.0.11 (2018-06-14)</h2>
-
-<h2 id="0-0-10-2018-06-09">0.0.10 (2018-06-09)</h2>
-
-<h2 id="0-0-9-2018-06-07">0.0.9 (2018-06-07)</h2>
-
-<h2 id="0-0-8-2018-06-06">0.0.8 (2018-06-06)</h2>
-
-<ul>
-<li>  add xiaoqiang navigation</li>
-<li>  add depth image process</li>
-<li>  Contributors: xiaoqiang</li>
-</ul>
-
-<h2 id="0-0-7-2018-06-01">0.0.7 (2018-06-01)</h2>
-
-<h2 id="0-0-6-2018-05-31">0.0.6 (2018-05-31)</h2>
-
-<h2 id="0-0-5-2018-05-30">0.0.5 (2018-05-30)</h2>
-
-<ul>
-<li>  change email</li>
-<li>  Contributors: xiaoqiang</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3404,6 +3348,564 @@ xiaoqiang_server
         
           <ul>
             
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/freenect_tf_prefix.launch" target="_blank">launch/freenect_tf_prefix.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> Entry point for using OpenNI devices </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>tf_prefix</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb_frame_id</strong> <em>&#91;default: $(arg tf_prefix)/$(arg camera)_rgb_optical_frame&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_frame_id</strong> <em>&#91;default: $(arg tf_prefix)/$(arg camera)_depth_optical_frame&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>data_skip</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>device_id</strong> <em>&#91;default: #1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb_camera_info_url</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_camera_info_url</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_registration</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb</strong> <em>&#91;default: rgb&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ir</strong> <em>&#91;default: ir&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth</strong> <em>&#91;default: depth&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_registered</strong> <em>&#91;default: depth_registered&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>projector</strong> <em>&#91;default: projector&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>load_driver</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>publish_tf</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb_processing</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ir_processing</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_processing</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_registered_processing</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>disparity_processing</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>disparity_registered_processing</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>hw_registered_processing</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>sw_registered_processing</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>bond</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn</strong> <em>&#91;default: $(arg bond)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>num_worker_threads</strong> <em>&#91;default: 4&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>libfreenect_debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_rgb_diagnostics</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_ir_diagnostics</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_depth_diagnostics</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>diagnostics_max_frequency</strong> <em>&#91;default: 30.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>diagnostics_min_frequency</strong> <em>&#91;default: 30.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>diagnostics_tolerance</strong> <em>&#91;default: 0.05&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>diagnostics_window_time</strong> <em>&#91;default: 5.0&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/manager.launch" target="_blank">launch/includes/manager.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/processing.launch" target="_blank">launch/includes/processing.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ir</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_registered</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>projector</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/ir.launch" target="_blank">launch/includes/ir.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ir</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/depth.launch" target="_blank">launch/includes/depth.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>points_xyz</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rectify</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>publish_metric</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>publish_metric_rect</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/depth_registered.launch" target="_blank">launch/includes/depth_registered.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>points_xyzrgb</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>publish_metric</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>publish_metric_rect</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>allow_software_registration</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>allow_hardware_registration</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_registered</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>suffix</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/disparity.launch" target="_blank">launch/includes/disparity.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>projector</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/device.launch" target="_blank">launch/includes/device.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>device_id</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb_frame_id</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_frame_id</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb_camera_info_url</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_camera_info_url</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_registration</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ir</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>depth_registered</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>projector</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>data_skip</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>libfreenect_debug</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_rgb_diagnostics</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_ir_diagnostics</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_depth_diagnostics</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>diagnostics_max_frequency</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>diagnostics_min_frequency</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>diagnostics_tolerance</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>diagnostics_window_time</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/kinect-xyz.launch" target="_blank">launch/kinect-xyz.launch</a>
                 <ul class="list-unstyled">
                   
@@ -3426,6 +3928,153 @@ xiaoqiang_server
                       
                         
                       
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-registered-xyzrgb.launch" target="_blank">launch/examples/freenect-registered-xyzrgb.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-ns.launch" target="_blank">launch/examples/freenect-ns.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>ns</strong> <em>&#91;default: robot1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>tf_prefix</strong> <em>&#91;default: /robot1_prefix&#93; </em></li>
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-diagnostics.launch" target="_blank">launch/examples/freenect-diagnostics.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-debug.launch" target="_blank">launch/examples/freenect-debug.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-xyz.launch" target="_blank">launch/examples/freenect-xyz.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/kinect_frames2.launch" target="_blank">launch/kinect_frames2.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> Default frames for Kinect/PSDK5 devices
+     Places depth and RGB cameras in the same plane with 2.5cm baseline.
+     Calibration may improve results, but these defaults are reasonably accurate.
+</em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>tf_prefix</strong> <em>&#91;default: &#93; </em></li>
                         
                       
                         
@@ -3692,461 +4341,20 @@ xiaoqiang_server
                 </ul>
               </li>
             
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/kinect_frames2.launch" target="_blank">launch/kinect_frames2.launch</a>
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/kinect_frames.launch" target="_blank">launch/kinect_frames.launch</a>
                 <ul class="list-unstyled">
                   
-                    <li><em> Default frames for Kinect/PSDK5 devices
-     Places depth and RGB cameras in the same plane with 2.5cm baseline.
-     Calibration may improve results, but these defaults are reasonably accurate.
-</em></li>
+                    <li><em></em></li>
                   
                   <li>
                     <ul>
                       
                         
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                          <li><strong>camera</strong> <em>&#91;default: &#93; </em></li>
                         
                       
                         
                           <li><strong>tf_prefix</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/device.launch" target="_blank">launch/includes/device.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>device_id</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb_frame_id</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_frame_id</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb_camera_info_url</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_camera_info_url</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_registration</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ir</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_registered</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>projector</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>data_skip</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>libfreenect_debug</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_rgb_diagnostics</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_ir_diagnostics</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_depth_diagnostics</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>diagnostics_max_frequency</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>diagnostics_min_frequency</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>diagnostics_tolerance</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>diagnostics_window_time</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/processing.launch" target="_blank">launch/includes/processing.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ir</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_registered</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>projector</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/manager.launch" target="_blank">launch/includes/manager.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/ir.launch" target="_blank">launch/includes/ir.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ir</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/disparity.launch" target="_blank">launch/includes/disparity.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>projector</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/depth_registered.launch" target="_blank">launch/includes/depth_registered.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>points_xyzrgb</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>publish_metric</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>publish_metric_rect</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>allow_software_registration</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>allow_hardware_registration</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_registered</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>suffix</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/depth.launch" target="_blank">launch/includes/depth.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>points_xyz</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rectify</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>publish_metric</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>publish_metric_rect</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-ns.launch" target="_blank">launch/examples/freenect-ns.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>ns</strong> <em>&#91;default: robot1&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>tf_prefix</strong> <em>&#91;default: /robot1_prefix&#93; </em></li>
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-debug.launch" target="_blank">launch/examples/freenect-debug.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-registered-xyzrgb.launch" target="_blank">launch/examples/freenect-registered-xyzrgb.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-xyz.launch" target="_blank">launch/examples/freenect-xyz.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/examples/freenect-diagnostics.launch" target="_blank">launch/examples/freenect-diagnostics.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                      
                         
                       
                     </ul>
@@ -4409,120 +4617,44 @@ xiaoqiang_server
                 </ul>
               </li>
             
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/freenect_tf_prefix.launch" target="_blank">launch/freenect_tf_prefix.launch</a>
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/device.launch.xml" target="_blank">launch/includes/device.launch.xml</a>
                 <ul class="list-unstyled">
                   
-                    <li><em> Entry point for using OpenNI devices </em></li>
+                    <li><em> Launch the OpenNI device driver </em></li>
                   
                   <li>
                     <ul>
                       
                         
-                          <li><strong>camera</strong> <em>&#91;default: camera&#93; </em></li>
+                          <li><strong>manager</strong>  </em></li>
                         
                       
                         
-                          <li><strong>tf_prefix</strong> <em>&#91;default: &#93; </em></li>
+                          <li><strong>device_id</strong>  </em></li>
                         
                       
                         
-                          <li><strong>rgb_frame_id</strong> <em>&#91;default: $(arg tf_prefix)/$(arg camera)_rgb_optical_frame&#93; </em></li>
+                          <li><strong>rgb_frame_id</strong>  </em></li>
                         
                       
                         
-                          <li><strong>depth_frame_id</strong> <em>&#91;default: $(arg tf_prefix)/$(arg camera)_depth_optical_frame&#93; </em></li>
+                          <li><strong>depth_frame_id</strong>  </em></li>
                         
                       
                         
-                          <li><strong>data_skip</strong> <em>&#91;default: 0&#93; </em></li>
+                          <li><strong>rgb_camera_info_url</strong>  </em></li>
                         
                       
                         
-                          <li><strong>device_id</strong> <em>&#91;default: #1&#93; </em></li>
+                          <li><strong>depth_camera_info_url</strong>  </em></li>
                         
                       
                         
-                          <li><strong>rgb_camera_info_url</strong> <em>&#91;default: &#93; </em></li>
+                          <li><strong>depth_registration</strong>  </em></li>
                         
                       
                         
-                          <li><strong>depth_camera_info_url</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_registration</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb</strong> <em>&#91;default: rgb&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ir</strong> <em>&#91;default: ir&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth</strong> <em>&#91;default: depth&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_registered</strong> <em>&#91;default: depth_registered&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>projector</strong> <em>&#91;default: projector&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>load_driver</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>publish_tf</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb_processing</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ir_processing</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_processing</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_registered_processing</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>disparity_processing</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>disparity_registered_processing</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>hw_registered_processing</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>sw_registered_processing</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>bond</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: $(arg bond)&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>num_worker_threads</strong> <em>&#91;default: 4&#93; </em></li>
+                          <li><strong>data_skip</strong>  </em></li>
                         
                       
                         
@@ -4558,29 +4690,27 @@ xiaoqiang_server
                         
                       
                         
-                      
-                        
-                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>motor_processing</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
-                      
+                          <li><strong>audio_processing</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
-                      
+                          <li><strong>rgb_processing</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
-                      
+                          <li><strong>ir_processing</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
-                      
+                          <li><strong>depth_processing</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
-                      
+                          <li><strong>respawn</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
@@ -4588,63 +4718,23 @@ xiaoqiang_server
                         
                       
                         
-                      
+                          <li><strong>rgb</strong> <em>&#91;default: rgb&#93; </em></li>
                         
                       
                         
-                      
+                          <li><strong>ir</strong> <em>&#91;default: ir&#93; </em></li>
                         
                       
                         
-                      
+                          <li><strong>depth</strong> <em>&#91;default: depth&#93; </em></li>
                         
                       
                         
-                      
+                          <li><strong>depth_registered</strong> <em>&#91;default: depth_registered&#93; </em></li>
                         
                       
                         
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
+                          <li><strong>projector</strong> <em>&#91;default: projector&#93; </em></li>
                         
                       
                     </ul>
@@ -4652,20 +4742,36 @@ xiaoqiang_server
                 </ul>
               </li>
             
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/kinect_frames.launch" target="_blank">launch/kinect_frames.launch</a>
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/depth.launch.xml" target="_blank">launch/includes/depth.launch.xml</a>
                 <ul class="list-unstyled">
                   
-                    <li><em></em></li>
+                    <li><em> Load processing nodelets for the depth camera </em></li>
                   
                   <li>
                     <ul>
                       
                         
-                          <li><strong>camera</strong> <em>&#91;default: &#93; </em></li>
+                          <li><strong>manager</strong>  </em></li>
                         
                       
                         
-                          <li><strong>tf_prefix</strong> <em>&#91;default: &#93; </em></li>
+                          <li><strong>occupancy_xyz</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rectify</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>depth</strong>  </em></li>
                         
                       
                     </ul>
@@ -4808,6 +4914,43 @@ xiaoqiang_server
                 </ul>
               </li>
             
+              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/depth2.launch.xml" target="_blank">launch/includes/depth2.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> Load processing nodelets for the depth camera </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>manager</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>occupancy_xyz</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rectify</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>depth</strong>  </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/processing.launch.xml" target="_blank">launch/includes/processing.launch.xml</a>
                 <ul class="list-unstyled">
                   
@@ -4936,205 +5079,6 @@ xiaoqiang_server
                       
                         
                       
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/depth.launch.xml" target="_blank">launch/includes/depth.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> Load processing nodelets for the depth camera </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>occupancy_xyz</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rectify</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><strong>depth</strong>  </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/device.launch.xml" target="_blank">launch/includes/device.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> Launch the OpenNI device driver </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>device_id</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb_frame_id</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_frame_id</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb_camera_info_url</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_camera_info_url</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_registration</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>data_skip</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>libfreenect_debug</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_rgb_diagnostics</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_ir_diagnostics</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>enable_depth_diagnostics</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>diagnostics_max_frequency</strong> <em>&#91;default: 30.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>diagnostics_min_frequency</strong> <em>&#91;default: 30.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>diagnostics_tolerance</strong> <em>&#91;default: 0.05&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>diagnostics_window_time</strong> <em>&#91;default: 5.0&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>motor_processing</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>audio_processing</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rgb_processing</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ir_processing</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_processing</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><strong>rgb</strong> <em>&#91;default: rgb&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>ir</strong> <em>&#91;default: ir&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth</strong> <em>&#91;default: depth&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>depth_registered</strong> <em>&#91;default: depth_registered&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>projector</strong> <em>&#91;default: projector&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/bluewhalerobot/xiaoqiang/blob/kinetic-devel/xiaoqiang_freenect/xiaoqiang_freenect_launch/launch/includes/depth2.launch.xml" target="_blank">launch/includes/depth2.launch.xml</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em> Load processing nodelets for the depth camera </em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>manager</strong>  </em></li>
-                        
-                      
-                        
-                          <li><strong>occupancy_xyz</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>rectify</strong> <em>&#91;default: true&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>respawn</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><strong>depth</strong>  </em></li>
                         
                       
                     </ul>
@@ -5340,7 +5284,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -575,11 +571,11 @@ ros_numpy
 </ul>
 
 <p>Support for more types can be added with:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="nd">@ros_numpy.converts_to_numpy</span><span class="p">(</span><span class="n">SomeMessageClass</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">@</span><span class="n">ros_numpy</span><span class="o">.</span><span class="n">converts_to_numpy</span><span class="p">(</span><span class="n">SomeMessageClass</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">my_msg</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 
-<span class="nd">@ros_numpy.converts_from_numpy</span><span class="p">(</span><span class="n">SomeMessageClass</span><span class="p">)</span>
+<span class="o">@</span><span class="n">ros_numpy</span><span class="o">.</span><span class="n">converts_from_numpy</span><span class="p">(</span><span class="n">SomeMessageClass</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">my_array</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">SomeMessageClass</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 
@@ -1279,11 +1275,11 @@ ros_numpy
 </ul>
 
 <p>Support for more types can be added with:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="nd">@ros_numpy.converts_to_numpy</span><span class="p">(</span><span class="n">SomeMessageClass</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">@</span><span class="n">ros_numpy</span><span class="o">.</span><span class="n">converts_to_numpy</span><span class="p">(</span><span class="n">SomeMessageClass</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">my_msg</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 
-<span class="nd">@ros_numpy.converts_from_numpy</span><span class="p">(</span><span class="n">SomeMessageClass</span><span class="p">)</span>
+<span class="o">@</span><span class="n">ros_numpy</span><span class="o">.</span><span class="n">converts_from_numpy</span><span class="p">(</span><span class="n">SomeMessageClass</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">my_array</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">SomeMessageClass</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 
@@ -2014,11 +2010,11 @@ ros_numpy
 </ul>
 
 <p>Support for more types can be added with:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="nd">@ros_numpy.converts_to_numpy</span><span class="p">(</span><span class="n">SomeMessageClass</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">@</span><span class="n">ros_numpy</span><span class="o">.</span><span class="n">converts_to_numpy</span><span class="p">(</span><span class="n">SomeMessageClass</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">my_msg</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 
-<span class="nd">@ros_numpy.converts_from_numpy</span><span class="p">(</span><span class="n">SomeMessageClass</span><span class="p">)</span>
+<span class="o">@</span><span class="n">ros_numpy</span><span class="o">.</span><span class="n">converts_from_numpy</span><span class="p">(</span><span class="n">SomeMessageClass</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">my_array</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">SomeMessageClass</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 
@@ -2419,7 +2415,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

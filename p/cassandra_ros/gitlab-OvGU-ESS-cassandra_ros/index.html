@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -705,101 +701,101 @@ required to handle the access to every topic/colum-family.</p>
 
 <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">'CassandraTest'</span><span class="p">)</span>
 
-<span class="c"># in most cases this is the standard configuration</span>
-<span class="n">host</span> <span class="o">=</span> <span class="s">'localhost'</span>
+<span class="c1"># in most cases this is the standard configuration
+</span><span class="n">host</span> <span class="o">=</span> <span class="s">'localhost'</span>
 <span class="n">port</span> <span class="o">=</span> <span class="mi">9160</span>
 
-<span class="c"># that is nearly enough, only a keyspace is missing</span>
-<span class="n">rosCas</span> <span class="o">=</span> <span class="n">rc</span><span class="o">.</span><span class="n">RosCassandra</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+<span class="c1"># that is nearly enough, only a keyspace is missing
+</span><span class="n">rosCas</span> <span class="o">=</span> <span class="n">rc</span><span class="o">.</span><span class="n">RosCassandra</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
 
-<span class="c"># check if the keyspace exits</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">rosCas</span><span class="o">.</span><span class="n">connectToKeyspace</span><span class="p">(</span><span class="s">'test'</span><span class="p">):</span>
-    <span class="c"># if not, create one</span>
-    <span class="n">rosCas</span><span class="o">.</span><span class="n">createKeyspace</span><span class="p">(</span><span class="s">'test'</span><span class="p">)</span>
+<span class="c1"># check if the keyspace exits
+</span><span class="k">if</span> <span class="ow">not</span> <span class="n">rosCas</span><span class="o">.</span><span class="n">connectToKeyspace</span><span class="p">(</span><span class="s">'test'</span><span class="p">):</span>
+    <span class="c1"># if not, create one
+</span>    <span class="n">rosCas</span><span class="o">.</span><span class="n">createKeyspace</span><span class="p">(</span><span class="s">'test'</span><span class="p">)</span>
 
-<span class="c"># connect again</span>
-<span class="n">rosCas</span><span class="o">.</span><span class="n">connectToKeyspace</span><span class="p">(</span><span class="s">'test'</span><span class="p">)</span>
+<span class="c1"># connect again
+</span><span class="n">rosCas</span><span class="o">.</span><span class="n">connectToKeyspace</span><span class="p">(</span><span class="s">'test'</span><span class="p">)</span>
 
 </code></pre></div>
 <p>Thats it, now we are connected. In the next step we will create a new
 topic/column-family:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># this is the datatype we will store</span>
-<span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">String</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># this is the datatype we will store
+</span><span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">String</span>
 <span class="n">topic</span> <span class="o">=</span> <span class="s">'test_topic'</span>
-<span class="n">key_format</span><span class="o">=</span><span class="s">'time'</span>       <span class="c"># this means, that we will use a timestamp as primary</span>
-                        <span class="c"># key, other formats are 'hash' or 'msg_part'</span>
-<span class="n">format</span> <span class="o">=</span> <span class="s">'binary'</span>       <span class="c"># the format that is used for conversation,</span>
-                        <span class="c"># other formats are 'string', 'ros', or 'yaml',</span>
-
-<span class="c"># at first we create the new topic with the following command</span>
-<span class="n">rosCas</span><span class="o">.</span><span class="n">addTopic</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span>
-                <span class="n">format</span><span class="p">,</span>
+<span class="n">key_format</span><span class="o">=</span><span class="s">'time'</span>       <span class="c1"># this means, that we will use a timestamp as primary
+</span>                        <span class="c1"># key, other formats are 'hash' or 'msg_part'
+</span><span class="nb">format</span> <span class="o">=</span> <span class="s">'binary'</span>       <span class="c1"># the format that is used for conversation,
+</span>                        <span class="c1"># other formats are 'string', 'ros', or 'yaml',
+</span>
+<span class="c1"># at first we create the new topic with the following command
+</span><span class="n">rosCas</span><span class="o">.</span><span class="n">addTopic</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span>
+                <span class="nb">format</span><span class="p">,</span>
                 <span class="s">'String'</span><span class="p">,</span>
                 <span class="s">'std_msgs'</span><span class="p">,</span>
                 <span class="n">key_format</span><span class="p">,</span>
-                <span class="bp">None</span><span class="p">,</span> <span class="c"># &lt;only required if you use define key-format 'manually'</span>
-                <span class="n">comment</span><span class="o">=</span><span class="s">'some additional comments...'</span><span class="p">)</span>
+                <span class="bp">None</span><span class="p">,</span> <span class="c1"># &lt;only required if you use define key-format 'manually'
+</span>                <span class="n">comment</span><span class="o">=</span><span class="s">'some additional comments...'</span><span class="p">)</span>
 
-<span class="c"># if everything worked well, there should be a new topic and the</span>
-<span class="c"># following command should evaluate to true</span>
-<span class="n">rosCas</span><span class="o">.</span><span class="n">existTopic</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span>
+<span class="c1"># if everything worked well, there should be a new topic and the
+# following command should evaluate to true
+</span><span class="n">rosCas</span><span class="o">.</span><span class="n">existTopic</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span>
 
-<span class="c"># getting a list with all topics</span>
-<span class="n">rosCas</span><span class="o">.</span><span class="n">getAllTopics</span><span class="p">()</span>
+<span class="c1"># getting a list with all topics
+</span><span class="n">rosCas</span><span class="o">.</span><span class="n">getAllTopics</span><span class="p">()</span>
 
 </code></pre></div>
 <p>In the next step we will start to insert some messages into the database</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># get the topic-containerros</span>
-<span class="n">topicContainer</span> <span class="o">=</span> <span class="n">rosCas</span><span class="o">.</span><span class="n">getTopic</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># get the topic-containerros
+</span><span class="n">topicContainer</span> <span class="o">=</span> <span class="n">rosCas</span><span class="o">.</span><span class="n">getTopic</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span>
 
-<span class="c"># thus we can now start to insert some messages</span>
-<span class="n">msg</span> <span class="o">=</span> <span class="n">String</span><span class="p">()</span>
+<span class="c1"># thus we can now start to insert some messages
+</span><span class="n">msg</span> <span class="o">=</span> <span class="n">String</span><span class="p">()</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
     <span class="n">msg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s">'test '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
     <span class="n">topicContainer</span><span class="o">.</span><span class="n">addData</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 
-<span class="c"># because I do not know your time, we can simply get all messages by calling</span>
-<span class="n">topicContainer</span><span class="o">.</span><span class="n">getAllData</span><span class="p">(</span><span class="n">queue</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="c1"># because I do not know your time, we can simply get all messages by calling
+</span><span class="n">topicContainer</span><span class="o">.</span><span class="n">getAllData</span><span class="p">(</span><span class="n">queue</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 
-<span class="c"># if you know the primary keys exactly, you can also query by using them</span>
-<span class="c"># topicContainer.getData(key, to_key, queue=100)</span>
+<span class="c1"># if you know the primary keys exactly, you can also query by using them
+# topicContainer.getData(key, to_key, queue=100)
+</span>
+<span class="c1"># remove everything
+</span><span class="n">topicContainer</span><span class="o">.</span><span class="n">removeAllData</span><span class="p">()</span>
+<span class="c1"># or if you want to delete a special message, use:
+# topicContainer.removeData(key, to_key, queue=100):
+</span>
+<span class="c1"># now let us change the format for storing data and the key
+# we could either delete the whole container by calling:
+# rosCas.removeTopic(topic)
+# or we change the meta-information … this works only, if
+# the column-family is empty
+</span><span class="n">meta</span> <span class="o">=</span> <span class="n">topicContainer</span><span class="o">.</span><span class="n">getMeta</span><span class="p">()</span>
 
-<span class="c"># remove everything</span>
-<span class="n">topicContainer</span><span class="o">.</span><span class="n">removeAllData</span><span class="p">()</span>
-<span class="c"># or if you want to delete a special message, use:</span>
-<span class="c"># topicContainer.removeData(key, to_key, queue=100):</span>
-
-<span class="c"># now let us change the format for storing data and the key</span>
-<span class="c"># we could either delete the whole container by calling:</span>
-<span class="c"># rosCas.removeTopic(topic)</span>
-<span class="c"># or we change the meta-information … this works only, if</span>
-<span class="c"># the column-family is empty</span>
-<span class="n">meta</span> <span class="o">=</span> <span class="n">topicContainer</span><span class="o">.</span><span class="n">getMeta</span><span class="p">()</span>
-
-<span class="c">#meta is always a dictionary, where we change values as follows</span>
-<span class="n">meta</span><span class="p">[</span><span class="s">'cassandra_format'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'ros'</span>
+<span class="c1">#meta is always a dictionary, where we change values as follows
+</span><span class="n">meta</span><span class="p">[</span><span class="s">'cassandra_format'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'ros'</span>
 <span class="n">meta</span><span class="p">[</span><span class="s">'key_format'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'manual'</span>
 
-<span class="c"># write it back to the topic</span>
-<span class="n">rosCas</span><span class="o">.</span><span class="n">setTopicMeta</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span> <span class="n">meta</span><span class="p">)</span>
+<span class="c1"># write it back to the topic
+</span><span class="n">rosCas</span><span class="o">.</span><span class="n">setTopicMeta</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span> <span class="n">meta</span><span class="p">)</span>
 
-<span class="c"># because we had changed the storage format, we have to renew the</span>
-<span class="c"># topic-container, this will be explained in more detail within the next</span>
-<span class="c"># section</span>
-<span class="n">topicContainer</span> <span class="o">=</span> <span class="n">rosCas</span><span class="o">.</span><span class="n">getTopic</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span>
+<span class="c1"># because we had changed the storage format, we have to renew the
+# topic-container, this will be explained in more detail within the next
+# section
+</span><span class="n">topicContainer</span> <span class="o">=</span> <span class="n">rosCas</span><span class="o">.</span><span class="n">getTopic</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
     <span class="n">msg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s">'test '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
     <span class="n">topicContainer</span><span class="o">.</span><span class="n">addData</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="s">'</span><span class="si">%.2</span><span class="s">d'</span><span class="o">%</span><span class="n">i</span><span class="p">)</span>
 
-<span class="c"># as you see, adding keys looks a bit weird, but they are always stored</span>
-<span class="c"># as strings... requesting data looks as follows ….</span>
-<span class="n">topicContainer</span><span class="o">.</span><span class="n">getData</span><span class="p">(</span><span class="s">'04'</span><span class="p">,</span> <span class="s">'20'</span><span class="p">)</span>
-<span class="c"># you will get a list consisting of (key, value) pairs ...</span>
-
-<span class="c"># also allowed is something like this: topicContainer.addData(msg, 'XXX'))</span>
-
+<span class="c1"># as you see, adding keys looks a bit weird, but they are always stored
+# as strings... requesting data looks as follows ….
+</span><span class="n">topicContainer</span><span class="o">.</span><span class="n">getData</span><span class="p">(</span><span class="s">'04'</span><span class="p">,</span> <span class="s">'20'</span><span class="p">)</span>
+<span class="c1"># you will get a list consisting of (key, value) pairs ...
+</span>
+<span class="c1"># also allowed is something like this: topicContainer.addData(msg, 'XXX'))
+</span>
 </code></pre></div>
 <h2 id="storage-formats">Storage Formats</h2>
 
@@ -809,8 +805,8 @@ storing. But currently it is also possible to store messages as "strings",
 "yaml", or "ros" format. The type of conversion is defined at the creation of a
 topic-container:</p>
 <div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">rosCas</span><span class="o">.</span><span class="n">addTopic</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span>
-                <span class="n">format</span><span class="p">,</span> <span class="c"># exactly in here ... 'string', 'yaml', 'ros', 'binary'</span>
-                <span class="s">'String'</span><span class="p">,</span>
+                <span class="nb">format</span><span class="p">,</span> <span class="c1"># exactly in here ... 'string', 'yaml', 'ros', 'binary'
+</span>                <span class="s">'String'</span><span class="p">,</span>
                 <span class="s">'std_msgs'</span><span class="p">,</span>
                 <span class="n">key_format</span><span class="p">,</span>
                 <span class="bp">None</span><span class="p">,</span>
@@ -878,31 +874,31 @@ more information, have a look at the follwing link:
 will have to generate at first secondary indexes. Because this might be
 expensive and not required for every part of a message, this has to be done
 manually, as follows:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># this will automatically generate the appropriate index</span>
-<span class="n">rosCas</span><span class="o">.</span><span class="n">createIndex</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span> <span class="s">'.data'</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># this will automatically generate the appropriate index
+</span><span class="n">rosCas</span><span class="o">.</span><span class="n">createIndex</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span> <span class="s">'.data'</span><span class="p">)</span>
 
 </code></pre></div>
 <p>For an automatic translation of topics, use the following method, this will
 replace topicnames with their hash-value.</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># will return everything</span>
-<span class="n">rosCas</span><span class="o">.</span><span class="n">exequteCQL</span><span class="p">(</span><span class="s">'SELECT * FROM "test_topic"'</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># will return everything
+</span><span class="n">rosCas</span><span class="o">.</span><span class="n">exequteCQL</span><span class="p">(</span><span class="s">'SELECT * FROM "test_topic"'</span><span class="p">)</span>
 
-<span class="c"># only a list that contains all keys</span>
-<span class="n">rosCas</span><span class="o">.</span><span class="n">exequteCQL</span><span class="p">(</span><span class="s">'SELECT KEY FROM "test_topic"'</span><span class="p">)</span>
+<span class="c1"># only a list that contains all keys
+</span><span class="n">rosCas</span><span class="o">.</span><span class="n">exequteCQL</span><span class="p">(</span><span class="s">'SELECT KEY FROM "test_topic"'</span><span class="p">)</span>
 
-<span class="c"># a list with all elements stored in .data</span>
-<span class="n">rosCas</span><span class="o">.</span><span class="n">exequteCQL</span><span class="p">(</span><span class="s">'SELECT ".data" FROM "test_topic"'</span><span class="p">)</span>
+<span class="c1"># a list with all elements stored in .data
+</span><span class="n">rosCas</span><span class="o">.</span><span class="n">exequteCQL</span><span class="p">(</span><span class="s">'SELECT ".data" FROM "test_topic"'</span><span class="p">)</span>
 
-<span class="c"># will return a list of keys</span>
-<span class="n">rosCas</span><span class="o">.</span><span class="n">exequteCQL</span><span class="p">(</span><span class="s">'SELECT KEY FROM "test_topic" WHERE ".data"=</span><span class="se">\'</span><span class="s">test 12</span><span class="se">\'</span><span class="s">;'</span><span class="p">)</span>
+<span class="c1"># will return a list of keys
+</span><span class="n">rosCas</span><span class="o">.</span><span class="n">exequteCQL</span><span class="p">(</span><span class="s">'SELECT KEY FROM "test_topic" WHERE ".data"=</span><span class="se">\'</span><span class="s">test 12</span><span class="se">\'</span><span class="s">;'</span><span class="p">)</span>
 
-<span class="c"># if you want to get the whole messages bag, this requires 2 steps</span>
-<span class="c"># first of all store the keys of your statements, let us take the last</span>
-<span class="n">keys</span><span class="o">=</span><span class="n">rosCas</span><span class="o">.</span><span class="n">exequteCQL</span><span class="p">(</span><span class="s">'SELECT KEY FROM "test_topic" WHERE ".data"=</span><span class="se">\'</span><span class="s">test 12</span><span class="se">\'</span><span class="s">;'</span><span class="p">)</span>
+<span class="c1"># if you want to get the whole messages bag, this requires 2 steps
+# first of all store the keys of your statements, let us take the last
+</span><span class="n">keys</span><span class="o">=</span><span class="n">rosCas</span><span class="o">.</span><span class="n">exequteCQL</span><span class="p">(</span><span class="s">'SELECT KEY FROM "test_topic" WHERE ".data"=</span><span class="se">\'</span><span class="s">test 12</span><span class="se">\'</span><span class="s">;'</span><span class="p">)</span>
 <span class="n">messages</span> <span class="o">=</span> <span class="n">topicContainer</span><span class="o">.</span><span class="n">getData</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span>
 
-<span class="c"># remove your indexes as follows</span>
-<span class="n">rosCas</span><span class="o">.</span><span class="n">removeIndex</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span> <span class="s">'.data'</span><span class="p">)</span>
+<span class="c1"># remove your indexes as follows
+</span><span class="n">rosCas</span><span class="o">.</span><span class="n">removeIndex</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span> <span class="s">'.data'</span><span class="p">)</span>
 
 </code></pre></div>
 <p>For more information on CQL, check the following website:
@@ -1094,20 +1090,7 @@ recording dynamically</p>
         
           <ul>
             
-              <li><a href="https://gitlab.com/OvGU-ESS/cassandra_ros.git/./launch/cassandraBag.launch" target="_blank">launch/cassandraBag.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://gitlab.com/OvGU-ESS/cassandra_ros.git/./launch/recordCamera.launch" target="_blank">launch/recordCamera.launch</a>
+              <li><a href="https://gitlab.com/OvGU-ESS/cassandra_ros.git/./launch/deleteCamera.launch" target="_blank">launch/deleteCamera.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1133,7 +1116,20 @@ recording dynamically</p>
                 </ul>
               </li>
             
-              <li><a href="https://gitlab.com/OvGU-ESS/cassandra_ros.git/./launch/deleteCamera.launch" target="_blank">launch/deleteCamera.launch</a>
+              <li><a href="https://gitlab.com/OvGU-ESS/cassandra_ros.git/./launch/recordCamera.launch" target="_blank">launch/recordCamera.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://gitlab.com/OvGU-ESS/cassandra_ros.git/./launch/cassandraBag.launch" target="_blank">launch/cassandraBag.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1170,15 +1166,15 @@ recording dynamically</p>
         
           <ul>
             
-              <li><a href="https://gitlab.com/OvGU-ESS/cassandra_ros.git/./srv/truncate.srv" target="_blank">srv/truncate.srv</a></li>
-            
               <li><a href="https://gitlab.com/OvGU-ESS/cassandra_ros.git/./srv/info.srv" target="_blank">srv/info.srv</a></li>
+            
+              <li><a href="https://gitlab.com/OvGU-ESS/cassandra_ros.git/./srv/delete.srv" target="_blank">srv/delete.srv</a></li>
             
               <li><a href="https://gitlab.com/OvGU-ESS/cassandra_ros.git/./srv/play.srv" target="_blank">srv/play.srv</a></li>
             
-              <li><a href="https://gitlab.com/OvGU-ESS/cassandra_ros.git/./srv/record.srv" target="_blank">srv/record.srv</a></li>
+              <li><a href="https://gitlab.com/OvGU-ESS/cassandra_ros.git/./srv/truncate.srv" target="_blank">srv/truncate.srv</a></li>
             
-              <li><a href="https://gitlab.com/OvGU-ESS/cassandra_ros.git/./srv/delete.srv" target="_blank">srv/delete.srv</a></li>
+              <li><a href="https://gitlab.com/OvGU-ESS/cassandra_ros.git/./srv/record.srv" target="_blank">srv/record.srv</a></li>
             
           </ul>
         
@@ -1347,7 +1343,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

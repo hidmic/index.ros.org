@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -333,7 +329,7 @@
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-26
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-10-03
         </span>
       </td>
     </tr>
@@ -576,6 +572,8 @@
 <h2 id="installation">
 <img align="center" height="15" src="https://i.imgur.com/x1morBF.png"> Installation</h2>
 
+<p><strong>If you are new to Linux or ROS</strong>, you might find links in the <a href="#references">references</a> section handy.</p>
+
 <h3 id="build-from-source">Build from source</h3>
 
 <table>
@@ -619,7 +617,7 @@
 </code> in my case) and run the following:</li>
 </ul>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">  wstool init <span class="nb">.</span> 
-  wstool merge https://github.com/yijiangh/framefab_mpp/raw/kinetic-devel/choreo.rosinstall
+  wstool merge https://github.com/yijiangh/Choreo/raw/kinetic-devel/choreo.rosinstall
   wstool update
   rosdep <span class="nb">install</span> <span class="nt">--from-paths</span> <span class="nb">.</span> <span class="nt">--ignore-src</span>
 
@@ -639,7 +637,21 @@
 <h2 id="quick-start-demo">
 <img align="center" height="15" src="https://i.imgur.com/x1morBF.png"> Quick start demo</h2>
 
-<p>Coming soon.</p>
+<p>Start playing with robotic spatial extrusion on a KUKA KR6R900 robot:</p>
+
+<p><code>roslaunch framefab_kr6_r900_support kr6_r900_choreo.launch</code></p>
+
+<p><img src="https://i.imgur.com/hSdrgm8.png" alt="KR6R900_demo" width="500"></p>
+
+<p>Or on an ABB robot mounted on a linear track:</p>
+
+<p><code>roslaunch framefab_irb6600_support irb6600_choreo.launch</code></p>
+
+<p><img src="https://i.imgur.com/5K0raAY.png" alt="ABB_demo" width="500"></p>
+
+<p>First set up your print model by clicking the <code>Parameters</code> button and set up model file path in <code>Model Input</code> (you might need to set up the robot start pose too). Save it and click <code>Next</code>. Some test models for spatial extrusion can be found <a href="https://github.com/yijiangh/framefab_mpp_test_models">here</a>.</p>
+
+<p><em>More detailed instruction coming soon.</em></p>
 
 <h2 id="code-api">
 <img align="center" height="15" src="https://i.imgur.com/x1morBF.png"> Code API</h2>
@@ -650,25 +662,32 @@
 <img align="center" height="15" src="https://i.imgur.com/dHQx91Q.png"> Publications</h2>
 
 <p>If you use this work, please consider citing as follows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">@incollection{huang2018robarch,
-  title={Robotic extrusion of architectural structures with nonstandard topology},
-  author={Huang, Yijiang and Carstensen, Josephine and Tessmer, Lavender and Mueller, Caitlin},
-  booktitle={Robotic Fabrication in Architecture, Art and Design 2018},
-  year={2018},
-  publisher={Springer}
-}
+<div class="highlight"><pre><code class="language-" data-lang="">@article{Huang_Garrett_Mueller_2018, 
+title={Automated motion planning for robotic assembly of discrete architectural structures}, 
+url={http://arxiv.org/abs/1810.00998}, 
+note={arXiv: 1810.00998}, 
+journal={arXiv:1810.00998 [cs]}, 
+author={Huang, Yijiang and Garrett, Caelan Reed and Mueller, Caitlin Tobin}, year={2018}, month={Oct} }
 </code></pre></div>
-<p>Applications of Choreo:</p>
+<p>Algorithms behind Choreo:
+- Automated motion planning for robotic assembly of discrete architectural structures, Preprint, <a href="https://arxiv.org/abs/1810.00998">paper link</a></p>
 
-<ul>
-<li>Spatial extrusion of Topology Optimized 3D Trusses, <a href="http://web.mit.edu/yijiangh/www//papers/HuangCarstensenMueller_IASS2018.pdf">paper link</a>
-</li>
-</ul>
+<p>Applications of Choreo:
+- Robotic extrusion of architectural structures with nonstandard topology, RobArch 2018, <a href="http://web.mit.edu/yijiangh/www/papers/Huang2019_RobArch.pdf">paper link</a>
+- Spatial extrusion of Topology Optimized 3D Trusses, IASS 2018, <a href="http://web.mit.edu/yijiangh/www//papers/HuangCarstensenMueller_IASS2018.pdf">paper link</a></p>
 
 <h2 id="bugs-feature-requests">
 <img align="center" height="15" src="https://i.imgur.com/H4NwgMg.png"> Bugs &amp; Feature Requests</h2>
 
 <p>Please report bugs and request features using the <a href="https://github.com/yijiangh/Choreo/issues">Issue Tracker</a>.</p>
+
+<h2 id="references">
+<img align="center" height="15" src="https://i.imgur.com/x1morBF.png"> References<a name="references"></a>
+</h2>
+
+<p>If you are new to Linux: You may find it helpful to first do a quick tutorial on common command line tools for linux. A good one is <a href="http://www.ee.surrey.ac.uk/Teaching/Unix/">here</a>.</p>
+
+<p>For researchers and developers who wants to dive deep into the system implementation but not familiar to ROS, you may find the official ROS tutorial <a href="http://wiki.ros.org/ROS/Tutorials">here</a> useful.</p>
 
 <p>[ROS-kinetic]: <a href="http://wiki.ros.org/kinetic">http://wiki.ros.org/kinetic</a>
 [python_catkin_tools]: <a href="http://catkin-tools.readthedocs.io/en/latest/index.html">http://catkin-tools.readthedocs.io/en/latest/index.html</a>
@@ -740,7 +759,7 @@
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

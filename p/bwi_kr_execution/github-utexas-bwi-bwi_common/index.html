@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -723,99 +719,7 @@ utexas_gdc
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-bwi_kr_execution">Changelog for package bwi_kr_execution</h1>
-
-<h2 id="0-3-12-2016-09-14">0.3.12 (2016-09-14)</h2>
-
-<h2 id="0-3-11-2016-08-27">0.3.11 (2016-08-27)</h2>
-
-<h2 id="0-3-10-2016-08-15">0.3.10 (2016-08-15)</h2>
-
-<ul>
-<li>  added elevators</li>
-<li>  added 4th floor map</li>
-<li>  Contributors: Nathan John</li>
-</ul>
-
-<h2 id="0-3-9-2016-08-05">0.3.9 (2016-08-05)</h2>
-
-<ul>
-<li>  Increased planner timeout from 20 seconds to 40 seconds to account
-for longer planning times for traveling between floors.</li>
-<li>  Modifed elevator domain fact file and added rooms for 1st Floor GDC
-to navigation fact file..</li>
-<li>  Added first floor map information to navigation_facts
-and elevator_facts.</li>
-<li>  Fixed static law for facing and beside door, D1 was not defined as
-a door.</li>
-<li>  Fixed errors in 3rd floor objects. Added 2nd floor objects and rest
-of 3rd floor objects.</li>
-<li>  Created action files for goto action and added goto action
-to asp_fomatter.</li>
-<li>  Updated door approach points for 3rd floor map</li>
-<li>  Added missing locations and fixed doors in navigation_facts</li>
-<li>  Updated ASP fact files with addtional locations from updated 3rd
-floor map.</li>
-<li>  Contributors: FernandezR</li>
-</ul>
-
-<h2 id="0-3-8-2016-06-06">0.3.8 (2016-06-06)</h2>
-
-<ul>
-<li>  fix broken clingo dependency
-(<a href="https://github.com/utexas-bwi/bwi_common/issues/52">#52</a>)</li>
-<li>  moved disabling static map from bwi_kr_execution to
-segbot_logical_translator, where it should have been in the
-first place.</li>
-<li>  the gothrough action disables the global costmap. the callelevator
-action only expects the door in front of it to open.</li>
-<li>  added simulated change floor action. added hack to make plan shorter
-when using the elevator, and the other door opens.</li>
-<li>  updated simulated calls that open the elevator doors to
-automatically close those doors.</li>
-<li>  added a simulation change floor action. Should be ready for real
-robot testing now.</li>
-<li>  added missing actions that won't be displayed in clingo output</li>
-<li>  fixing planning issues with elevators</li>
-<li>  some more updates to bwi_kr_execution. fixing some merge issues.</li>
-<li>  merged with yuqian branch.</li>
-<li>  updated navigation facts for simulation.</li>
-<li>  Added additional facts for 2nd floor to navigation facts.</li>
-<li>  Changed location of elavator doors on 2nd floor to l2_200
-from l2_302.</li>
-<li>  Fixed static facts bug, by adding <code>%#show hasdoor</code>
-to elavator_facts. Fixed navigation bug on 2nd floor, by adding 2nd
-floor locations to navigation_facts.</li>
-<li>  Clingo4 code fixes for current robot elevator code</li>
-<li>  Contributors: Rolando Fernandez, Jack O'Quin, Piyush Khandelwal,
-Yuqian Jiang</li>
-</ul>
-
-<h2 id="0-3-2-2015-03-24">0.3.2 (2015-03-24)</h2>
-
-<ul>
-<li>  updated Clingo to use the current state correctly.</li>
-<li>  removed output that was placed in for debugging. closes
-<a href="https://github.com/utexas-bwi/bwi_common/issues/17">#17</a>.</li>
-<li>  added missing directory installation. closes
-<a href="https://github.com/utexas-bwi/bwi_common/issues/16">#16</a>
-</li>
-<li>  Contributors: Piyush Khandelwal</li>
-</ul>
-
-<h2 id="0-3-1-2015-03-16">0.3.1 (2015-03-16)</h2>
-
-<ul>
-<li>  fixed broken link to costs.asp. costs are not being currently used.</li>
-<li>  Contributors: Piyush Khandelwal</li>
-</ul>
-
-<h2 id="0-3-0-2015-03-15">0.3.0 (2015-03-15)</h2>
-
-<ul>
-<li>  Initial release - migration from bwi_experimental into bwi_common.</li>
-<li>  Contributors: Matteo Leonetti, Jack O'Quin, Piyush Khandelwal</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1180,31 +1084,6 @@ Yuqian Jiang</li>
         
           <ul>
             
-              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/led_study_kinetic/bwi_kr_execution/launch/bwi_kr_execution_for_dialog.launch" target="_blank">launch/bwi_kr_execution_for_dialog.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>simulation</strong> <em>&#91;default: false&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>domain</strong> <em>&#91;default: $(find bwi_kr_execution)/domain_dialog/&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>executor</strong> <em>&#91;default: learning_executor_node&#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/utexas-bwi/bwi_common/blob/led_study_kinetic/bwi_kr_execution/launch/bwi_kr_execution.launch" target="_blank">launch/bwi_kr_execution.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1230,6 +1109,31 @@ Yuqian Jiang</li>
                 </ul>
               </li>
             
+              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/led_study_kinetic/bwi_kr_execution/launch/bwi_kr_execution_for_dialog.launch" target="_blank">launch/bwi_kr_execution_for_dialog.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>simulation</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>domain</strong> <em>&#91;default: $(find bwi_kr_execution)/domain_dialog/&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>executor</strong> <em>&#91;default: learning_executor_node&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
           </ul>
         
       </div>
@@ -1243,11 +1147,11 @@ Yuqian Jiang</li>
         
           <ul>
             
+              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/led_study_kinetic/bwi_kr_execution/msg/AnswerSet.msg" target="_blank">msg/AnswerSet.msg</a></li>
+            
               <li><a href="https://github.com/utexas-bwi/bwi_common/blob/led_study_kinetic/bwi_kr_execution/msg/AspRule.msg" target="_blank">msg/AspRule.msg</a></li>
             
               <li><a href="https://github.com/utexas-bwi/bwi_common/blob/led_study_kinetic/bwi_kr_execution/msg/AspFluent.msg" target="_blank">msg/AspFluent.msg</a></li>
-            
-              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/led_study_kinetic/bwi_kr_execution/msg/AnswerSet.msg" target="_blank">msg/AnswerSet.msg</a></li>
             
           </ul>
         
@@ -1262,11 +1166,11 @@ Yuqian Jiang</li>
         
           <ul>
             
-              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/led_study_kinetic/bwi_kr_execution/srv/CurrentStateQuery.srv" target="_blank">srv/CurrentStateQuery.srv</a></li>
+              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/led_study_kinetic/bwi_kr_execution/srv/ComputeAllPlans.srv" target="_blank">srv/ComputeAllPlans.srv</a></li>
             
               <li><a href="https://github.com/utexas-bwi/bwi_common/blob/led_study_kinetic/bwi_kr_execution/srv/UpdateFluents.srv" target="_blank">srv/UpdateFluents.srv</a></li>
             
-              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/led_study_kinetic/bwi_kr_execution/srv/ComputeAllPlans.srv" target="_blank">srv/ComputeAllPlans.srv</a></li>
+              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/led_study_kinetic/bwi_kr_execution/srv/CurrentStateQuery.srv" target="_blank">srv/CurrentStateQuery.srv</a></li>
             
               <li><a href="https://github.com/utexas-bwi/bwi_common/blob/led_study_kinetic/bwi_kr_execution/srv/ComputePlan.srv" target="_blank">srv/ComputePlan.srv</a></li>
             
@@ -1838,99 +1742,7 @@ utexas_gdc
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-bwi_kr_execution">Changelog for package bwi_kr_execution</h1>
-
-<h2 id="0-3-12-2016-09-14">0.3.12 (2016-09-14)</h2>
-
-<h2 id="0-3-11-2016-08-27">0.3.11 (2016-08-27)</h2>
-
-<h2 id="0-3-10-2016-08-15">0.3.10 (2016-08-15)</h2>
-
-<ul>
-<li>  added elevators</li>
-<li>  added 4th floor map</li>
-<li>  Contributors: Nathan John</li>
-</ul>
-
-<h2 id="0-3-9-2016-08-05">0.3.9 (2016-08-05)</h2>
-
-<ul>
-<li>  Increased planner timeout from 20 seconds to 40 seconds to account
-for longer planning times for traveling between floors.</li>
-<li>  Modifed elevator domain fact file and added rooms for 1st Floor GDC
-to navigation fact file..</li>
-<li>  Added first floor map information to navigation_facts
-and elevator_facts.</li>
-<li>  Fixed static law for facing and beside door, D1 was not defined as
-a door.</li>
-<li>  Fixed errors in 3rd floor objects. Added 2nd floor objects and rest
-of 3rd floor objects.</li>
-<li>  Created action files for goto action and added goto action
-to asp_fomatter.</li>
-<li>  Updated door approach points for 3rd floor map</li>
-<li>  Added missing locations and fixed doors in navigation_facts</li>
-<li>  Updated ASP fact files with addtional locations from updated 3rd
-floor map.</li>
-<li>  Contributors: FernandezR</li>
-</ul>
-
-<h2 id="0-3-8-2016-06-06">0.3.8 (2016-06-06)</h2>
-
-<ul>
-<li>  fix broken clingo dependency
-(<a href="https://github.com/utexas-bwi/bwi_common/issues/52">#52</a>)</li>
-<li>  moved disabling static map from bwi_kr_execution to
-segbot_logical_translator, where it should have been in the
-first place.</li>
-<li>  the gothrough action disables the global costmap. the callelevator
-action only expects the door in front of it to open.</li>
-<li>  added simulated change floor action. added hack to make plan shorter
-when using the elevator, and the other door opens.</li>
-<li>  updated simulated calls that open the elevator doors to
-automatically close those doors.</li>
-<li>  added a simulation change floor action. Should be ready for real
-robot testing now.</li>
-<li>  added missing actions that won't be displayed in clingo output</li>
-<li>  fixing planning issues with elevators</li>
-<li>  some more updates to bwi_kr_execution. fixing some merge issues.</li>
-<li>  merged with yuqian branch.</li>
-<li>  updated navigation facts for simulation.</li>
-<li>  Added additional facts for 2nd floor to navigation facts.</li>
-<li>  Changed location of elavator doors on 2nd floor to l2_200
-from l2_302.</li>
-<li>  Fixed static facts bug, by adding <code>%#show hasdoor</code>
-to elavator_facts. Fixed navigation bug on 2nd floor, by adding 2nd
-floor locations to navigation_facts.</li>
-<li>  Clingo4 code fixes for current robot elevator code</li>
-<li>  Contributors: Rolando Fernandez, Jack O'Quin, Piyush Khandelwal,
-Yuqian Jiang</li>
-</ul>
-
-<h2 id="0-3-2-2015-03-24">0.3.2 (2015-03-24)</h2>
-
-<ul>
-<li>  updated Clingo to use the current state correctly.</li>
-<li>  removed output that was placed in for debugging. closes
-<a href="https://github.com/utexas-bwi/bwi_common/issues/17">#17</a>.</li>
-<li>  added missing directory installation. closes
-<a href="https://github.com/utexas-bwi/bwi_common/issues/16">#16</a>
-</li>
-<li>  Contributors: Piyush Khandelwal</li>
-</ul>
-
-<h2 id="0-3-1-2015-03-16">0.3.1 (2015-03-16)</h2>
-
-<ul>
-<li>  fixed broken link to costs.asp. costs are not being currently used.</li>
-<li>  Contributors: Piyush Khandelwal</li>
-</ul>
-
-<h2 id="0-3-0-2015-03-15">0.3.0 (2015-03-15)</h2>
-
-<ul>
-<li>  Initial release - migration from bwi_experimental into bwi_common.</li>
-<li>  Contributors: Matteo Leonetti, Jack O'Quin, Piyush Khandelwal</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2275,7 +2087,7 @@ Yuqian Jiang</li>
         
           <ul>
             
-              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/indigo/bwi_kr_execution/launch/bwi_turtlebot.launch" target="_blank">launch/bwi_turtlebot.launch</a>
+              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/indigo/bwi_kr_execution/launch/bwi_kr_execution.launch" target="_blank">launch/bwi_kr_execution.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2284,13 +2096,15 @@ Yuqian Jiang</li>
                     <ul>
                       
                         
-                          <li><strong>data_directory</strong> <em>&#91;default: $(find bwi_kr)/config/real3ne&#93; </em></li>
+                          <li><strong>simulation</strong> <em>&#91;default: false&#93; </em></li>
                         
                       
                         
-                          <li><strong>map_file</strong> <em>&#91;default: $(find bwi_kr)/maps/map_whole2_with_elevators_new.yaml&#93; </em></li>
+                          <li><strong>domain</strong> <em>&#91;default: $(find bwi_kr_execution)/domain/&#93; </em></li>
                         
                       
+                        
+                          <li><strong>executor</strong> <em>&#91;default: single_plan_executor_node&#93; </em></li>
                         
                       
                     </ul>
@@ -2346,7 +2160,7 @@ Yuqian Jiang</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/indigo/bwi_kr_execution/launch/bwi_kr_execution.launch" target="_blank">launch/bwi_kr_execution.launch</a>
+              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/indigo/bwi_kr_execution/launch/bwi_turtlebot.launch" target="_blank">launch/bwi_turtlebot.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2355,15 +2169,13 @@ Yuqian Jiang</li>
                     <ul>
                       
                         
-                          <li><strong>simulation</strong> <em>&#91;default: false&#93; </em></li>
+                          <li><strong>data_directory</strong> <em>&#91;default: $(find bwi_kr)/config/real3ne&#93; </em></li>
                         
                       
                         
-                          <li><strong>domain</strong> <em>&#91;default: $(find bwi_kr_execution)/domain/&#93; </em></li>
+                          <li><strong>map_file</strong> <em>&#91;default: $(find bwi_kr)/maps/map_whole2_with_elevators_new.yaml&#93; </em></li>
                         
                       
-                        
-                          <li><strong>executor</strong> <em>&#91;default: single_plan_executor_node&#93; </em></li>
                         
                       
                     </ul>
@@ -2384,11 +2196,11 @@ Yuqian Jiang</li>
         
           <ul>
             
+              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/indigo/bwi_kr_execution/msg/AnswerSet.msg" target="_blank">msg/AnswerSet.msg</a></li>
+            
               <li><a href="https://github.com/utexas-bwi/bwi_common/blob/indigo/bwi_kr_execution/msg/AspRule.msg" target="_blank">msg/AspRule.msg</a></li>
             
               <li><a href="https://github.com/utexas-bwi/bwi_common/blob/indigo/bwi_kr_execution/msg/AspFluent.msg" target="_blank">msg/AspFluent.msg</a></li>
-            
-              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/indigo/bwi_kr_execution/msg/AnswerSet.msg" target="_blank">msg/AnswerSet.msg</a></li>
             
           </ul>
         
@@ -2403,11 +2215,11 @@ Yuqian Jiang</li>
         
           <ul>
             
-              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/indigo/bwi_kr_execution/srv/CurrentStateQuery.srv" target="_blank">srv/CurrentStateQuery.srv</a></li>
+              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/indigo/bwi_kr_execution/srv/ComputeAllPlans.srv" target="_blank">srv/ComputeAllPlans.srv</a></li>
             
               <li><a href="https://github.com/utexas-bwi/bwi_common/blob/indigo/bwi_kr_execution/srv/UpdateFluents.srv" target="_blank">srv/UpdateFluents.srv</a></li>
             
-              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/indigo/bwi_kr_execution/srv/ComputeAllPlans.srv" target="_blank">srv/ComputeAllPlans.srv</a></li>
+              <li><a href="https://github.com/utexas-bwi/bwi_common/blob/indigo/bwi_kr_execution/srv/CurrentStateQuery.srv" target="_blank">srv/CurrentStateQuery.srv</a></li>
             
               <li><a href="https://github.com/utexas-bwi/bwi_common/blob/indigo/bwi_kr_execution/srv/ComputePlan.srv" target="_blank">srv/ComputePlan.srv</a></li>
             
@@ -2580,7 +2392,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

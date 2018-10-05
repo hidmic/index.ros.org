@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -570,73 +566,7 @@ pr2_self_test_msgs
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-pr2_bringup_tests">Changelog for package pr2_bringup_tests</h1>
-
-<h2 id="1-0-1-2014-09-16">1.0.1 (2014-09-16)</h2>
-
-<ul>
-<li>  Added install targets to pr2_bringup_tests</li>
-<li>  Removed unneceesary packagexml and cmake</li>
-<li>  Catkinizes and compiles in hydro if you have the hydro-devel of
-pr2_apps/pr2_mannequin_mode</li>
-<li>  Removed manifest.xml</li>
-<li>  Update calibration verify to Groovy.</li>
-<li>  Move wg_hardware_test to github.</li>
-<li>  Update version of wg_hardware_test to use.</li>
-<li>  Update life_test rosinstall for electric install.</li>
-<li>  Lock wg_hardware_test to current version before
-changing dependencies.</li>
-<li>  PR2 life test rosinstall file uses special version of
-camera_calibration</li>
-<li>  Calibration check for PR2 production calibration,
-<a href="https://github.com/PR2/pr2_self_test/issues/4956">#4956</a>
-</li>
-<li>  Removing stale calibration items from pr2_bringup_tests. OK by
-Vijay</li>
-<li>  Only using the wge100 camera package for camera FW installation</li>
-<li>  Camera drivers trunk to pr2_bringup_tests rosinstall file</li>
-<li>  Removing vestigial dependency on compressed_image_transport</li>
-<li>  Correcting size of checkerboard used for prosilica calibration</li>
-<li>  Adding camera_calibration package to pr2_bringup_tests</li>
-<li>  Removing user paths from rosinstall file</li>
-<li>  Controllers in pr2_bringup_tests load using pkg/Name syntax.
-<a href="https://github.com/PR2/pr2_self_test/issues/4534">#4534</a>
-</li>
-<li>  Bumping qual pr2_calibration stack to cturtle. Fixing url for
-relased stacks too</li>
-<li>  Life test rosinstall file now works as cturtle overlay</li>
-<li>  rosinstall file for pr2_bringup_tests</li>
-<li>  Cleanup of pr2_self_test stack before 0.1 release</li>
-<li>  Added platform tags for Ubuntu 9.04, 9.10, and 10.04.</li>
-<li>  New life_test.rosinstall file with proper locking</li>
-<li>  Fixing typos. Adding scatterplots for preburn</li>
-<li>  Putting together calibration scripts for pre/post burn-in checks</li>
-<li>  No only grabbing pr2_bringup_tests from pr2_self_test for
-calibration bringup</li>
-<li>  Renaming calibration stack local name</li>
-<li>  Adding stub for calibration bringup</li>
-<li>  Prosilica settings launch files</li>
-<li>  Added dash to version tag for pr2_arm_navigation revision</li>
-<li>  Adding calibrate_prosilica launch file to pr2_bringup_tests.
-<a href="https://github.com/PR2/pr2_self_test/issues/4249">#4249</a>
-</li>
-<li>  Removing prosilica from pr2_bringup_tests</li>
-<li>  Added launch file to calibrate prosilica camera</li>
-<li>  Adding rev number for pr2_arm_navigation_tests in life_test
-rosinstall file. Blocked by release of
-<a href="https://github.com/PR2/pr2_self_test/issues/4028">#4028</a>
-</li>
-<li>  Changing topic of IMU chart</li>
-<li>  Forearm cameras will trigger off etherCAT chain</li>
-<li>  pr2_bringup_tests depends on image view</li>
-<li>  Adding script to check IMU data</li>
-<li>  Script to check gripper accelerometers with rxplot</li>
-<li>  Using mannequin mode for pr2_bringup_tests</li>
-<li>  Gripper LED launch file name change</li>
-<li>  ROS install for PR2 during burn in tests</li>
-<li>  Moving pr2_bringup_tests package to pr2_self_test</li>
-<li>  Contributors: TheDash, ahendrix, gerkey, vpradeep, watts</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -866,32 +796,6 @@ rosinstall file. Blocked by release of
         
           <ul>
             
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/pr2_bringup_tests/launch/prosilica_stream.launch" target="_blank">launch/prosilica_stream.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/pr2_bringup_tests/launch/calibrate_prosilica.launch" target="_blank">launch/calibrate_prosilica.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/pr2_bringup_tests/launch/gripper_led_on.launch" target="_blank">launch/gripper_led_on.launch</a>
                 <ul class="list-unstyled">
                   
@@ -906,6 +810,32 @@ rosinstall file. Blocked by release of
               </li>
             
               <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/pr2_bringup_tests/launch/prosilica_poll.launch" target="_blank">launch/prosilica_poll.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/pr2_bringup_tests/launch/prosilica_stream.launch" target="_blank">launch/prosilica_stream.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/pr2_bringup_tests/launch/calibrate_prosilica.launch" target="_blank">launch/calibrate_prosilica.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1424,73 +1354,7 @@ pr2_self_test_msgs
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-pr2_bringup_tests">Changelog for package pr2_bringup_tests</h1>
-
-<h2 id="1-0-1-2014-09-16">1.0.1 (2014-09-16)</h2>
-
-<ul>
-<li>  Added install targets to pr2_bringup_tests</li>
-<li>  Removed unneceesary packagexml and cmake</li>
-<li>  Catkinizes and compiles in hydro if you have the hydro-devel of
-pr2_apps/pr2_mannequin_mode</li>
-<li>  Removed manifest.xml</li>
-<li>  Update calibration verify to Groovy.</li>
-<li>  Move wg_hardware_test to github.</li>
-<li>  Update version of wg_hardware_test to use.</li>
-<li>  Update life_test rosinstall for electric install.</li>
-<li>  Lock wg_hardware_test to current version before
-changing dependencies.</li>
-<li>  PR2 life test rosinstall file uses special version of
-camera_calibration</li>
-<li>  Calibration check for PR2 production calibration,
-<a href="https://github.com/PR2/pr2_self_test/issues/4956">#4956</a>
-</li>
-<li>  Removing stale calibration items from pr2_bringup_tests. OK by
-Vijay</li>
-<li>  Only using the wge100 camera package for camera FW installation</li>
-<li>  Camera drivers trunk to pr2_bringup_tests rosinstall file</li>
-<li>  Removing vestigial dependency on compressed_image_transport</li>
-<li>  Correcting size of checkerboard used for prosilica calibration</li>
-<li>  Adding camera_calibration package to pr2_bringup_tests</li>
-<li>  Removing user paths from rosinstall file</li>
-<li>  Controllers in pr2_bringup_tests load using pkg/Name syntax.
-<a href="https://github.com/PR2/pr2_self_test/issues/4534">#4534</a>
-</li>
-<li>  Bumping qual pr2_calibration stack to cturtle. Fixing url for
-relased stacks too</li>
-<li>  Life test rosinstall file now works as cturtle overlay</li>
-<li>  rosinstall file for pr2_bringup_tests</li>
-<li>  Cleanup of pr2_self_test stack before 0.1 release</li>
-<li>  Added platform tags for Ubuntu 9.04, 9.10, and 10.04.</li>
-<li>  New life_test.rosinstall file with proper locking</li>
-<li>  Fixing typos. Adding scatterplots for preburn</li>
-<li>  Putting together calibration scripts for pre/post burn-in checks</li>
-<li>  No only grabbing pr2_bringup_tests from pr2_self_test for
-calibration bringup</li>
-<li>  Renaming calibration stack local name</li>
-<li>  Adding stub for calibration bringup</li>
-<li>  Prosilica settings launch files</li>
-<li>  Added dash to version tag for pr2_arm_navigation revision</li>
-<li>  Adding calibrate_prosilica launch file to pr2_bringup_tests.
-<a href="https://github.com/PR2/pr2_self_test/issues/4249">#4249</a>
-</li>
-<li>  Removing prosilica from pr2_bringup_tests</li>
-<li>  Added launch file to calibrate prosilica camera</li>
-<li>  Adding rev number for pr2_arm_navigation_tests in life_test
-rosinstall file. Blocked by release of
-<a href="https://github.com/PR2/pr2_self_test/issues/4028">#4028</a>
-</li>
-<li>  Changing topic of IMU chart</li>
-<li>  Forearm cameras will trigger off etherCAT chain</li>
-<li>  pr2_bringup_tests depends on image view</li>
-<li>  Adding script to check IMU data</li>
-<li>  Script to check gripper accelerometers with rxplot</li>
-<li>  Using mannequin mode for pr2_bringup_tests</li>
-<li>  Gripper LED launch file name change</li>
-<li>  ROS install for PR2 during burn in tests</li>
-<li>  Moving pr2_bringup_tests package to pr2_self_test</li>
-<li>  Contributors: TheDash, ahendrix, gerkey, vpradeep, watts</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1720,32 +1584,6 @@ rosinstall file. Blocked by release of
         
           <ul>
             
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/pr2_bringup_tests/launch/prosilica_stream.launch" target="_blank">launch/prosilica_stream.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/pr2_bringup_tests/launch/calibrate_prosilica.launch" target="_blank">launch/calibrate_prosilica.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/pr2_bringup_tests/launch/gripper_led_on.launch" target="_blank">launch/gripper_led_on.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1760,6 +1598,32 @@ rosinstall file. Blocked by release of
               </li>
             
               <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/pr2_bringup_tests/launch/prosilica_poll.launch" target="_blank">launch/prosilica_poll.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/pr2_bringup_tests/launch/prosilica_stream.launch" target="_blank">launch/prosilica_stream.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/pr2_bringup_tests/launch/calibrate_prosilica.launch" target="_blank">launch/calibrate_prosilica.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2294,73 +2158,7 @@ pr2_self_test_msgs
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-pr2_bringup_tests">Changelog for package pr2_bringup_tests</h1>
-
-<h2 id="1-0-1-2014-09-16">1.0.1 (2014-09-16)</h2>
-
-<ul>
-<li>  Added install targets to pr2_bringup_tests</li>
-<li>  Removed unneceesary packagexml and cmake</li>
-<li>  Catkinizes and compiles in hydro if you have the hydro-devel of
-pr2_apps/pr2_mannequin_mode</li>
-<li>  Removed manifest.xml</li>
-<li>  Update calibration verify to Groovy.</li>
-<li>  Move wg_hardware_test to github.</li>
-<li>  Update version of wg_hardware_test to use.</li>
-<li>  Update life_test rosinstall for electric install.</li>
-<li>  Lock wg_hardware_test to current version before
-changing dependencies.</li>
-<li>  PR2 life test rosinstall file uses special version of
-camera_calibration</li>
-<li>  Calibration check for PR2 production calibration,
-<a href="https://github.com/PR2/pr2_self_test/issues/4956">#4956</a>
-</li>
-<li>  Removing stale calibration items from pr2_bringup_tests. OK by
-Vijay</li>
-<li>  Only using the wge100 camera package for camera FW installation</li>
-<li>  Camera drivers trunk to pr2_bringup_tests rosinstall file</li>
-<li>  Removing vestigial dependency on compressed_image_transport</li>
-<li>  Correcting size of checkerboard used for prosilica calibration</li>
-<li>  Adding camera_calibration package to pr2_bringup_tests</li>
-<li>  Removing user paths from rosinstall file</li>
-<li>  Controllers in pr2_bringup_tests load using pkg/Name syntax.
-<a href="https://github.com/PR2/pr2_self_test/issues/4534">#4534</a>
-</li>
-<li>  Bumping qual pr2_calibration stack to cturtle. Fixing url for
-relased stacks too</li>
-<li>  Life test rosinstall file now works as cturtle overlay</li>
-<li>  rosinstall file for pr2_bringup_tests</li>
-<li>  Cleanup of pr2_self_test stack before 0.1 release</li>
-<li>  Added platform tags for Ubuntu 9.04, 9.10, and 10.04.</li>
-<li>  New life_test.rosinstall file with proper locking</li>
-<li>  Fixing typos. Adding scatterplots for preburn</li>
-<li>  Putting together calibration scripts for pre/post burn-in checks</li>
-<li>  No only grabbing pr2_bringup_tests from pr2_self_test for
-calibration bringup</li>
-<li>  Renaming calibration stack local name</li>
-<li>  Adding stub for calibration bringup</li>
-<li>  Prosilica settings launch files</li>
-<li>  Added dash to version tag for pr2_arm_navigation revision</li>
-<li>  Adding calibrate_prosilica launch file to pr2_bringup_tests.
-<a href="https://github.com/PR2/pr2_self_test/issues/4249">#4249</a>
-</li>
-<li>  Removing prosilica from pr2_bringup_tests</li>
-<li>  Added launch file to calibrate prosilica camera</li>
-<li>  Adding rev number for pr2_arm_navigation_tests in life_test
-rosinstall file. Blocked by release of
-<a href="https://github.com/PR2/pr2_self_test/issues/4028">#4028</a>
-</li>
-<li>  Changing topic of IMU chart</li>
-<li>  Forearm cameras will trigger off etherCAT chain</li>
-<li>  pr2_bringup_tests depends on image view</li>
-<li>  Adding script to check IMU data</li>
-<li>  Script to check gripper accelerometers with rxplot</li>
-<li>  Using mannequin mode for pr2_bringup_tests</li>
-<li>  Gripper LED launch file name change</li>
-<li>  ROS install for PR2 during burn in tests</li>
-<li>  Moving pr2_bringup_tests package to pr2_self_test</li>
-<li>  Contributors: TheDash, ahendrix, gerkey, vpradeep, watts</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2590,32 +2388,6 @@ rosinstall file. Blocked by release of
         
           <ul>
             
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/pr2_bringup_tests/launch/prosilica_stream.launch" target="_blank">launch/prosilica_stream.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/pr2_bringup_tests/launch/calibrate_prosilica.launch" target="_blank">launch/calibrate_prosilica.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/pr2_bringup_tests/launch/gripper_led_on.launch" target="_blank">launch/gripper_led_on.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2630,6 +2402,32 @@ rosinstall file. Blocked by release of
               </li>
             
               <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/pr2_bringup_tests/launch/prosilica_poll.launch" target="_blank">launch/prosilica_poll.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/pr2_bringup_tests/launch/prosilica_stream.launch" target="_blank">launch/prosilica_stream.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/PR2/pr2_self_test/blob/hydro-devel/pr2_bringup_tests/launch/calibrate_prosilica.launch" target="_blank">launch/calibrate_prosilica.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2846,7 +2644,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

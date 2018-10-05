@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -539,8 +535,8 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 <div class="highlight"><pre><code class="language-" data-lang="">roslaunch pr2_description upload_pr2.launch
 </code></pre></div>
 <p>Now you can get IK's:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
@@ -549,21 +545,21 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 <span class="n">seed_state</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">number_of_joints</span>
 
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">get_ik</span><span class="p">(</span><span class="n">seed_state</span><span class="p">,</span>
-                <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span>  <span class="c"># X, Y, Z</span>
-                <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>  <span class="c"># QX, QY, QZ, QW</span>
-<span class="c"># Returns:</span>
-<span class="c"># (0.537242808640495,</span>
-<span class="c">#  0.04673341230604478,</span>
-<span class="c">#  -0.053508394352190486,</span>
-<span class="c">#  -1.5099959208163785,</span>
-<span class="c">#  2.6007509004432596,</span>
-<span class="c">#  -1.506431092603137,</span>
-<span class="c">#  -3.040949079090651)</span>
-
+                <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span>  <span class="c1"># X, Y, Z
+</span>                <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>  <span class="c1"># QX, QY, QZ, QW
+# Returns:
+# (0.537242808640495,
+#  0.04673341230604478,
+#  -0.053508394352190486,
+#  -1.5099959208163785,
+#  2.6007509004432596,
+#  -1.506431092603137,
+#  -3.040949079090651)
+</span>
 </code></pre></div>
 <p>You can also play with the bounds of the IK call:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
@@ -574,47 +570,47 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">get_ik</span><span class="p">(</span><span class="n">seed_state</span><span class="p">,</span>
                 <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span>
                 <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span>
-                <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span>  <span class="c"># X, Y, Z bounds</span>
-                <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>  <span class="c"># Rotation X, Y, Z bounds</span>
-                <span class="p">)</span>
-<span class="c"># Returns:</span>
-<span class="c"># (0.5646018385887146,</span>
-<span class="c">#  0.04759637706046231,</span>
-<span class="c">#  0.026629718805901908,</span>
-<span class="c">#  -1.5106828886580062,</span>
-<span class="c">#  2.5541685245726535,</span>
-<span class="c">#  -1.4663448384900402,</span>
-<span class="c">#  -3.104163452483634)</span>
-
+                <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span>  <span class="c1"># X, Y, Z bounds
+</span>                <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>  <span class="c1"># Rotation X, Y, Z bounds
+</span>                <span class="p">)</span>
+<span class="c1"># Returns:
+# (0.5646018385887146,
+#  0.04759637706046231,
+#  0.026629718805901908,
+#  -1.5106828886580062,
+#  2.5541685245726535,
+#  -1.4663448384900402,
+#  -3.104163452483634)
+</span>
 </code></pre></div>
 <p>The coordinate frame of the given poses must be in the base frame, you can check the links/joints being used:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
                <span class="s">"r_wrist_roll_link"</span><span class="p">)</span>
 
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">base_link</span>
-<span class="c"># 'torso_lift_link'</span>
-
+<span class="c1"># 'torso_lift_link'
+</span>
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">tip_link</span>
-<span class="c"># 'r_wrist_roll_link'</span>
-
+<span class="c1"># 'r_wrist_roll_link'
+</span>
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">joint_names</span>
-<span class="c"># ('r_shoulder_pan_joint', 'r_shoulder_lift_joint', 'r_upper_arm_roll_joint', 'r_elbow_flex_joint', 'r_forearm_roll_joint', 'r_wrist_flex_joint', 'r_wrist_roll_joint')</span>
-
+<span class="c1"># ('r_shoulder_pan_joint', 'r_shoulder_lift_joint', 'r_upper_arm_roll_joint', 'r_elbow_flex_joint', 'r_forearm_roll_joint', 'r_wrist_flex_joint', 'r_wrist_roll_joint')
+</span>
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">link_names</span>
-<span class="c"># ('r_shoulder_pan_link', 'r_shoulder_lift_link', 'r_upper_arm_roll_link', 'r_upper_arm_link', 'r_elbow_flex_link', 'r_forearm_roll_link', 'r_forearm_link', 'r_wrist_flex_link', 'r_wrist_roll_link')</span>
-
+<span class="c1"># ('r_shoulder_pan_link', 'r_shoulder_lift_link', 'r_upper_arm_roll_link', 'r_upper_arm_link', 'r_elbow_flex_link', 'r_forearm_roll_link', 'r_forearm_link', 'r_wrist_flex_link', 'r_wrist_roll_link')
+</span>
 </code></pre></div>
 <p>You can also initialize the IK from a string containing the URDF (by default it takes it from the <code>/robot_description</code> parameter in the param server):</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
-<span class="c"># Get your URDF from somewhere</span>
-<span class="n">urdf_str</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s">'/robot_description'</span><span class="p">)</span>
+<span class="c1"># Get your URDF from somewhere
+</span><span class="n">urdf_str</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s">'/robot_description'</span><span class="p">)</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
                <span class="s">"r_wrist_roll_link"</span><span class="p">,</span>
@@ -622,17 +618,17 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 
 </code></pre></div>
 <p>You can also check and modify the joint limits:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
                <span class="s">"r_wrist_roll_link"</span><span class="p">)</span>
 
 <span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span> <span class="o">=</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">get_joint_limits</span><span class="p">()</span>
-<span class="c"># lower_bound: (-2.1353981494903564, -0.35359999537467957, -3.75, -2.121299982070923, -3.4028234663852886e+38, -2.0, -3.4028234663852886e+38) </span>
-<span class="c"># upper_bound: (0.5646018385887146, 1.2963000535964966, 0.6499999761581421, -0.15000000596046448, 3.4028234663852886e+38, -0.10000000149011612, 3.4028234663852886e+38)</span>
-<span class="n">ik_solver</span><span class="o">.</span><span class="n">set_joint_limits</span><span class="p">([</span><span class="mf">0.0</span><span class="p">]</span><span class="o">*</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">number_of_joints</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
+<span class="c1"># lower_bound: (-2.1353981494903564, -0.35359999537467957, -3.75, -2.121299982070923, -3.4028234663852886e+38, -2.0, -3.4028234663852886e+38) 
+# upper_bound: (0.5646018385887146, 1.2963000535964966, 0.6499999761581421, -0.15000000596046448, 3.4028234663852886e+38, -0.10000000149011612, 3.4028234663852886e+38)
+</span><span class="n">ik_solver</span><span class="o">.</span><span class="n">set_joint_limits</span><span class="p">([</span><span class="mf">0.0</span><span class="p">]</span><span class="o">*</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">number_of_joints</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
 
 </code></pre></div>
 <h1 id="extra-notes">Extra notes</h1>
@@ -1318,8 +1314,8 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 <div class="highlight"><pre><code class="language-" data-lang="">roslaunch pr2_description upload_pr2.launch
 </code></pre></div>
 <p>Now you can get IK's:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
@@ -1328,21 +1324,21 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 <span class="n">seed_state</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">number_of_joints</span>
 
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">get_ik</span><span class="p">(</span><span class="n">seed_state</span><span class="p">,</span>
-                <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span>  <span class="c"># X, Y, Z</span>
-                <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>  <span class="c"># QX, QY, QZ, QW</span>
-<span class="c"># Returns:</span>
-<span class="c"># (0.537242808640495,</span>
-<span class="c">#  0.04673341230604478,</span>
-<span class="c">#  -0.053508394352190486,</span>
-<span class="c">#  -1.5099959208163785,</span>
-<span class="c">#  2.6007509004432596,</span>
-<span class="c">#  -1.506431092603137,</span>
-<span class="c">#  -3.040949079090651)</span>
-
+                <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span>  <span class="c1"># X, Y, Z
+</span>                <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>  <span class="c1"># QX, QY, QZ, QW
+# Returns:
+# (0.537242808640495,
+#  0.04673341230604478,
+#  -0.053508394352190486,
+#  -1.5099959208163785,
+#  2.6007509004432596,
+#  -1.506431092603137,
+#  -3.040949079090651)
+</span>
 </code></pre></div>
 <p>You can also play with the bounds of the IK call:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
@@ -1353,47 +1349,47 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">get_ik</span><span class="p">(</span><span class="n">seed_state</span><span class="p">,</span>
                 <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span>
                 <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span>
-                <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span>  <span class="c"># X, Y, Z bounds</span>
-                <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>  <span class="c"># Rotation X, Y, Z bounds</span>
-                <span class="p">)</span>
-<span class="c"># Returns:</span>
-<span class="c"># (0.5646018385887146,</span>
-<span class="c">#  0.04759637706046231,</span>
-<span class="c">#  0.026629718805901908,</span>
-<span class="c">#  -1.5106828886580062,</span>
-<span class="c">#  2.5541685245726535,</span>
-<span class="c">#  -1.4663448384900402,</span>
-<span class="c">#  -3.104163452483634)</span>
-
+                <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span>  <span class="c1"># X, Y, Z bounds
+</span>                <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>  <span class="c1"># Rotation X, Y, Z bounds
+</span>                <span class="p">)</span>
+<span class="c1"># Returns:
+# (0.5646018385887146,
+#  0.04759637706046231,
+#  0.026629718805901908,
+#  -1.5106828886580062,
+#  2.5541685245726535,
+#  -1.4663448384900402,
+#  -3.104163452483634)
+</span>
 </code></pre></div>
 <p>The coordinate frame of the given poses must be in the base frame, you can check the links/joints being used:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
                <span class="s">"r_wrist_roll_link"</span><span class="p">)</span>
 
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">base_link</span>
-<span class="c"># 'torso_lift_link'</span>
-
+<span class="c1"># 'torso_lift_link'
+</span>
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">tip_link</span>
-<span class="c"># 'r_wrist_roll_link'</span>
-
+<span class="c1"># 'r_wrist_roll_link'
+</span>
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">joint_names</span>
-<span class="c"># ('r_shoulder_pan_joint', 'r_shoulder_lift_joint', 'r_upper_arm_roll_joint', 'r_elbow_flex_joint', 'r_forearm_roll_joint', 'r_wrist_flex_joint', 'r_wrist_roll_joint')</span>
-
+<span class="c1"># ('r_shoulder_pan_joint', 'r_shoulder_lift_joint', 'r_upper_arm_roll_joint', 'r_elbow_flex_joint', 'r_forearm_roll_joint', 'r_wrist_flex_joint', 'r_wrist_roll_joint')
+</span>
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">link_names</span>
-<span class="c"># ('r_shoulder_pan_link', 'r_shoulder_lift_link', 'r_upper_arm_roll_link', 'r_upper_arm_link', 'r_elbow_flex_link', 'r_forearm_roll_link', 'r_forearm_link', 'r_wrist_flex_link', 'r_wrist_roll_link')</span>
-
+<span class="c1"># ('r_shoulder_pan_link', 'r_shoulder_lift_link', 'r_upper_arm_roll_link', 'r_upper_arm_link', 'r_elbow_flex_link', 'r_forearm_roll_link', 'r_forearm_link', 'r_wrist_flex_link', 'r_wrist_roll_link')
+</span>
 </code></pre></div>
 <p>You can also initialize the IK from a string containing the URDF (by default it takes it from the <code>/robot_description</code> parameter in the param server):</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
-<span class="c"># Get your URDF from somewhere</span>
-<span class="n">urdf_str</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s">'/robot_description'</span><span class="p">)</span>
+<span class="c1"># Get your URDF from somewhere
+</span><span class="n">urdf_str</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s">'/robot_description'</span><span class="p">)</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
                <span class="s">"r_wrist_roll_link"</span><span class="p">,</span>
@@ -1401,17 +1397,17 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 
 </code></pre></div>
 <p>You can also check and modify the joint limits:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
                <span class="s">"r_wrist_roll_link"</span><span class="p">)</span>
 
 <span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span> <span class="o">=</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">get_joint_limits</span><span class="p">()</span>
-<span class="c"># lower_bound: (-2.1353981494903564, -0.35359999537467957, -3.75, -2.121299982070923, -3.4028234663852886e+38, -2.0, -3.4028234663852886e+38) </span>
-<span class="c"># upper_bound: (0.5646018385887146, 1.2963000535964966, 0.6499999761581421, -0.15000000596046448, 3.4028234663852886e+38, -0.10000000149011612, 3.4028234663852886e+38)</span>
-<span class="n">ik_solver</span><span class="o">.</span><span class="n">set_joint_limits</span><span class="p">([</span><span class="mf">0.0</span><span class="p">]</span><span class="o">*</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">number_of_joints</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
+<span class="c1"># lower_bound: (-2.1353981494903564, -0.35359999537467957, -3.75, -2.121299982070923, -3.4028234663852886e+38, -2.0, -3.4028234663852886e+38) 
+# upper_bound: (0.5646018385887146, 1.2963000535964966, 0.6499999761581421, -0.15000000596046448, 3.4028234663852886e+38, -0.10000000149011612, 3.4028234663852886e+38)
+</span><span class="n">ik_solver</span><span class="o">.</span><span class="n">set_joint_limits</span><span class="p">([</span><span class="mf">0.0</span><span class="p">]</span><span class="o">*</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">number_of_joints</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
 
 </code></pre></div>
 <h1 id="extra-notes">Extra notes</h1>
@@ -2097,8 +2093,8 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 <div class="highlight"><pre><code class="language-" data-lang="">roslaunch pr2_description upload_pr2.launch
 </code></pre></div>
 <p>Now you can get IK's:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
@@ -2107,21 +2103,21 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 <span class="n">seed_state</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">number_of_joints</span>
 
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">get_ik</span><span class="p">(</span><span class="n">seed_state</span><span class="p">,</span>
-                <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span>  <span class="c"># X, Y, Z</span>
-                <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>  <span class="c"># QX, QY, QZ, QW</span>
-<span class="c"># Returns:</span>
-<span class="c"># (0.537242808640495,</span>
-<span class="c">#  0.04673341230604478,</span>
-<span class="c">#  -0.053508394352190486,</span>
-<span class="c">#  -1.5099959208163785,</span>
-<span class="c">#  2.6007509004432596,</span>
-<span class="c">#  -1.506431092603137,</span>
-<span class="c">#  -3.040949079090651)</span>
-
+                <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span>  <span class="c1"># X, Y, Z
+</span>                <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>  <span class="c1"># QX, QY, QZ, QW
+# Returns:
+# (0.537242808640495,
+#  0.04673341230604478,
+#  -0.053508394352190486,
+#  -1.5099959208163785,
+#  2.6007509004432596,
+#  -1.506431092603137,
+#  -3.040949079090651)
+</span>
 </code></pre></div>
 <p>You can also play with the bounds of the IK call:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
@@ -2132,47 +2128,47 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">get_ik</span><span class="p">(</span><span class="n">seed_state</span><span class="p">,</span>
                 <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span>
                 <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span>
-                <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span>  <span class="c"># X, Y, Z bounds</span>
-                <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>  <span class="c"># Rotation X, Y, Z bounds</span>
-                <span class="p">)</span>
-<span class="c"># Returns:</span>
-<span class="c"># (0.5646018385887146,</span>
-<span class="c">#  0.04759637706046231,</span>
-<span class="c">#  0.026629718805901908,</span>
-<span class="c">#  -1.5106828886580062,</span>
-<span class="c">#  2.5541685245726535,</span>
-<span class="c">#  -1.4663448384900402,</span>
-<span class="c">#  -3.104163452483634)</span>
-
+                <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span>  <span class="c1"># X, Y, Z bounds
+</span>                <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>  <span class="c1"># Rotation X, Y, Z bounds
+</span>                <span class="p">)</span>
+<span class="c1"># Returns:
+# (0.5646018385887146,
+#  0.04759637706046231,
+#  0.026629718805901908,
+#  -1.5106828886580062,
+#  2.5541685245726535,
+#  -1.4663448384900402,
+#  -3.104163452483634)
+</span>
 </code></pre></div>
 <p>The coordinate frame of the given poses must be in the base frame, you can check the links/joints being used:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
                <span class="s">"r_wrist_roll_link"</span><span class="p">)</span>
 
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">base_link</span>
-<span class="c"># 'torso_lift_link'</span>
-
+<span class="c1"># 'torso_lift_link'
+</span>
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">tip_link</span>
-<span class="c"># 'r_wrist_roll_link'</span>
-
+<span class="c1"># 'r_wrist_roll_link'
+</span>
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">joint_names</span>
-<span class="c"># ('r_shoulder_pan_joint', 'r_shoulder_lift_joint', 'r_upper_arm_roll_joint', 'r_elbow_flex_joint', 'r_forearm_roll_joint', 'r_wrist_flex_joint', 'r_wrist_roll_joint')</span>
-
+<span class="c1"># ('r_shoulder_pan_joint', 'r_shoulder_lift_joint', 'r_upper_arm_roll_joint', 'r_elbow_flex_joint', 'r_forearm_roll_joint', 'r_wrist_flex_joint', 'r_wrist_roll_joint')
+</span>
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">link_names</span>
-<span class="c"># ('r_shoulder_pan_link', 'r_shoulder_lift_link', 'r_upper_arm_roll_link', 'r_upper_arm_link', 'r_elbow_flex_link', 'r_forearm_roll_link', 'r_forearm_link', 'r_wrist_flex_link', 'r_wrist_roll_link')</span>
-
+<span class="c1"># ('r_shoulder_pan_link', 'r_shoulder_lift_link', 'r_upper_arm_roll_link', 'r_upper_arm_link', 'r_elbow_flex_link', 'r_forearm_roll_link', 'r_forearm_link', 'r_wrist_flex_link', 'r_wrist_roll_link')
+</span>
 </code></pre></div>
 <p>You can also initialize the IK from a string containing the URDF (by default it takes it from the <code>/robot_description</code> parameter in the param server):</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
-<span class="c"># Get your URDF from somewhere</span>
-<span class="n">urdf_str</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s">'/robot_description'</span><span class="p">)</span>
+<span class="c1"># Get your URDF from somewhere
+</span><span class="n">urdf_str</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s">'/robot_description'</span><span class="p">)</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
                <span class="s">"r_wrist_roll_link"</span><span class="p">,</span>
@@ -2180,17 +2176,17 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 
 </code></pre></div>
 <p>You can also check and modify the joint limits:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
                <span class="s">"r_wrist_roll_link"</span><span class="p">)</span>
 
 <span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span> <span class="o">=</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">get_joint_limits</span><span class="p">()</span>
-<span class="c"># lower_bound: (-2.1353981494903564, -0.35359999537467957, -3.75, -2.121299982070923, -3.4028234663852886e+38, -2.0, -3.4028234663852886e+38) </span>
-<span class="c"># upper_bound: (0.5646018385887146, 1.2963000535964966, 0.6499999761581421, -0.15000000596046448, 3.4028234663852886e+38, -0.10000000149011612, 3.4028234663852886e+38)</span>
-<span class="n">ik_solver</span><span class="o">.</span><span class="n">set_joint_limits</span><span class="p">([</span><span class="mf">0.0</span><span class="p">]</span><span class="o">*</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">number_of_joints</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
+<span class="c1"># lower_bound: (-2.1353981494903564, -0.35359999537467957, -3.75, -2.121299982070923, -3.4028234663852886e+38, -2.0, -3.4028234663852886e+38) 
+# upper_bound: (0.5646018385887146, 1.2963000535964966, 0.6499999761581421, -0.15000000596046448, 3.4028234663852886e+38, -0.10000000149011612, 3.4028234663852886e+38)
+</span><span class="n">ik_solver</span><span class="o">.</span><span class="n">set_joint_limits</span><span class="p">([</span><span class="mf">0.0</span><span class="p">]</span><span class="o">*</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">number_of_joints</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
 
 </code></pre></div>
 <h1 id="extra-notes">Extra notes</h1>
@@ -2876,8 +2872,8 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 <div class="highlight"><pre><code class="language-" data-lang="">roslaunch pr2_description upload_pr2.launch
 </code></pre></div>
 <p>Now you can get IK's:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
@@ -2886,21 +2882,21 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 <span class="n">seed_state</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">number_of_joints</span>
 
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">get_ik</span><span class="p">(</span><span class="n">seed_state</span><span class="p">,</span>
-                <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span>  <span class="c"># X, Y, Z</span>
-                <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>  <span class="c"># QX, QY, QZ, QW</span>
-<span class="c"># Returns:</span>
-<span class="c"># (0.537242808640495,</span>
-<span class="c">#  0.04673341230604478,</span>
-<span class="c">#  -0.053508394352190486,</span>
-<span class="c">#  -1.5099959208163785,</span>
-<span class="c">#  2.6007509004432596,</span>
-<span class="c">#  -1.506431092603137,</span>
-<span class="c">#  -3.040949079090651)</span>
-
+                <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span>  <span class="c1"># X, Y, Z
+</span>                <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>  <span class="c1"># QX, QY, QZ, QW
+# Returns:
+# (0.537242808640495,
+#  0.04673341230604478,
+#  -0.053508394352190486,
+#  -1.5099959208163785,
+#  2.6007509004432596,
+#  -1.506431092603137,
+#  -3.040949079090651)
+</span>
 </code></pre></div>
 <p>You can also play with the bounds of the IK call:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
@@ -2911,47 +2907,47 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">get_ik</span><span class="p">(</span><span class="n">seed_state</span><span class="p">,</span>
                 <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span>
                 <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span>
-                <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span>  <span class="c"># X, Y, Z bounds</span>
-                <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>  <span class="c"># Rotation X, Y, Z bounds</span>
-                <span class="p">)</span>
-<span class="c"># Returns:</span>
-<span class="c"># (0.5646018385887146,</span>
-<span class="c">#  0.04759637706046231,</span>
-<span class="c">#  0.026629718805901908,</span>
-<span class="c">#  -1.5106828886580062,</span>
-<span class="c">#  2.5541685245726535,</span>
-<span class="c">#  -1.4663448384900402,</span>
-<span class="c">#  -3.104163452483634)</span>
-
+                <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span>  <span class="c1"># X, Y, Z bounds
+</span>                <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>  <span class="c1"># Rotation X, Y, Z bounds
+</span>                <span class="p">)</span>
+<span class="c1"># Returns:
+# (0.5646018385887146,
+#  0.04759637706046231,
+#  0.026629718805901908,
+#  -1.5106828886580062,
+#  2.5541685245726535,
+#  -1.4663448384900402,
+#  -3.104163452483634)
+</span>
 </code></pre></div>
 <p>The coordinate frame of the given poses must be in the base frame, you can check the links/joints being used:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
                <span class="s">"r_wrist_roll_link"</span><span class="p">)</span>
 
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">base_link</span>
-<span class="c"># 'torso_lift_link'</span>
-
+<span class="c1"># 'torso_lift_link'
+</span>
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">tip_link</span>
-<span class="c"># 'r_wrist_roll_link'</span>
-
+<span class="c1"># 'r_wrist_roll_link'
+</span>
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">joint_names</span>
-<span class="c"># ('r_shoulder_pan_joint', 'r_shoulder_lift_joint', 'r_upper_arm_roll_joint', 'r_elbow_flex_joint', 'r_forearm_roll_joint', 'r_wrist_flex_joint', 'r_wrist_roll_joint')</span>
-
+<span class="c1"># ('r_shoulder_pan_joint', 'r_shoulder_lift_joint', 'r_upper_arm_roll_joint', 'r_elbow_flex_joint', 'r_forearm_roll_joint', 'r_wrist_flex_joint', 'r_wrist_roll_joint')
+</span>
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">link_names</span>
-<span class="c"># ('r_shoulder_pan_link', 'r_shoulder_lift_link', 'r_upper_arm_roll_link', 'r_upper_arm_link', 'r_elbow_flex_link', 'r_forearm_roll_link', 'r_forearm_link', 'r_wrist_flex_link', 'r_wrist_roll_link')</span>
-
+<span class="c1"># ('r_shoulder_pan_link', 'r_shoulder_lift_link', 'r_upper_arm_roll_link', 'r_upper_arm_link', 'r_elbow_flex_link', 'r_forearm_roll_link', 'r_forearm_link', 'r_wrist_flex_link', 'r_wrist_roll_link')
+</span>
 </code></pre></div>
 <p>You can also initialize the IK from a string containing the URDF (by default it takes it from the <code>/robot_description</code> parameter in the param server):</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
-<span class="c"># Get your URDF from somewhere</span>
-<span class="n">urdf_str</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s">'/robot_description'</span><span class="p">)</span>
+<span class="c1"># Get your URDF from somewhere
+</span><span class="n">urdf_str</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s">'/robot_description'</span><span class="p">)</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
                <span class="s">"r_wrist_roll_link"</span><span class="p">,</span>
@@ -2959,17 +2955,17 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 
 </code></pre></div>
 <p>You can also check and modify the joint limits:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
                <span class="s">"r_wrist_roll_link"</span><span class="p">)</span>
 
 <span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span> <span class="o">=</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">get_joint_limits</span><span class="p">()</span>
-<span class="c"># lower_bound: (-2.1353981494903564, -0.35359999537467957, -3.75, -2.121299982070923, -3.4028234663852886e+38, -2.0, -3.4028234663852886e+38) </span>
-<span class="c"># upper_bound: (0.5646018385887146, 1.2963000535964966, 0.6499999761581421, -0.15000000596046448, 3.4028234663852886e+38, -0.10000000149011612, 3.4028234663852886e+38)</span>
-<span class="n">ik_solver</span><span class="o">.</span><span class="n">set_joint_limits</span><span class="p">([</span><span class="mf">0.0</span><span class="p">]</span><span class="o">*</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">number_of_joints</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
+<span class="c1"># lower_bound: (-2.1353981494903564, -0.35359999537467957, -3.75, -2.121299982070923, -3.4028234663852886e+38, -2.0, -3.4028234663852886e+38) 
+# upper_bound: (0.5646018385887146, 1.2963000535964966, 0.6499999761581421, -0.15000000596046448, 3.4028234663852886e+38, -0.10000000149011612, 3.4028234663852886e+38)
+</span><span class="n">ik_solver</span><span class="o">.</span><span class="n">set_joint_limits</span><span class="p">([</span><span class="mf">0.0</span><span class="p">]</span><span class="o">*</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">number_of_joints</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
 
 </code></pre></div>
 <h1 id="extra-notes">Extra notes</h1>
@@ -3663,8 +3659,8 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 <div class="highlight"><pre><code class="language-" data-lang="">roslaunch pr2_description upload_pr2.launch
 </code></pre></div>
 <p>Now you can get IK's:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
@@ -3673,21 +3669,21 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 <span class="n">seed_state</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">number_of_joints</span>
 
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">get_ik</span><span class="p">(</span><span class="n">seed_state</span><span class="p">,</span>
-                <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span>  <span class="c"># X, Y, Z</span>
-                <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>  <span class="c"># QX, QY, QZ, QW</span>
-<span class="c"># Returns:</span>
-<span class="c"># (0.537242808640495,</span>
-<span class="c">#  0.04673341230604478,</span>
-<span class="c">#  -0.053508394352190486,</span>
-<span class="c">#  -1.5099959208163785,</span>
-<span class="c">#  2.6007509004432596,</span>
-<span class="c">#  -1.506431092603137,</span>
-<span class="c">#  -3.040949079090651)</span>
-
+                <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span>  <span class="c1"># X, Y, Z
+</span>                <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>  <span class="c1"># QX, QY, QZ, QW
+# Returns:
+# (0.537242808640495,
+#  0.04673341230604478,
+#  -0.053508394352190486,
+#  -1.5099959208163785,
+#  2.6007509004432596,
+#  -1.506431092603137,
+#  -3.040949079090651)
+</span>
 </code></pre></div>
 <p>You can also play with the bounds of the IK call:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
@@ -3698,47 +3694,47 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">get_ik</span><span class="p">(</span><span class="n">seed_state</span><span class="p">,</span>
                 <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span>
                 <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span>
-                <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span>  <span class="c"># X, Y, Z bounds</span>
-                <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>  <span class="c"># Rotation X, Y, Z bounds</span>
-                <span class="p">)</span>
-<span class="c"># Returns:</span>
-<span class="c"># (0.5646018385887146,</span>
-<span class="c">#  0.04759637706046231,</span>
-<span class="c">#  0.026629718805901908,</span>
-<span class="c">#  -1.5106828886580062,</span>
-<span class="c">#  2.5541685245726535,</span>
-<span class="c">#  -1.4663448384900402,</span>
-<span class="c">#  -3.104163452483634)</span>
-
+                <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span>  <span class="c1"># X, Y, Z bounds
+</span>                <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>  <span class="c1"># Rotation X, Y, Z bounds
+</span>                <span class="p">)</span>
+<span class="c1"># Returns:
+# (0.5646018385887146,
+#  0.04759637706046231,
+#  0.026629718805901908,
+#  -1.5106828886580062,
+#  2.5541685245726535,
+#  -1.4663448384900402,
+#  -3.104163452483634)
+</span>
 </code></pre></div>
 <p>The coordinate frame of the given poses must be in the base frame, you can check the links/joints being used:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
                <span class="s">"r_wrist_roll_link"</span><span class="p">)</span>
 
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">base_link</span>
-<span class="c"># 'torso_lift_link'</span>
-
+<span class="c1"># 'torso_lift_link'
+</span>
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">tip_link</span>
-<span class="c"># 'r_wrist_roll_link'</span>
-
+<span class="c1"># 'r_wrist_roll_link'
+</span>
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">joint_names</span>
-<span class="c"># ('r_shoulder_pan_joint', 'r_shoulder_lift_joint', 'r_upper_arm_roll_joint', 'r_elbow_flex_joint', 'r_forearm_roll_joint', 'r_wrist_flex_joint', 'r_wrist_roll_joint')</span>
-
+<span class="c1"># ('r_shoulder_pan_joint', 'r_shoulder_lift_joint', 'r_upper_arm_roll_joint', 'r_elbow_flex_joint', 'r_forearm_roll_joint', 'r_wrist_flex_joint', 'r_wrist_roll_joint')
+</span>
 <span class="n">ik_solver</span><span class="o">.</span><span class="n">link_names</span>
-<span class="c"># ('r_shoulder_pan_link', 'r_shoulder_lift_link', 'r_upper_arm_roll_link', 'r_upper_arm_link', 'r_elbow_flex_link', 'r_forearm_roll_link', 'r_forearm_link', 'r_wrist_flex_link', 'r_wrist_roll_link')</span>
-
+<span class="c1"># ('r_shoulder_pan_link', 'r_shoulder_lift_link', 'r_upper_arm_roll_link', 'r_upper_arm_link', 'r_elbow_flex_link', 'r_forearm_roll_link', 'r_forearm_link', 'r_wrist_flex_link', 'r_wrist_roll_link')
+</span>
 </code></pre></div>
 <p>You can also initialize the IK from a string containing the URDF (by default it takes it from the <code>/robot_description</code> parameter in the param server):</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
-<span class="c"># Get your URDF from somewhere</span>
-<span class="n">urdf_str</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s">'/robot_description'</span><span class="p">)</span>
+<span class="c1"># Get your URDF from somewhere
+</span><span class="n">urdf_str</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s">'/robot_description'</span><span class="p">)</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
                <span class="s">"r_wrist_roll_link"</span><span class="p">,</span>
@@ -3746,17 +3742,17 @@ Please send any questions to <a href="mailto:Sammy.Pfeiffer@student.uts.edu.au">
 
 </code></pre></div>
 <p>You can also check and modify the joint limits:</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span>
 <span class="kn">from</span> <span class="nn">trac_ik_python.trac_ik</span> <span class="kn">import</span> <span class="n">IK</span>
 
 <span class="n">ik_solver</span> <span class="o">=</span> <span class="n">IK</span><span class="p">(</span><span class="s">"torso_lift_link"</span><span class="p">,</span>
                <span class="s">"r_wrist_roll_link"</span><span class="p">)</span>
 
 <span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span> <span class="o">=</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">get_joint_limits</span><span class="p">()</span>
-<span class="c"># lower_bound: (-2.1353981494903564, -0.35359999537467957, -3.75, -2.121299982070923, -3.4028234663852886e+38, -2.0, -3.4028234663852886e+38) </span>
-<span class="c"># upper_bound: (0.5646018385887146, 1.2963000535964966, 0.6499999761581421, -0.15000000596046448, 3.4028234663852886e+38, -0.10000000149011612, 3.4028234663852886e+38)</span>
-<span class="n">ik_solver</span><span class="o">.</span><span class="n">set_joint_limits</span><span class="p">([</span><span class="mf">0.0</span><span class="p">]</span><span class="o">*</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">number_of_joints</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
+<span class="c1"># lower_bound: (-2.1353981494903564, -0.35359999537467957, -3.75, -2.121299982070923, -3.4028234663852886e+38, -2.0, -3.4028234663852886e+38) 
+# upper_bound: (0.5646018385887146, 1.2963000535964966, 0.6499999761581421, -0.15000000596046448, 3.4028234663852886e+38, -0.10000000149011612, 3.4028234663852886e+38)
+</span><span class="n">ik_solver</span><span class="o">.</span><span class="n">set_joint_limits</span><span class="p">([</span><span class="mf">0.0</span><span class="p">]</span><span class="o">*</span> <span class="n">ik_solver</span><span class="o">.</span><span class="n">number_of_joints</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
 
 </code></pre></div>
 <h1 id="extra-notes">Extra notes</h1>
@@ -4161,7 +4157,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

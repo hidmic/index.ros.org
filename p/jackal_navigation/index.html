@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -554,52 +550,7 @@ jackal_tutorials
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-jackal_navigation">Changelog for package jackal_navigation</h1>
-
-<h2 id="0-6-1-2018-08-02">0.6.1 (2018-08-02)</h2>
-
-<h2 id="0-6-0-2018-04-12">0.6.0 (2018-04-12)</h2>
-
-<h2 id="0-5-4-2018-04-12">0.5.4 (2018-04-12)</h2>
-
-<h2 id="0-5-3-2016-06-01">0.5.3 (2016-06-01)</h2>
-
-<h2 id="0-5-1-2015-02-02">0.5.1 (2015-02-02)</h2>
-
-<h2 id="0-5-0-2015-01-20">0.5.0 (2015-01-20)</h2>
-
-<h2 id="0-4-2-2015-01-14">0.4.2 (2015-01-14)</h2>
-
-<h2 id="0-4-1-2015-01-07">0.4.1 (2015-01-07)</h2>
-
-<h2 id="0-4-0-2014-12-12">0.4.0 (2014-12-12)</h2>
-
-<ul>
-<li>  Removed redundant local and global costmaps.</li>
-<li>  Fixed location of non-demo launch files in roslaunch-file-check in
-CMakeList</li>
-<li>  Moved rviz configurations to jackal_viz.</li>
-<li>  Changed config/ to params/. Moved non-demo launch files
-to launch/include.</li>
-<li>  Added gps_transform.launch for transforming GPS data to robot's
-world frame. Also added gps_integration_demo.launch for fusing GPS
-data with odomtery data. This node generates map-&gt;odom transform.</li>
-<li>  Modified AMCL's parameters, map and demo for Jackal.</li>
-<li>  Modified slam_gmapping parameters for Jackal for building a map.</li>
-<li>  Modified costmap and base planner parameters for the navigation
-without map with obstacle avoidance using laser scanner.</li>
-<li>  Contributors: Mike Purvis, Shokoofeh Pourmehr</li>
-</ul>
-
-<h2 id="0-3-0-2014-09-10-16-25">0.3.0 (2014-09-10 16:25)</h2>
-
-<h2 id="0-2-1-2014-09-10-08-54">0.2.1 (2014-09-10 08:54)</h2>
-
-<h2 id="0-2-0-2014-09-09">0.2.0 (2014-09-09)</h2>
-
-<h2 id="0-1-1-2014-09-06">0.1.1 (2014-09-06)</h2>
-
-<h2 id="0-1-0-2014-09-05">0.1.0 (2014-09-05)</h2>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -826,7 +777,7 @@ without map with obstacle avoidance using laser scanner.</li>
         
           <ul>
             
-              <li><a href="https://github.com/jackal/jackal/blob/kinetic-devel/jackal_navigation/launch/odom_navigation_demo.launch" target="_blank">launch/odom_navigation_demo.launch</a>
+              <li><a href="https://github.com/jackal/jackal/blob/kinetic-devel/jackal_navigation/launch/gmapping_demo.launch" target="_blank">launch/gmapping_demo.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -839,13 +790,17 @@ without map with obstacle avoidance using laser scanner.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/jackal/jackal/blob/kinetic-devel/jackal_navigation/launch/gmapping_demo.launch" target="_blank">launch/gmapping_demo.launch</a>
+              <li><a href="https://github.com/jackal/jackal/blob/kinetic-devel/jackal_navigation/launch/amcl_demo.launch" target="_blank">launch/amcl_demo.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
+                      
+                        
+                          <li><strong>map_file</strong> <em>&#91;default: $(find jackal_navigation)/maps/jackal_race.yaml&#93; </em></li>
+                        
                       
                     </ul>
                   </li>
@@ -873,19 +828,6 @@ without map with obstacle avoidance using laser scanner.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/jackal/jackal/blob/kinetic-devel/jackal_navigation/launch/include/move_base.launch" target="_blank">launch/include/move_base.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/jackal/jackal/blob/kinetic-devel/jackal_navigation/launch/include/gmapping.launch" target="_blank">launch/include/gmapping.launch</a>
                 <ul class="list-unstyled">
                   
@@ -903,7 +845,7 @@ without map with obstacle avoidance using laser scanner.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/jackal/jackal/blob/kinetic-devel/jackal_navigation/launch/amcl_demo.launch" target="_blank">launch/amcl_demo.launch</a>
+              <li><a href="https://github.com/jackal/jackal/blob/kinetic-devel/jackal_navigation/launch/include/move_base.launch" target="_blank">launch/include/move_base.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -911,9 +853,18 @@ without map with obstacle avoidance using laser scanner.</li>
                   <li>
                     <ul>
                       
-                        
-                          <li><strong>map_file</strong> <em>&#91;default: $(find jackal_navigation)/maps/jackal_race.yaml&#93; </em></li>
-                        
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/jackal/jackal/blob/kinetic-devel/jackal_navigation/launch/odom_navigation_demo.launch" target="_blank">launch/odom_navigation_demo.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
                       
                     </ul>
                   </li>
@@ -1374,48 +1325,7 @@ jackal_tutorials
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-jackal_navigation">Changelog for package jackal_navigation</h1>
-
-<h2 id="0-5-4-2018-04-12">0.5.4 (2018-04-12)</h2>
-
-<h2 id="0-5-3-2016-06-01">0.5.3 (2016-06-01)</h2>
-
-<h2 id="0-5-1-2015-02-02">0.5.1 (2015-02-02)</h2>
-
-<h2 id="0-5-0-2015-01-20">0.5.0 (2015-01-20)</h2>
-
-<h2 id="0-4-2-2015-01-14">0.4.2 (2015-01-14)</h2>
-
-<h2 id="0-4-1-2015-01-07">0.4.1 (2015-01-07)</h2>
-
-<h2 id="0-4-0-2014-12-12">0.4.0 (2014-12-12)</h2>
-
-<ul>
-<li>  Removed redundant local and global costmaps.</li>
-<li>  Fixed location of non-demo launch files in roslaunch-file-check in
-CMakeList</li>
-<li>  Moved rviz configurations to jackal_viz.</li>
-<li>  Changed config/ to params/. Moved non-demo launch files
-to launch/include.</li>
-<li>  Added gps_transform.launch for transforming GPS data to robot's
-world frame. Also added gps_integration_demo.launch for fusing GPS
-data with odomtery data. This node generates map-&gt;odom transform.</li>
-<li>  Modified AMCL's parameters, map and demo for Jackal.</li>
-<li>  Modified slam_gmapping parameters for Jackal for building a map.</li>
-<li>  Modified costmap and base planner parameters for the navigation
-without map with obstacle avoidance using laser scanner.</li>
-<li>  Contributors: Mike Purvis, Shokoofeh Pourmehr</li>
-</ul>
-
-<h2 id="0-3-0-2014-09-10-16-25">0.3.0 (2014-09-10 16:25)</h2>
-
-<h2 id="0-2-1-2014-09-10-08-54">0.2.1 (2014-09-10 08:54)</h2>
-
-<h2 id="0-2-0-2014-09-09">0.2.0 (2014-09-09)</h2>
-
-<h2 id="0-1-1-2014-09-06">0.1.1 (2014-09-06)</h2>
-
-<h2 id="0-1-0-2014-09-05">0.1.0 (2014-09-05)</h2>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1642,7 +1552,7 @@ without map with obstacle avoidance using laser scanner.</li>
         
           <ul>
             
-              <li><a href="https://github.com/jackal/jackal/blob/indigo-devel/jackal_navigation/launch/odom_navigation_demo.launch" target="_blank">launch/odom_navigation_demo.launch</a>
+              <li><a href="https://github.com/jackal/jackal/blob/indigo-devel/jackal_navigation/launch/gmapping_demo.launch" target="_blank">launch/gmapping_demo.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1655,13 +1565,17 @@ without map with obstacle avoidance using laser scanner.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/jackal/jackal/blob/indigo-devel/jackal_navigation/launch/gmapping_demo.launch" target="_blank">launch/gmapping_demo.launch</a>
+              <li><a href="https://github.com/jackal/jackal/blob/indigo-devel/jackal_navigation/launch/amcl_demo.launch" target="_blank">launch/amcl_demo.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
                   
                   <li>
                     <ul>
+                      
+                        
+                          <li><strong>map_file</strong> <em>&#91;default: $(find jackal_navigation)/maps/jackal_race.yaml&#93; </em></li>
+                        
                       
                     </ul>
                   </li>
@@ -1689,19 +1603,6 @@ without map with obstacle avoidance using laser scanner.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/jackal/jackal/blob/indigo-devel/jackal_navigation/launch/include/move_base.launch" target="_blank">launch/include/move_base.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/jackal/jackal/blob/indigo-devel/jackal_navigation/launch/include/gmapping.launch" target="_blank">launch/include/gmapping.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1719,7 +1620,7 @@ without map with obstacle avoidance using laser scanner.</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/jackal/jackal/blob/indigo-devel/jackal_navigation/launch/amcl_demo.launch" target="_blank">launch/amcl_demo.launch</a>
+              <li><a href="https://github.com/jackal/jackal/blob/indigo-devel/jackal_navigation/launch/include/move_base.launch" target="_blank">launch/include/move_base.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1727,9 +1628,18 @@ without map with obstacle avoidance using laser scanner.</li>
                   <li>
                     <ul>
                       
-                        
-                          <li><strong>map_file</strong> <em>&#91;default: $(find jackal_navigation)/maps/jackal_race.yaml&#93; </em></li>
-                        
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/jackal/jackal/blob/indigo-devel/jackal_navigation/launch/odom_navigation_demo.launch" target="_blank">launch/odom_navigation_demo.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
                       
                     </ul>
                   </li>
@@ -1926,7 +1836,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

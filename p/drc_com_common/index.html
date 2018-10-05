@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -530,7 +526,7 @@ jsk_semantic_maps
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-03-15
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-03-14
         </span>
       </td>
     </tr>
@@ -618,56 +614,7 @@ jsk_semantic_maps
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-drc_com_common">Changelog for package drc_com_common</h1>
-
-<h2 id="0-0-4-2017-03-15">0.0.4 (2017-03-15)</h2>
-
-<ul>
-<li>  [drc_task_common] no-UI valve rotation and opening door</li>
-<li>  [drc_task_common] Add /map frame_id</li>
-<li>  remove old dynamic_reconfigure.parameter_generator, now everything
-runnning with catkin</li>
-<li>  remove depends to rosbuild/mk</li>
-<li>  Contributors: Kei Okada, Ryohei Ueda</li>
-</ul>
-
-<h2 id="0-0-3-2016-02-11">0.0.3 (2016-02-11)</h2>
-
-<h2 id="0-0-2-2015-11-26">0.0.2 (2015-11-26)</h2>
-
-<ul>
-<li>  [drc_com_common] Add respawn flag to highspeed receivers</li>
-<li>  [drc_com_common] Use silverhammer highspeed receiver with
-internalbuffer in order to cleanup silverhammer processes</li>
-<li>  [drc_task_common] Omit footstep planner client in fc-executive.l</li>
-<li>  [drc_com_common] Use jsk_robot_utils to compress/decompress
-joint angles</li>
-<li>  Contributors: Ryohei Ueda</li>
-</ul>
-
-<h2 id="0-0-1-2015-06-11">0.0.1 (2015-06-11)</h2>
-
-<ul>
-<li>  add emergency-pose button to rviz</li>
-<li>  add line for send keypoint screen shot</li>
-<li>  fix SIMPLE_FOOTSTEP_EXEC's number 71-&gt;72</li>
-<li>  [drc_task_common, drc_com_common] Add simple footstep exec</li>
-<li>  [drc_task_common, drc_com_common] Add more dynamic reconfigure
-parameters</li>
-<li>  add flag for drill throw</li>
-<li>  [drc_task_common] Add detach messages to silverhammer</li>
-<li>  [drc_com_common, drc_task_common] Add more basic info for
-jaxon</li>
-<li>  add reset_enc and finish_stair button to rviz</li>
-<li>  [drc_com_common] Fix port to receive dynamic reconfigure</li>
-<li>  [drc_com_common] Disable reliable highspeed way</li>
-<li>  [drc_task_common] Update for terrain task</li>
-<li>  add new rviz button</li>
-<li>  [drc_task_common] Remove locomotion topics from FC2OCSLarge</li>
-<li>  remove bags with experiment with Jaxon Red</li>
-<li>  Merge pull request #863 from YoheiKakiuchi/fix_compress remove
-parameter(robot_name), robot name should be defined by environ</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1017,102 +964,6 @@ parameter(robot_name), robot name should be defined by environ</li>
         
           <ul>
             
-              <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/launch/vehicle_operator_station_com.launch" target="_blank">launch/vehicle_operator_station_com.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>OCS_IP</strong> <em>&#91;default: localhost&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>FC_IP</strong> <em>&#91;default: localhost&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>OCS_TO_FC_VEHICLE_PORT</strong> <em>&#91;default: 1706&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>FC_TO_OCS_VEHICLE_PORT</strong> <em>&#91;default: 1707&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>LAUNCH_PREFIX</strong> <em>&#91;default: &#93; </em></li>
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/launch/field_computer_com.launch" target="_blank">launch/field_computer_com.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>OCS_IP</strong> <em>&#91;default: localhost&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>FC_IP</strong> <em>&#91;default: localhost&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>OCS_TO_FC_PORT</strong> <em>&#91;default: 700&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>FC_TO_OCS_PORT</strong> <em>&#91;default: 701&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>FC_TO_OCS_BASIC_PORT</strong> <em>&#91;default: 702&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>DYNAMIC_RECONFIGURE_PORT</strong> <em>&#91;default: 703&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>EUS_OUTPUT_PORT</strong> <em>&#91;default: 704&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>EUS_INPUT_PORT</strong> <em>&#91;default: 705&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>OCS_TO_FC_VEHICLE_PORT</strong> <em>&#91;default: 706&#93; </em></li>
-                        
-                      
-                        
-                          <li><strong>FC_TO_OCS_VEHICLE_PORT</strong> <em>&#91;default: 707&#93; </em></li>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
               <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/launch/ocs_relay.launch" target="_blank">launch/ocs_relay.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1120,25 +971,6 @@ parameter(robot_name), robot name should be defined by environ</li>
                   
                   <li>
                     <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/launch/mini_maxwell.launch" target="_blank">launch/mini_maxwell.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                        
-                          <li><strong>IP</strong> <em>&#91;default: 192.168.96.101&#93; </em></li>
-                        
-                      
-                        
                       
                     </ul>
                   </li>
@@ -1171,6 +1003,35 @@ parameter(robot_name), robot name should be defined by environ</li>
                       
                         
                           <li><strong>LAUNCH_PREFIX</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/launch/fc_relay.launch" target="_blank">launch/fc_relay.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> This launch file is automatically generated. </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>IMAGE_TOPIC</strong> <em>&#91;default: /multisense/left/image_rect_color&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>PANORAMA_IMAGE_TOPIC</strong> <em>&#91;default: /chest_camera_remote/image_color&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>POINT_CLOUD_TOPIC</strong> <em>&#91;default: /stereo_preprocessing/stereo_downsampled_ground_cloud/output&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>LASER_POINT_CLOUD_TOPIC</strong> <em>&#91;default: /laser_preprocess/odom_cloud/output&#93; </em></li>
                         
                       
                     </ul>
@@ -1245,28 +1106,114 @@ parameter(robot_name), robot name should be defined by environ</li>
                 </ul>
               </li>
             
-              <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/launch/fc_relay.launch" target="_blank">launch/fc_relay.launch</a>
+              <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/launch/mini_maxwell.launch" target="_blank">launch/mini_maxwell.launch</a>
                 <ul class="list-unstyled">
                   
-                    <li><em> This launch file is automatically generated. </em></li>
+                    <li><em></em></li>
                   
                   <li>
                     <ul>
                       
                         
-                          <li><strong>IMAGE_TOPIC</strong> <em>&#91;default: /multisense/left/image_rect_color&#93; </em></li>
+                          <li><strong>IP</strong> <em>&#91;default: 192.168.96.101&#93; </em></li>
                         
                       
                         
-                          <li><strong>PANORAMA_IMAGE_TOPIC</strong> <em>&#91;default: /chest_camera_remote/image_color&#93; </em></li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/launch/field_computer_com.launch" target="_blank">launch/field_computer_com.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>OCS_IP</strong> <em>&#91;default: localhost&#93; </em></li>
                         
                       
                         
-                          <li><strong>POINT_CLOUD_TOPIC</strong> <em>&#91;default: /stereo_preprocessing/stereo_downsampled_ground_cloud/output&#93; </em></li>
+                          <li><strong>FC_IP</strong> <em>&#91;default: localhost&#93; </em></li>
                         
                       
                         
-                          <li><strong>LASER_POINT_CLOUD_TOPIC</strong> <em>&#91;default: /laser_preprocess/odom_cloud/output&#93; </em></li>
+                          <li><strong>OCS_TO_FC_PORT</strong> <em>&#91;default: 700&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>FC_TO_OCS_PORT</strong> <em>&#91;default: 701&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>FC_TO_OCS_BASIC_PORT</strong> <em>&#91;default: 702&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>DYNAMIC_RECONFIGURE_PORT</strong> <em>&#91;default: 703&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>EUS_OUTPUT_PORT</strong> <em>&#91;default: 704&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>EUS_INPUT_PORT</strong> <em>&#91;default: 705&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>OCS_TO_FC_VEHICLE_PORT</strong> <em>&#91;default: 706&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>FC_TO_OCS_VEHICLE_PORT</strong> <em>&#91;default: 707&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/launch/vehicle_operator_station_com.launch" target="_blank">launch/vehicle_operator_station_com.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>OCS_IP</strong> <em>&#91;default: localhost&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>FC_IP</strong> <em>&#91;default: localhost&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>OCS_TO_FC_VEHICLE_PORT</strong> <em>&#91;default: 1706&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>FC_TO_OCS_VEHICLE_PORT</strong> <em>&#91;default: 1707&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>LAUNCH_PREFIX</strong> <em>&#91;default: &#93; </em></li>
                         
                       
                     </ul>
@@ -1287,21 +1234,21 @@ parameter(robot_name), robot name should be defined by environ</li>
         
           <ul>
             
-              <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/msg/HumanoidJointAngles.msg" target="_blank">msg/HumanoidJointAngles.msg</a></li>
-            
-              <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/msg/FC2OCSLarge.msg" target="_blank">msg/FC2OCSLarge.msg</a></li>
-            
-              <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/msg/FC2OCSLargeReliable.msg" target="_blank">msg/FC2OCSLargeReliable.msg</a></li>
+              <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/msg/FC2OCSSmall.msg" target="_blank">msg/FC2OCSSmall.msg</a></li>
             
               <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/msg/VehicleOCS2FCSmall.msg" target="_blank">msg/VehicleOCS2FCSmall.msg</a></li>
             
-              <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/msg/OCS2FCSmall.msg" target="_blank">msg/OCS2FCSmall.msg</a></li>
-            
               <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/msg/FC2OCSBasicInfoSmall.msg" target="_blank">msg/FC2OCSBasicInfoSmall.msg</a></li>
             
-              <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/msg/FC2OCSSmall.msg" target="_blank">msg/FC2OCSSmall.msg</a></li>
+              <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/msg/FC2OCSLargeReliable.msg" target="_blank">msg/FC2OCSLargeReliable.msg</a></li>
             
               <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/msg/VehicleFC2OCSSmall.msg" target="_blank">msg/VehicleFC2OCSSmall.msg</a></li>
+            
+              <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/msg/HumanoidJointAngles.msg" target="_blank">msg/HumanoidJointAngles.msg</a></li>
+            
+              <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/msg/OCS2FCSmall.msg" target="_blank">msg/OCS2FCSmall.msg</a></li>
+            
+              <li><a href="https://github.com/jsk-ros-pkg/jsk_demos/blob/0.0.4/jsk_2015_06_hrp_drc/drc_com_common/msg/FC2OCSLarge.msg" target="_blank">msg/FC2OCSLarge.msg</a></li>
             
           </ul>
         
@@ -1482,7 +1429,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

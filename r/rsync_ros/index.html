@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -457,8 +453,8 @@
 <p><em>TL;DR</em> The <code>-avz</code> argument works well for copy operations, and <code>-avz --delete-source-files</code> arguments for move operations. The <code>-p</code> argument (Partial Transfer) is particuarly useful for dealing with unreliable (wireless) connections.</p>
 
 <h2 id="simple-python-actionlib-example">Simple Python Actionlib example</h2>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-<span class="kn">import</span> <span class="nn">rospy</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+</span><span class="kn">import</span> <span class="nn">rospy</span>
 <span class="kn">import</span> <span class="nn">roslib</span><span class="p">;</span> <span class="n">roslib</span><span class="o">.</span><span class="n">load_manifest</span><span class="p">(</span><span class="s">'rsync_ros'</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">actionlib</span>
 <span class="kn">import</span> <span class="nn">rsync_ros.msg</span>
@@ -469,28 +465,28 @@
 <span class="n">source_path</span> <span class="o">=</span>  <span class="s">'~/a_file.txt'</span>
 <span class="n">dest_path</span> <span class="o">=</span> <span class="s">'SSH_USER@192.168.0.1:~/file_dest.txt'</span>
 
-<span class="c"># Create the SimpleActionClient, passing RsyncAction to the constructor.</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">actionlib</span><span class="o">.</span><span class="n">SimpleActionClient</span><span class="p">(</span><span class="s">'rsync_ros'</span><span class="p">,</span> <span class="n">rsync_ros</span><span class="o">.</span><span class="n">msg</span><span class="o">.</span><span class="n">RsyncAction</span><span class="p">)</span>
+<span class="c1"># Create the SimpleActionClient, passing RsyncAction to the constructor.
+</span><span class="n">client</span> <span class="o">=</span> <span class="n">actionlib</span><span class="o">.</span><span class="n">SimpleActionClient</span><span class="p">(</span><span class="s">'rsync_ros'</span><span class="p">,</span> <span class="n">rsync_ros</span><span class="o">.</span><span class="n">msg</span><span class="o">.</span><span class="n">RsyncAction</span><span class="p">)</span>
 
-<span class="c"># Wait until the action server has started up and started</span>
-<span class="c"># listening for goals.</span>
-<span class="n">client</span><span class="o">.</span><span class="n">wait_for_server</span><span class="p">()</span>
+<span class="c1"># Wait until the action server has started up and started
+# listening for goals.
+</span><span class="n">client</span><span class="o">.</span><span class="n">wait_for_server</span><span class="p">()</span>
 
-<span class="c"># Create a goal to send to the action server.</span>
-<span class="n">goal</span> <span class="o">=</span> <span class="n">rsync_ros</span><span class="o">.</span><span class="n">msg</span><span class="o">.</span><span class="n">RsyncGoal</span><span class="p">(</span><span class="n">rsync_args</span><span class="o">=</span><span class="p">[</span><span class="s">'-avzp'</span><span class="p">],</span> <span class="n">source_path</span><span class="o">=</span><span class="n">source_path</span><span class="p">,</span> <span class="n">destination_path</span><span class="o">=</span><span class="n">dest_path</span><span class="p">)</span>
+<span class="c1"># Create a goal to send to the action server.
+</span><span class="n">goal</span> <span class="o">=</span> <span class="n">rsync_ros</span><span class="o">.</span><span class="n">msg</span><span class="o">.</span><span class="n">RsyncGoal</span><span class="p">(</span><span class="n">rsync_args</span><span class="o">=</span><span class="p">[</span><span class="s">'-avzp'</span><span class="p">],</span> <span class="n">source_path</span><span class="o">=</span><span class="n">source_path</span><span class="p">,</span> <span class="n">destination_path</span><span class="o">=</span><span class="n">dest_path</span><span class="p">)</span>
 
-<span class="c"># Sends goal to the action server.</span>
-<span class="n">client</span><span class="o">.</span><span class="n">send_goal</span><span class="p">(</span><span class="n">goal</span><span class="p">)</span>
+<span class="c1"># Sends goal to the action server.
+</span><span class="n">client</span><span class="o">.</span><span class="n">send_goal</span><span class="p">(</span><span class="n">goal</span><span class="p">)</span>
 
-<span class="c"># Waits for the server to finish performing the action.</span>
-<span class="n">client</span><span class="o">.</span><span class="n">wait_for_result</span><span class="p">()</span>
+<span class="c1"># Waits for the server to finish performing the action.
+</span><span class="n">client</span><span class="o">.</span><span class="n">wait_for_result</span><span class="p">()</span>
 
-<span class="c"># Gets the result of the action</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_result</span><span class="p">()</span>
+<span class="c1"># Gets the result of the action
+</span><span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_result</span><span class="p">()</span>
 
-<span class="c"># Prints out the result of executing the action</span>
-<span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s">"Successful Transfer: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">sync_success</span><span class="p">))</span>  <span class="c"># An RsyncResult</span>
-
+<span class="c1"># Prints out the result of executing the action
+</span><span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s">"Successful Transfer: {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">sync_success</span><span class="p">))</span>  <span class="c1"># An RsyncResult
+</span>
 </code></pre></div>
 <h2 id="rsync-action-definition">Rsync Action Definition</h2>
 <div class="highlight"><pre><code class="language-" data-lang="">#Goal
@@ -550,7 +546,7 @@ int64 transfer_rate #in bytes/second
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

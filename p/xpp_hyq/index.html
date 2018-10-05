@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -570,88 +566,7 @@ xpp_vis
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-xpp_vis_hyq">Changelog for package xpp_vis_hyq</h1>
-
-<h2 id="1-0-9-2018-07-10">1.0.9 (2018-07-10)</h2>
-
-<ul>
-<li>  Merge pull request #7 from zlingkang/xacropi2xacro change
-deprecated xacro.py to xacro</li>
-<li>  Contributors: zlingkang</li>
-</ul>
-
-<h2 id="1-0-8-2018-07-07">1.0.8 (2018-07-07)</h2>
-
-<ul>
-<li>  avoid IK segfault for biped/hyq when not enough ee positions sent</li>
-<li>  removed limits on hyqleg joint angles</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-7-2018-07-03">1.0.7 (2018-07-03)</h2>
-
-<ul>
-<li>  add rviz launch specifically for hyq</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-6-2018-04-18">1.0.6 (2018-04-18)</h2>
-
-<ul>
-<li>  add missing libxpp_hyq.so library to catkin install</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-5-2018-02-01">1.0.5 (2018-02-01)</h2>
-
-<ul>
-<li>  modernize CMake files</li>
-<li>  use default keyword for empty destructors</li>
-<li>  use default BSD license</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-4-2018-01-03">1.0.4 (2018-01-03)</h2>
-
-<ul>
-<li>  Merge pull request #3 from leggedrobotics/devel Fix xacro bug and
-remove terrain and optimization specific classes.</li>
-<li>  xpp_hyq: add --inorder when processing xacro files see
-<a href="http://wiki.ros.org/xacro#Processing_Order">http://wiki.ros.org/xacro#Processing_Order</a>
-</li>
-<li>  cleaned up formatting of xacro files</li>
-<li>  removed unused xacro origin tag causing run failure</li>
-<li>  Contributors: Alexander W Winkler</li>
-</ul>
-
-<h2 id="1-0-3-2017-11-03">1.0.3 (2017-11-03)</h2>
-
-<ul>
-<li>  removed xpp_ros_conversions (now in xpp_states)</li>
-<li>  1.0.2</li>
-<li>  update changelog</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-2-2017-10-28">1.0.2 (2017-10-28)</h2>
-
-<h2 id="1-0-1-2017-10-27">1.0.1 (2017-10-27)</h2>
-
-<h2 id="1-0-0-2017-10-26">1.0.0 (2017-10-26)</h2>
-
-<ul>
-<li>  added separate xpp_example package and Readme.md</li>
-<li>  included install space in CMakeLists.txt</li>
-<li>  explicitly listing ros dependencies (not through
-catkin_package macro)</li>
-<li>  Added license to files and giving credit to contributors.</li>
-<li>  cleaned up package.xml and CMakeLists.txt files</li>
-<li>  cleaned up endeffector and joint representation</li>
-<li>  showed close connection of mono/bi/quad to hyq</li>
-<li>  added doxygen comments to header files</li>
-<li>  made xpp_vis robot independent. Added sample hopper executables</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -801,6 +716,32 @@ catkin_package macro)</li>
         
           <ul>
             
+              <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/hyq.launch" target="_blank">launch/hyq.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/xpp_hyq.launch" target="_blank">launch/xpp_hyq.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/biped.launch" target="_blank">launch/biped.launch</a>
                 <ul class="list-unstyled">
                   
@@ -828,32 +769,6 @@ catkin_package macro)</li>
               </li>
             
               <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/monoped.launch" target="_blank">launch/monoped.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/xpp_hyq.launch" target="_blank">launch/xpp_hyq.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/hyq.launch" target="_blank">launch/hyq.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -1352,88 +1267,7 @@ xpp_vis
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-xpp_vis_hyq">Changelog for package xpp_vis_hyq</h1>
-
-<h2 id="1-0-9-2018-07-10">1.0.9 (2018-07-10)</h2>
-
-<ul>
-<li>  Merge pull request #7 from zlingkang/xacropi2xacro change
-deprecated xacro.py to xacro</li>
-<li>  Contributors: zlingkang</li>
-</ul>
-
-<h2 id="1-0-8-2018-07-07">1.0.8 (2018-07-07)</h2>
-
-<ul>
-<li>  avoid IK segfault for biped/hyq when not enough ee positions sent</li>
-<li>  removed limits on hyqleg joint angles</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-7-2018-07-03">1.0.7 (2018-07-03)</h2>
-
-<ul>
-<li>  add rviz launch specifically for hyq</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-6-2018-04-18">1.0.6 (2018-04-18)</h2>
-
-<ul>
-<li>  add missing libxpp_hyq.so library to catkin install</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-5-2018-02-01">1.0.5 (2018-02-01)</h2>
-
-<ul>
-<li>  modernize CMake files</li>
-<li>  use default keyword for empty destructors</li>
-<li>  use default BSD license</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-4-2018-01-03">1.0.4 (2018-01-03)</h2>
-
-<ul>
-<li>  Merge pull request #3 from leggedrobotics/devel Fix xacro bug and
-remove terrain and optimization specific classes.</li>
-<li>  xpp_hyq: add --inorder when processing xacro files see
-<a href="http://wiki.ros.org/xacro#Processing_Order">http://wiki.ros.org/xacro#Processing_Order</a>
-</li>
-<li>  cleaned up formatting of xacro files</li>
-<li>  removed unused xacro origin tag causing run failure</li>
-<li>  Contributors: Alexander W Winkler</li>
-</ul>
-
-<h2 id="1-0-3-2017-11-03">1.0.3 (2017-11-03)</h2>
-
-<ul>
-<li>  removed xpp_ros_conversions (now in xpp_states)</li>
-<li>  1.0.2</li>
-<li>  update changelog</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-2-2017-10-28">1.0.2 (2017-10-28)</h2>
-
-<h2 id="1-0-1-2017-10-27">1.0.1 (2017-10-27)</h2>
-
-<h2 id="1-0-0-2017-10-26">1.0.0 (2017-10-26)</h2>
-
-<ul>
-<li>  added separate xpp_example package and Readme.md</li>
-<li>  included install space in CMakeLists.txt</li>
-<li>  explicitly listing ros dependencies (not through
-catkin_package macro)</li>
-<li>  Added license to files and giving credit to contributors.</li>
-<li>  cleaned up package.xml and CMakeLists.txt files</li>
-<li>  cleaned up endeffector and joint representation</li>
-<li>  showed close connection of mono/bi/quad to hyq</li>
-<li>  added doxygen comments to header files</li>
-<li>  made xpp_vis robot independent. Added sample hopper executables</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -1583,6 +1417,32 @@ catkin_package macro)</li>
         
           <ul>
             
+              <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/hyq.launch" target="_blank">launch/hyq.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/xpp_hyq.launch" target="_blank">launch/xpp_hyq.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/biped.launch" target="_blank">launch/biped.launch</a>
                 <ul class="list-unstyled">
                   
@@ -1610,32 +1470,6 @@ catkin_package macro)</li>
               </li>
             
               <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/monoped.launch" target="_blank">launch/monoped.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/xpp_hyq.launch" target="_blank">launch/xpp_hyq.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/hyq.launch" target="_blank">launch/hyq.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2134,88 +1968,7 @@ xpp_vis
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-xpp_vis_hyq">Changelog for package xpp_vis_hyq</h1>
-
-<h2 id="1-0-9-2018-07-10">1.0.9 (2018-07-10)</h2>
-
-<ul>
-<li>  Merge pull request #7 from zlingkang/xacropi2xacro change
-deprecated xacro.py to xacro</li>
-<li>  Contributors: zlingkang</li>
-</ul>
-
-<h2 id="1-0-8-2018-07-07">1.0.8 (2018-07-07)</h2>
-
-<ul>
-<li>  avoid IK segfault for biped/hyq when not enough ee positions sent</li>
-<li>  removed limits on hyqleg joint angles</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-7-2018-07-03">1.0.7 (2018-07-03)</h2>
-
-<ul>
-<li>  add rviz launch specifically for hyq</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-6-2018-04-18">1.0.6 (2018-04-18)</h2>
-
-<ul>
-<li>  add missing libxpp_hyq.so library to catkin install</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-5-2018-02-01">1.0.5 (2018-02-01)</h2>
-
-<ul>
-<li>  modernize CMake files</li>
-<li>  use default keyword for empty destructors</li>
-<li>  use default BSD license</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-4-2018-01-03">1.0.4 (2018-01-03)</h2>
-
-<ul>
-<li>  Merge pull request #3 from leggedrobotics/devel Fix xacro bug and
-remove terrain and optimization specific classes.</li>
-<li>  xpp_hyq: add --inorder when processing xacro files see
-<a href="http://wiki.ros.org/xacro#Processing_Order">http://wiki.ros.org/xacro#Processing_Order</a>
-</li>
-<li>  cleaned up formatting of xacro files</li>
-<li>  removed unused xacro origin tag causing run failure</li>
-<li>  Contributors: Alexander W Winkler</li>
-</ul>
-
-<h2 id="1-0-3-2017-11-03">1.0.3 (2017-11-03)</h2>
-
-<ul>
-<li>  removed xpp_ros_conversions (now in xpp_states)</li>
-<li>  1.0.2</li>
-<li>  update changelog</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-2-2017-10-28">1.0.2 (2017-10-28)</h2>
-
-<h2 id="1-0-1-2017-10-27">1.0.1 (2017-10-27)</h2>
-
-<h2 id="1-0-0-2017-10-26">1.0.0 (2017-10-26)</h2>
-
-<ul>
-<li>  added separate xpp_example package and Readme.md</li>
-<li>  included install space in CMakeLists.txt</li>
-<li>  explicitly listing ros dependencies (not through
-catkin_package macro)</li>
-<li>  Added license to files and giving credit to contributors.</li>
-<li>  cleaned up package.xml and CMakeLists.txt files</li>
-<li>  cleaned up endeffector and joint representation</li>
-<li>  showed close connection of mono/bi/quad to hyq</li>
-<li>  added doxygen comments to header files</li>
-<li>  made xpp_vis robot independent. Added sample hopper executables</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -2365,6 +2118,32 @@ catkin_package macro)</li>
         
           <ul>
             
+              <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/hyq.launch" target="_blank">launch/hyq.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/xpp_hyq.launch" target="_blank">launch/xpp_hyq.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/biped.launch" target="_blank">launch/biped.launch</a>
                 <ul class="list-unstyled">
                   
@@ -2392,32 +2171,6 @@ catkin_package macro)</li>
               </li>
             
               <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/monoped.launch" target="_blank">launch/monoped.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/xpp_hyq.launch" target="_blank">launch/xpp_hyq.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/hyq.launch" target="_blank">launch/hyq.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -2916,88 +2669,7 @@ xpp_vis
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-xpp_vis_hyq">Changelog for package xpp_vis_hyq</h1>
-
-<h2 id="1-0-9-2018-07-10">1.0.9 (2018-07-10)</h2>
-
-<ul>
-<li>  Merge pull request #7 from zlingkang/xacropi2xacro change
-deprecated xacro.py to xacro</li>
-<li>  Contributors: zlingkang</li>
-</ul>
-
-<h2 id="1-0-8-2018-07-07">1.0.8 (2018-07-07)</h2>
-
-<ul>
-<li>  avoid IK segfault for biped/hyq when not enough ee positions sent</li>
-<li>  removed limits on hyqleg joint angles</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-7-2018-07-03">1.0.7 (2018-07-03)</h2>
-
-<ul>
-<li>  add rviz launch specifically for hyq</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-6-2018-04-18">1.0.6 (2018-04-18)</h2>
-
-<ul>
-<li>  add missing libxpp_hyq.so library to catkin install</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-5-2018-02-01">1.0.5 (2018-02-01)</h2>
-
-<ul>
-<li>  modernize CMake files</li>
-<li>  use default keyword for empty destructors</li>
-<li>  use default BSD license</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-4-2018-01-03">1.0.4 (2018-01-03)</h2>
-
-<ul>
-<li>  Merge pull request #3 from leggedrobotics/devel Fix xacro bug and
-remove terrain and optimization specific classes.</li>
-<li>  xpp_hyq: add --inorder when processing xacro files see
-<a href="http://wiki.ros.org/xacro#Processing_Order">http://wiki.ros.org/xacro#Processing_Order</a>
-</li>
-<li>  cleaned up formatting of xacro files</li>
-<li>  removed unused xacro origin tag causing run failure</li>
-<li>  Contributors: Alexander W Winkler</li>
-</ul>
-
-<h2 id="1-0-3-2017-11-03">1.0.3 (2017-11-03)</h2>
-
-<ul>
-<li>  removed xpp_ros_conversions (now in xpp_states)</li>
-<li>  1.0.2</li>
-<li>  update changelog</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
-
-<h2 id="1-0-2-2017-10-28">1.0.2 (2017-10-28)</h2>
-
-<h2 id="1-0-1-2017-10-27">1.0.1 (2017-10-27)</h2>
-
-<h2 id="1-0-0-2017-10-26">1.0.0 (2017-10-26)</h2>
-
-<ul>
-<li>  added separate xpp_example package and Readme.md</li>
-<li>  included install space in CMakeLists.txt</li>
-<li>  explicitly listing ros dependencies (not through
-catkin_package macro)</li>
-<li>  Added license to files and giving credit to contributors.</li>
-<li>  cleaned up package.xml and CMakeLists.txt files</li>
-<li>  cleaned up endeffector and joint representation</li>
-<li>  showed close connection of mono/bi/quad to hyq</li>
-<li>  added doxygen comments to header files</li>
-<li>  made xpp_vis robot independent. Added sample hopper executables</li>
-<li>  Contributors: Alexander Winkler</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -3147,6 +2819,32 @@ catkin_package macro)</li>
         
           <ul>
             
+              <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/hyq.launch" target="_blank">launch/hyq.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/xpp_hyq.launch" target="_blank">launch/xpp_hyq.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/biped.launch" target="_blank">launch/biped.launch</a>
                 <ul class="list-unstyled">
                   
@@ -3174,32 +2872,6 @@ catkin_package macro)</li>
               </li>
             
               <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/monoped.launch" target="_blank">launch/monoped.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/xpp_hyq.launch" target="_blank">launch/xpp_hyq.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/leggedrobotics/xpp/blob/master/robots/xpp_hyq/launch/hyq.launch" target="_blank">launch/hyq.launch</a>
                 <ul class="list-unstyled">
                   
                     <li><em></em></li>
@@ -3402,7 +3074,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

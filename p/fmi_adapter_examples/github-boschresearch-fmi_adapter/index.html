@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -429,7 +425,7 @@ fmi_adapter_examples
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-25
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-09-27
         </span>
       </td>
     </tr>
@@ -467,7 +463,13 @@ fmi_adapter_examples
           <div class="panel-body">
             
             
-              <em>No additional links.</em>
+              <ul class="list-unstyled">
+                
+                  <li><a href="http://wiki.ros.org/fmi_adapter">Website</a></li>
+                
+                  <li><a href="https://github.com/boschresearch/fmi_adapter">Repository</a></li>
+                
+              </ul>
             
           </div>
           <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
@@ -476,7 +478,7 @@ fmi_adapter_examples
             
               <ul class="list-unstyled">
                 
-                  <li>Ralph Lange (CR/AEE1)</li>
+                  <li>Ralph Lange</li>
                 
               </ul>
             
@@ -485,7 +487,11 @@ fmi_adapter_examples
           <div class="panel-body">
             
             
-              <em>No additional authors.</em>
+              <ul class="list-unstyled">
+                
+                  <li>Ralph Lange</li>
+                
+              </ul>
             
           </div>
         </div>
@@ -504,9 +510,19 @@ fmi_adapter_examples
 
 <h1 id="the-fmi_adapter_examples-package">The fmi_adapter_examples package</h1>
 
-<p>This <a href="http://www.ros.org/">ROS</a> package provides a small example for the use of the fmi_adapter package. It includes a model of a damped pendulum in the <a href="https://www.modelica.org/">Modelica language</a>. In the following, we explain how to create an FMU from this model and how to simulate this model using the fmi_adapter node.</p>
+<p>This <a href="http://www.ros.org/">ROS</a> package provides few examples for the use of the fmi_adapter package. It contains two FMU files DampedPendulum.fmu and TransportDelay.fmu (both created with the <a href="https://www.qtronic.de/en/fmusdk.html">FMU SDK</a>) and corresponding launch files. Furthermore, it includes a model of a damped pendulum in the <a href="https://www.modelica.org/">Modelica language</a> to create your own FMU.</p>
 
-<h2 id="creating-dampedpendulum-fmu">Creating DampedPendulum.fmu</h2>
+<h2 id="running-the-provided-sample-fmus">Running the provided sample FMUs</h2>
+
+<p>Use <code>roslaunch fmi_adapter_examples simple_damped_pendulum.launch</code> to simulate a damped pendulum (<a href="share/DampedPendulum.fmu">share/DampedPendulum.fmu</a>) with a length of 1m. The pendulum's angle is published at /fmi_adapter_node/a with the default rate of 100Hz. The step size of the FMU's solver is 1ms.</p>
+
+<p><a href="launch/damped_pendulum_with_transport_delay.launch">damped_pendulum_with_transport_delay.launch</a> starts two nodes. The first one simulates <a href="share/DampedPendulum.fmu">share/DampedPendulum.fmu</a>, where the length parameter is set to 25m by the launch file. The second node runs <a href="share/TransportDelay.fmu">share/TransportDelay.fmu</a>, where the delay parameter is set to 2.33s. The input subscription of the transport delay is remapped to the pendulum's angle topic and the delayed angle is published at <em>/transport_delay/y</em>.</p>
+
+<p>Both launch files also open rqt_plot to visualize the angle(s).</p>
+
+<p><img src="https://raw.githubusercontent.com/boschresearch/fmi_adapter/master/fmi_adapter_examples//doc/damped_pendulum_with_transport_delay_in_rqt_plot.png" alt="Plot created by damped_pendulum_with_transport_delay.launch"></p>
+
+<h2 id="create-and-simulate-your-own-dampedpendulum-fmu">Create and simulate your own DampedPendulum.fmu</h2>
 
 <p>There are several modeling tools that support the Modelica language and provide FMU export. Examples are <a href="http://www.3ds.com/products-services/catia/products/dymola">Dymola</a>, <a href="https://jmodelica.org/">JModelica</a>, and <a href="https://www.openmodelica.org/">OpenModelica</a>.</p>
 
@@ -526,30 +542,29 @@ fmi_adapter_examples
 <li>  The path of the resulting FMU file is shown in the message browser at the bottom of the window, typically <code>/tmp/OpenModelica_[user]/OMEdit/DampedPendulum.fmu</code>.</li>
 </ul>
 
-<h2 id="simulating-dampedpendulum-fmu-using-the-fmi_adapter-node">Simulating DampedPendulum.fmu using the fmi_adapter node</h2>
+<p>Now, you are prepared for simulating the FMU using the fmi_adapter package.</p>
 
-<p>Once the DampedPendulum.fmu file as been created successfully, clone this repository and build it using <code>catkin build fmi_adapter_examples</code>. Then, launch the fmi_adapter node and rqt_plot using the provided <a href="launch/damped_pendulum.launch">damped_pendulum.launch</a> file by:</p>
-
-<p><code>roslaunch fmi_adapter_examples damped_pendulum.launch fmu_path:=/[PathTo]/DampedPendulum.fmu</code></p>
-
-<p>The fmi_adapter node will load the FMU file and simulate it in real-time. The angle of the pendulum is plotted with rqt_plot:</p>
+<ul>
+<li><p>Either use the generic launch file of the package
+<code>roslaunch fmi_adapter fmi_adapter_node.launch fmu_path:=/tmp/OpenModelica_[user]/OMEdit/DampedPendulum.fmu</code>
+or invoke the package's node directly by
+<code>rosrun fmi_adapter node _fmu_path:=/tmp/OpenModelica_[user]/OMEdit/DampedPendulum.fmu</code></p></li>
+<li><p>You may visualize the pendulum's angle over time by
+<code>rqt_plot /fmi_adapter_node/revolute1_angle</code></p></li>
+</ul>
 
 <p><img src="https://raw.githubusercontent.com/boschresearch/fmi_adapter/master/fmi_adapter_examples//doc/damped_pendulum_in_rqt_plot.png" alt="DampedPendulum.fmu simulation results in rqt_plot"></p>
 
 <p>Please see the <a href="../fmi_adapter/README.md">README.md of the fmi_adapter package</a> for how to load and run an FMU inside an application-specific ROS node or library.</p>
 
-<h2 id="note-on-bug-with-mmc_mk_modelica_array-in-openmodelica-1-12-0">Note on bug with mmc_mk_modelica_array in OpenModelica 1.12.0</h2>
-
-<p>If the fmi_adapter node crashes with the error message <code>undefined symbol: mmc_mk_modelica_array</code>, please patch the files</p>
+<p><strong>Note on bug with mmc_mk_modelica_array in OpenModelica 1.12.0:</strong> If the fmi_adapter node crashes with the error message <code>undefined symbol: mmc_mk_modelica_array</code>, please patch the files</p>
 
 <ul>
 <li>  /usr/include/omc/c/meta/meta_modelica.h</li>
 <li>  /usr/include/omc/c/meta/meta_modelica_data.h</li>
 </ul>
 
-<p>according to <a href="https://github.com/OpenModelica/OMCompiler/pull/2397/files">https://github.com/OpenModelica/OMCompiler/pull/2397/files</a> and export the FMU again.</p>
-
-<p>Details on this bug are given in <a href="https://trac.openmodelica.org/OpenModelica/ticket/4899">https://trac.openmodelica.org/OpenModelica/ticket/4899</a>.</p>
+<p>according to <a href="https://github.com/OpenModelica/OMCompiler/pull/2397/files">https://github.com/OpenModelica/OMCompiler/pull/2397/files</a> and export the FMU again. Details on this bug are given in <a href="https://trac.openmodelica.org/OpenModelica/ticket/4899">https://trac.openmodelica.org/OpenModelica/ticket/4899</a>.</p>
 </div></body></html>
 
               </div>
@@ -566,20 +581,7 @@ fmi_adapter_examples
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<h1 id="changelog-for-package-fmi_adapter_examples">Changelog for package fmi_adapter_examples</h1>
-
-<h2 id="1-0-1-2018-07-16">1.0.1 (2018-07-16)</h2>
-
-<ul>
-<li>  Throwing runtime_error in case of failed fmi2 function call
-in FMIAdapter.</li>
-</ul>
-
-<h2 id="1-0-0-2018-07-13">1.0.0 (2018-07-13)</h2>
-
-<ul>
-<li>  Initial version.</li>
-</ul>
+<p>Could not convert RST to MD: No such file or directory - pandoc</p>
 </div></body></html>
 
             
@@ -657,6 +659,19 @@ in FMIAdapter.</li>
         
           <ul>
             
+              <li><a href="https://github.com/boschresearch/fmi_adapter/blob/master/fmi_adapter_examples/launch/damped_pendulum_with_transport_delay.launch" target="_blank">launch/damped_pendulum_with_transport_delay.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
               <li><a href="https://github.com/boschresearch/fmi_adapter/blob/master/fmi_adapter_examples/launch/simple_damped_pendulum.launch" target="_blank">launch/simple_damped_pendulum.launch</a>
                 <ul class="list-unstyled">
                   
@@ -666,19 +681,6 @@ in FMIAdapter.</li>
                     <ul>
                       
                         
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            
-              <li><a href="https://github.com/boschresearch/fmi_adapter/blob/master/fmi_adapter_examples/launch/damped_pendulum_with_transport_delay.launch" target="_blank">launch/damped_pendulum_with_transport_delay.launch</a>
-                <ul class="list-unstyled">
-                  
-                    <li><em></em></li>
-                  
-                  <li>
-                    <ul>
                       
                     </ul>
                   </li>
@@ -898,7 +900,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

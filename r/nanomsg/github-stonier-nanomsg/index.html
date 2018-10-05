@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -171,7 +167,7 @@
       <input type="radio" name="options" id="bouncy-radio" autocomplete="off"> bouncy
     </label>
   
-    <label id="melodic-option" class="distro-button btn btn-xs btn-default" href="#melodic" data="melodic">
+    <label id="melodic-option" class="distro-button btn btn-xs btn-primary" href="#melodic" data="melodic">
       <input type="radio" name="options" id="melodic-radio" autocomplete="off"> melodic
     </label>
   
@@ -179,7 +175,7 @@
       <input type="radio" name="options" id="lunar-radio" autocomplete="off"> lunar
     </label>
   
-    <label id="kinetic-option" class="distro-button btn btn-xs btn-default" href="#kinetic" data="kinetic">
+    <label id="kinetic-option" class="distro-button btn btn-xs btn-primary" href="#kinetic" data="kinetic">
       <input type="radio" name="options" id="kinetic-radio" autocomplete="off"> kinetic
     </label>
   
@@ -293,7 +289,116 @@
   <div class="distro distro-melodic">
     <div class="container-fluid">
       
-        <div class="alert alert-warning" role="alert">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+        
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+
+  <table class="table table-condensed">
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/stonier/nanomsg.git">https://github.com/stonier/nanomsg.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">0.4-kinetic-melodic</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2015-10-09
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-primary">
+          
+          MAINTAINED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/nanomsg/github-stonier-nanomsg">nanomsg</a></td>
+                    <td>0.4.1</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="rendered-markdown">
+<h2 id="overview">Overview</h2>
+
+<p>URL: <a href="http://nanomsg.org/">http://nanomsg.org/</a></p>
+
+<h2 id="catkin-package">Catkin Package</h2>
+
+<p>This uses a cmake build whereas nanomsg makes use of autotools. Consequently I'm just plugging in macro definitions for many
+options that are tested by autotools, and only creating tests as I run into problems (e.g. test for accept4 support in the
+toolchain).</p>
+
+<p>One variable that I haven't got an automatic test for yet is for our limited toolchain on arm board.</p>
+
+<ul>
+<li>platform: arm1176jzf-s</li>
+<li>kernel 2.6.32</li>
+<li>toolchain: gcc 4.6</li>
+</ul>
+
+<p>If you get a <code>libnanomsg.so: undefined reference to</code>__sync_fetch_and_add_4'` error when linking this library to
+your programs (happens on some arm cross compiles), then you'll need to disable gcc's builtin atomic plugins. </p>
+</div></body></html>
+
+            
+          </div>
+        </div>
+
+        
+        
       
     </div>
   </div>
@@ -309,7 +414,116 @@
   <div class="distro distro-kinetic">
     <div class="container-fluid">
       
-        <div class="alert alert-warning" role="alert">No version for distro <strong>kinetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+        
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+
+  <table class="table table-condensed">
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/stonier/nanomsg.git">https://github.com/stonier/nanomsg.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">release/0.4-kinetic-melodic</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2015-10-09
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-primary">
+          
+          MAINTAINED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/nanomsg/github-stonier-nanomsg">nanomsg</a></td>
+                    <td>0.4.1</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="rendered-markdown">
+<h2 id="overview">Overview</h2>
+
+<p>URL: <a href="http://nanomsg.org/">http://nanomsg.org/</a></p>
+
+<h2 id="catkin-package">Catkin Package</h2>
+
+<p>This uses a cmake build whereas nanomsg makes use of autotools. Consequently I'm just plugging in macro definitions for many
+options that are tested by autotools, and only creating tests as I run into problems (e.g. test for accept4 support in the
+toolchain).</p>
+
+<p>One variable that I haven't got an automatic test for yet is for our limited toolchain on arm board.</p>
+
+<ul>
+<li>platform: arm1176jzf-s</li>
+<li>kernel 2.6.32</li>
+<li>toolchain: gcc 4.6</li>
+</ul>
+
+<p>If you get a <code>libnanomsg.so: undefined reference to</code>__sync_fetch_and_add_4'` error when linking this library to
+your programs (happens on some arm cross compiles), then you'll need to disable gcc's builtin atomic plugins. </p>
+</div></body></html>
+
+            
+          </div>
+        </div>
+
+        
+        
       
     </div>
   </div>
@@ -476,7 +690,7 @@ your programs (happens on some arm cross compiles), then you'll need to disable 
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

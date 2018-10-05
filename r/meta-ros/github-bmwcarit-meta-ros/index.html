@@ -21,12 +21,8 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-    
-    <script src=/js/distro_switch.js></script>
 
-    <!-- Pre-fetch search index files -->
-    
-    
+    <script src=/js/distro_switch.js></script>
 </head>
 
 
@@ -341,7 +337,7 @@
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-08-26
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-10-04
         </span>
       </td>
     </tr>
@@ -523,6 +519,25 @@ resolved in the past.</p>
   <code>git blame</code> on the lines below, you can find the commits in meta-ros that
   rely on the remote commits. In case of porting to other versions, you must
   possibly revert some of those commits.</p>
+
+<p>ament-cmake-core depends on python3-pyparsing which is available in
+  meta-python since pyro
+  1a373a033f482981eb59ff8d9eb7a9437fa18cd4@meta-openembedded and native
+  version since rocko
+  06eb9d658e71b6a61f2589d9618ae2ca35eaaf8b@meta-openembedded
+  python3-pyparsing-native depends on python3-datetime-native,
+  python3-debugger-native and python3-stringold-native which were added
+  in oe-core python3-native in pyro:
+  462ccb35a5de32b52ddb733d1868df6ac5426f20@openembedded-core and
+  800753069f667cd1664d70b3779150c467e3b3fe@openembedded-core simple
+  bbappend as shown in:
+  <a href="https://github.com/bmwcarit/meta-ros/pull/607#pullrequestreview-143981126">https://github.com/bmwcarit/meta-ros/pull/607#pullrequestreview-143981126</a>
+  is enough to resolve this if you're using old pyro unsupported
+  release.</p>
+
+<p>ros2topic (and few more recipes when ROS_USE_PYTHON3 is set to yes)
+  depends on python3-pyyaml which was added in
+  1161ab8f8dda272eb5d09917446cc5b971be1335@meta-openembedded.</p>
 
 <p>cv-bridge and dependent recipes, e.g., the image-transport recipes, depend on
   <a href="mailto:7568bfdd114597956a1da68746f207ec7f93a48d@openembedded-core">7568bfdd114597956a1da68746f207ec7f93a48d@openembedded-core</a>.
@@ -722,7 +737,7 @@ touch /opt/ros/indigo/.catkin
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-08-26
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-10-04
         </span>
       </td>
     </tr>
@@ -904,6 +919,25 @@ resolved in the past.</p>
   <code>git blame</code> on the lines below, you can find the commits in meta-ros that
   rely on the remote commits. In case of porting to other versions, you must
   possibly revert some of those commits.</p>
+
+<p>ament-cmake-core depends on python3-pyparsing which is available in
+  meta-python since pyro
+  1a373a033f482981eb59ff8d9eb7a9437fa18cd4@meta-openembedded and native
+  version since rocko
+  06eb9d658e71b6a61f2589d9618ae2ca35eaaf8b@meta-openembedded
+  python3-pyparsing-native depends on python3-datetime-native,
+  python3-debugger-native and python3-stringold-native which were added
+  in oe-core python3-native in pyro:
+  462ccb35a5de32b52ddb733d1868df6ac5426f20@openembedded-core and
+  800753069f667cd1664d70b3779150c467e3b3fe@openembedded-core simple
+  bbappend as shown in:
+  <a href="https://github.com/bmwcarit/meta-ros/pull/607#pullrequestreview-143981126">https://github.com/bmwcarit/meta-ros/pull/607#pullrequestreview-143981126</a>
+  is enough to resolve this if you're using old pyro unsupported
+  release.</p>
+
+<p>ros2topic (and few more recipes when ROS_USE_PYTHON3 is set to yes)
+  depends on python3-pyyaml which was added in
+  1161ab8f8dda272eb5d09917446cc5b971be1335@meta-openembedded.</p>
 
 <p>cv-bridge and dependent recipes, e.g., the image-transport recipes, depend on
   <a href="mailto:7568bfdd114597956a1da68746f207ec7f93a48d@openembedded-core">7568bfdd114597956a1da68746f207ec7f93a48d@openembedded-core</a>.
@@ -1097,7 +1131,7 @@ touch /opt/ros/indigo/.catkin
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-09-26</em>
+          <em>generated on 2018-10-04</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

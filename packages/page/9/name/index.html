@@ -21,8 +21,12 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-
+    
     <script src=/js/distro_switch.js></script>
+
+    <!-- Pre-fetch search index files -->
+    
+    
 </head>
 
 
@@ -75,21 +79,11 @@
                   </button>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                     
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><a href="/doc/ros2_overview">ROS2 Overview</a></li>
-                        
-                      
+                    <li>
+                      <a href="/doc/ros2_overview">
+                        ROS2 Overview
+                      </a>
+                    </li>
                     
                     <li class="hidden" class="divider"></li>
 
@@ -219,25 +213,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -1258,25 +1262,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -1646,7 +1660,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-16</span>
+                        <span title="Last commit date" class="label label-default">2018-02-16</span>
                       </td>
                       <td>
                         <a href="/p/camera1394stereo">camera1394stereo</a>
@@ -1707,7 +1721,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-10</span>
+                        <span title="Last commit date" class="label label-default">2018-05-10</span>
                       </td>
                       <td>
                         <a href="/p/camera_calibration">camera_calibration</a>
@@ -1750,7 +1764,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-05</span>
+                        <span title="Last commit date" class="label label-default">2017-11-05</span>
                       </td>
                       <td>
                         <a href="/p/camera_calibration_parsers">camera_calibration_parsers</a>
@@ -1831,7 +1845,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-05</span>
+                        <span title="Last commit date" class="label label-default">2017-11-05</span>
                       </td>
                       <td>
                         <a href="/p/camera_info_manager">camera_info_manager</a>
@@ -1922,7 +1936,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-30</span>
+                        <span title="Last commit date" class="label label-default">2018-08-30</span>
                       </td>
                       <td>
                         <a href="/p/camera_umd">camera_umd</a>
@@ -1959,7 +1973,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-12</span>
+                        <span title="Last commit date" class="label label-default">2018-07-12</span>
                       </td>
                       <td>
                         <a href="/p/can_msgs">can_msgs</a>
@@ -1996,7 +2010,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-12</span>
+                        <span title="Last commit date" class="label label-default">2018-07-12</span>
                       </td>
                       <td>
                         <a href="/p/canopen_402">canopen_402</a>
@@ -2033,7 +2047,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-12</span>
+                        <span title="Last commit date" class="label label-default">2018-07-12</span>
                       </td>
                       <td>
                         <a href="/p/canopen_chain_node">canopen_chain_node</a>
@@ -2070,7 +2084,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-12</span>
+                        <span title="Last commit date" class="label label-default">2018-07-12</span>
                       </td>
                       <td>
                         <a href="/p/canopen_master">canopen_master</a>
@@ -2107,7 +2121,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-12</span>
+                        <span title="Last commit date" class="label label-default">2018-07-12</span>
                       </td>
                       <td>
                         <a href="/p/canopen_motor_node">canopen_motor_node</a>
@@ -2164,7 +2178,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-22</span>
+                        <span title="Last commit date" class="label label-default">2018-07-22</span>
                       </td>
                       <td>
                         <a href="/p/care_o_bot">care_o_bot</a>
@@ -2201,7 +2215,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-22</span>
+                        <span title="Last commit date" class="label label-default">2018-07-22</span>
                       </td>
                       <td>
                         <a href="/p/care_o_bot_desktop">care_o_bot_desktop</a>
@@ -2238,7 +2252,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-22</span>
+                        <span title="Last commit date" class="label label-default">2018-07-22</span>
                       </td>
                       <td>
                         <a href="/p/care_o_bot_robot">care_o_bot_robot</a>
@@ -2275,7 +2289,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-22</span>
+                        <span title="Last commit date" class="label label-default">2018-07-22</span>
                       </td>
                       <td>
                         <a href="/p/care_o_bot_simulation">care_o_bot_simulation</a>
@@ -2563,25 +2577,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -2611,7 +2635,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-10</span>
+                        <span title="Last commit date" class="label label-default">2018-06-10</span>
                       </td>
                       <td>
                         <a href="/p/ca_tools">ca_tools</a>
@@ -2648,7 +2672,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration">calibration</a>
@@ -2693,7 +2717,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_estimation">calibration_estimation</a>
@@ -2736,7 +2760,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_launch">calibration_launch</a>
@@ -2779,7 +2803,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_msgs">calibration_msgs</a>
@@ -2824,7 +2848,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_setup_helper">calibration_setup_helper</a>
@@ -3127,7 +3151,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-10</span>
+                        <span title="Last commit date" class="label label-default">2018-05-10</span>
                       </td>
                       <td>
                         <a href="/p/camera_calibration">camera_calibration</a>
@@ -3170,7 +3194,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-05</span>
+                        <span title="Last commit date" class="label label-default">2017-11-05</span>
                       </td>
                       <td>
                         <a href="/p/camera_calibration_parsers">camera_calibration_parsers</a>
@@ -3251,7 +3275,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-05</span>
+                        <span title="Last commit date" class="label label-default">2017-11-05</span>
                       </td>
                       <td>
                         <a href="/p/camera_info_manager">camera_info_manager</a>
@@ -3302,7 +3326,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-17</span>
+                        <span title="Last commit date" class="label label-default">2016-08-17</span>
                       </td>
                       <td>
                         <a href="/p/camera_info_manager_py">camera_info_manager_py</a>
@@ -3369,7 +3393,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-30</span>
+                        <span title="Last commit date" class="label label-default">2018-08-30</span>
                       </td>
                       <td>
                         <a href="/p/camera_umd">camera_umd</a>
@@ -3406,7 +3430,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-22</span>
+                        <span title="Last commit date" class="label label-default">2018-06-22</span>
                       </td>
                       <td>
                         <a href="/p/can_msgs">can_msgs</a>
@@ -3443,7 +3467,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-22</span>
+                        <span title="Last commit date" class="label label-default">2018-06-22</span>
                       </td>
                       <td>
                         <a href="/p/canopen_402">canopen_402</a>
@@ -3480,7 +3504,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-22</span>
+                        <span title="Last commit date" class="label label-default">2018-06-22</span>
                       </td>
                       <td>
                         <a href="/p/canopen_chain_node">canopen_chain_node</a>
@@ -3517,7 +3541,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-22</span>
+                        <span title="Last commit date" class="label label-default">2018-06-22</span>
                       </td>
                       <td>
                         <a href="/p/canopen_master">canopen_master</a>
@@ -3554,7 +3578,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-22</span>
+                        <span title="Last commit date" class="label label-default">2018-06-22</span>
                       </td>
                       <td>
                         <a href="/p/canopen_motor_node">canopen_motor_node</a>
@@ -3591,7 +3615,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-08-27</span>
+                        <span title="Last commit date" class="label label-default">2015-08-27</span>
                       </td>
                       <td>
                         <a href="/p/capabilities">capabilities</a>
@@ -3963,25 +3987,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -4011,7 +4045,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-10</span>
+                        <span title="Last commit date" class="label label-default">2018-06-10</span>
                       </td>
                       <td>
                         <a href="/p/ca_tools">ca_tools</a>
@@ -4048,7 +4082,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration">calibration</a>
@@ -4093,7 +4127,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_estimation">calibration_estimation</a>
@@ -4136,7 +4170,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_launch">calibration_launch</a>
@@ -4179,7 +4213,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_msgs">calibration_msgs</a>
@@ -4224,7 +4258,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_setup_helper">calibration_setup_helper</a>
@@ -4267,7 +4301,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-27</span>
+                        <span title="Last commit date" class="label label-default">2018-07-27</span>
                       </td>
                       <td>
                         <a href="/p/caljob_creator">caljob_creator</a>
@@ -4488,7 +4522,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-26</span>
+                        <span title="Last commit date" class="label label-default">2017-12-26</span>
                       </td>
                       <td>
                         <a href="/p/camera1394">camera1394</a>
@@ -4533,7 +4567,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-22</span>
+                        <span title="Last commit date" class="label label-default">2018-02-22</span>
                       </td>
                       <td>
                         <a href="/p/camera1394stereo">camera1394stereo</a>
@@ -4594,7 +4628,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-10</span>
+                        <span title="Last commit date" class="label label-default">2018-05-10</span>
                       </td>
                       <td>
                         <a href="/p/camera_calibration">camera_calibration</a>
@@ -4637,7 +4671,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-05</span>
+                        <span title="Last commit date" class="label label-default">2017-11-05</span>
                       </td>
                       <td>
                         <a href="/p/camera_calibration_parsers">camera_calibration_parsers</a>
@@ -4718,7 +4752,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-05</span>
+                        <span title="Last commit date" class="label label-default">2017-11-05</span>
                       </td>
                       <td>
                         <a href="/p/camera_info_manager">camera_info_manager</a>
@@ -4769,7 +4803,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-17</span>
+                        <span title="Last commit date" class="label label-default">2016-08-17</span>
                       </td>
                       <td>
                         <a href="/p/camera_info_manager_py">camera_info_manager_py</a>
@@ -4816,7 +4850,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-05-30</span>
+                        <span title="Last commit date" class="label label-default">2016-05-30</span>
                       </td>
                       <td>
                         <a href="/p/camera_pose_calibration">camera_pose_calibration</a>
@@ -4853,7 +4887,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-30</span>
+                        <span title="Last commit date" class="label label-default">2018-08-30</span>
                       </td>
                       <td>
                         <a href="/p/camera_umd">camera_umd</a>
@@ -4890,7 +4924,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-22</span>
+                        <span title="Last commit date" class="label label-default">2018-06-22</span>
                       </td>
                       <td>
                         <a href="/p/can_msgs">can_msgs</a>
@@ -4927,7 +4961,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-22</span>
+                        <span title="Last commit date" class="label label-default">2018-06-22</span>
                       </td>
                       <td>
                         <a href="/p/canopen_402">canopen_402</a>
@@ -4964,7 +4998,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-22</span>
+                        <span title="Last commit date" class="label label-default">2018-06-22</span>
                       </td>
                       <td>
                         <a href="/p/canopen_chain_node">canopen_chain_node</a>
@@ -5001,7 +5035,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-22</span>
+                        <span title="Last commit date" class="label label-default">2018-06-22</span>
                       </td>
                       <td>
                         <a href="/p/canopen_master">canopen_master</a>
@@ -5038,7 +5072,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-22</span>
+                        <span title="Last commit date" class="label label-default">2018-06-22</span>
                       </td>
                       <td>
                         <a href="/p/canopen_motor_node">canopen_motor_node</a>
@@ -5075,7 +5109,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-08-27</span>
+                        <span title="Last commit date" class="label label-default">2015-08-27</span>
                       </td>
                       <td>
                         <a href="/p/capabilities">capabilities</a>
@@ -5116,7 +5150,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-07</span>
+                        <span title="Last commit date" class="label label-default">2018-01-07</span>
                       </td>
                       <td>
                         <a href="/p/care_o_bot">care_o_bot</a>
@@ -5153,7 +5187,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-07</span>
+                        <span title="Last commit date" class="label label-default">2018-01-07</span>
                       </td>
                       <td>
                         <a href="/p/care_o_bot_desktop">care_o_bot_desktop</a>
@@ -5190,7 +5224,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-07</span>
+                        <span title="Last commit date" class="label label-default">2018-01-07</span>
                       </td>
                       <td>
                         <a href="/p/care_o_bot_robot">care_o_bot_robot</a>
@@ -5227,7 +5261,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-07</span>
+                        <span title="Last commit date" class="label label-default">2018-01-07</span>
                       </td>
                       <td>
                         <a href="/p/care_o_bot_simulation">care_o_bot_simulation</a>
@@ -5515,25 +5549,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -5563,7 +5607,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-10</span>
+                        <span title="Last commit date" class="label label-default">2018-06-10</span>
                       </td>
                       <td>
                         <a href="/p/ca_tools">ca_tools</a>
@@ -5600,7 +5644,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration">calibration</a>
@@ -5645,7 +5689,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_estimation">calibration_estimation</a>
@@ -5688,7 +5732,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_launch">calibration_launch</a>
@@ -5731,7 +5775,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_msgs">calibration_msgs</a>
@@ -5776,7 +5820,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_setup_helper">calibration_setup_helper</a>
@@ -5819,7 +5863,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-10-26</span>
+                        <span title="Last commit date" class="label label-default">2017-10-26</span>
                       </td>
                       <td>
                         <a href="/p/caljob_creator">caljob_creator</a>
@@ -5860,7 +5904,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-06-02</span>
+                        <span title="Last commit date" class="label label-default">2017-06-02</span>
                       </td>
                       <td>
                         <a href="/p/calvin_bringup">calvin_bringup</a>
@@ -5901,7 +5945,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-06-02</span>
+                        <span title="Last commit date" class="label label-default">2017-06-02</span>
                       </td>
                       <td>
                         <a href="/p/calvin_description">calvin_description</a>
@@ -5942,7 +5986,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-06-02</span>
+                        <span title="Last commit date" class="label label-default">2017-06-02</span>
                       </td>
                       <td>
                         <a href="/p/calvin_gazebo">calvin_gazebo</a>
@@ -5983,7 +6027,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-06-02</span>
+                        <span title="Last commit date" class="label label-default">2017-06-02</span>
                       </td>
                       <td>
                         <a href="/p/calvin_joint_commander">calvin_joint_commander</a>
@@ -6024,7 +6068,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-06-02</span>
+                        <span title="Last commit date" class="label label-default">2017-06-02</span>
                       </td>
                       <td>
                         <a href="/p/calvin_moveit_config">calvin_moveit_config</a>
@@ -6065,7 +6109,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-06-02</span>
+                        <span title="Last commit date" class="label label-default">2017-06-02</span>
                       </td>
                       <td>
                         <a href="/p/calvin_msgs">calvin_msgs</a>
@@ -6102,7 +6146,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-06-02</span>
+                        <span title="Last commit date" class="label label-default">2017-06-02</span>
                       </td>
                       <td>
                         <a href="/p/calvin_pick_n_place">calvin_pick_n_place</a>
@@ -6143,7 +6187,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-06-02</span>
+                        <span title="Last commit date" class="label label-default">2017-06-02</span>
                       </td>
                       <td>
                         <a href="/p/calvin_pick_server">calvin_pick_server</a>
@@ -6184,7 +6228,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-06-02</span>
+                        <span title="Last commit date" class="label label-default">2017-06-02</span>
                       </td>
                       <td>
                         <a href="/p/calvin_robot">calvin_robot</a>
@@ -6225,7 +6269,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-26</span>
+                        <span title="Last commit date" class="label label-default">2017-12-26</span>
                       </td>
                       <td>
                         <a href="/p/camera1394">camera1394</a>
@@ -6270,7 +6314,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-10-19</span>
+                        <span title="Last commit date" class="label label-default">2015-10-19</span>
                       </td>
                       <td>
                         <a href="/p/camera1394stereo">camera1394stereo</a>
@@ -6331,7 +6375,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-10</span>
+                        <span title="Last commit date" class="label label-default">2018-05-10</span>
                       </td>
                       <td>
                         <a href="/p/camera_calibration">camera_calibration</a>
@@ -6374,7 +6418,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-05</span>
+                        <span title="Last commit date" class="label label-default">2017-11-05</span>
                       </td>
                       <td>
                         <a href="/p/camera_calibration_parsers">camera_calibration_parsers</a>
@@ -6435,7 +6479,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-15</span>
+                        <span title="Last commit date" class="label label-default">2018-04-15</span>
                       </td>
                       <td>
                         <a href="/p/camera_handler">camera_handler</a>
@@ -6472,7 +6516,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-05</span>
+                        <span title="Last commit date" class="label label-default">2017-11-05</span>
                       </td>
                       <td>
                         <a href="/p/camera_info_manager">camera_info_manager</a>
@@ -6523,7 +6567,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-17</span>
+                        <span title="Last commit date" class="label label-default">2016-08-17</span>
                       </td>
                       <td>
                         <a href="/p/camera_info_manager_py">camera_info_manager_py</a>
@@ -6570,7 +6614,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-05-30</span>
+                        <span title="Last commit date" class="label label-default">2016-05-30</span>
                       </td>
                       <td>
                         <a href="/p/camera_pose_calibration">camera_pose_calibration</a>
@@ -6607,7 +6651,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-30</span>
+                        <span title="Last commit date" class="label label-default">2018-08-30</span>
                       </td>
                       <td>
                         <a href="/p/camera_umd">camera_umd</a>
@@ -6644,7 +6688,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/can_msgs">can_msgs</a>
@@ -6681,7 +6725,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/canopen_402">canopen_402</a>
@@ -6718,7 +6762,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/canopen_chain_node">canopen_chain_node</a>
@@ -6755,7 +6799,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/canopen_master">canopen_master</a>
@@ -6792,7 +6836,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/canopen_motor_node">canopen_motor_node</a>
@@ -6829,7 +6873,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-08-27</span>
+                        <span title="Last commit date" class="label label-default">2015-08-27</span>
                       </td>
                       <td>
                         <a href="/p/capabilities">capabilities</a>
@@ -6870,7 +6914,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-07</span>
+                        <span title="Last commit date" class="label label-default">2018-01-07</span>
                       </td>
                       <td>
                         <a href="/p/care_o_bot">care_o_bot</a>
@@ -6907,7 +6951,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-07</span>
+                        <span title="Last commit date" class="label label-default">2018-01-07</span>
                       </td>
                       <td>
                         <a href="/p/care_o_bot_desktop">care_o_bot_desktop</a>
@@ -6944,7 +6988,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-07</span>
+                        <span title="Last commit date" class="label label-default">2018-01-07</span>
                       </td>
                       <td>
                         <a href="/p/care_o_bot_robot">care_o_bot_robot</a>
@@ -6981,7 +7025,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-07</span>
+                        <span title="Last commit date" class="label label-default">2018-01-07</span>
                       </td>
                       <td>
                         <a href="/p/care_o_bot_simulation">care_o_bot_simulation</a>
@@ -7018,7 +7062,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-03</span>
+                        <span title="Last commit date" class="label label-default">2016-03-03</span>
                       </td>
                       <td>
                         <a href="/p/carl_bot">carl_bot</a>
@@ -7055,7 +7099,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-03</span>
+                        <span title="Last commit date" class="label label-default">2016-03-03</span>
                       </td>
                       <td>
                         <a href="/p/carl_bringup">carl_bringup</a>
@@ -7092,7 +7136,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-03</span>
+                        <span title="Last commit date" class="label label-default">2016-03-03</span>
                       </td>
                       <td>
                         <a href="/p/carl_demos">carl_demos</a>
@@ -7129,7 +7173,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-03</span>
+                        <span title="Last commit date" class="label label-default">2016-03-03</span>
                       </td>
                       <td>
                         <a href="/p/carl_description">carl_description</a>
@@ -7166,7 +7210,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-03</span>
+                        <span title="Last commit date" class="label label-default">2016-03-03</span>
                       </td>
                       <td>
                         <a href="/p/carl_dynamixel">carl_dynamixel</a>
@@ -7203,7 +7247,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-04</span>
+                        <span title="Last commit date" class="label label-default">2016-03-04</span>
                       </td>
                       <td>
                         <a href="/p/carl_estop">carl_estop</a>
@@ -7240,7 +7284,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-03</span>
+                        <span title="Last commit date" class="label label-default">2016-03-03</span>
                       </td>
                       <td>
                         <a href="/p/carl_interactive_manipulation">carl_interactive_manipulation</a>
@@ -7277,7 +7321,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-01-11</span>
+                        <span title="Last commit date" class="label label-default">2017-01-11</span>
                       </td>
                       <td>
                         <a href="/p/carl_moveit">carl_moveit</a>
@@ -7314,7 +7358,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-03</span>
+                        <span title="Last commit date" class="label label-default">2016-03-03</span>
                       </td>
                       <td>
                         <a href="/p/carl_navigation">carl_navigation</a>
@@ -7351,7 +7395,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-03</span>
+                        <span title="Last commit date" class="label label-default">2016-03-03</span>
                       </td>
                       <td>
                         <a href="/p/carl_phidgets">carl_phidgets</a>
@@ -7388,7 +7432,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-04</span>
+                        <span title="Last commit date" class="label label-default">2016-03-04</span>
                       </td>
                       <td>
                         <a href="/p/carl_safety">carl_safety</a>
@@ -7425,7 +7469,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-03</span>
+                        <span title="Last commit date" class="label label-default">2016-03-03</span>
                       </td>
                       <td>
                         <a href="/p/carl_teleop">carl_teleop</a>
@@ -7462,7 +7506,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-03</span>
+                        <span title="Last commit date" class="label label-default">2016-03-03</span>
                       </td>
                       <td>
                         <a href="/p/carl_tools">carl_tools</a>
@@ -7490,25 +7534,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -8529,25 +8583,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -8577,7 +8641,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-10</span>
+                        <span title="Last commit date" class="label label-default">2018-06-10</span>
                       </td>
                       <td>
                         <a href="/p/ca_tools">ca_tools</a>
@@ -8614,7 +8678,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration">calibration</a>
@@ -8659,7 +8723,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_estimation">calibration_estimation</a>
@@ -8702,7 +8766,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_launch">calibration_launch</a>
@@ -8745,7 +8809,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_msgs">calibration_msgs</a>
@@ -8790,7 +8854,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_setup_helper">calibration_setup_helper</a>
@@ -9093,7 +9157,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-10</span>
+                        <span title="Last commit date" class="label label-default">2018-05-10</span>
                       </td>
                       <td>
                         <a href="/p/camera_calibration">camera_calibration</a>
@@ -9136,7 +9200,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-05</span>
+                        <span title="Last commit date" class="label label-default">2017-11-05</span>
                       </td>
                       <td>
                         <a href="/p/camera_calibration_parsers">camera_calibration_parsers</a>
@@ -9197,7 +9261,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-15</span>
+                        <span title="Last commit date" class="label label-default">2018-04-15</span>
                       </td>
                       <td>
                         <a href="/p/camera_handler">camera_handler</a>
@@ -9234,7 +9298,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-05</span>
+                        <span title="Last commit date" class="label label-default">2017-11-05</span>
                       </td>
                       <td>
                         <a href="/p/camera_info_manager">camera_info_manager</a>
@@ -9285,7 +9349,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-17</span>
+                        <span title="Last commit date" class="label label-default">2016-08-17</span>
                       </td>
                       <td>
                         <a href="/p/camera_info_manager_py">camera_info_manager_py</a>
@@ -9352,7 +9416,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-30</span>
+                        <span title="Last commit date" class="label label-default">2018-08-30</span>
                       </td>
                       <td>
                         <a href="/p/camera_umd">camera_umd</a>
@@ -9389,7 +9453,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-08-30</span>
+                        <span title="Last commit date" class="label label-default">2017-08-30</span>
                       </td>
                       <td>
                         <a href="/p/can_msgs">can_msgs</a>
@@ -9426,7 +9490,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-08-30</span>
+                        <span title="Last commit date" class="label label-default">2017-08-30</span>
                       </td>
                       <td>
                         <a href="/p/canopen_402">canopen_402</a>
@@ -9463,7 +9527,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-08-30</span>
+                        <span title="Last commit date" class="label label-default">2017-08-30</span>
                       </td>
                       <td>
                         <a href="/p/canopen_chain_node">canopen_chain_node</a>
@@ -9500,7 +9564,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-08-30</span>
+                        <span title="Last commit date" class="label label-default">2017-08-30</span>
                       </td>
                       <td>
                         <a href="/p/canopen_master">canopen_master</a>
@@ -9537,7 +9601,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-08-30</span>
+                        <span title="Last commit date" class="label label-default">2017-08-30</span>
                       </td>
                       <td>
                         <a href="/p/canopen_motor_node">canopen_motor_node</a>
@@ -9774,7 +9838,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-04</span>
+                        <span title="Last commit date" class="label label-default">2016-03-04</span>
                       </td>
                       <td>
                         <a href="/p/carl_estop">carl_estop</a>
@@ -9942,25 +10006,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -10010,7 +10084,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration">calibration</a>
@@ -10055,7 +10129,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_estimation">calibration_estimation</a>
@@ -10098,7 +10172,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_launch">calibration_launch</a>
@@ -10141,7 +10215,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_msgs">calibration_msgs</a>
@@ -10186,7 +10260,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-09-25</span>
+                        <span title="Last commit date" class="label label-default">2016-09-25</span>
                       </td>
                       <td>
                         <a href="/p/calibration_setup_helper">calibration_setup_helper</a>
@@ -10249,7 +10323,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-08-19</span>
+                        <span title="Last commit date" class="label label-default">2015-08-19</span>
                       </td>
                       <td>
                         <a href="/p/calvin_bringup">calvin_bringup</a>
@@ -10290,7 +10364,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-08-19</span>
+                        <span title="Last commit date" class="label label-default">2015-08-19</span>
                       </td>
                       <td>
                         <a href="/p/calvin_description">calvin_description</a>
@@ -10331,7 +10405,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-08-19</span>
+                        <span title="Last commit date" class="label label-default">2015-08-19</span>
                       </td>
                       <td>
                         <a href="/p/calvin_gazebo">calvin_gazebo</a>
@@ -10372,7 +10446,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-08-19</span>
+                        <span title="Last commit date" class="label label-default">2015-08-19</span>
                       </td>
                       <td>
                         <a href="/p/calvin_joint_commander">calvin_joint_commander</a>
@@ -10413,7 +10487,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-08-19</span>
+                        <span title="Last commit date" class="label label-default">2015-08-19</span>
                       </td>
                       <td>
                         <a href="/p/calvin_moveit_config">calvin_moveit_config</a>
@@ -10454,7 +10528,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-08-19</span>
+                        <span title="Last commit date" class="label label-default">2015-08-19</span>
                       </td>
                       <td>
                         <a href="/p/calvin_msgs">calvin_msgs</a>
@@ -10491,7 +10565,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-08-19</span>
+                        <span title="Last commit date" class="label label-default">2015-08-19</span>
                       </td>
                       <td>
                         <a href="/p/calvin_pick_n_place">calvin_pick_n_place</a>
@@ -10532,7 +10606,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-08-19</span>
+                        <span title="Last commit date" class="label label-default">2015-08-19</span>
                       </td>
                       <td>
                         <a href="/p/calvin_pick_server">calvin_pick_server</a>
@@ -10573,7 +10647,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-08-19</span>
+                        <span title="Last commit date" class="label label-default">2015-08-19</span>
                       </td>
                       <td>
                         <a href="/p/calvin_robot">calvin_robot</a>
@@ -10614,7 +10688,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-04-29</span>
+                        <span title="Last commit date" class="label label-default">2014-04-29</span>
                       </td>
                       <td>
                         <a href="/p/camera1394">camera1394</a>
@@ -10659,7 +10733,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-01-15</span>
+                        <span title="Last commit date" class="label label-default">2014-01-15</span>
                       </td>
                       <td>
                         <a href="/p/camera1394stereo">camera1394stereo</a>
@@ -10700,7 +10774,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-10-03</span>
+                        <span title="Last commit date" class="label label-default">2014-10-03</span>
                       </td>
                       <td>
                         <a href="/p/camera_aravis">camera_aravis</a>
@@ -10737,7 +10811,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-05-16</span>
+                        <span title="Last commit date" class="label label-default">2015-05-16</span>
                       </td>
                       <td>
                         <a href="/p/camera_calibration">camera_calibration</a>
@@ -10780,7 +10854,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-05</span>
+                        <span title="Last commit date" class="label label-default">2017-11-05</span>
                       </td>
                       <td>
                         <a href="/p/camera_calibration_parsers">camera_calibration_parsers</a>
@@ -10841,7 +10915,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-15</span>
+                        <span title="Last commit date" class="label label-default">2018-04-15</span>
                       </td>
                       <td>
                         <a href="/p/camera_handler">camera_handler</a>
@@ -10878,7 +10952,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-05</span>
+                        <span title="Last commit date" class="label label-default">2017-11-05</span>
                       </td>
                       <td>
                         <a href="/p/camera_info_manager">camera_info_manager</a>
@@ -10929,7 +11003,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-17</span>
+                        <span title="Last commit date" class="label label-default">2016-08-17</span>
                       </td>
                       <td>
                         <a href="/p/camera_info_manager_py">camera_info_manager_py</a>
@@ -10996,7 +11070,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-30</span>
+                        <span title="Last commit date" class="label label-default">2018-08-30</span>
                       </td>
                       <td>
                         <a href="/p/camera_umd">camera_umd</a>
@@ -11133,7 +11207,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-08-27</span>
+                        <span title="Last commit date" class="label label-default">2015-08-27</span>
                       </td>
                       <td>
                         <a href="/p/capabilities">capabilities</a>
@@ -11174,7 +11248,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-03-24</span>
+                        <span title="Last commit date" class="label label-default">2014-03-24</span>
                       </td>
                       <td>
                         <a href="/p/care_o_bot">care_o_bot</a>
@@ -11231,7 +11305,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-03-24</span>
+                        <span title="Last commit date" class="label label-default">2014-03-24</span>
                       </td>
                       <td>
                         <a href="/p/care_o_bot_robot">care_o_bot_robot</a>
@@ -11268,7 +11342,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-03-24</span>
+                        <span title="Last commit date" class="label label-default">2014-03-24</span>
                       </td>
                       <td>
                         <a href="/p/care_o_bot_simulation">care_o_bot_simulation</a>
@@ -11625,7 +11699,7 @@
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-10-04</em>
+          <em>generated on 2018-10-08</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

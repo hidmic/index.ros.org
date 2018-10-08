@@ -21,8 +21,12 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-
+    
     <script src=/js/distro_switch.js></script>
+
+    <!-- Pre-fetch search index files -->
+    
+    
 </head>
 
 
@@ -75,21 +79,11 @@
                   </button>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                     
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><a href="/doc/ros2_overview">ROS2 Overview</a></li>
-                        
-                      
+                    <li>
+                      <a href="/doc/ros2_overview">
+                        ROS2 Overview
+                      </a>
+                    </li>
                     
                     <li class="hidden" class="divider"></li>
 
@@ -154,11 +148,26 @@
       <ol class="breadcrumb">
         <li><a href="/">Home</a></li>
         
-        <li class="active"></li>
+        
+        
+
+        
+
+        
+          <li><a href="/doc/ros2_overview/">ROS2 Overview</a></li>
+          
+            <li class="active">Quality-Guide</li>
+          
+        
       </ol>
+      
+      <a type="button" href="https://github.com/ros2/ros2_documentation/edit/master/Quality-Guide.md" class="btn btn-success pull-right">
+        Edit on Github
+      </a>
+      
     </div>
     <div class="row">
-      <div class="col-md-10">
+      <div class="col-md-10">  
         <p>This section tries to give guidance about how to improve the software quality of ROS2 packages. The guide uses a pattern language based approach to improve the readers experience (&quot;read little, understand fast, understand much, apply easily&quot;).</p>
 
 <p><strong>What this sections is about:</strong></p>
@@ -408,7 +417,7 @@ $(document).ready(
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-10-04</em>
+          <em>generated on 2018-10-08</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

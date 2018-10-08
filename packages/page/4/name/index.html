@@ -21,8 +21,12 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-
+    
     <script src=/js/distro_switch.js></script>
+
+    <!-- Pre-fetch search index files -->
+    
+    
 </head>
 
 
@@ -75,21 +79,11 @@
                   </button>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                     
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><a href="/doc/ros2_overview">ROS2 Overview</a></li>
-                        
-                      
+                    <li>
+                      <a href="/doc/ros2_overview">
+                        ROS2 Overview
+                      </a>
+                    </li>
                     
                     <li class="hidden" class="divider"></li>
 
@@ -219,25 +213,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -1258,25 +1262,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -1386,7 +1400,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-21</span>
+                        <span title="Last commit date" class="label label-default">2018-05-21</span>
                       </td>
                       <td>
                         <a href="/p/ar_track_alvar">ar_track_alvar</a>
@@ -1447,7 +1461,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-21</span>
+                        <span title="Last commit date" class="label label-default">2018-05-21</span>
                       </td>
                       <td>
                         <a href="/p/ar_track_alvar_msgs">ar_track_alvar_msgs</a>
@@ -1548,7 +1562,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix">arbotix</a>
@@ -1585,7 +1599,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_controllers">arbotix_controllers</a>
@@ -1626,7 +1640,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_firmware">arbotix_firmware</a>
@@ -1667,7 +1681,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_msgs">arbotix_msgs</a>
@@ -1708,7 +1722,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_python">arbotix_python</a>
@@ -1749,7 +1763,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_sensors">arbotix_sensors</a>
@@ -2461,25 +2475,35 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -2589,7 +2613,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-21</span>
+                        <span title="Last commit date" class="label label-default">2018-05-21</span>
                       </td>
                       <td>
                         <a href="/p/ar_track_alvar">ar_track_alvar</a>
@@ -2650,7 +2674,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-21</span>
+                        <span title="Last commit date" class="label label-default">2018-05-21</span>
                       </td>
                       <td>
                         <a href="/p/ar_track_alvar_msgs">ar_track_alvar_msgs</a>
@@ -2751,7 +2775,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix">arbotix</a>
@@ -2788,7 +2812,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_controllers">arbotix_controllers</a>
@@ -2829,7 +2853,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_firmware">arbotix_firmware</a>
@@ -2870,7 +2894,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_msgs">arbotix_msgs</a>
@@ -2911,7 +2935,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_python">arbotix_python</a>
@@ -2952,7 +2976,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_sensors">arbotix_sensors</a>
@@ -3664,25 +3688,35 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -3792,7 +3826,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-21</span>
+                        <span title="Last commit date" class="label label-default">2018-05-21</span>
                       </td>
                       <td>
                         <a href="/p/ar_track_alvar">ar_track_alvar</a>
@@ -3833,7 +3867,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-05-25</span>
+                        <span title="Last commit date" class="label label-default">2017-05-25</span>
                       </td>
                       <td>
                         <a href="/p/ar_track_alvar_metapkg">ar_track_alvar_metapkg</a>
@@ -3870,7 +3904,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-21</span>
+                        <span title="Last commit date" class="label label-default">2018-05-21</span>
                       </td>
                       <td>
                         <a href="/p/ar_track_alvar_msgs">ar_track_alvar_msgs</a>
@@ -3971,7 +4005,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix">arbotix</a>
@@ -4008,7 +4042,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_controllers">arbotix_controllers</a>
@@ -4049,7 +4083,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_firmware">arbotix_firmware</a>
@@ -4090,7 +4124,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_msgs">arbotix_msgs</a>
@@ -4131,7 +4165,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_python">arbotix_python</a>
@@ -4172,7 +4206,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_sensors">arbotix_sensors</a>
@@ -4233,7 +4267,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-12-06</span>
+                        <span title="Last commit date" class="label label-default">2016-12-06</span>
                       </td>
                       <td>
                         <a href="/p/ardrone_autonomy">ardrone_autonomy</a>
@@ -4272,7 +4306,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-16</span>
+                        <span title="Last commit date" class="label label-default">2018-07-16</span>
                       </td>
                       <td>
                         <a href="/p/arduino_daq">arduino_daq</a>
@@ -4349,7 +4383,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-21</span>
+                        <span title="Last commit date" class="label label-default">2018-04-21</span>
                       </td>
                       <td>
                         <a href="/p/arm_navigation_msgs">arm_navigation_msgs</a>
@@ -4386,7 +4420,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-22</span>
+                        <span title="Last commit date" class="label label-default">2018-01-22</span>
                       </td>
                       <td>
                         <a href="/p/armadillo_matrix">armadillo_matrix</a>
@@ -4447,7 +4481,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-11-24</span>
+                        <span title="Last commit date" class="label label-default">2016-11-24</span>
                       </td>
                       <td>
                         <a href="/p/arni_core">arni_core</a>
@@ -4490,7 +4524,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-11-24</span>
+                        <span title="Last commit date" class="label label-default">2016-11-24</span>
                       </td>
                       <td>
                         <a href="/p/arni_countermeasure">arni_countermeasure</a>
@@ -4531,7 +4565,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-11-24</span>
+                        <span title="Last commit date" class="label label-default">2016-11-24</span>
                       </td>
                       <td>
                         <a href="/p/arni_gui">arni_gui</a>
@@ -4572,7 +4606,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-11-24</span>
+                        <span title="Last commit date" class="label label-default">2016-11-24</span>
                       </td>
                       <td>
                         <a href="/p/arni_msgs">arni_msgs</a>
@@ -4613,7 +4647,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-11-24</span>
+                        <span title="Last commit date" class="label label-default">2016-11-24</span>
                       </td>
                       <td>
                         <a href="/p/arni_nodeinterface">arni_nodeinterface</a>
@@ -4654,7 +4688,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-11-24</span>
+                        <span title="Last commit date" class="label label-default">2016-11-24</span>
                       </td>
                       <td>
                         <a href="/p/arni_processing">arni_processing</a>
@@ -4755,7 +4789,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-20</span>
+                        <span title="Last commit date" class="label label-default">2018-04-20</span>
                       </td>
                       <td>
                         <a href="/p/aruco">aruco</a>
@@ -4798,7 +4832,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-10-02</span>
+                        <span title="Last commit date" class="label label-default">2018-10-02</span>
                       </td>
                       <td>
                         <a href="/p/aruco_detect">aruco_detect</a>
@@ -4855,7 +4889,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-20</span>
+                        <span title="Last commit date" class="label label-default">2018-04-20</span>
                       </td>
                       <td>
                         <a href="/p/aruco_msgs">aruco_msgs</a>
@@ -4892,7 +4926,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-20</span>
+                        <span title="Last commit date" class="label label-default">2018-04-20</span>
                       </td>
                       <td>
                         <a href="/p/aruco_ros">aruco_ros</a>
@@ -5075,7 +5109,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-06-27</span>
+                        <span title="Last commit date" class="label label-default">2017-06-27</span>
                       </td>
                       <td>
                         <a href="/p/asr_approx_mvbb">asr_approx_mvbb</a>
@@ -5118,7 +5152,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-10-02</span>
+                        <span title="Last commit date" class="label label-default">2017-10-02</span>
                       </td>
                       <td>
                         <a href="/p/asr_aruco_marker_recognition">asr_aruco_marker_recognition</a>
@@ -5159,7 +5193,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-10-02</span>
+                        <span title="Last commit date" class="label label-default">2017-10-02</span>
                       </td>
                       <td>
                         <a href="/p/asr_calibration_tool_dome">asr_calibration_tool_dome</a>
@@ -5196,7 +5230,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-06-27</span>
+                        <span title="Last commit date" class="label label-default">2017-06-27</span>
                       </td>
                       <td>
                         <a href="/p/asr_cyberglove_lib">asr_cyberglove_lib</a>
@@ -5233,7 +5267,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-06-27</span>
+                        <span title="Last commit date" class="label label-default">2017-06-27</span>
                       </td>
                       <td>
                         <a href="/p/asr_cyberglove_visualization">asr_cyberglove_visualization</a>
@@ -5267,25 +5301,35 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -5315,7 +5359,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-16</span>
+                        <span title="Last commit date" class="label label-default">2018-02-16</span>
                       </td>
                       <td>
                         <a href="/p/apriltags_ros">apriltags_ros</a>
@@ -5372,7 +5416,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-27</span>
+                        <span title="Last commit date" class="label label-default">2016-10-27</span>
                       </td>
                       <td>
                         <a href="/p/ar_pose">ar_pose</a>
@@ -5413,7 +5457,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-27</span>
+                        <span title="Last commit date" class="label label-default">2016-10-27</span>
                       </td>
                       <td>
                         <a href="/p/ar_tools">ar_tools</a>
@@ -5454,7 +5498,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-21</span>
+                        <span title="Last commit date" class="label label-default">2018-05-21</span>
                       </td>
                       <td>
                         <a href="/p/ar_track_alvar">ar_track_alvar</a>
@@ -5515,7 +5559,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-05-25</span>
+                        <span title="Last commit date" class="label label-default">2017-05-25</span>
                       </td>
                       <td>
                         <a href="/p/ar_track_alvar_msgs">ar_track_alvar_msgs</a>
@@ -5556,7 +5600,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-09-21</span>
+                        <span title="Last commit date" class="label label-default">2015-09-21</span>
                       </td>
                       <td>
                         <a href="/p/aras_visual_servo_camera">aras_visual_servo_camera</a>
@@ -5593,7 +5637,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-09-21</span>
+                        <span title="Last commit date" class="label label-default">2015-09-21</span>
                       </td>
                       <td>
                         <a href="/p/aras_visual_servo_controller">aras_visual_servo_controller</a>
@@ -5630,7 +5674,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-09-21</span>
+                        <span title="Last commit date" class="label label-default">2015-09-21</span>
                       </td>
                       <td>
                         <a href="/p/aras_visual_servo_gazebo">aras_visual_servo_gazebo</a>
@@ -5667,7 +5711,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix">arbotix</a>
@@ -5704,7 +5748,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_controllers">arbotix_controllers</a>
@@ -5745,7 +5789,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_firmware">arbotix_firmware</a>
@@ -5786,7 +5830,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_msgs">arbotix_msgs</a>
@@ -5827,7 +5871,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_python">arbotix_python</a>
@@ -5868,7 +5912,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_sensors">arbotix_sensors</a>
@@ -5909,7 +5953,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-02-04</span>
+                        <span title="Last commit date" class="label label-default">2016-02-04</span>
                       </td>
                       <td>
                         <a href="/p/ardrone2islab">ardrone2islab</a>
@@ -5946,7 +5990,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-12-06</span>
+                        <span title="Last commit date" class="label label-default">2016-12-06</span>
                       </td>
                       <td>
                         <a href="/p/ardrone_autonomy">ardrone_autonomy</a>
@@ -6005,7 +6049,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-05-30</span>
+                        <span title="Last commit date" class="label label-default">2016-05-30</span>
                       </td>
                       <td>
                         <a href="/p/argos3d_p100">argos3d_p100</a>
@@ -6042,7 +6086,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-02</span>
+                        <span title="Last commit date" class="label label-default">2018-04-02</span>
                       </td>
                       <td>
                         <a href="/p/arm_components_name_manager">arm_components_name_manager</a>
@@ -6081,7 +6125,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-02-03</span>
+                        <span title="Last commit date" class="label label-default">2017-02-03</span>
                       </td>
                       <td>
                         <a href="/p/arm_navigation_msgs">arm_navigation_msgs</a>
@@ -6138,7 +6182,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/arni">arni</a>
@@ -6179,7 +6223,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/arni_core">arni_core</a>
@@ -6222,7 +6266,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/arni_countermeasure">arni_countermeasure</a>
@@ -6263,7 +6307,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/arni_gui">arni_gui</a>
@@ -6304,7 +6348,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/arni_msgs">arni_msgs</a>
@@ -6345,7 +6389,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/arni_nodeinterface">arni_nodeinterface</a>
@@ -6386,7 +6430,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/arni_processing">arni_processing</a>
@@ -6427,7 +6471,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/arni_rqt_detail_plugin">arni_rqt_detail_plugin</a>
@@ -6468,7 +6512,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/arni_rqt_overview_plugin">arni_rqt_overview_plugin</a>
@@ -6509,7 +6553,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-27</span>
+                        <span title="Last commit date" class="label label-default">2016-10-27</span>
                       </td>
                       <td>
                         <a href="/p/artoolkit">artoolkit</a>
@@ -6550,7 +6594,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-06</span>
+                        <span title="Last commit date" class="label label-default">2018-02-06</span>
                       </td>
                       <td>
                         <a href="/p/aruco">aruco</a>
@@ -6613,7 +6657,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-10-11</span>
+                        <span title="Last commit date" class="label label-default">2015-10-11</span>
                       </td>
                       <td>
                         <a href="/p/aruco_mapping">aruco_mapping</a>
@@ -6656,7 +6700,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-06</span>
+                        <span title="Last commit date" class="label label-default">2018-02-06</span>
                       </td>
                       <td>
                         <a href="/p/aruco_msgs">aruco_msgs</a>
@@ -6693,7 +6737,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-06</span>
+                        <span title="Last commit date" class="label label-default">2018-02-06</span>
                       </td>
                       <td>
                         <a href="/p/aruco_ros">aruco_ros</a>
@@ -6736,7 +6780,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/asctec_hl_comm">asctec_hl_comm</a>
@@ -6793,7 +6837,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/asctec_hl_gps">asctec_hl_gps</a>
@@ -6830,7 +6874,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/asctec_hl_interface">asctec_hl_interface</a>
@@ -6869,7 +6913,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/asctec_mav_framework">asctec_mav_framework</a>
@@ -6906,7 +6950,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-11-27</span>
+                        <span title="Last commit date" class="label label-default">2015-11-27</span>
                       </td>
                       <td>
                         <a href="/p/asmach">asmach</a>
@@ -6953,7 +6997,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-11-27</span>
+                        <span title="Last commit date" class="label label-default">2015-11-27</span>
                       </td>
                       <td>
                         <a href="/p/asmach_tutorials">asmach_tutorials</a>
@@ -6990,7 +7034,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-06-27</span>
+                        <span title="Last commit date" class="label label-default">2017-06-27</span>
                       </td>
                       <td>
                         <a href="/p/asr_approx_mvbb">asr_approx_mvbb</a>
@@ -7033,7 +7077,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-10-02</span>
+                        <span title="Last commit date" class="label label-default">2017-10-02</span>
                       </td>
                       <td>
                         <a href="/p/asr_aruco_marker_recognition">asr_aruco_marker_recognition</a>
@@ -7074,7 +7118,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-10-02</span>
+                        <span title="Last commit date" class="label label-default">2017-10-02</span>
                       </td>
                       <td>
                         <a href="/p/asr_calibration_tool_dome">asr_calibration_tool_dome</a>
@@ -7111,7 +7155,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-06-27</span>
+                        <span title="Last commit date" class="label label-default">2017-06-27</span>
                       </td>
                       <td>
                         <a href="/p/asr_cyberglove_lib">asr_cyberglove_lib</a>
@@ -7148,7 +7192,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-06-27</span>
+                        <span title="Last commit date" class="label label-default">2017-06-27</span>
                       </td>
                       <td>
                         <a href="/p/asr_cyberglove_visualization">asr_cyberglove_visualization</a>
@@ -7182,25 +7226,35 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -8221,25 +8275,35 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -8349,7 +8413,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-21</span>
+                        <span title="Last commit date" class="label label-default">2018-05-21</span>
                       </td>
                       <td>
                         <a href="/p/ar_track_alvar">ar_track_alvar</a>
@@ -8410,7 +8474,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-05-25</span>
+                        <span title="Last commit date" class="label label-default">2017-05-25</span>
                       </td>
                       <td>
                         <a href="/p/ar_track_alvar_msgs">ar_track_alvar_msgs</a>
@@ -8511,7 +8575,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix">arbotix</a>
@@ -8548,7 +8612,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_controllers">arbotix_controllers</a>
@@ -8589,7 +8653,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_firmware">arbotix_firmware</a>
@@ -8630,7 +8694,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_msgs">arbotix_msgs</a>
@@ -8671,7 +8735,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_python">arbotix_python</a>
@@ -8712,7 +8776,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-03</span>
+                        <span title="Last commit date" class="label label-default">2018-04-03</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_sensors">arbotix_sensors</a>
@@ -8773,7 +8837,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-12-06</span>
+                        <span title="Last commit date" class="label label-default">2016-12-06</span>
                       </td>
                       <td>
                         <a href="/p/ardrone_autonomy">ardrone_autonomy</a>
@@ -8912,7 +8976,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/arni">arni</a>
@@ -8953,7 +9017,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/arni_core">arni_core</a>
@@ -8996,7 +9060,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/arni_countermeasure">arni_countermeasure</a>
@@ -9037,7 +9101,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/arni_gui">arni_gui</a>
@@ -9078,7 +9142,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/arni_msgs">arni_msgs</a>
@@ -9119,7 +9183,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/arni_nodeinterface">arni_nodeinterface</a>
@@ -9160,7 +9224,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/arni_processing">arni_processing</a>
@@ -9201,7 +9265,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/arni_rqt_detail_plugin">arni_rqt_detail_plugin</a>
@@ -9242,7 +9306,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/arni_rqt_overview_plugin">arni_rqt_overview_plugin</a>
@@ -9303,7 +9367,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-06</span>
+                        <span title="Last commit date" class="label label-default">2018-02-06</span>
                       </td>
                       <td>
                         <a href="/p/aruco">aruco</a>
@@ -9366,7 +9430,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-10-11</span>
+                        <span title="Last commit date" class="label label-default">2015-10-11</span>
                       </td>
                       <td>
                         <a href="/p/aruco_mapping">aruco_mapping</a>
@@ -9409,7 +9473,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-06</span>
+                        <span title="Last commit date" class="label label-default">2018-02-06</span>
                       </td>
                       <td>
                         <a href="/p/aruco_msgs">aruco_msgs</a>
@@ -9446,7 +9510,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-06</span>
+                        <span title="Last commit date" class="label label-default">2018-02-06</span>
                       </td>
                       <td>
                         <a href="/p/aruco_ros">aruco_ros</a>
@@ -9720,25 +9784,35 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -9768,7 +9842,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-11-08</span>
+                        <span title="Last commit date" class="label label-default">2014-11-08</span>
                       </td>
                       <td>
                         <a href="/p/apriltags_ros">apriltags_ros</a>
@@ -9805,7 +9879,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2013-05-06</span>
+                        <span title="Last commit date" class="label label-default">2013-05-06</span>
                       </td>
                       <td>
                         <a href="/p/ar_kinect">ar_kinect</a>
@@ -9846,7 +9920,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-27</span>
+                        <span title="Last commit date" class="label label-default">2016-10-27</span>
                       </td>
                       <td>
                         <a href="/p/ar_pose">ar_pose</a>
@@ -9887,7 +9961,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-27</span>
+                        <span title="Last commit date" class="label label-default">2016-10-27</span>
                       </td>
                       <td>
                         <a href="/p/ar_tools">ar_tools</a>
@@ -9928,7 +10002,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-01-23</span>
+                        <span title="Last commit date" class="label label-default">2015-01-23</span>
                       </td>
                       <td>
                         <a href="/p/ar_track_alvar">ar_track_alvar</a>
@@ -10069,7 +10143,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-05-28</span>
+                        <span title="Last commit date" class="label label-default">2014-05-28</span>
                       </td>
                       <td>
                         <a href="/p/arbotix">arbotix</a>
@@ -10106,7 +10180,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-05-28</span>
+                        <span title="Last commit date" class="label label-default">2014-05-28</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_controllers">arbotix_controllers</a>
@@ -10147,7 +10221,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-05-28</span>
+                        <span title="Last commit date" class="label label-default">2014-05-28</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_firmware">arbotix_firmware</a>
@@ -10188,7 +10262,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-05-28</span>
+                        <span title="Last commit date" class="label label-default">2014-05-28</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_msgs">arbotix_msgs</a>
@@ -10229,7 +10303,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-05-28</span>
+                        <span title="Last commit date" class="label label-default">2014-05-28</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_python">arbotix_python</a>
@@ -10270,7 +10344,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-05-28</span>
+                        <span title="Last commit date" class="label label-default">2014-05-28</span>
                       </td>
                       <td>
                         <a href="/p/arbotix_sensors">arbotix_sensors</a>
@@ -10331,7 +10405,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-10-17</span>
+                        <span title="Last commit date" class="label label-default">2015-10-17</span>
                       </td>
                       <td>
                         <a href="/p/ardrone_autonomy">ardrone_autonomy</a>
@@ -10390,7 +10464,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-05-30</span>
+                        <span title="Last commit date" class="label label-default">2016-05-30</span>
                       </td>
                       <td>
                         <a href="/p/argos3d_p100">argos3d_p100</a>
@@ -10667,7 +10741,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-27</span>
+                        <span title="Last commit date" class="label label-default">2016-10-27</span>
                       </td>
                       <td>
                         <a href="/p/artoolkit">artoolkit</a>
@@ -10708,7 +10782,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-18</span>
+                        <span title="Last commit date" class="label label-default">2016-10-18</span>
                       </td>
                       <td>
                         <a href="/p/aruco">aruco</a>
@@ -10791,7 +10865,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-18</span>
+                        <span title="Last commit date" class="label label-default">2016-10-18</span>
                       </td>
                       <td>
                         <a href="/p/aruco_msgs">aruco_msgs</a>
@@ -10828,7 +10902,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-18</span>
+                        <span title="Last commit date" class="label label-default">2016-10-18</span>
                       </td>
                       <td>
                         <a href="/p/aruco_ros">aruco_ros</a>
@@ -10871,7 +10945,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/asctec_hl_comm">asctec_hl_comm</a>
@@ -10928,7 +11002,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/asctec_hl_gps">asctec_hl_gps</a>
@@ -10965,7 +11039,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/asctec_hl_interface">asctec_hl_interface</a>
@@ -11004,7 +11078,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/asctec_mav_framework">asctec_mav_framework</a>
@@ -11041,7 +11115,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-11-27</span>
+                        <span title="Last commit date" class="label label-default">2015-11-27</span>
                       </td>
                       <td>
                         <a href="/p/asmach">asmach</a>
@@ -11088,7 +11162,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-11-27</span>
+                        <span title="Last commit date" class="label label-default">2015-11-27</span>
                       </td>
                       <td>
                         <a href="/p/asmach_tutorials">asmach_tutorials</a>
@@ -11281,7 +11355,7 @@ This package is a ROS wrapper for Alvar, an open source AR tag tracking library.
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-10-04</em>
+          <em>generated on 2018-10-08</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

@@ -21,8 +21,12 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-
+    
     <script src=/js/distro_switch.js></script>
+
+    <!-- Pre-fetch search index files -->
+    
+    
 </head>
 
 
@@ -75,21 +79,11 @@
                   </button>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                     
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><a href="/doc/ros2_overview">ROS2 Overview</a></li>
-                        
-                      
+                    <li>
+                      <a href="/doc/ros2_overview">
+                        ROS2 Overview
+                      </a>
+                    </li>
                     
                     <li class="hidden" class="divider"></li>
 
@@ -219,25 +213,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -1258,25 +1262,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -1546,7 +1560,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-24</span>
+                        <span title="Last commit date" class="label label-default">2018-08-24</span>
                       </td>
                       <td>
                         <a href="/p/rplidar_ros">rplidar_ros</a>
@@ -1583,7 +1597,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt">rqt</a>
@@ -1620,7 +1634,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-05-18</span>
+                        <span title="Last commit date" class="label label-default">2017-05-18</span>
                       </td>
                       <td>
                         <a href="/p/rqt_action">rqt_action</a>
@@ -1725,7 +1739,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-03-21</span>
+                        <span title="Last commit date" class="label label-default">2018-03-21</span>
                       </td>
                       <td>
                         <a href="/p/rqt_bag">rqt_bag</a>
@@ -1762,7 +1776,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-27</span>
+                        <span title="Last commit date" class="label label-default">2018-07-27</span>
                       </td>
                       <td>
                         <a href="/p/rqt_bag_exporter">rqt_bag_exporter</a>
@@ -1799,7 +1813,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-03-21</span>
+                        <span title="Last commit date" class="label label-default">2018-03-21</span>
                       </td>
                       <td>
                         <a href="/p/rqt_bag_plugins">rqt_bag_plugins</a>
@@ -1876,7 +1890,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-28</span>
+                        <span title="Last commit date" class="label label-default">2017-04-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt_common_plugins">rqt_common_plugins</a>
@@ -1915,7 +1929,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-24</span>
+                        <span title="Last commit date" class="label label-default">2018-07-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_conman">rqt_conman</a>
@@ -1956,7 +1970,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_console">rqt_console</a>
@@ -1993,7 +2007,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-30</span>
+                        <span title="Last commit date" class="label label-default">2018-09-30</span>
                       </td>
                       <td>
                         <a href="/p/rqt_controller_manager">rqt_controller_manager</a>
@@ -2050,7 +2064,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-24</span>
+                        <span title="Last commit date" class="label label-default">2018-05-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_dep">rqt_dep</a>
@@ -2167,7 +2181,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-17</span>
+                        <span title="Last commit date" class="label label-default">2018-09-17</span>
                       </td>
                       <td>
                         <a href="/p/rqt_graph">rqt_graph</a>
@@ -2226,7 +2240,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gui">rqt_gui</a>
@@ -2263,7 +2277,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gui_cpp">rqt_gui_cpp</a>
@@ -2300,7 +2314,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gui_py">rqt_gui_py</a>
@@ -2337,7 +2351,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-02</span>
+                        <span title="Last commit date" class="label label-default">2018-05-02</span>
                       </td>
                       <td>
                         <a href="/p/rqt_image_view">rqt_image_view</a>
@@ -2374,7 +2388,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-25</span>
+                        <span title="Last commit date" class="label label-default">2018-09-25</span>
                       </td>
                       <td>
                         <a href="/p/rqt_joint_trajectory_controller">rqt_joint_trajectory_controller</a>
@@ -2431,7 +2445,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_launch">rqt_launch</a>
@@ -2492,7 +2506,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_logger_level">rqt_logger_level</a>
@@ -2529,7 +2543,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_moveit">rqt_moveit</a>
@@ -2590,7 +2604,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_msg">rqt_msg</a>
@@ -2653,7 +2667,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_nav_view">rqt_nav_view</a>
@@ -2701,25 +2715,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -2869,7 +2893,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-06</span>
+                        <span title="Last commit date" class="label label-default">2017-12-06</span>
                       </td>
                       <td>
                         <a href="/p/route_network">route_network</a>
@@ -3010,7 +3034,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-24</span>
+                        <span title="Last commit date" class="label label-default">2018-08-24</span>
                       </td>
                       <td>
                         <a href="/p/rplidar_ros">rplidar_ros</a>
@@ -3047,7 +3071,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt">rqt</a>
@@ -3084,7 +3108,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-05-18</span>
+                        <span title="Last commit date" class="label label-default">2017-05-18</span>
                       </td>
                       <td>
                         <a href="/p/rqt_action">rqt_action</a>
@@ -3189,7 +3213,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-03-21</span>
+                        <span title="Last commit date" class="label label-default">2018-03-21</span>
                       </td>
                       <td>
                         <a href="/p/rqt_bag">rqt_bag</a>
@@ -3246,7 +3270,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-03-21</span>
+                        <span title="Last commit date" class="label label-default">2018-03-21</span>
                       </td>
                       <td>
                         <a href="/p/rqt_bag_plugins">rqt_bag_plugins</a>
@@ -3323,7 +3347,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-28</span>
+                        <span title="Last commit date" class="label label-default">2017-04-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt_common_plugins">rqt_common_plugins</a>
@@ -3382,7 +3406,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_console">rqt_console</a>
@@ -3419,7 +3443,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-25</span>
+                        <span title="Last commit date" class="label label-default">2018-09-25</span>
                       </td>
                       <td>
                         <a href="/p/rqt_controller_manager">rqt_controller_manager</a>
@@ -3476,7 +3500,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-24</span>
+                        <span title="Last commit date" class="label label-default">2018-05-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_dep">rqt_dep</a>
@@ -3553,7 +3577,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-26</span>
+                        <span title="Last commit date" class="label label-default">2016-10-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_ez_publisher">rqt_ez_publisher</a>
@@ -3610,7 +3634,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-17</span>
+                        <span title="Last commit date" class="label label-default">2018-09-17</span>
                       </td>
                       <td>
                         <a href="/p/rqt_graph">rqt_graph</a>
@@ -3669,7 +3693,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gui">rqt_gui</a>
@@ -3706,7 +3730,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gui_cpp">rqt_gui_cpp</a>
@@ -3743,7 +3767,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gui_py">rqt_gui_py</a>
@@ -3780,7 +3804,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-02</span>
+                        <span title="Last commit date" class="label label-default">2018-05-02</span>
                       </td>
                       <td>
                         <a href="/p/rqt_image_view">rqt_image_view</a>
@@ -3817,7 +3841,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-26</span>
+                        <span title="Last commit date" class="label label-default">2018-06-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_joint_trajectory_controller">rqt_joint_trajectory_controller</a>
@@ -3874,7 +3898,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_launch">rqt_launch</a>
@@ -3935,7 +3959,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_logger_level">rqt_logger_level</a>
@@ -3972,7 +3996,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_moveit">rqt_moveit</a>
@@ -4033,7 +4057,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_msg">rqt_msg</a>
@@ -4096,7 +4120,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_nav_view">rqt_nav_view</a>
@@ -4144,25 +4168,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -4292,7 +4326,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-13</span>
+                        <span title="Last commit date" class="label label-default">2018-08-13</span>
                       </td>
                       <td>
                         <a href="/p/rotunit_snapshotter">rotunit_snapshotter</a>
@@ -4333,7 +4367,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-06</span>
+                        <span title="Last commit date" class="label label-default">2017-12-06</span>
                       </td>
                       <td>
                         <a href="/p/route_network">route_network</a>
@@ -4474,7 +4508,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-24</span>
+                        <span title="Last commit date" class="label label-default">2018-08-24</span>
                       </td>
                       <td>
                         <a href="/p/rplidar_ros">rplidar_ros</a>
@@ -4511,7 +4545,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt">rqt</a>
@@ -4548,7 +4582,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-05-18</span>
+                        <span title="Last commit date" class="label label-default">2017-05-18</span>
                       </td>
                       <td>
                         <a href="/p/rqt_action">rqt_action</a>
@@ -4613,7 +4647,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-11-24</span>
+                        <span title="Last commit date" class="label label-default">2016-11-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_arni_gui_detail">rqt_arni_gui_detail</a>
@@ -4654,7 +4688,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-11-24</span>
+                        <span title="Last commit date" class="label label-default">2016-11-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_arni_gui_overview">rqt_arni_gui_overview</a>
@@ -4695,7 +4729,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-03-21</span>
+                        <span title="Last commit date" class="label label-default">2018-03-21</span>
                       </td>
                       <td>
                         <a href="/p/rqt_bag">rqt_bag</a>
@@ -4732,7 +4766,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-31</span>
+                        <span title="Last commit date" class="label label-default">2018-05-31</span>
                       </td>
                       <td>
                         <a href="/p/rqt_bag_exporter">rqt_bag_exporter</a>
@@ -4769,7 +4803,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-03-21</span>
+                        <span title="Last commit date" class="label label-default">2018-03-21</span>
                       </td>
                       <td>
                         <a href="/p/rqt_bag_plugins">rqt_bag_plugins</a>
@@ -4806,7 +4840,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-09</span>
+                        <span title="Last commit date" class="label label-default">2016-08-09</span>
                       </td>
                       <td>
                         <a href="/p/rqt_bhand">rqt_bhand</a>
@@ -4863,7 +4897,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-28</span>
+                        <span title="Last commit date" class="label label-default">2017-04-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt_common_plugins">rqt_common_plugins</a>
@@ -4922,7 +4956,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_console">rqt_console</a>
@@ -4959,7 +4993,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-25</span>
+                        <span title="Last commit date" class="label label-default">2018-09-25</span>
                       </td>
                       <td>
                         <a href="/p/rqt_controller_manager">rqt_controller_manager</a>
@@ -5016,7 +5050,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-24</span>
+                        <span title="Last commit date" class="label label-default">2018-05-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_dep">rqt_dep</a>
@@ -5073,7 +5107,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-12</span>
+                        <span title="Last commit date" class="label label-default">2018-01-12</span>
                       </td>
                       <td>
                         <a href="/p/rqt_dyn_tune">rqt_dyn_tune</a>
@@ -5110,7 +5144,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-03-02</span>
+                        <span title="Last commit date" class="label label-default">2018-03-02</span>
                       </td>
                       <td>
                         <a href="/p/rqt_ez_publisher">rqt_ez_publisher</a>
@@ -5147,7 +5181,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-10-26</span>
+                        <span title="Last commit date" class="label label-default">2017-10-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gauges">rqt_gauges</a>
@@ -5184,7 +5218,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-17</span>
+                        <span title="Last commit date" class="label label-default">2018-09-17</span>
                       </td>
                       <td>
                         <a href="/p/rqt_graph">rqt_graph</a>
@@ -5243,7 +5277,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gui">rqt_gui</a>
@@ -5280,7 +5314,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gui_cpp">rqt_gui_cpp</a>
@@ -5317,7 +5351,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gui_py">rqt_gui_py</a>
@@ -5354,7 +5388,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-02</span>
+                        <span title="Last commit date" class="label label-default">2018-05-02</span>
                       </td>
                       <td>
                         <a href="/p/rqt_image_view">rqt_image_view</a>
@@ -5391,7 +5425,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-26</span>
+                        <span title="Last commit date" class="label label-default">2018-06-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_joint_trajectory_controller">rqt_joint_trajectory_controller</a>
@@ -5428,7 +5462,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-13</span>
+                        <span title="Last commit date" class="label label-default">2018-06-13</span>
                       </td>
                       <td>
                         <a href="/p/rqt_joint_trajectory_plot">rqt_joint_trajectory_plot</a>
@@ -5465,7 +5499,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_launch">rqt_launch</a>
@@ -5506,7 +5540,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-04</span>
+                        <span title="Last commit date" class="label label-default">2017-04-04</span>
                       </td>
                       <td>
                         <a href="/p/rqt_launchtree">rqt_launchtree</a>
@@ -5547,7 +5581,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_logger_level">rqt_logger_level</a>
@@ -5584,7 +5618,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_moveit">rqt_moveit</a>
@@ -5645,7 +5679,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_msg">rqt_msg</a>
@@ -5688,7 +5722,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-15</span>
+                        <span title="Last commit date" class="label label-default">2018-01-15</span>
                       </td>
                       <td>
                         <a href="/p/rqt_multiplot">rqt_multiplot</a>
@@ -5731,7 +5765,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_nav_view">rqt_nav_view</a>
@@ -5779,25 +5813,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -5827,7 +5871,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-15</span>
+                        <span title="Last commit date" class="label label-default">2018-04-15</span>
                       </td>
                       <td>
                         <a href="/p/rotors_gazebo">rotors_gazebo</a>
@@ -5864,7 +5908,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-15</span>
+                        <span title="Last commit date" class="label label-default">2018-04-15</span>
                       </td>
                       <td>
                         <a href="/p/rotors_gazebo_plugins">rotors_gazebo_plugins</a>
@@ -5901,7 +5945,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-15</span>
+                        <span title="Last commit date" class="label label-default">2018-04-15</span>
                       </td>
                       <td>
                         <a href="/p/rotors_hil_interface">rotors_hil_interface</a>
@@ -5938,7 +5982,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-15</span>
+                        <span title="Last commit date" class="label label-default">2018-04-15</span>
                       </td>
                       <td>
                         <a href="/p/rotors_joy_interface">rotors_joy_interface</a>
@@ -5975,7 +6019,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-15</span>
+                        <span title="Last commit date" class="label label-default">2018-04-15</span>
                       </td>
                       <td>
                         <a href="/p/rotors_simulator">rotors_simulator</a>
@@ -6012,7 +6056,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-13</span>
+                        <span title="Last commit date" class="label label-default">2018-08-13</span>
                       </td>
                       <td>
                         <a href="/p/rotunit_snapshotter">rotunit_snapshotter</a>
@@ -6053,7 +6097,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-06</span>
+                        <span title="Last commit date" class="label label-default">2017-12-06</span>
                       </td>
                       <td>
                         <a href="/p/route_network">route_network</a>
@@ -6174,7 +6218,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-10</span>
+                        <span title="Last commit date" class="label label-default">2017-04-10</span>
                       </td>
                       <td>
                         <a href="/p/rplidar_python">rplidar_python</a>
@@ -6211,7 +6255,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-24</span>
+                        <span title="Last commit date" class="label label-default">2018-08-24</span>
                       </td>
                       <td>
                         <a href="/p/rplidar_ros">rplidar_ros</a>
@@ -6248,7 +6292,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-28</span>
+                        <span title="Last commit date" class="label label-default">2017-04-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt">rqt</a>
@@ -6285,7 +6329,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-05-18</span>
+                        <span title="Last commit date" class="label label-default">2017-05-18</span>
                       </td>
                       <td>
                         <a href="/p/rqt_action">rqt_action</a>
@@ -6330,7 +6374,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-12</span>
+                        <span title="Last commit date" class="label label-default">2017-11-12</span>
                       </td>
                       <td>
                         <a href="/p/rqt_alliance">rqt_alliance</a>
@@ -6407,7 +6451,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-03-21</span>
+                        <span title="Last commit date" class="label label-default">2018-03-21</span>
                       </td>
                       <td>
                         <a href="/p/rqt_bag">rqt_bag</a>
@@ -6464,7 +6508,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-03-21</span>
+                        <span title="Last commit date" class="label label-default">2018-03-21</span>
                       </td>
                       <td>
                         <a href="/p/rqt_bag_plugins">rqt_bag_plugins</a>
@@ -6501,7 +6545,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-12-15</span>
+                        <span title="Last commit date" class="label label-default">2016-12-15</span>
                       </td>
                       <td>
                         <a href="/p/rqt_bhand">rqt_bhand</a>
@@ -6538,7 +6582,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-05-21</span>
+                        <span title="Last commit date" class="label label-default">2014-05-21</span>
                       </td>
                       <td>
                         <a href="/p/rqt_capabilities">rqt_capabilities</a>
@@ -6575,7 +6619,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-28</span>
+                        <span title="Last commit date" class="label label-default">2017-04-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt_common_plugins">rqt_common_plugins</a>
@@ -6634,7 +6678,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_console">rqt_console</a>
@@ -6671,7 +6715,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-31</span>
+                        <span title="Last commit date" class="label label-default">2018-05-31</span>
                       </td>
                       <td>
                         <a href="/p/rqt_controller_manager">rqt_controller_manager</a>
@@ -6728,7 +6772,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-24</span>
+                        <span title="Last commit date" class="label label-default">2018-05-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_dep">rqt_dep</a>
@@ -6785,7 +6829,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-09-01</span>
+                        <span title="Last commit date" class="label label-default">2017-09-01</span>
                       </td>
                       <td>
                         <a href="/p/rqt_dyn_tune">rqt_dyn_tune</a>
@@ -6822,7 +6866,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-05-23</span>
+                        <span title="Last commit date" class="label label-default">2016-05-23</span>
                       </td>
                       <td>
                         <a href="/p/rqt_ez_publisher">rqt_ez_publisher</a>
@@ -6859,7 +6903,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-10-26</span>
+                        <span title="Last commit date" class="label label-default">2017-10-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gauges">rqt_gauges</a>
@@ -6896,7 +6940,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-17</span>
+                        <span title="Last commit date" class="label label-default">2018-09-17</span>
                       </td>
                       <td>
                         <a href="/p/rqt_graph">rqt_graph</a>
@@ -6935,7 +6979,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-10-17</span>
+                        <span title="Last commit date" class="label label-default">2014-10-17</span>
                       </td>
                       <td>
                         <a href="/p/rqt_graphprofiler">rqt_graphprofiler</a>
@@ -6976,7 +7020,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-28</span>
+                        <span title="Last commit date" class="label label-default">2017-04-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gui">rqt_gui</a>
@@ -7013,7 +7057,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-28</span>
+                        <span title="Last commit date" class="label label-default">2017-04-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gui_cpp">rqt_gui_cpp</a>
@@ -7050,7 +7094,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-28</span>
+                        <span title="Last commit date" class="label label-default">2017-04-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gui_py">rqt_gui_py</a>
@@ -7087,7 +7131,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-02</span>
+                        <span title="Last commit date" class="label label-default">2018-05-02</span>
                       </td>
                       <td>
                         <a href="/p/rqt_image_view">rqt_image_view</a>
@@ -7124,7 +7168,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-07-01</span>
+                        <span title="Last commit date" class="label label-default">2017-07-01</span>
                       </td>
                       <td>
                         <a href="/p/rqt_joint_trajectory_controller">rqt_joint_trajectory_controller</a>
@@ -7161,7 +7205,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-13</span>
+                        <span title="Last commit date" class="label label-default">2018-06-13</span>
                       </td>
                       <td>
                         <a href="/p/rqt_joint_trajectory_plot">rqt_joint_trajectory_plot</a>
@@ -7198,7 +7242,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_launch">rqt_launch</a>
@@ -7239,7 +7283,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-04</span>
+                        <span title="Last commit date" class="label label-default">2017-04-04</span>
                       </td>
                       <td>
                         <a href="/p/rqt_launchtree">rqt_launchtree</a>
@@ -7280,7 +7324,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_logger_level">rqt_logger_level</a>
@@ -7317,7 +7361,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_moveit">rqt_moveit</a>
@@ -7358,7 +7402,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-11</span>
+                        <span title="Last commit date" class="label label-default">2017-12-11</span>
                       </td>
                       <td>
                         <a href="/p/rqt_mrta">rqt_mrta</a>
@@ -7395,7 +7439,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_msg">rqt_msg</a>
@@ -7438,7 +7482,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-15</span>
+                        <span title="Last commit date" class="label label-default">2018-01-15</span>
                       </td>
                       <td>
                         <a href="/p/rqt_multiplot">rqt_multiplot</a>
@@ -7481,7 +7525,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_nav_view">rqt_nav_view</a>
@@ -7518,7 +7562,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-09</span>
+                        <span title="Last commit date" class="label label-default">2018-01-09</span>
                       </td>
                       <td>
                         <a href="/p/rqt_paramedit">rqt_paramedit</a>
@@ -7550,25 +7594,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -8589,25 +8643,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -8637,7 +8701,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-27</span>
+                        <span title="Last commit date" class="label label-default">2017-04-27</span>
                       </td>
                       <td>
                         <a href="/p/rotors_gazebo">rotors_gazebo</a>
@@ -8674,7 +8738,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-27</span>
+                        <span title="Last commit date" class="label label-default">2017-04-27</span>
                       </td>
                       <td>
                         <a href="/p/rotors_gazebo_plugins">rotors_gazebo_plugins</a>
@@ -8711,7 +8775,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-27</span>
+                        <span title="Last commit date" class="label label-default">2017-04-27</span>
                       </td>
                       <td>
                         <a href="/p/rotors_hil_interface">rotors_hil_interface</a>
@@ -8748,7 +8812,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-27</span>
+                        <span title="Last commit date" class="label label-default">2017-04-27</span>
                       </td>
                       <td>
                         <a href="/p/rotors_joy_interface">rotors_joy_interface</a>
@@ -8785,7 +8849,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-27</span>
+                        <span title="Last commit date" class="label label-default">2017-04-27</span>
                       </td>
                       <td>
                         <a href="/p/rotors_simulator">rotors_simulator</a>
@@ -8822,7 +8886,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-05-23</span>
+                        <span title="Last commit date" class="label label-default">2017-05-23</span>
                       </td>
                       <td>
                         <a href="/p/rotunit_snapshotter">rotunit_snapshotter</a>
@@ -8963,7 +9027,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-10</span>
+                        <span title="Last commit date" class="label label-default">2017-04-10</span>
                       </td>
                       <td>
                         <a href="/p/rplidar_python">rplidar_python</a>
@@ -9000,7 +9064,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-24</span>
+                        <span title="Last commit date" class="label label-default">2018-08-24</span>
                       </td>
                       <td>
                         <a href="/p/rplidar_ros">rplidar_ros</a>
@@ -9037,7 +9101,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-28</span>
+                        <span title="Last commit date" class="label label-default">2017-04-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt">rqt</a>
@@ -9074,7 +9138,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-05-18</span>
+                        <span title="Last commit date" class="label label-default">2017-05-18</span>
                       </td>
                       <td>
                         <a href="/p/rqt_action">rqt_action</a>
@@ -9179,7 +9243,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-03-21</span>
+                        <span title="Last commit date" class="label label-default">2018-03-21</span>
                       </td>
                       <td>
                         <a href="/p/rqt_bag">rqt_bag</a>
@@ -9236,7 +9300,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-03-21</span>
+                        <span title="Last commit date" class="label label-default">2018-03-21</span>
                       </td>
                       <td>
                         <a href="/p/rqt_bag_plugins">rqt_bag_plugins</a>
@@ -9313,7 +9377,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-28</span>
+                        <span title="Last commit date" class="label label-default">2017-04-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt_common_plugins">rqt_common_plugins</a>
@@ -9372,7 +9436,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_console">rqt_console</a>
@@ -9409,7 +9473,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-11-28</span>
+                        <span title="Last commit date" class="label label-default">2016-11-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt_controller_manager">rqt_controller_manager</a>
@@ -9466,7 +9530,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-24</span>
+                        <span title="Last commit date" class="label label-default">2018-05-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_dep">rqt_dep</a>
@@ -9543,7 +9607,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-05-06</span>
+                        <span title="Last commit date" class="label label-default">2016-05-06</span>
                       </td>
                       <td>
                         <a href="/p/rqt_ez_publisher">rqt_ez_publisher</a>
@@ -9580,7 +9644,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-10-26</span>
+                        <span title="Last commit date" class="label label-default">2017-10-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gauges">rqt_gauges</a>
@@ -9617,7 +9681,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-17</span>
+                        <span title="Last commit date" class="label label-default">2018-09-17</span>
                       </td>
                       <td>
                         <a href="/p/rqt_graph">rqt_graph</a>
@@ -9676,7 +9740,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-28</span>
+                        <span title="Last commit date" class="label label-default">2017-04-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gui">rqt_gui</a>
@@ -9713,7 +9777,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-28</span>
+                        <span title="Last commit date" class="label label-default">2017-04-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gui_cpp">rqt_gui_cpp</a>
@@ -9750,7 +9814,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-28</span>
+                        <span title="Last commit date" class="label label-default">2017-04-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gui_py">rqt_gui_py</a>
@@ -9787,7 +9851,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-02</span>
+                        <span title="Last commit date" class="label label-default">2018-05-02</span>
                       </td>
                       <td>
                         <a href="/p/rqt_image_view">rqt_image_view</a>
@@ -9824,7 +9888,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-10</span>
+                        <span title="Last commit date" class="label label-default">2016-08-10</span>
                       </td>
                       <td>
                         <a href="/p/rqt_joint_trajectory_controller">rqt_joint_trajectory_controller</a>
@@ -9881,7 +9945,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_launch">rqt_launch</a>
@@ -9922,7 +9986,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-04</span>
+                        <span title="Last commit date" class="label label-default">2017-04-04</span>
                       </td>
                       <td>
                         <a href="/p/rqt_launchtree">rqt_launchtree</a>
@@ -9963,7 +10027,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_logger_level">rqt_logger_level</a>
@@ -10000,7 +10064,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_moveit">rqt_moveit</a>
@@ -10061,7 +10125,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-24</span>
+                        <span title="Last commit date" class="label label-default">2017-04-24</span>
                       </td>
                       <td>
                         <a href="/p/rqt_msg">rqt_msg</a>
@@ -10104,7 +10168,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-15</span>
+                        <span title="Last commit date" class="label label-default">2018-01-15</span>
                       </td>
                       <td>
                         <a href="/p/rqt_multiplot">rqt_multiplot</a>
@@ -10147,7 +10211,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-26</span>
+                        <span title="Last commit date" class="label label-default">2017-04-26</span>
                       </td>
                       <td>
                         <a href="/p/rqt_nav_view">rqt_nav_view</a>
@@ -10195,25 +10259,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -10343,7 +10417,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-04-21</span>
+                        <span title="Last commit date" class="label label-default">2015-04-21</span>
                       </td>
                       <td>
                         <a href="/p/rotunit_snapshotter">rotunit_snapshotter</a>
@@ -10384,7 +10458,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-06</span>
+                        <span title="Last commit date" class="label label-default">2017-12-06</span>
                       </td>
                       <td>
                         <a href="/p/route_network">route_network</a>
@@ -10425,7 +10499,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-02-18</span>
+                        <span title="Last commit date" class="label label-default">2016-02-18</span>
                       </td>
                       <td>
                         <a href="/p/rovio">rovio</a>
@@ -10462,7 +10536,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-02-18</span>
+                        <span title="Last commit date" class="label label-default">2016-02-18</span>
                       </td>
                       <td>
                         <a href="/p/rovio_av">rovio_av</a>
@@ -10499,7 +10573,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-02-18</span>
+                        <span title="Last commit date" class="label label-default">2016-02-18</span>
                       </td>
                       <td>
                         <a href="/p/rovio_ctrl">rovio_ctrl</a>
@@ -10536,7 +10610,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-02-18</span>
+                        <span title="Last commit date" class="label label-default">2016-02-18</span>
                       </td>
                       <td>
                         <a href="/p/rovio_shared">rovio_shared</a>
@@ -10593,7 +10667,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-24</span>
+                        <span title="Last commit date" class="label label-default">2018-08-24</span>
                       </td>
                       <td>
                         <a href="/p/rplidar_ros">rplidar_ros</a>
@@ -10630,7 +10704,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-28</span>
+                        <span title="Last commit date" class="label label-default">2017-04-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt">rqt</a>
@@ -10807,7 +10881,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-09-02</span>
+                        <span title="Last commit date" class="label label-default">2014-09-02</span>
                       </td>
                       <td>
                         <a href="/p/rqt_bhand">rqt_bhand</a>
@@ -10844,7 +10918,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-05-21</span>
+                        <span title="Last commit date" class="label label-default">2014-05-21</span>
                       </td>
                       <td>
                         <a href="/p/rqt_capabilities">rqt_capabilities</a>
@@ -10881,7 +10955,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-28</span>
+                        <span title="Last commit date" class="label label-default">2017-04-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt_common_plugins">rqt_common_plugins</a>
@@ -10920,7 +10994,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-05-30</span>
+                        <span title="Last commit date" class="label label-default">2016-05-30</span>
                       </td>
                       <td>
                         <a href="/p/rqt_conman">rqt_conman</a>
@@ -10981,7 +11055,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-10-28</span>
+                        <span title="Last commit date" class="label label-default">2014-10-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt_controller_manager">rqt_controller_manager</a>
@@ -11018,7 +11092,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-07-28</span>
+                        <span title="Last commit date" class="label label-default">2016-07-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt_decision_graph">rqt_decision_graph</a>
@@ -11115,7 +11189,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-08-18</span>
+                        <span title="Last commit date" class="label label-default">2014-08-18</span>
                       </td>
                       <td>
                         <a href="/p/rqt_ez_publisher">rqt_ez_publisher</a>
@@ -11212,7 +11286,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-28</span>
+                        <span title="Last commit date" class="label label-default">2017-04-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gui">rqt_gui</a>
@@ -11249,7 +11323,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-28</span>
+                        <span title="Last commit date" class="label label-default">2017-04-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gui_cpp">rqt_gui_cpp</a>
@@ -11286,7 +11360,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-28</span>
+                        <span title="Last commit date" class="label label-default">2017-04-28</span>
                       </td>
                       <td>
                         <a href="/p/rqt_gui_py">rqt_gui_py</a>
@@ -11443,7 +11517,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-07-10</span>
+                        <span title="Last commit date" class="label label-default">2015-07-10</span>
                       </td>
                       <td>
                         <a href="/p/rqt_moveit">rqt_moveit</a>
@@ -11544,7 +11618,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-07-10</span>
+                        <span title="Last commit date" class="label label-default">2015-07-10</span>
                       </td>
                       <td>
                         <a href="/p/rqt_nav_view">rqt_nav_view</a>
@@ -11581,7 +11655,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-09</span>
+                        <span title="Last commit date" class="label label-default">2018-01-09</span>
                       </td>
                       <td>
                         <a href="/p/rqt_paramedit">rqt_paramedit</a>
@@ -11682,7 +11756,7 @@
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-10-04</em>
+          <em>generated on 2018-10-08</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

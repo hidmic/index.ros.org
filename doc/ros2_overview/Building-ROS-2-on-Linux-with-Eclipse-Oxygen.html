@@ -21,8 +21,12 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-
+    
     <script src=/js/distro_switch.js></script>
+
+    <!-- Pre-fetch search index files -->
+    
+    
 </head>
 
 
@@ -75,21 +79,11 @@
                   </button>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                     
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><a href="/doc/ros2_overview">ROS2 Overview</a></li>
-                        
-                      
+                    <li>
+                      <a href="/doc/ros2_overview">
+                        ROS2 Overview
+                      </a>
+                    </li>
                     
                     <li class="hidden" class="divider"></li>
 
@@ -154,11 +148,26 @@
       <ol class="breadcrumb">
         <li><a href="/">Home</a></li>
         
-        <li class="active"></li>
+        
+        
+
+        
+
+        
+          <li><a href="/doc/ros2_overview/">ROS2 Overview</a></li>
+          
+            <li class="active">Building-ROS-2-on-Linux-with-Eclipse-Oxygen</li>
+          
+        
       </ol>
+      
+      <a type="button" href="https://github.com/ros2/ros2_documentation/edit/master/Building-ROS-2-on-Linux-with-Eclipse-Oxygen.md" class="btn btn-success pull-right">
+        Edit on Github
+      </a>
+      
     </div>
     <div class="row">
-      <div class="col-md-10">
+      <div class="col-md-10">  
         <p><strong>Note: Some people have reported issues about this tutorial. If the steps work for you please leave a comment on <a href="https://github.com/ros2/ros2/issues/495">https://github.com/ros2/ros2/issues/495</a> . If they don&#39;t then please comment with the first step that didn&#39;t work.</strong></p>
 
 <p>This tutorial is based on a clean ubuntu-16.04.2 install and eclipse oxygen with egit. It uses RTI Connext as middleware for Realtime performance. The <a href="/doc/ros2_overview/Linux-Development-Setup.html">original Install page</a> is perhaps more up-to-date, so check it for info.</p>
@@ -315,7 +324,7 @@ $(document).ready(
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-10-04</em>
+          <em>generated on 2018-10-08</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

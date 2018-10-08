@@ -21,8 +21,12 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-
+    
     <script src=/js/distro_switch.js></script>
+
+    <!-- Pre-fetch search index files -->
+    
+    
 </head>
 
 
@@ -75,21 +79,11 @@
                   </button>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                     
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><a href="/doc/ros2_overview">ROS2 Overview</a></li>
-                        
-                      
+                    <li>
+                      <a href="/doc/ros2_overview">
+                        ROS2 Overview
+                      </a>
+                    </li>
                     
                     <li class="hidden" class="divider"></li>
 
@@ -219,25 +213,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <span class="glyphicon glyphicon-file selected-sort-label"></span>
+                      <span class="glyphicon glyphicon-file selected-sort-label"
+                            title="Sorted by README status"></span>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <a class="unselected-sort-label" href="/packages/page/1/name">Name</a>
+                      <a href="/packages/page/1/name"
+                         class="unselected-sort-label"
+                         title="Sort by package name">Name</a>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -587,7 +591,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-10</span>
+                        <span title="Last commit date" class="label label-default">2018-07-10</span>
                       </td>
                       <td>
                         <a href="/p/test_osrf_testing_tools_cpp">test_osrf_testing_tools_cpp</a>
@@ -684,7 +688,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-24</span>
+                        <span title="Last commit date" class="label label-default">2018-06-24</span>
                       </td>
                       <td>
                         <a href="/p/test_msgs">test_msgs</a>
@@ -1081,7 +1085,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-25</span>
+                        <span title="Last commit date" class="label label-default">2018-06-25</span>
                       </td>
                       <td>
                         <a href="/p/teleop_twist_keyboard">teleop_twist_keyboard</a>
@@ -1124,7 +1128,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-25</span>
+                        <span title="Last commit date" class="label label-default">2018-06-25</span>
                       </td>
                       <td>
                         <a href="/p/teleop_twist_joy">teleop_twist_joy</a>
@@ -1332,25 +1336,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <span class="glyphicon glyphicon-file selected-sort-label"></span>
+                      <span class="glyphicon glyphicon-file selected-sort-label"
+                            title="Sorted by README status"></span>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <a class="unselected-sort-label" href="/packages/page/1/name">Name</a>
+                      <a href="/packages/page/1/name"
+                         class="unselected-sort-label"
+                         title="Sort by package name">Name</a>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -1420,7 +1434,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/test_tf2">test_tf2</a>
@@ -1481,7 +1495,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-21</span>
+                        <span title="Last commit date" class="label label-default">2018-09-21</span>
                       </td>
                       <td>
                         <a href="/p/test_rostopic">test_rostopic</a>
@@ -1522,7 +1536,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-21</span>
+                        <span title="Last commit date" class="label label-default">2018-09-21</span>
                       </td>
                       <td>
                         <a href="/p/test_rosservice">test_rosservice</a>
@@ -1563,7 +1577,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-21</span>
+                        <span title="Last commit date" class="label label-default">2018-09-21</span>
                       </td>
                       <td>
                         <a href="/p/test_rospy">test_rospy</a>
@@ -1604,7 +1618,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-21</span>
+                        <span title="Last commit date" class="label label-default">2018-09-21</span>
                       </td>
                       <td>
                         <a href="/p/test_rosparam">test_rosparam</a>
@@ -1645,7 +1659,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-21</span>
+                        <span title="Last commit date" class="label label-default">2018-09-21</span>
                       </td>
                       <td>
                         <a href="/p/test_rosmaster">test_rosmaster</a>
@@ -1686,7 +1700,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-21</span>
+                        <span title="Last commit date" class="label label-default">2018-09-21</span>
                       </td>
                       <td>
                         <a href="/p/test_roslib_comm">test_roslib_comm</a>
@@ -1727,7 +1741,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-21</span>
+                        <span title="Last commit date" class="label label-default">2018-09-21</span>
                       </td>
                       <td>
                         <a href="/p/test_roslaunch">test_roslaunch</a>
@@ -1768,7 +1782,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-21</span>
+                        <span title="Last commit date" class="label label-default">2018-09-21</span>
                       </td>
                       <td>
                         <a href="/p/test_rosgraph">test_rosgraph</a>
@@ -1809,7 +1823,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-21</span>
+                        <span title="Last commit date" class="label label-default">2018-09-21</span>
                       </td>
                       <td>
                         <a href="/p/test_roscpp">test_roscpp</a>
@@ -1850,7 +1864,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-21</span>
+                        <span title="Last commit date" class="label label-default">2018-09-21</span>
                       </td>
                       <td>
                         <a href="/p/test_rosbag_storage">test_rosbag_storage</a>
@@ -1891,7 +1905,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-21</span>
+                        <span title="Last commit date" class="label label-default">2018-09-21</span>
                       </td>
                       <td>
                         <a href="/p/test_rosbag">test_rosbag</a>
@@ -1992,7 +2006,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-27</span>
+                        <span title="Last commit date" class="label label-default">2018-04-27</span>
                       </td>
                       <td>
                         <a href="/p/test_nodelet_topic_tools">test_nodelet_topic_tools</a>
@@ -2033,7 +2047,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-27</span>
+                        <span title="Last commit date" class="label label-default">2018-04-27</span>
                       </td>
                       <td>
                         <a href="/p/test_nodelet">test_nodelet</a>
@@ -2094,7 +2108,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-07</span>
+                        <span title="Last commit date" class="label label-default">2018-09-07</span>
                       </td>
                       <td>
                         <a href="/p/test_mavros">test_mavros</a>
@@ -2131,7 +2145,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-19</span>
+                        <span title="Last commit date" class="label label-default">2018-08-19</span>
                       </td>
                       <td>
                         <a href="/p/test_diagnostic_aggregator">test_diagnostic_aggregator</a>
@@ -2168,7 +2182,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-26</span>
+                        <span title="Last commit date" class="label label-default">2018-08-26</span>
                       </td>
                       <td>
                         <a href="/p/test_catkin_virtualenv_py3">test_catkin_virtualenv_py3</a>
@@ -2205,7 +2219,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-26</span>
+                        <span title="Last commit date" class="label label-default">2018-08-26</span>
                       </td>
                       <td>
                         <a href="/p/test_catkin_virtualenv">test_catkin_virtualenv</a>
@@ -2242,7 +2256,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-17</span>
+                        <span title="Last commit date" class="label label-default">2018-08-17</span>
                       </td>
                       <td>
                         <a href="/p/test_bond">test_bond</a>
@@ -2423,7 +2437,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-06</span>
+                        <span title="Last commit date" class="label label-default">2018-09-06</span>
                       </td>
                       <td>
                         <a href="/p/tensorflow_ros_cpp">tensorflow_ros_cpp</a>
@@ -2540,7 +2554,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-05</span>
+                        <span title="Last commit date" class="label label-default">2018-09-05</span>
                       </td>
                       <td>
                         <a href="/p/teleop_twist_keyboard_cpp">teleop_twist_keyboard_cpp</a>
@@ -2577,7 +2591,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-09</span>
+                        <span title="Last commit date" class="label label-default">2018-07-09</span>
                       </td>
                       <td>
                         <a href="/p/teleop_twist_keyboard">teleop_twist_keyboard</a>
@@ -2634,7 +2648,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-06</span>
+                        <span title="Last commit date" class="label label-default">2018-04-06</span>
                       </td>
                       <td>
                         <a href="/p/teleop_tools_msgs">teleop_tools_msgs</a>
@@ -2671,7 +2685,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-06</span>
+                        <span title="Last commit date" class="label label-default">2018-04-06</span>
                       </td>
                       <td>
                         <a href="/p/teleop_tools">teleop_tools</a>
@@ -2839,25 +2853,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <span class="glyphicon glyphicon-file selected-sort-label"></span>
+                      <span class="glyphicon glyphicon-file selected-sort-label"
+                            title="Sorted by README status"></span>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <a class="unselected-sort-label" href="/packages/page/1/name">Name</a>
+                      <a href="/packages/page/1/name"
+                         class="unselected-sort-label"
+                         title="Sort by package name">Name</a>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -2927,7 +2951,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-10</span>
+                        <span title="Last commit date" class="label label-default">2018-07-10</span>
                       </td>
                       <td>
                         <a href="/p/test_tf2">test_tf2</a>
@@ -2988,7 +3012,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-17</span>
+                        <span title="Last commit date" class="label label-default">2018-08-17</span>
                       </td>
                       <td>
                         <a href="/p/test_rostopic">test_rostopic</a>
@@ -3029,7 +3053,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-17</span>
+                        <span title="Last commit date" class="label label-default">2018-08-17</span>
                       </td>
                       <td>
                         <a href="/p/test_rosservice">test_rosservice</a>
@@ -3070,7 +3094,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-17</span>
+                        <span title="Last commit date" class="label label-default">2018-08-17</span>
                       </td>
                       <td>
                         <a href="/p/test_rospy">test_rospy</a>
@@ -3111,7 +3135,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-17</span>
+                        <span title="Last commit date" class="label label-default">2018-08-17</span>
                       </td>
                       <td>
                         <a href="/p/test_rosparam">test_rosparam</a>
@@ -3152,7 +3176,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-17</span>
+                        <span title="Last commit date" class="label label-default">2018-08-17</span>
                       </td>
                       <td>
                         <a href="/p/test_rosmaster">test_rosmaster</a>
@@ -3193,7 +3217,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-17</span>
+                        <span title="Last commit date" class="label label-default">2018-08-17</span>
                       </td>
                       <td>
                         <a href="/p/test_roslib_comm">test_roslib_comm</a>
@@ -3234,7 +3258,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-17</span>
+                        <span title="Last commit date" class="label label-default">2018-08-17</span>
                       </td>
                       <td>
                         <a href="/p/test_roslaunch">test_roslaunch</a>
@@ -3275,7 +3299,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-17</span>
+                        <span title="Last commit date" class="label label-default">2018-08-17</span>
                       </td>
                       <td>
                         <a href="/p/test_rosgraph">test_rosgraph</a>
@@ -3316,7 +3340,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-17</span>
+                        <span title="Last commit date" class="label label-default">2018-08-17</span>
                       </td>
                       <td>
                         <a href="/p/test_roscpp">test_roscpp</a>
@@ -3357,7 +3381,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-17</span>
+                        <span title="Last commit date" class="label label-default">2018-08-17</span>
                       </td>
                       <td>
                         <a href="/p/test_rosbag_storage">test_rosbag_storage</a>
@@ -3398,7 +3422,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-17</span>
+                        <span title="Last commit date" class="label label-default">2018-08-17</span>
                       </td>
                       <td>
                         <a href="/p/test_rosbag">test_rosbag</a>
@@ -3479,7 +3503,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-06</span>
+                        <span title="Last commit date" class="label label-default">2017-12-06</span>
                       </td>
                       <td>
                         <a href="/p/test_osm">test_osm</a>
@@ -3524,7 +3548,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-27</span>
+                        <span title="Last commit date" class="label label-default">2018-04-27</span>
                       </td>
                       <td>
                         <a href="/p/test_nodelet_topic_tools">test_nodelet_topic_tools</a>
@@ -3565,7 +3589,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-27</span>
+                        <span title="Last commit date" class="label label-default">2018-04-27</span>
                       </td>
                       <td>
                         <a href="/p/test_nodelet">test_nodelet</a>
@@ -3626,7 +3650,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-07</span>
+                        <span title="Last commit date" class="label label-default">2018-09-07</span>
                       </td>
                       <td>
                         <a href="/p/test_mavros">test_mavros</a>
@@ -3663,7 +3687,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-19</span>
+                        <span title="Last commit date" class="label label-default">2018-08-19</span>
                       </td>
                       <td>
                         <a href="/p/test_diagnostic_aggregator">test_diagnostic_aggregator</a>
@@ -3700,7 +3724,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-26</span>
+                        <span title="Last commit date" class="label label-default">2018-08-26</span>
                       </td>
                       <td>
                         <a href="/p/test_catkin_virtualenv_py3">test_catkin_virtualenv_py3</a>
@@ -3737,7 +3761,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-26</span>
+                        <span title="Last commit date" class="label label-default">2018-08-26</span>
                       </td>
                       <td>
                         <a href="/p/test_catkin_virtualenv">test_catkin_virtualenv</a>
@@ -3774,7 +3798,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-17</span>
+                        <span title="Last commit date" class="label label-default">2018-08-17</span>
                       </td>
                       <td>
                         <a href="/p/test_bond">test_bond</a>
@@ -4075,7 +4099,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-09</span>
+                        <span title="Last commit date" class="label label-default">2018-07-09</span>
                       </td>
                       <td>
                         <a href="/p/teleop_twist_keyboard">teleop_twist_keyboard</a>
@@ -4132,7 +4156,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-06</span>
+                        <span title="Last commit date" class="label label-default">2018-04-06</span>
                       </td>
                       <td>
                         <a href="/p/teleop_tools_msgs">teleop_tools_msgs</a>
@@ -4169,7 +4193,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-06</span>
+                        <span title="Last commit date" class="label label-default">2018-04-06</span>
                       </td>
                       <td>
                         <a href="/p/teleop_tools">teleop_tools</a>
@@ -4337,25 +4361,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <span class="glyphicon glyphicon-file selected-sort-label"></span>
+                      <span class="glyphicon glyphicon-file selected-sort-label"
+                            title="Sorted by README status"></span>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <a class="unselected-sort-label" href="/packages/page/1/name">Name</a>
+                      <a href="/packages/page/1/name"
+                         class="unselected-sort-label"
+                         title="Sort by package name">Name</a>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -4385,7 +4419,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-12</span>
+                        <span title="Last commit date" class="label label-default">2018-09-12</span>
                       </td>
                       <td>
                         <a href="/p/testnc">testnc</a>
@@ -4422,7 +4456,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-12</span>
+                        <span title="Last commit date" class="label label-default">2018-09-12</span>
                       </td>
                       <td>
                         <a href="/p/testbb">testbb</a>
@@ -4459,7 +4493,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-10</span>
+                        <span title="Last commit date" class="label label-default">2018-07-10</span>
                       </td>
                       <td>
                         <a href="/p/test_tf2">test_tf2</a>
@@ -4500,7 +4534,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-12</span>
+                        <span title="Last commit date" class="label label-default">2018-09-12</span>
                       </td>
                       <td>
                         <a href="/p/test_statistic">test_statistic</a>
@@ -4537,7 +4571,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-23</span>
+                        <span title="Last commit date" class="label label-default">2018-08-23</span>
                       </td>
                       <td>
                         <a href="/p/test_rostopic">test_rostopic</a>
@@ -4578,7 +4612,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-23</span>
+                        <span title="Last commit date" class="label label-default">2018-08-23</span>
                       </td>
                       <td>
                         <a href="/p/test_rosservice">test_rosservice</a>
@@ -4619,7 +4653,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-23</span>
+                        <span title="Last commit date" class="label label-default">2018-08-23</span>
                       </td>
                       <td>
                         <a href="/p/test_rospy">test_rospy</a>
@@ -4660,7 +4694,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-23</span>
+                        <span title="Last commit date" class="label label-default">2018-08-23</span>
                       </td>
                       <td>
                         <a href="/p/test_rosparam">test_rosparam</a>
@@ -4701,7 +4735,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-23</span>
+                        <span title="Last commit date" class="label label-default">2018-08-23</span>
                       </td>
                       <td>
                         <a href="/p/test_rosmaster">test_rosmaster</a>
@@ -4742,7 +4776,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-23</span>
+                        <span title="Last commit date" class="label label-default">2018-08-23</span>
                       </td>
                       <td>
                         <a href="/p/test_roslib_comm">test_roslib_comm</a>
@@ -4783,7 +4817,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-23</span>
+                        <span title="Last commit date" class="label label-default">2018-08-23</span>
                       </td>
                       <td>
                         <a href="/p/test_roslaunch">test_roslaunch</a>
@@ -4824,7 +4858,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-23</span>
+                        <span title="Last commit date" class="label label-default">2018-08-23</span>
                       </td>
                       <td>
                         <a href="/p/test_rosgraph">test_rosgraph</a>
@@ -4865,7 +4899,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-23</span>
+                        <span title="Last commit date" class="label label-default">2018-08-23</span>
                       </td>
                       <td>
                         <a href="/p/test_roscpp">test_roscpp</a>
@@ -4906,7 +4940,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-23</span>
+                        <span title="Last commit date" class="label label-default">2018-08-23</span>
                       </td>
                       <td>
                         <a href="/p/test_rosbag_storage">test_rosbag_storage</a>
@@ -4947,7 +4981,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-23</span>
+                        <span title="Last commit date" class="label label-default">2018-08-23</span>
                       </td>
                       <td>
                         <a href="/p/test_rosbag">test_rosbag</a>
@@ -5028,7 +5062,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-06</span>
+                        <span title="Last commit date" class="label label-default">2017-12-06</span>
                       </td>
                       <td>
                         <a href="/p/test_osm">test_osm</a>
@@ -5073,7 +5107,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-27</span>
+                        <span title="Last commit date" class="label label-default">2018-04-27</span>
                       </td>
                       <td>
                         <a href="/p/test_nodelet_topic_tools">test_nodelet_topic_tools</a>
@@ -5114,7 +5148,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-27</span>
+                        <span title="Last commit date" class="label label-default">2018-04-27</span>
                       </td>
                       <td>
                         <a href="/p/test_nodelet">test_nodelet</a>
@@ -5175,7 +5209,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-07</span>
+                        <span title="Last commit date" class="label label-default">2018-09-07</span>
                       </td>
                       <td>
                         <a href="/p/test_mavros">test_mavros</a>
@@ -5212,7 +5246,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-19</span>
+                        <span title="Last commit date" class="label label-default">2018-08-19</span>
                       </td>
                       <td>
                         <a href="/p/test_diagnostic_aggregator">test_diagnostic_aggregator</a>
@@ -5249,7 +5283,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-26</span>
+                        <span title="Last commit date" class="label label-default">2018-08-26</span>
                       </td>
                       <td>
                         <a href="/p/test_catkin_virtualenv_py3">test_catkin_virtualenv_py3</a>
@@ -5286,7 +5320,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-26</span>
+                        <span title="Last commit date" class="label label-default">2018-08-26</span>
                       </td>
                       <td>
                         <a href="/p/test_catkin_virtualenv">test_catkin_virtualenv</a>
@@ -5323,7 +5357,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-17</span>
+                        <span title="Last commit date" class="label label-default">2018-08-17</span>
                       </td>
                       <td>
                         <a href="/p/test_bond">test_bond</a>
@@ -5404,7 +5438,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-09-28</span>
+                        <span title="Last commit date" class="label label-default">2017-09-28</span>
                       </td>
                       <td>
                         <a href="/p/teraranger_description">teraranger_description</a>
@@ -5441,7 +5475,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-08</span>
+                        <span title="Last commit date" class="label label-default">2017-12-08</span>
                       </td>
                       <td>
                         <a href="/p/teraranger_array_converter">teraranger_array_converter</a>
@@ -5478,7 +5512,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-07</span>
+                        <span title="Last commit date" class="label label-default">2018-09-07</span>
                       </td>
                       <td>
                         <a href="/p/teraranger_array">teraranger_array</a>
@@ -5515,7 +5549,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-10-04</span>
+                        <span title="Last commit date" class="label label-default">2018-10-04</span>
                       </td>
                       <td>
                         <a href="/p/teraranger">teraranger</a>
@@ -5552,7 +5586,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-21</span>
+                        <span title="Last commit date" class="label label-default">2018-09-21</span>
                       </td>
                       <td>
                         <a href="/p/tensorflow_ros_rqt">tensorflow_ros_rqt</a>
@@ -5589,7 +5623,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-06</span>
+                        <span title="Last commit date" class="label label-default">2018-09-06</span>
                       </td>
                       <td>
                         <a href="/p/tensorflow_ros_cpp">tensorflow_ros_cpp</a>
@@ -5626,7 +5660,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-21</span>
+                        <span title="Last commit date" class="label label-default">2018-09-21</span>
                       </td>
                       <td>
                         <a href="/p/tensorflow_ros">tensorflow_ros</a>
@@ -5723,7 +5757,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-05</span>
+                        <span title="Last commit date" class="label label-default">2018-09-05</span>
                       </td>
                       <td>
                         <a href="/p/teleop_twist_keyboard_cpp">teleop_twist_keyboard_cpp</a>
@@ -5760,7 +5794,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-09</span>
+                        <span title="Last commit date" class="label label-default">2018-07-09</span>
                       </td>
                       <td>
                         <a href="/p/teleop_twist_keyboard">teleop_twist_keyboard</a>
@@ -5797,7 +5831,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-12</span>
+                        <span title="Last commit date" class="label label-default">2018-01-12</span>
                       </td>
                       <td>
                         <a href="/p/teleop_twist_joy">teleop_twist_joy</a>
@@ -5834,7 +5868,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-06</span>
+                        <span title="Last commit date" class="label label-default">2018-04-06</span>
                       </td>
                       <td>
                         <a href="/p/teleop_tools_msgs">teleop_tools_msgs</a>
@@ -5871,7 +5905,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-06</span>
+                        <span title="Last commit date" class="label label-default">2018-04-06</span>
                       </td>
                       <td>
                         <a href="/p/teleop_tools">teleop_tools</a>
@@ -6039,25 +6073,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <span class="glyphicon glyphicon-file selected-sort-label"></span>
+                      <span class="glyphicon glyphicon-file selected-sort-label"
+                            title="Sorted by README status"></span>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <a class="unselected-sort-label" href="/packages/page/1/name">Name</a>
+                      <a href="/packages/page/1/name"
+                         class="unselected-sort-label"
+                         title="Sort by package name">Name</a>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -6087,7 +6131,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-12</span>
+                        <span title="Last commit date" class="label label-default">2018-09-12</span>
                       </td>
                       <td>
                         <a href="/p/testnc">testnc</a>
@@ -6124,7 +6168,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-12</span>
+                        <span title="Last commit date" class="label label-default">2018-09-12</span>
                       </td>
                       <td>
                         <a href="/p/testbb">testbb</a>
@@ -6161,7 +6205,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-04-13</span>
+                        <span title="Last commit date" class="label label-default">2017-04-13</span>
                       </td>
                       <td>
                         <a href="/p/test_tf2">test_tf2</a>
@@ -6202,7 +6246,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-12</span>
+                        <span title="Last commit date" class="label label-default">2018-09-12</span>
                       </td>
                       <td>
                         <a href="/p/test_statistic">test_statistic</a>
@@ -6239,7 +6283,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_rostopic">test_rostopic</a>
@@ -6280,7 +6324,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_rosservice">test_rosservice</a>
@@ -6321,7 +6365,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_rospy">test_rospy</a>
@@ -6362,7 +6406,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_rosparam">test_rosparam</a>
@@ -6403,7 +6447,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_rosmaster">test_rosmaster</a>
@@ -6444,7 +6488,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_roslib_comm">test_roslib_comm</a>
@@ -6485,7 +6529,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_roslaunch">test_roslaunch</a>
@@ -6526,7 +6570,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_rosgraph">test_rosgraph</a>
@@ -6567,7 +6611,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_roscpp">test_roscpp</a>
@@ -6608,7 +6652,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_rosbag_storage">test_rosbag_storage</a>
@@ -6649,7 +6693,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_rosbag">test_rosbag</a>
@@ -6690,7 +6734,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-07-25</span>
+                        <span title="Last commit date" class="label label-default">2015-07-25</span>
                       </td>
                       <td>
                         <a href="/p/test_point">test_point</a>
@@ -6747,7 +6791,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-06</span>
+                        <span title="Last commit date" class="label label-default">2017-12-06</span>
                       </td>
                       <td>
                         <a href="/p/test_osm">test_osm</a>
@@ -6792,7 +6836,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-27</span>
+                        <span title="Last commit date" class="label label-default">2018-04-27</span>
                       </td>
                       <td>
                         <a href="/p/test_nodelet_topic_tools">test_nodelet_topic_tools</a>
@@ -6833,7 +6877,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-27</span>
+                        <span title="Last commit date" class="label label-default">2018-04-27</span>
                       </td>
                       <td>
                         <a href="/p/test_nodelet">test_nodelet</a>
@@ -6894,7 +6938,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-02-07</span>
+                        <span title="Last commit date" class="label label-default">2017-02-07</span>
                       </td>
                       <td>
                         <a href="/p/test_mavros">test_mavros</a>
@@ -6931,7 +6975,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-19</span>
+                        <span title="Last commit date" class="label label-default">2018-08-19</span>
                       </td>
                       <td>
                         <a href="/p/test_diagnostic_aggregator">test_diagnostic_aggregator</a>
@@ -6968,7 +7012,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-26</span>
+                        <span title="Last commit date" class="label label-default">2018-08-26</span>
                       </td>
                       <td>
                         <a href="/p/test_catkin_virtualenv_py3">test_catkin_virtualenv_py3</a>
@@ -7005,7 +7049,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-26</span>
+                        <span title="Last commit date" class="label label-default">2018-08-26</span>
                       </td>
                       <td>
                         <a href="/p/test_catkin_virtualenv">test_catkin_virtualenv</a>
@@ -7042,7 +7086,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/test_bond">test_bond</a>
@@ -7083,7 +7127,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-10-27</span>
+                        <span title="Last commit date" class="label label-default">2015-10-27</span>
                       </td>
                       <td>
                         <a href="/p/termcolor">termcolor</a>
@@ -7124,7 +7168,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-09-18</span>
+                        <span title="Last commit date" class="label label-default">2017-09-18</span>
                       </td>
                       <td>
                         <a href="/p/terarangerone">terarangerone</a>
@@ -7261,7 +7305,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-06</span>
+                        <span title="Last commit date" class="label label-default">2018-09-06</span>
                       </td>
                       <td>
                         <a href="/p/tensorflow_ros_cpp">tensorflow_ros_cpp</a>
@@ -7338,7 +7382,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-10-23</span>
+                        <span title="Last commit date" class="label label-default">2017-10-23</span>
                       </td>
                       <td>
                         <a href="/p/tensor_field_nav_core">tensor_field_nav_core</a>
@@ -7415,7 +7459,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-09</span>
+                        <span title="Last commit date" class="label label-default">2018-07-09</span>
                       </td>
                       <td>
                         <a href="/p/teleop_twist_keyboard">teleop_twist_keyboard</a>
@@ -7452,7 +7496,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-31</span>
+                        <span title="Last commit date" class="label label-default">2016-08-31</span>
                       </td>
                       <td>
                         <a href="/p/teleop_twist_joy">teleop_twist_joy</a>
@@ -7489,7 +7533,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-06</span>
+                        <span title="Last commit date" class="label label-default">2018-04-06</span>
                       </td>
                       <td>
                         <a href="/p/teleop_tools_msgs">teleop_tools_msgs</a>
@@ -7526,7 +7570,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-06</span>
+                        <span title="Last commit date" class="label label-default">2018-04-06</span>
                       </td>
                       <td>
                         <a href="/p/teleop_tools">teleop_tools</a>
@@ -7583,7 +7627,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-07-28</span>
+                        <span title="Last commit date" class="label label-default">2017-07-28</span>
                       </td>
                       <td>
                         <a href="/p/tele_dir">tele_dir</a>
@@ -7711,25 +7755,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <span class="glyphicon glyphicon-file selected-sort-label"></span>
+                      <span class="glyphicon glyphicon-file selected-sort-label"
+                            title="Sorted by README status"></span>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <a class="unselected-sort-label" href="/packages/page/1/name">Name</a>
+                      <a href="/packages/page/1/name"
+                         class="unselected-sort-label"
+                         title="Sort by package name">Name</a>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -8159,7 +8213,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-08</span>
+                        <span title="Last commit date" class="label label-default">2017-12-08</span>
                       </td>
                       <td>
                         <a href="/p/test_msgs">test_msgs</a>
@@ -8556,7 +8610,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-08</span>
+                        <span title="Last commit date" class="label label-default">2017-12-08</span>
                       </td>
                       <td>
                         <a href="/p/teleop_twist_keyboard">teleop_twist_keyboard</a>
@@ -8599,7 +8653,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-08</span>
+                        <span title="Last commit date" class="label label-default">2017-12-08</span>
                       </td>
                       <td>
                         <a href="/p/teleop_twist_joy">teleop_twist_joy</a>
@@ -8807,25 +8861,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <span class="glyphicon glyphicon-file selected-sort-label"></span>
+                      <span class="glyphicon glyphicon-file selected-sort-label"
+                            title="Sorted by README status"></span>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <a class="unselected-sort-label" href="/packages/page/1/name">Name</a>
+                      <a href="/packages/page/1/name"
+                         class="unselected-sort-label"
+                         title="Sort by package name">Name</a>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -8895,7 +8959,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-10</span>
+                        <span title="Last commit date" class="label label-default">2018-07-10</span>
                       </td>
                       <td>
                         <a href="/p/test_tf2">test_tf2</a>
@@ -8956,7 +9020,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_rostopic">test_rostopic</a>
@@ -8997,7 +9061,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_rosservice">test_rosservice</a>
@@ -9038,7 +9102,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_rospy">test_rospy</a>
@@ -9079,7 +9143,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_rosparam">test_rosparam</a>
@@ -9120,7 +9184,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_rosmaster">test_rosmaster</a>
@@ -9161,7 +9225,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_roslib_comm">test_roslib_comm</a>
@@ -9202,7 +9266,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_roslaunch">test_roslaunch</a>
@@ -9243,7 +9307,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_rosgraph">test_rosgraph</a>
@@ -9284,7 +9348,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_roscpp">test_roscpp</a>
@@ -9325,7 +9389,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_rosbag_storage">test_rosbag_storage</a>
@@ -9366,7 +9430,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-06</span>
+                        <span title="Last commit date" class="label label-default">2017-03-06</span>
                       </td>
                       <td>
                         <a href="/p/test_rosbag">test_rosbag</a>
@@ -9467,7 +9531,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-27</span>
+                        <span title="Last commit date" class="label label-default">2018-04-27</span>
                       </td>
                       <td>
                         <a href="/p/test_nodelet_topic_tools">test_nodelet_topic_tools</a>
@@ -9508,7 +9572,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-27</span>
+                        <span title="Last commit date" class="label label-default">2018-04-27</span>
                       </td>
                       <td>
                         <a href="/p/test_nodelet">test_nodelet</a>
@@ -9569,7 +9633,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-02-07</span>
+                        <span title="Last commit date" class="label label-default">2017-02-07</span>
                       </td>
                       <td>
                         <a href="/p/test_mavros">test_mavros</a>
@@ -9606,7 +9670,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-19</span>
+                        <span title="Last commit date" class="label label-default">2018-08-19</span>
                       </td>
                       <td>
                         <a href="/p/test_diagnostic_aggregator">test_diagnostic_aggregator</a>
@@ -9683,7 +9747,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/test_bond">test_bond</a>
@@ -9984,7 +10048,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-09</span>
+                        <span title="Last commit date" class="label label-default">2018-07-09</span>
                       </td>
                       <td>
                         <a href="/p/teleop_twist_keyboard">teleop_twist_keyboard</a>
@@ -10021,7 +10085,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-12</span>
+                        <span title="Last commit date" class="label label-default">2018-01-12</span>
                       </td>
                       <td>
                         <a href="/p/teleop_twist_joy">teleop_twist_joy</a>
@@ -10058,7 +10122,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-06</span>
+                        <span title="Last commit date" class="label label-default">2018-04-06</span>
                       </td>
                       <td>
                         <a href="/p/teleop_tools_msgs">teleop_tools_msgs</a>
@@ -10095,7 +10159,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-06</span>
+                        <span title="Last commit date" class="label label-default">2018-04-06</span>
                       </td>
                       <td>
                         <a href="/p/teleop_tools">teleop_tools</a>
@@ -10263,25 +10327,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <span class="glyphicon glyphicon-file selected-sort-label"></span>
+                      <span class="glyphicon glyphicon-file selected-sort-label"
+                            title="Sorted by README status"></span>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <a class="unselected-sort-label" href="/packages/page/1/name">Name</a>
+                      <a href="/packages/page/1/name"
+                         class="unselected-sort-label"
+                         title="Sort by package name">Name</a>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -10351,7 +10425,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-12-16</span>
+                        <span title="Last commit date" class="label label-default">2014-12-16</span>
                       </td>
                       <td>
                         <a href="/p/test_tf2">test_tf2</a>
@@ -10432,7 +10506,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-12-22</span>
+                        <span title="Last commit date" class="label label-default">2014-12-22</span>
                       </td>
                       <td>
                         <a href="/p/test_rosservice">test_rosservice</a>
@@ -10473,7 +10547,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-12-22</span>
+                        <span title="Last commit date" class="label label-default">2014-12-22</span>
                       </td>
                       <td>
                         <a href="/p/test_rospy">test_rospy</a>
@@ -10514,7 +10588,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-12-22</span>
+                        <span title="Last commit date" class="label label-default">2014-12-22</span>
                       </td>
                       <td>
                         <a href="/p/test_rosparam">test_rosparam</a>
@@ -10555,7 +10629,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-12-22</span>
+                        <span title="Last commit date" class="label label-default">2014-12-22</span>
                       </td>
                       <td>
                         <a href="/p/test_rosmaster">test_rosmaster</a>
@@ -10596,7 +10670,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-12-22</span>
+                        <span title="Last commit date" class="label label-default">2014-12-22</span>
                       </td>
                       <td>
                         <a href="/p/test_roslib_comm">test_roslib_comm</a>
@@ -10637,7 +10711,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-12-22</span>
+                        <span title="Last commit date" class="label label-default">2014-12-22</span>
                       </td>
                       <td>
                         <a href="/p/test_roslaunch">test_roslaunch</a>
@@ -10678,7 +10752,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-12-22</span>
+                        <span title="Last commit date" class="label label-default">2014-12-22</span>
                       </td>
                       <td>
                         <a href="/p/test_rosgraph">test_rosgraph</a>
@@ -10719,7 +10793,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-12-22</span>
+                        <span title="Last commit date" class="label label-default">2014-12-22</span>
                       </td>
                       <td>
                         <a href="/p/test_roscpp">test_roscpp</a>
@@ -10760,7 +10834,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-12-22</span>
+                        <span title="Last commit date" class="label label-default">2014-12-22</span>
                       </td>
                       <td>
                         <a href="/p/test_rosbag_storage">test_rosbag_storage</a>
@@ -10801,7 +10875,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-12-22</span>
+                        <span title="Last commit date" class="label label-default">2014-12-22</span>
                       </td>
                       <td>
                         <a href="/p/test_rosbag">test_rosbag</a>
@@ -10882,7 +10956,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-06</span>
+                        <span title="Last commit date" class="label label-default">2017-12-06</span>
                       </td>
                       <td>
                         <a href="/p/test_osm">test_osm</a>
@@ -10927,7 +11001,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-04-30</span>
+                        <span title="Last commit date" class="label label-default">2015-04-30</span>
                       </td>
                       <td>
                         <a href="/p/test_nodelet_topic_tools">test_nodelet_topic_tools</a>
@@ -10968,7 +11042,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-04-30</span>
+                        <span title="Last commit date" class="label label-default">2015-04-30</span>
                       </td>
                       <td>
                         <a href="/p/test_nodelet">test_nodelet</a>
@@ -11049,7 +11123,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-08-06</span>
+                        <span title="Last commit date" class="label label-default">2015-08-06</span>
                       </td>
                       <td>
                         <a href="/p/test_diagnostic_aggregator">test_diagnostic_aggregator</a>
@@ -11126,7 +11200,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-12-18</span>
+                        <span title="Last commit date" class="label label-default">2017-12-18</span>
                       </td>
                       <td>
                         <a href="/p/test_bond">test_bond</a>
@@ -11187,7 +11261,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-09-18</span>
+                        <span title="Last commit date" class="label label-default">2017-09-18</span>
                       </td>
                       <td>
                         <a href="/p/terarangerone">terarangerone</a>
@@ -11404,7 +11478,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-11-06</span>
+                        <span title="Last commit date" class="label label-default">2014-11-06</span>
                       </td>
                       <td>
                         <a href="/p/template">template</a>
@@ -11461,7 +11535,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-09</span>
+                        <span title="Last commit date" class="label label-default">2018-07-09</span>
                       </td>
                       <td>
                         <a href="/p/teleop_twist_keyboard">teleop_twist_keyboard</a>
@@ -11538,7 +11612,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-11-23</span>
+                        <span title="Last commit date" class="label label-default">2014-11-23</span>
                       </td>
                       <td>
                         <a href="/p/teleop_tools">teleop_tools</a>
@@ -11615,7 +11689,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-07-18</span>
+                        <span title="Last commit date" class="label label-default">2014-07-18</span>
                       </td>
                       <td>
                         <a href="/p/tedusar_manipulation">tedusar_manipulation</a>
@@ -11652,7 +11726,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-07-18</span>
+                        <span title="Last commit date" class="label label-default">2014-07-18</span>
                       </td>
                       <td>
                         <a href="/p/tedusar_cartesian_controller">tedusar_cartesian_controller</a>
@@ -11689,7 +11763,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-07-18</span>
+                        <span title="Last commit date" class="label label-default">2014-07-18</span>
                       </td>
                       <td>
                         <a href="/p/tedusar_cartesian_arm_teleop">tedusar_cartesian_arm_teleop</a>
@@ -11726,7 +11800,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-07-18</span>
+                        <span title="Last commit date" class="label label-default">2014-07-18</span>
                       </td>
                       <td>
                         <a href="/p/tedusar_box_detection_msgs">tedusar_box_detection_msgs</a>
@@ -11763,7 +11837,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-07-18</span>
+                        <span title="Last commit date" class="label label-default">2014-07-18</span>
                       </td>
                       <td>
                         <a href="/p/tedusar_box_detection">tedusar_box_detection</a>
@@ -11860,7 +11934,7 @@
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-10-04</em>
+          <em>generated on 2018-10-08</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

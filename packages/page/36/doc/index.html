@@ -21,8 +21,12 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-
+    
     <script src=/js/distro_switch.js></script>
+
+    <!-- Pre-fetch search index files -->
+    
+    
 </head>
 
 
@@ -75,21 +79,11 @@
                   </button>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                     
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><a href="/doc/ros2_overview">ROS2 Overview</a></li>
-                        
-                      
+                    <li>
+                      <a href="/doc/ros2_overview">
+                        ROS2 Overview
+                      </a>
+                    </li>
                     
                     <li class="hidden" class="divider"></li>
 
@@ -219,25 +213,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <span class="glyphicon glyphicon-file selected-sort-label"></span>
+                      <span class="glyphicon glyphicon-file selected-sort-label"
+                            title="Sorted by README status"></span>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <a class="unselected-sort-label" href="/packages/page/1/name">Name</a>
+                      <a href="/packages/page/1/name"
+                         class="unselected-sort-label"
+                         title="Sort by package name">Name</a>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -1258,25 +1262,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <span class="glyphicon glyphicon-file selected-sort-label"></span>
+                      <span class="glyphicon glyphicon-file selected-sort-label"
+                            title="Sorted by README status"></span>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <a class="unselected-sort-label" href="/packages/page/1/name">Name</a>
+                      <a href="/packages/page/1/name"
+                         class="unselected-sort-label"
+                         title="Sort by package name">Name</a>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -1466,7 +1480,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-22</span>
+                        <span title="Last commit date" class="label label-default">2018-08-22</span>
                       </td>
                       <td>
                         <a href="/p/r12_hardware_interface">r12_hardware_interface</a>
@@ -1523,7 +1537,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-04-11</span>
+                        <span title="Last commit date" class="label label-default">2016-04-11</span>
                       </td>
                       <td>
                         <a href="/p/qwt_dependency">qwt_dependency</a>
@@ -1700,7 +1714,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_py_common">qt_gui_py_common</a>
@@ -1741,7 +1755,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_cpp">qt_gui_cpp</a>
@@ -1784,7 +1798,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_core">qt_gui_core</a>
@@ -1825,7 +1839,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_app">qt_gui_app</a>
@@ -1866,7 +1880,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui">qt_gui</a>
@@ -1911,7 +1925,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/qt_dotgraph">qt_dotgraph</a>
@@ -2152,7 +2166,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_move_hardware_interface">qb_move_hardware_interface</a>
@@ -2193,7 +2207,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_move_description">qb_move_description</a>
@@ -2234,7 +2248,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_move_control">qb_move_control</a>
@@ -2275,7 +2289,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_move">qb_move</a>
@@ -2316,7 +2330,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_hand_hardware_interface">qb_hand_hardware_interface</a>
@@ -2357,7 +2371,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_hand_description">qb_hand_description</a>
@@ -2398,7 +2412,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_hand_control">qb_hand_control</a>
@@ -2439,7 +2453,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_hand">qb_hand</a>
@@ -2480,7 +2494,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_utils">qb_device_utils</a>
@@ -2521,7 +2535,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_srvs">qb_device_srvs</a>
@@ -2562,7 +2576,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_msgs">qb_device_msgs</a>
@@ -2603,7 +2617,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_hardware_interface">qb_device_hardware_interface</a>
@@ -2644,7 +2658,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_driver">qb_device_driver</a>
@@ -2685,7 +2699,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_description">qb_device_description</a>
@@ -2726,7 +2740,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_control">qb_device_control</a>
@@ -2767,7 +2781,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_bringup">qb_device_bringup</a>
@@ -2799,25 +2813,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <span class="glyphicon glyphicon-file selected-sort-label"></span>
+                      <span class="glyphicon glyphicon-file selected-sort-label"
+                            title="Sorted by README status"></span>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <a class="unselected-sort-label" href="/packages/page/1/name">Name</a>
+                      <a href="/packages/page/1/name"
+                         class="unselected-sort-label"
+                         title="Sort by package name">Name</a>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -3047,7 +3071,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-04-11</span>
+                        <span title="Last commit date" class="label label-default">2016-04-11</span>
                       </td>
                       <td>
                         <a href="/p/qwt_dependency">qwt_dependency</a>
@@ -3224,7 +3248,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_py_common">qt_gui_py_common</a>
@@ -3265,7 +3289,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_cpp">qt_gui_cpp</a>
@@ -3308,7 +3332,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_core">qt_gui_core</a>
@@ -3349,7 +3373,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_app">qt_gui_app</a>
@@ -3390,7 +3414,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui">qt_gui</a>
@@ -3435,7 +3459,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/qt_dotgraph">qt_dotgraph</a>
@@ -3676,7 +3700,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_move_hardware_interface">qb_move_hardware_interface</a>
@@ -3717,7 +3741,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_move_description">qb_move_description</a>
@@ -3758,7 +3782,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_move_control">qb_move_control</a>
@@ -3799,7 +3823,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_move">qb_move</a>
@@ -3840,7 +3864,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_hand_hardware_interface">qb_hand_hardware_interface</a>
@@ -3881,7 +3905,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_hand_description">qb_hand_description</a>
@@ -3922,7 +3946,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_hand_control">qb_hand_control</a>
@@ -3963,7 +3987,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_hand">qb_hand</a>
@@ -4004,7 +4028,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_utils">qb_device_utils</a>
@@ -4045,7 +4069,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_srvs">qb_device_srvs</a>
@@ -4086,7 +4110,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_msgs">qb_device_msgs</a>
@@ -4127,7 +4151,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_hardware_interface">qb_device_hardware_interface</a>
@@ -4168,7 +4192,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_driver">qb_device_driver</a>
@@ -4209,7 +4233,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_description">qb_device_description</a>
@@ -4250,7 +4274,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_control">qb_device_control</a>
@@ -4291,7 +4315,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_bringup">qb_device_bringup</a>
@@ -4323,25 +4347,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <span class="glyphicon glyphicon-file selected-sort-label"></span>
+                      <span class="glyphicon glyphicon-file selected-sort-label"
+                            title="Sorted by README status"></span>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <a class="unselected-sort-label" href="/packages/page/1/name">Name</a>
+                      <a href="/packages/page/1/name"
+                         class="unselected-sort-label"
+                         title="Sort by package name">Name</a>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -4391,7 +4425,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-19</span>
+                        <span title="Last commit date" class="label label-default">2018-06-19</span>
                       </td>
                       <td>
                         <a href="/p/r2_gazebo_interface">r2_gazebo_interface</a>
@@ -4428,7 +4462,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-19</span>
+                        <span title="Last commit date" class="label label-default">2018-06-19</span>
                       </td>
                       <td>
                         <a href="/p/r2_gazebo_gripper">r2_gazebo_gripper</a>
@@ -4465,7 +4499,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-04</span>
+                        <span title="Last commit date" class="label label-default">2018-06-04</span>
                       </td>
                       <td>
                         <a href="/p/r2_gazebo">r2_gazebo</a>
@@ -4622,7 +4656,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-04-11</span>
+                        <span title="Last commit date" class="label label-default">2016-04-11</span>
                       </td>
                       <td>
                         <a href="/p/qwt_dependency">qwt_dependency</a>
@@ -4739,7 +4773,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-10</span>
+                        <span title="Last commit date" class="label label-default">2018-02-10</span>
                       </td>
                       <td>
                         <a href="/p/qt_tutorials">qt_tutorials</a>
@@ -4782,7 +4816,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-10</span>
+                        <span title="Last commit date" class="label label-default">2018-02-10</span>
                       </td>
                       <td>
                         <a href="/p/qt_ros">qt_ros</a>
@@ -4843,7 +4877,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_py_common">qt_gui_py_common</a>
@@ -4884,7 +4918,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_cpp">qt_gui_cpp</a>
@@ -4927,7 +4961,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_core">qt_gui_core</a>
@@ -4968,7 +5002,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_app">qt_gui_app</a>
@@ -5009,7 +5043,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui">qt_gui</a>
@@ -5054,7 +5088,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/qt_dotgraph">qt_dotgraph</a>
@@ -5095,7 +5129,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-10</span>
+                        <span title="Last commit date" class="label label-default">2018-02-10</span>
                       </td>
                       <td>
                         <a href="/p/qt_create">qt_create</a>
@@ -5138,7 +5172,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-10</span>
+                        <span title="Last commit date" class="label label-default">2018-02-10</span>
                       </td>
                       <td>
                         <a href="/p/qt_build">qt_build</a>
@@ -5221,7 +5255,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-28</span>
+                        <span title="Last commit date" class="label label-default">2018-09-28</span>
                       </td>
                       <td>
                         <a href="/p/qglv_toolkit">qglv_toolkit</a>
@@ -5262,7 +5296,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-28</span>
+                        <span title="Last commit date" class="label label-default">2018-09-28</span>
                       </td>
                       <td>
                         <a href="/p/qglv_pcl">qglv_pcl</a>
@@ -5303,7 +5337,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-28</span>
+                        <span title="Last commit date" class="label label-default">2018-09-28</span>
                       </td>
                       <td>
                         <a href="/p/qglv_opengl">qglv_opengl</a>
@@ -5344,7 +5378,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-28</span>
+                        <span title="Last commit date" class="label label-default">2018-09-28</span>
                       </td>
                       <td>
                         <a href="/p/qglv_opencv">qglv_opencv</a>
@@ -5385,7 +5419,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-28</span>
+                        <span title="Last commit date" class="label label-default">2018-09-28</span>
                       </td>
                       <td>
                         <a href="/p/qglv_gallery">qglv_gallery</a>
@@ -5426,7 +5460,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-28</span>
+                        <span title="Last commit date" class="label label-default">2018-09-28</span>
                       </td>
                       <td>
                         <a href="/p/qglv_extras">qglv_extras</a>
@@ -5467,7 +5501,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_move_hardware_interface">qb_move_hardware_interface</a>
@@ -5508,7 +5542,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_move_description">qb_move_description</a>
@@ -5549,7 +5583,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_move_control">qb_move_control</a>
@@ -5590,7 +5624,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_move">qb_move</a>
@@ -5631,7 +5665,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_hand_hardware_interface">qb_hand_hardware_interface</a>
@@ -5672,7 +5706,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_hand_description">qb_hand_description</a>
@@ -5713,7 +5747,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_hand_control">qb_hand_control</a>
@@ -5754,7 +5788,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_hand">qb_hand</a>
@@ -5795,7 +5829,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_utils">qb_device_utils</a>
@@ -5836,7 +5870,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_srvs">qb_device_srvs</a>
@@ -5877,7 +5911,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_msgs">qb_device_msgs</a>
@@ -5918,7 +5952,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_hardware_interface">qb_device_hardware_interface</a>
@@ -5959,7 +5993,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_driver">qb_device_driver</a>
@@ -6000,7 +6034,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_description">qb_device_description</a>
@@ -6041,7 +6075,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_control">qb_device_control</a>
@@ -6082,7 +6116,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-09</span>
+                        <span title="Last commit date" class="label label-default">2018-08-09</span>
                       </td>
                       <td>
                         <a href="/p/qb_device_bringup">qb_device_bringup</a>
@@ -6114,25 +6148,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <span class="glyphicon glyphicon-file selected-sort-label"></span>
+                      <span class="glyphicon glyphicon-file selected-sort-label"
+                            title="Sorted by README status"></span>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <a class="unselected-sort-label" href="/packages/page/1/name">Name</a>
+                      <a href="/packages/page/1/name"
+                         class="unselected-sort-label"
+                         title="Sort by package name">Name</a>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -6162,7 +6206,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-16</span>
+                        <span title="Last commit date" class="label label-default">2018-08-16</span>
                       </td>
                       <td>
                         <a href="/p/r2_moveit_config">r2_moveit_config</a>
@@ -6203,7 +6247,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-16</span>
+                        <span title="Last commit date" class="label label-default">2018-08-16</span>
                       </td>
                       <td>
                         <a href="/p/r2_gazebo_interface">r2_gazebo_interface</a>
@@ -6240,7 +6284,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-16</span>
+                        <span title="Last commit date" class="label label-default">2018-08-16</span>
                       </td>
                       <td>
                         <a href="/p/r2_gazebo_gripper">r2_gazebo_gripper</a>
@@ -6277,7 +6321,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-16</span>
+                        <span title="Last commit date" class="label label-default">2018-08-16</span>
                       </td>
                       <td>
                         <a href="/p/r2_gazebo">r2_gazebo</a>
@@ -6334,7 +6378,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-16</span>
+                        <span title="Last commit date" class="label label-default">2018-08-16</span>
                       </td>
                       <td>
                         <a href="/p/r2_description">r2_description</a>
@@ -6371,7 +6415,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-10-21</span>
+                        <span title="Last commit date" class="label label-default">2014-10-21</span>
                       </td>
                       <td>
                         <a href="/p/r2_controllers_ros">r2_controllers_ros</a>
@@ -6476,7 +6520,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-06-03</span>
+                        <span title="Last commit date" class="label label-default">2016-06-03</span>
                       </td>
                       <td>
                         <a href="/p/qwt_dependency">qwt_dependency</a>
@@ -6533,7 +6577,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-10</span>
+                        <span title="Last commit date" class="label label-default">2015-02-10</span>
                       </td>
                       <td>
                         <a href="/p/queue_web">queue_web</a>
@@ -6570,7 +6614,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-15</span>
+                        <span title="Last commit date" class="label label-default">2018-04-15</span>
                       </td>
                       <td>
                         <a href="/p/quadrotor_tk_handler">quadrotor_tk_handler</a>
@@ -6607,7 +6651,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-15</span>
+                        <span title="Last commit date" class="label label-default">2018-04-15</span>
                       </td>
                       <td>
                         <a href="/p/quadrotor_handler">quadrotor_handler</a>
@@ -6644,7 +6688,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-10</span>
+                        <span title="Last commit date" class="label label-default">2018-02-10</span>
                       </td>
                       <td>
                         <a href="/p/qt_tutorials">qt_tutorials</a>
@@ -6687,7 +6731,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-10</span>
+                        <span title="Last commit date" class="label label-default">2018-02-10</span>
                       </td>
                       <td>
                         <a href="/p/qt_ros">qt_ros</a>
@@ -6728,7 +6772,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-09</span>
+                        <span title="Last commit date" class="label label-default">2018-01-09</span>
                       </td>
                       <td>
                         <a href="/p/qt_paramedit">qt_paramedit</a>
@@ -6769,7 +6813,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_py_common">qt_gui_py_common</a>
@@ -6810,7 +6854,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_cpp">qt_gui_cpp</a>
@@ -6853,7 +6897,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_core">qt_gui_core</a>
@@ -6894,7 +6938,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_app">qt_gui_app</a>
@@ -6935,7 +6979,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui">qt_gui</a>
@@ -6980,7 +7024,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/qt_dotgraph">qt_dotgraph</a>
@@ -7021,7 +7065,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-10</span>
+                        <span title="Last commit date" class="label label-default">2018-02-10</span>
                       </td>
                       <td>
                         <a href="/p/qt_create">qt_create</a>
@@ -7064,7 +7108,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-10</span>
+                        <span title="Last commit date" class="label label-default">2018-02-10</span>
                       </td>
                       <td>
                         <a href="/p/qt_build">qt_build</a>
@@ -7578,25 +7622,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <span class="glyphicon glyphicon-file selected-sort-label"></span>
+                      <span class="glyphicon glyphicon-file selected-sort-label"
+                            title="Sorted by README status"></span>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <a class="unselected-sort-label" href="/packages/page/1/name">Name</a>
+                      <a href="/packages/page/1/name"
+                         class="unselected-sort-label"
+                         title="Sort by package name">Name</a>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -8617,25 +8671,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <span class="glyphicon glyphicon-file selected-sort-label"></span>
+                      <span class="glyphicon glyphicon-file selected-sort-label"
+                            title="Sorted by README status"></span>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <a class="unselected-sort-label" href="/packages/page/1/name">Name</a>
+                      <a href="/packages/page/1/name"
+                         class="unselected-sort-label"
+                         title="Sort by package name">Name</a>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -8865,7 +8929,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-06-03</span>
+                        <span title="Last commit date" class="label label-default">2016-06-03</span>
                       </td>
                       <td>
                         <a href="/p/qwt_dependency">qwt_dependency</a>
@@ -8942,7 +9006,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-15</span>
+                        <span title="Last commit date" class="label label-default">2018-04-15</span>
                       </td>
                       <td>
                         <a href="/p/quadrotor_tk_handler">quadrotor_tk_handler</a>
@@ -8979,7 +9043,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-15</span>
+                        <span title="Last commit date" class="label label-default">2018-04-15</span>
                       </td>
                       <td>
                         <a href="/p/quadrotor_handler">quadrotor_handler</a>
@@ -9076,7 +9140,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_py_common">qt_gui_py_common</a>
@@ -9117,7 +9181,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_cpp">qt_gui_cpp</a>
@@ -9160,7 +9224,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_core">qt_gui_core</a>
@@ -9201,7 +9265,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_app">qt_gui_app</a>
@@ -9242,7 +9306,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui">qt_gui</a>
@@ -9287,7 +9351,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/qt_dotgraph">qt_dotgraph</a>
@@ -9839,25 +9903,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <span class="glyphicon glyphicon-file selected-sort-label"></span>
+                      <span class="glyphicon glyphicon-file selected-sort-label"
+                            title="Sorted by README status"></span>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <a class="unselected-sort-label" href="/packages/page/1/name">Name</a>
+                      <a href="/packages/page/1/name"
+                         class="unselected-sort-label"
+                         title="Sort by package name">Name</a>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -9887,7 +9961,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-08-06</span>
+                        <span title="Last commit date" class="label label-default">2014-08-06</span>
                       </td>
                       <td>
                         <a href="/p/r2_moveit_config">r2_moveit_config</a>
@@ -9968,7 +10042,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-08-12</span>
+                        <span title="Last commit date" class="label label-default">2014-08-12</span>
                       </td>
                       <td>
                         <a href="/p/r2_gazebo">r2_gazebo</a>
@@ -10005,7 +10079,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-08-06</span>
+                        <span title="Last commit date" class="label label-default">2014-08-06</span>
                       </td>
                       <td>
                         <a href="/p/r2_fullbody_moveit_config">r2_fullbody_moveit_config</a>
@@ -10046,7 +10120,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-08-06</span>
+                        <span title="Last commit date" class="label label-default">2014-08-06</span>
                       </td>
                       <td>
                         <a href="/p/r2_description">r2_description</a>
@@ -10103,7 +10177,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-08-06</span>
+                        <span title="Last commit date" class="label label-default">2014-08-06</span>
                       </td>
                       <td>
                         <a href="/p/r2_control">r2_control</a>
@@ -10220,7 +10294,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-10</span>
+                        <span title="Last commit date" class="label label-default">2015-02-10</span>
                       </td>
                       <td>
                         <a href="/p/queue_web">queue_web</a>
@@ -10257,7 +10331,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-15</span>
+                        <span title="Last commit date" class="label label-default">2018-04-15</span>
                       </td>
                       <td>
                         <a href="/p/quadrotor_tk_handler">quadrotor_tk_handler</a>
@@ -10294,7 +10368,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-15</span>
+                        <span title="Last commit date" class="label label-default">2018-04-15</span>
                       </td>
                       <td>
                         <a href="/p/quadrotor_handler">quadrotor_handler</a>
@@ -10331,7 +10405,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-06-28</span>
+                        <span title="Last commit date" class="label label-default">2014-06-28</span>
                       </td>
                       <td>
                         <a href="/p/qt_tutorials">qt_tutorials</a>
@@ -10374,7 +10448,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-06-28</span>
+                        <span title="Last commit date" class="label label-default">2014-06-28</span>
                       </td>
                       <td>
                         <a href="/p/qt_ros">qt_ros</a>
@@ -10415,7 +10489,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-01-09</span>
+                        <span title="Last commit date" class="label label-default">2018-01-09</span>
                       </td>
                       <td>
                         <a href="/p/qt_paramedit">qt_paramedit</a>
@@ -10456,7 +10530,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_py_common">qt_gui_py_common</a>
@@ -10497,7 +10571,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_cpp">qt_gui_cpp</a>
@@ -10540,7 +10614,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_core">qt_gui_core</a>
@@ -10581,7 +10655,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui_app">qt_gui_app</a>
@@ -10622,7 +10696,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/qt_gui">qt_gui</a>
@@ -10667,7 +10741,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-22</span>
+                        <span title="Last commit date" class="label label-default">2018-05-22</span>
                       </td>
                       <td>
                         <a href="/p/qt_dotgraph">qt_dotgraph</a>
@@ -10708,7 +10782,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-06-28</span>
+                        <span title="Last commit date" class="label label-default">2014-06-28</span>
                       </td>
                       <td>
                         <a href="/p/qt_create">qt_create</a>
@@ -10751,7 +10825,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-06-28</span>
+                        <span title="Last commit date" class="label label-default">2014-06-28</span>
                       </td>
                       <td>
                         <a href="/p/qt_build">qt_build</a>
@@ -11334,7 +11408,7 @@
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-10-04</em>
+          <em>generated on 2018-10-08</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

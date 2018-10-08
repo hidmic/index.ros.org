@@ -21,8 +21,12 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-
+    
     <script src=/js/distro_switch.js></script>
+
+    <!-- Pre-fetch search index files -->
+    
+    
 </head>
 
 
@@ -75,21 +79,11 @@
                   </button>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                     
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><a href="/doc/ros2_overview">ROS2 Overview</a></li>
-                        
-                      
+                    <li>
+                      <a href="/doc/ros2_overview">
+                        ROS2 Overview
+                      </a>
+                    </li>
                     
                     <li class="hidden" class="divider"></li>
 
@@ -219,25 +213,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -1258,25 +1262,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -1326,7 +1340,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-13</span>
+                        <span title="Last commit date" class="label label-default">2018-08-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_python">moveit_python</a>
@@ -1367,7 +1381,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-06</span>
+                        <span title="Last commit date" class="label label-default">2018-09-06</span>
                       </td>
                       <td>
                         <a href="/p/moveit_resources">moveit_resources</a>
@@ -1424,7 +1438,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-23</span>
+                        <span title="Last commit date" class="label label-default">2018-09-23</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros">moveit_ros</a>
@@ -1461,7 +1475,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-23</span>
+                        <span title="Last commit date" class="label label-default">2018-09-23</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_benchmarks">moveit_ros_benchmarks</a>
@@ -1518,7 +1532,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-23</span>
+                        <span title="Last commit date" class="label label-default">2018-09-23</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_control_interface">moveit_ros_control_interface</a>
@@ -1555,7 +1569,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-23</span>
+                        <span title="Last commit date" class="label label-default">2018-09-23</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_manipulation">moveit_ros_manipulation</a>
@@ -1592,7 +1606,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-23</span>
+                        <span title="Last commit date" class="label label-default">2018-09-23</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_move_group">moveit_ros_move_group</a>
@@ -1629,7 +1643,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-23</span>
+                        <span title="Last commit date" class="label label-default">2018-09-23</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_perception">moveit_ros_perception</a>
@@ -1666,7 +1680,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-23</span>
+                        <span title="Last commit date" class="label label-default">2018-09-23</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_planning">moveit_ros_planning</a>
@@ -1703,7 +1717,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-23</span>
+                        <span title="Last commit date" class="label label-default">2018-09-23</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_planning_interface">moveit_ros_planning_interface</a>
@@ -1740,7 +1754,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-23</span>
+                        <span title="Last commit date" class="label label-default">2018-09-23</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_robot_interaction">moveit_ros_robot_interaction</a>
@@ -1777,7 +1791,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-23</span>
+                        <span title="Last commit date" class="label label-default">2018-09-23</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_visualization">moveit_ros_visualization</a>
@@ -1814,7 +1828,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-23</span>
+                        <span title="Last commit date" class="label label-default">2018-09-23</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_warehouse">moveit_ros_warehouse</a>
@@ -1851,7 +1865,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-23</span>
+                        <span title="Last commit date" class="label label-default">2018-09-23</span>
                       </td>
                       <td>
                         <a href="/p/moveit_runtime">moveit_runtime</a>
@@ -1888,7 +1902,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-23</span>
+                        <span title="Last commit date" class="label label-default">2018-09-23</span>
                       </td>
                       <td>
                         <a href="/p/moveit_setup_assistant">moveit_setup_assistant</a>
@@ -1925,7 +1939,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-21</span>
+                        <span title="Last commit date" class="label label-default">2018-09-21</span>
                       </td>
                       <td>
                         <a href="/p/moveit_sim_controller">moveit_sim_controller</a>
@@ -1962,7 +1976,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-23</span>
+                        <span title="Last commit date" class="label label-default">2018-09-23</span>
                       </td>
                       <td>
                         <a href="/p/moveit_simple_controller_manager">moveit_simple_controller_manager</a>
@@ -2039,7 +2053,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-05</span>
+                        <span title="Last commit date" class="label label-default">2018-09-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_visual_tools">moveit_visual_tools</a>
@@ -2576,7 +2590,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-10-04</span>
+                        <span title="Last commit date" class="label label-default">2018-10-04</span>
                       </td>
                       <td>
                         <a href="/p/mrpt2">mrpt2</a>
@@ -2613,7 +2627,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-11</span>
+                        <span title="Last commit date" class="label label-default">2018-07-11</span>
                       </td>
                       <td>
                         <a href="/p/mrpt_bridge">mrpt_bridge</a>
@@ -2641,25 +2655,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -2709,7 +2733,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-13</span>
+                        <span title="Last commit date" class="label label-default">2018-08-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_python">moveit_python</a>
@@ -2750,7 +2774,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-06</span>
+                        <span title="Last commit date" class="label label-default">2018-09-06</span>
                       </td>
                       <td>
                         <a href="/p/moveit_resources">moveit_resources</a>
@@ -2807,7 +2831,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros">moveit_ros</a>
@@ -2844,7 +2868,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_benchmarks">moveit_ros_benchmarks</a>
@@ -2901,7 +2925,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_control_interface">moveit_ros_control_interface</a>
@@ -2938,7 +2962,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_manipulation">moveit_ros_manipulation</a>
@@ -2975,7 +2999,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_move_group">moveit_ros_move_group</a>
@@ -3012,7 +3036,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_perception">moveit_ros_perception</a>
@@ -3049,7 +3073,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_planning">moveit_ros_planning</a>
@@ -3086,7 +3110,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_planning_interface">moveit_ros_planning_interface</a>
@@ -3123,7 +3147,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_robot_interaction">moveit_ros_robot_interaction</a>
@@ -3160,7 +3184,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_visualization">moveit_ros_visualization</a>
@@ -3197,7 +3221,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_warehouse">moveit_ros_warehouse</a>
@@ -3234,7 +3258,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/moveit_runtime">moveit_runtime</a>
@@ -3271,7 +3295,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/moveit_setup_assistant">moveit_setup_assistant</a>
@@ -3308,7 +3332,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-01-04</span>
+                        <span title="Last commit date" class="label label-default">2017-01-04</span>
                       </td>
                       <td>
                         <a href="/p/moveit_sim_controller">moveit_sim_controller</a>
@@ -3345,7 +3369,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/moveit_simple_controller_manager">moveit_simple_controller_manager</a>
@@ -3422,7 +3446,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-13</span>
+                        <span title="Last commit date" class="label label-default">2018-09-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_visual_tools">moveit_visual_tools</a>
@@ -3579,7 +3603,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-19</span>
+                        <span title="Last commit date" class="label label-default">2018-02-19</span>
                       </td>
                       <td>
                         <a href="/p/mqtt_bridge">mqtt_bridge</a>
@@ -3996,7 +4020,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-03-31</span>
+                        <span title="Last commit date" class="label label-default">2017-03-31</span>
                       </td>
                       <td>
                         <a href="/p/mrpt_bridge">mrpt_bridge</a>
@@ -4024,25 +4048,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -4072,7 +4106,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-18</span>
+                        <span title="Last commit date" class="label label-default">2018-05-18</span>
                       </td>
                       <td>
                         <a href="/p/moveit_pr2">moveit_pr2</a>
@@ -4109,7 +4143,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-13</span>
+                        <span title="Last commit date" class="label label-default">2018-08-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_python">moveit_python</a>
@@ -4150,7 +4184,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-06</span>
+                        <span title="Last commit date" class="label label-default">2018-09-06</span>
                       </td>
                       <td>
                         <a href="/p/moveit_resources">moveit_resources</a>
@@ -4187,7 +4221,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-26</span>
+                        <span title="Last commit date" class="label label-default">2017-11-26</span>
                       </td>
                       <td>
                         <a href="/p/moveit_robots">moveit_robots</a>
@@ -4224,7 +4258,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros">moveit_ros</a>
@@ -4261,7 +4295,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_benchmarks">moveit_ros_benchmarks</a>
@@ -4298,7 +4332,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_benchmarks_gui">moveit_ros_benchmarks_gui</a>
@@ -4335,7 +4369,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_control_interface">moveit_ros_control_interface</a>
@@ -4372,7 +4406,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_manipulation">moveit_ros_manipulation</a>
@@ -4409,7 +4443,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_move_group">moveit_ros_move_group</a>
@@ -4446,7 +4480,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_perception">moveit_ros_perception</a>
@@ -4483,7 +4517,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_planning">moveit_ros_planning</a>
@@ -4520,7 +4554,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_planning_interface">moveit_ros_planning_interface</a>
@@ -4557,7 +4591,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_robot_interaction">moveit_ros_robot_interaction</a>
@@ -4594,7 +4628,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_visualization">moveit_ros_visualization</a>
@@ -4631,7 +4665,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_warehouse">moveit_ros_warehouse</a>
@@ -4668,7 +4702,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/moveit_runtime">moveit_runtime</a>
@@ -4705,7 +4739,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_setup_assistant">moveit_setup_assistant</a>
@@ -4746,7 +4780,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-01-04</span>
+                        <span title="Last commit date" class="label label-default">2017-01-04</span>
                       </td>
                       <td>
                         <a href="/p/moveit_sim_controller">moveit_sim_controller</a>
@@ -4783,7 +4817,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_simple_controller_manager">moveit_simple_controller_manager</a>
@@ -4820,7 +4854,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-31</span>
+                        <span title="Last commit date" class="label label-default">2016-10-31</span>
                       </td>
                       <td>
                         <a href="/p/moveit_simple_grasps">moveit_simple_grasps</a>
@@ -4863,7 +4897,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-28</span>
+                        <span title="Last commit date" class="label label-default">2018-09-28</span>
                       </td>
                       <td>
                         <a href="/p/moveit_tutorials">moveit_tutorials</a>
@@ -4900,7 +4934,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-27</span>
+                        <span title="Last commit date" class="label label-default">2018-08-27</span>
                       </td>
                       <td>
                         <a href="/p/moveit_visual_tools">moveit_visual_tools</a>
@@ -4937,7 +4971,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-30</span>
+                        <span title="Last commit date" class="label label-default">2018-07-30</span>
                       </td>
                       <td>
                         <a href="/p/movidius_ncs">movidius_ncs</a>
@@ -4974,7 +5008,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-30</span>
+                        <span title="Last commit date" class="label label-default">2018-07-30</span>
                       </td>
                       <td>
                         <a href="/p/movidius_ncs_example">movidius_ncs_example</a>
@@ -5011,7 +5045,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-30</span>
+                        <span title="Last commit date" class="label label-default">2018-07-30</span>
                       </td>
                       <td>
                         <a href="/p/movidius_ncs_image">movidius_ncs_image</a>
@@ -5048,7 +5082,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-30</span>
+                        <span title="Last commit date" class="label label-default">2018-07-30</span>
                       </td>
                       <td>
                         <a href="/p/movidius_ncs_launch">movidius_ncs_launch</a>
@@ -5085,7 +5119,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-30</span>
+                        <span title="Last commit date" class="label label-default">2018-07-30</span>
                       </td>
                       <td>
                         <a href="/p/movidius_ncs_lib">movidius_ncs_lib</a>
@@ -5122,7 +5156,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-30</span>
+                        <span title="Last commit date" class="label label-default">2018-07-30</span>
                       </td>
                       <td>
                         <a href="/p/movidius_ncs_stream">movidius_ncs_stream</a>
@@ -5159,7 +5193,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-19</span>
+                        <span title="Last commit date" class="label label-default">2018-02-19</span>
                       </td>
                       <td>
                         <a href="/p/mqtt_bridge">mqtt_bridge</a>
@@ -5536,7 +5570,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-10-02</span>
+                        <span title="Last commit date" class="label label-default">2018-10-02</span>
                       </td>
                       <td>
                         <a href="/p/mrpt1">mrpt1</a>
@@ -5593,7 +5627,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-11</span>
+                        <span title="Last commit date" class="label label-default">2018-07-11</span>
                       </td>
                       <td>
                         <a href="/p/mrpt_bridge">mrpt_bridge</a>
@@ -5621,25 +5655,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -5669,7 +5713,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-07-25</span>
+                        <span title="Last commit date" class="label label-default">2017-07-25</span>
                       </td>
                       <td>
                         <a href="/p/moveit_pr2">moveit_pr2</a>
@@ -5706,7 +5750,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-13</span>
+                        <span title="Last commit date" class="label label-default">2018-08-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_python">moveit_python</a>
@@ -5747,7 +5791,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-06</span>
+                        <span title="Last commit date" class="label label-default">2018-09-06</span>
                       </td>
                       <td>
                         <a href="/p/moveit_resources">moveit_resources</a>
@@ -5784,7 +5828,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-26</span>
+                        <span title="Last commit date" class="label label-default">2017-11-26</span>
                       </td>
                       <td>
                         <a href="/p/moveit_robots">moveit_robots</a>
@@ -5821,7 +5865,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros">moveit_ros</a>
@@ -5858,7 +5902,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_benchmarks">moveit_ros_benchmarks</a>
@@ -5895,7 +5939,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_benchmarks_gui">moveit_ros_benchmarks_gui</a>
@@ -5932,7 +5976,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_control_interface">moveit_ros_control_interface</a>
@@ -5969,7 +6013,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_manipulation">moveit_ros_manipulation</a>
@@ -6006,7 +6050,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_move_group">moveit_ros_move_group</a>
@@ -6043,7 +6087,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_perception">moveit_ros_perception</a>
@@ -6080,7 +6124,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_planning">moveit_ros_planning</a>
@@ -6117,7 +6161,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_planning_interface">moveit_ros_planning_interface</a>
@@ -6154,7 +6198,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_robot_interaction">moveit_ros_robot_interaction</a>
@@ -6191,7 +6235,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_visualization">moveit_ros_visualization</a>
@@ -6228,7 +6272,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_warehouse">moveit_ros_warehouse</a>
@@ -6265,7 +6309,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-22</span>
+                        <span title="Last commit date" class="label label-default">2018-04-22</span>
                       </td>
                       <td>
                         <a href="/p/moveit_runtime">moveit_runtime</a>
@@ -6302,7 +6346,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_setup_assistant">moveit_setup_assistant</a>
@@ -6343,7 +6387,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-01-13</span>
+                        <span title="Last commit date" class="label label-default">2016-01-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_sim_controller">moveit_sim_controller</a>
@@ -6380,7 +6424,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_simple_controller_manager">moveit_simple_controller_manager</a>
@@ -6417,7 +6461,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-31</span>
+                        <span title="Last commit date" class="label label-default">2016-10-31</span>
                       </td>
                       <td>
                         <a href="/p/moveit_simple_grasps">moveit_simple_grasps</a>
@@ -6460,7 +6504,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-10-18</span>
+                        <span title="Last commit date" class="label label-default">2017-10-18</span>
                       </td>
                       <td>
                         <a href="/p/moveit_tutorials">moveit_tutorials</a>
@@ -6497,7 +6541,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-02-09</span>
+                        <span title="Last commit date" class="label label-default">2016-02-09</span>
                       </td>
                       <td>
                         <a href="/p/moveit_visual_tools">moveit_visual_tools</a>
@@ -6734,7 +6778,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-02</span>
+                        <span title="Last commit date" class="label label-default">2017-11-02</span>
                       </td>
                       <td>
                         <a href="/p/mrp2_analyzer">mrp2_analyzer</a>
@@ -6771,7 +6815,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-15</span>
+                        <span title="Last commit date" class="label label-default">2016-08-15</span>
                       </td>
                       <td>
                         <a href="/p/mrp2_bringup">mrp2_bringup</a>
@@ -6808,7 +6852,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-02</span>
+                        <span title="Last commit date" class="label label-default">2017-11-02</span>
                       </td>
                       <td>
                         <a href="/p/mrp2_common">mrp2_common</a>
@@ -6845,7 +6889,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-02</span>
+                        <span title="Last commit date" class="label label-default">2017-11-02</span>
                       </td>
                       <td>
                         <a href="/p/mrp2_control">mrp2_control</a>
@@ -6882,7 +6926,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-02</span>
+                        <span title="Last commit date" class="label label-default">2017-11-02</span>
                       </td>
                       <td>
                         <a href="/p/mrp2_description">mrp2_description</a>
@@ -6919,7 +6963,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-10</span>
+                        <span title="Last commit date" class="label label-default">2016-03-10</span>
                       </td>
                       <td>
                         <a href="/p/mrp2_desktop">mrp2_desktop</a>
@@ -6956,7 +7000,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-15</span>
+                        <span title="Last commit date" class="label label-default">2016-08-15</span>
                       </td>
                       <td>
                         <a href="/p/mrp2_display">mrp2_display</a>
@@ -6993,7 +7037,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-10</span>
+                        <span title="Last commit date" class="label label-default">2016-03-10</span>
                       </td>
                       <td>
                         <a href="/p/mrp2_gazebo">mrp2_gazebo</a>
@@ -7030,7 +7074,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-15</span>
+                        <span title="Last commit date" class="label label-default">2016-08-15</span>
                       </td>
                       <td>
                         <a href="/p/mrp2_hardware">mrp2_hardware</a>
@@ -7067,7 +7111,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-10</span>
+                        <span title="Last commit date" class="label label-default">2016-03-10</span>
                       </td>
                       <td>
                         <a href="/p/mrp2_hardware_gazebo">mrp2_hardware_gazebo</a>
@@ -7104,7 +7148,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-11-02</span>
+                        <span title="Last commit date" class="label label-default">2017-11-02</span>
                       </td>
                       <td>
                         <a href="/p/mrp2_navigation">mrp2_navigation</a>
@@ -7141,7 +7185,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-15</span>
+                        <span title="Last commit date" class="label label-default">2016-08-15</span>
                       </td>
                       <td>
                         <a href="/p/mrp2_robot">mrp2_robot</a>
@@ -7178,7 +7222,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-10</span>
+                        <span title="Last commit date" class="label label-default">2016-03-10</span>
                       </td>
                       <td>
                         <a href="/p/mrp2_simulator">mrp2_simulator</a>
@@ -7215,7 +7259,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-10</span>
+                        <span title="Last commit date" class="label label-default">2016-03-10</span>
                       </td>
                       <td>
                         <a href="/p/mrp2_viz">mrp2_viz</a>
@@ -7303,25 +7347,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -8342,25 +8396,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -8410,7 +8474,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-13</span>
+                        <span title="Last commit date" class="label label-default">2018-08-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_python">moveit_python</a>
@@ -8451,7 +8515,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-06</span>
+                        <span title="Last commit date" class="label label-default">2018-09-06</span>
                       </td>
                       <td>
                         <a href="/p/moveit_resources">moveit_resources</a>
@@ -8508,7 +8572,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros">moveit_ros</a>
@@ -8545,7 +8609,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_benchmarks">moveit_ros_benchmarks</a>
@@ -8582,7 +8646,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_benchmarks_gui">moveit_ros_benchmarks_gui</a>
@@ -8619,7 +8683,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_control_interface">moveit_ros_control_interface</a>
@@ -8656,7 +8720,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_manipulation">moveit_ros_manipulation</a>
@@ -8693,7 +8757,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_move_group">moveit_ros_move_group</a>
@@ -8730,7 +8794,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_perception">moveit_ros_perception</a>
@@ -8767,7 +8831,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_planning">moveit_ros_planning</a>
@@ -8804,7 +8868,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_planning_interface">moveit_ros_planning_interface</a>
@@ -8841,7 +8905,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_robot_interaction">moveit_ros_robot_interaction</a>
@@ -8878,7 +8942,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_visualization">moveit_ros_visualization</a>
@@ -8915,7 +8979,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_warehouse">moveit_ros_warehouse</a>
@@ -8952,7 +9016,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-07-23</span>
+                        <span title="Last commit date" class="label label-default">2017-07-23</span>
                       </td>
                       <td>
                         <a href="/p/moveit_runtime">moveit_runtime</a>
@@ -8989,7 +9053,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_setup_assistant">moveit_setup_assistant</a>
@@ -9030,7 +9094,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-04-21</span>
+                        <span title="Last commit date" class="label label-default">2016-04-21</span>
                       </td>
                       <td>
                         <a href="/p/moveit_sim_controller">moveit_sim_controller</a>
@@ -9067,7 +9131,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-05</span>
+                        <span title="Last commit date" class="label label-default">2016-08-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_simple_controller_manager">moveit_simple_controller_manager</a>
@@ -9144,7 +9208,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-06-14</span>
+                        <span title="Last commit date" class="label label-default">2016-06-14</span>
                       </td>
                       <td>
                         <a href="/p/moveit_visual_tools">moveit_visual_tools</a>
@@ -9712,25 +9776,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -9760,7 +9834,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-12-05</span>
+                        <span title="Last commit date" class="label label-default">2015-12-05</span>
                       </td>
                       <td>
                         <a href="/p/moveit_pr2">moveit_pr2</a>
@@ -9797,7 +9871,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-13</span>
+                        <span title="Last commit date" class="label label-default">2018-08-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_python">moveit_python</a>
@@ -9838,7 +9912,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-06</span>
+                        <span title="Last commit date" class="label label-default">2018-09-06</span>
                       </td>
                       <td>
                         <a href="/p/moveit_resources">moveit_resources</a>
@@ -9895,7 +9969,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-04-13</span>
+                        <span title="Last commit date" class="label label-default">2015-04-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros">moveit_ros</a>
@@ -9932,7 +10006,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-04-13</span>
+                        <span title="Last commit date" class="label label-default">2015-04-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_benchmarks">moveit_ros_benchmarks</a>
@@ -9969,7 +10043,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-04-13</span>
+                        <span title="Last commit date" class="label label-default">2015-04-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_benchmarks_gui">moveit_ros_benchmarks_gui</a>
@@ -10026,7 +10100,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-04-13</span>
+                        <span title="Last commit date" class="label label-default">2015-04-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_manipulation">moveit_ros_manipulation</a>
@@ -10063,7 +10137,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-04-13</span>
+                        <span title="Last commit date" class="label label-default">2015-04-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_move_group">moveit_ros_move_group</a>
@@ -10100,7 +10174,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-04-13</span>
+                        <span title="Last commit date" class="label label-default">2015-04-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_perception">moveit_ros_perception</a>
@@ -10137,7 +10211,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-04-13</span>
+                        <span title="Last commit date" class="label label-default">2015-04-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_planning">moveit_ros_planning</a>
@@ -10174,7 +10248,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-04-13</span>
+                        <span title="Last commit date" class="label label-default">2015-04-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_planning_interface">moveit_ros_planning_interface</a>
@@ -10211,7 +10285,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-04-13</span>
+                        <span title="Last commit date" class="label label-default">2015-04-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_robot_interaction">moveit_ros_robot_interaction</a>
@@ -10248,7 +10322,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-04-13</span>
+                        <span title="Last commit date" class="label label-default">2015-04-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_visualization">moveit_ros_visualization</a>
@@ -10285,7 +10359,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-04-13</span>
+                        <span title="Last commit date" class="label label-default">2015-04-13</span>
                       </td>
                       <td>
                         <a href="/p/moveit_ros_warehouse">moveit_ros_warehouse</a>
@@ -10342,7 +10416,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-08-19</span>
+                        <span title="Last commit date" class="label label-default">2014-08-19</span>
                       </td>
                       <td>
                         <a href="/p/moveit_setup_assistant">moveit_setup_assistant</a>
@@ -10403,7 +10477,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-09-12</span>
+                        <span title="Last commit date" class="label label-default">2014-09-12</span>
                       </td>
                       <td>
                         <a href="/p/moveit_simple_controller_manager">moveit_simple_controller_manager</a>
@@ -10440,7 +10514,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-07-09</span>
+                        <span title="Last commit date" class="label label-default">2015-07-09</span>
                       </td>
                       <td>
                         <a href="/p/moveit_simple_grasps">moveit_simple_grasps</a>
@@ -10503,7 +10577,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-09-17</span>
+                        <span title="Last commit date" class="label label-default">2014-09-17</span>
                       </td>
                       <td>
                         <a href="/p/moveit_visual_tools">moveit_visual_tools</a>
@@ -10680,7 +10754,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-04-22</span>
+                        <span title="Last commit date" class="label label-default">2014-04-22</span>
                       </td>
                       <td>
                         <a href="/p/mr_rqt">mr_rqt</a>
@@ -10717,7 +10791,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-04-22</span>
+                        <span title="Last commit date" class="label label-default">2014-04-22</span>
                       </td>
                       <td>
                         <a href="/p/mr_teleoperator">mr_teleoperator</a>
@@ -10754,7 +10828,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2014-04-22</span>
+                        <span title="Last commit date" class="label label-default">2014-04-22</span>
                       </td>
                       <td>
                         <a href="/p/mr_tools">mr_tools</a>
@@ -11191,7 +11265,7 @@
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-10-04</em>
+          <em>generated on 2018-10-08</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

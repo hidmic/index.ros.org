@@ -21,8 +21,12 @@
 
     <script type="text/javascript" src=/js/ga.js async></script>
     <script type="text/javascript" src=/js/toc.js></script>
-
+    
     <script src=/js/distro_switch.js></script>
+
+    <!-- Pre-fetch search index files -->
+    
+    
 </head>
 
 
@@ -75,21 +79,11 @@
                   </button>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                     
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                          <li><a href="/doc/ros2_overview">ROS2 Overview</a></li>
-                        
-                      
+                    <li>
+                      <a href="/doc/ros2_overview">
+                        ROS2 Overview
+                      </a>
+                    </li>
                     
                     <li class="hidden" class="divider"></li>
 
@@ -219,25 +213,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -1258,25 +1262,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -1306,7 +1320,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-11</span>
+                        <span title="Last commit date" class="label label-default">2018-09-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_controller_manager">pr2_controller_manager</a>
@@ -1343,7 +1357,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-20</span>
+                        <span title="Last commit date" class="label label-default">2018-09-20</span>
                       </td>
                       <td>
                         <a href="/p/pr2_controllers">pr2_controllers</a>
@@ -1380,7 +1394,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-20</span>
+                        <span title="Last commit date" class="label label-default">2018-09-20</span>
                       </td>
                       <td>
                         <a href="/p/pr2_controllers_msgs">pr2_controllers_msgs</a>
@@ -1437,7 +1451,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-10</span>
+                        <span title="Last commit date" class="label label-default">2018-09-10</span>
                       </td>
                       <td>
                         <a href="/p/pr2_dashboard_aggregator">pr2_dashboard_aggregator</a>
@@ -1514,7 +1528,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-10</span>
+                        <span title="Last commit date" class="label label-default">2018-09-10</span>
                       </td>
                       <td>
                         <a href="/p/pr2_description">pr2_description</a>
@@ -1677,7 +1691,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-20</span>
+                        <span title="Last commit date" class="label label-default">2018-09-20</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gripper_action">pr2_gripper_action</a>
@@ -1840,7 +1854,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-11</span>
+                        <span title="Last commit date" class="label label-default">2018-09-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_hardware_interface">pr2_hardware_interface</a>
@@ -1889,7 +1903,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-20</span>
+                        <span title="Last commit date" class="label label-default">2018-09-20</span>
                       </td>
                       <td>
                         <a href="/p/pr2_head_action">pr2_head_action</a>
@@ -1990,7 +2004,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/pr2_kinematics">pr2_kinematics</a>
@@ -2027,7 +2041,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-10</span>
+                        <span title="Last commit date" class="label label-default">2018-09-10</span>
                       </td>
                       <td>
                         <a href="/p/pr2_machine">pr2_machine</a>
@@ -2084,7 +2098,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-26</span>
+                        <span title="Last commit date" class="label label-default">2018-09-26</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mannequin_mode">pr2_mannequin_mode</a>
@@ -2141,7 +2155,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-11</span>
+                        <span title="Last commit date" class="label label-default">2018-09-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism">pr2_mechanism</a>
@@ -2178,7 +2192,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-20</span>
+                        <span title="Last commit date" class="label label-default">2018-09-20</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_controllers">pr2_mechanism_controllers</a>
@@ -2217,7 +2231,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-11</span>
+                        <span title="Last commit date" class="label label-default">2018-09-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_diagnostics">pr2_mechanism_diagnostics</a>
@@ -2254,7 +2268,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-11</span>
+                        <span title="Last commit date" class="label label-default">2018-09-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_model">pr2_mechanism_model</a>
@@ -2293,7 +2307,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_msgs">pr2_mechanism_msgs</a>
@@ -2480,7 +2494,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-10</span>
+                        <span title="Last commit date" class="label label-default">2018-09-10</span>
                       </td>
                       <td>
                         <a href="/p/pr2_msgs">pr2_msgs</a>
@@ -2628,25 +2642,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -2676,7 +2700,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_controller_manager">pr2_controller_manager</a>
@@ -2713,7 +2737,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-20</span>
+                        <span title="Last commit date" class="label label-default">2018-09-20</span>
                       </td>
                       <td>
                         <a href="/p/pr2_controllers">pr2_controllers</a>
@@ -2750,7 +2774,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-20</span>
+                        <span title="Last commit date" class="label label-default">2018-09-20</span>
                       </td>
                       <td>
                         <a href="/p/pr2_controllers_msgs">pr2_controllers_msgs</a>
@@ -2807,7 +2831,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-07</span>
+                        <span title="Last commit date" class="label label-default">2018-06-07</span>
                       </td>
                       <td>
                         <a href="/p/pr2_dashboard_aggregator">pr2_dashboard_aggregator</a>
@@ -2884,7 +2908,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-07</span>
+                        <span title="Last commit date" class="label label-default">2018-06-07</span>
                       </td>
                       <td>
                         <a href="/p/pr2_description">pr2_description</a>
@@ -3047,7 +3071,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-20</span>
+                        <span title="Last commit date" class="label label-default">2018-09-20</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gripper_action">pr2_gripper_action</a>
@@ -3210,7 +3234,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_hardware_interface">pr2_hardware_interface</a>
@@ -3259,7 +3283,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-20</span>
+                        <span title="Last commit date" class="label label-default">2018-09-20</span>
                       </td>
                       <td>
                         <a href="/p/pr2_head_action">pr2_head_action</a>
@@ -3360,7 +3384,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/pr2_kinematics">pr2_kinematics</a>
@@ -3397,7 +3421,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-07</span>
+                        <span title="Last commit date" class="label label-default">2018-06-07</span>
                       </td>
                       <td>
                         <a href="/p/pr2_machine">pr2_machine</a>
@@ -3454,7 +3478,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-26</span>
+                        <span title="Last commit date" class="label label-default">2018-09-26</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mannequin_mode">pr2_mannequin_mode</a>
@@ -3511,7 +3535,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism">pr2_mechanism</a>
@@ -3548,7 +3572,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-20</span>
+                        <span title="Last commit date" class="label label-default">2018-09-20</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_controllers">pr2_mechanism_controllers</a>
@@ -3587,7 +3611,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_diagnostics">pr2_mechanism_diagnostics</a>
@@ -3624,7 +3648,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_model">pr2_mechanism_model</a>
@@ -3663,7 +3687,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_msgs">pr2_mechanism_msgs</a>
@@ -3850,7 +3874,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-07</span>
+                        <span title="Last commit date" class="label label-default">2018-06-07</span>
                       </td>
                       <td>
                         <a href="/p/pr2_msgs">pr2_msgs</a>
@@ -3998,25 +4022,35 @@
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -4046,7 +4080,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_controller_manager">pr2_controller_manager</a>
@@ -4083,7 +4117,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_controllers">pr2_controllers</a>
@@ -4120,7 +4154,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_controllers_msgs">pr2_controllers_msgs</a>
@@ -4157,7 +4191,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/pr2_counterbalance_check">pr2_counterbalance_check</a>
@@ -4194,7 +4228,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-07</span>
+                        <span title="Last commit date" class="label label-default">2018-06-07</span>
                       </td>
                       <td>
                         <a href="/p/pr2_dashboard_aggregator">pr2_dashboard_aggregator</a>
@@ -4251,7 +4285,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-20</span>
+                        <span title="Last commit date" class="label label-default">2018-04-20</span>
                       </td>
                       <td>
                         <a href="/p/pr2_dense_laser_snapshotter">pr2_dense_laser_snapshotter</a>
@@ -4292,7 +4326,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-07</span>
+                        <span title="Last commit date" class="label label-default">2018-06-07</span>
                       </td>
                       <td>
                         <a href="/p/pr2_description">pr2_description</a>
@@ -4335,7 +4369,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-26</span>
+                        <span title="Last commit date" class="label label-default">2018-04-26</span>
                       </td>
                       <td>
                         <a href="/p/pr2_desktop">pr2_desktop</a>
@@ -4372,7 +4406,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-23</span>
+                        <span title="Last commit date" class="label label-default">2018-04-23</span>
                       </td>
                       <td>
                         <a href="/p/pr2_ethercat">pr2_ethercat</a>
@@ -4409,7 +4443,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-12</span>
+                        <span title="Last commit date" class="label label-default">2018-04-12</span>
                       </td>
                       <td>
                         <a href="/p/pr2_ethercat_drivers">pr2_ethercat_drivers</a>
@@ -4470,7 +4504,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-20</span>
+                        <span title="Last commit date" class="label label-default">2018-08-20</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gazebo">pr2_gazebo</a>
@@ -4509,7 +4543,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-20</span>
+                        <span title="Last commit date" class="label label-default">2018-08-20</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gazebo_plugins">pr2_gazebo_plugins</a>
@@ -4550,7 +4584,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gripper_action">pr2_gripper_action</a>
@@ -4593,7 +4627,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-11</span>
+                        <span title="Last commit date" class="label label-default">2018-07-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gripper_sensor">pr2_gripper_sensor</a>
@@ -4630,7 +4664,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-11</span>
+                        <span title="Last commit date" class="label label-default">2018-07-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gripper_sensor_action">pr2_gripper_sensor_action</a>
@@ -4671,7 +4705,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-11</span>
+                        <span title="Last commit date" class="label label-default">2018-07-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gripper_sensor_controller">pr2_gripper_sensor_controller</a>
@@ -4708,7 +4742,7 @@
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-11</span>
+                        <span title="Last commit date" class="label label-default">2018-07-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gripper_sensor_msgs">pr2_gripper_sensor_msgs</a>
@@ -4789,7 +4823,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_hardware_interface">pr2_hardware_interface</a>
@@ -4838,7 +4872,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_head_action">pr2_head_action</a>
@@ -4939,7 +4973,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-08-29</span>
+                        <span title="Last commit date" class="label label-default">2018-08-29</span>
                       </td>
                       <td>
                         <a href="/p/pr2_kinematics">pr2_kinematics</a>
@@ -4976,7 +5010,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-07</span>
+                        <span title="Last commit date" class="label label-default">2018-06-07</span>
                       </td>
                       <td>
                         <a href="/p/pr2_machine">pr2_machine</a>
@@ -5033,7 +5067,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-14</span>
+                        <span title="Last commit date" class="label label-default">2018-02-14</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mannequin_mode">pr2_mannequin_mode</a>
@@ -5090,7 +5124,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism">pr2_mechanism</a>
@@ -5127,7 +5161,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_controllers">pr2_mechanism_controllers</a>
@@ -5166,7 +5200,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_diagnostics">pr2_mechanism_diagnostics</a>
@@ -5203,7 +5237,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_model">pr2_mechanism_model</a>
@@ -5242,7 +5276,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_msgs">pr2_mechanism_msgs</a>
@@ -5289,7 +5323,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/pr2_motor_diagnostic_tool">pr2_motor_diagnostic_tool</a>
@@ -5326,7 +5360,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-07</span>
+                        <span title="Last commit date" class="label label-default">2018-05-07</span>
                       </td>
                       <td>
                         <a href="/p/pr2_move_base">pr2_move_base</a>
@@ -5363,7 +5397,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-18</span>
+                        <span title="Last commit date" class="label label-default">2018-05-18</span>
                       </td>
                       <td>
                         <a href="/p/pr2_move_group_test">pr2_move_group_test</a>
@@ -5408,7 +5442,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-18</span>
+                        <span title="Last commit date" class="label label-default">2018-05-18</span>
                       </td>
                       <td>
                         <a href="/p/pr2_moveit_config">pr2_moveit_config</a>
@@ -5449,7 +5483,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-18</span>
+                        <span title="Last commit date" class="label label-default">2018-05-18</span>
                       </td>
                       <td>
                         <a href="/p/pr2_moveit_plugins">pr2_moveit_plugins</a>
@@ -5486,7 +5520,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-18</span>
+                        <span title="Last commit date" class="label label-default">2018-05-18</span>
                       </td>
                       <td>
                         <a href="/p/pr2_moveit_tests">pr2_moveit_tests</a>
@@ -5543,7 +5577,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-06-07</span>
+                        <span title="Last commit date" class="label label-default">2018-06-07</span>
                       </td>
                       <td>
                         <a href="/p/pr2_msgs">pr2_msgs</a>
@@ -5580,7 +5614,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-07</span>
+                        <span title="Last commit date" class="label label-default">2018-05-07</span>
                       </td>
                       <td>
                         <a href="/p/pr2_navigation">pr2_navigation</a>
@@ -5637,7 +5671,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-07</span>
+                        <span title="Last commit date" class="label label-default">2018-05-07</span>
                       </td>
                       <td>
                         <a href="/p/pr2_navigation_config">pr2_navigation_config</a>
@@ -5674,7 +5708,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-07</span>
+                        <span title="Last commit date" class="label label-default">2018-05-07</span>
                       </td>
                       <td>
                         <a href="/p/pr2_navigation_global">pr2_navigation_global</a>
@@ -5711,7 +5745,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-07</span>
+                        <span title="Last commit date" class="label label-default">2018-05-07</span>
                       </td>
                       <td>
                         <a href="/p/pr2_navigation_local">pr2_navigation_local</a>
@@ -5748,7 +5782,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-05-07</span>
+                        <span title="Last commit date" class="label label-default">2018-05-07</span>
                       </td>
                       <td>
                         <a href="/p/pr2_navigation_perception">pr2_navigation_perception</a>
@@ -5776,25 +5810,35 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -5824,7 +5868,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-01-19</span>
+                        <span title="Last commit date" class="label label-default">2015-01-19</span>
                       </td>
                       <td>
                         <a href="/p/pr2_controller_manager">pr2_controller_manager</a>
@@ -5861,7 +5905,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-09</span>
+                        <span title="Last commit date" class="label label-default">2015-02-09</span>
                       </td>
                       <td>
                         <a href="/p/pr2_controllers">pr2_controllers</a>
@@ -5898,7 +5942,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-09</span>
+                        <span title="Last commit date" class="label label-default">2015-02-09</span>
                       </td>
                       <td>
                         <a href="/p/pr2_controllers_msgs">pr2_controllers_msgs</a>
@@ -5935,7 +5979,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/pr2_counterbalance_check">pr2_counterbalance_check</a>
@@ -5972,7 +6016,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-11</span>
+                        <span title="Last commit date" class="label label-default">2016-10-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_dashboard_aggregator">pr2_dashboard_aggregator</a>
@@ -6009,7 +6053,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-06</span>
+                        <span title="Last commit date" class="label label-default">2015-02-06</span>
                       </td>
                       <td>
                         <a href="/p/pr2_delivery">pr2_delivery</a>
@@ -6048,7 +6092,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-06</span>
+                        <span title="Last commit date" class="label label-default">2015-02-06</span>
                       </td>
                       <td>
                         <a href="/p/pr2_dense_laser_snapshotter">pr2_dense_laser_snapshotter</a>
@@ -6089,7 +6133,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-11</span>
+                        <span title="Last commit date" class="label label-default">2016-10-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_description">pr2_description</a>
@@ -6132,7 +6176,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-22</span>
+                        <span title="Last commit date" class="label label-default">2018-04-22</span>
                       </td>
                       <td>
                         <a href="/p/pr2_desktop">pr2_desktop</a>
@@ -6169,7 +6213,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-01</span>
+                        <span title="Last commit date" class="label label-default">2016-03-01</span>
                       </td>
                       <td>
                         <a href="/p/pr2_ethercat">pr2_ethercat</a>
@@ -6206,7 +6250,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-06-19</span>
+                        <span title="Last commit date" class="label label-default">2015-06-19</span>
                       </td>
                       <td>
                         <a href="/p/pr2_ethercat_drivers">pr2_ethercat_drivers</a>
@@ -6267,7 +6311,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-12-23</span>
+                        <span title="Last commit date" class="label label-default">2015-12-23</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gazebo">pr2_gazebo</a>
@@ -6306,7 +6350,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-12-23</span>
+                        <span title="Last commit date" class="label label-default">2015-12-23</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gazebo_plugins">pr2_gazebo_plugins</a>
@@ -6347,7 +6391,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-09</span>
+                        <span title="Last commit date" class="label label-default">2015-02-09</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gripper_action">pr2_gripper_action</a>
@@ -6390,7 +6434,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-11</span>
+                        <span title="Last commit date" class="label label-default">2018-07-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gripper_sensor">pr2_gripper_sensor</a>
@@ -6427,7 +6471,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-11</span>
+                        <span title="Last commit date" class="label label-default">2018-07-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gripper_sensor_action">pr2_gripper_sensor_action</a>
@@ -6468,7 +6512,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-11</span>
+                        <span title="Last commit date" class="label label-default">2018-07-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gripper_sensor_controller">pr2_gripper_sensor_controller</a>
@@ -6505,7 +6549,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-11</span>
+                        <span title="Last commit date" class="label label-default">2018-07-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gripper_sensor_msgs">pr2_gripper_sensor_msgs</a>
@@ -6566,7 +6610,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-10</span>
+                        <span title="Last commit date" class="label label-default">2015-02-10</span>
                       </td>
                       <td>
                         <a href="/p/pr2_hack_the_future">pr2_hack_the_future</a>
@@ -6603,7 +6647,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-01-19</span>
+                        <span title="Last commit date" class="label label-default">2015-01-19</span>
                       </td>
                       <td>
                         <a href="/p/pr2_hardware_interface">pr2_hardware_interface</a>
@@ -6652,7 +6696,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-09</span>
+                        <span title="Last commit date" class="label label-default">2015-02-09</span>
                       </td>
                       <td>
                         <a href="/p/pr2_head_action">pr2_head_action</a>
@@ -6693,7 +6737,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-02-17</span>
+                        <span title="Last commit date" class="label label-default">2016-02-17</span>
                       </td>
                       <td>
                         <a href="/p/pr2_image_snapshot_recorder">pr2_image_snapshot_recorder</a>
@@ -6730,7 +6774,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-07-25</span>
+                        <span title="Last commit date" class="label label-default">2017-07-25</span>
                       </td>
                       <td>
                         <a href="/p/pr2_jacobian_tests">pr2_jacobian_tests</a>
@@ -6767,7 +6811,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-10</span>
+                        <span title="Last commit date" class="label label-default">2015-02-10</span>
                       </td>
                       <td>
                         <a href="/p/pr2_joint_teleop">pr2_joint_teleop</a>
@@ -6804,7 +6848,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-08</span>
+                        <span title="Last commit date" class="label label-default">2016-08-08</span>
                       </td>
                       <td>
                         <a href="/p/pr2_kinematics">pr2_kinematics</a>
@@ -6841,7 +6885,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-11</span>
+                        <span title="Last commit date" class="label label-default">2016-10-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_machine">pr2_machine</a>
@@ -6878,7 +6922,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-10</span>
+                        <span title="Last commit date" class="label label-default">2015-02-10</span>
                       </td>
                       <td>
                         <a href="/p/pr2_make_a_map_app">pr2_make_a_map_app</a>
@@ -6915,7 +6959,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-23</span>
+                        <span title="Last commit date" class="label label-default">2016-03-23</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mannequin_mode">pr2_mannequin_mode</a>
@@ -6952,7 +6996,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-10</span>
+                        <span title="Last commit date" class="label label-default">2015-02-10</span>
                       </td>
                       <td>
                         <a href="/p/pr2_map_navigation_app">pr2_map_navigation_app</a>
@@ -6989,7 +7033,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-01-19</span>
+                        <span title="Last commit date" class="label label-default">2015-01-19</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism">pr2_mechanism</a>
@@ -7026,7 +7070,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-09</span>
+                        <span title="Last commit date" class="label label-default">2015-02-09</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_controllers">pr2_mechanism_controllers</a>
@@ -7065,7 +7109,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-01-19</span>
+                        <span title="Last commit date" class="label label-default">2015-01-19</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_diagnostics">pr2_mechanism_diagnostics</a>
@@ -7102,7 +7146,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-01-19</span>
+                        <span title="Last commit date" class="label label-default">2015-01-19</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_model">pr2_mechanism_model</a>
@@ -7141,7 +7185,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2013-04-26</span>
+                        <span title="Last commit date" class="label label-default">2013-04-26</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_msgs">pr2_mechanism_msgs</a>
@@ -7188,7 +7232,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/pr2_motor_diagnostic_tool">pr2_motor_diagnostic_tool</a>
@@ -7225,7 +7269,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-27</span>
+                        <span title="Last commit date" class="label label-default">2018-04-27</span>
                       </td>
                       <td>
                         <a href="/p/pr2_move_base">pr2_move_base</a>
@@ -7262,7 +7306,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-07-25</span>
+                        <span title="Last commit date" class="label label-default">2017-07-25</span>
                       </td>
                       <td>
                         <a href="/p/pr2_move_group_test">pr2_move_group_test</a>
@@ -7307,7 +7351,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-07-25</span>
+                        <span title="Last commit date" class="label label-default">2017-07-25</span>
                       </td>
                       <td>
                         <a href="/p/pr2_moveit_config">pr2_moveit_config</a>
@@ -7348,7 +7392,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-07-25</span>
+                        <span title="Last commit date" class="label label-default">2017-07-25</span>
                       </td>
                       <td>
                         <a href="/p/pr2_moveit_plugins">pr2_moveit_plugins</a>
@@ -7385,7 +7429,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2017-07-25</span>
+                        <span title="Last commit date" class="label label-default">2017-07-25</span>
                       </td>
                       <td>
                         <a href="/p/pr2_moveit_tests">pr2_moveit_tests</a>
@@ -7442,7 +7486,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-11</span>
+                        <span title="Last commit date" class="label label-default">2016-10-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_msgs">pr2_msgs</a>
@@ -7479,7 +7523,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-27</span>
+                        <span title="Last commit date" class="label label-default">2018-04-27</span>
                       </td>
                       <td>
                         <a href="/p/pr2_navigation">pr2_navigation</a>
@@ -7516,7 +7560,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-05-13</span>
+                        <span title="Last commit date" class="label label-default">2015-05-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_navigation_apps">pr2_navigation_apps</a>
@@ -7553,7 +7597,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-27</span>
+                        <span title="Last commit date" class="label label-default">2018-04-27</span>
                       </td>
                       <td>
                         <a href="/p/pr2_navigation_config">pr2_navigation_config</a>
@@ -7590,7 +7634,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-27</span>
+                        <span title="Last commit date" class="label label-default">2018-04-27</span>
                       </td>
                       <td>
                         <a href="/p/pr2_navigation_global">pr2_navigation_global</a>
@@ -7627,7 +7671,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-27</span>
+                        <span title="Last commit date" class="label label-default">2018-04-27</span>
                       </td>
                       <td>
                         <a href="/p/pr2_navigation_local">pr2_navigation_local</a>
@@ -7664,7 +7708,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-27</span>
+                        <span title="Last commit date" class="label label-default">2018-04-27</span>
                       </td>
                       <td>
                         <a href="/p/pr2_navigation_perception">pr2_navigation_perception</a>
@@ -7692,25 +7736,35 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -8731,25 +8785,35 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -8779,7 +8843,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-01-19</span>
+                        <span title="Last commit date" class="label label-default">2015-01-19</span>
                       </td>
                       <td>
                         <a href="/p/pr2_controller_manager">pr2_controller_manager</a>
@@ -8816,7 +8880,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-09</span>
+                        <span title="Last commit date" class="label label-default">2015-02-09</span>
                       </td>
                       <td>
                         <a href="/p/pr2_controllers">pr2_controllers</a>
@@ -8853,7 +8917,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-09</span>
+                        <span title="Last commit date" class="label label-default">2015-02-09</span>
                       </td>
                       <td>
                         <a href="/p/pr2_controllers_msgs">pr2_controllers_msgs</a>
@@ -8910,7 +8974,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-11</span>
+                        <span title="Last commit date" class="label label-default">2016-10-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_dashboard_aggregator">pr2_dashboard_aggregator</a>
@@ -8987,7 +9051,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-11</span>
+                        <span title="Last commit date" class="label label-default">2016-10-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_description">pr2_description</a>
@@ -9150,7 +9214,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-09</span>
+                        <span title="Last commit date" class="label label-default">2015-02-09</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gripper_action">pr2_gripper_action</a>
@@ -9313,7 +9377,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-01-19</span>
+                        <span title="Last commit date" class="label label-default">2015-01-19</span>
                       </td>
                       <td>
                         <a href="/p/pr2_hardware_interface">pr2_hardware_interface</a>
@@ -9362,7 +9426,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-09</span>
+                        <span title="Last commit date" class="label label-default">2015-02-09</span>
                       </td>
                       <td>
                         <a href="/p/pr2_head_action">pr2_head_action</a>
@@ -9463,7 +9527,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-08</span>
+                        <span title="Last commit date" class="label label-default">2016-08-08</span>
                       </td>
                       <td>
                         <a href="/p/pr2_kinematics">pr2_kinematics</a>
@@ -9500,7 +9564,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-11</span>
+                        <span title="Last commit date" class="label label-default">2016-10-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_machine">pr2_machine</a>
@@ -9597,7 +9661,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-01-19</span>
+                        <span title="Last commit date" class="label label-default">2015-01-19</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism">pr2_mechanism</a>
@@ -9634,7 +9698,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-09</span>
+                        <span title="Last commit date" class="label label-default">2015-02-09</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_controllers">pr2_mechanism_controllers</a>
@@ -9673,7 +9737,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-01-19</span>
+                        <span title="Last commit date" class="label label-default">2015-01-19</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_diagnostics">pr2_mechanism_diagnostics</a>
@@ -9710,7 +9774,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-01-19</span>
+                        <span title="Last commit date" class="label label-default">2015-01-19</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_model">pr2_mechanism_model</a>
@@ -9749,7 +9813,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_msgs">pr2_mechanism_msgs</a>
@@ -9936,7 +10000,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-10-11</span>
+                        <span title="Last commit date" class="label label-default">2016-10-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_msgs">pr2_msgs</a>
@@ -10084,25 +10148,35 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
             <table class="table table-condensed table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="text-align: center;"><span class="glyphicon glyphicon-th"></span></th>
+                  <th style="text-align: center;">
+                    <span class="glyphicon glyphicon-th"
+                          title="Package instances"></span>
+                  </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/released" class="unselected-sort-label glyphicon glyphicon-flash"></a>
+                      <a href="/packages/page/1/released"
+                         class="unselected-sort-label glyphicon glyphicon-flash"
+                         title="Sort by release status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/doc" class="unselected-sort-label glyphicon glyphicon-file"></a>
+                      <a href="/packages/page/1/doc"
+                         class="unselected-sort-label glyphicon glyphicon-file"
+                         title="Sort by README status"></a>
                     
                   </th>
                   <th style="text-align: center;">
                     
-                      <a href="/packages/page/1/time" class="unselected-sort-label glyphicon glyphicon-time"></a>
+                      <a href="/packages/page/1/time"
+                         class="unselected-sort-label glyphicon glyphicon-time"
+                         title="Sort by last commit date"></a>
                     
                   </th>
                   <th style="text-align: left;">
                     
-                      <span class="selected-sort-label">Name</span>
+                      <span class="selected-sort-label"
+                            title="Sorted by package name">Name</span>
                     
                   </th>
                   <th width="100%">Description</th>
@@ -10132,7 +10206,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-11-03</span>
+                        <span title="Last commit date" class="label label-default">2015-11-03</span>
                       </td>
                       <td>
                         <a href="/p/pr2_controller_manager">pr2_controller_manager</a>
@@ -10169,7 +10243,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-11-03</span>
+                        <span title="Last commit date" class="label label-default">2015-11-03</span>
                       </td>
                       <td>
                         <a href="/p/pr2_controllers">pr2_controllers</a>
@@ -10206,7 +10280,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-11-03</span>
+                        <span title="Last commit date" class="label label-default">2015-11-03</span>
                       </td>
                       <td>
                         <a href="/p/pr2_controllers_msgs">pr2_controllers_msgs</a>
@@ -10243,7 +10317,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/pr2_counterbalance_check">pr2_counterbalance_check</a>
@@ -10280,7 +10354,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-10</span>
+                        <span title="Last commit date" class="label label-default">2015-02-10</span>
                       </td>
                       <td>
                         <a href="/p/pr2_dashboard_aggregator">pr2_dashboard_aggregator</a>
@@ -10317,7 +10391,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-06</span>
+                        <span title="Last commit date" class="label label-default">2015-02-06</span>
                       </td>
                       <td>
                         <a href="/p/pr2_delivery">pr2_delivery</a>
@@ -10356,7 +10430,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-06</span>
+                        <span title="Last commit date" class="label label-default">2015-02-06</span>
                       </td>
                       <td>
                         <a href="/p/pr2_dense_laser_snapshotter">pr2_dense_laser_snapshotter</a>
@@ -10397,7 +10471,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-10</span>
+                        <span title="Last commit date" class="label label-default">2015-02-10</span>
                       </td>
                       <td>
                         <a href="/p/pr2_description">pr2_description</a>
@@ -10440,7 +10514,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-03-17</span>
+                        <span title="Last commit date" class="label label-default">2015-03-17</span>
                       </td>
                       <td>
                         <a href="/p/pr2_desktop">pr2_desktop</a>
@@ -10477,7 +10551,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-01</span>
+                        <span title="Last commit date" class="label label-default">2016-03-01</span>
                       </td>
                       <td>
                         <a href="/p/pr2_ethercat">pr2_ethercat</a>
@@ -10514,7 +10588,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-06-19</span>
+                        <span title="Last commit date" class="label label-default">2015-06-19</span>
                       </td>
                       <td>
                         <a href="/p/pr2_ethercat_drivers">pr2_ethercat_drivers</a>
@@ -10555,7 +10629,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-04-07</span>
+                        <span title="Last commit date" class="label label-default">2015-04-07</span>
                       </td>
                       <td>
                         <a href="/p/pr2_ft_moveit_config">pr2_ft_moveit_config</a>
@@ -10596,7 +10670,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-12-23</span>
+                        <span title="Last commit date" class="label label-default">2015-12-23</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gazebo">pr2_gazebo</a>
@@ -10635,7 +10709,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-12-23</span>
+                        <span title="Last commit date" class="label label-default">2015-12-23</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gazebo_plugins">pr2_gazebo_plugins</a>
@@ -10676,7 +10750,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-11-03</span>
+                        <span title="Last commit date" class="label label-default">2015-11-03</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gripper_action">pr2_gripper_action</a>
@@ -10719,7 +10793,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-11</span>
+                        <span title="Last commit date" class="label label-default">2018-07-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gripper_sensor">pr2_gripper_sensor</a>
@@ -10756,7 +10830,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-11</span>
+                        <span title="Last commit date" class="label label-default">2018-07-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gripper_sensor_action">pr2_gripper_sensor_action</a>
@@ -10797,7 +10871,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-11</span>
+                        <span title="Last commit date" class="label label-default">2018-07-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gripper_sensor_controller">pr2_gripper_sensor_controller</a>
@@ -10834,7 +10908,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-07-11</span>
+                        <span title="Last commit date" class="label label-default">2018-07-11</span>
                       </td>
                       <td>
                         <a href="/p/pr2_gripper_sensor_msgs">pr2_gripper_sensor_msgs</a>
@@ -10895,7 +10969,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-10</span>
+                        <span title="Last commit date" class="label label-default">2015-02-10</span>
                       </td>
                       <td>
                         <a href="/p/pr2_hack_the_future">pr2_hack_the_future</a>
@@ -10932,7 +11006,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-11-03</span>
+                        <span title="Last commit date" class="label label-default">2015-11-03</span>
                       </td>
                       <td>
                         <a href="/p/pr2_hardware_interface">pr2_hardware_interface</a>
@@ -10981,7 +11055,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-11-03</span>
+                        <span title="Last commit date" class="label label-default">2015-11-03</span>
                       </td>
                       <td>
                         <a href="/p/pr2_head_action">pr2_head_action</a>
@@ -11022,7 +11096,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-02-17</span>
+                        <span title="Last commit date" class="label label-default">2016-02-17</span>
                       </td>
                       <td>
                         <a href="/p/pr2_image_snapshot_recorder">pr2_image_snapshot_recorder</a>
@@ -11059,7 +11133,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-12-05</span>
+                        <span title="Last commit date" class="label label-default">2015-12-05</span>
                       </td>
                       <td>
                         <a href="/p/pr2_jacobian_tests">pr2_jacobian_tests</a>
@@ -11104,7 +11178,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-10</span>
+                        <span title="Last commit date" class="label label-default">2015-02-10</span>
                       </td>
                       <td>
                         <a href="/p/pr2_joint_teleop">pr2_joint_teleop</a>
@@ -11141,7 +11215,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-08-08</span>
+                        <span title="Last commit date" class="label label-default">2016-08-08</span>
                       </td>
                       <td>
                         <a href="/p/pr2_kinematics">pr2_kinematics</a>
@@ -11178,7 +11252,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-10</span>
+                        <span title="Last commit date" class="label label-default">2015-02-10</span>
                       </td>
                       <td>
                         <a href="/p/pr2_machine">pr2_machine</a>
@@ -11215,7 +11289,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-10</span>
+                        <span title="Last commit date" class="label label-default">2015-02-10</span>
                       </td>
                       <td>
                         <a href="/p/pr2_make_a_map_app">pr2_make_a_map_app</a>
@@ -11252,7 +11326,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2016-03-23</span>
+                        <span title="Last commit date" class="label label-default">2016-03-23</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mannequin_mode">pr2_mannequin_mode</a>
@@ -11289,7 +11363,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-10</span>
+                        <span title="Last commit date" class="label label-default">2015-02-10</span>
                       </td>
                       <td>
                         <a href="/p/pr2_map_navigation_app">pr2_map_navigation_app</a>
@@ -11326,7 +11400,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-11-03</span>
+                        <span title="Last commit date" class="label label-default">2015-11-03</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism">pr2_mechanism</a>
@@ -11363,7 +11437,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-11-03</span>
+                        <span title="Last commit date" class="label label-default">2015-11-03</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_controllers">pr2_mechanism_controllers</a>
@@ -11402,7 +11476,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-11-03</span>
+                        <span title="Last commit date" class="label label-default">2015-11-03</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_diagnostics">pr2_mechanism_diagnostics</a>
@@ -11439,7 +11513,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-11-03</span>
+                        <span title="Last commit date" class="label label-default">2015-11-03</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_model">pr2_mechanism_model</a>
@@ -11478,7 +11552,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-02-13</span>
+                        <span title="Last commit date" class="label label-default">2018-02-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_mechanism_msgs">pr2_mechanism_msgs</a>
@@ -11525,7 +11599,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-09-19</span>
+                        <span title="Last commit date" class="label label-default">2018-09-19</span>
                       </td>
                       <td>
                         <a href="/p/pr2_motor_diagnostic_tool">pr2_motor_diagnostic_tool</a>
@@ -11562,7 +11636,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-25</span>
+                        <span title="Last commit date" class="label label-default">2018-04-25</span>
                       </td>
                       <td>
                         <a href="/p/pr2_move_base">pr2_move_base</a>
@@ -11599,7 +11673,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-12-05</span>
+                        <span title="Last commit date" class="label label-default">2015-12-05</span>
                       </td>
                       <td>
                         <a href="/p/pr2_move_group_test">pr2_move_group_test</a>
@@ -11644,7 +11718,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-12-05</span>
+                        <span title="Last commit date" class="label label-default">2015-12-05</span>
                       </td>
                       <td>
                         <a href="/p/pr2_moveit_config">pr2_moveit_config</a>
@@ -11685,7 +11759,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-12-05</span>
+                        <span title="Last commit date" class="label label-default">2015-12-05</span>
                       </td>
                       <td>
                         <a href="/p/pr2_moveit_plugins">pr2_moveit_plugins</a>
@@ -11722,7 +11796,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-12-05</span>
+                        <span title="Last commit date" class="label label-default">2015-12-05</span>
                       </td>
                       <td>
                         <a href="/p/pr2_moveit_tests">pr2_moveit_tests</a>
@@ -11759,7 +11833,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-12-05</span>
+                        <span title="Last commit date" class="label label-default">2015-12-05</span>
                       </td>
                       <td>
                         <a href="/p/pr2_moveit_tutorials">pr2_moveit_tutorials</a>
@@ -11796,7 +11870,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-02-10</span>
+                        <span title="Last commit date" class="label label-default">2015-02-10</span>
                       </td>
                       <td>
                         <a href="/p/pr2_msgs">pr2_msgs</a>
@@ -11833,7 +11907,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-25</span>
+                        <span title="Last commit date" class="label label-default">2018-04-25</span>
                       </td>
                       <td>
                         <a href="/p/pr2_navigation">pr2_navigation</a>
@@ -11870,7 +11944,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2015-05-13</span>
+                        <span title="Last commit date" class="label label-default">2015-05-13</span>
                       </td>
                       <td>
                         <a href="/p/pr2_navigation_apps">pr2_navigation_apps</a>
@@ -11907,7 +11981,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-25</span>
+                        <span title="Last commit date" class="label label-default">2018-04-25</span>
                       </td>
                       <td>
                         <a href="/p/pr2_navigation_config">pr2_navigation_config</a>
@@ -11944,7 +12018,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-25</span>
+                        <span title="Last commit date" class="label label-default">2018-04-25</span>
                       </td>
                       <td>
                         <a href="/p/pr2_navigation_global">pr2_navigation_global</a>
@@ -11981,7 +12055,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-25</span>
+                        <span title="Last commit date" class="label label-default">2018-04-25</span>
                       </td>
                       <td>
                         <a href="/p/pr2_navigation_local">pr2_navigation_local</a>
@@ -12018,7 +12092,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
                       
                       </td>
                       <td>
-                        <span class="label label-default">2018-04-25</span>
+                        <span title="Last commit date" class="label label-default">2018-04-25</span>
                       </td>
                       <td>
                         <a href="/p/pr2_navigation_perception">pr2_navigation_perception</a>
@@ -12115,7 +12189,7 @@ Users will send a goal to an Action in the message format of PR2Gripper*Command 
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-10-04</em>
+          <em>generated on 2018-10-08</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

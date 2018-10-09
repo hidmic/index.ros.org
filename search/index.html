@@ -247,13 +247,15 @@ $(function() {
     pagination: '#search-pagination',
     template: '#search-results-template',
     templateVars: { baseurl: '' },
-    preview: function(done) {
-      $('.show-when-done-searching').slideDown(duration_ms, done);
+    preview: function() {
+      $('.show-when-done-searching').slideDown(duration_ms);
+      return $('.show-when-done-searching').promise();
     },
     ready: function(done) {
       $('.show-when-done-searching').slideDown(duration_ms, function() {
-        $('.hide-when-done-searching').slideUp(duration_ms, done);
+        $('.hide-when-done-searching').slideUp(duration_ms);
       });
+      return $('.show-when-done-searching').promise();
     }
   });
 });
@@ -278,7 +280,7 @@ $(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-10-08</em>
+          <em>generated on 2018-10-09</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

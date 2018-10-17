@@ -159,22 +159,6 @@
       <input type="radio" name="options" id="bouncy-radio" autocomplete="off"> bouncy
     </label>
   
-    <label id="melodic-option" class="distro-button btn btn-xs btn-default" href="#melodic" data="melodic">
-      <input type="radio" name="options" id="melodic-radio" autocomplete="off"> melodic
-    </label>
-  
-    <label id="lunar-option" class="distro-button btn btn-xs btn-default" href="#lunar" data="lunar">
-      <input type="radio" name="options" id="lunar-radio" autocomplete="off"> lunar
-    </label>
-  
-    <label id="kinetic-option" class="distro-button btn btn-xs btn-default" href="#kinetic" data="kinetic">
-      <input type="radio" name="options" id="kinetic-radio" autocomplete="off"> kinetic
-    </label>
-  
-    <label id="indigo-option" class="distro-button btn btn-xs btn-default" href="#indigo" data="indigo">
-      <input type="radio" name="options" id="indigo-radio" autocomplete="off"> indigo
-    </label>
-  
 
   <!-- Older distros -->
   <div class="btn-group dropdown">
@@ -187,14 +171,6 @@
       
         <li data="ardent" id="ardent-option" class=" older-distro-option"  href="#ardent">
           <a href="#ardent" data="ardent" id="ardent-button">ardent</a>
-        </li>
-      
-        <li data="jade" id="jade-option" class="disabled older-distro-option"  href="#jade">
-          <a href="#jade" data="jade" id="jade-button">jade</a>
-        </li>
-      
-        <li data="hydro" id="hydro-option" class="disabled older-distro-option"  href="#hydro">
-          <a href="#hydro" data="hydro" id="hydro-button">hydro</a>
         </li>
       
     </ul>
@@ -300,7 +276,7 @@ rclcpp_lifecycle
 
 <div class="list-group list-group-sm list-group-horizontal list-group-justified">
   <a class="list-group-item text-center" target="_blank" href="http://docs.ros.org/bouncy/api/rclcpp/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span><br> API Docs</a>
-  <a class="list-group-item text-center" target="_blank" href="https://github.com/ros2/rclcpp/blob/bouncy/rclcpp"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span><br> Browse Code</a>
+  <a class="list-group-item text-center" target="_blank" href="https://github.com/ros2/rclcpp/tree/bouncy/rclcpp"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span><br> Browse Code</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://wiki.ros.org/rclcpp?distro=bouncy"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span><br> Wiki</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=rclcpp&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span><br></a>
   
@@ -492,7 +468,110 @@ rclcpp_lifecycle
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<p>Could not convert RST to MD: No such file or directory - pandoc</p>
+<h1 id="changelog-for-package-rclcpp">Changelog for package rclcpp</h1>
+
+<h2 id="0-5-0-2018-06-25">0.5.0 (2018-06-25)</h2>
+
+<ul>
+<li>  Fixed a bug in the multi-threaded executor which could cause it to
+take a timer (potentially other types of wait-able items) more than
+once to be worked one.
+(<a href="https://github.com/ros2/rclcpp/issues/383">#383</a>)
+* Specifically this could result in a timer getting called more
+often that it should when using the multi-threaded executor.</li>
+<li>  Added functions that allow you to publish serialized messages and
+received serialized messages in your subscription callback.
+(<a href="https://github.com/ros2/rclcpp/issues/388">#388</a>)</li>
+<li>  Changed code to always get the Service name from <code>rcl</code> to ensure the
+remapped name is returned.
+(<a href="https://github.com/ros2/rclcpp/issues/498">#498</a>)</li>
+<li>  Added previously missing <code>set_parameters_atomically()</code> method to the
+Service client interface.
+(<a href="https://github.com/ros2/rclcpp/issues/494">#494</a>)</li>
+<li>  Added ability to initialize parameter values in a Node via a YAML
+file passed on the command line.
+(<a href="https://github.com/ros2/rclcpp/issues/488">#488</a>)</li>
+<li>  Fixed the ROS parameter interface which got parameters that
+aren't set. (<a href="https://github.com/ros2/rclcpp/issues/493">#493</a>)</li>
+<li>  Added ability to initialize parameter values in a node with an
+argument to the Node constructor.
+(<a href="https://github.com/ros2/rclcpp/issues/486">#486</a>)</li>
+<li>  Added a <code>Subscription</code> tests which uses <code>std::bind</code> to a class
+member callback.
+(<a href="https://github.com/ros2/rclcpp/issues/480">#480</a>)</li>
+<li>  Refactored the <code>ParameterVariant</code> class into the <code>Parameter</code> and
+<code>ParameterValue</code> classes.
+(<a href="https://github.com/ros2/rclcpp/issues/481">#481</a>)</li>
+<li>  Relaxed template matching rules for <code>std::bind</code> and
+<code>GNU C++ &gt;= 7.1</code>.
+(<a href="https://github.com/ros2/rclcpp/issues/484">#484</a>)</li>
+<li>  Changed to use the new <code>rosgraph_msgs/Clock</code> message type for the
+<code>/clock</code> topic. (<a href="https://github.com/ros2/rclcpp/issues/474">#474</a>)</li>
+<li>  Fixed a flaky ROS time test due to not spinning before getting
+the time. (<a href="https://github.com/ros2/rclcpp/issues/483">#483</a>)</li>
+<li>  Nodes now autostart the ROS parameter services which let you get,
+set, and list parameters in a node.
+(<a href="https://github.com/ros2/rclcpp/issues/478">#478</a>)</li>
+<li>  Added support for arrays in Parameters.
+(<a href="https://github.com/ros2/rclcpp/issues/443">#443</a>)</li>
+<li>  Changed how executors use <code>AnyExecutable</code> objects so that they are a
+reference instead of a shared pointer, in order to avoid memory
+allocation in the "common case".
+(<a href="https://github.com/ros2/rclcpp/issues/463">#463</a>)</li>
+<li>  Added ability to pass command line arguments to the
+Node constructor.
+(<a href="https://github.com/ros2/rclcpp/issues/461">#461</a>)</li>
+<li>  Added an argument to specify the number of threads a multithreaded
+executor should create.
+(<a href="https://github.com/ros2/rclcpp/issues/442">#442</a>)</li>
+<li>  Changed library export order for static linking.
+(<a href="https://github.com/ros2/rclcpp/issues/446">#446</a>)</li>
+<li>  Fixed some typos in the time unit tests.
+(<a href="https://github.com/ros2/rclcpp/issues/453">#453</a>) Obviously it
+mean RCL_SYSTEM_TIME but not RCL_ROS_TIME in some test cases
+* Signed-off-by: jwang &lt;<a href="mailto:jing.j.wang@intel.com">jing.j.wang@intel.com</a>&gt;</li>
+<li>  Added the scale operation to <code>rclcpp::Duration</code>.
+* Signed-off-by: jwang &lt;<a href="mailto:jing.j.wang@intel.com">jing.j.wang@intel.com</a>&gt;</li>
+<li>  Changed API of the log location parameter to be <code>const</code>.
+(<a href="https://github.com/ros2/rclcpp/issues/451">#451</a>)</li>
+<li>  Changed how the subscriber, client, service, and timer handles are
+stored to resolve shutdown order issues.
+(<a href="https://github.com/ros2/rclcpp/issues/431">#431</a> and
+<a href="https://github.com/ros2/rclcpp/issues/448">#448</a>)</li>
+<li>  Updated to get the node's logger name from <code>rcl</code>.
+(<a href="https://github.com/ros2/rclcpp/issues/433">#433</a>)</li>
+<li>  Now depends on <code>ament_cmake_ros</code>.
+(<a href="https://github.com/ros2/rclcpp/issues/444">#444</a>)</li>
+<li>  Updaed code to use logging macros rather than <code>fprintf()</code>.
+(<a href="https://github.com/ros2/rclcpp/issues/439">#439</a>)</li>
+<li>  Fixed a bug that was using an invalid iterator when erasing items
+using an iterator in a loop.
+(<a href="https://github.com/ros2/rclcpp/issues/436">#436</a>)</li>
+<li>  Changed code to support move of <code>rcutils_time_point_value_t</code> type
+from <code>uint64_t</code> to <code>int64_t</code>.
+(<a href="https://github.com/ros2/rclcpp/issues/429">#429</a>)</li>
+<li>  Renamed parameter byte type to <code>byte_values</code> from <code>bytes_value</code>.
+(<a href="https://github.com/ros2/rclcpp/issues/428">#428</a>)</li>
+<li>  Changed executor code to clear the wait set before resizing
+and waiting. (<a href="https://github.com/ros2/rclcpp/issues/427">#427</a>)</li>
+<li>  Fixed a potential dereference of nullptr in the topic name
+validation error string.
+(<a href="https://github.com/ros2/rclcpp/issues/405">#405</a>)
+* Signed-off-by: Ethan Gao &lt;<a href="mailto:ethan.gao@linux.intel.com">ethan.gao@linux.intel.com</a>&gt;</li>
+<li>  Changed to use <code>rcl_count_publishers()</code> like API's rather than the
+lower level <code>rmw_count_publishers()</code> API.
+(<a href="https://github.com/ros2/rclcpp/issues/425">#425</a>)
+* Signed-off-by: Sriram Raghunathan &lt;<a href="mailto:rsriram7@visteon.com">rsriram7@visteon.com</a>&gt;</li>
+<li>  Fix potential segmentation fault due to <code>get_topic_name()</code> or
+<code>rcl_service_get_service_name()</code> returning nullptr and that not
+being checked before access in <code>rclcpp</code>.
+(<a href="https://github.com/ros2/rclcpp/issues/426">#426</a>)
+* Signed-off-by: Ethan Gao &lt;<a href="mailto:ethan.gao@linux.intel.com">ethan.gao@linux.intel.com</a>&gt;</li>
+<li>  Contributors: Denise Eng, Dirk Thomas, Ernesto Corbellini, Esteve
+Fernandez, Ethan Gao, Guillaume Autran, Karsten Knese, Matthew,
+Michael Carroll, Mikael Arguedas, Shane Loretz, Sriram Raghunathan,
+Tom Moore, William Woodall, dhood, jwang, jwang11, serge-nikulin</li>
+</ul>
 </div></body></html>
 
             
@@ -592,8 +671,8 @@ rclcpp_lifecycle
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/rosgraph_msgs" class="label label-primary">
-                            3
+                          <a href="/packages/rosgraph_msgs" class="label label-default">
+                            1
                           </a>
                         </td>
                         <td><a href="/p/rosgraph_msgs#bouncy">rosgraph_msgs</a></td>
@@ -753,174 +832,6 @@ rclcpp_lifecycle
                     
                     
                     <tr>
-                      <td><a href="/p/depthimage_to_laserscan/github-ros2-depthimage_to_laserscan#bouncy">depthimage_to_laserscan</a></td>
-                      <td><a href="/r/depthimage_to_laserscan/github-ros2-depthimage_to_laserscan">github-ros2-depthimage_to_laserscan</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/depthimage_to_laserscan/github-ros2-depthimage_to_laserscan#bouncy-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/gazebo_plugins/github-ros-simulation-gazebo_ros_pkgs#bouncy">gazebo_plugins</a></td>
-                      <td><a href="/r/gazebo_ros_pkgs/github-ros-simulation-gazebo_ros_pkgs">github-ros-simulation-gazebo_ros_pkgs</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/gazebo_plugins/github-ros-simulation-gazebo_ros_pkgs#bouncy-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/gazebo_ros/github-ros-simulation-gazebo_ros_pkgs#bouncy">gazebo_ros</a></td>
-                      <td><a href="/r/gazebo_ros_pkgs/github-ros-simulation-gazebo_ros_pkgs">github-ros-simulation-gazebo_ros_pkgs</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/gazebo_ros/github-ros-simulation-gazebo_ros_pkgs#bouncy-deps" >
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/tf2_ros/github-ros2-geometry2#bouncy">tf2_ros</a></td>
-                      <td><a href="/r/geometry2/github-ros2-geometry2">github-ros2-geometry2</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/tf2_ros/github-ros2-geometry2#bouncy-deps" >
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/joy/github-ros2-joystick_drivers#bouncy">joy</a></td>
-                      <td><a href="/r/joystick_drivers/github-ros2-joystick_drivers">github-ros2-joystick_drivers</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/joy/github-ros2-joystick_drivers#bouncy-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/laser_geometry/github-ros-perception-laser_geometry#bouncy">laser_geometry</a></td>
-                      <td><a href="/r/laser_geometry/github-ros-perception-laser_geometry">github-ros-perception-laser_geometry</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/laser_geometry/github-ros-perception-laser_geometry#bouncy-deps" >
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/amcl/github-ros2-navigation#bouncy">amcl</a></td>
-                      <td><a href="/r/navigation/github-ros2-navigation">github-ros2-navigation</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/amcl/github-ros2-navigation#bouncy-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/map_server/github-ros2-navigation#bouncy">map_server</a></td>
-                      <td><a href="/r/navigation/github-ros2-navigation">github-ros2-navigation</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/map_server/github-ros2-navigation#bouncy-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/robot_state_publisher/github-ros2-robot_state_publisher#bouncy">robot_state_publisher</a></td>
-                      <td><a href="/r/robot_state_publisher/github-ros2-robot_state_publisher">github-ros2-robot_state_publisher</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/robot_state_publisher/github-ros2-robot_state_publisher#bouncy-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/rviz_common/github-ros2-rviz#bouncy">rviz_common</a></td>
-                      <td><a href="/r/rviz/github-ros2-rviz">github-ros2-rviz</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/rviz_common/github-ros2-rviz#bouncy-deps" >
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/rviz_default_plugins/github-ros2-rviz#bouncy">rviz_default_plugins</a></td>
-                      <td><a href="/r/rviz/github-ros2-rviz">github-ros2-rviz</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/rviz_default_plugins/github-ros2-rviz#bouncy-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/teleop_twist_joy/github-ros2-teleop_twist_joy#bouncy">teleop_twist_joy</a></td>
-                      <td><a href="/r/teleop_twist_joy/github-ros2-teleop_twist_joy">github-ros2-teleop_twist_joy</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/teleop_twist_joy/github-ros2-teleop_twist_joy#bouncy-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
                       <td><a href="/p/cartographer_ros/github-ros2-cartographer_ros#bouncy">cartographer_ros</a></td>
                       <td><a href="/r/cartographer_ros/github-ros2-cartographer_ros">github-ros2-cartographer_ros</a></td>
                       <td class="text-center">
@@ -1061,6 +972,20 @@ rclcpp_lifecycle
                     
                     
                     <tr>
+                      <td><a href="/p/depthimage_to_laserscan/github-ros2-depthimage_to_laserscan#bouncy">depthimage_to_laserscan</a></td>
+                      <td><a href="/r/depthimage_to_laserscan/github-ros2-depthimage_to_laserscan">github-ros2-depthimage_to_laserscan</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/depthimage_to_laserscan/github-ros2-depthimage_to_laserscan#bouncy-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
                       <td><a href="/p/examples_rclcpp_minimal_client/github-ros2-examples#bouncy">examples_rclcpp_minimal_client</a></td>
                       <td><a href="/r/examples/github-ros2-examples">github-ros2-examples</a></td>
                       <td class="text-center">
@@ -1145,6 +1070,62 @@ rclcpp_lifecycle
                     
                     
                     <tr>
+                      <td><a href="/p/tf2_ros/github-ros2-geometry2#bouncy">tf2_ros</a></td>
+                      <td><a href="/r/geometry2/github-ros2-geometry2">github-ros2-geometry2</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/tf2_ros/github-ros2-geometry2#bouncy-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/joy/github-ros2-joystick_drivers#bouncy">joy</a></td>
+                      <td><a href="/r/joystick_drivers/github-ros2-joystick_drivers">github-ros2-joystick_drivers</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/joy/github-ros2-joystick_drivers#bouncy-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/amcl/github-ros2-navigation#bouncy">amcl</a></td>
+                      <td><a href="/r/navigation/github-ros2-navigation">github-ros2-navigation</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/amcl/github-ros2-navigation#bouncy-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/map_server/github-ros2-navigation#bouncy">map_server</a></td>
+                      <td><a href="/r/navigation/github-ros2-navigation">github-ros2-navigation</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/map_server/github-ros2-navigation#bouncy-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
                       <td><a href="/p/rclcpp_lifecycle/github-ros2-rclcpp#bouncy">rclcpp_lifecycle</a></td>
                       <td><a href="/r/rclcpp/github-ros2-rclcpp">github-ros2-rclcpp</a></td>
                       <td class="text-center">
@@ -1173,6 +1154,20 @@ rclcpp_lifecycle
                     
                     
                     <tr>
+                      <td><a href="/p/robot_state_publisher/github-ros2-robot_state_publisher#bouncy">robot_state_publisher</a></td>
+                      <td><a href="/r/robot_state_publisher/github-ros2-robot_state_publisher">github-ros2-robot_state_publisher</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/robot_state_publisher/github-ros2-robot_state_publisher#bouncy-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
                       <td><a href="/p/ros1_bridge/github-ros2-ros1_bridge#bouncy">ros1_bridge</a></td>
                       <td><a href="/r/ros1_bridge/github-ros2-ros1_bridge">github-ros2-ros1_bridge</a></td>
                       <td class="text-center">
@@ -1192,6 +1187,48 @@ rclcpp_lifecycle
                       <td class="text-center">
                         
                         <a href="/p/astra_camera/github-ros2-ros_astra_camera#bouncy-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/rviz_common/github-ros2-rviz#bouncy">rviz_common</a></td>
+                      <td><a href="/r/rviz/github-ros2-rviz">github-ros2-rviz</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/rviz_common/github-ros2-rviz#bouncy-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/rviz_default_plugins/github-ros2-rviz#bouncy">rviz_default_plugins</a></td>
+                      <td><a href="/r/rviz/github-ros2-rviz">github-ros2-rviz</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/rviz_default_plugins/github-ros2-rviz#bouncy-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/teleop_twist_joy/github-ros2-teleop_twist_joy#bouncy">teleop_twist_joy</a></td>
+                      <td><a href="/r/teleop_twist_joy/github-ros2-teleop_twist_joy">github-ros2-teleop_twist_joy</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/teleop_twist_joy/github-ros2-teleop_twist_joy#bouncy-deps" class="inactive">
                           <span class="glyphicon glyphicon-arrow-right"></span>
                         </a>
                       </td>
@@ -1240,6 +1277,48 @@ rclcpp_lifecycle
                     </tr>
                     
                   
+                    
+                    
+                    <tr>
+                      <td><a href="/p/gazebo_plugins/github-ros-simulation-gazebo_ros_pkgs#bouncy">gazebo_plugins</a></td>
+                      <td><a href="/r/gazebo_ros_pkgs/github-ros-simulation-gazebo_ros_pkgs">github-ros-simulation-gazebo_ros_pkgs</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/gazebo_plugins/github-ros-simulation-gazebo_ros_pkgs#bouncy-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/gazebo_ros/github-ros-simulation-gazebo_ros_pkgs#bouncy">gazebo_ros</a></td>
+                      <td><a href="/r/gazebo_ros_pkgs/github-ros-simulation-gazebo_ros_pkgs">github-ros-simulation-gazebo_ros_pkgs</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/gazebo_ros/github-ros-simulation-gazebo_ros_pkgs#bouncy-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/laser_geometry/github-ros-perception-laser_geometry#bouncy">laser_geometry</a></td>
+                      <td><a href="/r/laser_geometry/github-ros-perception-laser_geometry">github-ros-perception-laser_geometry</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/laser_geometry/github-ros-perception-laser_geometry#bouncy-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
                 </tbody>
               </table>
             
@@ -1280,7 +1359,7 @@ rclcpp_lifecycle
         
           <ul>
             
-              <li><a href="https://github.com/ros2/rclcpp/blob/bouncy/rclcpp/test/mock_msgs/srv/Mock.srv" target="_blank">test/mock_msgs/srv/Mock.srv</a></li>
+              <li><a href="https://github.com/ros2/rclcpp/tree/bouncy/rclcpp/test/mock_msgs/srv/Mock.srv" target="_blank">test/mock_msgs/srv/Mock.srv</a></li>
             
           </ul>
         
@@ -1392,7 +1471,7 @@ jQuery(function() {
 
 <div class="list-group list-group-sm ">
   <a class="list-group-item" target="_blank" href="http://docs.ros.org/bouncy/api/rclcpp/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span> API Docs</a>
-  <a class="list-group-item" target="_blank" href="https://github.com/ros2/rclcpp/blob/bouncy/rclcpp"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span> Browse Code</a>
+  <a class="list-group-item" target="_blank" href="https://github.com/ros2/rclcpp/tree/bouncy/rclcpp"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span> Browse Code</a>
   <a class="list-group-item inactive" target="_blank" href="http://wiki.ros.org/rclcpp?distro=bouncy"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span> Wiki</a>
   <a class="list-group-item inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=rclcpp&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span></a>
   
@@ -1400,38 +1479,6 @@ jQuery(function() {
 
           </div>
         </div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-melodic">
-    <div class="container-fluid">
-      
-        <div class="alert alert-warning" role="alert">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-lunar">
-    <div class="container-fluid">
-      
-        <div class="alert alert-warning" role="alert">No version for distro <strong>lunar</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-kinetic">
-    <div class="container-fluid">
-      
-        <div class="alert alert-warning" role="alert">No version for distro <strong>kinetic</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-indigo">
-    <div class="container-fluid">
-      
-        <div class="alert alert-warning" role="alert">No version for distro <strong>indigo</strong>. Known supported distros are highlighted in the buttons above.</div>
       
     </div>
   </div>
@@ -1527,7 +1574,7 @@ rclcpp_lifecycle
 
 <div class="list-group list-group-sm list-group-horizontal list-group-justified">
   <a class="list-group-item text-center" target="_blank" href="http://docs.ros.org/ardent/api/rclcpp/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span><br> API Docs</a>
-  <a class="list-group-item text-center" target="_blank" href="https://github.com/ros2/rclcpp/blob/ardent/rclcpp"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span><br> Browse Code</a>
+  <a class="list-group-item text-center" target="_blank" href="https://github.com/ros2/rclcpp/tree/ardent/rclcpp"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span><br> Browse Code</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://wiki.ros.org/rclcpp?distro=ardent"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span><br> Wiki</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=rclcpp&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span><br></a>
   
@@ -1634,7 +1681,7 @@ rclcpp_lifecycle
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-12-08
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-12-09
         </span>
       </td>
     </tr>
@@ -1936,132 +1983,6 @@ rclcpp_lifecycle
                     
                     
                     <tr>
-                      <td><a href="/p/depthimage_to_laserscan/github-ros2-depthimage_to_laserscan#ardent">depthimage_to_laserscan</a></td>
-                      <td><a href="/r/depthimage_to_laserscan/github-ros2-depthimage_to_laserscan">github-ros2-depthimage_to_laserscan</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/depthimage_to_laserscan/github-ros2-depthimage_to_laserscan#ardent-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/tf2_ros/github-ros2-geometry2#ardent">tf2_ros</a></td>
-                      <td><a href="/r/geometry2/github-ros2-geometry2">github-ros2-geometry2</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/tf2_ros/github-ros2-geometry2#ardent-deps" >
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/joy/github-ros2-joystick_drivers#ardent">joy</a></td>
-                      <td><a href="/r/joystick_drivers/github-ros2-joystick_drivers">github-ros2-joystick_drivers</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/joy/github-ros2-joystick_drivers#ardent-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/amcl/github-ros2-navigation#ardent">amcl</a></td>
-                      <td><a href="/r/navigation/github-ros2-navigation">github-ros2-navigation</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/amcl/github-ros2-navigation#ardent-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/map_server/github-ros2-navigation#ardent">map_server</a></td>
-                      <td><a href="/r/navigation/github-ros2-navigation">github-ros2-navigation</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/map_server/github-ros2-navigation#ardent-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/robot_state_publisher/github-ros2-robot_state_publisher#ardent">robot_state_publisher</a></td>
-                      <td><a href="/r/robot_state_publisher/github-ros2-robot_state_publisher">github-ros2-robot_state_publisher</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/robot_state_publisher/github-ros2-robot_state_publisher#ardent-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/rviz_common/github-ros2-rviz#ardent">rviz_common</a></td>
-                      <td><a href="/r/rviz/github-ros2-rviz">github-ros2-rviz</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/rviz_common/github-ros2-rviz#ardent-deps" >
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/rviz_default_plugins/github-ros2-rviz#ardent">rviz_default_plugins</a></td>
-                      <td><a href="/r/rviz/github-ros2-rviz">github-ros2-rviz</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/rviz_default_plugins/github-ros2-rviz#ardent-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
-                      <td><a href="/p/teleop_twist_joy/github-ros2-teleop_twist_joy#ardent">teleop_twist_joy</a></td>
-                      <td><a href="/r/teleop_twist_joy/github-ros2-teleop_twist_joy">github-ros2-teleop_twist_joy</a></td>
-                      <td class="text-center">
-                        
-                        <a href="/p/teleop_twist_joy/github-ros2-teleop_twist_joy#ardent-deps" class="inactive">
-                          <span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                  
-                    
-                    
-                    <tr>
                       <td><a href="/p/cartographer_ros/github-ros2-cartographer_ros#ardent">cartographer_ros</a></td>
                       <td><a href="/r/cartographer_ros/github-ros2-cartographer_ros">github-ros2-cartographer_ros</a></td>
                       <td class="text-center">
@@ -2202,6 +2123,20 @@ rclcpp_lifecycle
                     
                     
                     <tr>
+                      <td><a href="/p/depthimage_to_laserscan/github-ros2-depthimage_to_laserscan#ardent">depthimage_to_laserscan</a></td>
+                      <td><a href="/r/depthimage_to_laserscan/github-ros2-depthimage_to_laserscan">github-ros2-depthimage_to_laserscan</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/depthimage_to_laserscan/github-ros2-depthimage_to_laserscan#ardent-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
                       <td><a href="/p/examples_rclcpp_minimal_client/github-ros2-examples#ardent">examples_rclcpp_minimal_client</a></td>
                       <td><a href="/r/examples/github-ros2-examples">github-ros2-examples</a></td>
                       <td class="text-center">
@@ -2286,6 +2221,62 @@ rclcpp_lifecycle
                     
                     
                     <tr>
+                      <td><a href="/p/tf2_ros/github-ros2-geometry2#ardent">tf2_ros</a></td>
+                      <td><a href="/r/geometry2/github-ros2-geometry2">github-ros2-geometry2</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/tf2_ros/github-ros2-geometry2#ardent-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/joy/github-ros2-joystick_drivers#ardent">joy</a></td>
+                      <td><a href="/r/joystick_drivers/github-ros2-joystick_drivers">github-ros2-joystick_drivers</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/joy/github-ros2-joystick_drivers#ardent-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/amcl/github-ros2-navigation#ardent">amcl</a></td>
+                      <td><a href="/r/navigation/github-ros2-navigation">github-ros2-navigation</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/amcl/github-ros2-navigation#ardent-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/map_server/github-ros2-navigation#ardent">map_server</a></td>
+                      <td><a href="/r/navigation/github-ros2-navigation">github-ros2-navigation</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/map_server/github-ros2-navigation#ardent-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
                       <td><a href="/p/rclcpp_lifecycle/github-ros2-rclcpp#ardent">rclcpp_lifecycle</a></td>
                       <td><a href="/r/rclcpp/github-ros2-rclcpp">github-ros2-rclcpp</a></td>
                       <td class="text-center">
@@ -2314,6 +2305,20 @@ rclcpp_lifecycle
                     
                     
                     <tr>
+                      <td><a href="/p/robot_state_publisher/github-ros2-robot_state_publisher#ardent">robot_state_publisher</a></td>
+                      <td><a href="/r/robot_state_publisher/github-ros2-robot_state_publisher">github-ros2-robot_state_publisher</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/robot_state_publisher/github-ros2-robot_state_publisher#ardent-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
                       <td><a href="/p/ros1_bridge/github-ros2-ros1_bridge#ardent">ros1_bridge</a></td>
                       <td><a href="/r/ros1_bridge/github-ros2-ros1_bridge">github-ros2-ros1_bridge</a></td>
                       <td class="text-center">
@@ -2333,6 +2338,48 @@ rclcpp_lifecycle
                       <td class="text-center">
                         
                         <a href="/p/astra_camera/github-ros2-ros_astra_camera#ardent-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/rviz_common/github-ros2-rviz#ardent">rviz_common</a></td>
+                      <td><a href="/r/rviz/github-ros2-rviz">github-ros2-rviz</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/rviz_common/github-ros2-rviz#ardent-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/rviz_default_plugins/github-ros2-rviz#ardent">rviz_default_plugins</a></td>
+                      <td><a href="/r/rviz/github-ros2-rviz">github-ros2-rviz</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/rviz_default_plugins/github-ros2-rviz#ardent-deps" class="inactive">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/teleop_twist_joy/github-ros2-teleop_twist_joy#ardent">teleop_twist_joy</a></td>
+                      <td><a href="/r/teleop_twist_joy/github-ros2-teleop_twist_joy">github-ros2-teleop_twist_joy</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/teleop_twist_joy/github-ros2-teleop_twist_joy#ardent-deps" class="inactive">
                           <span class="glyphicon glyphicon-arrow-right"></span>
                         </a>
                       </td>
@@ -2421,7 +2468,7 @@ rclcpp_lifecycle
         
           <ul>
             
-              <li><a href="https://github.com/ros2/rclcpp/blob/ardent/rclcpp/test/mock_msgs/srv/Mock.srv" target="_blank">test/mock_msgs/srv/Mock.srv</a></li>
+              <li><a href="https://github.com/ros2/rclcpp/tree/ardent/rclcpp/test/mock_msgs/srv/Mock.srv" target="_blank">test/mock_msgs/srv/Mock.srv</a></li>
             
           </ul>
         
@@ -2533,7 +2580,7 @@ jQuery(function() {
 
 <div class="list-group list-group-sm ">
   <a class="list-group-item" target="_blank" href="http://docs.ros.org/ardent/api/rclcpp/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span> API Docs</a>
-  <a class="list-group-item" target="_blank" href="https://github.com/ros2/rclcpp/blob/ardent/rclcpp"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span> Browse Code</a>
+  <a class="list-group-item" target="_blank" href="https://github.com/ros2/rclcpp/tree/ardent/rclcpp"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span> Browse Code</a>
   <a class="list-group-item inactive" target="_blank" href="http://wiki.ros.org/rclcpp?distro=ardent"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span> Wiki</a>
   <a class="list-group-item inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=rclcpp&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span></a>
   
@@ -2541,22 +2588,6 @@ jQuery(function() {
 
           </div>
         </div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-jade">
-    <div class="container-fluid">
-      
-        <div class="alert alert-warning" role="alert">No version for distro <strong>jade</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-hydro">
-    <div class="container-fluid">
-      
-        <div class="alert alert-warning" role="alert">No version for distro <strong>hydro</strong>. Known supported distros are highlighted in the buttons above.</div>
       
     </div>
   </div>
@@ -2582,7 +2613,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-10-10</em>
+          <em>generated on 2018-10-17</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

@@ -159,22 +159,6 @@
       <input type="radio" name="options" id="bouncy-radio" autocomplete="off"> bouncy
     </label>
   
-    <label id="melodic-option" class="distro-button btn btn-xs btn-default" href="#melodic" data="melodic">
-      <input type="radio" name="options" id="melodic-radio" autocomplete="off"> melodic
-    </label>
-  
-    <label id="lunar-option" class="distro-button btn btn-xs btn-default" href="#lunar" data="lunar">
-      <input type="radio" name="options" id="lunar-radio" autocomplete="off"> lunar
-    </label>
-  
-    <label id="kinetic-option" class="distro-button btn btn-xs btn-default" href="#kinetic" data="kinetic">
-      <input type="radio" name="options" id="kinetic-radio" autocomplete="off"> kinetic
-    </label>
-  
-    <label id="indigo-option" class="distro-button btn btn-xs btn-default" href="#indigo" data="indigo">
-      <input type="radio" name="options" id="indigo-radio" autocomplete="off"> indigo
-    </label>
-  
 
   <!-- Older distros -->
   <div class="btn-group dropdown">
@@ -187,14 +171,6 @@
       
         <li data="ardent" id="ardent-option" class=" older-distro-option"  href="#ardent">
           <a href="#ardent" data="ardent" id="ardent-button">ardent</a>
-        </li>
-      
-        <li data="jade" id="jade-option" class="disabled older-distro-option"  href="#jade">
-          <a href="#jade" data="jade" id="jade-button">jade</a>
-        </li>
-      
-        <li data="hydro" id="hydro-option" class="disabled older-distro-option"  href="#hydro">
-          <a href="#hydro" data="hydro" id="hydro-button">hydro</a>
         </li>
       
     </ul>
@@ -266,13 +242,6 @@ astra_camera
             <ul class="dropdown-menu" role="menu">
               
                 <li role="presentation">
-                  <a id="github-orbbec-ros_astra_camera" role="menuitem" tabindex="-1" href="/p/astra_camera/github-orbbec-ros_astra_camera" data="github-orbbec-ros_astra_camera">
-                    <span class="glyphicon glyphicon-none"></span>
-                    github-orbbec-ros_astra_camera
-                  </a>
-                </li>
-              
-                <li role="presentation">
                   <a id="github-ros2-ros_astra_camera" role="menuitem" tabindex="-1" href="/p/astra_camera/github-ros2-ros_astra_camera" data="github-ros2-ros_astra_camera">
                     <span class="glyphicon glyphicon-none"></span>
                     github-ros2-ros_astra_camera
@@ -299,7 +268,7 @@ astra_camera
 
 <div class="list-group list-group-sm list-group-horizontal list-group-justified">
   <a class="list-group-item text-center" target="_blank" href="http://docs.ros.org/bouncy/api/astra_camera/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span><br> API Docs</a>
-  <a class="list-group-item text-center" target="_blank" href="https://github.com/ros2/ros_astra_camera/blob/bouncy/."><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span><br> Browse Code</a>
+  <a class="list-group-item text-center" target="_blank" href="https://github.com/ros2/ros_astra_camera/tree/bouncy/."><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span><br> Browse Code</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://wiki.ros.org/astra_camera?distro=bouncy"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span><br> Wiki</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=astra_camera&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span><br></a>
   
@@ -406,7 +375,7 @@ astra_camera
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-06-28
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-06-29
         </span>
       </td>
     </tr>
@@ -477,7 +446,7 @@ astra_camera
         <div class="row">
           <div class="col-xs-12">
             <div class="panel panel-default">
-              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/ros2/ros_astra_camera/blob/bouncy/./README">README</a></div>
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/ros2/ros_astra_camera/tree/bouncy/./README">README</a></div>
               <div class="panel-body">
                     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown"><div class="highlight"><pre><code class="language-" data-lang="">1,goto catkin workshop dir and compiler astra_camera
@@ -521,7 +490,52 @@ $ roslaunch astra_launch astrapro.launch
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<p>Could not convert RST to MD: No such file or directory - pandoc</p>
+<h1 id="changelog-for-package-astra_camera">Changelog for package astra_camera</h1>
+
+<h2 id="0-1-5-2016-05-27">0.1.5 (2016-05-27)</h2>
+
+<ul>
+<li>  add dependency on generated messages to avoid race condition at
+build time</li>
+<li>  switching to libusb-1.0</li>
+<li>  Contributors: Tully Foote</li>
+</ul>
+
+<h2 id="0-1-4-2016-05-27">0.1.4 (2016-05-27)</h2>
+
+<ul>
+<li>  add libusb-dev as a build dependency</li>
+<li>  Contributors: Tully Foote</li>
+</ul>
+
+<h2 id="0-1-3-2016-05-26">0.1.3 (2016-05-26)</h2>
+
+<ul>
+<li>  Adding build dependency on libudev-dev</li>
+<li>  Contributors: Tully Foote</li>
+</ul>
+
+<h2 id="0-1-2-2016-05-26">0.1.2 (2016-05-26)</h2>
+
+<ul>
+<li>  add git as a dependency</li>
+<li>  Contributors: Tully Foote</li>
+</ul>
+
+<h2 id="0-1-1-2016-05-26">0.1.1 (2016-05-26)</h2>
+
+<ul>
+<li>  removing dependency which was internalilzed</li>
+<li>  Contributors: Tully Foote</li>
+</ul>
+
+<h2 id="0-1-0-2016-05-26">0.1.0 (2016-05-26)</h2>
+
+<ul>
+<li>  Initial release of ROS driver for Astra camera</li>
+<li>  Contributors: Ernesto Corbellini, Len Zhong, Tim, Tully Foote,
+ob-tim-liu</li>
+</ul>
 </div></body></html>
 
             
@@ -621,8 +635,8 @@ $ roslaunch astra_launch astrapro.launch
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/sensor_msgs" class="label label-primary">
-                            2
+                          <a href="/packages/sensor_msgs" class="label label-default">
+                            1
                           </a>
                         </td>
                         <td><a href="/p/sensor_msgs#bouncy">sensor_msgs</a></td>
@@ -721,7 +735,7 @@ $ roslaunch astra_launch astrapro.launch
         
           <ul>
             
-              <li><a href="https://github.com/ros2/ros_astra_camera/blob/bouncy/./srv/GetSerial.srv" target="_blank">srv/GetSerial.srv</a></li>
+              <li><a href="https://github.com/ros2/ros_astra_camera/tree/bouncy/./srv/GetSerial.srv" target="_blank">srv/GetSerial.srv</a></li>
             
           </ul>
         
@@ -833,7 +847,7 @@ jQuery(function() {
 
 <div class="list-group list-group-sm ">
   <a class="list-group-item" target="_blank" href="http://docs.ros.org/bouncy/api/astra_camera/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span> API Docs</a>
-  <a class="list-group-item" target="_blank" href="https://github.com/ros2/ros_astra_camera/blob/bouncy/."><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span> Browse Code</a>
+  <a class="list-group-item" target="_blank" href="https://github.com/ros2/ros_astra_camera/tree/bouncy/."><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span> Browse Code</a>
   <a class="list-group-item inactive" target="_blank" href="http://wiki.ros.org/astra_camera?distro=bouncy"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span> Wiki</a>
   <a class="list-group-item inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=astra_camera&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span></a>
   
@@ -841,38 +855,6 @@ jQuery(function() {
 
           </div>
         </div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-melodic">
-    <div class="container-fluid">
-      
-        <div class="alert alert-warning" role="alert">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-lunar">
-    <div class="container-fluid">
-      
-        <div class="alert alert-warning" role="alert">No version for distro <strong>lunar</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-kinetic">
-    <div class="container-fluid">
-      
-        <div class="alert alert-warning" role="alert">No version for distro <strong>kinetic</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-indigo">
-    <div class="container-fluid">
-      
-        <div class="alert alert-warning" role="alert">No version for distro <strong>indigo</strong>. Known supported distros are highlighted in the buttons above.</div>
       
     </div>
   </div>
@@ -934,13 +916,6 @@ astra_camera
             <ul class="dropdown-menu" role="menu">
               
                 <li role="presentation">
-                  <a id="github-orbbec-ros_astra_camera" role="menuitem" tabindex="-1" href="/p/astra_camera/github-orbbec-ros_astra_camera" data="github-orbbec-ros_astra_camera">
-                    <span class="glyphicon glyphicon-none"></span>
-                    github-orbbec-ros_astra_camera
-                  </a>
-                </li>
-              
-                <li role="presentation">
                   <a id="github-ros2-ros_astra_camera" role="menuitem" tabindex="-1" href="/p/astra_camera/github-ros2-ros_astra_camera" data="github-ros2-ros_astra_camera">
                     <span class="glyphicon glyphicon-none"></span>
                     github-ros2-ros_astra_camera
@@ -967,7 +942,7 @@ astra_camera
 
 <div class="list-group list-group-sm list-group-horizontal list-group-justified">
   <a class="list-group-item text-center" target="_blank" href="http://docs.ros.org/ardent/api/astra_camera/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span><br> API Docs</a>
-  <a class="list-group-item text-center" target="_blank" href="https://github.com/ros2/ros_astra_camera/blob/ardent/."><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span><br> Browse Code</a>
+  <a class="list-group-item text-center" target="_blank" href="https://github.com/ros2/ros_astra_camera/tree/ardent/."><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span><br> Browse Code</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://wiki.ros.org/astra_camera?distro=ardent"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span><br> Wiki</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=astra_camera&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span><br></a>
   
@@ -1074,7 +1049,7 @@ astra_camera
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-12-08
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-12-09
         </span>
       </td>
     </tr>
@@ -1145,7 +1120,7 @@ astra_camera
         <div class="row">
           <div class="col-xs-12">
             <div class="panel panel-default">
-              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/ros2/ros_astra_camera/blob/ardent/./README">README</a></div>
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/ros2/ros_astra_camera/tree/ardent/./README">README</a></div>
               <div class="panel-body">
                     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown"><div class="highlight"><pre><code class="language-" data-lang="">1,goto catkin workshop dir and compiler astra_camera
@@ -1189,7 +1164,52 @@ $ roslaunch astra_launch astrapro.launch
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<p>Could not convert RST to MD: No such file or directory - pandoc</p>
+<h1 id="changelog-for-package-astra_camera">Changelog for package astra_camera</h1>
+
+<h2 id="0-1-5-2016-05-27">0.1.5 (2016-05-27)</h2>
+
+<ul>
+<li>  add dependency on generated messages to avoid race condition at
+build time</li>
+<li>  switching to libusb-1.0</li>
+<li>  Contributors: Tully Foote</li>
+</ul>
+
+<h2 id="0-1-4-2016-05-27">0.1.4 (2016-05-27)</h2>
+
+<ul>
+<li>  add libusb-dev as a build dependency</li>
+<li>  Contributors: Tully Foote</li>
+</ul>
+
+<h2 id="0-1-3-2016-05-26">0.1.3 (2016-05-26)</h2>
+
+<ul>
+<li>  Adding build dependency on libudev-dev</li>
+<li>  Contributors: Tully Foote</li>
+</ul>
+
+<h2 id="0-1-2-2016-05-26">0.1.2 (2016-05-26)</h2>
+
+<ul>
+<li>  add git as a dependency</li>
+<li>  Contributors: Tully Foote</li>
+</ul>
+
+<h2 id="0-1-1-2016-05-26">0.1.1 (2016-05-26)</h2>
+
+<ul>
+<li>  removing dependency which was internalilzed</li>
+<li>  Contributors: Tully Foote</li>
+</ul>
+
+<h2 id="0-1-0-2016-05-26">0.1.0 (2016-05-26)</h2>
+
+<ul>
+<li>  Initial release of ROS driver for Astra camera</li>
+<li>  Contributors: Ernesto Corbellini, Len Zhong, Tim, Tully Foote,
+ob-tim-liu</li>
+</ul>
 </div></body></html>
 
             
@@ -1289,8 +1309,8 @@ $ roslaunch astra_launch astrapro.launch
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/sensor_msgs" class="label label-primary">
-                            2
+                          <a href="/packages/sensor_msgs" class="label label-default">
+                            1
                           </a>
                         </td>
                         <td><a href="/p/sensor_msgs#ardent">sensor_msgs</a></td>
@@ -1389,7 +1409,7 @@ $ roslaunch astra_launch astrapro.launch
         
           <ul>
             
-              <li><a href="https://github.com/ros2/ros_astra_camera/blob/ardent/./srv/GetSerial.srv" target="_blank">srv/GetSerial.srv</a></li>
+              <li><a href="https://github.com/ros2/ros_astra_camera/tree/ardent/./srv/GetSerial.srv" target="_blank">srv/GetSerial.srv</a></li>
             
           </ul>
         
@@ -1501,7 +1521,7 @@ jQuery(function() {
 
 <div class="list-group list-group-sm ">
   <a class="list-group-item" target="_blank" href="http://docs.ros.org/ardent/api/astra_camera/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span> API Docs</a>
-  <a class="list-group-item" target="_blank" href="https://github.com/ros2/ros_astra_camera/blob/ardent/."><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span> Browse Code</a>
+  <a class="list-group-item" target="_blank" href="https://github.com/ros2/ros_astra_camera/tree/ardent/."><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span> Browse Code</a>
   <a class="list-group-item inactive" target="_blank" href="http://wiki.ros.org/astra_camera?distro=ardent"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span> Wiki</a>
   <a class="list-group-item inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=astra_camera&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span></a>
   
@@ -1509,22 +1529,6 @@ jQuery(function() {
 
           </div>
         </div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-jade">
-    <div class="container-fluid">
-      
-        <div class="alert alert-warning" role="alert">No version for distro <strong>jade</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-hydro">
-    <div class="container-fluid">
-      
-        <div class="alert alert-warning" role="alert">No version for distro <strong>hydro</strong>. Known supported distros are highlighted in the buttons above.</div>
       
     </div>
   </div>
@@ -1550,7 +1554,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-10-10</em>
+          <em>generated on 2018-10-17</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

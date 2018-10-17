@@ -159,22 +159,6 @@
       <input type="radio" name="options" id="bouncy-radio" autocomplete="off"> bouncy
     </label>
   
-    <label id="melodic-option" class="distro-button btn btn-xs btn-default" href="#melodic" data="melodic">
-      <input type="radio" name="options" id="melodic-radio" autocomplete="off"> melodic
-    </label>
-  
-    <label id="lunar-option" class="distro-button btn btn-xs btn-default" href="#lunar" data="lunar">
-      <input type="radio" name="options" id="lunar-radio" autocomplete="off"> lunar
-    </label>
-  
-    <label id="kinetic-option" class="distro-button btn btn-xs btn-default" href="#kinetic" data="kinetic">
-      <input type="radio" name="options" id="kinetic-radio" autocomplete="off"> kinetic
-    </label>
-  
-    <label id="indigo-option" class="distro-button btn btn-xs btn-default" href="#indigo" data="indigo">
-      <input type="radio" name="options" id="indigo-radio" autocomplete="off"> indigo
-    </label>
-  
 
   <!-- Older distros -->
   <div class="btn-group dropdown">
@@ -187,14 +171,6 @@
       
         <li data="ardent" id="ardent-option" class=" older-distro-option"  href="#ardent">
           <a href="#ardent" data="ardent" id="ardent-button">ardent</a>
-        </li>
-      
-        <li data="jade" id="jade-option" class="disabled older-distro-option"  href="#jade">
-          <a href="#jade" data="jade" id="jade-button">jade</a>
-        </li>
-      
-        <li data="hydro" id="hydro-option" class="disabled older-distro-option"  href="#hydro">
-          <a href="#hydro" data="hydro" id="hydro-button">hydro</a>
         </li>
       
     </ul>
@@ -266,13 +242,6 @@ teleop_twist_keyboard
             <ul class="dropdown-menu" role="menu">
               
                 <li role="presentation">
-                  <a id="github-ros-teleop-teleop_twist_keyboard" role="menuitem" tabindex="-1" href="/p/teleop_twist_keyboard/github-ros-teleop-teleop_twist_keyboard" data="github-ros-teleop-teleop_twist_keyboard">
-                    <span class="glyphicon glyphicon-none"></span>
-                    github-ros-teleop-teleop_twist_keyboard
-                  </a>
-                </li>
-              
-                <li role="presentation">
                   <a id="github-ros2-teleop_twist_keyboard" role="menuitem" tabindex="-1" href="/p/teleop_twist_keyboard/github-ros2-teleop_twist_keyboard" data="github-ros2-teleop_twist_keyboard">
                     <span class="glyphicon glyphicon-none"></span>
                     github-ros2-teleop_twist_keyboard
@@ -299,7 +268,7 @@ teleop_twist_keyboard
 
 <div class="list-group list-group-sm list-group-horizontal list-group-justified">
   <a class="list-group-item text-center" target="_blank" href="http://docs.ros.org/bouncy/api/teleop_twist_keyboard/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span><br> API Docs</a>
-  <a class="list-group-item text-center" target="_blank" href="https://github.com/ros2/teleop_twist_keyboard/blob/bouncy/."><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span><br> Browse Code</a>
+  <a class="list-group-item text-center" target="_blank" href="https://github.com/ros2/teleop_twist_keyboard/tree/bouncy/."><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span><br> Browse Code</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://wiki.ros.org/teleop_twist_keyboard?distro=bouncy"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span><br> Wiki</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=teleop_twist_keyboard&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span><br></a>
   
@@ -406,7 +375,7 @@ teleop_twist_keyboard
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-06-25
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2018-06-26
         </span>
       </td>
     </tr>
@@ -486,7 +455,7 @@ teleop_twist_keyboard
         <div class="row">
           <div class="col-xs-12">
             <div class="panel panel-default">
-              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/ros2/teleop_twist_keyboard/blob/bouncy/./README.md">README.md</a></div>
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/ros2/teleop_twist_keyboard/tree/bouncy/./README.md">README.md</a></div>
               <div class="panel-body">
                     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
@@ -541,7 +510,69 @@ CTRL-C to quit
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<p>Could not convert RST to MD: No such file or directory - pandoc</p>
+<h1 id="2-1-1-2018-06-26">2.1.1 (2018-06-26)</h1>
+
+<h1 id="2-1-0-2018-06-26">2.1.0 (2018-06-26)</h1>
+
+<ul>
+<li>  set zip_safe to avoid warning during installation
+(<a href="https://github.com/ros2/teleop_twist_keyboard/issues/14">#14</a>)</li>
+<li>  Update the maintainer to me.
+(<a href="https://github.com/ros2/teleop_twist_keyboard/issues/13">#13</a>)</li>
+<li>  fix data files install path
+(<a href="https://github.com/ros2/teleop_twist_keyboard/issues/12">#12</a>)</li>
+<li>  remove test_suite, add pytest as test_requires
+(<a href="https://github.com/ros2/teleop_twist_keyboard/issues/11">#11</a>)</li>
+<li>  use ros2 run to launch whichever the installation used
+(<a href="https://github.com/ros2/teleop_twist_keyboard/issues/8">#8</a>)</li>
+<li>  Fix teleop_twist_keyboard to have a setup.cfg.
+(<a href="https://github.com/ros2/teleop_twist_keyboard/issues/9">#9</a>)</li>
+<li>  Make sure to add teleop_twist_keyboard to ament index.
+(<a href="https://github.com/ros2/teleop_twist_keyboard/issues/6">#6</a>)</li>
+<li>  use OSI website as reference for license
+(<a href="https://github.com/ros2/teleop_twist_keyboard/issues/2">#2</a>)</li>
+<li>  ROS 2 port
+(<a href="https://github.com/ros2/teleop_twist_keyboard/issues/1">#1</a>)</li>
+<li>  Contributors: Adam Allevato, Austin, Chris Lalancette, Dirk Thomas,
+Mikael Arguedas</li>
+</ul>
+
+<h1 id="0-6-1-2018-05-02">0.6.1 (2018-05-02)</h1>
+
+<ul>
+<li>  Merge pull request
+<a href="https://github.com/ros-teleop/teleop_twist_keyboard/issues/11">#11</a>
+from MatthijsBurgh/patch-1 Correct exception handling; Python3 print
+compatible</li>
+<li>  import print from future</li>
+<li>  Print python3 compatible</li>
+<li>  correct Exception handling</li>
+<li>  Merge pull request
+<a href="https://github.com/ros-teleop/teleop_twist_keyboard/issues/7">#7</a>
+from lucasw/speed_params set linear and turn speed via rosparams</li>
+<li>  Using tabs instead of spaces to match rest of file</li>
+<li>  set linear and turn speed via rosparams</li>
+<li>  Contributors: Austin, Lucas Walter, Matthijs van der Burgh</li>
+</ul>
+
+<h1 id="0-6-0-2016-03-21">0.6.0 (2016-03-21)</h1>
+
+<ul>
+<li>  Better instruction formatting</li>
+<li>  support holonomic base, send commmand with keyboard down</li>
+<li>  Fixing queue_size warning</li>
+<li>  Create README.md</li>
+<li>  Update the description string in package.xml</li>
+<li>  Contributors: Austin, Kei Okada, LiohAu, Mike Purvis, kk6axq,
+trainman419</li>
+</ul>
+
+<h1 id="0-5-0-2014-02-11">0.5.0 (2014-02-11)</h1>
+
+<ul>
+<li>  Initial import from brown_remotelab</li>
+<li>  Convert to catkin</li>
+</ul>
 </div></body></html>
 
             
@@ -749,7 +780,7 @@ jQuery(function() {
 
 <div class="list-group list-group-sm ">
   <a class="list-group-item" target="_blank" href="http://docs.ros.org/bouncy/api/teleop_twist_keyboard/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span> API Docs</a>
-  <a class="list-group-item" target="_blank" href="https://github.com/ros2/teleop_twist_keyboard/blob/bouncy/."><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span> Browse Code</a>
+  <a class="list-group-item" target="_blank" href="https://github.com/ros2/teleop_twist_keyboard/tree/bouncy/."><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span> Browse Code</a>
   <a class="list-group-item inactive" target="_blank" href="http://wiki.ros.org/teleop_twist_keyboard?distro=bouncy"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span> Wiki</a>
   <a class="list-group-item inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=teleop_twist_keyboard&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span></a>
   
@@ -757,38 +788,6 @@ jQuery(function() {
 
           </div>
         </div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-melodic">
-    <div class="container-fluid">
-      
-        <div class="alert alert-warning" role="alert">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-lunar">
-    <div class="container-fluid">
-      
-        <div class="alert alert-warning" role="alert">No version for distro <strong>lunar</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-kinetic">
-    <div class="container-fluid">
-      
-        <div class="alert alert-warning" role="alert">No version for distro <strong>kinetic</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-indigo">
-    <div class="container-fluid">
-      
-        <div class="alert alert-warning" role="alert">No version for distro <strong>indigo</strong>. Known supported distros are highlighted in the buttons above.</div>
       
     </div>
   </div>
@@ -850,13 +849,6 @@ teleop_twist_keyboard
             <ul class="dropdown-menu" role="menu">
               
                 <li role="presentation">
-                  <a id="github-ros-teleop-teleop_twist_keyboard" role="menuitem" tabindex="-1" href="/p/teleop_twist_keyboard/github-ros-teleop-teleop_twist_keyboard" data="github-ros-teleop-teleop_twist_keyboard">
-                    <span class="glyphicon glyphicon-none"></span>
-                    github-ros-teleop-teleop_twist_keyboard
-                  </a>
-                </li>
-              
-                <li role="presentation">
                   <a id="github-ros2-teleop_twist_keyboard" role="menuitem" tabindex="-1" href="/p/teleop_twist_keyboard/github-ros2-teleop_twist_keyboard" data="github-ros2-teleop_twist_keyboard">
                     <span class="glyphicon glyphicon-none"></span>
                     github-ros2-teleop_twist_keyboard
@@ -883,7 +875,7 @@ teleop_twist_keyboard
 
 <div class="list-group list-group-sm list-group-horizontal list-group-justified">
   <a class="list-group-item text-center" target="_blank" href="http://docs.ros.org/ardent/api/teleop_twist_keyboard/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span><br> API Docs</a>
-  <a class="list-group-item text-center" target="_blank" href="https://github.com/ros2/teleop_twist_keyboard/blob/ardent/."><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span><br> Browse Code</a>
+  <a class="list-group-item text-center" target="_blank" href="https://github.com/ros2/teleop_twist_keyboard/tree/ardent/."><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span><br> Browse Code</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://wiki.ros.org/teleop_twist_keyboard?distro=ardent"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span><br> Wiki</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=teleop_twist_keyboard&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span><br></a>
   
@@ -990,7 +982,7 @@ teleop_twist_keyboard
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-12-08
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-12-09
         </span>
       </td>
     </tr>
@@ -1070,7 +1062,7 @@ teleop_twist_keyboard
         <div class="row">
           <div class="col-xs-12">
             <div class="panel panel-default">
-              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/ros2/teleop_twist_keyboard/blob/ardent/./README.md">README.md</a></div>
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/ros2/teleop_twist_keyboard/tree/ardent/./README.md">README.md</a></div>
               <div class="panel-body">
                     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
@@ -1125,7 +1117,24 @@ CTRL-C to quit
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<p>Could not convert RST to MD: No such file or directory - pandoc</p>
+<h1 id="0-6-0-2016-03-21">0.6.0 (2016-03-21)</h1>
+
+<ul>
+<li>  Better instruction formatting</li>
+<li>  support holonomic base, send commmand with keyboard down</li>
+<li>  Fixing queue_size warning</li>
+<li>  Create README.md</li>
+<li>  Update the description string in package.xml</li>
+<li>  Contributors: Austin, Kei Okada, LiohAu, Mike Purvis, kk6axq,
+trainman419</li>
+</ul>
+
+<h1 id="0-5-0-2014-02-11">0.5.0 (2014-02-11)</h1>
+
+<ul>
+<li>  Initial import from brown_remotelab</li>
+<li>  Convert to catkin</li>
+</ul>
 </div></body></html>
 
             
@@ -1333,7 +1342,7 @@ jQuery(function() {
 
 <div class="list-group list-group-sm ">
   <a class="list-group-item" target="_blank" href="http://docs.ros.org/ardent/api/teleop_twist_keyboard/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span> API Docs</a>
-  <a class="list-group-item" target="_blank" href="https://github.com/ros2/teleop_twist_keyboard/blob/ardent/."><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span> Browse Code</a>
+  <a class="list-group-item" target="_blank" href="https://github.com/ros2/teleop_twist_keyboard/tree/ardent/."><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span> Browse Code</a>
   <a class="list-group-item inactive" target="_blank" href="http://wiki.ros.org/teleop_twist_keyboard?distro=ardent"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span> Wiki</a>
   <a class="list-group-item inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=teleop_twist_keyboard&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span></a>
   
@@ -1341,22 +1350,6 @@ jQuery(function() {
 
           </div>
         </div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-jade">
-    <div class="container-fluid">
-      
-        <div class="alert alert-warning" role="alert">No version for distro <strong>jade</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-hydro">
-    <div class="container-fluid">
-      
-        <div class="alert alert-warning" role="alert">No version for distro <strong>hydro</strong>. Known supported distros are highlighted in the buttons above.</div>
       
     </div>
   </div>
@@ -1382,7 +1375,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-10-10</em>
+          <em>generated on 2018-10-17</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

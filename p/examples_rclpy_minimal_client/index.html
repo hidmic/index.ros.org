@@ -156,22 +156,6 @@
       <input type="radio" name="options" id="bouncy-radio" autocomplete="off"> bouncy
     </label>
   
-    <label id="melodic-option" class="distro-button btn btn-xs btn-default" href="#melodic" data="melodic">
-      <input type="radio" name="options" id="melodic-radio" autocomplete="off"> melodic
-    </label>
-  
-    <label id="lunar-option" class="distro-button btn btn-xs btn-default" href="#lunar" data="lunar">
-      <input type="radio" name="options" id="lunar-radio" autocomplete="off"> lunar
-    </label>
-  
-    <label id="kinetic-option" class="distro-button btn btn-xs btn-default" href="#kinetic" data="kinetic">
-      <input type="radio" name="options" id="kinetic-radio" autocomplete="off"> kinetic
-    </label>
-  
-    <label id="indigo-option" class="distro-button btn btn-xs btn-default" href="#indigo" data="indigo">
-      <input type="radio" name="options" id="indigo-radio" autocomplete="off"> indigo
-    </label>
-  
 
   <!-- Older distros -->
   <div class="btn-group dropdown">
@@ -184,14 +168,6 @@
       
         <li data="ardent" id="ardent-option" class=" older-distro-option"  href="#ardent">
           <a href="#ardent" data="ardent" id="ardent-button">ardent</a>
-        </li>
-      
-        <li data="jade" id="jade-option" class="disabled older-distro-option"  href="#jade">
-          <a href="#jade" data="jade" id="jade-button">jade</a>
-        </li>
-      
-        <li data="hydro" id="hydro-option" class="disabled older-distro-option"  href="#hydro">
-          <a href="#hydro" data="hydro" id="hydro-button">hydro</a>
         </li>
       
     </ul>
@@ -369,7 +345,7 @@ examples_rclpy_minimal_subscriber
 
 <div class="list-group list-group-sm list-group-horizontal list-group-justified">
   <a class="list-group-item text-center" target="_blank" href="http://docs.ros.org/bouncy/api/examples_rclpy_minimal_client/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span><br> API Docs</a>
-  <a class="list-group-item text-center" target="_blank" href="https://github.com/ros2/examples/blob/bouncy/rclpy/services/minimal_client"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span><br> Browse Code</a>
+  <a class="list-group-item text-center" target="_blank" href="https://github.com/ros2/examples/tree/bouncy/rclpy/services/minimal_client"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span><br> Browse Code</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://wiki.ros.org/examples_rclpy_minimal_client?distro=bouncy"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span><br> Wiki</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=examples_rclpy_minimal_client&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span><br></a>
   
@@ -543,7 +519,7 @@ examples_rclpy_minimal_subscriber
         <div class="row">
           <div class="col-xs-12">
             <div class="panel panel-default">
-              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/ros2/examples/blob/bouncy/rclpy/services/minimal_client/README.md">rclpy/services/minimal_client/README.md</a></div>
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/ros2/examples/tree/bouncy/rclpy/services/minimal_client/README.md">rclpy/services/minimal_client/README.md</a></div>
               <div class="panel-body">
                     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
@@ -569,7 +545,62 @@ The <code>client_async_member_function</code> recipe is analog to <code>client_a
             
               <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
-<p>Could not convert RST to MD: No such file or directory - pandoc</p>
+<h1 id="changelog-for-package-examples_rclpy_minimal_client">Changelog for package examples_rclpy_minimal_client</h1>
+
+<h2 id="0-5-1-2018-06-27">0.5.1 (2018-06-27)</h2>
+
+<h2 id="0-5-0-2018-06-26">0.5.0 (2018-06-26)</h2>
+
+<ul>
+<li>  add pytest markers to linter tests</li>
+<li>  Update examples for new client api
+(<a href="https://github.com/ros2/examples/issues/203">#203</a>)</li>
+<li>  set zip_safe to avoid warning during installation
+(<a href="https://github.com/ros2/examples/issues/205">#205</a>)</li>
+<li>  Contributors: Dirk Thomas, Mikael Arguedas, Shane Loretz</li>
+</ul>
+
+<h2 id="0-4-0-2017-12-08">0.4.0 (2017-12-08)</h2>
+
+<ul>
+<li>  Use logging (<a href="https://github.com/ros2/examples/issues/190">#190</a>)</li>
+<li>  Use wait_for_service
+(<a href="https://github.com/ros2/examples/issues/185">#185</a>)</li>
+<li>  Fix import statement and usage for rclpy.node.Node
+(<a href="https://github.com/ros2/examples/issues/189">#189</a>)</li>
+<li>  remove test_suite, add pytest as test_requires</li>
+<li>  0.0.3</li>
+<li>  Examples for Executors and callback groups
+(<a href="https://github.com/ros2/examples/issues/182">#182</a>)</li>
+<li>  update style to satisfy new flake8 plugins
+<a href="https://github.com/ros2/examples/issues/181">#181</a>
+</li>
+<li>  remove dependency on ament_python and perform customizations in
+setup.py <a href="https://github.com/ros2/examples/issues/178">#178</a>
+</li>
+<li>  0.0.2</li>
+<li>  rename executables with shorter names
+(<a href="https://github.com/ros2/examples/issues/177">#177</a>)</li>
+<li>  install data_files
+<a href="https://github.com/ros2/examples/issues/176">#176</a>
+</li>
+<li>  fix error when exiting scripts
+<a href="https://github.com/ros2/examples/issues/175">#175</a>
+</li>
+<li>  install executables in package specific path
+<a href="https://github.com/ros2/examples/issues/173">#173</a>
+</li>
+<li>  use explicit kwargs
+<a href="https://github.com/ros2/examples/issues/169">#169</a>
+</li>
+<li>  fix function name
+(<a href="https://github.com/ros2/examples/issues/168">#168</a>)</li>
+<li>  comply with flake8 import order
+(<a href="https://github.com/ros2/examples/issues/167">#167</a>)</li>
+<li>  Rclpy minimal services
+(<a href="https://github.com/ros2/examples/issues/140">#140</a>)</li>
+<li>  Contributors: Dirk Thomas, Mikael Arguedas, Shane Loretz</li>
+</ul>
 </div></body></html>
 
             
@@ -777,7 +808,7 @@ jQuery(function() {
 
 <div class="list-group list-group-sm ">
   <a class="list-group-item" target="_blank" href="http://docs.ros.org/bouncy/api/examples_rclpy_minimal_client/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span> API Docs</a>
-  <a class="list-group-item" target="_blank" href="https://github.com/ros2/examples/blob/bouncy/rclpy/services/minimal_client"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span> Browse Code</a>
+  <a class="list-group-item" target="_blank" href="https://github.com/ros2/examples/tree/bouncy/rclpy/services/minimal_client"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span> Browse Code</a>
   <a class="list-group-item inactive" target="_blank" href="http://wiki.ros.org/examples_rclpy_minimal_client?distro=bouncy"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span> Wiki</a>
   <a class="list-group-item inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=examples_rclpy_minimal_client&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span></a>
   
@@ -785,38 +816,6 @@ jQuery(function() {
 
           </div>
         </div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-melodic">
-    <div class="container-fluid">
-      
-          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-lunar">
-    <div class="container-fluid">
-      
-          <div class="alert alert-warning">No version for distro <strong>lunar</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-kinetic">
-    <div class="container-fluid">
-      
-          <div class="alert alert-warning">No version for distro <strong>kinetic</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-indigo">
-    <div class="container-fluid">
-      
-          <div class="alert alert-warning">No version for distro <strong>indigo</strong>. Known supported distros are highlighted in the buttons above.</div>
       
     </div>
   </div>
@@ -984,7 +983,7 @@ examples_rclpy_minimal_subscriber
 
 <div class="list-group list-group-sm list-group-horizontal list-group-justified">
   <a class="list-group-item text-center" target="_blank" href="http://docs.ros.org/ardent/api/examples_rclpy_minimal_client/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span><br> API Docs</a>
-  <a class="list-group-item text-center" target="_blank" href="https://github.com/ros2/examples/blob/ardent/rclpy/services/minimal_client"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span><br> Browse Code</a>
+  <a class="list-group-item text-center" target="_blank" href="https://github.com/ros2/examples/tree/ardent/rclpy/services/minimal_client"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span><br> Browse Code</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://wiki.ros.org/examples_rclpy_minimal_client?distro=ardent"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span><br> Wiki</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=examples_rclpy_minimal_client&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span><br></a>
   
@@ -1091,7 +1090,7 @@ examples_rclpy_minimal_subscriber
       <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
       <td>
         
-          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-12-08
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2017-12-09
         </span>
       </td>
     </tr>
@@ -1158,7 +1157,7 @@ examples_rclpy_minimal_subscriber
         <div class="row">
           <div class="col-xs-12">
             <div class="panel panel-default">
-              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/ros2/examples/blob/ardent/rclpy/services/minimal_client/README.md">rclpy/services/minimal_client/README.md</a></div>
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/ros2/examples/tree/ardent/rclpy/services/minimal_client/README.md">rclpy/services/minimal_client/README.md</a></div>
               <div class="panel-body">
                     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
@@ -1388,7 +1387,7 @@ jQuery(function() {
 
 <div class="list-group list-group-sm ">
   <a class="list-group-item" target="_blank" href="http://docs.ros.org/ardent/api/examples_rclpy_minimal_client/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span> API Docs</a>
-  <a class="list-group-item" target="_blank" href="https://github.com/ros2/examples/blob/ardent/rclpy/services/minimal_client"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span> Browse Code</a>
+  <a class="list-group-item" target="_blank" href="https://github.com/ros2/examples/tree/ardent/rclpy/services/minimal_client"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span> Browse Code</a>
   <a class="list-group-item inactive" target="_blank" href="http://wiki.ros.org/examples_rclpy_minimal_client?distro=ardent"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span> Wiki</a>
   <a class="list-group-item inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=examples_rclpy_minimal_client&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span></a>
   
@@ -1396,22 +1395,6 @@ jQuery(function() {
 
           </div>
         </div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-jade">
-    <div class="container-fluid">
-      
-          <div class="alert alert-warning">No version for distro <strong>jade</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-hydro">
-    <div class="container-fluid">
-      
-          <div class="alert alert-warning">No version for distro <strong>hydro</strong>. Known supported distros are highlighted in the buttons above.</div>
       
     </div>
   </div>
@@ -1438,7 +1421,7 @@ jQuery(function() {
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-10-10</em>
+          <em>generated on 2018-10-17</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

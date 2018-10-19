@@ -99,7 +99,7 @@
 
         <!-- searchbox -->
         <div class="col-sm-12 col-md-3" style="margin-top: 12px">
-          <form action="/search/" role="form" method="get">
+          <form id="top-searchbox" action="/search/" role="form" method="get">
             <div class="input-group input-group-sm">
               <input type="text" class="form-control" name="q" placeholder="Search ROS packages">
               <span class="input-group-btn">
@@ -132,7 +132,13 @@
     -->
 
   </div>
-
+  <script type="text/javascript">
+    $('#top-searchbox').submit(function() {
+        return $('#top-searchbox input:text').filter(function() {
+          return $(this).val() == "";
+        }).length == 0;
+    });
+  </script>
 </header>
 
 
@@ -601,6 +607,47 @@
                         <div class="truncate">
                           <div class="spacer">CMake shim over the poco library.</div>
                           <div class="content">CMake shim over the poco library.</div>
+                          <span>&nbsp;</span>
+                        </div>
+                      </td>
+                    
+                  </tr>
+                
+                  
+                  
+                  
+                  <tr>
+                    <td title="View Package Instances" data-toggle="tooltip" data-placement="left" align="center">
+                      <a href="/packages/py_trees" class="label label-default">
+                          1
+                      </a>
+                    </td>
+                    
+                      
+                        <td class="text-center">
+                          <span title="Released in bouncy" data-toggle="tooltip" data-placement="left" class="glyphicon glyphicon-flash"></span>
+                        </td>
+                      
+                      
+                        <td title="No README" data-toggle="tooltip" data-placement="left" align="center">
+                          <span class="glyphicon glyphicon-none"></span>
+                        </td>
+                      
+                      </td>
+                      <td>
+                        <span title="Last commit date" class="label label-default">2018-10-18</span>
+                      </td>
+                      <td>
+                        <a href="/p/py_trees">py_trees</a>
+                      </td>
+                      <td>
+                        <div class="truncate">
+                          <div class="spacer">
+    Pythonic implementation of behaviour trees.
+  </div>
+                          <div class="content">
+    Pythonic implementation of behaviour trees.
+  </div>
                           <span>&nbsp;</span>
                         </div>
                       </td>
@@ -2136,43 +2183,6 @@
                     
                   </tr>
                 
-                  
-                  
-                  
-                  <tr>
-                    <td title="View Package Instances" data-toggle="tooltip" data-placement="left" align="center">
-                      <a href="/packages/rosidl_generator_c" class="label label-default">
-                          1
-                      </a>
-                    </td>
-                    
-                      
-                        <td class="text-center">
-                          <span title="Released in bouncy" data-toggle="tooltip" data-placement="left" class="glyphicon glyphicon-flash"></span>
-                        </td>
-                      
-                      
-                        <td title="No README" data-toggle="tooltip" data-placement="left" align="center">
-                          <span class="glyphicon glyphicon-none"></span>
-                        </td>
-                      
-                      </td>
-                      <td>
-                        <span title="Last commit date" class="label label-default">2018-06-28</span>
-                      </td>
-                      <td>
-                        <a href="/p/rosidl_generator_c">rosidl_generator_c</a>
-                      </td>
-                      <td>
-                        <div class="truncate">
-                          <div class="spacer">Generate the ROS interfaces in C.</div>
-                          <div class="content">Generate the ROS interfaces in C.</div>
-                          <span>&nbsp;</span>
-                        </div>
-                      </td>
-                    
-                  </tr>
-                
               </tbody>
             </table>
           </div>
@@ -2548,6 +2558,26 @@
                       <td></td>
                       <td>
                         <a class="inactive" href="/p/poco_vendor">poco_vendor</a>
+                      </td>
+                      <td></td>
+                    
+                  </tr>
+                
+                  
+                  
+                  
+                  <tr>
+                    <td title="View Package Instances" data-toggle="tooltip" data-placement="left" align="center">
+                      <a href="/packages/py_trees" class="label label-default">
+                          1
+                      </a>
+                    </td>
+                    
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <a class="inactive" href="/p/py_trees">py_trees</a>
                       </td>
                       <td></td>
                     
@@ -3958,43 +3988,6 @@
                     
                   </tr>
                 
-                  
-                  
-                  
-                  <tr>
-                    <td title="View Package Instances" data-toggle="tooltip" data-placement="left" align="center">
-                      <a href="/packages/rosidl_generator_c" class="label label-default">
-                          1
-                      </a>
-                    </td>
-                    
-                      
-                        <td class="text-center">
-                          <span title="Released in ardent" data-toggle="tooltip" data-placement="left" class="glyphicon glyphicon-flash"></span>
-                        </td>
-                      
-                      
-                        <td title="No README" data-toggle="tooltip" data-placement="left" align="center">
-                          <span class="glyphicon glyphicon-none"></span>
-                        </td>
-                      
-                      </td>
-                      <td>
-                        <span title="Last commit date" class="label label-default">2018-02-07</span>
-                      </td>
-                      <td>
-                        <a href="/p/rosidl_generator_c">rosidl_generator_c</a>
-                      </td>
-                      <td>
-                        <div class="truncate">
-                          <div class="spacer">Generate the ROS interfaces in C.</div>
-                          <div class="content">Generate the ROS interfaces in C.</div>
-                          <span>&nbsp;</span>
-                        </div>
-                      </td>
-                    
-                  </tr>
-                
               </tbody>
             </table>
           </div>
@@ -4065,7 +4058,7 @@
             <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-10-18</em>
+          <em>generated on 2018-10-19</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

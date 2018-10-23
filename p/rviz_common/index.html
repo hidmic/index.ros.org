@@ -162,6 +162,22 @@
       <input type="radio" name="options" id="bouncy-radio" autocomplete="off"> bouncy
     </label>
   
+    <label id="melodic-option" class="distro-button btn btn-xs btn-default" href="#melodic" data="melodic">
+      <input type="radio" name="options" id="melodic-radio" autocomplete="off"> melodic
+    </label>
+  
+    <label id="lunar-option" class="distro-button btn btn-xs btn-default" href="#lunar" data="lunar">
+      <input type="radio" name="options" id="lunar-radio" autocomplete="off"> lunar
+    </label>
+  
+    <label id="kinetic-option" class="distro-button btn btn-xs btn-default" href="#kinetic" data="kinetic">
+      <input type="radio" name="options" id="kinetic-radio" autocomplete="off"> kinetic
+    </label>
+  
+    <label id="indigo-option" class="distro-button btn btn-xs btn-default" href="#indigo" data="indigo">
+      <input type="radio" name="options" id="indigo-radio" autocomplete="off"> indigo
+    </label>
+  
 
   <!-- Older distros -->
   <div class="btn-group dropdown">
@@ -174,6 +190,14 @@
       
         <li data="ardent" id="ardent-option" class=" older-distro-option"  href="#ardent">
           <a href="#ardent" data="ardent" id="ardent-button">ardent</a>
+        </li>
+      
+        <li data="jade" id="jade-option" class="disabled older-distro-option"  href="#jade">
+          <a href="#jade" data="jade" id="jade-button">jade</a>
+        </li>
+      
+        <li data="hydro" id="hydro-option" class="disabled older-distro-option"  href="#hydro">
+          <a href="#hydro" data="hydro" id="hydro-button">hydro</a>
         </li>
       
     </ul>
@@ -722,8 +746,8 @@ Ragnar</li>
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/geometry_msgs" class="label label-default">
-                            1
+                          <a href="/packages/geometry_msgs" class="label label-primary">
+                            2
                           </a>
                         </td>
                         <td><a href="/p/geometry_msgs#bouncy">geometry_msgs</a></td>
@@ -782,8 +806,8 @@ Ragnar</li>
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/resource_retriever" class="label label-default">
-                            1
+                          <a href="/packages/resource_retriever" class="label label-primary">
+                            2
                           </a>
                         </td>
                         <td><a href="/p/resource_retriever#bouncy">resource_retriever</a></td>
@@ -862,8 +886,8 @@ Ragnar</li>
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/sensor_msgs" class="label label-default">
-                            1
+                          <a href="/packages/sensor_msgs" class="label label-primary">
+                            2
                           </a>
                         </td>
                         <td><a href="/p/sensor_msgs#bouncy">sensor_msgs</a></td>
@@ -882,8 +906,8 @@ Ragnar</li>
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/std_msgs" class="label label-default">
-                            1
+                          <a href="/packages/std_msgs" class="label label-primary">
+                            2
                           </a>
                         </td>
                         <td><a href="/p/std_msgs#bouncy">std_msgs</a></td>
@@ -902,8 +926,8 @@ Ragnar</li>
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/tf2" class="label label-default">
-                            1
+                          <a href="/packages/tf2" class="label label-primary">
+                            2
                           </a>
                         </td>
                         <td><a href="/p/tf2#bouncy">tf2</a></td>
@@ -922,8 +946,8 @@ Ragnar</li>
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/tf2_geometry_msgs" class="label label-default">
-                            1
+                          <a href="/packages/tf2_geometry_msgs" class="label label-primary">
+                            2
                           </a>
                         </td>
                         <td><a href="/p/tf2_geometry_msgs#bouncy">tf2_geometry_msgs</a></td>
@@ -942,8 +966,8 @@ Ragnar</li>
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/tf2_ros" class="label label-default">
-                            1
+                          <a href="/packages/tf2_ros" class="label label-primary">
+                            2
                           </a>
                         </td>
                         <td><a href="/p/tf2_ros#bouncy">tf2_ros</a></td>
@@ -982,8 +1006,8 @@ Ragnar</li>
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/urdf" class="label label-default">
-                            1
+                          <a href="/packages/urdf" class="label label-primary">
+                            3
                           </a>
                         </td>
                         <td><a href="/p/urdf#bouncy">urdf</a></td>
@@ -1231,6 +1255,38 @@ jQuery(function() {
 
           </div>
         </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-lunar">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>lunar</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kinetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kinetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-indigo">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>indigo</strong>. Known supported distros are highlighted in the buttons above.</div>
       
     </div>
   </div>
@@ -1814,8 +1870,8 @@ Martin Idel, Steven! Ragnarok, William Woodall</li>
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/geometry_msgs" class="label label-default">
-                            1
+                          <a href="/packages/geometry_msgs" class="label label-primary">
+                            2
                           </a>
                         </td>
                         <td><a href="/p/geometry_msgs#ardent">geometry_msgs</a></td>
@@ -1874,8 +1930,8 @@ Martin Idel, Steven! Ragnarok, William Woodall</li>
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/resource_retriever" class="label label-default">
-                            1
+                          <a href="/packages/resource_retriever" class="label label-primary">
+                            2
                           </a>
                         </td>
                         <td><a href="/p/resource_retriever#ardent">resource_retriever</a></td>
@@ -1954,8 +2010,8 @@ Martin Idel, Steven! Ragnarok, William Woodall</li>
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/sensor_msgs" class="label label-default">
-                            1
+                          <a href="/packages/sensor_msgs" class="label label-primary">
+                            2
                           </a>
                         </td>
                         <td><a href="/p/sensor_msgs#ardent">sensor_msgs</a></td>
@@ -1974,8 +2030,8 @@ Martin Idel, Steven! Ragnarok, William Woodall</li>
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/std_msgs" class="label label-default">
-                            1
+                          <a href="/packages/std_msgs" class="label label-primary">
+                            2
                           </a>
                         </td>
                         <td><a href="/p/std_msgs#ardent">std_msgs</a></td>
@@ -1994,8 +2050,8 @@ Martin Idel, Steven! Ragnarok, William Woodall</li>
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/tf2" class="label label-default">
-                            1
+                          <a href="/packages/tf2" class="label label-primary">
+                            2
                           </a>
                         </td>
                         <td><a href="/p/tf2#ardent">tf2</a></td>
@@ -2014,8 +2070,8 @@ Martin Idel, Steven! Ragnarok, William Woodall</li>
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/tf2_geometry_msgs" class="label label-default">
-                            1
+                          <a href="/packages/tf2_geometry_msgs" class="label label-primary">
+                            2
                           </a>
                         </td>
                         <td><a href="/p/tf2_geometry_msgs#ardent">tf2_geometry_msgs</a></td>
@@ -2034,8 +2090,8 @@ Martin Idel, Steven! Ragnarok, William Woodall</li>
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/tf2_ros" class="label label-default">
-                            1
+                          <a href="/packages/tf2_ros" class="label label-primary">
+                            2
                           </a>
                         </td>
                         <td><a href="/p/tf2_ros#ardent">tf2_ros</a></td>
@@ -2074,8 +2130,8 @@ Martin Idel, Steven! Ragnarok, William Woodall</li>
                           </a>
                         </td>
                         <td class="text-center">
-                          <a href="/packages/urdf" class="label label-default">
-                            1
+                          <a href="/packages/urdf" class="label label-primary">
+                            3
                           </a>
                         </td>
                         <td><a href="/p/urdf#ardent">urdf</a></td>
@@ -2309,6 +2365,22 @@ jQuery(function() {
 
           </div>
         </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jade">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jade</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-hydro">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>hydro</strong>. Known supported distros are highlighted in the buttons above.</div>
       
     </div>
   </div>

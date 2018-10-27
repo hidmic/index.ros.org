@@ -39,7 +39,7 @@
           <div class="row">
             <!-- title -->
             <div class="col-xs-12 col-sm-3 col-md-3" style="white-space:nowrap;">
-              <a class="site-title" href="/">ROS Index</a> <sup><a href="https://github.com/ros-infrastructure/rosindex/issues/new" style="vertical-align:super;" class="label label-warning" target="_blank">BETA</a></sup>
+              <a class="site-title" href="/">ROS Index</a> <sup><a href="https://github.com/rosindex/rosindex/issues/new" style="vertical-align:super;" class="label label-warning" target="_blank">BETA</a></sup>
             </div>
 
             <!-- main links -->
@@ -76,7 +76,7 @@
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                     
                     <li>
-                      <a href="/doc/ros2">
+                      <a href="/doc/ros2_overview">
                         ROS2 Overview
                       </a>
                     </li>
@@ -101,9 +101,9 @@
         <div class="col-sm-12 col-md-3" style="margin-top: 12px">
           <form id="top-searchbox" action="/search/" role="form" method="get">
             <div class="input-group input-group-sm">
-              <input type="text" class="form-control" name="q" placeholder="Search ROS Packages">
+              <input type="text" class="form-control" name="q" placeholder="Search ROS packages">
               <span class="input-group-btn">
-                <button class="btn btn-default btn-sm" title="Search ROS Packages" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                <button class="btn btn-default btn-sm" type="submit"><span class="glyphicon glyphicon-search"></span></button>
               </span>
             </div>
           </form>
@@ -158,46 +158,22 @@
 
 <div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
   
-    <label id="melodic-option" class="distro-button btn btn-xs btn-default" href="#melodic" data="melodic">
-      <input type="radio" name="options" id="melodic-radio" autocomplete="off"> melodic
-    </label>
-  
-    <label id="lunar-option" class="distro-button btn btn-xs btn-default" href="#lunar" data="lunar">
-      <input type="radio" name="options" id="lunar-radio" autocomplete="off"> lunar
-    </label>
-  
-    <label id="kinetic-option" class="distro-button btn btn-xs btn-default" href="#kinetic" data="kinetic">
-      <input type="radio" name="options" id="kinetic-radio" autocomplete="off"> kinetic
-    </label>
-  
-    <label id="indigo-option" class="distro-button btn btn-xs btn-default" href="#indigo" data="indigo">
-      <input type="radio" name="options" id="indigo-radio" autocomplete="off"> indigo
-    </label>
-  
     <label id="bouncy-option" class="distro-button btn btn-xs btn-primary" href="#bouncy" data="bouncy">
       <input type="radio" name="options" id="bouncy-radio" autocomplete="off"> bouncy
-    </label>
-  
-    <label id="ardent-option" class="distro-button btn btn-xs btn-primary" href="#ardent" data="ardent">
-      <input type="radio" name="options" id="ardent-radio" autocomplete="off"> ardent
     </label>
   
 
   <!-- Older distros -->
   <div class="btn-group dropdown">
-    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-primary" data-toggle="dropdown" id="older-distro-button">
         <input type="radio" name="options" autocomplete="off">
       <span id="older-label">Older</span>
       <span class="caret"></span>
     </label>
     <ul class="dropdown-menu" role="menu">
       
-        <li data="jade" id="jade-option" class="disabled older-distro-option"  href="#jade">
-          <a href="#jade" data="jade" id="jade-button">jade</a>
-        </li>
-      
-        <li data="hydro" id="hydro-option" class="disabled older-distro-option"  href="#hydro">
-          <a href="#hydro" data="hydro" id="hydro-button">hydro</a>
+        <li data="ardent" id="ardent-option" class=" older-distro-option"  href="#ardent">
+          <a href="#ardent" data="ardent" id="ardent-button">ardent</a>
         </li>
       
     </ul>
@@ -211,38 +187,6 @@
   </div>
 </div>
 
-
-  <div class="distro distro-melodic">
-    <div class="container-fluid">
-      
-          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-lunar">
-    <div class="container-fluid">
-      
-          <div class="alert alert-warning">No version for distro <strong>lunar</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-kinetic">
-    <div class="container-fluid">
-      
-          <div class="alert alert-warning">No version for distro <strong>kinetic</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-indigo">
-    <div class="container-fluid">
-      
-          <div class="alert alert-warning">No version for distro <strong>indigo</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
 
   <div class="distro distro-bouncy">
     <div class="container-fluid">
@@ -395,7 +339,7 @@ topic_monitor
         <div class="btn-group" style="width: 90%" role="group">
           <div class="dropdown">
             <!-- TODO: add disabled when only 1 version is known? -->
-            <button class="btn btn-xs btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" title="Select Instance">
+            <button class="btn btn-xs btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
               <span class="pull-left" style="width: 100%; text-align: left">
                 <span class="pull-right"><span class="caret"></span></span> 
               <span class="glyphicon glyphicon-none"></span>
@@ -430,7 +374,7 @@ topic_monitor
 
 
 <div class="list-group list-group-sm list-group-horizontal list-group-justified">
-  <a class="list-group-item text-center" target="_blank" href="http://docs.ros2.org/bouncy/api/pendulum_control/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span><br> API Docs</a>
+  <a class="list-group-item text-center" target="_blank" href="http://docs.ros.org/bouncy/api/pendulum_control/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span><br> API Docs</a>
   <a class="list-group-item text-center" target="_blank" href="https://github.com/ros2/demos/tree/bouncy/pendulum_control"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span><br> Browse Code</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://wiki.ros.org/pendulum_control?distro=bouncy"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span><br> Wiki</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=pendulum_control&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span><br></a>
@@ -609,7 +553,7 @@ topic_monitor
         <div class="row">
           <div class="col-xs-12">
             <div class="panel panel-default">
-              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/ros2/demos/tree/bouncy/pendulum_control/README.md" title="Open in git repository">pendulum_control/README.md</a></div>
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/ros2/demos/tree/bouncy/pendulum_control/README.md">pendulum_control/README.md</a></div>
               <div class="panel-body">
                     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
@@ -767,7 +711,7 @@ renamespaced as <code>launch</code> -&gt; <code>launch.legacy</code>.
               <table class="table table-condensed table-striped">
                 <thead>
                   <th class="text-center">Deps</th>
-                  <th class="text-center"><span class="glyphicon glyphicon-th" title="Package instances"></span></th>
+                  <th class="text-center"><span class="glyphicon glyphicon-th"></span></th>
                   <th style="width: 100%">Name</th>
                 </thead>
                 <tbody>
@@ -780,7 +724,7 @@ renamespaced as <code>launch</code> -&gt; <code>launch.legacy</code>.
                           
                           
                           <a href="/p/rclcpp#bouncy-deps" >
-                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                            <span class="glyphicon glyphicon-arrow-left"></span>
                           </a>
                         </td>
                         <td class="text-center">
@@ -800,7 +744,7 @@ renamespaced as <code>launch</code> -&gt; <code>launch.legacy</code>.
                           
                           
                           <a href="/p/pendulum_msgs#bouncy-deps" >
-                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                            <span class="glyphicon glyphicon-arrow-left"></span>
                           </a>
                         </td>
                         <td class="text-center">
@@ -820,7 +764,7 @@ renamespaced as <code>launch</code> -&gt; <code>launch.legacy</code>.
                           
                           
                           <a href="/p/rttest#bouncy-deps" class="inactive">
-                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                            <span class="glyphicon glyphicon-arrow-left"></span>
                           </a>
                         </td>
                         <td class="text-center">
@@ -840,7 +784,7 @@ renamespaced as <code>launch</code> -&gt; <code>launch.legacy</code>.
                           
                           
                           <a href="/p/tlsf_cpp#bouncy-deps" >
-                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                            <span class="glyphicon glyphicon-arrow-left"></span>
                           </a>
                         </td>
                         <td class="text-center">
@@ -931,14 +875,11 @@ renamespaced as <code>launch</code> -&gt; <code>launch.legacy</code>.
   <div class="tab-pane" id="bouncy-questions">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Recent questions tagged <kbd>pendulum_control</kbd> at <strong><a href="https://answers.ros.org" target="_blank">answers.ros.org</a></strong></h3>
+        <h3 class="panel-title">Answers.ros.org Recent Questions Tagged: <kbd>pendulum_control</kbd></h3>
       </div>
       <div id="bouncy-question-list" class="panel-body" style="display: none;"></div>
       <div id="bouncy-no-question-list" class="panel-body" style="display: none;">
         <p>No questions yet, you can ask one <a href="https://answers.ros.org/questions/ask/?tags=pendulum_control,bouncy">here</a>.</p>
-      </div>
-      <div id="bouncy-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
-        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros2/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
       </div>
     </div>
   </div>
@@ -1009,10 +950,6 @@ jQuery(function() {
               jQuery("#bouncy-no-question-list").show();
             }
             jQuery("#bouncy-questions-count").text(feed.items.length);
-        },
-        error: function(res, err) {
-          console.error("Failed to get feed:", err)
-          jQuery("#bouncy-get-question-fail").show();
         }
     });
 });
@@ -1027,7 +964,7 @@ jQuery(function() {
 
 
 <div class="list-group list-group-sm ">
-  <a class="list-group-item" target="_blank" href="http://docs.ros2.org/bouncy/api/pendulum_control/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span> API Docs</a>
+  <a class="list-group-item" target="_blank" href="http://docs.ros.org/bouncy/api/pendulum_control/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span> API Docs</a>
   <a class="list-group-item" target="_blank" href="https://github.com/ros2/demos/tree/bouncy/pendulum_control"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span> Browse Code</a>
   <a class="list-group-item inactive" target="_blank" href="http://wiki.ros.org/pendulum_control?distro=bouncy"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span> Wiki</a>
   <a class="list-group-item inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=pendulum_control&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span></a>
@@ -1191,7 +1128,7 @@ topic_monitor
         <div class="btn-group" style="width: 90%" role="group">
           <div class="dropdown">
             <!-- TODO: add disabled when only 1 version is known? -->
-            <button class="btn btn-xs btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" title="Select Instance">
+            <button class="btn btn-xs btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
               <span class="pull-left" style="width: 100%; text-align: left">
                 <span class="pull-right"><span class="caret"></span></span> 
               <span class="glyphicon glyphicon-none"></span>
@@ -1226,7 +1163,7 @@ topic_monitor
 
 
 <div class="list-group list-group-sm list-group-horizontal list-group-justified">
-  <a class="list-group-item text-center" target="_blank" href="http://docs.ros2.org/ardent/api/pendulum_control/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span><br> API Docs</a>
+  <a class="list-group-item text-center" target="_blank" href="http://docs.ros.org/ardent/api/pendulum_control/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span><br> API Docs</a>
   <a class="list-group-item text-center" target="_blank" href="https://github.com/ros2/demos/tree/ardent/pendulum_control"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span><br> Browse Code</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://wiki.ros.org/pendulum_control?distro=ardent"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span><br> Wiki</a>
   <a class="list-group-item text-center inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=pendulum_control&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span><br></a>
@@ -1401,7 +1338,7 @@ topic_monitor
         <div class="row">
           <div class="col-xs-12">
             <div class="panel panel-default">
-              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/ros2/demos/tree/ardent/pendulum_control/README.md" title="Open in git repository">pendulum_control/README.md</a></div>
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/ros2/demos/tree/ardent/pendulum_control/README.md">pendulum_control/README.md</a></div>
               <div class="panel-body">
                     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body><div class="rendered-markdown">
@@ -1536,7 +1473,7 @@ This demo will attempt to run the control loop at priority 98.</p>
               <table class="table table-condensed table-striped">
                 <thead>
                   <th class="text-center">Deps</th>
-                  <th class="text-center"><span class="glyphicon glyphicon-th" title="Package instances"></span></th>
+                  <th class="text-center"><span class="glyphicon glyphicon-th"></span></th>
                   <th style="width: 100%">Name</th>
                 </thead>
                 <tbody>
@@ -1549,7 +1486,7 @@ This demo will attempt to run the control loop at priority 98.</p>
                           
                           
                           <a href="/p/rclcpp#ardent-deps" >
-                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                            <span class="glyphicon glyphicon-arrow-left"></span>
                           </a>
                         </td>
                         <td class="text-center">
@@ -1569,7 +1506,7 @@ This demo will attempt to run the control loop at priority 98.</p>
                           
                           
                           <a href="/p/pendulum_msgs#ardent-deps" >
-                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                            <span class="glyphicon glyphicon-arrow-left"></span>
                           </a>
                         </td>
                         <td class="text-center">
@@ -1589,7 +1526,7 @@ This demo will attempt to run the control loop at priority 98.</p>
                           
                           
                           <a href="/p/rttest#ardent-deps" class="inactive">
-                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                            <span class="glyphicon glyphicon-arrow-left"></span>
                           </a>
                         </td>
                         <td class="text-center">
@@ -1609,7 +1546,7 @@ This demo will attempt to run the control loop at priority 98.</p>
                           
                           
                           <a href="/p/tlsf_cpp#ardent-deps" >
-                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                            <span class="glyphicon glyphicon-arrow-left"></span>
                           </a>
                         </td>
                         <td class="text-center">
@@ -1700,14 +1637,11 @@ This demo will attempt to run the control loop at priority 98.</p>
   <div class="tab-pane" id="ardent-questions">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Recent questions tagged <kbd>pendulum_control</kbd> at <strong><a href="https://answers.ros.org" target="_blank">answers.ros.org</a></strong></h3>
+        <h3 class="panel-title">Answers.ros.org Recent Questions Tagged: <kbd>pendulum_control</kbd></h3>
       </div>
       <div id="ardent-question-list" class="panel-body" style="display: none;"></div>
       <div id="ardent-no-question-list" class="panel-body" style="display: none;">
         <p>No questions yet, you can ask one <a href="https://answers.ros.org/questions/ask/?tags=pendulum_control,ardent">here</a>.</p>
-      </div>
-      <div id="ardent-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
-        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros2/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
       </div>
     </div>
   </div>
@@ -1778,10 +1712,6 @@ jQuery(function() {
               jQuery("#ardent-no-question-list").show();
             }
             jQuery("#ardent-questions-count").text(feed.items.length);
-        },
-        error: function(res, err) {
-          console.error("Failed to get feed:", err)
-          jQuery("#ardent-get-question-fail").show();
         }
     });
 });
@@ -1796,7 +1726,7 @@ jQuery(function() {
 
 
 <div class="list-group list-group-sm ">
-  <a class="list-group-item" target="_blank" href="http://docs.ros2.org/ardent/api/pendulum_control/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span> API Docs</a>
+  <a class="list-group-item" target="_blank" href="http://docs.ros.org/ardent/api/pendulum_control/html/" ><span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span> API Docs</a>
   <a class="list-group-item" target="_blank" href="https://github.com/ros2/demos/tree/ardent/pendulum_control"><span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span> Browse Code</a>
   <a class="list-group-item inactive" target="_blank" href="http://wiki.ros.org/pendulum_control?distro=ardent"><span style="margin-right: 5px;" class="glyphicon glyphicon-info-sign"></span> Wiki</a>
   <a class="list-group-item inactive" target="_blank" href="http://http404error.github.io/roseco/graph.html?id=ros.json&focus=pendulum_control&height=1&depth=2&tred=standard&metagroup=false&colorby=Health&direction=LR" ><span style="margin-right: 5px;" class="glyphicon glyphicon-tree-deciduous"></span></a>
@@ -1805,22 +1735,6 @@ jQuery(function() {
 
           </div>
         </div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-jade">
-    <div class="container-fluid">
-      
-          <div class="alert alert-warning">No version for distro <strong>jade</strong>. Known supported distros are highlighted in the buttons above.</div>
-      
-    </div>
-  </div>
-
-  <div class="distro distro-hydro">
-    <div class="container-fluid">
-      
-          <div class="alert alert-warning">No version for distro <strong>hydro</strong>. Known supported distros are highlighted in the buttons above.</div>
       
     </div>
   </div>
@@ -1837,17 +1751,17 @@ jQuery(function() {
       <div class="row">
         <div class="col-sm-4 col-md-4">
           
-            <a href="https://github.com/ros-infrastructure" title="Find rosindex in Github">
+            <a href="https://github.com/rosindex">
             <span class="icon  icon--github">
               <svg viewBox="0 0 16 16">
                 <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
               </svg>
             </span>
 
-            <span class="username">ros-infrastructure</span>
+            <span class="username">rosindex</span>
           </a>
           |
-          <em>generated on 2018-10-26</em>
+          <em>generated on 2018-10-27</em>
         
         </div>
         <div class="col-sm-8 col-md-8 text-right">

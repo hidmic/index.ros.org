@@ -54,7 +54,7 @@ $(document).ready(function(){
   }
 
   if(typeof distro == 'undefined') {
-    distro = "melodic";
+    distro = "bouncy";
   }
 
   $('.distro').not('.distro-'+distro).hide(0);
